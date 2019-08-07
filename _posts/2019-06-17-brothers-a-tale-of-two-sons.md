@@ -1,6 +1,5 @@
 ---
 
-title: Brothers A Tale of Two Sons
 ---
 
 [Trailer](https://youtu.be/liftFqr4mbc)  \|  [Steam](https://store.steampowered.com/app/225080/Brothers__A_Tale_of_Two_Sons/)  \|  [GOG](https://www.gog.com/game/brothers_a_tale_of_two_sons)  \| [Humble](https://www.humblebundle.com/store/brothers-a-tale-of-two-sons) \|  [Switch Store](https://www.nintendo.com/games/detail/brothers-a-tale-of-two-sons-switch/)  \|  [PSN UK](https://store.playstation.com/en-gb/product/EP4040-CUSA02305_00-BROTHERSLICENSE4)  \|  [PSN US](https://store.playstation.com/en-us/product/UP4040-NPUB30989_00-BROTHERSLICENSE0)  \|  [XBox Live](https://www.microsoft.com/en-gb/p/brothers-a-tale-of-two-sons/c4q29cmj31nx?activetab=pivot:overviewtab)
@@ -8,6 +7,8 @@ title: Brothers A Tale of Two Sons
 Developer: Starbreeze Studios  \|  Publisher: 505 Games
 
 An absolutely incredible game; I cannot recommend it enough. Gorgeous graphics, amazing soundtrack, original mechanics, and one of the best stories I have ever encountered in gaming. One of my top five games of all time.
+
+<!--more-->
 
 * * *
 

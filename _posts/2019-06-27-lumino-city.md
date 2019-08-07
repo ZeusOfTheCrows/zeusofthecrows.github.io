@@ -1,5 +1,5 @@
 ---
-title: Lumino City
+
 ---
 
 [Trailer](https://vimeo.com/97832046)  \|  [Steam](http://store.steampowered.com/app/205020/)  \|  [GOG](https://www.gog.com/game/lumino_city)  \| [Humble](https://www.humblebundle.com/store/lumino-city)

@@ -1,3 +1,8 @@
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
 defaults:
   - scope:
       path: ""
@@ -9,7 +14,4 @@ defaults:
     values:
       layout: "default"
 
-plugins:
-  - jekyll-feed
-  - jekyll-sitemap
-  - jekyll-seo-tag
+excerpt_separator: <!--more-->
