@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'jekyll'
+gem "jekyll-remote-theme"
 gem "bulma-clean-theme"
 
 group :jekyll_plugins do
