@@ -18,3 +18,4 @@ defaults:
       layout: "page"
 
 excerpt_separator: <!--more-->
+theme: jekyll-theme-cayman
