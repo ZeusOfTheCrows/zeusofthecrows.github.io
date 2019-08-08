@@ -4,7 +4,7 @@
 
 [Trailer](https://vimeo.com/97832046)  \|  [Steam](http://store.steampowered.com/app/205020/)  \|  [GOG](https://www.gog.com/game/lumino_city)  \| [Humble](https://www.humblebundle.com/store/lumino-city)
 
-Developer: State of Play Games  |  Publisher: State of Play Games
+Developer: State of Play Games  \|  Publisher: State of Play Games
 
 A peaceful, chilled puzzle point &amp; click set in a ridiculously beautiful handcrafted world.
 
