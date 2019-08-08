@@ -59,4 +59,4 @@ Release date: 7th of August 2013
 https://505games.com/games/brothers/
 
 * * *
-<iframe width="640" height="360" src="https://www.youtube.com/embed/liftFqr4mbc" frameborder="1" allowfullscreen="allowfullscreen"></iframe>
+<iframe width="640" height="360" src="https://www.youtube.com/embed/liftFqr4mbc" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
