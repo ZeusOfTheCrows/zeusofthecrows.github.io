@@ -12,11 +12,10 @@ defaults:
       type: "posts"
     values:
       layout: "post"  # sets all posts to "post" layout by default
-      permalink: /games/:title/
+      permalink: /games/:title/  # all post pages have simplified url
   - scope:
       path: ""
     values:
       layout: "page"  # sets all pages to "page" layout by default
-      permalink: /:title/  # all pages should have a basic url by default
       
 excerpt_separator: <!--more-->  # all content before this seperator should appear in previews
