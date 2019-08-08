@@ -3,6 +3,8 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
 
+remote_theme: chrisrhymes/bulma-clean-theme
+
 defaults:
   - scope:
       path: ""
@@ -12,6 +14,6 @@ defaults:
   - scope:
       path: ""
     values:
-      layout: "default"
+      layout: "page"
 
 excerpt_separator: <!--more-->
