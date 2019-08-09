@@ -2,16 +2,22 @@ plugins:
   - jekyll-feed  # used to generate RSS feed
   - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-paginate
   - jekyll-remote-theme  # used to make bulma theme work
 
 remote_theme: chrisrhymes/bulma-clean-theme  # loading theme from github
+
+# Pagination settings
+paginate: 3  # number of posts on one page (should be 5)
+paginate_path: "/blog/page:num"  # relative path to page (eg. /blog/2)
 
 defaults:
   - scope:
       path: ""
       type: "posts"
     values:
-      layout: "post"  # sets all posts to "post" layout by default
+      layout: post  # sets all posts to "post" layout by default
+      show_sidebar: false  # show bulma theme sidebar?
       permalink: /games/:title/  # all post pages have simplified url
   - scope:
       path: ""
