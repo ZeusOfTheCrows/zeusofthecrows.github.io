@@ -17,11 +17,13 @@ defaults:
       type: "posts"
     values:
       layout: post  # sets all posts to "post" layout by default
-      show_sidebar: false  # show bulma theme sidebar?
+      show_sidebar: true  # show bulma theme sidebar?
       permalink: /games/:title/  # all post pages have simplified url
   - scope:
       path: ""
     values:
       layout: "page"  # sets all pages to "page" layout by default
+      image: ({{ "assets\images\main\ZeusOfTheCrowsBanner.png" | relative_url }})
+      hero_image: /assets/images/main/ZeusOfTheCrowsBanner.png
       
 excerpt_separator: <!--more-->  # all content before this seperator should appear in previews

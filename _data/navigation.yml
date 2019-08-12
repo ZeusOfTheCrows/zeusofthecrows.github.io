@@ -1,5 +1,3 @@
-- name: Home 
-  link: /
 - name: Games 
   link: /games/
 - name: Blog
