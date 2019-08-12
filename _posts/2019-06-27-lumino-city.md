@@ -1,5 +1,6 @@
 ---
-
+image: /assets/images/2019-06-27-lumino-city/lumino-city-0.jpg
+hero_image: /assets/images/2019-06-27-lumino-city/lumino-city-00.jpg
 ---
 
 [Trailer](https://vimeo.com/97832046)  \|  [Steam](http://store.steampowered.com/app/205020/)  \|  [GOG](https://www.gog.com/game/lumino_city)  \| [Humble](https://www.humblebundle.com/store/lumino-city)
@@ -16,7 +17,7 @@ Not only do I have no idea how this game ended up in my library, before I booted
 
 I’m usually not into point &amp; clicks. When I play games I almost exclusively use a controller, and when I use my computer for everything else I use keyboard shortcuts. I hate touching the mouse, I find it an awkward and unwieldy interface device. So when I opened up Lumino City and the second thing it did was say “&lt;Click&gt;”, my heart sank (The first thing it said was enter, so I pressed enter and nothing happened). Therefore, it really surprised me how much I loved Lumino City.
 
-![An adorable tiny computer](https://66.media.tumblr.com/c7f2f857c20b17f5aadf7ad677dc200d/eb98a75fe4bb797c-3f/s540x810/400f8203104e65a6d42a294f7d060452cf16b1ea.jpg)
+![An adorable tiny computer]({{ "/assets/images/2019-06-27-lumino-city/lumino-city-01.jpg" | relative_url }} "An adorable tiny computer")
 
 _I’ve just put most of these pictures to show what this game looks like_
 
@@ -24,17 +25,17 @@ First of, I know I say this about a lot of games, but it looks amazing. Everythi
 
 The puzzle elements are split between normal puzzle game style “work out what things to do, and in what order to do them”, and more physical styles of “figure out where to place these props”. Some of the standard point n click conundrums have a little moon logic to them, but they’re generally pretty sensible; and the physical style ones are often really cool ideas, and a nice change of pace.
 
-![](https://66.media.tumblr.com/0518c18e05e925dda29c3a71bade5751/eb98a75fe4bb797c-52/s540x810/e124c51a97384f6f5e11d2cac6faab81bd6c390e.png)
+![One of the physical puzzles (image from luminocitygame.com\)]({{ "/assets/images/2019-06-27-lumino-city/lumino-city-02.jpg" | relative_url }} "One of the physical puzzles (image from luminocitygame.com\)")
 
 _One of the physical puzzles (image from [luminocitygame.com](http://www.luminocitygame.com/press/index.php#images))_
 
 It’s also very well written. Not the story - that barely exists - But all the people you come across have odd but distinctive personalities, and it’s filled with oddball humour. Albeit I feel like some of it was a little highbrow and went straight over my head, but I definitely enjoyed a lot of it and spent quite a bit of my time it giggling like a lemon.
 
-![An adorable tiny ship](https://66.media.tumblr.com/e5a6a792dcb6af6a3a162f678d5fb86e/eb98a75fe4bb797c-8a/s540x810/8c2c5e2c3cedb5781c789ad1d07e6a9521c5a247.jpg)
+![An adorable tiny ship]({{ "/assets/images/2019-06-27-lumino-city/lumino-city-03.jpg" | relative_url }} "An adorable tiny ship")
 
 All in all, it feels wonderful. Just everything feels so calm and nice! Even the people who aren’t nice and refuse to help you are still nice. Although the concept feels sinister - some strange men have kidnapped your grandfather and you have to go through a semi-deserted and malfunctioning city to rescue him - the music is so charming, the characters are so charismatic (if a little loopy), and the town is so adorable that the whole place feels warm and welcoming.
 
-![image](https://66.media.tumblr.com/197de41105376e7c6ac6dc40d23d7539/eb98a75fe4bb797c-88/s540x810/e5c0f0cbbe4a2b629cfe70fefd9ebbb3bd318ed7.jpg)
+![This is the sort of house everyone with a bike should live in]({{ "/assets/images/2019-06-27-lumino-city/lumino-city-04.jpg" | relative_url }} "This is the sort of house everyone with a bike should live in")
 
 One thing that did, unfortunately, pull me out of this peaceful environment were some stability issues. Now don’t get me wrong, it’s not unusably crash-happy; and I believe one of the crashes was due to the Geforce overlay, but ~3 crashes in only a 6 hour game is worth noting to me. It wasn’t too annoying as there are relatively frequent autosaves, but it is a little jarring to have a game freeze and have to quit it from the task manager.
 
@@ -68,4 +69,4 @@ Release date: 3rd of December, 2014
 
 [http://www.luminocitygame.com/](http://www.luminocitygame.com/)
 
-<iframe title="vimeo-player" src="https://player.vimeo.com/video/97832046" width="640" height="360" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+<iframe title="vimeo-player" src="https://player.vimeo.com/video/97832046" width="640" height="640" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
