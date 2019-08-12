@@ -2,7 +2,7 @@ plugins:
   - jekyll-feed  # used to generate RSS feed
   - jekyll-sitemap
   - jekyll-seo-tag
-  - jekyll-paginate
+  - jekyll-paginate  # paginate blog pages plugin
   - jekyll-remote-theme  # used to make bulma theme work
 
 remote_theme: chrisrhymes/bulma-clean-theme  # loading theme from github

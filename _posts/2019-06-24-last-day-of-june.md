@@ -1,5 +1,5 @@
 ---
-image: /assets/images/2019-06-24-last-day-of-june/last-day-of-june-00.jpg
+image: /assets/images/2019-06-24-last-day-of-june/last-day-of-june-0.jpg
 hero_image: /assets/images/2019-06-24-last-day-of-june/last-day-of-june-00.jpg
 ---
 
