@@ -23,7 +23,6 @@ defaults:
       path: ""
     values:
       layout: "page"  # sets all pages to "page" layout by default
-      image: ({{ "assets\images\main\ZeusOfTheCrowsBanner.png" | relative_url }})
       hero_image: /assets/images/main/ZeusOfTheCrowsBanner.png
       
 excerpt_separator: <!--more-->  # all content before this seperator should appear in previews
