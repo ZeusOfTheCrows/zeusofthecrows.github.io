@@ -68,7 +68,7 @@ However, what many dialogue-free games do that this doesn't, is make me want to 
 
 Release date: 31st of August 2017
 
-https://505games.com/games/last-day-of-june/
+[https://505games.com/games/last-day-of-june/](https://505games.com/games/last-day-of-june/)
 
 * * *
 
