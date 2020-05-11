@@ -2,7 +2,10 @@
 title: Home
 hero_height: 
 ---
-# Hello World!
+# Hello!
+
+I'm very good at not finishing things, so expect this site to be continually unfinished…
+
 Site (clearly) under construction, I'm afraid.
 
 Sorry
