@@ -1,5 +1,5 @@
 ---
-permalink: /wpe.html
+permalink: /desktops/wpe.html
 layout: default
 ---
 
