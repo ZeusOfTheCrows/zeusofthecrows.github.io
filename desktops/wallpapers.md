@@ -13,7 +13,7 @@ _C:\Desktops>type wallpapers.txt_
 
 ---
 
-  Here are some simple images I've made to use as wallpapers - I'll put the svg files up for the ones that are svgs eventually.
+Here are some simple images I've made to use as wallpapers - I'll put the svg files up for the ones that are svgs eventually.
 
 ##Gruvbox
 
