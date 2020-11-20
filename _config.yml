@@ -29,7 +29,7 @@ markdown: kramdown
 #github_username:  zeusofthecrows
 
 # Build settings
-theme: minima
+# theme: minima
 plugins:
   - jekyll-feed
 

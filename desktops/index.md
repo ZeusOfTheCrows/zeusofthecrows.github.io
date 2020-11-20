@@ -1,5 +1,5 @@
 ---
-permalink: /desktops.html
+permalink: /desktops
 layout: default
 ---
 

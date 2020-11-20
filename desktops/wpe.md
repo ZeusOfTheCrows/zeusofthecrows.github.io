@@ -5,17 +5,11 @@ layout: default
 
 _C:\Desktops>type wpe.txt_
 
-<html>
-
-	<h1>Wallpaper Engine Files</h1>
-
-</html>
+# Wallpaper Engine Files
 
 ---
 
- 
-
-**Amber Dec Teminal**
+## Amber Dec Teminal
 
 [Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=2271074053) ¦ [Github](https://github.com/ZeusOfTheCrows/we-amber-terminal/tree/master)
 
@@ -29,7 +23,7 @@ All WE UI user properties should reflect properly, [source is available here](ht
 
  
 
-**Commodore Amiga 500**
+## Commodore Amiga 500
 
 [Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=2272437056) ¦ [Github](https://github.com/ZeusOfTheCrows/we-amber-terminal/tree/Amiga-500)
 
@@ -39,9 +33,9 @@ Retro styled Commodore Amiga desktop with scrolling text. Background image by [B
 
 ---
 
-  
 
-**Retrowave XP Bliss**
+
+## Retrowave XP Bliss
 
 [Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=2272255583) ¦ (Not on github as it's so simple, but feel free to request source)
 
