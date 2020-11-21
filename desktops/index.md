@@ -1,28 +1,16 @@
 ---
-permalink: /desktops
+permalink: /desktops/
 layout: default
 ---
 
 _C:\Desktops>dir/n_
 
-<html>
-
-	<h1>Desktoppy/wallpapery things</h1>
-
-</html>
+# Desktoppy/wallpapery things
 
 ---
 
- 
-
 **[Wallpaper Engine]({{ "desktops/wpe" | relative_url}})**
 
-
-
-
-
 **[Rainmeter]({{ "desktops/rainmeter" | relative_url}})**
-
-
 
 **[Wallpapers]({{ "desktops/wallpapers" | relative_url}})**

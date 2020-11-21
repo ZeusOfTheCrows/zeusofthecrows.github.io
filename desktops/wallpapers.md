@@ -1,5 +1,5 @@
 ---
-permalink: /desktops/wallpapers
+permalink: /desktops/wallpapers/
 title: Wallpapers
 ---
 _C:\Desktops>type wallpapers.txt_
@@ -20,7 +20,7 @@ As the last remaining major non-chromium browser, Firefox is one of the few piec
 
 ---
 
- 
+
 
 ## Pacman ghosts
 
@@ -32,7 +32,7 @@ Inspired by the pacman wallpaper that's standard for gruvbox, I made one with th
 
 ---
 
-  
+
 
 ## Hazardous Materials
 

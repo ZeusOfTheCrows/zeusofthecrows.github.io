@@ -1,5 +1,5 @@
 ---
-permalink: /desktops/wpe.html
+permalink: /desktops/wpe/
 layout: default
 ---
 
@@ -13,7 +13,7 @@ _C:\Desktops>type wpe.txt_
 
 [Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=2271074053) ¦ [Github](https://github.com/ZeusOfTheCrows/we-amber-terminal/tree/master)
 
-I decided to rewrite my rainmeter preset into wallpaper engine for  performance reasons, and I thought I'd put it up on steam workshop. Retro styled DEC VT100 terminal desktop, with clock radio. I know the  VT100 wasn't amber, but I think it looks better - change it to green if  you like.. Background image from [MaxCorpIndustries](https://www.deviantart.com/maxcorpindustries/art/Vintage-Terminal-1-0-for-rainmeter-831562992), CRT effects by [Zauwara/fug4life](https://steamcommunity.com/sharedfiles/filedetails?id=2116673772). 
+I decided to rewrite [my rainmeter preset]({{ "desktops/rainmeter#amber-dec-terminal" | relative_url }}) into wallpaper engine for  performance reasons, and I thought I'd put it up on steam workshop. Retro styled DEC VT100 terminal desktop, with clock radio. I know the  VT100 wasn't amber, but I think it looks better - change it to green if  you like.. Background image from [MaxCorpIndustries](https://www.deviantart.com/maxcorpindustries/art/Vintage-Terminal-1-0-for-rainmeter-831562992), CRT effects by [Zauwara/fug4life](https://steamcommunity.com/sharedfiles/filedetails?id=2116673772). 
 
 All WE UI user properties should reflect properly, [source is available here](https://steamcommunity.com/linkfilter/?url=https://github.com/ZeusOfTheCrows/we-amber-terminal).
 
