@@ -12,4 +12,6 @@ Sorry
 
 [Here, have some wallpapers]({{ "desktops" | relative_url }})
 
+[Some interesting links]({{ "web" | relative_url }})
+
 [Or recommend me a music player]({{ "2020/11/21/linux-music-player" | relative_url }})
