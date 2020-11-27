@@ -19,6 +19,8 @@ Also, for the sites not in your native language, I recommend [this firefox exten
 
 [dlanham](https://dlanham.com/): **Beautiful** art and animation, most is available as [paid] wallpapers.
 
+[jgarza](http://jgarza.sdf.org/): Also some fun [pictures of computers](http://jgarza.sdf.org/MUSEUM/museum.php).
+
 [searchlores](http://biostatisticien.eu/www.searchlores.org/words.htm#top): The most bizarre site on this list, and it may require the use of [archive.org](https://web.archive.org/) to browse. [Root is open though](http://biostatisticien.eu/www.searchlores.org/).
 
 [searchlore](https://www.searchlore.org/): Similar to above, but a bit more modern. _May_ be run by the same person?
