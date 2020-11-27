@@ -1,4 +1,5 @@
 ---
+title: WPE
 permalink: /desktops/wpe/
 layout: default
 ---

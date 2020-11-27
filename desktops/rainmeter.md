@@ -1,4 +1,5 @@
 ---
+title: Rainmeter 
 permalink: /desktops/rainmeter/
 layout: default
 ---

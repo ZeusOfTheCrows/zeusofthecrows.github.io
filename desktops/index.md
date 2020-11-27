@@ -1,6 +1,7 @@
 ---
+title: Desktops
 permalink: /desktops/
-layout: default
+layout: directory
 ---
 
 _C:\Desktops>dir/n_

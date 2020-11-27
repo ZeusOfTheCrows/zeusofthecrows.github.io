@@ -1,6 +1,7 @@
 ---
-permalink: /desktops/wallpapers/
 title: Wallpapers
+permalink: /desktops/wallpapers/
+layout: default
 ---
 _C:\Desktops>type wallpapers.txt_
 
