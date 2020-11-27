@@ -16,4 +16,4 @@ Keyboard layout: as close to this as I can get on an ISO 105 key
 
 OS: Windows. Not because I like it, but because Linux just isn't very good. (I know I'm going to get hatemail about that)
 
-Music: [Spotify](https://open.spotify.com/playlist/5q8crqSxKiqtpIKnAgkYRU?si=UEucTXZZRP2mZ2PBVUpY1A) \| YT Music coming soon
+Music: [Spotify](https://open.spotify.com/playlist/5q8crqSxKiqtpIKnAgkYRU?si=UEucTXZZRP2mZ2PBVUpY1A) \| [M3U]({{ "/assets/text/music.m3u/" | relative_url }}) \| [YT Music](https://music.youtube.com/playlist?list=PLxu-Tz00k18Ef1lyMdoGFgPkcxrM115jp) (generated automatically, missing several songs)
