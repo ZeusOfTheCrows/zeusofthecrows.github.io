@@ -31,6 +31,9 @@ reddit_username: zeusofthecrows
 
 # Build settings
 theme: minima
+minima:
+    skin: dark.scss
+    link-base-color: orange
 plugins:
   - jekyll-feed
   - jekyll-sitemap
