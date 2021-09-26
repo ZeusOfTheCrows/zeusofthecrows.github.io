@@ -9,18 +9,19 @@ layout: default
 	</td>
 </tr>
 
-  <table class="post-list" style="width:100%">
+  <!--<table class="post-list" style="width:100%">-->
+	<div><table class="post-list">
 		{% for post in site.posts %}
 			<tr>
 				<td>
-					<a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+					<a class="post-title" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
 				</td>
 				<td>
-					<a class="post-link" href="{{ post.url | relative_url }}">{{ post.excerpt | strip_html | truncatewords:12 }}</a>
+					<a class="post-preview" href="{{ post.url | relative_url }}">{{ post.excerpt | strip_html}}</a></div>
 				</td>
 			</tr>
 		{% endfor %}
-  </table>
+  </table></div>
 
 <img src="./assets/images/under-construction.gif" alt="under construction gif" width="384" />
 

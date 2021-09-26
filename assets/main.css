@@ -31,7 +31,7 @@ body {
 /*===========================================================================*/
 /*make all heavier text styles normal weight/size, just differing brightness*/
 /*(th is table header)*/
-/* ##ztodo why does the line-height not work? */
+/* ##ztodo why does the line-height not work? try margin-block-start/end */
 h1, h2, h3, h4, em, i, strong, b, th {
 	font-style: inherit;
 	font-weight: inherit;
@@ -80,6 +80,33 @@ a:hover {
 }
 
 /*===========================================================================*/
-hr. {
-	border-top: 2px dashed #EF7900;
+/* ##ztodo make this prettier*/
+hr {
+	background-color: #000000;
+	border: 1px dashed #EF7900;
 }
+
+/*===========================================================================*/
+/* ##ztodo move to another file */
+.post-list {
+	width: 100%;
+	white-space: nowrap;
+	word-wrap: break-word; /*why do this and ellipsise not work?*/
+  overflow: hidden;
+	display: block; /*this needs to be here for %, but needs not for px? wtf*/
+  text-overflow: ellipsis;
+}
+
+/* .post-title { */
+	/* white-space: nowrap; */
+	/* word-wrap: break-word; */
+  /* overflow: hidden; */
+  /* text-overflow: ellipsis; */
+/* } */
+
+/* .post-preview { */
+	/* white-space: nowrap; */
+	/* word-wrap: break-word; */
+  /* overflow: hidden; */
+  /* text-overflow: ellipsis; */
+/* } */
