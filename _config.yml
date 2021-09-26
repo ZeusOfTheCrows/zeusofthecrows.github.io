@@ -18,8 +18,9 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Louis Arnauld (ZeusOfTheCrows)
-email: zeusofthecrows+site[at]gmail.com
+title: ZeusOfTheCrows
+# (downcased in head.html)
+email: zeusofthecrows+site[(a)]gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   I'd love to have some words here, but I don't know what
 #baseurl: "/" # the subpath of your site, e.g. /blog
@@ -30,10 +31,10 @@ github_username: zeusofthecrows
 reddit_username: zeusofthecrows
 
 # Build settings
-theme: minima
-minima:
-    skin: dark.scss
-    link-base-color: orange
+# theme: minima
+# minima:
+#     skin: dark.scss
+#     link-base-color: orange
 plugins:
   - jekyll-feed
   - jekyll-sitemap

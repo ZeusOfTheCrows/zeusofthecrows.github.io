@@ -1,0 +1,27 @@
+---
+layout: default
+---
+
+<div class="home">
+<tr>
+	<td valign="top">
+		{{ content }}
+	</td>
+</tr>
+
+  <table class="post-list" style="width:100%">
+		{% for post in site.posts %}
+			<tr>
+				<td>
+					<a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+				</td>
+				<td>
+					<a class="post-link" href="{{ post.url | relative_url }}">{{ post.excerpt | strip_html }}</a>
+				</td>
+			</tr>
+		{% endfor %}
+  </table>
+
+<img src="./assets/images/under-construction.gif" alt="under construction gif" width="384" />
+
+</div>
