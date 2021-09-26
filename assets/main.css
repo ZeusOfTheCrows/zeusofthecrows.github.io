@@ -1,0 +1,15 @@
+/* stop overriding my nothing */
+
+    @font-face {
+    font-family: 'FixedsysEx';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Fixedsys Excelsior'), url('FSEX300.woff') format('woff');
+    }
+		
+		body {
+			background-color: black;
+			color: orange;
+			font-family: FixedsysEx;
+			text-shadow: 0px 0px 5px;
+		}
