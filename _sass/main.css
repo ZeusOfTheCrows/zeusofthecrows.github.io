@@ -1,12 +1,15 @@
-/* stop overriding my nothing */
 
     @font-face {
-    font-family: 'Fixedsys Excelsior 3.01';
+    font-family: 'FixedsysEx';
     font-style: normal;
     font-weight: normal;
-    src: local('Fixedsys Excelsior 3.01'), url('FSEX300.woff') format('woff');
+    src: local('Fixedsys Excelsior'), url('/assets/fonts/FixedsysEx.ttf') format('truetype'), url('/assets/fonts/FixedsysEx.woff') format('woff');
     }
 		
 		body {
 			background-color: black;
+			color: orange;
+			font-family: FixedsysEx;
+			/* for glow effect */
+			text-shadow: 0px 0px 4px;
 		}

@@ -1,5 +1,5 @@
-/* stop overriding my nothing */
-
+		/*=======================================================================*/
+		/* declare font-face for use */
     @font-face {
     font-family: 'FixedsysEx';
     font-style: normal;
@@ -7,16 +7,37 @@
     src: local('Fixedsys Excelsior'), url('/assets/fonts/FixedsysEx.ttf') format('truetype'), url('/assets/fonts/FixedsysEx.woff') format('woff');
     }
 		
+		/*=======================================================================*/
+		/* main styles */
 		body {
 			background-color: black;
 			color: #EF7900;
 			text-align: left;
-			font-family: FixedsysEx;
-			font-size: 20px;
+			font-family: FixedsysEx, monospace;
+			font-size: 16pt;
 			/* for glow effect */
-			text-shadow: 0px 0px 3px;
+			text-shadow: 0px 0px 2px;
 		}
 		
+		/*=======================================================================*/
+		/* header text are not bold, but brighter */
+		h1 {
+			font-style: normal;
+			font-size: inherit;
+			color: #FFE334;
+		}
+		h2 {
+			font-style: normal;
+			font-size: inherit;
+			color: #FFDB30;
+		}
+		h3 {
+			font-style: normal;
+			font-size: inherit;
+			color: #FFAA10;
+		}
+		
+		/*=======================================================================*/
 		a:link {
 			color: #FF9E04;
 		}
@@ -33,4 +54,12 @@
 		/* text glows brightest when clicked */
 		:active {
 			text-shadow: 0px 0px 6px;
+		}
+		
+		/*=======================================================================*/
+		/* italic (emphasised) is not italic, but brighter */
+		em {
+			font-style: normal;
+			font-size: inherit;
+			color: #FFDB30;
 		}
