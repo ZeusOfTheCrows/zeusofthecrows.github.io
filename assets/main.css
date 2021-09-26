@@ -1,65 +1,85 @@
-		/*=======================================================================*/
-		/* declare font-face for use */
-    @font-face {
-    font-family: 'FixedsysEx';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Fixedsys Excelsior'), url('/assets/fonts/FixedsysEx.ttf') format('truetype'), url('/assets/fonts/FixedsysEx.woff') format('woff');
-    }
-		
-		/*=======================================================================*/
-		/* main styles */
-		body {
-			background-color: black;
-			color: #EF7900;
-			text-align: left;
-			font-family: FixedsysEx, monospace;
-			font-size: 16pt;
-			/* for glow effect */
-			text-shadow: 0px 0px 2px;
-		}
-		
-		/*=======================================================================*/
-		/* header text are not bold, but brighter */
-		h1 {
-			font-style: normal;
-			font-size: inherit;
-			color: #FFE334;
-		}
-		h2 {
-			font-style: normal;
-			font-size: inherit;
-			color: #FFDB30;
-		}
-		h3 {
-			font-style: normal;
-			font-size: inherit;
-			color: #FFAA10;
-		}
-		
-		/*=======================================================================*/
-		a:link {
-			color: #FF9E04;
-		}
-		
-		a:visited {
-			color: #862C00;
-		}
-		
-		/* links glow brighter when hovered over */
-		a:hover {
-			text-shadow: 0px 0px 4px;
-		}
-		
-		/* text glows brightest when clicked */
-		:active {
-			text-shadow: 0px 0px 6px;
-		}
-		
-		/*=======================================================================*/
-		/* italic (emphasised) is not italic, but brighter */
-		em {
-			font-style: normal;
-			font-size: inherit;
-			color: #FFDB30;
-		}
+/*===========================================================================*/
+/* declare font-face for use */
+@font-face {
+font-family: 'FixedsysEx';
+font-style: normal;
+font-weight: normal;
+src: local('Fixedsys Excelsior'), 
+     url('/assets/fonts/FixedsysEx.ttf') format('truetype'),
+     url('/assets/fonts/FixedsysEx.woff') format('woff');
+}
+
+/*===========================================================================*/
+/*main styles*/
+body {
+	background-color: black;
+	color: #EF7900;
+	text-align: left;
+	line-height: 1em;
+	font-family: FixedsysEx, monospace;
+	font-size: 16pt;
+	/*for glow effect*/
+	text-shadow: 0px 0px 2px;
+	
+	/*just give it a little room to breathe*/
+  padding-top: 50px;
+  padding-right: 50px;
+  padding-bottom: 50px;
+  padding-left: 50px;
+}
+
+/*===========================================================================*/
+/*make all heavier text styles normal weight/size, just differing brightness*/
+/*(th is table header)*/
+/* ##ztodo why does the line-height not work? */
+h1, h2, h3, h4, em, i, strong, b, th {
+	font-style: inherit;
+	font-weight: inherit;
+	line-height: inherit;
+	font-size: inherit;
+}
+h1 {
+	color: #FFE334;
+}
+h2 {
+	color: #FFDB30;
+}
+h3 {
+	color: #FFAA10;
+}
+h4 {
+	color: #FF9E04;
+}
+
+em, i {
+	color: #FFAA10;
+}
+
+strong, b {
+	color: #F37D00;
+}
+
+/*===========================================================================*/
+a:link {
+	color: #FF9E04;
+	font-style: underline;
+}
+
+a:visited {
+	color: #862C00;
+}
+
+/*links glow brighter when hovered over*/
+a:hover {
+	text-shadow: 0px 0px 4px;
+}
+
+/*text glows brightest when clicked*/
+:active {
+	text-shadow: 0px 0px 6px;
+}
+
+/*===========================================================================*/
+hr. {
+	border-top: 2px dashed #EF7900;
+}
