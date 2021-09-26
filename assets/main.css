@@ -4,12 +4,33 @@
     font-family: 'FixedsysEx';
     font-style: normal;
     font-weight: normal;
-    src: local('Fixedsys Excelsior'), url('FSEX300.woff') format('woff');
+    src: local('Fixedsys Excelsior'), url('/assets/fonts/FixedsysEx.ttf') format('truetype'), url('/assets/fonts/FixedsysEx.woff') format('woff');
     }
 		
 		body {
 			background-color: black;
-			color: orange;
+			color: #EF7900;
+			text-align: left;
 			font-family: FixedsysEx;
-			text-shadow: 0px 0px 5px;
+			font-size: 20px;
+			/* for glow effect */
+			text-shadow: 0px 0px 3px;
+		}
+		
+		a:link {
+			color: #FF9E04;
+		}
+		
+		a:visited {
+			color: #862C00;
+		}
+		
+		/* links glow brighter when hovered over */
+		a:hover {
+			text-shadow: 0px 0px 4px;
+		}
+		
+		/* text glows brightest when clicked */
+		:active {
+			text-shadow: 0px 0px 6px;
 		}

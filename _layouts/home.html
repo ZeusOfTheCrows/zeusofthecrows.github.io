@@ -16,7 +16,7 @@ layout: default
 					<a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
 				</td>
 				<td>
-					<a class="post-link" href="{{ post.url | relative_url }}">{{ post.excerpt | strip_html }}</a>
+					<a class="post-link" href="{{ post.url | relative_url }}">{{ post.excerpt | strip_html | truncatewords:12 }}</a>
 				</td>
 			</tr>
 		{% endfor %}
