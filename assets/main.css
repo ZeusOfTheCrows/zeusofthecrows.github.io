@@ -15,7 +15,7 @@ body {
 	background-color: black;
 	color: #EF7900;
 	text-align: left;
-	line-height: 1em;
+	line-height: 2ex;
 	font-family: FixedsysEx, monospace;
 	font-size: 16pt;
 	/*for glow effect*/
@@ -62,7 +62,7 @@ strong, b {
 /*===========================================================================*/
 a:link {
 	color: #FF9E04;
-	font-style: underline;
+	text-decoration: underline;
 }
 
 a:visited {
@@ -110,3 +110,15 @@ hr {
   /* overflow: hidden; */
   /* text-overflow: ellipsis; */
 /* } */
+
+
+#ascii-header {
+	color: #FFE334;
+	text-decoration: none !important;
+	font-family: FixedsysEx, monospace;
+	font-size: 16pt;
+	line-height: 1.9ex;
+	/* text-align: inherit; */
+	/* text-shadow: inherit; */
+
+}
