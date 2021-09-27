@@ -114,6 +114,7 @@ hr {
 
 #ascii-header {
 	color: #FFE334;
+	white-space: pre;
 	text-decoration: none !important;
 	font-family: FixedsysEx, monospace;
 	font-size: 16pt;
