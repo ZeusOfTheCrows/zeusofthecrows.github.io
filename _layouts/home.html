@@ -9,7 +9,6 @@ layout: default
 	</td>
 </tr>
 
-  <!--<table class="post-list" style="width:100%">-->
 	<div><table class="post-list">
 		{% for post in site.posts %}
 			<tr>
@@ -17,7 +16,8 @@ layout: default
 					<a class="post-title" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
 				</td>
 				<td>
-					<a class="post-preview" href="{{ post.url | relative_url }}">{{ post.excerpt | strip_html}}</a></div>
+					<!--this is only <a> as it used to be a link. could probably be a span-->
+					<a class="post-preview">{{ post.excerpt | strip_html}}</a></div>
 				</td>
 			</tr>
 		{% endfor %}
