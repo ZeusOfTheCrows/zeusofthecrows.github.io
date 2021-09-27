@@ -111,16 +111,34 @@ hr {
   /* text-overflow: ellipsis; */
 /* } */
 
-
-#ascii-header {
-	color: #FFE334;
+code, .ascii-art {
 	white-space: pre;
   overflow: hidden;
 	display: block;
 	font-family: FixedsysEx, monospace;
-	font-size: 12pt;
-	line-height: 1.9ex;
+	/* font-size: 12pt; */
+	/* line-height: 1.9ex; */
+}
+#ascii-header, #ascii-logo {
+	color: #FFE334;
+	/* white-space: pre; */
+  /* overflow: hidden; */
+	/* display: block; */
+	/* font-family: FixedsysEx, monospace; */
+	/* font-size: 12pt; */
+	/* line-height: 1.9ex; */
 	/* text-align: inherit; */
 	/* text-shadow: inherit; */
+}
 
+/*hide header, only show minified logo on small screens*/
+@media only screen and (max-width: 52em) {
+	#ascii-logo {
+		/*is !important to override inline style,
+		has inline style to hide when css isn't loaded*/
+		display: block !important;
+	}
+	#ascii-header {
+		display: none;
+	}
 }
