@@ -3,13 +3,16 @@ layout: default
 ---
 
 <div class="home">
-<tr>
-	<td valign="top">
-		{{ content }}
-	</td>
-</tr>
+<table>
+	<tr>
+		<td>
+			{{ content }}
+		</td>
+	</tr>
+</table>
 
-	<div><table class="post-list">
+  <!--<table class="post-list" style="width:100%">-->
+	<table class="post-list">
 		{% for post in site.posts %}
 			<tr>
 				<td>
@@ -17,11 +20,11 @@ layout: default
 				</td>
 				<td>
 					<!--this is only <a> as it used to be a link. could probably be a span-->
-					<a class="post-preview">{{ post.excerpt | strip_html}}</a></div>
+					<a class="post-preview">{{ post.excerpt | strip_html}}</a>
 				</td>
 			</tr>
 		{% endfor %}
-  </table></div>
+  </table>
 <hr />
 <img src="./assets/images/under-construction.gif" alt="under construction gif" width="20%" />
 
