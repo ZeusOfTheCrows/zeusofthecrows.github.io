@@ -1,0 +1,27 @@
+#nav-menu-wrapper {
+	width: 24ch;
+	vertical-align: top;
+}
+
+.nav-menu {
+	list-style-position: inside; /*deprecates margin method*/
+	list-style-type: decimal-leading-zero;
+	/* margin: 0px 0px 0px 4ch; /*this is because list adds [№№. ] on the left*/
+}
+
+.nav-menu-folder {
+	cursor: pointer;
+}
+.nav-menu-folder:active {
+	text-shadow: 0px 0px 6px;
+}
+
+
+.nav-menu-folder::marker {
+	/* list-style-type: disclosure-open; */
+	content: "> ";
+}
+details[open] > .nav-menu-folder::marker {
+	/* list-style-type: disclosure-open; */
+	content: "V ";
+}

@@ -1,4 +1,8 @@
 /*===========================================================================*/
+/* imports */
+@import "./nav-menu.css";
+
+/*===========================================================================*/
 /* declare font-face for use */
 @font-face {
 font-family: 'FixedsysEx';
@@ -11,6 +15,14 @@ src: local('Fixedsys Excelsior'),
 
 /*===========================================================================*/
 /*main styles*/
+
+*{
+	margin: 0px;
+	padding: 0px;
+	vertical-align: top;
+	text-align: left;
+	
+}
 body {
 	background-color: black;
 	color: #EF7900;
@@ -22,10 +34,12 @@ body {
 	text-shadow: 0px 0px 2px;
 	
 	/*just give it a little room to breathe*/
-  padding-top: 40px;
-  padding-right: 50px;
-  padding-bottom: 50px;
-  padding-left: 50px;
+	/* top/bottom, left/right */
+	margin: 1% 4%;
+  /* padding-top: 40px; */
+  /* padding-right: 50px; */
+  /* padding-bottom: 50px; */
+  /* padding-left: 50px; */
 }
 
 /*===========================================================================*/
@@ -75,7 +89,7 @@ a:hover {
 }
 
 /*text glows brightest when clicked*/
-:active {
+a:active {
 	text-shadow: 0px 0px 6px;
 }
 
@@ -88,14 +102,18 @@ hr {
 
 /*===========================================================================*/
 /* ##ztodo move to another file */
+
 .post-list {
 	width: 100%;
-	white-space: nowrap;
-	word-wrap: break-word; /*why do this and ellipsise not work?*/
-  overflow: hidden;
-	display: block; /*this needs to be here for %, but needs not for px? wtf*/
-  text-overflow: ellipsis;
 }
+
+/* .post-list  > a { */
+	/* max-width: 100%; */
+	/* white-space: nowrap; */
+  /* overflow: hidden; */
+	/* display: block; /*this needs to be here for %, but needs not for px? wtf*/ */
+  /* text-overflow: ellipsis; */
+/* } */
 
 /* .post-title { */
 	/* white-space: nowrap; */
@@ -104,16 +122,17 @@ hr {
   /* text-overflow: ellipsis; */
 /* } */
 
-/* .post-preview { */
-	/* white-space: nowrap; */
-	/* word-wrap: break-word; */
-  /* overflow: hidden; */
-  /* text-overflow: ellipsis; */
-/* } */
+.post-preview {
+	max-width: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	display: block; /*this needs to be here for %, but needs not for px? wtf*/
+	text-overflow: ellipsis;
+}
 
 code, .ascii-art {
 	white-space: pre;
-  overflow: hidden;
+	overflow: hidden;
 	display: block;
 	font-family: FixedsysEx, monospace;
 	/* font-size: 12pt; */
