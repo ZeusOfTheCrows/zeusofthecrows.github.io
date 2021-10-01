@@ -1,5 +1,5 @@
 ---
-title: root
+title: Root
 layout: home
 hero_height: 
 ---
