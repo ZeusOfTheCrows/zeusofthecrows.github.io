@@ -1,7 +1,6 @@
 ---
 title: Root
 layout: home
-hero_height: 
 ---
 
 

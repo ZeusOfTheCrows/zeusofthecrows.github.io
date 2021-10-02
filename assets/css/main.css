@@ -17,9 +17,11 @@ src: local('Fixedsys Excelsior'),
 /*main styles*/
 
 * {
+	/*remove padding globally so text always aligns*/
 	margin: 0px;
 	padding: 0px;
 	border: 0px; 
+	border-collapse: collapse; /*hide implicit table borders*/
 	vertical-align: top;
 	text-align: left;
 	
@@ -36,7 +38,7 @@ body {
 	
 	/*just give it a little room to breathe*/
 	/* top/bottom, left/right */
-	margin: 1% 4%;
+	margin: 2% 6%;
   /* padding-top: 40px; */
   /* padding-right: 50px; */
   /* padding-bottom: 50px; */
