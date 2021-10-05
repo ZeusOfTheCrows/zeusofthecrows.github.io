@@ -3,29 +3,21 @@ layout: default
 ---
 
 <div class="home">
-<table>
-	<tr>
-		<td>
-			{{ content }}
-		</td>
-	</tr>
-</table>
-
-  <!--<table class="post-list" style="width:100%">-->
-	<table class="post-list">
-		{% for post in site.posts %}
-			<tr>
-				<td>
-					<a class="post-title" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-				</td>
-				<td>
-					<!--this is only <a> as it used to be a link. could probably be a span-->
-					<a class="post-preview">{{ post.excerpt | strip_html}}</a>
-				</td>
-			</tr>
-		{% endfor %}
-  </table>
-<hr />
-<img src="./assets/images/under-construction.gif" alt="under construction gif" style="width: clamp(256px, 100%, 512px)" />
-
+	<div>
+		{{ content }}
+	</div>
+		<!--<table class="post-list" style="width:100%">-->
+	<div>
+		<table class="post-wrapper">
+			{% for post in site.posts %}
+				<tr>
+					<td class="post-title"><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></td>
+							<!--this is only <a> as it used to be a link. could probably be a span-->
+					<td class="post-excerpt"><a>{{ post.excerpt | strip_html}}</a></td>
+				</tr>
+			{% endfor %}
+		</table>
+	</div>
+	<hr />
+	<img src="./assets/images/under-construction.gif" alt="under construction gif" style="width: clamp(256px, 100%, 512px)" />
 </div>

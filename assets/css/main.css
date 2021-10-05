@@ -26,6 +26,11 @@ src: local('Fixedsys Excelsior'),
 	text-align: left;
 	
 }
+.page-content {
+	width: 88%;
+	/* color: white; */
+}
+
 body {
 	background-color: black;
 	color: #EF7900;
@@ -34,8 +39,8 @@ body {
 	font-family: FixedsysEx, monospace;
 	font-size: 12pt;
 	/*for glow effect*/
-	text-shadow: 0px 0px 2px;
-	
+	text-shadow: 0px 0px 4px;
+	width: 88%;
 	/*just give it a little room to breathe*/
 	/* top/bottom, left/right */
 	margin: 2% 6%;
@@ -99,22 +104,33 @@ a:active {
 /*===========================================================================*/
 /* ##ztodo make this prettier*/
 hr {
+	/* visibility: hidden; */
 	background-color: #000000;
-	border: 1px dashed #EF7900;
+	color: #EF7900;
+	width: 100%;
+	/* position: relative; */
+	overflow: hidden;
+	/* border: 1px dashed #EF7900; */
+}
+hr::before {
+	/* position: static; */
+	content: "=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=";
+	white-space: nowrap;
+	text-overflow: none;
+	/*these have to be set in the parent instead? see:
+	https://stackoverflow.com/questions/3970455/how-to-make-the-overflow-css-property-work-with-hidden-as-value/58119574#58119574*/
+	/* width: 100%; */
+	/* width: 10em; */
 }
 
 /*===========================================================================*/
 /* ##ztodo move to another file */
 
-.post-list {
-	width: 100%;
-}
-
 /* .post-list  > a { */
 	/* max-width: 100%; */
 	/* white-space: nowrap; */
   /* overflow: hidden; */
-	/* display: block; /*this needs to be here for %, but needs not for px? wtf*/ */
+	/* display: block; /*this needs to be here for %, but needs not for px? wtf*/
   /* text-overflow: ellipsis; */
 /* } */
 
@@ -125,13 +141,23 @@ hr {
   /* text-overflow: ellipsis; */
 /* } */
 
-.post-preview {
+.post-wrapper {
+	table-layout: fixed;
+	width: 88%;
+}
+.post-title {
+	width: 10em;
+}
+
+.post-excerpt {
 	max-width: 100%;
+	width: 100%;
 	white-space: nowrap;
 	overflow: hidden;
-	display: block; /*this needs to be here for %, but needs not for px? wtf*/
-	text-overflow: ellipsis;
+	/* display: block; /*this needs to be here for %, but needs not for px? wtf*/
+	text-overflow: "..."; /*this is a full ... as it looks better in FxSys*/
 }
+
 
 code, .ascii-art {
 	white-space: pre;

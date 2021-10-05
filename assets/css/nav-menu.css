@@ -1,13 +1,22 @@
 /* i realise this whole thing is a mess */
 
-#nav-menu-wrapper {
-	/*1ch is the width of a "0"*/
-	width: 18ch;
-	vertical-align: top;
+@media only screen and (max-width: 52em) {
+	#nav-menu-wrapper {
+		/*is !important to override inline style,
+		has inline style to hide when css isn't loaded*/
+		display: none;
+	}
 }
 
 .nav-menu {
+	/*1ch is the width of a "0"*/
+	width: 18ch;
+	vertical-align: top;
 	list-style-position: inside; /*moves bullets inside list padding*/
+}
+
+.nav-menu-item {
+	margin: 0ch 0ch 0ch 2ch; /*insets menu sub items*/)
 }
 
 .nav-menu-folder::marker { /* the space matches any number of descendants*/
@@ -16,10 +25,6 @@
 
 .nav-menu-item::marker { /* the space matches any number of descendants*/
 	content: "> "; /*makes bullets > char with padding space*/
-}
-
-.nav-menu-item {
-	margin: 0ch 0ch 0ch 2ch; /*insets menu sub items*/)
 }
 
 /*code used for folding menu
