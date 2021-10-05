@@ -4,9 +4,7 @@ permalink: /desktops/wpe/
 layout: default
 ---
 
-_C:\Desktops>type wpe.txt_
-
-# Wallpaper Engine Files
+# Wallpaper Engine Presets
 
 ---
 

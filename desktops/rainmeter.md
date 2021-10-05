@@ -4,8 +4,6 @@ permalink: /desktops/rainmeter/
 layout: default
 ---
 
-_C:\Desktops>type rainmeter.txt_
-
 # Rainmeter presets
 
 ---

@@ -3,8 +3,6 @@ title: Wallpapers
 permalink: /desktops/wallpapers/
 layout: default
 ---
-_C:\Desktops>type wallpapers.txt_
-
 # Wallpapers that I've designed/made
 
 ---

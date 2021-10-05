@@ -4,10 +4,10 @@ permalink: /web/
 layout: directory
 ---
 
-_C:\web>dir/n_
-
 # Internet things
 
 ---
 
-**[Web links]({{ "web/bookmarks" | relative_url}})**
+**[Static Sites]({{ "web/static-sites" | relative_url}})**
+
+**[Useful Sites]({{ "web/useful-sites" | relative_url}})**
