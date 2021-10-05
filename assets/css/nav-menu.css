@@ -10,25 +10,31 @@
 	list-style-position: inside; /*moves bullets inside list padding*/
 }
 
-.nav-menu ::marker { /* the space matches any number of descendants*/
+.nav-menu-folder::marker { /* the space matches any number of descendants*/
 	content: "] "; /*makes bullets ] char with padding space*/
 }
 
-.nav-menu li {
+.nav-menu-item::marker { /* the space matches any number of descendants*/
+	content: "> "; /*makes bullets > char with padding space*/
+}
+
+.nav-menu-item {
 	margin: 0ch 0ch 0ch 2ch; /*insets menu sub items*/)
 }
 
+/*code used for folding menu
 .nav-menu-folder {
-	cursor: pointer; /* makes the cursor look like it's over a link*/
+	cursor: pointer; /* makes the cursor look like it's over a link
 }
 .nav-menu-folder:active {
-	text-shadow: 0px 0px 6px; /*adds text glow on click like links*/
+	text-shadow: 0px 0px 6px; /*adds text glow on click like links
 }
 
 
 .nav-menu-folder::marker {
-	content: "> ";  /*makes folder bullets > char with padding space*/
+	content: "> ";  /*makes folder bullets > char with padding space
 }
 details[open] > .nav-menu-folder::marker {
-	content: "V "; /* makes folder bullets downward arrow when open*/
+	content: "V "; /* makes folder bullets downward arrow when open
 }
+*/
