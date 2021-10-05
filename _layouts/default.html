@@ -5,7 +5,7 @@
 
   <body>
 
-   {% include header.html %}
+	{% include header.html %}
 	
 		<table id="whole-wrapper-table">
 			<tr>
@@ -13,6 +13,7 @@
 					{% include tree-nav-menu.html %}
 				</td>
 				<td>
+					{% include breadcrumbs.html %}
 					<main class="page-content" aria-label="Content">
 						<div class="wrapper">
 							{{ content }}

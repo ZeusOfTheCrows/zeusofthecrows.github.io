@@ -2,9 +2,8 @@
 
 @media only screen and (max-width: 52em) {
 	#nav-menu-wrapper {
-		/*is !important to override inline style,
-		has inline style to hide when css isn't loaded*/
-		display: none;
+		display: none; /*hide nav menu when screen is too narrow for it.
+		i don't know what to do instead though*/
 	}
 }
 
