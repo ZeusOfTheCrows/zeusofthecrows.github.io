@@ -6,19 +6,16 @@ layout: default
 	<div>
 		{{ content }}
 	</div>
-		<!--<table class="post-list" style="width:100%">-->
-	<div>
-		<table class="post-wrapper">
+	
+	<ul class="post-wrapper">
 			{% for post in site.posts %}
-				<tr>
-					<td class="post-title"><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></td>
-							<!--this is only <a> as it used to be a link. could probably be a span-->
-					<td class="post-excerpt"><a>{{ post.excerpt | strip_html}}</a></td>
-				</tr>
+				<li class="post-list">
+					<a class="post-title" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+					<span class="post-excerpt"><a>{{ post.excerpt | strip_html}}</span>
+				</li>
 			{% endfor %}
-		</table>
-	</div>
+		</ul>
 	<hr />
 	<!-- this is hardcoded as it's going once the site is complete -->
-	<img src="./assets/images/under-construction.gif" alt="under construction gif" style="width: clamp(256px, 100%, 512px)" />
+	<img src="./assets/images/under-construction.gif" alt="under construction gif" style="width: clamp(128px, 40%, 256px)" />
 </div>

@@ -7,23 +7,23 @@
 
 	{% include header.html %}
 	
-		<table id="whole-wrapper-table">
-			<tr>
-				<td id="nav-menu-wrapper">
-					{% include tree-nav-menu.html %}
-				</td>
-				<td>
-					{% include breadcrumbs.html %}
-					<main class="page-content" aria-label="Content">
-						<div class="wrapper">
-							{{ content }}
-						</div>
-					</main>
-				</td>
-			</tr>
-		</table>
-
-
+		<div id="not-header">
+			<div id="nav-menu-wrapper">
+				{% include tree-nav-menu.html %}
+			</div>
+			<div id="not-nav-menu">
+				{% include breadcrumbs-page.html %}
+			
+				<main class="page-content" aria-label="Content">
+					<div class="wrapper">
+						{{ content }}
+					</div>
+				</main>
+			</div>
+			<div id="clear"></div>
+		</div>
+		
+		
   </body>
 
 </html>

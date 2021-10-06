@@ -26,9 +26,22 @@ src: local('Fixedsys Excelsior'),
 	text-align: left;
 	
 }
-.page-content {
-	width: 88%;
-	/* color: white; */
+
+#not-header {
+	width: 28%;
+	display: flex;
+}
+#nav-menu-wrapper{
+	width: 16em;
+	float: left;
+}
+#not-nav-menu {
+	/* margin-left: 18em; */
+	/* width: 50em; */
+	float: left;
+}
+#clear {
+	clear: both;
 }
 
 body {
