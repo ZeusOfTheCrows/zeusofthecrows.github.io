@@ -1,21 +1,8 @@
-/*===========================================================================*/
-/* imports */
+/*==================================imports==================================*/
 @import "./nav-menu.css";
+@import "./vars.css"; /*variables*/
 
-/*===========================================================================*/
-/* declare font-face for use */
-@font-face {
-font-family: 'FixedsysEx';
-font-style: normal;
-font-weight: normal;
-src: local('Fixedsys Excelsior'), 
-     url('/assets/fonts/FixedsysEx.ttf') format('truetype'),
-     url('/assets/fonts/FixedsysEx.woff') format('woff');
-}
-
-/*===========================================================================*/
-/*main styles*/
-
+/*==============================generic styles===============================*/
 * {
 	/*remove padding globally so text always aligns*/
 	margin: 0px;
@@ -24,11 +11,15 @@ src: local('Fixedsys Excelsior'),
 	border-collapse: collapse; /*hide implicit table borders*/
 	vertical-align: top;
 	text-align: left;
-	
+}
+
+#ascii-header, #ascii-logo {
+	color: var(--text-14);
+	/* white-space: pre; *//*declared in html so it works in browsers like lynx*/
 }
 
 #not-header {
-	width: 28%;
+	width: 28%; /*ztodo fix this*/
 	display: flex;
 }
 #nav-menu-wrapper{
@@ -45,12 +36,12 @@ src: local('Fixedsys Excelsior'),
 }
 
 body {
-	background-color: black;
-	color: #EF7900;
-	text-align: left;
+	background-color: var(--background-colour);
+	color: var(--text-10);
+	/* text-align: left; *//*this is defined globally*/
 	line-height: 2ex;
-	font-family: FixedsysEx, monospace;
-	font-size: 12pt;
+	font-family: var(--text-font);
+	font-size: var(--text-size);
 	/*for glow effect*/
 	text-shadow: 0px 0px 4px;
 	width: 88%;
@@ -63,38 +54,41 @@ body {
   /* padding-left: 50px; */
 }
 
-/*===========================================================================*/
 /*make all heavier text styles normal weight/size, just differing brightness*/
 /*(th is table header)*/
-/* ##ztodo why does the line-height not work? try margin-block-start/end */
-h1, h2, h3, h4, em, i, strong, b, th {
+h1, h2, h3, h4, h5, h6, em, i, strong, b, th {
 	font-style: inherit;
 	font-weight: inherit;
 	line-height: inherit;
 	font-size: inherit;
 }
 h1 {
-	color: #FFE334;
+	color: var(--text-14);
 }
 h2 {
-	color: #FFDB30;
+	color: var(--text-13);
 }
 h3 {
-	color: #FFAA10;
+	color: var(--text-12);
 }
 h4 {
-	color: #FF9E04;
+	color: var(--text-11);
+}
+h5 {
+	color: var(--text-09);
+}
+h6 {
+	color: var(--text-08);
 }
 
 em, i {
-	color: #FFAA10;
+	color: var(--text-13);
 }
 
 strong, b {
-	color: #F37D00;
+	color: var(--text-12);
 }
 
-/*===========================================================================*/
 a:link {
 	color: #FF9E04;
 	text-decoration: underline;
@@ -114,7 +108,6 @@ a:active {
 	text-shadow: 0px 0px 6px;
 }
 
-/*===========================================================================*/
 /* ##ztodo make this prettier*/
 hr {
 	/* visibility: hidden; */
@@ -125,9 +118,9 @@ hr {
 	overflow: hidden;
 	/* border: 1px dashed #EF7900; */
 }
-hr::before {
+hr::after {
 	/* position: static; */
-	content: "=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=\200B=";
+	content: "=\200B=\200B=\200B=\200B=\200B=\200B=\200B=";
 	white-space: nowrap;
 	text-overflow: none;
 	/*these have to be set in the parent instead? see:
@@ -135,6 +128,16 @@ hr::before {
 	/* width: 100%; */
 	/* width: 10em; */
 }
+
+code, .ascii-art {
+	white-space: pre;
+	overflow: hidden;
+	display: block;
+	font-family: FixedsysEx, monospace;
+	/* font-size: 12pt; */
+	/* line-height: 1.9ex; */
+}
+
 
 /*===========================================================================*/
 /* ##ztodo move to another file */
@@ -157,6 +160,7 @@ hr::before {
 .post-wrapper {
 	table-layout: fixed;
 	width: 88%;
+	list-style: none; /*hide bullets*/
 }
 .post-title {
 	width: 10em;
@@ -171,26 +175,6 @@ hr::before {
 	text-overflow: "..."; /*this is a full ... as it looks better in FxSys*/
 }
 
-
-code, .ascii-art {
-	white-space: pre;
-	overflow: hidden;
-	display: block;
-	font-family: FixedsysEx, monospace;
-	/* font-size: 12pt; */
-	/* line-height: 1.9ex; */
-}
-#ascii-header, #ascii-logo {
-	color: #FFE334;
-	/* white-space: pre; */
-  /* overflow: hidden; */
-	/* display: block; */
-	/* font-family: FixedsysEx, monospace; */
-	/* font-size: 12pt; */
-	/* line-height: 1.9ex; */
-	/* text-align: inherit; */
-	/* text-shadow: inherit; */
-}
 
 /*hide header, only show minified logo on small screens*/
 @media only screen and (max-width: 52em) {

@@ -11,3 +11,20 @@ Sorry
 
 ---
 
+# one
+
+## two
+
+### three
+
+#### four
+
+##### five
+
+###### six
+
+**bold**
+
+_italic_
+
+this is a paragraph with a **bold** word in the middle
