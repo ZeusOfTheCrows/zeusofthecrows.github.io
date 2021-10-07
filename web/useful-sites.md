@@ -1,7 +1,7 @@
 ---
 title: Useful Sites
 permalink: /web/useful-sites/
-layout: default
+layout: page
 menus: web
 ---
 ## Useful Sites
@@ -21,5 +21,4 @@ Also, for the sites not in your native language, I recommend [this firefox exten
 - [door2windows](http://www.door2windows.com/): Bunch of customisation programmes for Windows.
 
 - [windowscustomization](https://windowscustomization.com/): Repository of various Windows themes/theming tools.
-
 

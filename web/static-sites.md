@@ -1,7 +1,7 @@
 ---
 title: Static Sites
 permalink: /web/static-sites/
-layout: default
+layout: page
 menus: web
 ---
 ## Static Sites
@@ -10,7 +10,7 @@ Because I like digital archeology: a bunch of websites that I think hark back to
 
 I bear no responsibility for the contents of these pages, I just thought they were cool.
 
-Also, for the sites not in your native language, I recommend [this firefox extension](https://addons.mozilla.org/en-GB/firefox/addon/traduzir-paginas-web/); and site no longer online I recommend [this one](https://github.com/dessant/web-archives).
+Also, for the sites not in your native language, I recommend [this firefox extension](https://addons.mozilla.org/en-GB/firefox/addon/traduzir-paginas-web/); and sites no longer online I recommend [this one](https://github.com/dessant/web-archives).
 
 ---
 

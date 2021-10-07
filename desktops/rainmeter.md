@@ -1,7 +1,7 @@
 ---
 title: Rainmeter 
 permalink: /desktops/rainmeter/
-layout: default
+layout: page
 ---
 
 # Rainmeter presets

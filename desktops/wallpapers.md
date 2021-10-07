@@ -1,7 +1,7 @@
 ---
 title: Wallpapers
 permalink: /desktops/wallpapers/
-layout: default
+layout: page
 ---
 # Wallpapers that I've designed/made
 
