@@ -12,16 +12,16 @@
 	vertical-align: top;
 	text-align: left;
 }
-p:after{ /*add space after paragraph*/
-	display: block;
-	white-space: pre-line;
-	content: "\A"
+/* p:after{ /*add space after paragraph*/
+	/* display: block; */
+	/* white-space: pre-line; */
+	/* content: "\A" */
 }
 
 
 #ascii-header, #ascii-logo {
 	color: var(--text-14);
-	/* white-space: pre; *//*declared in html so it works in browsers like lynx*/
+	/*white-space: pre;*//*declared in html so it works in browsers like lynx*/
 }
 
 #not-header {
@@ -140,11 +140,14 @@ hr::after {
 li {
 	list-style: inside;
 }
-li li {
+li li { /*indent sub lists*/
 	margin-left: 2ch;
 }
 li::marker {
-	content: "* "; /*makes bullets ] char with padding space*/
+	content: "* "; /*makes bullets * char with padding space*/
+}
+li li::marker {
+	content: "- "; /*makes sub list bullets - char with padding space*/
 }
 
 
