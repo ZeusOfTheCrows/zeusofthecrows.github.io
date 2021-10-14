@@ -11,24 +11,24 @@
 	/*remove padding globally so text always aligns*/
 	margin: 0px;
 	padding: 0px;
-	border: 0px; 
+	border: 0px;
 	border-collapse: collapse; /*hide implicit table borders*/
 	vertical-align: top;
 	text-align: left;
 }
-/* p:after{ /*add space after paragraph*/
+/* p:after{ /*add space after paragraph*//*no. bad.*/
 	/* display: block; */
 	/* white-space: pre-line; */
 	/* content: "\A" */
 /* } */
 
 #ascii-header, #ascii-logo {
-	color: var(--text-14);
+	color: $text-14;
 	/*white-space: pre;*//*declared in html so it works in browsers like lynx*/
 }
 
 #not-header {
-	width: 88%; /*ztodo fix this*/
+	width: $content-width; /*ztodo fix this*/
 	display: flex;
 }
 #nav-menu-wrapper {
@@ -39,24 +39,27 @@
 .content {
 	/* margin-left: 18em; */
 	/* width: 10em; */
-	float: left;
+	float: left; /*ztodo why is this duped?*/
 }
 #clear {
-	clear: both;
+	clear: both; /*i don't think this needs be here?
+	               i think it's only if i have any divs below?*/
 }
 
 body {
-	background-color: var(--background-colour);
-	color: var(--text-10);
+	background-color: $background-colour;
+	color: $text-10;
 	/* text-align: left; *//*this is defined globally*/
 	line-height: 2ex;
-	font-family: var(--text-font);
-	font-size: var(--text-size);
+	/* font-family: var(--text-font); */
+	font-family: $text-font;
+	font-size: $text-size;
 	/*for glow effect*/
-	text-shadow: var(--text-shadow);
-	width: 88%;
-	/*just give it a little room to breathe*/
-	/* top/bottom, left/right */
+	/* text-shadow: 0px 0px $text-glow; */
+	text-shadow: 0px 0px $text-glow;
+	/* width: 88%; *//*no. ztodo remove?*/
+
+	/*just give it a little room to breathe*//* top/bottom, left/right */
 	margin: 2% 6%;
   /* padding-top: 40px; */
   /* padding-right: 50px; */
@@ -74,56 +77,56 @@ h1, h2, h3, h4, h5, h6, em, i, strong, b, th {
 }
 
 h1 {
-	color: var(--text-14);
+	color: $text-14;
 }
 h2 {
-	color: var(--text-13);
+	color: $text-13;
 }
 h3 {
-	color: var(--text-12);
+	color: $text-12;
 }
 h4 {
-	color: var(--text-11);
+	color: $text-11;
 }
 h5 {
-	color: var(--text-09);
+	color: $text-09;
 }
 h6 {
-	color: var(--text-08);
+	color: $text-08;
 }
 
 em, i {
-	color: var(--text-13);
+	color: $text-13;
 }
 
 strong, b {
-	color: var(--text-12);
+	color: $text-12;
 }
 
 a:link {
-	color: var(--text-13);
+	color: $text-13;
 	text-decoration: underline;
 }
 
 a:visited {
-	color: var(--text-08);
+	color: $text-08;
 }
 
 /*links glow brighter when hovered over*/
-a:hover {
-	text-shadow: calc(var(--text-shadow) * 1.2);
+a:hover { /*this is called interpolation - why is it necessary?*/
+	text-shadow: 0px 0px calc(#{$text-glow} * 1.2);
 }
 
 /*text glows brightest when clicked*/
 a:active {
-	text-shadow: calc(var(--text-shadow) * 1.5);
+	text-shadow: calc(#{text-shadow} * 1.5);
 }
 
 /* ##ztodo make this prettier*/
 hr {
 	/* visibility: hidden; */
 	/* background-color: -background; */
-	color: var(--text-09);
+	color: $text-09;
 	width: 100%;
 	/* position: relative; */
 	overflow: hidden;
@@ -150,7 +153,7 @@ li::marker {
 	content: "*"; /*makes bullets * char (padding space is implicit)*/
 }
 li li::marker {
-	content: "- "; /*makes sub list bullets - char 
+	content: "- "; /*makes sub list bullets - char
 	               (i don't know why padding space isn't implicit)*/
 }
 
@@ -159,7 +162,7 @@ code, .ascii-art {
 	white-space: pre;
 	overflow: hidden;
 	display: block;
-	font-family: FixedsysEx, monospace;
+	font-family: $code-font;
 	/* font-size: 12pt; */
 	/* line-height: 1.9ex; */
 }
@@ -202,7 +205,7 @@ code, .ascii-art {
 }
 
 img {
-	max-width: var(--content-width);
+	max-width: $content-width;
 }
 
 /*hide header, only show minified logo on small screens*/
