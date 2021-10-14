@@ -1,6 +1,10 @@
+---
+---
 /*==================================imports==================================*/
-@import "./nav-menu.css";
-@import "./vars.css"; /*variables*/
+/* @import "./nav-menu.css"; */
+/* @import "./vars.css"; /*variables*/
+@import "nav-menu.scss";
+@import "vars.scss";
 
 /*==============================generic styles===============================*/
 * {

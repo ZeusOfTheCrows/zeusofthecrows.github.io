@@ -1,5 +1,5 @@
 /* i realise this whole thing is a mess */
-@import "./vars.css"; /*variables*/
+@import "vars.scss"; /*variables*/
 
 @media only screen and (max-width: 52em) {
 	#nav-menu-wrapper {
@@ -16,7 +16,7 @@
 }
 
 .nav-menu-item {
-	margin: 0ch 0ch 0ch 2ch; /*insets menu sub items*/)
+	margin: 0ch 0ch 0ch 2ch; /*insets menu sub items*/
 }
 
 .nav-menu-folder::marker { /* the space matches any number of descendants*/
