@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
-  {% include head.html %}
+	{% include head.html %}
 
-  <body>
+	<body>
 
 	{% include header.html %}
 	
@@ -11,13 +11,15 @@
 			<div id="nav-menu-wrapper">
 				{% include tree-nav-menu.html %}
 			</div>
-			<div id="content">
+			<main class="content" aria-label="Content">
+			<!-- <div id="content"> -->
 				{{ content }}
-			</div>
+			<!-- </div> -->
+			</main>
 			<div id="clear"></div>
 		</div>
 		
 		
-  </body>
+	</body>
 
 </html>

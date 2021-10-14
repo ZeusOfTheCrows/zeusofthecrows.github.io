@@ -29,4 +29,9 @@
 	--text-size: 12pt;
 	 /*multiplied for links, though i don't think that works either*/
 	--text-shadow: 0px 0px 4px;	/*doesn't work if called --text-glow??*/
+	--total-width: 88vw;
+	--navmenu-width: 18ch;
+	/* --content-width: 80vw; */
+	--content-width: calc(var(--total-width) - var(--navmenu-width));
+	--width-breakpoint:  52em;
 }

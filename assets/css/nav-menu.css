@@ -1,4 +1,5 @@
 /* i realise this whole thing is a mess */
+@import "./vars.css"; /*variables*/
 
 @media only screen and (max-width: 52em) {
 	#nav-menu-wrapper {
