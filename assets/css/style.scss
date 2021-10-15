@@ -196,8 +196,15 @@ img {
 	max-width: $content-width;
 }
 
+/* an attempt to deal with svgs. semi obsolete. */
+/* img.fullwidth { */
+	/* max-height: 192px; */
+	/* width: $content-width; */
+	/* position: absolute; */
+/* } */
+
 /*hide header, only show minified logo on small screens*/
-@media only screen and (max-width: 52em) {
+@media only screen and (max-width: $logo-breakpoint) {
 	#ascii-logo {
 		/*is !important to override inline style,
 		has inline style to hide when css isn't loaded*/

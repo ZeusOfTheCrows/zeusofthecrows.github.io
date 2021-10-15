@@ -10,9 +10,11 @@
 
 .nav-menu {
 	/*1ch is the width of a "0"*/
-	width: 18ch;
+	width: $navmenu-width;
 	vertical-align: top;
 	list-style-position: inside; /*moves bullets inside list padding*/
+	/* height: 100vh; */
+	/* overflow-y: auto; */
 }
 
 .nav-menu-item {

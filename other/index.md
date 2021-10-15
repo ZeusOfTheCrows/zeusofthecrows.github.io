@@ -1,6 +1,5 @@
 ---
-title: Desktops
-permalink: /desktops/
+title: Other
 layout: directory
 ---
 
