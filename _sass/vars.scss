@@ -8,12 +8,10 @@
 }
 
 /*============ colours ============*/
-
 	/*full palette
 	#000000	#551400	#792400	#862C00	#AE4900	#B24D00	#BE5500	#CB5D00
 	#E37100	#EB7900	#EF7900	#F37D00	#FF9E04	#FFAA10	#FFDB30	#FFE334
 	*/
-
 $background-colour: black; 
 $text-14: #FFDB30;           /*text emphasised 4*/
 $text-13: #FFAA10;           /*text emphasised 3 - h2, em, i, link*/
@@ -25,21 +23,10 @@ $text-08: #862C00;           /*text deemphasised 2 - visited link*/
 $text-07: #551400;           /*text deemphasised 3*/
 
 /*============== text =============*/
-	/* --text-font: FixedSysEx, monospace; */
-	/* -- */
-	 /*multiplied for links, though i don't think that works either*/
-	/* --	/*doesn't work if called --text-glow??*/
-	/* --total-width: 88vw; */
-	/* --navmenu-width: 18ch; */
-	/* --content-width: 80vw; */
-	/* --content-width: calc(var(--total-width) - var(--navmenu-width)); */
-	/* --width-breakpoint:  52em; */
-
 $text-font: FixedSysEx, monospace;
 $code-font: $text-font;
 $text-size: 12pt;
-/* $text-shadow: 0px 0px 4px; */
-$text-glow: 4px; /*better name, but does it break?*/
+$text-glow: 4px; /*multiplied for links*/
 
 $total-width: 88vw;
 $navmenu-width: 18ch;

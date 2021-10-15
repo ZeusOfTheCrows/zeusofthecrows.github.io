@@ -27,18 +27,19 @@
 	/*white-space: pre;*//*declared in html so it works in browsers like lynx*/
 }
 
-#not-header {
-	width: $content-width; /*ztodo fix this*/
+.whole-wrapper {
+	width: $total-width; /*ztodo fix this*/
 	display: flex;
 }
 #nav-menu-wrapper {
-	width: 18ch;
+	width: $navmenu-width; 
 	float: left;
 }
 /* .page-content, .dir-content .home { */
 .content {
 	/* margin-left: 18em; */
 	/* width: 10em; */
+	width: $content-width;
 	float: left; /*ztodo why is this duped?*/
 }
 #clear {

@@ -15,6 +15,7 @@ layout: default
 		<a href="{{ page.url | relative_url }}">.</a>
 	</li>
 	<li class="dir-entry">
+		<!-- i don't know why i need a double /../, but… it works -->
 		<a href="{{ page.url | relative_url }}/../../">..</a>
 	</li>
 	{% for page in site.pages %}
