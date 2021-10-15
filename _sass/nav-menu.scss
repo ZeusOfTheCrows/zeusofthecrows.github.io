@@ -1,12 +1,12 @@
 /* i realise this whole thing is a mess */
 @import "vars.scss"; /*variables*/
 
-@media only screen and (max-width: 52em) {
-	#nav-menu-wrapper {
-		display: none; /*hide nav menu when screen is too narrow for it.
+/* @media only screen and (max-width: 52em) { */
+	/* #nav-menu-wrapper { */
+		/* display: none; /*hide nav menu when screen is too narrow for it. 
 		i don't know what to do instead though*/
-	}
-}
+	/* } */
+/* } */
 
 .nav-menu {
 	/*1ch is the width of a "0"*/

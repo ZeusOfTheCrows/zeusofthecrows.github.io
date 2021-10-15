@@ -1,8 +1,6 @@
 ---
 ---
 /*==================================imports==================================*/
-/* @import "./nav-menu.css"; */
-/* @import "./vars.css"; /*variables*/
 @import "nav-menu.scss";
 @import "vars.scss";
 
@@ -16,11 +14,6 @@
 	vertical-align: top;
 	text-align: left;
 }
-/* p:after{ /*add space after paragraph*//*no. bad.*/
-	/* display: block; */
-	/* white-space: pre-line; */
-	/* content: "\A" */
-/* } */
 
 #ascii-header, #ascii-logo {
 	color: $text-14;
@@ -28,7 +21,7 @@
 }
 
 .whole-wrapper {
-	width: $total-width; /*ztodo fix this*/
+	/* width: $total-width; /*ztodo fix this*/
 	display: flex;
 }
 #nav-menu-wrapper {
