@@ -40,7 +40,7 @@
 	/* margin-left: 18em; */
 	/* width: 10em; */
 	width: $content-width;
-	float: left; /*ztodo why is this duped?*/
+	float: left; /*ztodo why is this duped?*//*actually i don't think it is*/
 }
 #clear {
 	clear: both; /*i don't think this needs be here?
@@ -50,22 +50,14 @@
 body {
 	background-color: $background-colour;
 	color: $text-10;
-	/* text-align: left; *//*this is defined globally*/
 	line-height: 2ex;
-	/* font-family: var(--text-font); */
 	font-family: $text-font;
 	font-size: $text-size;
 	/*for glow effect*/
-	/* text-shadow: 0px 0px $text-glow; */
 	text-shadow: 0px 0px $text-glow;
-	/* width: 88%; *//*no. ztodo remove?*/
 
 	/*just give it a little room to breathe*//* top/bottom, left/right */
 	margin: 2% 6%;
-  /* padding-top: 40px; */
-  /* padding-right: 50px; */
-  /* padding-bottom: 50px; */
-  /* padding-left: 50px; */
 }
 
 /*make all heavier text styles normal weight/size, just differing brightness*/
@@ -134,8 +126,9 @@ hr {
 	/* border: 1px dashed #EF7900; */
 }
 hr::after {
+	/*ztodo still broken*/
 	/* position: static; */
-	content: "=\200B=\200B=\200B=\200B=\200B=\200B=\200B=";
+	content: "----------------------------------------------------------------";
 	white-space: nowrap;
 	text-overflow: none;
 	/*these have to be set in the parent instead? see:
@@ -151,11 +144,12 @@ li li { /*indent sub lists*/
 	margin-left: 2ch;
 }
 li::marker {
-	content: "*"; /*makes bullets * char (padding space is implicit)*/
+	content: "* "; /*makes bullets * char (padding space is implicit)*/
+	/* /!\ padding space comes from new line between <li> and contained <a>
+	   make sure to remove this spacing*/
 }
 li li::marker {
-	content: "- "; /*makes sub list bullets - char
-	               (i don't know why padding space isn't implicit)*/
+	content: "- "; /*makes sub list bullets - char*/
 }
 
 
@@ -188,17 +182,17 @@ code, .ascii-art {
 /* } */
 
 .post-wrapper {
-	table-layout: fixed;
-	width: 88%;
+	/* table-layout: fixed; */
+	/* width: 88%; */
 	list-style: none; /*hide bullets*/
 }
 .post-title {
-	width: 10ch;
+	/* width: 10ch; */
 }
 
-.post-excerpt {
-	max-width: 100%;
-	width: 100%;
+.post-list {
+	/* max-width: 100%; */
+	/* width: 100%; */
 	white-space: nowrap;
 	overflow: hidden;
 	/* display: block; /*this needs to be here for %, but needs not for px? wtf*/

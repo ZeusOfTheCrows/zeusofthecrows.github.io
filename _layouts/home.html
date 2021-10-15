@@ -8,9 +8,9 @@ layout: default
 
 <ul class="post-wrapper">
 	{% for post in site.posts %}
-		<li class="post-list">
-			<a class="post-title" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-			<span class="post-excerpt">{{ post.excerpt | strip_html}}</span>
+		<li class="post-list"
+			><a class="post-title" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+			{{ post.excerpt | strip_html}}
 		</li>
 	{% endfor %}
 </ul>
