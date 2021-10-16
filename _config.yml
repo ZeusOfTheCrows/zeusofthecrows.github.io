@@ -42,8 +42,8 @@ plugins:
   - jekyll-paginate
   
 sass:
-    sass_dir: _sass
-    style: expanded
+  sass_dir: _sass
+  style: expanded
 
 # Exclude from processing.
 # The following items will not be processed, by default.

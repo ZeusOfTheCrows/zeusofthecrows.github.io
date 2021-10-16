@@ -1,5 +1,6 @@
 ---
 ---
+
 /*==================================imports==================================*/
 @import "nav-menu.scss";
 @import "vars.scss";
@@ -13,6 +14,23 @@
 	border-collapse: collapse; /*hide implicit table borders*/
 	vertical-align: top;
 	text-align: left;
+}
+
+body {
+	background-color: $background-colour;
+	color: $text-10;
+	line-height: 2ex;
+	font-family: $text-font;
+	font-size: $text-size;
+	/*for glow effect*/
+	text-shadow: 0px 0px $text-glow;
+
+	/*just give it a little room to breathe*//* top/bottom, left/right */
+	// margin: 2% 6%;
+
+	width: $total-width;
+	margin: 0 auto;
+	padding: 4vh 4vw;
 }
 
 #ascii-header, #ascii-logo {
@@ -38,19 +56,6 @@
 #clear {
 	clear: both; /*i don't think this needs be here?
 	               i think it's only if i have any divs below?*/
-}
-
-body {
-	background-color: $background-colour;
-	color: $text-10;
-	line-height: 2ex;
-	font-family: $text-font;
-	font-size: $text-size;
-	/*for glow effect*/
-	text-shadow: 0px 0px $text-glow;
-
-	/*just give it a little room to breathe*//* top/bottom, left/right */
-	margin: 2% 6%;
 }
 
 /*make all heavier text styles normal weight/size, just differing brightness*/
@@ -121,7 +126,7 @@ hr {
 hr::after {
 	/*ztodo still broken*/
 	/* position: static; */
-	content: "----------------------------------------------------------------";
+	content: "-------------------------------------------------------------------------------------------------------------------------------------------------------------------------";
 	white-space: nowrap;
 	text-overflow: none;
 	/*these have to be set in the parent instead? see:

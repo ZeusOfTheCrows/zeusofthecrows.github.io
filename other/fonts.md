@@ -13,15 +13,15 @@ outbound links: [my profile on fontstruct](https://www.fontstruct.com/fontstruct
 
 ## DSegstended
 
-[Download](/assets/fonts/fontstruct/pixtura-corvida.ttf) ¦ [Fontforge](https://www.fontstruct.com/fontstructions/show/1954327/)
+14Seg: [Download](https://github.com/ZeusOfTheCrows/DSegstended/releases/latest/download/DSeg14.zip) ¦ 7Seg: [Download](https://github.com/ZeusOfTheCrows/DSegstended/releases/latest/download/DSeg7.zip) ¦ [Fontforge](https://github.com/ZeusOfTheCrows/DSegstended/)
 
-my fork of keshikan's excellent dseg font, with cyrillic/greek support, several more characters, and a few changed glyphs
+my fork of keshikan's excellent dseg font, with cyrillic/greek support, several more characters, and a few changed glyphs. comes with a voluminous quantity of weights, and four different styles (classic, classic-mini, modern, and modern-mini).
 
 ![](/assets/images/fonts/dsegstended.png)
 
 ---
 
-## Fontforge
+# Fontforge
 
 ---
 
