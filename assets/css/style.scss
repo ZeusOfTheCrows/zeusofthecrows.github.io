@@ -122,17 +122,25 @@ hr {
 	/* position: relative; */
 	overflow: hidden;
 	/* border: 1px dashed #EF7900; */
-}
-hr::after {
-	/*ztodo still broken*/
-	/* position: static; */
-	content: "-------------------------------------------------------------------------------------------------------------------------------------------------------------------------";
-	white-space: nowrap;
-	text-overflow: none;
-	/*these have to be set in the parent instead? see:
-	https://stackoverflow.com/questions/3970455/how-to-make-the-overflow-css-property-work-with-hidden-as-value/58119574#58119574*/
-	/* width: 100%; */
-	/* width: 10em; */
+
+	&::before {
+		/*ztodo still broken*/
+		/* position: static; */
+		content: "-------------------------------------------------------------------------------------------------------------------------------------------------------------------------";
+		white-space: nowrap;
+		text-overflow: none;
+		/*these have to be set in the parent instead? see:
+		https://stackoverflow.com/questions/3970455/how-to-make-the-overflow-css-property-work-with-hidden-as-value/58119574#58119574*/
+		/* width: 100%; */
+		/* width: 10em; */
+	}
+
+	&::after {
+		/*add line break after content.
+		i don't know why, but there has to be two*/
+		content: "\a\a";
+		white-space: pre;
+	}
 }
 
 li {

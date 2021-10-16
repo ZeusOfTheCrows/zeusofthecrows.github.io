@@ -19,19 +19,15 @@ All WE UI user properties should reflect properly, [source is available here](ht
 
 ---
 
- 
-
 ## Commodore Amiga 500
 
 [Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=2272437056) ¦ [Github](https://github.com/ZeusOfTheCrows/we-amber-terminal/tree/Amiga-500)
 
-Retro styled Commodore Amiga desktop with scrolling text. Background image by [Bill Bertram](https://en.wikipedia.org/wiki/Amiga_500#/media/File:Amiga500_system.jpg), Font by [Peter Lauke](https://www.splintered.co.uk/experiments/131/b), CRT effects by Zauwara/fug4life.
+Retro styled Commodore Amiga desktop with scrolling text. Background image by [Bill Bertram](https://en.wikipedia.org/wiki/Amiga_500#/media/File:Amiga500_system.jpg), Font by [Peter Lauke](https://www.splintered.co.uk/experiments/131/), CRT effects by Zauwara/fug4life.
 
 ![Commodore Amiga 500 Preview]({{ "assets/images/desktops/wpe/commodore-amiga-500.png" | relative_url}})
 
 ---
-
-
 
 ## Retrowave XP Bliss
 
