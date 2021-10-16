@@ -29,7 +29,9 @@ $text-size: 12pt;
 $text-glow: 4px; /*multiplied for links*/
 
 $logo-breakpoint: 86ch;
-$total-width: 112ch;
+// $total-width: 112ch;
+$total-width: min(88vw, 112ch);
+// $total-width: clamp(88vw, 112ch);
 $navmenu-width: 18ch;
 /*#{this} is called interpolation - why is it necessary?*/
 $content-width: calc(#{$total-width} - #{$navmenu-width});
