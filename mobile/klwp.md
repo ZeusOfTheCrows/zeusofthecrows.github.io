@@ -1,6 +1,5 @@
 ---
-title: WPE
-permalink: /mobile/klwp/
+title: KLWP
 layout: page
 ---
 # KLWP Wallpapers

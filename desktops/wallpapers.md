@@ -1,6 +1,5 @@
 ---
 title: Wallpapers
-permalink: /desktops/wallpapers/
 layout: page
 ---
 # Wallpapers that I've designed/made

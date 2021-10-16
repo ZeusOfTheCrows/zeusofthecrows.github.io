@@ -1,15 +1,6 @@
 ---
-
-permalink: /games/mods/demons-souls/
-layout: default
+title: Demon's Souls
+layout: page
 ---
 
-# Desktoppy/wallpapery things
-
----
-
-**[Wallpaper Engine]({{ "desktops/wpe" | relative_url}})**
-
-**[Rainmeter]({{ "desktops/rainmeter" | relative_url}})**
-
-**[Wallpapers]({{ "desktops/wallpapers" | relative_url}})**
+ztodo

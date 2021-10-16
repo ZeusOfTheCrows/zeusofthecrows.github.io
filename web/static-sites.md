@@ -1,6 +1,5 @@
 ---
 title: Static Sites
-permalink: /web/static-sites/
 layout: page
 menus: web
 ---

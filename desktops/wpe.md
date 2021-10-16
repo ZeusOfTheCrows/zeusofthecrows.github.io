@@ -1,6 +1,5 @@
 ---
 title: WPE
-permalink: /desktops/wpe/
 layout: page
 ---
 

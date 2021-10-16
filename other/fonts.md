@@ -7,8 +7,6 @@ layout: page
 
 various fonts that i've made.
 
-outbound links: [my profile on fontstruct](https://www.fontstruct.com/fontstructors/1438889/jupitorr?order=by-balanced-rating) ¦ [a half-arsed repo on github](https://github.com/ZeusOfTheCrows/Fonts/)
-
 ---
 
 ## DSegstended
@@ -72,3 +70,7 @@ Smooth: [Download](/assets/fonts/fontstruct/irid-novan-smooth.ttf) ¦ [Fontforge
 the text used on the Irid Novo space station in the game Hellpoint. comes in smooth (rounded) and sharp (pixel perfect) versions.
 
 ![](/assets/images/fonts/fontstruct/irid-novan.png)
+
+---
+
+outbound links: [my profile on fontstruct](https://www.fontstruct.com/fontstructors/1438889/jupitorr?order=by-balanced-rating) ¦ [a half-arsed repo on github](https://github.com/ZeusOfTheCrows/Fonts/)

@@ -1,17 +1,8 @@
 ---
 title: Mods
-permalink: /games/mods
 layout: directory
 ---
 
-_C:\Desktops>dir/n_
+this is a directory
 
-# Desktoppy/wallpapery things
-
----
-
-**[Wallpaper Engine]({{ "desktops/wpe" | relative_url}})**
-
-**[Rainmeter]({{ "desktops/rainmeter" | relative_url}})**
-
-**[Wallpapers]({{ "desktops/wallpapers" | relative_url}})**
+you should never see this text

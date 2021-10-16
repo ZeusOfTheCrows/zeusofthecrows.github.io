@@ -1,6 +1,5 @@
 ---
-title: Rainmeter 
-permalink: /desktops/rainmeter/
+title: Rainmeter
 layout: page
 ---
 

@@ -1,13 +1,9 @@
 ---
 title: Web Links
-permalink: /web/
 layout: directory
 ---
 
-# Internet things
+this is a directory
 
----
+you should never see this text
 
-**[Static Sites]({{ "web/static-sites" | relative_url}})**
-
-**[Useful Sites]({{ "web/useful-sites" | relative_url}})**

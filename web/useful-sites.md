@@ -1,6 +1,5 @@
 ---
 title: Useful Sites
-permalink: /web/useful-sites/
 layout: page
 menus: web
 ---
