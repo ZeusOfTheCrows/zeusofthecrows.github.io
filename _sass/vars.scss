@@ -35,3 +35,6 @@ $total-width: min(88vw, 112ch);
 $navmenu-width: 18ch;
 /*#{this} is called interpolation - why is it necessary?*/
 $content-width: calc(#{$total-width} - #{$navmenu-width});
+
+/*============ images =============*/
+$showcase-height: 200px;

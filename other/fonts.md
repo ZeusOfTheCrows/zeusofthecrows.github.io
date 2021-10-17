@@ -1,6 +1,8 @@
 ---
 title: Fonts
 layout: page
+typora-root-url: ../
+notes: ^ is only so typora correctly renders images
 ---
 
 # Fonts
@@ -11,7 +13,7 @@ various fonts that i've made.
 
 ## DSegstended
 
-14Seg: [Download](https://github.com/ZeusOfTheCrows/DSegstended/releases/latest/download/DSeg14.zip) ¦ 7Seg: [Download](https://github.com/ZeusOfTheCrows/DSegstended/releases/latest/download/DSeg7.zip) ¦ [Fontforge](https://github.com/ZeusOfTheCrows/DSegstended/)
+14Seg: [Download](https://github.com/ZeusOfTheCrows/DSegstended/releases/latest/download/DSeg14.zip) ¦ 7Seg: [Download](https://github.com/ZeusOfTheCrows/DSegstended/releases/latest/download/DSeg7.zip) ¦ [Github](https://github.com/ZeusOfTheCrows/DSegstended/)
 
 my fork of keshikan's excellent dseg font, with cyrillic/greek support, several more characters, and a few changed glyphs. comes with a voluminous quantity of weights, and four different styles (classic, classic-mini, modern, and modern-mini).
 
@@ -57,7 +59,13 @@ my own implementation of the classic info 70 font. i know there are plenty out t
 
 Tiny: [Download](/assets/fonts/fontstruct/tiny-mono.ttf) ¦ [Fontforge](https://www.fontstruct.com/fontstructions/show/1837063/) ¦ Rounded: [Download](/assets/fonts/fontstruct/rounded-pixelfont.ttf) ¦ [Fontforge](https://www.fontstruct.com/fontstructions/show/1411349/) ¦ Inverted: [Download](/assets/fonts/fontstruct/rounded-pixelfont.ttf) ¦ [Fontforge](https://www.fontstruct.com/fontstructions/show/1418874/)
 
-assorted pixelated fonts. **tiny mono**: the smallest legible font i could make - lowercase is 3×3, uppercase is 3×4. **rounded**: rounded(ish) font that i was quite pleased with. **inverted**: y'know, i don't think this one is anything special, but it did get staff pick on fontstruck and is currently my my highest rated, so i had to include it.
+assorted pixelated fonts.
+
+**tiny mono**: the smallest legible font i could make - lowercase is 3×3 (apart from asc/decenders), uppercase is 3×4.
+
+**rounded**: rounded(ish) font that i was quite pleased with.
+
+**inverted**: y'know, i don't think this one is anything special, but it did get staff pick on fontstruck and is currently my my highest rated, so i had to include it.
 
 ![](/assets/images/fonts/fontstruct/various-pixelfonts.png)
 

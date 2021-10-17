@@ -147,12 +147,15 @@ li {
 	list-style: inside;
 }
 li li { /*indent sub lists*/
-	margin-left: 2ch;
+	padding-left: 2ch;
 }
 li::marker {
-	content: "* "; /*makes bullets * char (padding space is implicit)*/
+	/*this is here just in case, but it shouldn't have any effect*/
+	white-space: nowrap;
+	/*makes bullets * char (padding space is implicit)*/
 	/* /!\ padding space comes from new line between <li> and contained <a>
-	   make sure to remove this spacing*/
+	make sure to remove this spacing*/
+	content: "* ";
 }
 li li::marker {
 	content: "- "; /*makes sub list bullets - char*/
@@ -205,8 +208,28 @@ code, .ascii-art {
 	text-overflow: "..."; /*this is a full ... as it looks better in FxSys*/
 }
 
-img {
+img.showcase {
 	max-width: $content-width;
+
+	&.sc-wide {
+		/* most images - fullwidth */
+		object-fit: cover;
+		// object-position: bottom;
+		width: $content-width;
+		height: $showcase-height;
+
+		/* this allows me to choose per image whether
+		i focus the top, middle or bottom*/
+		&.sc-top {
+			object-position: top;
+		}
+		&.sc-mid {
+			object-position: center;
+		}
+		&.sc-btm {
+			object-position: bottom;
+		}
+	}
 }
 
 /* an attempt to deal with svgs. semi obsolete. */
