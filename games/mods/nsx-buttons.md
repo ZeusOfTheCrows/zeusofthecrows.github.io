@@ -1,6 +1,7 @@
 ---
 title: NSX Buttons
 layout: page
+permalink: /games/mods/nsx-buttons/
 typora-root-url: ../../
 notes: ^ is only so typora correctly renders images
 ---
