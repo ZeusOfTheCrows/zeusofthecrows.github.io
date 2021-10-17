@@ -30,6 +30,34 @@ mastodon_username: zeusofthecrows
 github_username: zeusofthecrows
 reddit_username: zeusofthecrows
 
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Zeus"
+  -
+    scope:
+      path: ""
+      # synonym for page, as that's an internal var
+      type: "leaf"
+    values:
+      layout: "page"
+      # just using title doesn't work (presumably a bug),
+      # so i have to assign it to this as a workaround.
+      # it's not used anywhere else, so can be freely renamed
+      pseudo: :title
+      permalink: /:path/:pseudo/
+  # i would like this to work, but it doesn't and it's now that important
+  # -
+    # scope:
+      # path: ""
+      # type: "dir"
+    # values:
+      # layout: directory
+
 # Build settings
 # theme: minima
 # minima:

@@ -1,7 +1,6 @@
 ---
 title: Useful Sites
-layout: page
-menus: web
+collection: leaf
 ---
 ## Useful Sites
 

@@ -1,7 +1,6 @@
 ---
 title: Static Sites
-layout: page
-menus: web
+collection: leaf
 ---
 ## Static Sites
 

@@ -10,12 +10,29 @@ layout: default
 	<!-- </div> -->
 <!-- </main> -->
 
-<ul class="dir-list">
+<ul class="dir-list" aria-label="List of subfolders">
 	<li class="dir-entry">
 		<a href="{{ page.url | relative_url }}">.</a>
 	</li>
 	<li class="dir-entry">
 		<!-- i don't know why i need a double /../, but… it works -->
+		<a href="{{ page.url | relative_url }}/../../">..</a>
+	</li>
+	{% for entry in site.pages %}
+		{% if entry.dir == page.dir %}
+			<li class="dir-entry">
+				<a href="{{ entry.url }}">{{ entry.title | escape }}</a>
+			</li>
+		{% endif %}
+	{% endfor %}
+</ul>
+
+<!-- <ul class="dir-list" aria-label="List of subfolders">
+	<li class="dir-entry">
+		<a href="{{ page.url | relative_url }}">.</a>
+	</li>
+	<li class="dir-entry">
+		<!-- i don't know why i need a double /../, but… it works --><!--
 		<a href="{{ page.url | relative_url }}/../../">..</a>
 	</li>
 	{% for page in site.pages %}
@@ -26,4 +43,4 @@ layout: default
 			</li>
 		{% endif %}
 	{% endfor %}
-</ul>
+</ul> -->

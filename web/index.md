@@ -1,5 +1,6 @@
 ---
 title: Web Links
+collection: dir
 layout: directory
 ---
 

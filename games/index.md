@@ -1,5 +1,6 @@
 ---
 title: Games
+collection: dir
 layout: directory
 ---
 

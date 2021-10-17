@@ -1,6 +1,6 @@
 ---
-title: WPE
-layout: page
+title: WPEngine
+collection: leaf
 typora-root-url: ../
 notes: ^ is only so typora correctly renders images
 ---

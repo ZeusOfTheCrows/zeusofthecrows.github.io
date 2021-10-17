@@ -1,7 +1,6 @@
 ---
 title: Fromsoft
-layout: page
-permalink: /games/mods/fromsoft/
+collection: leaf
 typora-root-url: ../../
 notes: ^ is only so typora correctly renders images
 ---

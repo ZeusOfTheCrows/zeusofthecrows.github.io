@@ -1,5 +1,6 @@
 ---
 title: Other
+collection: dir
 layout: directory
 ---
 

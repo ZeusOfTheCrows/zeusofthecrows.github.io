@@ -1,5 +1,6 @@
 ---
 title: Mods
+collection: dir
 layout: directory
 ---
 

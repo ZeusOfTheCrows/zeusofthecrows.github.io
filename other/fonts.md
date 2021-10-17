@@ -1,6 +1,6 @@
 ---
 title: Fonts
-layout: page
+collection: leaf
 typora-root-url: ../
 notes: ^ is only so typora correctly renders images
 ---

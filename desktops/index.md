@@ -1,5 +1,6 @@
 ---
 title: Desktops
+collection: dir
 layout: directory
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: About
-layout: page
+collection: leaf
 ---
 
 This website will (eventually) have links to all my work that's available online
