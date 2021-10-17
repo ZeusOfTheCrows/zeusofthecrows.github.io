@@ -19,9 +19,11 @@ layout: default
 		<a href="{{ page.url | relative_url }}/../../">..</a>
 	</li>
 	{% for entry in site.pages %}
-		{% if entry.dir == page.dir %}
+		<!-- if it's in the same directory but doesn't have the same url
+		this prevents showing the current directory as an entry -->
+		{% if entry.dir == page.dir and entry.url != page.url %}
 			<li class="dir-entry">
-				<a href="{{ entry.url }}">{{ entry.title | escape }}</a>
+				<a href="{{ entry.url | remove: ".html" }}">{{ entry.title | escape }}</a>
 			</li>
 		{% endif %}
 	{% endfor %}

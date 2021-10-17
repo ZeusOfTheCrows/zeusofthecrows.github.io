@@ -49,6 +49,7 @@ defaults:
       # so i have to assign it to this as a workaround.
       # it's not used anywhere else, so can be freely renamed
       pseudo: :title
+      # permalink: /:path/:name/
       permalink: /:path/:pseudo/
   # i would like this to work, but it doesn't and it's now that important
   # -
