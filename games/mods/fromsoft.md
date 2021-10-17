@@ -83,8 +83,5 @@ I like [this mod ](https://www.nexusmods.com/darksouls3/mods/91)by Celice, but�
     - ﻿(If you want to replace the blood echoes symbol with a normal souls symbol)
     - ﻿copy [`65536_25[..]59.dds`]( "65536_2579900381049114659.dds") as well
 
-![DS3 Soul Value Icons mod preview](https://staticdelivery.nexusmods.com/mods/1392/images/1022/1022-1628869927-1062801881.jpeg){: .showcase .sc-wide .sc-mid}
+![DS3 Soul Value Icons mod preview](https://staticdelivery.nexusmods.com/mods/1392/images/1015/1015-1628547210-1550448456.png){: .showcase .sc-wide .sc-mid}
 
----
-
-[^fn1]: 65536_12831202783399872305.dds

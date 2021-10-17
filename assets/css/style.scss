@@ -14,6 +14,9 @@
 	border-collapse: collapse; /*hide implicit table borders*/
 	vertical-align: top;
 	text-align: left;
+	/* i don't think these do anything, but i have to try */
+	-webkit-font-smoothing: none;
+	font-smooth: none;
 }
 
 body {
