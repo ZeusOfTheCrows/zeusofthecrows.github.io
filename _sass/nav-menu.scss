@@ -9,7 +9,6 @@
 /* } */
 
 .nav-menu {
-	/*1ch is the width of a "0"*/
 	width: $navmenu-width;
 	vertical-align: top;
 	list-style-position: inside; /*moves bullets inside list padding*/
@@ -17,19 +16,17 @@
 	/* overflow-y: auto; */
 }
 
-.nav-menu-item {
-	margin: 0ch 0ch 0ch 2ch; /*insets menu sub items*/
-}
+/* subfolders/items are indented in styles.css (li li {) */
 
-.nav-menu-folder::marker { /* the space matches any number of descendants*/
+.nav-menu-folder::marker {
 	content: "] "; /*makes bullets ] char with padding space*/
 }
 
-.nav-menu-item::marker { /* the space matches any number of descendants*/
+.nav-menu-item::marker, .nav-menu-subfolder::marker {
 	content: "> "; /*makes bullets > char with padding space*/
 }
 
-/*code used for folding menu
+/*code used for folding menu:
 .nav-menu-folder {
 	cursor: pointer; /* makes the cursor look like it's over a link
 }

@@ -9,7 +9,7 @@ Some useful websites I've stumbled upon during my rovings of the internet.
 
 I bear no responsibility for the contents of these pages, I just thought they were cool.
 
-Also, for the sites not in your native language, I recommend [this firefox extension](https://addons.mozilla.org/en-GB/firefox/addon/traduzir-paginas-web/).
+Also, for the sites not in your native language, I recommend [this firefox extension](https://addons.mozilla.org/firefox/addon/traduzir-paginas-web/).
 
 ---
 

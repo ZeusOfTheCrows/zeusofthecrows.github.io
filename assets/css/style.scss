@@ -147,7 +147,7 @@ li {
 	list-style: inside;
 }
 li li { /*indent sub lists*/
-	padding-left: 2ch;
+	margin-left: 2ch;
 }
 li::marker {
 	/*this is here just in case, but it shouldn't have any effect*/

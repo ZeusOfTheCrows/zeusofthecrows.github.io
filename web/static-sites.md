@@ -9,7 +9,7 @@ Because I like digital archæology: a bunch of websites that I think hark back t
 
 I bear no responsibility for the contents of these pages, I just thought they were cool.
 
-Also, for the sites not in your native language, I recommend [this firefox extension](https://addons.mozilla.org/en-GB/firefox/addon/traduzir-paginas-web/); and sites no longer online I recommend [this one](https://github.com/dessant/web-archives).
+Also, for the sites not in your native language, I recommend [this firefox extension](https://addons.mozilla.org/firefox/addon/traduzir-paginas-web/); and sites no longer online I recommend [this one](https://github.com/dessant/web-archives).
 
 ---
 
