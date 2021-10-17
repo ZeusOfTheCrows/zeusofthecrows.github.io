@@ -18,31 +18,58 @@ layout: default
 		<!-- i don't know why i need a double /../, but… it works -->
 		<a href="{{ page.url | relative_url }}/../../">..</a>
 	</li>
+
+	<!-- declare outside as it never changes -->
+	<!-- split current page url into an array -->
+	{% assign page_url_fragments = page.url | split: "/" %}
+	<!-- assign two empty vars outside the loop to give them global scope -->
+	{% assign url_list = "" %}
+	{% assign display_list = "" %}
+
+	<!-- loop through all pages in the site -->
 	{% for entry in site.pages %}
-		<!-- if it's in the same directory but doesn't have the same url
+		<!-- split loop index page into array -->
+		{% assign entry_url_fragments = entry.url | split: "/" %}
+
+		<!-- if loop index page's penultimate fragment (i.e. its parent dir)
+		is the same as the current page's final fragment (current dir) -->
+		{% if entry_url_fragments[-2] == page_url_fragments[-1] %}
+
+			<!-- i know this is duplicated, but it has to be inside the if
+			statements, so it only runs as many times as it needs to -->
+			{% assign url_list = url_list | append: entry.url | append: "," %}
+
+			<!-- append an entry "<DIR> [Folder Name]", followed by a ","
+			this is so i can split into an array by this char later -->
+			{% assign display_list = display_list | append: "&lt;DIR&gt; "
+					| append: entry_url_fragments.last | append: "," %}
+
+		<!-- eelse if it's in the same directory but doesn't have identical url
 		this prevents showing the current directory as an entry -->
-		{% if entry.dir == page.dir and entry.url != page.url %}
-			<li class="dir-entry">
-				<a href="{{ entry.url | remove: ".html" }}">{{ entry.title | escape }}</a>
-			</li>
+		{% elsif entry.dir == page.dir and entry.url != page.url %}
+
+			<!-- duplicated code : ( -->
+			{% assign url_list = url_list | append: entry.url | append: "," %}
+
+			<!-- append an entry "<TXT> [Folder Name]", followed by a "," -->
+			{% assign display_list = display_list | append: "&lt;TXT&gt; "
+					| append: entry.title | append: "," %}
 		{% endif %}
+	{% endfor %}
+
+	<!-- split both strings into proper arrays -->
+	{% assign url_list = url_list | split: "," %}
+	{% assign display_list = display_list | split: "," %}
+
+	<!-- loop through entries in either list,
+	as they should both be the same length -->
+	{% for entry in url_list %}
+
+		<!-- finally print out the data we've been preparing, into a list -->
+		<li class="dir-entry">
+			<!-- "entry" should be page.url
+			"index0" is necessary as "index" would start at 1… -->
+			<a href="{{ entry }}">{{ display_list[forloop.index0] }}</a>
+		</li>
 	{% endfor %}
 </ul>
-
-<!-- <ul class="dir-list" aria-label="List of subfolders">
-	<li class="dir-entry">
-		<a href="{{ page.url | relative_url }}">.</a>
-	</li>
-	<li class="dir-entry">
-		<!-- i don't know why i need a double /../, but… it works --><!--
-		<a href="{{ page.url | relative_url }}/../../">..</a>
-	</li>
-	{% for page in site.pages %}
-	{% assign page_url_fragment = page.dir | split: "/" | last %}
-		{% if page.dir contains "desktops" and page_url_fragment != "desktops" %}
-			<li class="dir-entry">
-				<a href="{{ page.url | relative_url }}">{{ page.title | escape }}</a>
-			</li>
-		{% endif %}
-	{% endfor %}
-</ul> -->
