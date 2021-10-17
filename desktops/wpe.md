@@ -17,7 +17,7 @@ I decided to rewrite [my rainmeter preset]({{ "desktops/rainmeter#amber-dec-term
 
 All WE UI user properties should reflect properly, [source is available here](https://steamcommunity.com/linkfilter/?url=https://github.com/ZeusOfTheCrows/we-amber-terminal).
 
-![Amber Dec Terminal Preview](assets/images/desktops/wpe/amber-dec-terminal.png)
+![Amber Dec Terminal Preview](/assets/images/desktops/wpe/amber-dec-terminal.png){: .showcase .sc-wide .sc-mid}
 
 ---
 
@@ -27,7 +27,7 @@ All WE UI user properties should reflect properly, [source is available here](ht
 
 Retro styled Commodore Amiga desktop with scrolling text. Background image by [Bill Bertram](https://en.wikipedia.org/wiki/Amiga_500#/media/File:Amiga500_system.jpg), Font by [Peter Lauke](https://www.splintered.co.uk/experiments/131/), CRT effects by Zauwara/fug4life.
 
-![Commodore Amiga 500 Preview](assets/images/desktops/wpe/commodore-amiga-500.png)
+![Commodore Amiga 500 Preview](/assets/images/desktops/wpe/commodore-amiga-500.png){: .showcase .sc-wide .sc-mid}
 
 ---
 
@@ -38,4 +38,4 @@ Retro styled Commodore Amiga desktop with scrolling text. Background image by [B
 Extra, inspired by [this](https://www.deviantart.com/niko1u/art/Retrowave-Windows-XP-Wallpaper-682545281)
 Just for me to learn WPE a bit
 
-![Retrowave XP Bliss Preview](/assets/images/desktops/wpe/retrowave-xp-bliss.png)
+![Retrowave XP Bliss Preview](/assets/images/desktops/wpe/retrowave-xp-bliss.png){: .showcase .sc-wide .sc-mid}

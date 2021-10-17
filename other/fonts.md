@@ -17,7 +17,7 @@ various fonts that i've made.
 
 my fork of keshikan's excellent dseg font, with cyrillic/greek support, several more characters, and a few changed glyphs. comes with a voluminous quantity of weights, and four different styles (classic, classic-mini, modern, and modern-mini).
 
-![](/assets/images/fonts/dsegstended.png)
+![](/assets/images/fonts/dsegstended.png){: .showcase .sc-full}
 
 ---
 
@@ -31,7 +31,7 @@ my fork of keshikan's excellent dseg font, with cyrillic/greek support, several 
 
 pixelled blackletter/textura font. includes basic cyrillic/greek support. metrics kind of need work though. i'm working on a non-pixel version as well, which i'll link to here if i remember.
 
-![](/assets/images/fonts/fontstruct/pixtura-corvida.png)
+![](/assets/images/fonts/fontstruct/pixtura-corvida.png){: .showcase .sc-full}
 
 ---
 
@@ -41,7 +41,7 @@ pixelled blackletter/textura font. includes basic cyrillic/greek support. metric
 
 started as an emulation of the font from the ocean view hotel in gta: vice city. not really very finished, that's why it's marked as proto.
 
-![](/assets/images/fonts/fontstruct/ocean-vice.png)
+![](/assets/images/fonts/fontstruct/ocean-vice.png){: .showcase .sc-full}
 
 ---
 
@@ -51,7 +51,7 @@ started as an emulation of the font from the ocean view hotel in gta: vice city.
 
 my own implementation of the classic info 70 font. i know there are plenty out there, but this one's mine.
 
-![](/assets/images/fonts/fontstruct/info-seventy.png)
+![](/assets/images/fonts/fontstruct/info-seventy.png){: .showcase .sc-full}
 
 ---
 
@@ -67,7 +67,7 @@ assorted pixelated fonts.
 
 **inverted**: y'know, i don't think this one is anything special, but it did get staff pick on fontstruck and is currently my my highest rated, so i had to include it.
 
-![](/assets/images/fonts/fontstruct/various-pixelfonts.png)
+![](/assets/images/fonts/fontstruct/various-pixelfonts.png){: .showcase .sc-full}
 
 ---
 
@@ -77,7 +77,7 @@ Smooth: [Download](/assets/fonts/fontstruct/irid-novan-smooth.ttf) ¦ [Fontforge
 
 the text used on the Irid Novo space station in the game Hellpoint. comes in smooth (rounded) and sharp (pixel perfect) versions.
 
-![](/assets/images/fonts/fontstruct/irid-novan.png)
+![](/assets/images/fonts/fontstruct/irid-novan.png){: .showcase .sc-full}
 
 ---
 
