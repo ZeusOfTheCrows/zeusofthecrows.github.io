@@ -14,10 +14,10 @@ Also, for the sites not in your native language, I recommend [this firefox exten
 ---
 
 - [dlanham](https://dlanham.com/): **Beautiful** art and animation, most is available as [paid] wallpapers.
+- [signalnoise](https://signalnoise.com/): more art, this time of a synthwave flavour.
 - [sensefulsolutions](http://www.sensefulsolutions.com/): “Tech solutions that make sense.”
 - [xahlee](http://xahlee.info/): Of course I had to include Xah Lee. Whilst I disagree with him on a surprising number of points, I appreciate what he does.
 - [radiotower](http://radiotower.su/): Soviet themed internet radio [[Playlists](http://listen.radiotower.su:8000/)]
 - [door2windows](http://www.door2windows.com/): Bunch of customisation programmes for Windows.
-
 - [windowscustomization](https://windowscustomization.com/): Repository of various Windows themes/theming tools.
 

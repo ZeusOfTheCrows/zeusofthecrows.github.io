@@ -1,6 +1,7 @@
 ---
 title: Root
 layout: home
+test_char: n
 ---
 
 # Welcome!

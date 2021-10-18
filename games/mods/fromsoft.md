@@ -18,7 +18,7 @@ notes: ^ is only so typora correctly renders images
 
 ### Soul Value Icons
 
-Normal: [Download](/assets/zips/games/mods/des/soul-values.7z) ¦ Remake [Download](/assets/zips/games/mods/des/soul-values-remake.7z) ¦  [Nexus](https://www.nexusmods.com/demonssouls/mods/51)
+Normal: [Download](/assets/zips/games/mods/des/soul-values.7z) {{ site.sep_char }} Remake [Download](/assets/zips/games/mods/des/soul-values-remake.7z) {{ site.sep_char }}  [Nexus](https://www.nexusmods.com/demonssouls/mods/51)
 
 **save yourself a google, and display the values in game.** display the number of souls acquired from soldier's, hero's, and demon's soul items on the icon. the remake version has some of the icons i liked from the bluepoint remake.
 
@@ -34,7 +34,7 @@ dark souls III version [here](#svi-ds3)
 
 ### Hylian Shield for SotFS
 
-[Download](/assets/zips/games/mods/ds2/hylian-shield-sotfs.7z) ¦  [Nexus](https://www.nexusmods.com/darksouls2/mods/967)
+[Download](/assets/zips/games/mods/ds2/hylian-shield-sotfs.7z) {{ site.sep_char }}  [Nexus](https://www.nexusmods.com/darksouls2/mods/967)
 
 retexture of the drangleic  shield to the hylian shield from zelda: breath of the wild/skyward  sword. this originally started as a port of [this mod](https://www.nexusmods.com/darksouls2/mods/227) to sotfs; but it had a few jpeg artifacts and once i tried to reduce those, i found it easier to just recreate it from scratch.
 
@@ -56,7 +56,7 @@ requires igp11, may get you banned from online, caveat emptor, etc.
 
 ### Soul Value Icons
 
-[Download](/assets/zips/games/mods/ds3/soul-values.7z) ¦  [Nexus](https://www.nexusmods.com/darksouls3/mods/1022)
+[Download](/assets/zips/games/mods/ds3/soul-values.7z) {{ site.sep_char }}  [Nexus](https://www.nexusmods.com/darksouls3/mods/1022)
 
 **save yourself a google, and display the values in game.** optional boss souls icons (they're quite nice icons, and a lot of them share the same icon so it can look a bit cluttered)
 
@@ -72,7 +72,7 @@ demon's souls version [here](#svi-des)
 
 # Detailed UI - DS1 style ticks
 
-[Download](/assets/zips/games/mods/ds3/detailed-ui-w-ticks.7z) ¦  [Nexus](https://www.nexusmods.com/darksouls3/mods/1015)
+[Download](/assets/zips/games/mods/ds3/detailed-ui-w-ticks.7z) {{ site.sep_char }}  [Nexus](https://www.nexusmods.com/darksouls3/mods/1015)
 
 I like [this mod ](https://www.nexusmods.com/darksouls3/mods/91)by Celice, but﻿ I miss the little bars from DS1 that let you easily and quickly see your health level. I didn't want to take downloads away from the original though, so install that one first and then overwrite it  with this one.
 

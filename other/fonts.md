@@ -14,7 +14,7 @@ various fonts that i've made.
 
 ## DSegstended
 
-14Seg: [Download](https://github.com/ZeusOfTheCrows/DSegstended/releases/latest/download/DSeg14.zip) ¦ 7Seg: [Download](https://github.com/ZeusOfTheCrows/DSegstended/releases/latest/download/DSeg7.zip) ¦ [Github](https://github.com/ZeusOfTheCrows/DSegstended/)
+14Seg: [Download](https://github.com/ZeusOfTheCrows/DSegstended/releases/latest/download/DSeg14.zip) {{ site.sep_char }} 7Seg: [Download](https://github.com/ZeusOfTheCrows/DSegstended/releases/latest/download/DSeg7.zip) {{ site.sep_char }} [Github](https://github.com/ZeusOfTheCrows/DSegstended/)
 
 my fork of keshikan's excellent dseg font, with cyrillic/greek support, several more characters, and a few changed glyphs. comes with a voluminous quantity of weights, and four different styles (classic, classic-mini, modern, and modern-mini).
 
@@ -28,7 +28,7 @@ my fork of keshikan's excellent dseg font, with cyrillic/greek support, several 
 
 ## Pixtura Corvida
 
-[Download](/assets/fonts/fontstruct/pixtura-corvida.ttf) ¦ [Fontforge](https://www.fontstruct.com/fontstructions/show/1954327/)
+[Download](/assets/fonts/fontstruct/pixtura-corvida.ttf) {{ site.sep_char }} [Fontforge](https://www.fontstruct.com/fontstructions/show/1954327/)
 
 pixelled blackletter/textura font. includes basic cyrillic/greek support. metrics kind of need work though. i'm working on a non-pixel version as well, which i'll link to here if i remember.
 
@@ -38,7 +38,7 @@ pixelled blackletter/textura font. includes basic cyrillic/greek support. metric
 
 ## Ocean Vice (Proto)
 
-[Download](/assets/fonts/fontstruct/ocean-vice-proto.ttf) ¦ [Fontforge](https://www.fontstruct.com/fontstructions/show/1950206/)
+[Download](/assets/fonts/fontstruct/ocean-vice-proto.ttf) {{ site.sep_char }} [Fontforge](https://www.fontstruct.com/fontstructions/show/1950206/)
 
 started as an emulation of the font from the ocean view hotel in gta: vice city. not really very finished, that's why it's marked as proto.
 
@@ -48,7 +48,7 @@ started as an emulation of the font from the ocean view hotel in gta: vice city.
 
 ## Info Seventy
 
-[Download](/assets/fonts/fontstruct/info-70.ttf) ¦ [Fontforge](https://www.fontstruct.com/fontstructions/show/1797228/)
+[Download](/assets/fonts/fontstruct/info-70.ttf) {{ site.sep_char }} [Fontforge](https://www.fontstruct.com/fontstructions/show/1797228/)
 
 my own implementation of the classic info 70 font. i know there are plenty out there, but this one's mine.
 
@@ -58,7 +58,7 @@ my own implementation of the classic info 70 font. i know there are plenty out t
 
 ## Various Pixelfonts
 
-Tiny: [Download](/assets/fonts/fontstruct/tiny-mono.ttf) ¦ [Fontforge](https://www.fontstruct.com/fontstructions/show/1837063/) ¦ Rounded: [Download](/assets/fonts/fontstruct/rounded-pixelfont.ttf) ¦ [Fontforge](https://www.fontstruct.com/fontstructions/show/1411349/) ¦ Inverted: [Download](/assets/fonts/fontstruct/rounded-pixelfont.ttf) ¦ [Fontforge](https://www.fontstruct.com/fontstructions/show/1418874/)
+Tiny: [Download](/assets/fonts/fontstruct/tiny-mono.ttf) {{ site.sep_char }} [Fontforge](https://www.fontstruct.com/fontstructions/show/1837063/) {{ site.sep_char }} Rounded: [Download](/assets/fonts/fontstruct/rounded-pixelfont.ttf) {{ site.sep_char }} [Fontforge](https://www.fontstruct.com/fontstructions/show/1411349/) {{ site.sep_char }} Inverted: [Download](/assets/fonts/fontstruct/rounded-pixelfont.ttf) {{ site.sep_char }} [Fontforge](https://www.fontstruct.com/fontstructions/show/1418874/)
 
 assorted pixelated fonts.
 
@@ -74,7 +74,7 @@ assorted pixelated fonts.
 
 ## Irid Novan
 
-Smooth: [Download](/assets/fonts/fontstruct/irid-novan-smooth.ttf) ¦ [Fontforge](https://www.fontstruct.com/fontstructions/show/1960809/) ¦ Sharp: [Download](/assets/fonts/fontstruct/irid-novan-sharp.ttf) ¦ [Fontforge](https://www.fontstruct.com/fontstructions/show/1960792/)
+Smooth: [Download](/assets/fonts/fontstruct/irid-novan-smooth.ttf) {{ site.sep_char }} [Fontforge](https://www.fontstruct.com/fontstructions/show/1960809/) {{ site.sep_char }} Sharp: [Download](/assets/fonts/fontstruct/irid-novan-sharp.ttf) {{ site.sep_char }} [Fontforge](https://www.fontstruct.com/fontstructions/show/1960792/)
 
 the text used on the Irid Novo space station in the game Hellpoint. comes in smooth (rounded) and sharp (pixel perfect) versions.
 
