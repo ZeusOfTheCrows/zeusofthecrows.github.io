@@ -44,7 +44,7 @@ layout: default
 			{% assign display_list = display_list | append: "&lt;DIR&gt; "
 					| append: entry_url_fragments.last | append: "," %}
 
-		<!-- eelse if it's in the same directory but doesn't have identical url
+		<!-- else if it's in the same directory but doesn't have identical url
 		this prevents showing the current directory as an entry -->
 		{% elsif entry.dir == page.dir and entry.url != page.url %}
 

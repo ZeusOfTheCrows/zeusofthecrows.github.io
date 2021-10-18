@@ -179,23 +179,13 @@ code {
 }
 
 
-/*===========================================================================*/
-/* ##ztodo move to another file */
+/*============================specific styles================================*/
 
-/* .post-list  > a { */
-	/* max-width: 100%; */
-	/* white-space: nowrap; */
-  /* overflow: hidden; */
-	/* display: block; /*this needs to be here for %, but needs not for px? wtf*/
-  /* text-overflow: ellipsis; */
-/* } */
-
-/* .post-title { */
-	/* white-space: nowrap; */
-	/* word-wrap: break-word; */
-  /* overflow: hidden; */
-  /* text-overflow: ellipsis; */
-/* } */
+/* directory layout: capitalise firs letter of folders
+without downcasing the <DIR> text*/
+.dir-entry a {
+	text-transform: capitalize;
+}
 
 .post-wrapper {
 	/* table-layout: fixed; */
