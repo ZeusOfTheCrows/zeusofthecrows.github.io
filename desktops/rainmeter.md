@@ -1,6 +1,7 @@
 ---
 title: Rainmeter
 collection: leaf
+permalink: /:path/rainmeter/
 typora-root-url: ../
 notes: ^ is only so typora correctly renders images
 ---

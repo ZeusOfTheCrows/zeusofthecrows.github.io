@@ -1,6 +1,7 @@
 ---
 title: Fonts
 collection: leaf
+permalink: /:path/fonts/
 typora-root-url: ../
 notes: ^ is only so typora correctly renders images
 ---

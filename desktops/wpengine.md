@@ -1,6 +1,7 @@
 ---
 title: WPEngine
 collection: leaf
+permalink: /:path/wpengine/
 typora-root-url: ../
 notes: ^ is only so typora correctly renders images
 ---

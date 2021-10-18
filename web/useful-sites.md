@@ -1,6 +1,7 @@
 ---
 title: Useful Sites
 collection: leaf
+permalink: /:path/useful-sites/
 ---
 ## Useful Sites
 

@@ -1,6 +1,7 @@
 ---
 title: NSX Buttons
 collection: leaf
+permalink: /:path/nsx-buttons/
 typora-root-url: ../../
 notes: ^ is only so typora correctly renders images
 ---

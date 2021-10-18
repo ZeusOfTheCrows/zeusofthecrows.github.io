@@ -1,6 +1,7 @@
 ---
 title: Wallpapers
 collection: leaf
+permalink: /:path/wallpapers/
 typora-root-url: ../
 notes: ^ is only so typora correctly renders images
 ---

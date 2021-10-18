@@ -1,6 +1,7 @@
 ---
 title: Fromsoft
 collection: leaf
+permalink: /:path/fromsoft/
 typora-root-url: ../../
 notes: ^ is only so typora correctly renders images
 ---

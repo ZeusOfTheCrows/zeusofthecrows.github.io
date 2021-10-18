@@ -1,6 +1,7 @@
 ---
 title: Static Sites
 collection: leaf
+permalink: /:path/static-sites
 ---
 ## Static Sites
 
