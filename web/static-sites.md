@@ -27,7 +27,7 @@ Also, for the sites not in your native language, I recommend [this firefox exten
   - JS: none?
 - [ssokolow](http://ssokolow.com/): Linux and DOS stuff - most interesting stuff is on his [blog](http://blog.ssokolow.com/).
   - JS: low, jquery
-- [svo](http://sensi.org/~svo/): Exactly what I mean in terms of classic internet. Made a [great version](http://sensi.org/~svo/glasstty/) of the DEC VT220 font. [Russian].
+- [svo](http://sensi.org/~svo/): Exactly what I mean in terms of classic internet. Made a [great version](http://sensi.org/~svo/glasstty/) of the DEC VT220 font; which I will [mirror here](/assets/fonts/not-mine/Glass_TTY_VT220.ttf) as the site appears to be down. [Russian].
   - JS: medium, differs per page
 - [tweakradje](https://sites.google.com/site/tweakradje/): A whole collection of interesting tweaks and such pertaining to Android/Windows.
   - JS: high, it's a google site and has embedded youtube
