@@ -2,11 +2,10 @@
 {% assign crumbs = page.url | remove:'/index.html' | split: '/' %}
 
 <!-- weird newline positioning is to prevent spaces between words -->
-<a href="/">C‏:</a><span>\</span>{{- -}} <!-- this is to trim whitespace -->
-
+<!-- {{- -}} is to trim whitespace -->
+<a href="/">C‏:</a><span>\</span>{{- -}}
 <!-- loop through array of url fragments -->
 {%- for crumb in crumbs offset: 1 -%}
-
 	<!-- if final loop (current page/directory) -->
 	{%- if forloop.last -%}
 		<!-- if passed parameter == dir -->
@@ -15,15 +14,15 @@
 			{{- page.title -}}>dir /n
 		<!-- else if parameter == page -->
 		{%- elsif include.ending_type == "page" -%}
-			<!-- print "type> [page title] -->
 			>type {{ page.title }}.txt
 		<!-- fallback case, should never be called -->
 		{%- else -%}
 			<!-- same as page -->
 			>type {{ page.title }}.txt
 		{%- endif -%}
+
+	<!-- i didn't write this i have no idea how it works -->
 	{%- else -%}
-		<!-- i didn't write this i have no idea how it works -->
 		<a href="{%- assign crumb_limit = forloop.index | plus: 1 -%}
 		         {%- for crumb in crumbs limit: crumb_limit -%}
 		         {{- crumb | append: '/' | replace:'without-plugin/','without-plugins/' -}}
