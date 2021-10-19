@@ -1,9 +1,10 @@
 ---
 title: About
 collection: leaf
+edit_date: 2021-10-19
 ---
 
-This website will (eventually) have links to all my work that's available online
+This website will (eventually) have links to all my work that's available online. all content on this site, unless otherwise specified, is free for personal and commercial use for individuals, non-profits, and institutions with fewer than 3 employees.
 
 Please feel free to contact me about anything. I inevitably won't respond, but don't take that personally, it's just how I am. 
 
@@ -21,7 +22,7 @@ Music: [Spotify](https://open.spotify.com/playlist/5q8crqSxKiqtpIKnAgkYRU?si=UEu
 
 ---
 
-Other social tedia: [Steam](https://steamcommunity.com/id/zeusofthecrows/) {{ site.sep_char }} [Tumblr](https://zeusofthecrows.tumblr.com/)  {{ site.sep_char }} [Reddit](https://www.reddit.com/user/ZeusOfTheCrows/overview) {{ site.sep_char }} [Discord](https://discord.app/ZeusOfTheCrows#0492 "ZeusOfTheCrows#0492") 
+Other social tedia: [Steam](https://steamcommunity.com/id/zeusofthecrows/) {{ site.sep_char }} [Tumblr](https://zeusofthecrows.tumblr.com/) {{ site.sep_char }} [Reddit](https://www.reddit.com/user/ZeusOfTheCrows/overview) {{ site.sep_char }} [Discord](https://discord.app/ZeusOfTheCrows#0492 "ZeusOfTheCrows#0492") 
 (If you message me on any of these, I will respond very slowly; please don't be offended)
 
 

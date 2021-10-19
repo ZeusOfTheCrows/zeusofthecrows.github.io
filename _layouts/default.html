@@ -12,13 +12,13 @@
 				{% include tree-nav-menu.html %}
 			</div>
 			<main class="content" aria-label="Content">
-			<!-- <div id="content"> -->
-				{{ content }}
-			<!-- </div> -->
+				<!-- cosmetically replace | with ¦ -->
+				{{ content | replace: "|", "¦" }}
+
+				{% include footer.html %}
 			</main>
 			<div id="clear"></div>
 		</div>
-		
 		
 	</body>
 

@@ -31,8 +31,11 @@ github_username: zeusofthecrows
 reddit_username: zeusofthecrows
 sep_char: ¦ # separator character for lists (one ¦ two ¦ three)
 
-# kramdown:
-#   toc_levels: 2..6
+kramdown:
+  # disable smart quotes/apostrophes
+  smart_quotes: ["apos", "apos", "quot", "quot"]
+  # limit table of contents header levels
+  # toc_levels: 2..6
 
 
 # Build settings

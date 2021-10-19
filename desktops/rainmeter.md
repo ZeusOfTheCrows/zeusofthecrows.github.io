@@ -2,11 +2,13 @@
 title: Rainmeter
 collection: leaf
 permalink: /:path/rainmeter/
+edit_date: 2021-10-19
 typora-root-url: ../
 notes: ^ is only so typora correctly renders images
 ---
 
 # Rainmeter presets
+{: .no_toc}
 
 <div class="contents-intro-container" markdown="1">
 

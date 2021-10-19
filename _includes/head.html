@@ -8,5 +8,7 @@
 	</title>
   <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
+  <!-- i don't know if this needs to be here? -->
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
   </head>
