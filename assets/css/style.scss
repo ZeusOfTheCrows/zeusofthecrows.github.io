@@ -233,9 +233,14 @@ without downcasing the <DIR> text*/
 	/* auto add scrollbar, and hide overflow */
 	overflow: auto;
 	white-space: nowrap;
+
+	& > p {
+		float: left;
+		padding-right: 10px;
+	}
 }
 
-img.showcase {
+.showcase {
 	max-width: $content-width;
 	/* i wish there was some unit that was like ch for font height */
 	margin: 2ex 0ch;

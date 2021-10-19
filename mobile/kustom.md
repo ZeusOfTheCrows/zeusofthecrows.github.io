@@ -24,9 +24,7 @@ notes: ^ is only so typora correctly renders images. don't allow newline between
 
 {: .page-intro}
 
-here are links to all my kustom (KLWP, etc.) presets that i haven't lost the files to. they're all hosted on github, the [repo is here](https://github.com/ZeusOfTheCrows/kustom-presets).
-
-
+here are links to all my kustom (KLWP, etc.) presets that i haven't lost the files to. they're all hosted on github, the [repo is here](https://github.com/ZeusOfTheCrows/kustom-presets). (shift+scroll wheel to scroll sideways)
 
 ---
 
@@ -46,16 +44,19 @@ inspired by retro car header units, and VCRs. the central display  shows the  cu
 - Iconfont: material-sharp
 - Icon pack: [Arc](https://play.google.com/store/apps/details?id=com.coccco28.arc)
 
-<!-- this is a p as it makes the markdown easier -->
-
-<!-- i think a div would be better -->
-
-{: .carousel-container}
+<div class="carousel-container" markdown="1">
 
 ![Amber Dec Terminal Preview](/assets/images/mobile/kustom/wood_panelling_01.png){: .showcase .sc-full .sc-carousel}
+
 ![Amber Dec Terminal Preview](/assets/images/mobile/kustom/wood_panelling_02.png){: .showcase .sc-full .sc-carousel}
+
 ![Amber Dec Terminal Preview](/assets/images/mobile/kustom/wood_panelling_03.png){: .showcase .sc-full .sc-carousel}
-![Amber Dec Terminal Preview](/assets/images/mobile/kustom/wood_panelling_03.png){: .showcase .sc-full .sc-carousel}
+
+<video class="showcase sc-full sc-carousel" controls>
+	<source src="/assets/images/mobile/kustom/wood_panelling_04.mp4" alt="Amber Dec Terminal Preview" type="video/mp4"/>
+</video>
+
+</div>
 
 ---
 
