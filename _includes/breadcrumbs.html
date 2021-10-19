@@ -2,7 +2,7 @@
 {% assign crumbs = page.url | remove:'/index.html' | split: '/' %}
 
 <!-- weird newline positioning is to prevent spaces between words -->
-<a href="/">C‏:</a><span>\</span> {{- -}} <!-- this is to trim whitespace -->
+<a href="/">C‏:</a><span>\</span>{{- -}} <!-- this is to trim whitespace -->
 
 <!-- loop through array of url fragments -->
 {%- for crumb in crumbs offset: 1 -%}

@@ -2,7 +2,7 @@
 	font-family: 'FixedsysEx';
 	font-style: normal;
 	font-weight: normal;
-	src: local('Fixedsys Excelsior'), 
+	src: local('Fixedsys Excelsior'),
 	       url('/assets/fonts/FixedsysEx.ttf') format('truetype'),
 	       url('/assets/fonts/FixedsysEx.woff') format('woff');
 }
@@ -12,7 +12,7 @@
 	#000000	#551400	#792400	#862C00	#AE4900	#B24D00	#BE5500	#CB5D00
 	#E37100	#EB7900	#EF7900	#F37D00	#FF9E04	#FFAA10	#FFDB30	#FFE334
 	*/
-$background-colour: black; 
+$background-colour: black;
 $text-14: #FFDB30;           /*text emphasised 4*/
 $text-13: #FFAA10;           /*text emphasised 3 - h2, em, i, link*/
 $text-12: #FF9E04;           /*text emphasised 2 - h3, strong, b*/
@@ -38,3 +38,4 @@ $content-width: calc(#{$total-width} - #{$navmenu-width});
 
 /*============ images =============*/
 $showcase-height: 200px;
+$carousel-height: $showcase-height * 1.6;

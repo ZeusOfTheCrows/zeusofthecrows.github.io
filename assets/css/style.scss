@@ -17,6 +17,21 @@
 	/* i don't think these do anything, but i have to try */
 	-webkit-font-smoothing: none;
 	font-smooth: none;
+	/* colour scrollbars with css */
+	scrollbar-color: $text-07 $background-colour;
+	/* colour scrollbars, but this time for webkit being dumb */
+		&::-webkit-scrollbar {
+			background-color: $background-colour;
+		}
+		&::-webkit-scrollbar-thumb {
+			background-color: $text-07;
+		}
+		&::-webkit-scrollbar-button {
+			background-color: $text-08;
+		}
+		&::-webkit-scrollbar-corner {
+			background-color: $background-colour;
+		}
 }
 
 body {
@@ -55,7 +70,7 @@ body {
 	width: $content-width;
 	float: left; /*ztodo why is this duped?*//*actually i don't think it is*/
 }
-#clear {
+#clear .clear {
 	clear: both; /*i don't think this needs be here?
 	               i think it's only if i have any divs below?*/
 }
@@ -205,42 +220,82 @@ without downcasing the <DIR> text*/
 	text-overflow: "..."; /*this is a full ... as it looks better in FxSys*/
 }
 
+/* currently a p tag containing the images */
+.carousel-container {
+	/* auto add scrollbar, and hide overflow */
+	overflow: auto;
+	white-space: nowrap;
+}
+
 img.showcase {
 	max-width: $content-width;
 	/* i wish there was some unit that was like ch for font height */
 	margin: 2ex 0ch;
 
-	&.sc-full {
-		/*this is only here as a placeholder for now
-		sc-full  are images that are pre-formatted to the right dimensions*/
-	}
-	&.sc-wide {
-		/* most images - fullwidth */
-		object-fit: cover;
-		// object-position: bottom;
-		width: $content-width;
-		height: $showcase-height;
+		&.sc-full {
+			/*this is only here as a placeholder for now
+			sc-full  are images that are pre-formatted to the right dimensions*/
+		}
 
-		/* this allows me to choose per image whether
-		i focus the top, middle or bottom*/
-		&.sc-top {
-			object-position: top;
-		}
-		&.sc-mid {
-			object-position: center;
-		}
-		&.sc-btm {
-			object-position: bottom;
-		}
+			&.sc-carousel {
+				/* show full image disregarding aspect ratio */
+				width: auto;
+				height: $carousel-height;
+				/* for horizontal scrolling */
+				display: inline-block;
+			}
+
+			&.sc-wide {
+				/* most images - fullwidth */
+				object-fit: cover;
+				width: $content-width;
+				height: $showcase-height;
+
+				/* this allows me to choose per image whether i focus
+				the top, middle or bottom when zoomed to crop*/
+				&.sc-top {
+					object-position: top;
+				}
+				&.sc-mid {
+					object-position: center;
+				}
+				&.sc-btm {
+					object-position: bottom;
+			}
 	}
 }
 
-/* an attempt to deal with svgs. semi obsolete. */
-/* img.fullwidth { */
-	/* max-height: 192px; */
-	/* width: $content-width; */
-	/* position: absolute; */
-/* } */
+
+//this is an old method involving rotating sideways,
+//in order to avoid holding shift. it doesn't work very well
+
+// .carousel-container {
+// 	// float: left;
+// 	width: $carousel-height;
+// 	height: $content-width;
+// 	overflow-x: hidden;
+// 	overflow-y: auto;
+
+
+// 	// translateY(calc($content-width * -1))
+// 	transform: rotate(-90deg) translateY(-400px);
+// 	transform-origin: right top;
+
+// 	& > img {
+// 		width: auto;
+// 		height: $carousel-height;
+
+// 		transform: rotate(90deg);
+// 		transform-origin: right top;
+// 	}
+// }
+
+// an attempt to deal with svgs. semi obsolete.
+// img.fullwidth {
+	// max-height: 192px;
+	// width: $content-width;
+	// position: absolute;
+// }
 
 /*hide header, only show minified logo on small screens*/
 @media only screen and (max-width: $logo-breakpoint) {
