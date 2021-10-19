@@ -234,9 +234,25 @@ without downcasing the <DIR> text*/
 	overflow: auto;
 	white-space: nowrap;
 
-	& > p {
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: row;
+	overflow-x: auto;
+	overflow-y: hidden;
+	white-space: nowrap;
+
+	& > * {
+		display: inline;
 		float: left;
 		padding-right: 10px;
+
+		display: inline-block;
+		align-content: flex-start;
+		overflow-x: visible;
+		overflow-y: visible;
+		flex-wrap: wrap;
+		height: 200px;
+		width: auto;
 	}
 }
 

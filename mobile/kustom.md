@@ -36,13 +36,15 @@ here are links to all my kustom (KLWP, etc.) presets that i haven't lost the fil
 
 inspired by retro car header units, and VCRs. the central display  shows the  current song, or three notifications + wifi ssid if no music  is playing. the line under the music is track percentage. the needle  meter is  battery, the bars on the left and right are signal, wifi, and  bluetooth  speaker battery (if applicable). the icons are bluetooth  on/connected,  charging/fast, data, and wifi on/connected.
 
-- Fonts:
-	- [DSegstended](https://github.com/ZeusOfTheCrows/DSegstended/) `my own fork of keshikan's dseg font, that adds cyrillic/greek`
-	- Eurostile SemiBold
-	- Rage italic [vice city] `removed from shared version, you know how rockstar are`
-	- Roboto
-- Iconfont: material-sharp
-- Icon pack: [Arc](https://play.google.com/store/apps/details?id=com.coccco28.arc)
+* Fonts:
+	* [DSegstended](https://github.com/ZeusOfTheCrows/DSegstended/) `my own fork of keshikan's dseg font, that adds cyrillic/greek`
+	* Eurostile SemiBold
+	* Rage italic [vice city] `removed from shared version, you know how rockstar are`
+	* Roboto
+* Iconfont: material-sharp
+* Icon pack: [Arc](https://play.google.com/store/apps/details?id=com.coccco28.arc)
+
+<!-- invisible bit of html here. it's absolutely imperative it exists -->
 
 <div class="carousel-container" markdown="1">
 
@@ -52,8 +54,10 @@ inspired by retro car header units, and VCRs. the central display  shows the  cu
 
 ![Amber Dec Terminal Preview](/assets/images/mobile/kustom/wood_panelling_03.png){: .showcase .sc-full .sc-carousel}
 
+![Amber Dec Terminal Preview](/assets/images/mobile/kustom/wood_panelling_03.png){: .showcase .sc-full .sc-carousel}
+
 <video class="showcase sc-full sc-carousel" controls>
-	<source src="/assets/images/mobile/kustom/wood_panelling_04.mp4" alt="Amber Dec Terminal Preview" type="video/mp4"/>
+	<source src="/assets/images/mobile/kustom/wood_panelling_04.mp4" alt="Wood Panelling Preview Video" type="video/mp4"/>
 </video>
 
 </div>
