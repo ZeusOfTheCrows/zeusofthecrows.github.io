@@ -8,7 +8,19 @@ notes: ^ is only so typora correctly renders images
 
 # Wallpaper Engine Presets
 
----
+<div class="contents-intro-container" markdown="1">
+
+{: .table-of-contents}
+
+* Will be replaced with the ToC
+{:toc}
+
+{: .page-intro}
+
+here are links to all my wallpaper engine presets. they're all hosted on github, as well as the steam workshop.
+
+</div>
+
 
 ## Amber Dec Teminal
 

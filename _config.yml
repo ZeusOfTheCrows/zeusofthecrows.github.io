@@ -29,8 +29,20 @@ markdown: kramdown
 mastodon_username: zeusofthecrows
 github_username: zeusofthecrows
 reddit_username: zeusofthecrows
-sep_char: ¦ #separator character for lists (one ¦ two ¦ three)
+sep_char: ¦ # separator character for lists (one ¦ two ¦ three)
 
+# kramdown:
+#   toc_levels: 2..6
+
+
+# Build settings
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-paginate
+
+# default frontmatter contents - seems to be broken?
 defaults:
   -
     scope:
@@ -60,17 +72,7 @@ defaults:
     # values:
       # layout: directory
 
-# Build settings
-# theme: minima
-# minima:
-#     skin: dark.scss
-#     link-base-color: orange
-plugins:
-  - jekyll-feed
-  - jekyll-sitemap
-  - jekyll-seo-tag
-  - jekyll-paginate
-  
+
 sass:
   sass_dir: _sass
   style: expanded

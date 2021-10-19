@@ -16,7 +16,7 @@
 	text-align: left;
 	/* i don't think these do anything, but i have to try */
 	-webkit-font-smoothing: none;
-	font-smooth: none;
+	font-smooth: never;
 	/* colour scrollbars with css */
 	scrollbar-color: $text-07 $background-colour;
 	/* colour scrollbars, but this time for webkit being dumb */
@@ -72,16 +72,18 @@ body {
 }
 
 .contents-intro-container {
-	display: flex
+	// display: inline-block;
 }
 
-#markdown-toc {
-	width: 100%;
-	float: left;
+.table-of-contents {
+	width: 32ch; // i would like this to be … better
+	display: inline-block;
+	// float: left;
 }
 .page-intro {
 	display: inline-block;
-	float: left;
+	width: 58ch;
+	// float: left;
 }
 
 #clear .clear {
@@ -98,8 +100,8 @@ h1, h2, h3, h4, h5, h6, em, i, strong, b, th {
 	font-size: inherit;
 }
 
-h1 {
-	color: $text-14;
+
+h1, h2 {
 	/* these have to be set in the parent
 	(i.e. the element not the pseudo element) */
 	width: 100%;
@@ -109,6 +111,9 @@ h1 {
 			// add a horizontal line
 			// this is done farther down, by the hr block
 		// }
+}
+h1 {
+	color: $text-14;
 }
 h2 {
 	color: $text-13;
@@ -159,7 +164,7 @@ hr {
 	width: 100%;
 	overflow: hidden;
 }
-hr::before, h1::after {
+hr::before, h1::after, h2::after {
 	/* is in the ::before of the hr so i can put a line break in the ::after */
 	color: $text-09;
 	display: block;

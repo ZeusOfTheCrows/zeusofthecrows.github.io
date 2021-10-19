@@ -7,12 +7,24 @@ notes: ^ is only so typora correctly renders images
 ---
 
 # From Software's games
+{: .no_toc}
+
+<div class="contents-intro-container" markdown="1">
+
+{: .table-of-contents}
+
+* Will be replaced with the ToC
+{:toc}
+
+{: .page-intro}
+
+mods i've made for fromsoft's games
+
+</div>
 
 ---
 
 ## Demon's Souls
-
----
 
 {: #svi-des}
 
@@ -29,8 +41,6 @@ dark souls III version [here](#svi-ds3)
 ---
 
 ## Dark Souls II
-
----
 
 ### Hylian Shield for SotFS
 
@@ -50,8 +60,6 @@ requires igp11, may get you banned from online, caveat emptor, etc.
 
 ## Dark Souls III
 
----
-
 {: #svi-ds3}
 
 ### Soul Value Icons
@@ -70,11 +78,11 @@ demon's souls version [here](#svi-des)
 
 ---
 
-# Detailed UI - DS1 style ticks
+### DS1 style ticks for DetUI
 
 [Download](/assets/zips/games/mods/ds3/detailed-ui-w-ticks.7z) {{ site.sep_char }}  [Nexus](https://www.nexusmods.com/darksouls3/mods/1015)
 
-I like [this mod ](https://www.nexusmods.com/darksouls3/mods/91)by Celice, but﻿ I miss the little bars from DS1 that let you easily and quickly see your health level. I didn't want to take downloads away from the original though, so install that one first and then overwrite it  with this one.
+I like [the Detailed UI mod](https://www.nexusmods.com/darksouls3/mods/91) by Celice, but﻿ I miss the little bars from DS1 that let you easily and quickly see your health level. I didn't want to take downloads away from the original though, so install that one first and then overwrite it  with this one.
 
 - To install:
   - Download the iGP11, and the [Detailed UI mod](https://www.nexusmods.com/darksouls3/mods/91)﻿

@@ -7,12 +7,13 @@ notes: ^ is only so typora correctly renders images. carousels and videos need h
 ---
 
 # Kustom presets
+{: .no_toc}
 
 <div class="contents-intro-container" markdown="1">
 
 {: .table-of-contents}
 
-* Will be replaced with the ToC, excluding the "Contents" header
+* Will be replaced with the ToC
 {:toc}
 
 {: .page-intro}
@@ -137,4 +138,4 @@ Made as a [request from reddit](https://www.reddit.com/r/outrun/comments/iq8iam/
 
 {: .carousel-container}
 
-![Amber Terminal Preview](/assets/images/mobile/kustom/outrun_widgy.png){: .showcase .sc-full .sc-carousel}
+![Amber Terminal Preview](/assets/images/mobile/kustom/outrun_widgy.png){: .showcase .sc-wide .sc-top}

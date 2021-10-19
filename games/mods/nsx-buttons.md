@@ -7,14 +7,26 @@ notes: ^ is only so typora correctly renders images
 ---
 
 # NSX Button Prompts
+{: .no_toc}
 
-i find the nintendo layout a lot more intuitive, but colours make buttons a lot easier to see at a glance. for this reason, if one doesn't exist, i've started to make a mod for the switch button prompts, but with the snes/sfc colours for the games i play.
+<div class="contents-intro-container" markdown="1">
 
-for games without a way to change the accept/cancel buttons in menus, A/B are the same way around as xinput, allowing one change it via Steam Input or some other method.
+{: .table-of-contents}
+
+* Will be replaced with the ToC
+{:toc}
+
+{: .page-intro}
+
+i find the nintendo layout a lot more intuitive, but colours make buttons a lot easier to see at a glance. for this reason, if one doesn't exist, i've started to make a mod for the switch button prompts, but with the snes/sfc colours for the games i play. for games without a way to change the accept/cancel buttons in menus, A/B are the same way around as xinput, allowing one change it via Steam Input or some other method.
+
+</div>
 
 ---
 
-## Demon's Souls
+## From Software
+
+### Demon's Souls
 
 Normal: [Download](/assets/zips/games/mods/des/nsx-button-prompts.7z) {{ site.sep_char }} A/B Switched [Download](/assets/zips/games/mods/des/nsx-button-prompts.7z) {{ site.sep_char }} Playstation [Download](/assets/zips/games/mods/des/nsx-button-prompts.7z) {{ site.sep_char }} [Nexus](https://www.nexusmods.com/demonssouls/mods/47)
 
@@ -25,7 +37,7 @@ Normal: [Download](/assets/zips/games/mods/des/nsx-button-prompts.7z) {{ site.se
 
 ---
 
-## Dark Souls I
+### Dark Souls I
 
 Remastered [Download](/assets/zips/games/mods/ds1/nsx-button-prompts.7z) {{ site.sep_char }} [Nexus](https://www.nexusmods.com/demonssouls/mods/375) {{ site.sep_char }} PtDE [Download](/assets/zips/games/mods/ds1/ptde-nsx-button-prompts.7z) {{ site.sep_char }} [Nexus](https://www.nexusmods.com/demonssouls/mods/1778)
 
@@ -42,7 +54,7 @@ Remastered [Download](/assets/zips/games/mods/ds1/nsx-button-prompts.7z) {{ site
 
 ---
 
-## Dark Souls II (SotFS)
+### Dark Souls II (SotFS)
 
 Normal: [Download](/assets/zips/games/mods/ds2/nsx-button-prompts.7z) {{ site.sep_char }} Manual: [Download](/assets/zips/games/mods/ds2/nsx-button-prompts-no-igp11.7z) {{ site.sep_char }} [Nexus](https://www.nexusmods.com/darksouls2/mods/990)
 
@@ -56,7 +68,7 @@ Normal: [Download](/assets/zips/games/mods/ds2/nsx-button-prompts.7z) {{ site.se
 
 ---
 
-## Dark Souls III
+### Dark Souls III
 
 [Download](/assets/zips/games/mods/ds3/nsx-button-prompts.7z) {{ site.sep_char }} [Nexus](https://www.nexusmods.com/darksouls3/mods/993)
 
