@@ -7,39 +7,39 @@
 	       url('/assets/fonts/FixedsysEx.woff') format('woff');
 }
 
-/*============ colours ============*/
+//============ colours ============//
 	/*full palette
 	#000000	#551400	#792400	#862C00	#AE4900	#B24D00	#BE5500	#CB5D00
 	#E37100	#EB7900	#EF7900	#F37D00	#FF9E04	#FFAA10	#FFDB30	#FFE334
 	*/
 $background-colour: black;
-$text-14: #FFDB30;           /*text emphasised 4*/
-$text-13: #FFAA10;           /*text emphasised 3 - h2, em, i, link*/
-$text-12: #FF9E04;           /*text emphasised 2 - h3, strong, b*/
-$text-11: #F37D00;           /*text emphasised 1 - h4*/
-$text-10: #EB7900;           /*base text colour*/
-$text-09: #B24D00;           /*text deemphasised 1 - hr*/
-$text-08: #862C00;           /*text deemphasised 2 - visited link*/
-$text-07: #551400;           /*text deemphasised 3*/
+$text-14: #FFDB30;           // text emphasised 4 - h1
+$text-13: #FFAA10;           // text emphasised 3 - h2
+$text-12: #FF9E04;           // text emphasised 2 - h3, em, i, link
+$text-11: #F37D00;           // text emphasised 1 - h4, strong, b
+$text-10: #EB7900;           // base text colour
+$text-09: #B24D00;           // text deemphasised 1 - hr
+$text-08: #862C00;           // text deemphasised 2 - visited link
+$text-07: #551400;           // text deemphasised 3
 
-/*============== text =============*/
+// ============== text =============//
 $text-font: FixedSysEx, monospace;
 $code-font: $text-font;
 $text-size: 12pt;
-$text-glow: 4px; /*multiplied for links*/
+$text-glow: 4px; // multiplied for links
 
-/* ch is the width of a zero (0) character */
+// ch is the width of a zero (0) character
 $logo-breakpoint: 86ch;
 // $total-width: 112ch;
 $total-width: min(88vw, 112ch);
 $navmenu-width: 18ch;
-/*#{this} is called interpolation - why is it necessary?*/
+//#{this} is called interpolation - why is it necessary?
 $content-width: calc(#{$total-width} - #{$navmenu-width});
-/* turn hr into a line of dashes (-) */
-/* i wish there was a better way of doing this */
+// turn hr into a line of dashes (-)
+// i wish there was a better way of doing this
 $hr-content: "-------------------------------------------------------------------------------------------------------------------------------------------------------------------------";
 // $hr-content: "=========================================================================================================================================================================";
 
-/*============ images =============*/
+//============ images =============//
 $showcase-height: 200px;
 $carousel-height: $showcase-height * 1.6;

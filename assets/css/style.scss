@@ -70,6 +70,20 @@ body {
 	width: $content-width;
 	float: left; /*ztodo why is this duped?*//*actually i don't think it is*/
 }
+
+.contents-intro-container {
+	display: flex
+}
+
+#markdown-toc {
+	width: 100%;
+	float: left;
+}
+.page-intro {
+	display: inline-block;
+	float: left;
+}
+
 #clear .clear {
 	clear: both; /*i don't think this needs be here?
 	               i think it's only if i have any divs below?*/
@@ -92,12 +106,8 @@ h1 {
 	overflow: hidden;
 
 		// &::after {
-			// position: absolute;
-			// width: $content-width;
-			// display: block;
-			// content: "-------------------------------------------------------------------------------------------------------------------------------------------------------------------------";
-			// white-space: nowrap;
-			// text-overflow: none;
+			// add a horizontal line
+			// this is done farther down, by the hr block
 		// }
 }
 h2 {
@@ -117,15 +127,15 @@ h6 {
 }
 
 em, i {
-	color: $text-13;
+	color: $text-12;
 }
 
 strong, b {
-	color: $text-12;
+	color: $text-11;
 }
 
 a:link {
-	color: $text-12;
+	color: $text-11;
 	text-decoration: underline;
 }
 
@@ -233,7 +243,8 @@ without downcasing the <DIR> text*/
 	/* auto add scrollbar, and hide overflow */
 	overflow: auto;
 	white-space: nowrap;
-
+	// ztodo comment this code i have no idea how it works
+	// https://stackoverflow.com/questions/67022666/question-about-horizontal-scroll-in-css-with-p-paragraphs-html
 	display: flex;
 	justify-content: flex-start;
 	flex-direction: row;

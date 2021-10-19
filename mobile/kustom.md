@@ -2,35 +2,30 @@
 title: Kustom
 collection: leaf
 permalink: /:path/kustom/
-output: 
-  html_document:
-    toc: true # table of content true
-    toc_depth: 3  # upto three depths of headings (specified by #, ## and ###)
-    number_sections: true  ## if you want number sections at each table header
-    theme: united  # many options for theme, this one is my favorite.
-    highlight: tango  # specifies the syntax highlighting style
-    css: my.css   # you can add your custom css, should be in same folder
 typora-root-url: ../
-notes: ^ is only so typora correctly renders images. don't allow newline between images
+notes: ^ is only so typora correctly renders images. carousels and videos need html
 ---
 
 # Kustom presets
 
+<div class="contents-intro-container" markdown="1">
+
 {: .table-of-contents}
 
-<!-- i wish this was dynamic -->
-
-
+* Will be replaced with the ToC, excluding the "Contents" header
+{:toc}
 
 {: .page-intro}
 
 here are links to all my kustom (KLWP, etc.) presets that i haven't lost the files to. they're all hosted on github, the [repo is here](https://github.com/ZeusOfTheCrows/kustom-presets). (shift+scroll wheel to scroll sideways)
 
+</div>
+
 ---
 
-# [KLWP](https://github.com/ZeusOfTheCrows/kustom-presets/tree/master/klwp)
+## Wallpapers
 
-## Wood Panelling
+### Wood Panelling
 
 [Download](https://github.com/ZeusOfTheCrows/kustom-presets/raw/master/klwp/Wood_Panelling.klwp) {{ site.sep_char }} [Github](https://github.com/ZeusOfTheCrows/kustom-presets/blob/master/klwp/Wood_Panelling.klwp)
 
@@ -48,13 +43,11 @@ inspired by retro car header units, and VCRs. the central display  shows the  cu
 
 <div class="carousel-container" markdown="1">
 
-![Amber Dec Terminal Preview](/assets/images/mobile/kustom/wood_panelling_01.png){: .showcase .sc-full .sc-carousel}
+![Wood Panelling Preview](/assets/images/mobile/kustom/wood_panelling_01.png){: .showcase .sc-full .sc-carousel}
 
-![Amber Dec Terminal Preview](/assets/images/mobile/kustom/wood_panelling_02.png){: .showcase .sc-full .sc-carousel}
+![Wood Panelling Preview](/assets/images/mobile/kustom/wood_panelling_02.png){: .showcase .sc-full .sc-carousel}
 
-![Amber Dec Terminal Preview](/assets/images/mobile/kustom/wood_panelling_03.png){: .showcase .sc-full .sc-carousel}
-
-![Amber Dec Terminal Preview](/assets/images/mobile/kustom/wood_panelling_03.png){: .showcase .sc-full .sc-carousel}
+![Wood Panelling Preview](/assets/images/mobile/kustom/wood_panelling_03.png){: .showcase .sc-full .sc-carousel}
 
 <video class="showcase sc-full sc-carousel" controls>
 	<source src="/assets/images/mobile/kustom/wood_panelling_04.mp4" alt="Wood Panelling Preview Video" type="video/mp4"/>
@@ -64,9 +57,9 @@ inspired by retro car header units, and VCRs. the central display  shows the  cu
 
 ---
 
-## Retro Gruvbox
+### Retro Gruvbox
 
-[Download](https://github.com/ZeusOfTheCrows/kustom-presets/raw/master/klwp/Wood_Panelling.klwp) {{ site.sep_char }} [Github](https://github.com/ZeusOfTheCrows/kustom-presets/blob/master/klwp/Wood_Panelling.klwp)
+[Download](https://github.com/ZeusOfTheCrows/kustom-presets/raw/master/klwp/Retro_Gruvbox.klwp) {{ site.sep_char }} [Github](https://github.com/ZeusOfTheCrows/kustom-presets/blob/master/klwp/Retro_Gruvbox.klwp)
 
 Designed around the Gruvbox colourscheme, bright and vibrant
 
@@ -77,13 +70,13 @@ Designed around the Gruvbox colourscheme, bright and vibrant
 
 {: .carousel-container}
 
-![Amber Dec Terminal Preview](/assets/images/mobile/kustom/retro_gruvbox.png){: .showcase .sc-full .sc-carousel}
+![Retro Gruvbox Preview](/assets/images/mobile/kustom/retro_gruvbox.png){: .showcase .sc-full .sc-carousel}
 
 ---
 
-## Casio W-86 Illuminator
+### Casio W-86
 
-[Download](https://github.com/ZeusOfTheCrows/kustom-presets/raw/master/klwp/Wood_Panelling.klwp) {{ site.sep_char }} [Github](https://github.com/ZeusOfTheCrows/kustom-presets/blob/master/klwp/Wood_Panelling.klwp)
+[Download](https://github.com/ZeusOfTheCrows/kustom-presets/raw/master/klwp/Casio_W_86_Illuminator.klwp) {{ site.sep_char }} [Github](https://github.com/ZeusOfTheCrows/kustom-presets/blob/master/klwp/Casio_W_86_Illuminator.klwp)
 
 I love the Casio Illuminator, I think it's the superior model to the F91-W
 
@@ -94,13 +87,13 @@ I love the Casio Illuminator, I think it's the superior model to the F91-W
 
 {: .carousel-container}
 
-![Amber Dec Terminal Preview](/assets/images/mobile/kustom/casio_w_86_illuminator.png){: .showcase .sc-full .sc-carousel}
+![Casio W-86 Preview](/assets/images/mobile/kustom/casio_w_86_illuminator.png){: .showcase .sc-full .sc-carousel}
 
 ---
 
-## Kustomfetch
+### Kustomfetch
 
-[Download](https://github.com/ZeusOfTheCrows/kustom-presets/raw/master/klwp/Wood_Panelling.klwp) {{ site.sep_char }} [Github](https://github.com/ZeusOfTheCrows/kustom-presets/blob/master/klwp/Wood_Panelling.klwp)
+[Download](https://github.com/ZeusOfTheCrows/kustom-presets/raw/master/klwp/Kustomfetch.klwp) {{ site.sep_char }} [Github](https://github.com/ZeusOfTheCrows/kustom-presets/blob/master/klwp/Kustomfetch.klwp)
 
 Ubuntu, for all it's flaws, looks really nice by default (at least up until 18.04)
 
@@ -111,13 +104,13 @@ Ubuntu, for all it's flaws, looks really nice by default (at least up until 18.0
 
 {: .carousel-container}
 
-![Amber Dec Terminal Preview](/assets/images/mobile/kustom/kustomfetch.png){: .showcase .sc-full .sc-carousel}
+![Kustomfetch Preview](/assets/images/mobile/kustom/kustomfetch.png){: .showcase .sc-full .sc-carousel}
 
 ---
 
-## Amber Terminal
+### Amber Terminal
 
-[Download](https://github.com/ZeusOfTheCrows/kustom-presets/raw/master/klwp/Wood_Panelling.klwp) {{ site.sep_char }} [Github](https://github.com/ZeusOfTheCrows/kustom-presets/blob/master/klwp/Wood_Panelling.klwp)
+[Download](https://github.com/ZeusOfTheCrows/kustom-presets/raw/master/klwp/Amber_Terminal.klwp) {{ site.sep_char }} [Github](https://github.com/ZeusOfTheCrows/kustom-presets/blob/master/klwp/Amber_Terminal.klwp)
 
 Similar to kustomfetch, but designed to be a companion to my WPE wallpaper
 
@@ -128,9 +121,20 @@ Similar to kustomfetch, but designed to be a companion to my WPE wallpaper
 
 {: .carousel-container}
 
-![Amber Dec Terminal Preview](/assets/images/mobile/kustom/amber_terminal.png){: .showcase .sc-full .sc-carousel}
+![Amber Terminal Preview](/assets/images/mobile/kustom/amber_terminal.png){: .showcase .sc-full .sc-carousel}
 
 ---
 
-# Komponents
+## Komponents
 
+### Outrun Widgy
+
+[Download](https://github.com/ZeusOfTheCrows/kustom-presets/raw/master/komp/Outrun_Widgy.komp) {{ site.sep_char }} [Github](https://github.com/ZeusOfTheCrows/kustom-presets/blob/master/komp/Outrun_Widgy.komp)
+
+Made as a [request from reddit](https://www.reddit.com/r/outrun/comments/iq8iam/made_an_outrun_vibe_widget_with_widgy_for_ios_14/g4r1d8c/).
+
+- Fonts: [Good Times](https://typodermicfonts.com/good-times/); [VCR OSD Mono](http://luc.devroye.org/fonts-75108.html)
+
+{: .carousel-container}
+
+![Amber Terminal Preview](/assets/images/mobile/kustom/outrun_widgy.png){: .showcase .sc-full .sc-carousel}
