@@ -85,12 +85,14 @@ demon's souls version [here](#svi-des)
 
 I like [the Detailed UI mod](https://www.nexusmods.com/darksouls3/mods/91) by Celice, but﻿ I miss the little bars from DS1 that let you easily and quickly see your health level. I didn't want to take downloads away from the original though, so install that one first and then overwrite it  with this one.
 
-- To install:
-  - Download the iGP11, and the [Detailed UI mod](https://www.nexusmods.com/darksouls3/mods/91)﻿
-  - Unpack files from `[detailed_ui]` to `[game_directory]\Game\iGP11\tex_override`
-  - Copy [`65536_12[..]05.dds`]( "65536_12831202783399872305.dds") to `[game_directory]\Game\iGP11\tex_override`, replacing the other
-    - ﻿(If you want to replace the blood echoes symbol with a normal souls symbol)
-    - ﻿copy [`65536_25[..]59.dds`]( "65536_2579900381049114659.dds") as well
+* To install:
+	* Download the iGP11, and the [Detailed UI mod](https://www.nexusmods.com/darksouls3/mods/91)
+	* Unpack files from `[detailed_ui]` to `[game_directory]\Game\iGP11\tex_override`
+	* Copy `65536_12[..]05.dds`{:title="65536_12831202783399872305.dds"} to `[game_directory]\Game\iGP11\tex_override`, replacing the other
+		* (If you want to replace the blood echoes symbol with a normal souls symbol)
+		* copy `65536_25[..]59.dds`{:title="65536_2579900381049114659.dds"}  as well
+
+<!-- html is to allow title (tooltip) property in code element -->
 
 ![DS3 Soul Value Icons mod preview](https://staticdelivery.nexusmods.com/mods/1392/images/1015/1015-1628547210-1550448456.png){: .showcase .sc-wide .sc-mid}
 

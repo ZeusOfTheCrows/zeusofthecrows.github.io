@@ -9,7 +9,7 @@ layout: home
 
 welcome to a miscellany of things i've made for my own benefit, things i've found cool, and anything else i feel like putting up here.
 
-i'm very good at not finishing things, so expect this site to be a continual work in progress…
+i'm very good at not finishing things, so expect this site to be a continual work in progress...
 
 sorry
 
@@ -19,3 +19,8 @@ sorry
 
 <!-- ztodo: embed tumblr rss feed here -->
 
+<!-- todolist: -->
+
+<!-- post saying site finished. nav bar on bottom for phones -->
+
+<!-- fix code formatting on homepage.  -->

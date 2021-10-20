@@ -14,9 +14,25 @@
 	border-collapse: collapse; /*hide implicit table borders*/
 	vertical-align: top;
 	text-align: left;
+
 	/* i don't think these do anything, but i have to try */
 	-webkit-font-smoothing: none;
 	font-smooth: never;
+}
+
+html {
+	/* smoothly scroll to anchor link */
+	scroll-behavior: smooth;
+
+		/* this is here because i think it's semantically easier to read */
+		/* offset anchor link down from the top of the page */
+		& :target:before {
+			content: "";
+			display: block;
+			height: 2em;
+			margin: -2em 0 0;
+		}
+
 	/* colour scrollbars with css */
 	scrollbar-color: $text-07 $background-colour;
 	/* colour scrollbars, but this time for webkit being dumb */
@@ -274,8 +290,7 @@ without downcasing the <DIR> text*/
 
 .showcase {
 	max-width: $content-width;
-	/* i wish there was some unit that was like ch for font height */
-	margin: 2ex 0ch;
+	margin: 1em 0ch;
 
 		&.sc-full {
 			/*this is only here as a placeholder for now
