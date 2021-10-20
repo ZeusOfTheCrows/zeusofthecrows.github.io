@@ -118,10 +118,6 @@ h1, h2, h3, h4, h5, h6, em, i, strong, b, th {
 
 
 h1, h2 {
-	/* these have to be set in the parent
-	(i.e. the element not the pseudo element) */
-	width: 100%;
-	overflow: hidden;
 
 		// &::after {
 			// add a horizontal line
@@ -155,6 +151,12 @@ strong, b {
 	color: $text-11;
 }
 
+// de-emphasise text
+small {
+	font-size: inherit;
+	color: $text-08;
+}
+
 a:link {
 	color: $text-11;
 	text-decoration: underline;
@@ -175,19 +177,21 @@ a:active {
 }
 
 hr {
-	/* these have to be set in the parent
-	(i.e. the element not the pseudo element) */
-	width: 100%;
-	overflow: hidden;
+	// nothing here now, all in before/after
 }
+
 hr::before, h1::after, h2::after {
 	/* is in the ::before of the hr so i can put a line break in the ::after */
 	color: $text-09;
+	width: 100%;
 	display: block;
 	content: $hr-content;
 	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: "";
 	// these have to be set in the parent instead? see:
-	// https://stackoverflow.com/questions/3970455/how-to-make-the-overflow-css-property-work-with-hidden-as-value/58119574#58119574
+	// https://stackoverflow.com/questions/3970455/how-to-make-\
+	// the-overflow-css-property-work-with-hidden-as-value/58119574#58119574
 	// text-overflow: none;
 	// width: 100%;
 	// width: 10em;
@@ -235,7 +239,7 @@ code {
 
 /*============================specific styles================================*/
 
-/* directory layout: capitalise firs letter of folders
+/* directory layout: capitalise first letter of folders
 without downcasing the <DIR> text*/
 .dir-entry a {
 	text-transform: capitalize;
@@ -245,9 +249,21 @@ without downcasing the <DIR> text*/
 	/* table-layout: fixed; */
 	/* width: 88%; */
 	list-style: none; /*hide bullets*/
+
+
+	// for making this into a table - maybe ztodo
+	// &::before {
+		// content: $hr-content;
+	// }
 }
 .post-title {
-	/* width: 10ch; */
+	/* force constant width for post titles */
+	display: inline-block;
+	width: 24ch;
+
+		// &::after {
+			// content: "¦";
+		// }
 }
 
 .post-list {
@@ -265,7 +281,8 @@ without downcasing the <DIR> text*/
 	overflow: auto;
 	white-space: nowrap;
 	// ztodo comment this code i have no idea how it works
-	// https://stackoverflow.com/questions/67022666/question-about-horizontal-scroll-in-css-with-p-paragraphs-html
+	// https://stackoverflow.com/questions/67022666/\
+	// question-about-horizontal-scroll-in-css-with-p-paragraphs-html
 	display: flex;
 	justify-content: flex-start;
 	flex-direction: row;

@@ -8,10 +8,10 @@
 }
 
 //============ colours ============//
-	/*full palette
-	#000000	#551400	#792400	#862C00	#AE4900	#B24D00	#BE5500	#CB5D00
-	#E37100	#EB7900	#EF7900	#F37D00	#FF9E04	#FFAA10	#FFDB30	#FFE334
-	*/
+	// full palette
+	// #000000	#551400	#792400	#862C00	#AE4900	#B24D00	#BE5500	#CB5D00
+	// #E37100	#EB7900	#EF7900	#F37D00	#FF9E04	#FFAA10	#FFDB30	#FFE334
+
 $background-colour: black;
 $text-14: #FFE334;           // text emphasised 4 - h1
 $text-13: #FFDB30;           // text emphasised 3 - h2
@@ -35,10 +35,20 @@ $total-width: min(88vw, 112ch);
 $navmenu-width: 18ch;
 //#{this} is called interpolation - why is it necessary?
 $content-width: calc(#{$total-width} - #{$navmenu-width});
-// turn hr into a line of dashes (-)
-// i wish there was a better way of doing this
-$hr-content: "-------------------------------------------------------------------------------------------------------------------------------------------------------------------------";
-// $hr-content: "=========================================================================================================================================================================";
+// turn hr into a line of dashes (-) - convoluted for succinctness:
+
+// repeat passed char to passed № of iterations
+// src: https://stackoverflow.com/a/38715111
+@function repeat-chars($character, $n) {
+	$c:"";
+	@for $i from 1 through $n {
+		$c: $c + $character;
+	}
+	@return $c;
+}
+
+// repeat - (display char) 128 times. a lot neater
+$hr-content: repeat-chars("-", 128);
 
 //============ images =============//
 $showcase-height: 200px;
