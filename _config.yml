@@ -79,6 +79,8 @@ defaults:
 sass:
   sass_dir: _sass
   style: expanded
+  indent_type: tab
+
 
 # Exclude from processing.
 # The following items will not be processed, by default.

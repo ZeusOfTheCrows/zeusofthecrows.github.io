@@ -13,9 +13,7 @@ i'm very good at not finishing things, so expect this site to be a continual wor
 
 sorry
 
-(`text will look blurry in webkit based browsers, due to the fact that they use subpixel antialiasing by default. i'm afraid there's nothing i can do to fix this as far as i know`)
-
----
+<small class="weak">(text will look blurry in webkit browsers, due to the fact that they use subpixel antialiasing by default. i'm afraid there's nothing i can do to fix this, as far as i know)</small>
 
 <!-- ztodo: embed tumblr rss feed here -->
 

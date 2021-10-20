@@ -34,9 +34,9 @@ here are links to all my kustom (KLWP, etc.) presets that i haven't lost the fil
 inspired by retro car header units, and VCRs. the central display  shows the  current song, or three notifications + wifi ssid if no music  is playing. the line under the music is track percentage. the needle  meter is  battery, the bars on the left and right are signal, wifi, and  bluetooth  speaker battery (if applicable). the icons are bluetooth  on/connected,  charging/fast, data, and wifi on/connected.
 
 * Fonts:
-	* [DSegstended](https://github.com/ZeusOfTheCrows/DSegstended/) `my own fork of keshikan's dseg font, that adds cyrillic/greek`
+	* [DSegstended](https://github.com/ZeusOfTheCrows/DSegstended/) <small class="weak">my own fork of keshikan's dseg font, that adds cyrillic/greek</small>
 	* Eurostile SemiBold
-	* Rage italic [vice city] `removed from shared version, you know how rockstar are`
+	* Rage italic [vice city] <small class="weak">removed from shared version, you know how rockstar are</small>
 	* Roboto
 * Iconfont: material-sharp
 * Icon pack: [Arc](https://play.google.com/store/apps/details?id=com.coccco28.arc)
