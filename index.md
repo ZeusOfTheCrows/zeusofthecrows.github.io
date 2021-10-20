@@ -13,12 +13,10 @@ i'm very good at not finishing things, so expect this site to be a continual wor
 
 sorry
 
-<small class="weak">(text will look blurry in webkit browsers, due to the fact that they use subpixel antialiasing by default. i'm afraid there's nothing i can do to fix this, as far as i know)</small>
-
-<!-- ztodo: embed tumblr rss feed here -->
-
-<!-- todolist: -->
+<small class="weak">(text will look blurry in webkit browsers, due to the fact that they use subpixel antialiasing by default. i'm afraid there's nothing i can do to fix this, as far as i know. vive la fox)
 
 <!-- post saying site finished. nav bar on bottom for phones -->
 
-<!-- fix code formatting on homepage.  -->
+<!-- /?\ ztodo limit post list to a few posts, add an archive page -->
+
+<!-- fix contents/intro formatting -->

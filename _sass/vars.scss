@@ -33,6 +33,9 @@ $logo-breakpoint: 86ch;
 // $total-width: 112ch;
 $total-width: min(88vw, 112ch);
 $navmenu-width: 18ch;
+
+// set content width to subset of total width
+// this is overridden when nav-menu is hidden (@media query)
 //#{this} is called interpolation - why is it necessary?
 $content-width: calc(#{$total-width} - #{$navmenu-width});
 // turn hr into a line of dashes (-) - convoluted for succinctness:

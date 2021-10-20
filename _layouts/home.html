@@ -2,8 +2,6 @@
 layout: default
 ---
 
-<!-- <div class="home"> -->
-
 {{ content }}
 
 <hr />
@@ -12,16 +10,13 @@ layout: default
 	<!-- ztodo limit this to a few posts, add an archive page -->
 	{% for post in site.posts %}
 		<li class="post-list"
-			><a class="post-title" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+			><a class="post-title" href="{{ post.url | relative_url }}"
+			                             >{{ post.title | escape }}</a>
 			{{ post.excerpt | strip_html}}
 		</li>
 	{% endfor %}
 </ul>
-<hr />
-
-	<!-- tumblr rss feed -->
 
 <hr />
+
 <img src="./assets/images/under-construction.gif" alt="under construction gif" style="width: clamp(128px, 40%, 256px)" />
-
-<!-- </div> -->
