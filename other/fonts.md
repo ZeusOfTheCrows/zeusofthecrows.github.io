@@ -73,11 +73,9 @@ Tiny: [Download](/assets/fonts/fontstruct/tiny-mono.ttf) {{ site.sep_char }} [Fo
 
 assorted pixelated fonts.
 
-**tiny mono**: the smallest legible font i could make - lowercase is 3×3 (apart from asc/decenders), uppercase is 3×4.
-
-**rounded**: rounded(ish) font that i was quite pleased with.
-
-**inverted**: y'know, i don't think this one is anything special, but it did get staff pick on fontstruck and is currently my my highest rated, so i had to include it.
+* **tiny mono**: the smallest legible font i could make - lowercase is 3×3 (apart from asc/decenders), uppercase is 3×4.
+* **rounded**: rounded(ish) font that i was quite pleased with.
+* **inverted**: y'know, i don't think this one is anything special, but it did get staff pick on fontstruck and is currently my my highest rated, so i had to include it.
 
 ![](/assets/images/fonts/fontstruct/various-pixelfonts.png){: .showcase .sc-full}
 

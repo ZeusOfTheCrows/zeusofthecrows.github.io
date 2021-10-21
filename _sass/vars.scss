@@ -13,6 +13,7 @@
 	// #E37100	#EB7900	#EF7900	#F37D00	#FF9E04	#FFAA10	#FFDB30	#FFE334
 
 $background-colour: black;
+$background-emph: #551400;
 $text-14: #FFE334;           // text emphasised 4 - h1
 $text-13: #FFDB30;           // text emphasised 3 - h2
 $text-12: #FF9E04;           // text emphasised 2 - h3, em, i
@@ -22,12 +23,15 @@ $text-09: #AE4900;           // text deemphasised 1 - hr
 $text-08: #862C00;           // text deemphasised 2 - visited link
 $text-07: #551400;           // text deemphasised 3
 
-// ============= content ===========//
+// ============= numbers ===========//
+$crnr-radius: 1px;
+
 // various values i wish were dynamic, but i don't think it's possible
 // remember to update these if i edit the site content
 $nav-vert-chars: 17; // max number of chars in nav menu (width)
-$nav-hori-lines: 5;  // max number of text lines in nav menu horizontal mode
-$max-toc-chars: 32;  // max number of chars globally in table of contents
+$nav-hori-lines:  5; // max number of text lines in nav menu horizontal mode
+$max-toc-chars:  32; // max number of chars globally in table of contents
+$post-ttl-chars: 16; // max length of post titles (chars)
 
 // ============== text =============//
 $text-font: FixedSysEx, monospace;

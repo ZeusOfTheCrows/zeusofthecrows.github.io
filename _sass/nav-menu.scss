@@ -50,8 +50,11 @@
 		bottom: $nav-hori-lines * 1em;
 		position: fixed;
 
+		width: $total-width;
+
 		// nudge up farther, enough to show
-		padding: 1em 0ch;
+		padding-bottom: 2em;
+
 	}
 
 	.nav-menu {
@@ -63,26 +66,27 @@
 		// https://stackoverflow.com/questions/67022666/\
 		// question-about-horizontal-scroll-in-css-with-p-paragraphs-html
 		display: flex;
+		// i don't think i need these, but i'm too paranoid to bin them
 		// justify-content: flex-start;
 		// flex-direction: row;
 		overflow-x: auto;
 		overflow-y: hidden;
-		white-space: nowrap;
+		// white-space: nowrap;
 
 		bottom: 0;
 		position: fixed;
 
 		padding: 1em 0ch;
+
 		width: $total-width;
 
 			& > li {
-				padding-right: 5ch;
+				padding-right: 4ch;
 			}
 		}
 	footer {
-
-		margin-bottom: $nav-hori-lines + 2em;
-		// margin-bottom: {{ site.nav_hori_lines }} + 0em;
+		/* nudge footer up, nav lines + 1 for hr */
+		margin-bottom: $nav-hori-lines + 1em;
 	}
 }
 

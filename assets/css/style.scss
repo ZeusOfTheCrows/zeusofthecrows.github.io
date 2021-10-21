@@ -41,15 +41,19 @@ html {
 	scrollbar-color: $text-07 $background-colour;
 	/* colour scrollbars, but this time for webkit being dumb */
 		&::-webkit-scrollbar {
+			border-radius: $crnr-radius;
 			background-color: $background-colour;
 		}
 		&::-webkit-scrollbar-thumb {
+			border-radius: $crnr-radius;
 			background-color: $text-07;
 		}
 		&::-webkit-scrollbar-button {
+			border-radius: $crnr-radius;
 			background-color: $text-08;
 		}
 		&::-webkit-scrollbar-corner {
+			border-radius: $crnr-radius;
 			background-color: $background-colour;
 		}
 }
@@ -57,7 +61,7 @@ html {
 body {
 	background-color: $background-colour;
 	color: $text-10;
-	line-height: 1em;
+	line-height: 1.1em;
 	font-family: $text-font;
 	font-size: $text-size;
 	/* for glow effect */
@@ -125,6 +129,16 @@ h6 {
 	color: $text-08;
 }
 
+em, i, strong, b {
+	/* add background to emphasised elements */
+	margin: -0em -1ch;
+	padding: 0em  1ch;
+	background-color: $background-emph;
+	/* i know this doesn't make sense, but i think it looks better */
+	border-radius: $crnr-radius;;
+	box-shadow: 0 0 $text-glow $background-emph;
+}
+
 em, i {
 	color: $text-12;
 }
@@ -178,10 +192,9 @@ hr::before, h1::after, h2::after {
 	// width: 100%;
 	// width: 10em;
 }
-hr::after {
-	/*add line break after content.
-	i don't know why, but there has to be two*/
-	content: "\a\a";
+hr:not(.no-btm-pad)::after {
+	/*add line break after line. */
+	content: "\a";
 	white-space: pre;
 }
 
@@ -241,7 +254,7 @@ without downcasing the <DIR> text*/
 .post-title {
 	/* force constant width for post titles */
 	display: inline-block;
-	width: 24ch;
+	width: $post-ttl-chars + 2ch;
 
 		// &::after {
 			// content: "¦";
