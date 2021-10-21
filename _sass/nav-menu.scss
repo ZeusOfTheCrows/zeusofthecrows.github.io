@@ -24,6 +24,72 @@
 	content: "> "; /*makes bullets > char with padding space*/
 }
 
+#nav-menu-wrapper {
+	width: $navmenu-width;
+	float: left;
+}
+
+.content {
+	width: $content-width;
+	float: left;
+}
+
+@media only screen and (max-width: $logo-breakpoint) {
+
+	.content {
+		width: $total-width;
+	}
+
+	.nav-menu {
+
+		/* auto add scrollbar, and hide overflow */
+		background-color: $background-colour;
+		overflow: auto;
+		white-space: nowrap;
+		// ztodo comment this code i have no idea how it works
+		// https://stackoverflow.com/questions/67022666/\
+		// question-about-horizontal-scroll-in-css-with-p-paragraphs-html
+		display: flex;
+		// justify-content: flex-start;
+		flex-direction: row;
+		overflow-x: auto;
+		overflow-y: hidden;
+		white-space: nowrap;
+
+		bottom: 0;
+		position: fixed;
+
+		padding: 1em 0ch;
+		width: $total-width;
+
+		& > li {
+			padding-right: 5ch;
+		}
+
+		// & > * {
+			// display: inline;
+	// 		float: left;
+	// 		padding-right: 10px;
+
+	// 		display: inline-block;
+	// 		align-content: flex-start;
+	// 		overflow-x: visible;
+	// 		overflow-y: visible;
+	// 		flex-wrap: wrap;
+	// 		height: 200px;
+	// 		width: auto;
+	// 	}
+	}
+
+	footer {
+
+		margin-bottom: 5em;
+		// margin-bottom: {{ site.nav_hori_lines }} + 0em;
+	}
+}
+
+
+
 /*code used for folding menu:
 .nav-menu-folder {
 	cursor: pointer; /* makes the cursor look like it's over a link
@@ -40,55 +106,3 @@ details[open] > .nav-menu-folder::marker {
 	content: "V "; /* makes folder bullets downward arrow when open
 }
 */
-
-#nav-menu-wrapper {
-	width: $navmenu-width;
-	float: left;
-}
-
-.content {
-	/* margin-left: 18em; */
-	/* width: 10em; */
-	width: $content-width;
-	float: left; /*ztodo why is this duped?*//*actually i don't think it is*/
-}
-
-@media only screen and (max-width: $logo-breakpoint) {
-
-	.content {
-		width: $total-width;
-	}
-
-	.nav-menu {
-		/* auto add scrollbar, and hide overflow */
-		background-color: $background-colour;
-		overflow: auto;
-		white-space: nowrap;
-		// ztodo comment this code i have no idea how it works
-		// https://stackoverflow.com/questions/67022666/\
-		// question-about-horizontal-scroll-in-css-with-p-paragraphs-html
-		display: flex;
-		justify-content: flex-start;
-		flex-direction: row;
-		overflow-x: auto;
-		overflow-y: hidden;
-		white-space: nowrap;
-
-		bottom: 0;
-		position: fixed;
-
-		& > * {
-			display: inline;
-			float: left;
-			padding-right: 10px;
-
-			display: inline-block;
-			align-content: flex-start;
-			overflow-x: visible;
-			overflow-y: visible;
-			flex-wrap: wrap;
-			height: 200px;
-			width: auto;
-		}
-	}
-}

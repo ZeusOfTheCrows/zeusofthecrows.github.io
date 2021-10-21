@@ -75,19 +75,18 @@ body {
 }
 
 .table-of-contents {
-	width: 32ch; // i would like this to be … better
+	width: $max-toc-chars * 1ch; // i would like this to be … better
 	display: inline-block;
 	// float: left;
 }
 .page-intro {
 	display: inline-block;
-	width: 58ch;
+	max-width: 58ch;
 	// float: left;
 }
 
 #clear .clear {
-	clear: both; /*i don't think this needs be here?
-	               i think it's only if i have any divs below?*/
+	clear: both; /* just generically clear elements */
 }
 
 /*make all heavier text styles normal weight/size, just differing brightness*/

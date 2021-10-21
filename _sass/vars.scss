@@ -32,7 +32,8 @@ $text-glow: 4px; // multiplied for links
 $logo-breakpoint: 86ch;
 // $total-width: 112ch;
 $total-width: min(88vw, 112ch);
-$navmenu-width: 18ch;
+// $navmenu-width: {{ site.nav_vert_chars }} + 0ch;
+$navmenu-width: 17 + 0ch;
 
 // set content width to subset of total width
 // this is overridden when nav-menu is hidden (@media query)
@@ -56,3 +57,10 @@ $hr-content: repeat-chars("-", 128);
 //============ images =============//
 $showcase-height: 200px;
 $carousel-height: $showcase-height * 1.8;
+
+//============ other =============//
+// various values i wish were dynamic, but i don't think it's possible
+
+$nav_vert_chars: 17; // max number of chars in nav menu (width)
+$nav_hori_lines: 5;  // max number of text lines in nav menu horizontal mode
+$max-toc-chars: 32;  // max number of chars globally in table of contents
