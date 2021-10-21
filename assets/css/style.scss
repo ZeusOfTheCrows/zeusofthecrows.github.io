@@ -3,7 +3,7 @@
 
 // znotes:
 // * i think empty selectors are fine, sass compiler removes them
-// *
+// * "//" comments are sass only, "/*" comments get compiled to css
 
 /*==================================imports==================================*/
 @import "nav-menu.scss";
@@ -75,10 +75,12 @@ body {
 
 #ascii-header, #ascii-logo {
 	color: $text-14;
-	/*white-space: pre;*//*declared in html so it works in browsers like lynx*/
+	// /*declared in html so it works in browsers like lynx*/
+	// white-space: pre
 }
 
 .table-of-contents {
+	// ztodo this needs a bit of work
 	width: $max-toc-chars * 1ch; // i would like this to be … better
 	display: inline-block;
 	// float: left;
@@ -104,7 +106,6 @@ h1, h2, h3, h4, h5, h6, em, i, strong, b, th {
 
 
 h1, h2 {
-
 		// &::after {
 			// add a horizontal line
 			// this is done farther down, by the hr block
@@ -147,29 +148,33 @@ strong, b {
 	color: $text-11;
 }
 
-/* de-emphasise text. .weak class (antithesis of strong), small tag (semantically incorrect) */
+/* de-emphasise text. i'm undecided as to the best way to do this:
+.weak class (antithesis of strong), small tag (semantically dubious) */
 .weak, small {
 	font-size: inherit;
 	color: $text-08;
 }
 
-a:link {
-	color: $text-11;
-	text-decoration: underline;
-}
+a {
+	// i just think this layout is easier to read
+	&:link {
+		color: $text-11;
+		text-decoration: underline;
+	}
 
-a:visited {
-	color: $text-08;
-}
+	&:visited {
+		color: $text-08;
+	}
 
-/*links glow brighter when hovered over*/
-a:hover { /*this is called interpolation - why is it necessary?*/
-	text-shadow: 0px 0px calc(#{$text-glow} * 1.2);
-}
+	/* links glow brighter when hovered over */
+	&:hover {
+		text-shadow: 0 0 $text-glow * 1.2;
+	}
 
-/*text glows brightest when clicked*/
-a:active {
-	text-shadow: calc(#{text-shadow} * 1.5);
+	/* text glows brightest when clicked */
+	&:active {
+		text-shadow: 0 0 $text-glow * 1.5;
+	}
 }
 
 hr {
@@ -193,37 +198,36 @@ hr::before, h1::after, h2::after {
 	// width: 10em;
 }
 hr:not(.no-btm-pad)::after {
-	/*add line break after line. */
+	/*add line break after horizontal line. */
 	content: "\a";
 	white-space: pre;
 }
 
 li {
 	list-style: inside;
-}
-li li { /*indent sub lists*/
-	margin-left: 2ch;
-}
-li::marker {
-	/*this is here just in case, but it shouldn't have any effect*/
-	white-space: nowrap;
-	/*makes bullets * char (padding space is implicit)*/
-	/* /!\ padding space comes from new line between <li> and contained <a>
-	make sure to remove this spacing*/
-	content: "* ";
-}
-li li::marker {
-	content: "- "; /*makes sub list bullets - char*/
-}
 
+	& li {
+		/*indent sub lists*/
+		margin-left: 2ch;
+	}
+	&::marker {
+		/*this is here just in case, but it shouldn't have any effect*/
+		white-space: nowrap;
+		/*makes bullets * char (padding space is implicit)*/
+		//?\ padding space comes from new line between <li> and contained <a>
+		//?\ make sure to remove this spacing
+		content: "* ";
+	}
+	& li::marker {
+		content: "- "; /*makes sub list bullets - char*/
+	}
+}
 
 /*code, */.ascii-art {
 	white-space: pre;
 	overflow: hidden;
 	display: block;
 	font-family: $code-font;
-	/* font-size: 12pt; */
-	/* line-height: 1.9ex; */
 }
 
 code {
@@ -241,8 +245,8 @@ without downcasing the <DIR> text*/
 }
 
 .post-wrapper {
-	/* table-layout: fixed; */
-	/* width: 88%; */
+	// table-layout: fixed;
+	// width: 88%;
 	list-style: none; /*hide bullets*/
 
 	// for making this into a table - maybe ztodo
@@ -250,23 +254,18 @@ without downcasing the <DIR> text*/
 		// content: $hr-content;
 	// }
 }
-.post-title {
-	/* force constant width for post titles */
-	display: inline-block;
-	width: $post-ttl-chars + 2ch;
-
-		// &::after {
-			// content: "¦";
-		// }
-}
 
 .post-list {
-	/* max-width: 100%; */
-	/* width: 100%; */
 	white-space: nowrap;
 	overflow: hidden;
-	/* display: block; /*this needs to be here for %, but needs not for px? wtf*/
 	text-overflow: "..."; /*this is a full ... as it looks better in FxSys*/
+
+	& > .post-title {
+		/* force constant width for post titles inside post list,
+		but not on post pages themselves */
+		display: inline-block;
+		width: $post-ttl-chars + 2ch;
+	}
 }
 
 /* currently a p tag containing the images */
@@ -274,7 +273,7 @@ without downcasing the <DIR> text*/
 	/* auto add scrollbar, and hide overflow */
 	overflow: auto;
 	white-space: nowrap;
-	// ztodo comment this code i have no idea how it works
+
 	// https://stackoverflow.com/questions/67022666/\
 	// question-about-horizontal-scroll-in-css-with-p-paragraphs-html
 	display: flex;
