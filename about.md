@@ -19,7 +19,7 @@ OS: Windows. Not because I like it, but because Linux just isn't very good. (I k
 
 ---
 
-Music: [Spotify](https://open.spotify.com/playlist/5q8crqSxKiqtpIKnAgkYRU?si=UEucTXZZRP2mZ2PBVUpY1A) {{ site.sep_char }} [M3U]({{ "/assets/text/music.m3u/" | relative_url }}) {{ site.sep_char }} [YT Music](https://music.youtube.com/playlist?list=PLxu-Tz00k18Ef1lyMdoGFgPkcxrM115jp) (generated automatically, missing several songs)
+Music: [Spotify](https://open.spotify.com/playlist/5q8crqSxKiqtpIKnAgkYRU?si=UEucTXZZRP2mZ2PBVUpY1A) {{ site.sep_char }} [M3U]({{ "/assets/text/music.m3u/" | relative_url }}) (outdated) {{ site.sep_char }} [YT Music](https://music.youtube.com/playlist?list=PLxu-Tz00k18Ef1lyMdoGFgPkcxrM115jp) (generated automatically, missing several songs)
 
 ---
 
