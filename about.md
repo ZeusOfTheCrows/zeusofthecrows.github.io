@@ -1,6 +1,7 @@
 ---
 title: About
 collection: leaf
+permalink: /:path/about/
 edit_date: 2021-10-19
 ---
 
