@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Linux music player"
-date:   2020-11-21
+title: "Linux music player"
+date: 2020-11-21
 ---
 If anyone does know a music player for linux that's anywhere near as good as musicbee, _please_ do tell me.
 

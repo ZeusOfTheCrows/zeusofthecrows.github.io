@@ -48,10 +48,12 @@ $navmenu-width: $nav-vert-chars + 2ch;
 
 // set content width to subset of total width
 // this is overridden when nav-menu is hidden (@media query)
-//#{this} is called interpolation - why is it necessary?
+// #{this} is scss interpolation - converts units to strings
+// i know it's poor practice,
+// but it has to use css calc() as total-width uses css min()
 $content-width: calc(#{$total-width} - #{$navmenu-width});
-// turn hr into a line of dashes (-) - convoluted for succinctness:
 
+// turn hr into a line of dashes (-) - convoluted for succinctness:
 // repeat passed char to passed № of iterations
 // src: https://stackoverflow.com/a/38715111
 @function repeat-chars($character, $n) {
@@ -61,7 +63,6 @@ $content-width: calc(#{$total-width} - #{$navmenu-width});
 	}
 	@return $c;
 }
-
 // repeat - (display char) 128 times. a lot neater
 $hr-content: repeat-chars("-", 128);
 
