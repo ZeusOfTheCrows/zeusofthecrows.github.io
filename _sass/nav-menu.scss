@@ -40,8 +40,21 @@
 		width: $total-width;
 	}
 
-	.nav-menu {
+	hr.pre-hori-nav {
+		// show element to override inline hide
+		display: inherit !important;
+		// set background to black to hide content behind
+		background-color: $background-colour;
 
+		// move up to the same height as the menu and fix to bottom
+		bottom: $nav-hori-lines * 1em;
+		position: fixed;
+
+		// nudge up farther, enough to show
+		padding: 1em 0ch;
+	}
+
+	.nav-menu {
 		/* auto add scrollbar, and hide overflow */
 		background-color: $background-colour;
 		overflow: auto;
@@ -51,7 +64,7 @@
 		// question-about-horizontal-scroll-in-css-with-p-paragraphs-html
 		display: flex;
 		// justify-content: flex-start;
-		flex-direction: row;
+		// flex-direction: row;
 		overflow-x: auto;
 		overflow-y: hidden;
 		white-space: nowrap;
@@ -62,28 +75,13 @@
 		padding: 1em 0ch;
 		width: $total-width;
 
-		& > li {
-			padding-right: 5ch;
+			& > li {
+				padding-right: 5ch;
+			}
 		}
-
-		// & > * {
-			// display: inline;
-	// 		float: left;
-	// 		padding-right: 10px;
-
-	// 		display: inline-block;
-	// 		align-content: flex-start;
-	// 		overflow-x: visible;
-	// 		overflow-y: visible;
-	// 		flex-wrap: wrap;
-	// 		height: 200px;
-	// 		width: auto;
-	// 	}
-	}
-
 	footer {
 
-		margin-bottom: 5em;
+		margin-bottom: $nav-hori-lines + 2em;
 		// margin-bottom: {{ site.nav_hori_lines }} + 0em;
 	}
 }

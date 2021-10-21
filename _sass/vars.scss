@@ -22,6 +22,13 @@ $text-09: #AE4900;           // text deemphasised 1 - hr
 $text-08: #862C00;           // text deemphasised 2 - visited link
 $text-07: #551400;           // text deemphasised 3
 
+// ============= content ===========//
+// various values i wish were dynamic, but i don't think it's possible
+// remember to update these if i edit the site content
+$nav-vert-chars: 17; // max number of chars in nav menu (width)
+$nav-hori-lines: 5;  // max number of text lines in nav menu horizontal mode
+$max-toc-chars: 32;  // max number of chars globally in table of contents
+
 // ============== text =============//
 $text-font: FixedSysEx, monospace;
 $code-font: $text-font;
@@ -33,7 +40,7 @@ $logo-breakpoint: 86ch;
 // $total-width: 112ch;
 $total-width: min(88vw, 112ch);
 // $navmenu-width: {{ site.nav_vert_chars }} + 0ch;
-$navmenu-width: 17 + 0ch;
+$navmenu-width: $nav-vert-chars + 2ch;
 
 // set content width to subset of total width
 // this is overridden when nav-menu is hidden (@media query)
@@ -59,8 +66,3 @@ $showcase-height: 200px;
 $carousel-height: $showcase-height * 1.8;
 
 //============ other =============//
-// various values i wish were dynamic, but i don't think it's possible
-
-$nav_vert_chars: 17; // max number of chars in nav menu (width)
-$nav_hori_lines: 5;  // max number of text lines in nav menu horizontal mode
-$max-toc-chars: 32;  // max number of chars globally in table of contents

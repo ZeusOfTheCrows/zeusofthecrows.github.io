@@ -11,11 +11,9 @@ welcome to a miscellany of things i've made for my own benefit, things i've foun
 
 i'm very good at not finishing things, so expect this site to be a continual work in progress...
 
-sorry
+<small class="weak">(text will look blurry in webkit browsers, due to the fact that they use subpixel antialiasing by default. i'm afraid there's nothing i can do to fix this, as far as i know. vive la fox)</small>
 
-<small class="weak">(text will look blurry in webkit browsers, due to the fact that they use subpixel antialiasing by default. i'm afraid there's nothing i can do to fix this, as far as i know. vive la fox)
-
-<!-- post saying site finished. nav bar on bottom for phones -->
+<!-- post saying site finished. -->
 
 <!-- /?\ ztodo limit post list to a few posts, add an archive page -->
 
