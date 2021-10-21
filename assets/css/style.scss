@@ -245,7 +245,6 @@ without downcasing the <DIR> text*/
 	/* width: 88%; */
 	list-style: none; /*hide bullets*/
 
-
 	// for making this into a table - maybe ztodo
 	// &::before {
 		// content: $hr-content;
@@ -279,8 +278,9 @@ without downcasing the <DIR> text*/
 	// https://stackoverflow.com/questions/67022666/\
 	// question-about-horizontal-scroll-in-css-with-p-paragraphs-html
 	display: flex;
-	justify-content: flex-start;
-	flex-direction: row;
+	// i don't think i need these, but i'm too paranoid to bin them
+	// justify-content: flex-start;
+	// flex-direction: row;
 	overflow-x: auto;
 	overflow-y: hidden;
 	white-space: nowrap;
@@ -301,7 +301,8 @@ without downcasing the <DIR> text*/
 }
 
 .showcase {
-	max-width: $content-width;
+
+	max-width: 100%;
 	margin: 1em 0ch;
 
 		&.sc-full {
@@ -309,58 +310,36 @@ without downcasing the <DIR> text*/
 			sc-full  are images that are pre-formatted to the right dimensions*/
 		}
 
-			&.sc-carousel {
-				/* show full image disregarding aspect ratio */
-				width: auto;
-				height: $carousel-height;
-				/* for horizontal scrolling */
-				display: inline-block;
-			}
+		&.sc-carousel {
+			/* show full image disregarding aspect ratio */
+			width: auto;
+			max-width: none;
 
-			&.sc-wide {
-				/* most images - fullwidth */
-				object-fit: cover;
-				width: $content-width;
-				height: $showcase-height;
+			object-fit: cover;
+			height: $carousel-height;
+			/* for horizontal scrolling */
+			// display: inline-block;
+		}
 
-				/* this allows me to choose per image whether i focus
-				the top, middle or bottom when zoomed to crop*/
-				&.sc-top {
-					object-position: top;
-				}
-				&.sc-mid {
-					object-position: center;
-				}
-				&.sc-btm {
-					object-position: bottom;
+		&.sc-wide {
+			/* most images - fullwidth */
+			object-fit: cover;
+			width: 100%;
+			height: $showcase-height;
+
+			/* this allows me to choose per image whether i focus
+			the top, middle or bottom when zoomed to crop*/
+			&.sc-top {
+				object-position: top;
 			}
+			&.sc-mid {
+				object-position: center;
+			}
+			&.sc-btm {
+				object-position: bottom;
+		}
 	}
 }
-
-
-//this is an old method involving rotating sideways,
-//in order to avoid holding shift. it doesn't work very well
-
-// .carousel-container {
-// 	// float: left;
-// 	width: $carousel-height;
-// 	height: $content-width;
-// 	overflow-x: hidden;
-// 	overflow-y: auto;
-
-
-// 	// translateY(calc($content-width * -1))
-// 	transform: rotate(-90deg) translateY(-400px);
-// 	transform-origin: right top;
-
-// 	& > img {
-// 		width: auto;
-// 		height: $carousel-height;
-
-// 		transform: rotate(90deg);
-// 		transform-origin: right top;
-// 	}
-// }
 
 // an attempt to deal with svgs. semi obsolete.
 // img.fullwidth {

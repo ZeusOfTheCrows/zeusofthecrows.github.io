@@ -62,9 +62,7 @@
 		background-color: $background-colour;
 		overflow: auto;
 		white-space: nowrap;
-		// ztodo comment this code i have no idea how it works
-		// https://stackoverflow.com/questions/67022666/\
-		// question-about-horizontal-scroll-in-css-with-p-paragraphs-html
+		// flex to make horizontally scroll
 		display: flex;
 		// i don't think i need these, but i'm too paranoid to bin them
 		// justify-content: flex-start;
