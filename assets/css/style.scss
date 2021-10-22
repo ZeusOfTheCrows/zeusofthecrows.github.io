@@ -30,32 +30,32 @@ html {
 
 		/* this is here because i think it's semantically easier to read */
 		/* offset anchor link down from the top of the page */
-		& :target:before {
-			content: "";
-			display: block;
-			height: 2em;
-			margin: -2em 0 0;
-		}
+	& :target:before {
+		content: "";
+		display: block;
+		height: 2em;
+		margin: -2em 0 0;
+	}
 
 	/* colour scrollbars with css */
 	scrollbar-color: $text-07 $background-colour;
 	/* colour scrollbars, but this time for webkit being dumb */
-		&::-webkit-scrollbar {
-			border-radius: $crnr-radius;
-			background-color: $background-colour;
-		}
-		&::-webkit-scrollbar-thumb {
-			border-radius: $crnr-radius;
-			background-color: $text-07;
-		}
-		&::-webkit-scrollbar-button {
-			border-radius: $crnr-radius;
-			background-color: $text-08;
-		}
-		&::-webkit-scrollbar-corner {
-			border-radius: $crnr-radius;
-			background-color: $background-colour;
-		}
+	&::-webkit-scrollbar {
+		border-radius: $crnr-radius;
+		background-color: $background-colour;
+	}
+	&::-webkit-scrollbar-thumb {
+		border-radius: $crnr-radius;
+		background-color: $text-07;
+	}
+	&::-webkit-scrollbar-button {
+		border-radius: $crnr-radius;
+		background-color: $text-08;
+	}
+	&::-webkit-scrollbar-corner {
+		border-radius: $crnr-radius;
+		background-color: $background-colour;
+	}
 }
 
 body {
@@ -75,28 +75,36 @@ body {
 
 #ascii-header, #ascii-logo {
 	color: $text-14;
-	// /*declared in html so it works in browsers like lynx*/
-	// white-space: pre
+	/* declared in html so it works in browsers like lynx */
+	/* white-space: pre */
+}
+
+.contents-intro-container {
+	/* place contents beside intro */
+	display: table;
+	width: 100%;
 }
 
 .table-of-contents {
-	// ztodo this needs a bit of work
-	width: $max-toc-chars * 1ch; // i would like this to be … better
-	display: inline-block;
-	// float: left;
+	/* has to be here for some reason, also has to be padding not margin*/
+	padding-right: 2ch;
+	display: table-cell;
+	& * {
+		/* make each item one line */
+		white-space: nowrap;
+		width: auto;
+	}
 }
 .page-intro {
-	display: inline-block;
-	max-width: 58ch;
-	// float: left;
+	display: table-cell;
 }
 
 #clear .clear {
 	clear: both; /* just generically clear elements */
 }
 
-/*make all heavier text styles normal weight/size, just differing brightness*/
-/*(th is table header)*/
+/* make all heavier text styles normal weight/size,
+just differing brightness (th is table header) */
 h1, h2, h3, h4, h5, h6, em, i, strong, b, th {
 	font-style: inherit;
 	font-weight: inherit;
@@ -304,39 +312,39 @@ without downcasing the <DIR> text*/
 	max-width: 100%;
 	margin: 1em 0ch;
 
-		&.sc-full {
-			/*this is only here as a placeholder for now
-			sc-full  are images that are pre-formatted to the right dimensions*/
+	&.sc-full {
+		/*this is only here as a placeholder for now
+		sc-full  are images that are pre-formatted to the right dimensions*/
+	}
+
+	&.sc-carousel {
+		/* show full image disregarding aspect ratio */
+		width: auto;
+		max-width: none;
+
+		object-fit: cover;
+		height: $carousel-height;
+		/* for horizontal scrolling */
+		// display: inline-block;
+	}
+
+	&.sc-wide {
+		/* most images - fullwidth */
+		object-fit: cover;
+		width: 100%;
+		height: $showcase-height;
+
+		/* this allows me to choose per image whether i focus
+		the top, middle or bottom when zoomed to crop*/
+		&.sc-top {
+			object-position: top;
 		}
-
-		&.sc-carousel {
-			/* show full image disregarding aspect ratio */
-			width: auto;
-			max-width: none;
-
-			object-fit: cover;
-			height: $carousel-height;
-			/* for horizontal scrolling */
-			// display: inline-block;
+		&.sc-mid {
+			object-position: center;
 		}
-
-		&.sc-wide {
-			/* most images - fullwidth */
-			object-fit: cover;
-			width: 100%;
-			height: $showcase-height;
-
-			/* this allows me to choose per image whether i focus
-			the top, middle or bottom when zoomed to crop*/
-			&.sc-top {
-				object-position: top;
-			}
-			&.sc-mid {
-				object-position: center;
-			}
-			&.sc-btm {
-				object-position: bottom;
-		}
+		&.sc-btm {
+			object-position: bottom;
+	}
 	}
 }
 
