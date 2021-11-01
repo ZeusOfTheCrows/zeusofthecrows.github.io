@@ -1,12 +1,12 @@
 ---
 title: Static Sites
 collection: leaf
-edit_date: 2021-10-19
+edit_date: 2021-11-01
 permalink: /:path/static-sites
 ---
 ## Static Sites
 
-Because I like digital archæology: a bunch of websites that I think hark back to the classic internet of everyone having a nice basic personal page with little to no JS, basic CSS, and a bunch of info/tastes. Also, I like the concept of the classic, interconnected internet.
+Because I like digital archæology: a bunch of websites that I think hark back to the classic internet of everyone having a nice basic personal page with little to no JS, basic CSS, and a bunch of info/tastes. Also, I like the concept of the classic, interconnected internet. for more extreme examples, see [cities](/web/cities)
 
 I bear no responsibility for the contents of these pages, I just thought they were cool.
 
