@@ -9,6 +9,13 @@ layout: home
 
 welcome to a miscellany of things i've made for my own benefit, things i've found cool, and anything else i feel like putting up here. /!\ **warning: most showcase pages have large images, be wary if using data or a metred network** /!\
 
+new here? check the stuff i think is least crap:
+
+* [Dsegstended font](/other/fonts#dsegstended)
+* [Amber Terminal Wallpaper Engine](/desktops/wpengine#amber-dec-terminal)
+
+---
+
 i'm not great at words, but if you really must have some check my about page
 
 i'm very good at not finishing things, so expect this site to be a continual work in progress...

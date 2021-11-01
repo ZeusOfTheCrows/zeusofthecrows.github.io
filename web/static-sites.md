@@ -34,6 +34,8 @@ Also, for the sites not in your native language, I recommend [this firefox exten
   - JS: low, jquery
 - [svo](http://sensi.org/~svo/): Exactly what I mean in terms of classic internet. Made a [great version](http://sensi.org/~svo/glasstty/) of the DEC VT220 font; which I will [mirror here](/assets/fonts/not-mine/Glass_TTY_VT220.ttf) as the site appears to be down. [Russian].
   - JS: medium, differs per page
+- [tilde.town](http://tilde.town/): ztodo add descript.
+	- JS: ztodo check
 - [tweakradje](https://sites.google.com/site/tweakradje/): A whole collection of interesting tweaks and such pertaining to Android/Windows.
   - JS: high, it's a google site and has embedded youtube
 - [webonastick](https://webonastick.com/): Mainly because he makes a [really nice font](https://webonastick.com/fonts/routed-gothic/).

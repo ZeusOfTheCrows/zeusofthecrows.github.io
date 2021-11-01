@@ -19,7 +19,7 @@ Current: Mid-20s, living in UK.
 
 Interests: Everything useless (font design, Greco-roman mythology, the oxford comma, etc.)
 
-Likes: tea, reading, video games
+Likes: tea, reading, video games, travelling
 
 Dislikes: todo lists, etc. [zToDo]
 

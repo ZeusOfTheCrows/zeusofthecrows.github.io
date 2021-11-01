@@ -185,6 +185,11 @@ a {
 	}
 }
 
+p, ol, ul, .contents-intro-container {
+	// i don't know why i have to specify .contents intro container separately?
+	margin-bottom: 1em;
+}
+
 hr {
 	// nothing here now, all in before/after
 }
