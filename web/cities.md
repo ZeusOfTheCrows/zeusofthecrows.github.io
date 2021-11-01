@@ -21,5 +21,8 @@ anyways, i'll link some of my favourites here, with gifs to keep the nostalgic s
 
 ---
 
-* ![Zeus' Button](/assets/images/web/cities/button.gif){: .gc-button}: as i'm linking these with gif buttons, i guess i should create my own. here's an attempt; using web safe colours, no transparency, and 10hz for the authentic feel. the font is [tiny mono](/other/fonts#various-pixelfonts), modified for with fixedsys slashes. the piskel file is [here](/assets/images/web/cities/button.piskel)
+* ![Zeus' Button](/assets/images/web/cities/button.gif){: .gc-button}: as i'm linking these with gif buttons, i guess i should create my own.3
+* ![Zeus' Button green version](/assets/images/web/cities/button-green.gif){: .gc-button}: i prefer amber terminals, but here's a green version if you like^
+
+here's an attempt; using web safe colours, no transparency, and 10hz for the authentic feel. the font is [tiny mono](/other/fonts#various-pixelfonts), modified for with fixedsys slashes. the piskel file is [here](/assets/images/web/cities/button.piskel), ^feel free to request (or make) a version themed to your 'site.
 
