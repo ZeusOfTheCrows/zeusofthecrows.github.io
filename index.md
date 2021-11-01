@@ -7,7 +7,9 @@ layout: home
 
 **Proudly JavaScript free!**
 
-welcome to a miscellany of things i've made for my own benefit, things i've found cool, and anything else i feel like putting up here.
+welcome to a miscellany of things i've made for my own benefit, things i've found cool, and anything else i feel like putting up here. /!\ **warning: most showcase pages have large images, be wary if using data or a metred network** /!\
+
+i'm not great at words, but if you really must have some check my about page
 
 i'm very good at not finishing things, so expect this site to be a continual work in progress...
 

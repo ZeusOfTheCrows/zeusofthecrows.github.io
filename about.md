@@ -3,11 +3,17 @@ title: About
 collection: leaf
 permalink: /:path/about/
 edit_date: 2021-11-01
+typora-root-url: ./
+notes: ^ is only so typora correctly renders images
 ---
 
-This website will (eventually) have links to all my work that's available online. all content on this site, unless otherwise specified, is free for personal and commercial use for individuals, non-profits, and institutions with fewer than 3 employees.
+# Welcome to my little corner of the internet
 
-Please feel free to contact me about anything. I inevitably won't respond, but don't take that personally, it's just how I am. 
+Proudly no Javascript, trackers, or analytics
+
+---
+
+## About Me:
 
 Current: Mid-20s, living in UK.
 
@@ -28,7 +34,14 @@ Music: [Spotify](https://open.spotify.com/playlist/5q8crqSxKiqtpIKnAgkYRU?si=UEu
 ---
 
 Other social tedia: [Steam](https://steamcommunity.com/id/zeusofthecrows/) {{ site.sep_char }} [Tumblr](https://zeusofthecrows.tumblr.com/) {{ site.sep_char }} [Reddit](https://www.reddit.com/user/ZeusOfTheCrows/overview) {{ site.sep_char }} [Discord](https://discord.app/ZeusOfTheCrows#0492 "ZeusOfTheCrows#0492") 
-(If you message me on any of these, I will respond very slowly; please don't be offended)
+
+Please feel free to contact me about anything. I inevitably won't respond, but don't take that personally, it's just how I am. 
+
+---
+
+all content on this site, unless otherwise specified, is free for personal and commercial use for individuals, non-profits, and institutions with fewer than 3 employees.
+
+---
 
 
 	   __________
@@ -45,3 +58,8 @@ Other social tedia: [Steam](https://steamcommunity.com/id/zeusofthecrows/) {{ si
 	             `\\           
 	             .>`\Y-.
 
+---
+
+[![rainbow 88×31 banner](/assets/images/web/cities/rainbow.png){: .gc-button}](https://realplatinumgod.tumblr.com/post/646201368305139712/made-some-lgbt-88x31-buttons-because-i-couldnt/): this site is lgbt+ friendly
+
+![zeus 88×31 banner](/assets/images/web/cities/button.gif){: .gc-button}: have a geocities button
