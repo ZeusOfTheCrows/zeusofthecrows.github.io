@@ -11,9 +11,17 @@ notes: ^ is only so typora correctly renders images
 
 Proudly no Javascript, trackers, or analytics
 
+if you notice casing is inconsistent, i've recently given up on majuscule letters, but don't want to update all my old pages
+
 ---
 
 ## About Me:
+
+miscellany: 
+
+* i prefer #hexa colours to #ahex
+* i own a crt monitor
+* i plan to read the wh40k horus heresy books, but haven't got around to it
 
 Current: Mid-20s, living in UK.
 
@@ -21,7 +29,7 @@ Interests: Everything useless (font design, Greco-roman mythology, the oxford co
 
 Likes: tea, reading, video games, travelling
 
-Dislikes: todo lists, etc. [zToDo]
+Dislikes: electron-based programmes, voids, finishing things
 
 Keyboard layout: as close to [this](http://www.keyboard-layout-editor.com/#/gists/706d745d94785947cd75d64f6cd978f9) as I can get on an ISO 105 key
 
@@ -39,7 +47,7 @@ Please feel free to contact me about anything. I inevitably won't respond, but d
 
 ---
 
-all content on this site, unless otherwise specified, is free for personal and commercial use for individuals, non-profits, and institutions with fewer than 3 employees.
+all content on this site, unless otherwise specified, is free for personal and commercial use for individuals, non-profits, and institutions with fewer than 3 employees. (i just don't like large corporations)
 
 ---
 
