@@ -1,6 +1,7 @@
 ---
 title: Static Sites
 collection: leaf
+edit_date: 2021-10-19
 permalink: /:path/static-sites
 ---
 ## Static Sites
