@@ -16,10 +16,14 @@ Also, for the sites not in your native language, I recommend [this firefox exten
 
 - [antnik](https://antnik.wordpress.com/): Some **gorgeous** pictures of retro computers [Greek].
   - JS: heavy, mostly boilerplate wordpress stuff
+- [cyber](http://cyber.dabamos.de/index.html): ztodo add descript. enormous list of [button gifs](http://cyber.dabamos.de/88x31/)
+	- JS ztodo check
 - [int10h](https://int10h.org/): Retro PC based stuff; great collection of bitmap-type fonts. Yes the homepage is ugly, but the font page is what I would like this site to look like, were I talented. 
   - JS: medium, mostly cosmetic
 - [jgarza](http://jgarza.sdf.org/): Also some fun [pictures of computers](http://jgarza.sdf.org/MUSEUM/museum.php).
   - JS: none?
+- [patorjk](https://patorjk.com/blog/): ztodo add descript. has photography subblog
+	- JS: ztodo check
 - [searchlores](http://biostatisticien.eu/www.searchlores.org/words.htm#top): The most bizarre site on this list, and it may require the use of [archive.org](https://web.archive.org/) to browse. [Root is open though](http://biostatisticien.eu/www.searchlores.org/).
   - JS: none?
 - [searchlore](https://www.searchlore.org/): Similar to above, but a bit more modern. _May_ be run by the same person?

@@ -14,21 +14,22 @@ anyways, i'll link some of my favourites and those i feel truly encapsulate the 
 
 ---
 
-## Sites
+## 'Sites
 
 - [![Bill's World](https://billsworld.neocities.org/images/billsworld.gif){: .gc-button}](https://billsworld.neocities.org/): virtual (iframe) web browser with netscape UI (reasonably performance heavy)
 - [![devils.exe](https://66.media.tumblr.com/777717d122b4e7d3ae82524b44d21f67/tumblr_inline_pswuk76Sda1w1xdc5_1280.gif){: .gc-button}](https://devils.neocities.org/): very pretty 1bit style site. most objects are interactive.
 - [![EMPTY GØD](https://emptygod.neocities.org/buttongraphic/buttons/emptygod.gif.gif){: .gc-button}](https://emptygod.neocities.org/): edgy and depressive - introduced me to a new artist ([Mr.Kitty](https://emptygod.neocities.org/mrkitty.html))
-- [![Neonauticon](https://neonaut.neocities.org/images/buttons/neonaut-banner.png){: .gc-button}](https://neonaut.neocities.org/): ztodo add descript. enormous list of [button gifs](https://neonaut.neocities.org/cyber/88x31.html)
+- [![Neonauticon](https://neonaut.neocities.org/images/buttons/neonaut-banner.png){: .gc-button}](https://neonaut.neocities.org/): ztodo add descript. lots of interesting stuff. large list of [button gifs](https://neonaut.neocities.org/cyber/88x31.html)
 - [![sadness](https://sadgrl.online/images/new/button-new.gif){: .gc-button}](https://sadgrl.online/about/): catalyst for this page! _if you only visit one site on this list, choose [this](https://sadgrl.online/newoldweb/surftheweb.html)_
 - [![Quartz OSC Chip](https://quartzosc-chip.neocities.org/blinkies/imissxp.gif){: .gc-button}](https://quartzosc-chip.neocities.org/): a nice site with a half decent [gallery](https://quartzosc-chip.neocities.org/gallery.html) (ironically, i couldn't find a button)
 
 ---
 
-## Webrings
+## Webrings++
 
 * [Geekring](http://geekring.net/site/6/frameset): ztodo add descript. 
 * [JAUP](https://www.geocities.ws/jaup/jaup.htm): not really a ring, but a list of pages of a similar calibre
+* [Peelopaalu](https://peelopaalu.neocities.org/index.html): also not really a ring, but a list of bookmarks
 
 ---
 

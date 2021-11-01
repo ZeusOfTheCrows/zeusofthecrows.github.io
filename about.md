@@ -2,7 +2,7 @@
 title: About
 collection: leaf
 permalink: /:path/about/
-edit_date: 2021-10-19
+edit_date: 2021-11-01
 ---
 
 This website will (eventually) have links to all my work that's available online. all content on this site, unless otherwise specified, is free for personal and commercial use for individuals, non-profits, and institutions with fewer than 3 employees.
@@ -13,13 +13,17 @@ Current: Mid-20s, living in UK.
 
 Interests: Everything useless (font design, Greco-roman mythology, the oxford comma, etc.)
 
+Likes: tea, reading, video games
+
+Dislikes: todo lists, etc. [zToDo]
+
 Keyboard layout: as close to [this](http://www.keyboard-layout-editor.com/#/gists/706d745d94785947cd75d64f6cd978f9) as I can get on an ISO 105 key
 
 OS: Windows. Not because I like it, but because Linux just isn't very good. (I know I'm going to get hatemail about that)
 
 ---
 
-Music: [Spotify](https://open.spotify.com/playlist/5q8crqSxKiqtpIKnAgkYRU?si=UEucTXZZRP2mZ2PBVUpY1A) {{ site.sep_char }} [M3U]({{ "/assets/text/music.m3u/" | relative_url }}) (outdated) {{ site.sep_char }} [YT Music](https://music.youtube.com/playlist?list=PLxu-Tz00k18Ef1lyMdoGFgPkcxrM115jp) (generated automatically, missing several songs)
+Music: [Spotify](https://open.spotify.com/playlist/5q8crqSxKiqtpIKnAgkYRU?si=UEucTXZZRP2mZ2PBVUpY1A): most genres apart from hiphop/rnb. mostly rock/metal, but a plenty of synthwave  (mostly sovietwave), new wave, 1st/2nd wave country, and others.
 
 ---
 
