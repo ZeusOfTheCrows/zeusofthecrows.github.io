@@ -236,6 +236,16 @@ li {
 	}
 }
 
+tr td:nth-child(n+2) {
+	/* add padding before all columns of table except first */
+	padding-left: 1ch;
+
+	// &:before {
+		// content: "¦\A¦";
+		// display: inline-block;
+	// }
+}
+
 /*code, */.ascii-art {
 	white-space: pre;
 	overflow: hidden;

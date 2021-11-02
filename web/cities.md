@@ -20,16 +20,16 @@ this page will probably be quite volatile as i don't want it getting too long, s
 
 |  |  |
 |---|---|
-| [![Bill's World](https://billsworld.neocities.org/images/billsworld.gif){: .gc-button}](https://billsworld.neocities.org/)| virtual (iframe) web browser with netscape UI (reasonably performance heavy). |
-| [![Cameron's World](https://www.cameronsworld.net/img/content/23/frame-4/18.png){: .gc-button}](https://www.cameronsworld.net/)| truly hideous in the best possible way. also, chill midi tunes (but no button? i had to choose one from the page and it's bigger than 88×31). |
-| [![devils.exe](https://66.media.tumblr.com/777717d122b4e7d3ae82524b44d21f67/tumblr_inline_pswuk76Sda1w1xdc5_1280.gif){: .gc-button}](https://devils.neocities.org/)| very pretty 1bit style 'site. most objects are interactable. |
-| [![EMPTY GØD](https://emptygod.neocities.org/buttongraphic/buttons/emptygod.gif.gif){: .gc-button}](https://emptygod.neocities.org/)| edgy and depressive - introduced me to a new artist ([Mr.Kitty](https://emptygod.neocities.org/mrkitty.html)). |
-| [![madville](https://madville.neocities.org/style/madville.gif){: .gc-button}](https://madville.neocities.org/)| ztodo add descript. maybe?|
-| [![meso](https://mesoscale.neocities.org/images/badges/meso_badge.gif){: .gc-button}](https://mesoscale.neocities.org//) | whole bunch of cool stuff, some great badge/stamp art, nice music (top middle was my choice). just a pretty good 'site all around. |
-| [![Neonauticon](https://neonaut.neocities.org/images/buttons/neonaut-banner.png){: .gc-button}](https://neonaut.neocities.org/)| ztodo add descript. lots of interesting stuff. large list of [button gifs.](https://neonaut.neocities.org/cyber/88x31.html) |
-| [![sadness](https://sadgrl.online/images/new/button-new.gif){: .gc-button}](https://sadgrl.online/about/)| she was the catalyst for this page! if you only visit one site on this list, _let it be [this one.](https://sadgrl.online/newoldweb/surftheweb.html)_ |
-| [![Quartz OSC Chip](https://quartzosc-chip.neocities.org/blinkies/imissxp.gif){: .gc-button}](https://quartzosc-chip.neocities.org/)| a nice 'site with a half decent [gallery](https://quartzosc-chip.neocities.org/gallery.html) (ironically, i couldn't find a button). |
-| [![violet radd](https://violetradd.com/assets/buttons/violet.gif){: .gc-button}](https://violetradd.com/)| very pretty, i also liked the comic on the front page (at time of writing). |
+| [![Bill's World](/assets/images/web/cities/bills-world.gif){: .gc-button}](https://billsworld.neocities.org/) | virtual (iframe) web browser with netscape UI (reasonably performance heavy). |
+| [![Cameron's World](/assets/images/web/cities/cams-world.png){: .gc-button}](https://www.cameronsworld.net/) | truly hideous in the best possible way. also, chill midi tunes (but no button? i had to choose one from the page and it's bigger than 88×31). |
+| [![devils.exe](/assets/images/web/cities/devils.gif){: .gc-button}](https://devils.neocities.org/) | very pretty 1bit style 'site. most objects are interactable. |
+| [![EMPTY GØD](/assets/images/web/cities/empty-god.gif){: .gc-button}](https://emptygod.neocities.org/) | edgy and depressive - introduced me to a new artist ([Mr.Kitty](https://emptygod.neocities.org/mrkitty.html)). |
+| [![madville](/assets/images/web/cities/madville.gif){: .gc-button}](https://madville.neocities.org/) | ztodo add descript. maybe?|
+| [![meso](/assets/images/web/cities/meso.gif){: .gc-button}](https://mesoscale.neocities.org//) | whole bunch of cool stuff, some great badge/stamp art, nice music (top middle was my choice). just a pretty good 'site all around. |
+| [![Neonauticon](/assets/images/web/cities/neonaut.png){: .gc-button}](https://neonaut.neocities.org/) | ztodo add descript. lots of interesting stuff. large list of [button gifs.](https://neonaut.neocities.org/cyber/88x31.html) |
+| [![sadness](/assets/images/web/cities/sadness.gif){: .gc-button}](https://sadgrl.online/about/) | she was the catalyst for this page! if you only visit one site on this list, _let it be [this one.](https://sadgrl.online/newoldweb/surftheweb.html)_ |
+| [![Quartz OSC Chip](/assets/images/web/cities/quartz-osc.gif){: .gc-button}](https://quartzosc-chip.neocities.org/) | a nice 'site with a half decent [gallery](https://quartzosc-chip.neocities.org/gallery.html) (ironically, i couldn't find a button). |
+| [![violet radd](/assets/images/web/cities/violet-radd.gif){: .gc-button}](https://violetradd.com/) | very pretty, i also liked the comic on the front page (at time of writing). |
 
 ---
 
@@ -42,8 +42,10 @@ this page will probably be quite volatile as i don't want it getting too long, s
 
 ---
 
-* ![Zeus' Button](/assets/images/web/cities/button.gif){: .gc-button}: as i'm linking these with gif buttons, i guess i should create my own.
-* ![Zeus' Button green version](/assets/images/web/cities/button-green.gif){: .gc-button}: i prefer amber (as one can tell), but here's a green version if you like^
+|                                                              |                                                              |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| ![Zeus' Button](/assets/images/button.gif){: .gc-button}     | as i'm linking these with gif buttons, i guess i should create my own. |
+| ![Zeus' Button green version](/assets/images/button-green.gif){: .gc-button} | i prefer amber (as one can tell), but here's a green version if you like^ |
 
-here's an attempt; using web safe colours, no transparency, and 5hz for the authentic feel. the font is [tiny mono](/other/fonts#various-pixelfonts), modified with fixedsys slashes. the piskel file is [here](/assets/images/web/cities/button.piskel), ^feel free to request (or make) a version themed to your 'site.
+using web safe colours, no transparency, and 5hz for the authentic feel. the font is [tiny mono](/other/fonts#various-pixelfonts), modified with fixedsys slashes. the piskel file is [here](/assets/images/web/cities/button.piskel), ^feel free to request (or make) a version themed to your 'site.
 

@@ -68,6 +68,7 @@ all content on this site, unless otherwise specified, is free for personal and c
 
 ---
 
-[![rainbow 88×31 banner](/assets/images/web/cities/rainbow.png){: .gc-button}](https://realplatinumgod.tumblr.com/post/646201368305139712/made-some-lgbt-88x31-buttons-because-i-couldnt/): this site is lgbt+ friendly
+[![rainbow 88×31 banner](/assets/images/rainbow.png){: .gc-button}](https://realplatinumgod.tumblr.com/post/646201368305139712/made-some-lgbt-88x31-buttons-because-i-couldnt/): this site is lgbt+ friendly
 
-![zeus 88×31 banner](/assets/images/web/cities/button.gif){: .gc-button}: have a geocities button
+![zeus 88×31 banner](/assets/images/button.gif){: .gc-button}: have a geocities button
+
