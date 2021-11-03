@@ -61,7 +61,8 @@ html {
 body {
 	background-color: $background-colour;
 	color: $text-10;
-	line-height: 1.1em;
+	// line-height: 1.1em;
+	line-height: 1em;
 	font-family: $text-font;
 	font-size: $text-size;
 	/* for glow effect */
@@ -148,11 +149,11 @@ em, i, strong, b {
 	box-shadow: 0 0 $text-glow $background-emph;
 }
 
-em, i {
+strong, b {
 	color: $text-12;
 }
 
-strong, b {
+em, i {
 	color: $text-11;
 }
 

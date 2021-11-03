@@ -9,7 +9,7 @@
 /* } */
 
 .nav-menu {
-	width: $navmenu-width;
+	// width: $navmenu-width;
 	vertical-align: top;
 	list-style-position: inside; /*moves bullets inside list padding*/
 }
@@ -27,6 +27,7 @@
 #nav-menu-wrapper {
 	width: $navmenu-width;
 	float: left;
+	padding-right: $hori-padd;
 }
 
 .content {
@@ -74,7 +75,8 @@
 		bottom: 0;
 		position: fixed;
 
-		padding: 1em 0ch;
+		// padding: 1em 0ch;
+		padding-top: 1em;
 
 		width: $total-width;
 

@@ -22,5 +22,6 @@ Also, for the sites not in your native language, I recommend [this firefox exten
 - [radiotower](http://radiotower.su/): Soviet themed internet radio [[Playlists](http://listen.radiotower.su:8000/)]
 - [textanim](https://textanim.com/): create animated word art-esque gifs [like so](/assets/images/web/useful/zeus-upward-lines.gif)
 - [theoldnet](http://theoldnet.com/): ztodo add descript.
+- [websurfer](https://miau.sadgrl.online/websurfer/): a stumbleupon style website discover-er
 - [windowscustomization](https://windowscustomization.com/): Repository of various Windows themes/theming tools.
 

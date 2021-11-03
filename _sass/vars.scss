@@ -37,21 +37,23 @@ $post-ttl-chars: 16; // max length of post titles (chars)
 $text-font: FixedSysEx, monospace;
 $code-font: $text-font;
 $text-size: 12pt;
+$line-hite: 1.1em; //maybe?
 $text-glow: 4px; // multiplied for links
+$hori-padd: 2ch; //horizontal padding, only used between nav menu and content
 
 // ch is the width of a zero (0) character
 $logo-breakpoint: 86ch;
 // $total-width: 112ch;
 $total-width: min(88vw, 112ch);
 // $navmenu-width: {{ site.nav_vert_chars }} + 0ch;
-$navmenu-width: $nav-vert-chars + 2ch;
+$navmenu-width: $nav-vert-chars + 0ch;
 
 // set content width to subset of total width
 // this is overridden when nav-menu is hidden (@media query)
 // #{this} is scss interpolation - converts units to strings
 // i know it's poor practice,
 // but it has to use css calc() as total-width uses css min()
-$content-width: calc(#{$total-width} - #{$navmenu-width});
+$content-width: calc(calc(#{$total-width} - #{$navmenu-width}) - #{$hori-padd});
 
 // turn hr into a line of dashes (-) - convoluted for succinctness:
 // repeat passed char to passed № of iterations
