@@ -151,10 +151,17 @@ mark {
 	background-color: var(--d-ylw);
 }
 
+.mc-window { // macindows window
+	margin: 8px;
+	border: 2px solid var(--d-aqa);
+	padding: 12px;
+	border-radius: 8px;
+
+	background: var(--bgd-2);
+}
+
 #content {
-	display: flex;
-	// display: grid;
-	width: 1000px;
+	width: min(100%, 1100px);
 	margin: auto;
 
 	/* positioning */
@@ -164,35 +171,27 @@ mark {
 	display: grid;
 	grid-gap: 8px 8px; // row column
 
-	background: midnightblue; // for visual debugging
+	// background: midnightblue; // for visual debugging
+}
+
+#sidebar-left, #sidebar-right {
+	width: calc(176px + var(--h-pad)); //ztodo variable
+	background: var(--bgd-1);
+	// text-align: justify;
 }
 
 #sidebar-left {
-	width: calc(176px + var(--h-pad)); //ztodo variable
-	background: var(--bgd-1);
-	text-align: justify;
-	margin: 5ch 1em;
-	padding: var(--h-pad);
-	border-radius: 8px;
-
 	grid-column-start: 1;
 	grid-column-end:   1;
 
-	background: darkblue; // for visual debugging
+	// background: darkblue; // for visual debugging
 }
 
 #sidebar-right {
-	width: calc(176px + var(--h-pad)); //ztodo variable
-	background: var(--bgd-1);
-	text-align: justify;
-	margin: 5ch 1em;
-	padding: var(--h-pad);
-	border-radius: 8px;
-
 	grid-column-start: 3;
 	grid-column-end:   3;
 
-	background: darkblue; // for visual debugging
+	// background: indigo; // for visual debugging
 }
 
 #main-content {
@@ -208,10 +207,8 @@ mark {
 }
 
 #footer {
-	width: 100px;
-
 	grid-column-start: 1;
-	grid-column-end:   3;
+	grid-column-end:   4;
 
 	grid-row-start: 2;
 	grid-row-end:   2;
