@@ -46,4 +46,14 @@ Also, for the sites not in your native language, I recommend [this firefox exten
 ---
 
 * [radiotower](http://radiotower.su/): Soviet themed internet radio [[Playlists](http://listen.radiotower.su:8000/)]
+* [nightride](https://nightride.fm/): synthwave stream site / youtube streams
 
+http://toastytech.com/guis/remoteterm.html ztodo
+
+http://oldcomputers.net/
+
+https://toadtoadtoad.neocities.org/home.html 
+
+https://internetbee.neocities.org/graphics.html pixel graphics
+
+https://exo.pet/links.html 

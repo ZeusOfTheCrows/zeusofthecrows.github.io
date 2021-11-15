@@ -1,0 +1,272 @@
+---
+---
+
+// https://www.deviantart.com/niivu/art/Macindows-870073866
+
+/* variables */
+:root {
+	--h-pad: 1em; // horizontal padding
+	--v-pad: 1em; // vertical padding
+
+	/* universal colours */
+	--d-red: #CC241D;
+	--d-grn: #98971A;
+	--d-ylw: #D79921;
+	--d-blu: #458588;
+	--d-ppl: #B16286;
+	--d-aqa: #689D6A;
+	--d-org: #D65D0E;
+}
+
+/* light mode colours */
+@media (prefers-color-scheme: dark) {
+	:root {
+		--bgd-0: #282828;
+		--bgd-1: #3C3836;
+		--bgd-2: #504945;
+		--bgd-3: #665C54;
+		--bgd-4: #7C6F64;
+		--bgd-5: #928374;
+		--txt-4: #A89984;
+		--txt-3: #BDAE93;
+		--txt-2: #D5C4A1;
+		--txt-1: #EBDBB2;
+		--txt-0: #FBF1C7;
+		--s-red: #FB4943;
+		--s-grn: #B8BB26;
+		--s-ylw: #FABD2F;
+		--s-blu: #83A598;
+		--s-ppl: #D3869B;
+		--s-aqa: #8EC07C;
+		--s-org: #FE8019;
+	}
+}
+@media (prefers-color-scheme: light) {
+	:root {
+		--bgd-0: #FBF1C7;
+		--bgd-1: #EBDBB2;
+		--bgd-2: #D5C4A1;
+		--bgd-3: #BDAE93;
+		--bgd-4: #A89984;
+		--bgd-5: #928374;
+		--txt-4: #7C6F64;
+		--txt-3: #665C54;
+		--txt-2: #504945;
+		--txt-1: #3C3836;
+		--txt-0: #282828;
+		--s-red: #9D0006;
+		--s-grn: #79740E;
+		--s-ylw: #B57614;
+		--s-blu: #076678;
+		--s-ppl: #8F3F71;
+		--s-aqa: #427B58;
+		--s-org: #AF3A03;
+	}
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap");
+// @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+// .testing {
+// 	// font fuckin' about:
+// 	font-family: "Fira Sans";
+// 	font-feature-settings: "tnum";
+// 	-webkit-font-feature-settings: "tnum";
+// 	-moz-font-feature-settings: "tnum";
+// }
+
+html {
+	/* smoothly scroll to anchor link */
+	scroll-behavior: smooth;
+
+		/* this is here because i think it's semantically easier to read */
+		/* offset anchor link down from the top of the page */
+	& :target:before {
+		content: "";
+		display: block;
+		height: 2em;
+		margin: -2em 0 0;
+	}
+}
+
+body {
+	background-color: var(--bgd-0);
+	color: var(--txt-1);
+	font-family: "Fira Sans";
+}
+
+h1, h2 {
+	color: var(--s-org);
+	border-bottom: 0.1em solid var(--d-org);
+}
+h3, h4, h5, h6 {
+	color: var(--s-org);
+}
+
+strong, b { // bold (for ctrl+f)
+	color: var(--txt-0);
+}
+
+em, i { // italic (for ctrl+f)
+	color: var(--s-ylw);
+}
+
+a {
+	// i just think this layout is easier to read
+	&:link {
+		color: var(--s-blu);
+		// text-decoration: underline;
+	}
+
+	&:visited {
+		color: var(--s-ppl);
+	}
+
+	&:active, &:focus {
+		color: var(--s-red);
+	}
+}
+
+.btn-88x31, .btn-80x15, .btn-150x15, .pixel-art {
+	/* render pixel art pixelly when zoomed in */
+	image-rendering: pixelated;   /* fallback, pixellated */
+	image-rendering: crisp-edges; /* unsure, filter e.g. hq2x */
+}
+
+.marquee-rtl {
+
+	& li {
+		display: inline-block;
+
+		&::marker {
+		content: "";
+		}
+	}
+}
+
+/* colour highlighted text */
+mark {
+	margin: -0.5em -0.5ch;
+	padding: 0.5em 0.5ch;
+	background-color: var(--d-ylw);
+}
+
+#content {
+	display: flex;
+	// display: grid;
+	width: 1000px;
+	margin: auto;
+
+	/* positioning */
+	// display: flex;
+	// flex-direction: row;
+	// justify-content: center;
+	display: grid;
+	grid-gap: 8px 8px; // row column
+
+	background: midnightblue; // for visual debugging
+}
+
+#sidebar-left {
+	width: calc(176px + var(--h-pad)); //ztodo variable
+	background: var(--bgd-1);
+	text-align: justify;
+	margin: 5ch 1em;
+	padding: var(--h-pad);
+	border-radius: 8px;
+
+	grid-column-start: 1;
+	grid-column-end:   1;
+
+	background: darkblue; // for visual debugging
+}
+
+#sidebar-right {
+	width: calc(176px + var(--h-pad)); //ztodo variable
+	background: var(--bgd-1);
+	text-align: justify;
+	margin: 5ch 1em;
+	padding: var(--h-pad);
+	border-radius: 8px;
+
+	grid-column-start: 3;
+	grid-column-end:   3;
+
+	background: darkblue; // for visual debugging
+}
+
+#main-content {
+	// width: 100px;
+	width: auto;
+	// color: var(--s-ylw);
+
+
+	grid-column-start: 2;
+	grid-column-end:   2;
+
+	background: darkred; // for visual debugging
+}
+
+#footer {
+	width: 100px;
+
+	grid-column-start: 1;
+	grid-column-end:   3;
+
+	grid-row-start: 2;
+	grid-row-end:   2;
+
+	background: teal; // for visual debugging
+}
+
+.img-grid {
+
+	width: 100%;
+	margin: 0px;
+	justify-content: center;
+
+	& * {
+		margin: 0px;
+		display: inline-block;
+	}
+
+	& ::marker {
+		content: "";
+	}
+}
+
+// .marquee-container {
+//     position: relative;
+//     overflow: hidden;
+//     --offset: 20vw;
+//     --move-initial: calc(-25% + var(--offset));
+//     --move-final: calc(-50% + var(--offset));
+// }
+
+// .marquee-rtl {
+//     width: fit-content;
+//     display: flex;
+//     position: relative;
+//     transform: translate3d(var(--move-initial), 0, 0);
+//     animation: marquee 5s linear infinite;
+//     // animation-play-state: paused;
+// }
+
+
+// .marquee:hover .marquee-rtl {
+//     animation-play-state: paused;
+// }
+
+// @keyframes marquee {
+//     0% {
+//         transform: translate3d(var(--move-initial), 0, 0);
+//     }
+
+//     100% {
+//         transform: translate3d(var(--move-final), 0, 0);
+//     }
+// }
+
+// @media (prefers-reduced-motion: reduce) {
+	//stop animation for accessibility reasons - maybe pause until mouseover?
+// }

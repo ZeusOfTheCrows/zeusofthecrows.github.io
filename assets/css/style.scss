@@ -56,7 +56,19 @@ html {
 		border-radius: $crnr-radius;
 		background-color: $background-colour;
 	}
+
+	/* change selected text colour */
+	&::selection {
+		color: $background-colour;
+		background: $text-07;
+	}
 }
+
+::selection {
+		// color: $background-colour;
+		background: $text-07;
+	}
+
 
 body {
 	background-color: $background-colour;
