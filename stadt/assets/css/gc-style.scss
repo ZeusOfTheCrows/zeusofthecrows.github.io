@@ -152,58 +152,44 @@ mark {
 }
 
 .mc-window { // macindows window
-	margin: 8px;
+	// margin: 8px;
 	border: 2px solid var(--d-aqa);
 	padding: 12px;
 	border-radius: 8px;
+	box-shadow: 4px 7px 0px 0px var(--bgd-2);
 
-	background: var(--bgd-2);
+	background: var(--bgd-1);
+
+	padding: 8px;
 }
 
 #content {
 	width: min(100%, 1100px);
 	margin: auto;
-
-	/* positioning */
-	// display: flex;
-	// flex-direction: row;
-	// justify-content: center;
 	display: grid;
-	grid-gap: 8px 8px; // row column
-
-	// background: midnightblue; // for visual debugging
+	grid-gap: 16px 16px; // row column
 }
 
 #sidebar-left, #sidebar-right {
 	width: calc(176px + var(--h-pad)); //ztodo variable
-	background: var(--bgd-1);
 	// text-align: justify;
 }
 
 #sidebar-left {
 	grid-column-start: 1;
 	grid-column-end:   1;
-
-	// background: darkblue; // for visual debugging
 }
 
 #sidebar-right {
 	grid-column-start: 3;
 	grid-column-end:   3;
-
-	// background: indigo; // for visual debugging
 }
 
 #main-content {
-	// width: 100px;
-	width: auto;
-	// color: var(--s-ylw);
-
-
+	// width: auto; // implicit
 	grid-column-start: 2;
 	grid-column-end:   2;
 
-	background: darkred; // for visual debugging
 }
 
 #footer {
@@ -212,19 +198,29 @@ mark {
 
 	grid-row-start: 2;
 	grid-row-end:   2;
+}
 
-	background: teal; // for visual debugging
+#brands {
+	bottom: 0;
+
+	margin-top: auto;
+
+
+	& * {
+		padding: 0;
+	}
 }
 
 .img-grid {
-
 	width: 100%;
 	margin: 0px;
+	padding: 0px; // this is because it's a list, and padding breaks it
 	justify-content: center;
+	display: flex; //this is because i want it to be dynamic to width of sidebar
+	flex-flow: row wrap;
 
-	& * {
-		margin: 0px;
-		display: inline-block;
+	& img {
+		margin: 0px 1px;
 	}
 
 	& ::marker {
