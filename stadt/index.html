@@ -3,6 +3,13 @@ layout: gc-default
 ---
 
 <div id="content" aria-label="Content">
+
+	<header id="header" class="mc-window">
+		<!-- <p> -->
+			<!-- <img src="./assets/images/gideon-shield.svg" style="border-radius: 8px; height: 100px;"> ZeusOfTheCrows -->
+		<!-- </p> -->
+	</header>
+
 	<div id="sidebar-left" class="mc-window">
 
 		<p>
@@ -74,7 +81,7 @@ layout: gc-default
 		</p>
 
 		<ul id="antipixels" class="img-grid">
-			<li><img src="./assets/images/antipix/test-wide.png"></li>
+			<li><img class="btn-150x15" src="./assets/images/antipix/test-wide.png"></li>
 			<li><a href="https://keysklubhouse.neocities.org/home.html">
 					<img class="btn-80x15" src="./assets/images/antipix/tea.png"
 						alt="tea powered"/>
@@ -90,10 +97,16 @@ layout: gc-default
 		</ul>
 
 		<!-- js for yesterweb ring -->
-		<script src="https://yesterwebring.neocities.org/script.js"></script>
+		<script src="https://yesterwebring.neocities.org/script-min.js"></script>
 		<webring-css site="https://zeusofthecrows.github.io/"></webring-css>
 
-			<style>
+			<style>:root {
+				--textColor: var(--s-grn);
+				--bgColor: var(--bgd-3);
+				--linkColor: var(--s-blu);
+			}</style>
+
+			<!-- <style>
 
 				@font-face {
 					font-family: "FixedsysEx";
@@ -105,16 +118,16 @@ layout: gc-default
 				}
 
 				:root {
-					--mybg: linear-gradient(#330000, #000066);
-					/*--mybg: url("https://media.istockphoto.com/vectors/seamless-retro-pattern-vector-id506468107");*/
-					/*--myborder:3px double pink;*/
-					/*--mycolor:#000;*/
-					/* --mylinkcolor:darkblue; */
-					/* --mytitle:hotpink; */
-					 --fontfamily: "FixedsysEx";
+					/*--mybg: linear-gradient(var(--d-red), var(--d-blu));*/
+					--mybg: url("https://color.firefox.com/images/bg-031-9570e8d1f7a5f835c92e764693337f43.svg");
+					--myborder: 3px double var(--d-grn);
+					--mycolor: var(--txt-3);
+					--mylinkcolor: var(--txt-0);
+					--mytitle: var(--txt-0);
+					--fontfamily: "FixedsysEx";
 					--titlesize: 12pt;
-					/* --borderradius:10px; */
-					/* --bgcolor: blue; */
+					--borderradius: 4px;
+					--bgcolor: var(--bgd-2);
 					 --mywidth: 80%;
 					/* --myheight:60px; */
 					/* --textsize:10px; */
@@ -124,19 +137,29 @@ layout: gc-default
 					/* --h1margin:0; */
 					/* --textmargin:0; */
 				}
-			</style>
 
-		<img src="http://geekring.net/banner/geek_1.gif" alt="geekring.net navigation" usemap="#geekringmap">
+			</style> -->
+
+			<hr />
+
+			<div id="geekring">
+				<p style="font-size: 0.8em;">Check out the other awesome websites in
+					<a href="geekring.net" style="text-decoration: underline dotted;">The Geek Ring!</a></p>
+				<a href="http://geekring.net/site/139/previous" class="btn-95"><-Prev</a>
+				<a href="http://geekring.net/site/139/random" class="btn-95">?Rand?</a>
+				<a href="http://geekring.net/site/139/next" class="btn-95">Next-></a>
+			</div>
+		<!-- <img src="http://geekring.net/banner/geek_1.gif" alt="geekring.net navigation" usemap="#geekringmap">
 		<map name="geekringmap">
 			<area shape="rect" coords="9,28,111,53" alt="Previous geekring site" href="http://geekring.net/site/NUMBER/previous">
 			<area shape="rect" coords="248,28,350,53" alt="Random geekring site" href="http://geekring.net/site/NUMBER/random">
 			<area shape="rect" coords="490,28,592,53" alt="Next geekring site" href="http://geekring.net/site/NUMBER/next">
 			<area shape="rect" coords="465,6,566,22" alt="Main geekring site" href="http://geekring.net/">
 		</map>
-
+ -->
 	</div>
 
-	<div id="footer" class="mc-window">
+	<footer id="footer" class="mc-window">
 		<div class="marquee-container">
 			<ul class="marquee-rtl">
 				<li><a href="https://www.aseprite.org/">
@@ -161,5 +184,5 @@ layout: gc-default
 				<li><img class="btn-88x31" src="./assets/images/buttons/brands/aseprite.gif"></li>
 			</ul>
 		</div>
-	</div>
+	</footer>
 </div>

@@ -163,6 +163,36 @@ mark {
 	padding: 8px;
 }
 
+.btn-95 {
+	display: inline-block;
+	text-align: center;
+	justify-content: center;
+	margin: 1px;
+	padding: 2px;
+	margin: auto;
+	// width: 88px;
+	// height: 31px;
+	color: black !important;
+	font-family: "consolas", "monaco", monospace;
+	background: #C0C0C0;
+
+	/* borders */
+	border-width: 2px;
+	border-style: solid;
+	border-top-color: white;
+	border-left-color: white;
+	border-bottom-color:black;
+	border-right-color: black;
+
+	&:active {
+		border-top-color: black;
+		border-left-color: black;
+		border-bottom-color: white;
+		border-right-color: white;
+
+	}
+}
+
 #content {
 	width: min(100%, 1100px);
 	margin: auto;
@@ -178,17 +208,31 @@ mark {
 	// text-align: justify;
 }
 
+#header {
+	// height: 100px;
+	grid-row-start: 1;
+	grid-row-end:   1;
+	grid-column-start: 1;
+	grid-column-end:   4;
+}
+
 #sidebar-left {
+	grid-row-start: 2;
+	grid-row-end:   2;
 	grid-column-start: 1;
 	grid-column-end:   1;
 }
 
 #sidebar-right {
+	grid-row-start: 2;
+	grid-row-end:   2;
 	grid-column-start: 3;
 	grid-column-end:   3;
 }
 
 #main-content {
+	grid-row-start: 2;
+	grid-row-end:   2;
 	// width: auto; // implicit
 	grid-column-start: 2;
 	grid-column-end:   2;
@@ -199,8 +243,8 @@ mark {
 	grid-column-start: 1;
 	grid-column-end:   4;
 
-	grid-row-start: 2;
-	grid-row-end:   2;
+	grid-row-start: 3;
+	grid-row-end:   3;
 }
 
 #brands {
