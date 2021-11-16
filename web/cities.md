@@ -61,10 +61,10 @@ this page will probably be quite volatile as i don't want it getting too long, s
 
 |                                                              |                                                              |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| ![Zeus' Button](/assets/images/button.gif){: .gc-button}     | as i'm linking these with gif buttons, i guess i should create my own. |
-| ![Zeus' Button green version](/assets/images/button-green.gif){: .gc-button} | i prefer amber (as one can tell), but here's a green version if you like^ |
+| ![Zeus' Button](/stadt/assets/images/buttons/zeus-term.gif){: .gc-button} | as i'm linking these with gif buttons, i guess i should create my own. |
+| ![Zeus' Button green version](/stadt/assets/images/buttons/zeus-term-green.gif){: .gc-button} | i prefer amber (as one can tell), but here's a green version if you like^ |
 
-using web safe colours, no transparency, and 5hz for the authentic feel. the font is [tiny mono](/other/fonts#various-pixelfonts), modified with fixedsys slashes. the piskel file is [here](/assets/images/web/cities/button.piskel), ^feel free to request (or make) a version themed to your 'site.
+using web safe colours, no transparency, and 5hz for the authentic feel. the font is [tiny mono](/other/fonts#various-pixelfonts), modified with fixedsys slashes. <s>the piskel file is [here](/assets/images/web/cities/button.piskel),</s> ^feel free to request (or make) a version themed to your 'site.
 
 
 

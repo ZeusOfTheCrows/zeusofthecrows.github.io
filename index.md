@@ -1,6 +1,7 @@
 ---
 title: Root
 layout: home
+typora-root-url: ./
 ---
 
 # Welcome!
@@ -16,7 +17,7 @@ new here? check the stuff i think is least crap:
 
 ---
 
-i'm not great at words, but if you really must have some check my about page
+i'm not great at words, but if you really must have some check my about page, or visit the very work in progress [neocity](/stadt/). - /!\ JS warning
 
 i'm very good at not finishing things, so expect this site to be a continual work in progress...
 
