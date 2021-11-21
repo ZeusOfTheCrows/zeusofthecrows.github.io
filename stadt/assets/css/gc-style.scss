@@ -7,6 +7,9 @@
 :root {
 	--h-pad: 1em; // horizontal padding
 	--v-pad: 1em; // vertical padding
+	//console style font (used for '95 buttons)
+	          /* windows,    macos    generic */
+	--csl-fnt: "consolas", "monaco", monospace;
 
 	/* universal colours */
 	--d-red: #CC241D;
@@ -65,15 +68,6 @@
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap");
-// @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-// .testing {
-// 	// font fuckin' about:
-// 	font-family: "Fira Sans";
-// 	font-feature-settings: "tnum";
-// 	-webkit-font-feature-settings: "tnum";
-// 	-moz-font-feature-settings: "tnum";
-// }
 
 html {
 	/* smoothly scroll to anchor link */
@@ -133,17 +127,6 @@ a {
 	image-rendering: crisp-edges; /* unsure, filter e.g. hq2x */
 }
 
-.marquee-rtl {
-
-	& li {
-		display: inline-block;
-
-		&::marker {
-		content: "";
-		}
-	}
-}
-
 /* colour highlighted text */
 mark {
 	margin: -0.5em -0.5ch;
@@ -173,7 +156,8 @@ mark {
 	// width: 88px;
 	// height: 31px;
 	color: black !important;
-	font-family: "consolas", "monaco", monospace;
+	font-family: var(--csl-fnt);
+	text-decoration: none;
 	background: #C0C0C0;
 
 	/* borders */
@@ -275,104 +259,59 @@ mark {
 	}
 }
 
-// .marquee-container {
-//     position: relative;
-//     overflow: hidden;
-//     --offset: 20vw;
-//     --move-initial: calc(-25% + var(--offset));
-//     --move-final: calc(-50% + var(--offset));
-// }
-
-// .marquee-rtl {
-//     width: fit-content;
-//     display: flex;
-//     position: relative;
-//     transform: translate3d(var(--move-initial), 0, 0);
-//     animation: marquee 5s linear infinite;
-//     // animation-play-state: paused;
-// }
-
-
-// .marquee:hover .marquee-rtl {
-//     animation-play-state: paused;
-// }
-
-// @keyframes marquee {
-//     0% {
-//         transform: translate3d(var(--move-initial), 0, 0);
-//     }
-
-//     100% {
-//         transform: translate3d(var(--move-final), 0, 0);
-//     }
-// }
-
-// @media (prefers-reduced-motion: reduce) {
-	//stop animation for accessibility reasons - maybe pause until mouseover?
-// }
-
-
-/*
-@keyframes marquee-rtl {
-  0% {
-    transform: translate(0, 0);
-  }
-
-  100% {
-    transform: translate(-100%, 0);
-  }
+// marquee animation copied from: https://hotlinecafe.com/
+.marquee-container {
+	overflow: hidden;
+	/* don't optimise by not animating gifs */
+	will-change: contents;
 }
 
-@keyframes marquee-ltr {
-    0% {
-    transform: translate(-100%, 0);
-  }
-  100% {
-    transform: translate(0, 0);
-  }
+.marquee-rtl, .marquee-ltr {
+	width: max-content;
+	/* don't optimise - hotline used this, but i think above works better? */
+	will-change: scroll-position;
+
+	&:hover {
+		animation-play-state: paused;
+	}
+
+	& li {
+		display: inline-block;
+		will-change: transform;
+
+		&::marker {
+		content: "";
+		}
+	}
 }
 
 .marquee-rtl {
-  overflow: hidden;
-  box-sizing: border-box;
-  width: 678px;
-      margin: 2px auto;
-      padding: 4px;
-	    text-align: center;
-}
-
-.marquee-rtl span {
-  display: inline-block;
-  width: max-content;
-  padding-left: 100%;
-  /* show the marquee just outside the paragraph *//*
-  will-change: transform;
-  animation: marquee-rtl 90s linear infinite;
-}
-
-.marquee-rtl span:hover {
-  animation-play-state: paused;
+	// start onscreen (not 100%) ((never mind))
+	padding-left: 100%;
+	// change timer when adding more images - was 50s in hlcafe
+	animation: marquee-rtl 35s linear infinite;
 }
 
 .marquee-ltr {
-  overflow: hidden;
-  box-sizing: border-box;
-  width: 678px;
-      margin: 2px auto;
-      padding: 4px;
-	    text-align: center;
+	padding-left: 100%;
+	animation: marquee-ltr 35s linear infinite;
 }
 
-.marquee-ltr span {
-  display: inline-block;
-  width: max-content;
-  padding-left: 100%;
-  /* show the marquee just outside the paragraph *//*
-  will-change: transform;
-  animation: marquee-ltr 90s linear infinite;
+@keyframes marquee-rtl {
+	0% {
+		transform: translate(0, 0);
+	}
+
+	100% {
+		transform: translate(-100%, 0);
+	}
 }
 
-.marquee-ltr span:hover {
-  animation-play-state: paused;
+@keyframes marquee-ltr {
+	0% {
+		transform: translate(-100%, 0);
+	}
+	100% {
+		transform: translate(0, 0);
+	}
 }
-*//* copied from: https://hotlinecafe.com/ */
