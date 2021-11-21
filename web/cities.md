@@ -68,16 +68,17 @@ using web safe colours, no transparency, and 5hz for the authentic feel. the fon
 
 
 
+<!-- ztodo add: -->
+
+<!-- https://nothingman.neocities.org/ -->
+
+<!-- https://liminal-librarian.com/ -->
+
+<!-- https://dxcccii.neocities.org/home.html -->
+
+<!-- just for the pretty buttons: -->
+
+<!-- https://ocean-waves.xyz/ -->
 
 
-ztodo add: 
 
-https://nothingman.neocities.org/
-
-https://liminal-librarian.com/
-
-
-
-just for the pretty buttons:
-
-https://ocean-waves.xyz/

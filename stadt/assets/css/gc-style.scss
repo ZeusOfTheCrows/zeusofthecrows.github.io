@@ -310,3 +310,69 @@ mark {
 // @media (prefers-reduced-motion: reduce) {
 	//stop animation for accessibility reasons - maybe pause until mouseover?
 // }
+
+
+/*
+@keyframes marquee-rtl {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(-100%, 0);
+  }
+}
+
+@keyframes marquee-ltr {
+    0% {
+    transform: translate(-100%, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.marquee-rtl {
+  overflow: hidden;
+  box-sizing: border-box;
+  width: 678px;
+      margin: 2px auto;
+      padding: 4px;
+	    text-align: center;
+}
+
+.marquee-rtl span {
+  display: inline-block;
+  width: max-content;
+  padding-left: 100%;
+  /* show the marquee just outside the paragraph *//*
+  will-change: transform;
+  animation: marquee-rtl 90s linear infinite;
+}
+
+.marquee-rtl span:hover {
+  animation-play-state: paused;
+}
+
+.marquee-ltr {
+  overflow: hidden;
+  box-sizing: border-box;
+  width: 678px;
+      margin: 2px auto;
+      padding: 4px;
+	    text-align: center;
+}
+
+.marquee-ltr span {
+  display: inline-block;
+  width: max-content;
+  padding-left: 100%;
+  /* show the marquee just outside the paragraph *//*
+  will-change: transform;
+  animation: marquee-ltr 90s linear infinite;
+}
+
+.marquee-ltr span:hover {
+  animation-play-state: paused;
+}
+*//* copied from: https://hotlinecafe.com/ */
