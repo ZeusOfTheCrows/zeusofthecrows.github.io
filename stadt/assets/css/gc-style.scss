@@ -315,3 +315,12 @@ mark {
 		transform: translate(0, 0);
 	}
 }
+
+@media (prefers-reduced-motion) {
+	.marquee-rtl, .marquee-ltr {
+		animation-play-state: paused;
+
+		&:hover {
+			animation-play-state: running;
+		}
+	}
