@@ -271,6 +271,9 @@ mark {
 	/* don't optimise - hotline used this, but i think above works better? */
 	will-change: scroll-position;
 
+	// start onscreen (not 100%) ((never mind))
+	padding-left: 100%;
+
 	&:hover {
 		animation-play-state: paused;
 	}
@@ -286,14 +289,11 @@ mark {
 }
 
 .marquee-rtl {
-	// start onscreen (not 100%) ((never mind))
-	padding-left: 100%;
 	// change timer when adding more images - was 50s in hlcafe
 	animation: marquee-rtl 35s linear infinite;
 }
 
 .marquee-ltr {
-	padding-left: 100%;
 	animation: marquee-ltr 35s linear infinite;
 }
 
@@ -319,8 +319,10 @@ mark {
 @media (prefers-reduced-motion) {
 	.marquee-rtl, .marquee-ltr {
 		animation-play-state: paused;
+		padding-left: 0%;
 
 		&:hover {
 			animation-play-state: running;
 		}
 	}
+}
