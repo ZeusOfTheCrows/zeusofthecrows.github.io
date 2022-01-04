@@ -2,7 +2,7 @@
 title: NSX Buttons
 collection: leaf
 permalink: /:path/nsx-buttons/
-edit_date: 2021-10-19
+edit_date: 2021-12-31
 typora-root-url: ../../
 notes: ^ is only so typora correctly renders images
 ---
@@ -78,3 +78,19 @@ Normal: [Download](/assets/zips/games/mods/ds2/nsx-button-prompts.7z) {{ site.se
 
 ![dark souls 2 nintendo icons mod preview](https://staticdelivery.nexusmods.com/mods/1392/images/993/993-1627386166-97632564.jpeg){: .showcase .sc-wide .sc-btm}
 
+---
+
+## MercurySteam
+
+### Castlevania: Lords of Shadow
+
+Normal: [Download](/assets/zips/games/mods/cvlos/nsx-button-prompts.7z) {{ site.sep_char }} [Nexus](https://www.nexusmods.com/castlevanialordsofshadow/mods/5)
+
+ A & B aren't switched, like they are in my other mods, as i disliked jump being on A. only the face buttons for now, i may update later with back buttons + dpad if i can be arsed
+
+- to install: 
+	- copy `Data00.dat` to your game directory, overwriting existing file
+	- (a backup of the original file is included for convenient uninstallation, but one can safely
+		ignore it)
+
+![demon's soul nintendo icons mod preview](https://staticdelivery.nexusmods.com/mods/1897/images/5/5-1640738352-1765467313.jpeg){: .showcase .sc-wide .sc-top}
