@@ -8,12 +8,13 @@ typora-root-url: ./
 
 **Proudly JavaScript free!**
 
-welcome to a miscellany of things i've made for my own benefit, things i've found cool, and anything else i feel like putting up here. /!\ **warning: most showcase pages have large images, be wary if using data or a metred network** /!\
+welcome to a miscellany of things i've made for my own benefit, things i've found cool, and anything else i feel like putting up here. /!\ **warning: most showcase pages have large images, be wary if using data or a metered network** /!\
 
 new here? check the stuff i think is least crap:
 
 * [Dsegstended font](/other/fonts#dsegstended)
 * [Amber Terminal Wallpaper Engine](/desktops/wpengine#amber-dec-terminal)
+* [Enhanced VPad Tester](/utilities/vita#zeus-enhanced-vpad-tester)
 
 ---
 
