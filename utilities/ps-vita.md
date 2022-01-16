@@ -36,7 +36,7 @@ Originally created by Smoke5, converted to Lua by Keinta15
 
 **Features:**
 
-(most of it's not my work, i just added features {in italic} that i was missing)
+(most of it's not my work, i just added features {highlighted} that i was missing)
 
 * highlight currently pressed buttons
 * visual feedback & absolute numbers of analogue stick input

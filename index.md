@@ -14,7 +14,7 @@ new here? check the stuff i think is least crap:
 
 * [Dsegstended font](/other/fonts#dsegstended)
 * [Amber Terminal Wallpaper Engine](/desktops/wpengine#amber-dec-terminal)
-* [Enhanced VPad Tester](/utilities/vita#zeus-enhanced-vpad-tester)
+* [Enhanced VPad Tester](/utilities/ps-vita#zeus-enhanced-vpad-snooper)
 
 ---
 
