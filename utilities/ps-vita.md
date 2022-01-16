@@ -32,7 +32,7 @@ A simple homebrew for testing the input data on the PS Vita™ made on [Lua Play
 
 Originally created by Smoke5, converted to Lua by Keinta15
 
-![preview](https://raw.githubusercontent.com/ZeusOfTheCrows/Zeus-Enhanced-VPad-Snooper/master/img/preview.png)
+![preview](https://raw.githubusercontent.com/ZeusOfTheCrows/Zeus-Enhanced-VPad-Snooper/master/img/preview.png){: .showcase .sc-wide .sc-mid}
 
 **Features:**
 
