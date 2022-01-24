@@ -2,7 +2,7 @@
 title: PS Vita
 collection: leaf
 permalink: /:path/ps-vita/
-edit_date: 2022-01-16
+edit_date: 2022-01-24
 typora-root-url: ../../
 notes: ^ is only so typora correctly renders images
 ---
@@ -26,22 +26,25 @@ d'you know what, the vita is vastly underrated, and is possibly the best console
 
 ---
 
-# Zeus' Enhanced VPad Snooper
+# VPad Tester & Configurator
 
-A simple homebrew for testing the input data on the PS Vita™ made on [Lua Player Plus Vita](https://github.com/Rinnegatamante/lpp-vita)
+Download [coming soon] {{ site.sep_char }} [Github](https://github.com/ZeusOfTheCrows/VPad-Tester-and-Configurator)
 
-Originally created by Smoke5, converted to Lua by Keinta15
+PSVita hardware tester, with support for configuring Rinnegatamante's AnalogsEnhancer plugin.
 
-![preview](https://raw.githubusercontent.com/ZeusOfTheCrows/Zeus-Enhanced-VPad-Snooper/master/img/preview.png){: .showcase .sc-wide .sc-mid}
+made with [Lua Player Plus Vita](https://github.com/Rinnegatamante/lpp-vita).
 
-**Features:**
+![preview screenshot](https://raw.githubusercontent.com/ZeusOfTheCrows/VPad-Tester-and-Configurator/master/img/preview.png){: .showcase .sc-wide .sc-mid}
 
-(most of it's not my work, i just added features {highlighted} that i was missing)
+### Features:
 
 * highlight currently pressed buttons
 * visual feedback & absolute numbers of analogue stick input
 * visual feedback of touchscreen/touchpad, including multitouch
-* _max range of analogue stick input (useful for adjusting deadzones)_
+* max range of analogue stick input (useful for adjusting deadzones)
+* reading (and eventually writing) the config file for AnalogsEnhancer
 * stereo audio tester
-* _is now a “safe” homebrew, as i saw no reason otherwise_
-* _a better colourscheme ([gruvbox dark](https://github.com/gruvbox-community/gruvbox))_
+
+comes in both safe and unsafe versions. the unsafe version is required to modify Yoti's ur0: mod of AnalogsEnhancer; and possibly other features in future
+
+this app is an extended version of a utility created by Smoke5, and initially converted to Lua by Keinta15, but almost none of that code still exists, so i thought it should be in its own repo

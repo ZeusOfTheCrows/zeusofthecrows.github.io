@@ -14,7 +14,7 @@ new here? check the stuff i think is least crap:
 
 * [Dsegstended font](/other/fonts#dsegstended)
 * [Amber Terminal Wallpaper Engine](/desktops/wpengine#amber-dec-terminal)
-* [Enhanced VPad Tester](/utilities/ps-vita#zeus-enhanced-vpad-snooper)
+* [VPad Tester & Configurator](/utilities/ps-vita#vpad-tester--configurator)
 
 ---
 
@@ -23,8 +23,6 @@ i'm not great at words, but if you really must have some check my about page, or
 i'm very good at not finishing things, so expect this site to be a continual work in progress...
 
 <small class="weak">(text will look blurry in webkit browsers, due to the fact that they use subpixel antialiasing by default. i'm afraid there's nothing i can do to fix this, as far as i know. vive la fox)</small>
-
-<!-- post saying site finished. -->
 
 <!-- /?\ ztodo limit post list to a few posts, add an archive page -->
 
