@@ -90,7 +90,7 @@
 		overflow-x: auto;
 		overflow-y: hidden;
 
-		bottom: 0;
+		bottom: -2ch;  /* how can this be negative? */
 		position: fixed;
 
 		// padding: 1em 0ch;
