@@ -1,12 +1,11 @@
-
+<br />
+<hr />
+{%- if page.edit_date -%}
+	<p>last modified at {{ page.edit_date }}</p>
+	<p>(ɔ) {{ page.edit_date | split: "-" | first }} ZeusOfTheCrows</p>
+{%- else -%}
 	<br />
-	<hr />
-	{%- if page.edit_date -%}
-		<p>last modified at {{ page.edit_date }}</p>
-		<p>(ɔ) {{ page.edit_date | split: "-" | first }} ZeusOfTheCrows</p>
-	{%- else -%}
-		<br />
-		<p>(ɔ) 2021 ZeusOfTheCrows</p>
-	{%- endif -%}
-	<p><a href="#">^ back to top ^</a></p>
-	<hr />
+	<p>(ɔ) 2021 ZeusOfTheCrows</p>
+{%- endif -%}
+<p><a href="#">^ back to top ^</a></p>
+<hr />

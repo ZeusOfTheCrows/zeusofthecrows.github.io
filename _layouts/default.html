@@ -1,30 +1,31 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
-
+	<head>
 	{% include head.html %}
+	</head>
 
 	<body>
-
-	{% include header.html %}
-	
 		<div class="whole-wrapper">
+			<header class="site-header" role="banner">
+				{% include header.html %}
+			</header>
+
 			<div id="nav-menu-wrapper">
 				{% include tree-nav-menu.html %}
 				<hr />
 				{% include webring-navs.html %}
 			</div>
-			<main class="content" aria-label="Content">
+
+			<main class="content" aria-label="content" role="content">
 				<!-- cosmetically replace | with ¦ -->
 				{{ content | replace: "|", "¦" }}
-
-
 			</main>
-			<footer>
+
+			<div id="clear"></div>
+
+			<footer id="footer" role="footer">
 				{% include footer.html %}
 			</footer>
-			<div id="clear"></div>
 		</div>
-		
 	</body>
-
 </html>
