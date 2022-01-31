@@ -24,16 +24,16 @@
 	content: "> "; /*makes bullets > char with padding space*/
 }
 
-#nav-menu-wrapper {
-	width: $navmenu-width;
-	float: left;
-	padding-right: $hori-padd;
-}
+// #nav-menu-wrapper {
+	// width: $navmenu-width;
+	// float: left;
+	// padding-right: $hori-padd;
+// }
 
-.content {
-	width: $content-width;
-	float: left;
-}
+// .content {
+	// width: $content-width;
+	// float: left;
+// }
 
 @media only screen and (max-width: $logo-breakpoint) {
 

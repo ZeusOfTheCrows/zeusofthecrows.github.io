@@ -86,6 +86,34 @@ body {
 	padding: 4vh 4vw;
 }
 
+/*==================================grid=====================================*/
+.whole-wrapper {
+	display: grid;
+	width: min(88vw, 112ch);
+	// i don't know why i can't just use "1fr", but it doesn't work
+	grid-template-columns: 17ch calc(100% - 17ch);
+	grid-row-gap: 0px;
+	grid-column-gap: 1em;
+	grid-template-areas:
+		"header header"
+		"menu  content"
+		"footer footer";
+}
+.site-header {
+	grid-area: header;
+}
+#nav-menu{
+	grid-area: menu;
+}
+#content {
+	grid-area: content;
+}
+#footer {
+	grid-area: footer;
+}
+
+/*====================================/grid/=================================*/
+
 #ascii-header, #ascii-logo {
 	color: $text-14;
 	/* declared in html so it works in browsers like lynx */
@@ -124,7 +152,6 @@ h1, h2, h3, h4, h5, h6, em, i, strong, b, th {
 	line-height: inherit;
 	font-size: inherit;
 }
-
 
 h1, h2 {
 		// &::after {
@@ -170,7 +197,7 @@ em, i {
 }
 
 /* de-emphasise text. i'm undecided as to the best way to do this:
-.weak class (antithesis of strong), small tag (semantically dubious) */
+.weak class (antithesis of strong), <small> tag (semantically dubious) */
 .weak, small {
 	font-size: inherit;
 	color: $text-08;
@@ -199,7 +226,7 @@ a {
 }
 
 p, ol, ul, .contents-intro-container {
-	// i don't know why i have to specify .contents intro container separately?
+	// i don't know why i have to specify .contents-intro-container separately?
 	margin-bottom: 1em;
 }
 

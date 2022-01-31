@@ -16,7 +16,7 @@
 				{% include webring-navs.html %}
 			</div>
 
-			<main class="content" aria-label="content" role="content">
+			<main id="content" aria-label="content" role="content">
 				{% comment %} <!-- cosmetically replace | with ¦ --> {% endcomment %}
 				{{ content | replace: "|", "¦" }}
 			</main>
