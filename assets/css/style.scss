@@ -9,7 +9,106 @@
 @import "nav-menu.scss";
 @import "vars.scss";
 
-/*==============================generic styles===============================*/
+/*================================= layout ==================================*/
+.whole-wrapper {
+	display: grid;
+	width: min(88vw, 112ch);
+	// i don't know why i can't just use "1fr", but it doesn't work
+	grid-template-columns: 17ch calc(100% - 17ch);
+	grid-row-gap: 0px;
+	grid-column-gap: 1em;
+	grid-template-areas:
+		"header header"
+		"menu  content"
+		"footer footer";
+}
+.site-header {
+	grid-area: header;
+}
+#nav-menu{
+	grid-area: menu;
+}
+#content {
+	grid-area: content;
+}
+#footer {
+	grid-area: footer;
+}
+
+@media only screen and (max-width: $logo-breakpoint) {
+	.whole-wrapper {
+	grid-template-columns: 100%;
+	grid-template-areas:
+		"header"
+		"content"
+		"footer";
+	}
+	.site-header {
+		grid-area: header;
+	}
+	#nav-menu{
+		grid-area: menu;
+	}
+	#content {
+		grid-area: content;
+	}
+	#footer {
+		//positioned absolutely
+	}
+	.webrings, #wr-divider {
+		display: none;
+	}
+
+	.content {
+		width: $total-width;
+	}
+
+	hr.pre-hori-nav {
+		// show element to override inline hide
+		display: inherit !important;
+		// set background to black to hide content behind
+		background-color: $background-colour;
+
+		// move up to the same height as the menu and fix to bottom
+		bottom: $nav-hori-lines * 1em;
+		position: fixed;
+
+		width: $total-width;
+
+		// nudge up farther, enough to show
+		padding-bottom: 2em;
+	}
+
+	.nav-menu {
+		/* auto add scrollbar, and hide overflow */
+		background-color: $background-colour;
+		overflow: auto;
+		white-space: nowrap;
+		// flex to make horizontally scroll
+		display: flex;
+		// i don't think i need these, but i'm too paranoid to bin them
+		overflow-x: auto;
+		overflow-y: hidden;
+
+		bottom: 0;
+		position: fixed;
+
+		// padding: 1em 0ch;
+		padding-top: 1em;
+
+		width: $total-width;
+
+			& > li {
+				padding-right: 4ch;
+			}
+		}
+	footer {
+		/* nudge footer up, nav lines + 1 for hr */
+		margin-bottom: $nav-hori-lines + 1em;
+	}
+}
+
+/*============================= generic styles ==============================*/
 * {
 	/*remove padding globally so text always aligns*/
 	margin: 0px;
@@ -69,7 +168,6 @@ html {
 		background: $text-07;
 	}
 
-
 body {
 	background-color: $background-colour;
 	color: $text-10;
@@ -83,41 +181,7 @@ body {
 	/* limit max width, and centre */
 	width: $total-width;
 	margin: 0 auto;
-	padding: 4vh 4vw;
-}
-
-/*==================================grid=====================================*/
-.whole-wrapper {
-	display: grid;
-	width: min(88vw, 112ch);
-	// i don't know why i can't just use "1fr", but it doesn't work
-	grid-template-columns: 17ch calc(100% - 17ch);
-	grid-row-gap: 0px;
-	grid-column-gap: 1em;
-	grid-template-areas:
-		"header header"
-		"menu  content"
-		"footer footer";
-}
-.site-header {
-	grid-area: header;
-}
-#nav-menu{
-	grid-area: menu;
-}
-#content {
-	grid-area: content;
-}
-#footer {
-	grid-area: footer;
-}
-
-/*====================================/grid/=================================*/
-
-#ascii-header, #ascii-logo {
-	color: $text-14;
-	/* declared in html so it works in browsers like lynx */
-	/* white-space: pre */
+	padding: 2vh 0;
 }
 
 .contents-intro-container {
@@ -141,7 +205,7 @@ body {
 }
 
 #clear .clear {
-	clear: both; /* just generically clear elements */
+	clear: both; /* just generically clear for flex layouts */
 }
 
 /* make all heavier text styles normal weight/size,
@@ -298,8 +362,13 @@ code {
 	color: $text-09;
 }
 
-
 /*============================specific styles================================*/
+
+#ascii-header, #ascii-logo {
+	color: $text-14;
+	/* declared in html so it works in browsers like lynx */
+	/* white-space: pre */
+}
 
 /* directory layout: capitalise first letter of folders
 without downcasing the <DIR> text*/
@@ -321,6 +390,7 @@ without downcasing the <DIR> text*/
 .post-list {
 	white-space: nowrap;
 	overflow: hidden;
+	text-overflow: ellipsis;  /* webkit is dumb */
 	text-overflow: "..."; /*this is a full ... as it looks better in FxSys*/
 
 	& > .post-title {
@@ -417,12 +487,12 @@ without downcasing the <DIR> text*/
 
 /*hide header, only show minified logo on small screens*/
 @media only screen and (max-width: $logo-breakpoint) {
+	#ascii-header {
+		display: none;
+	}
 	#ascii-logo {
 		/*is !important to override inline style,
 		has inline style to hide when css isn't loaded*/
 		display: block !important;
-	}
-	#ascii-header {
-		display: none;
 	}
 }

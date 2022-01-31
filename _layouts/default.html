@@ -12,7 +12,7 @@
 
 			<div id="nav-menu-wrapper" aria-label="nav menu" role="navigation">
 				{% include tree-nav-menu.html %}
-				<hr />
+				<hr id="wr-divider" />
 				{% include webring-navs.html %}
 			</div>
 
@@ -21,7 +21,7 @@
 				{{ content | replace: "|", "¦" }}
 			</main>
 
-			<div id="clear"></div>
+			<!-- <div id="clear"></div> -->
 
 			<footer id="footer" role="footer">
 				{% include footer.html %}

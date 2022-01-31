@@ -1,13 +1,6 @@
 /* i realise this whole thing is a mess */
 @import "vars.scss"; /*variables*/
 
-/* @media only screen and (max-width: 52em) { */
-	/* #nav-menu-wrapper { */
-		/* display: none; /*hide nav menu when screen is too narrow for it. 
-		i don't know what to do instead though*/
-	/* } */
-/* } */
-
 .nav-menu {
 	// width: $navmenu-width;
 	vertical-align: top;
@@ -24,73 +17,7 @@
 	content: "> "; /*makes bullets > char with padding space*/
 }
 
-// #nav-menu-wrapper {
-	// width: $navmenu-width;
-	// float: left;
-	// padding-right: $hori-padd;
-// }
-
-// .content {
-	// width: $content-width;
-	// float: left;
-// }
-
-@media only screen and (max-width: $logo-breakpoint) {
-
-	.content {
-		width: $total-width;
-	}
-
-	hr.pre-hori-nav {
-		// show element to override inline hide
-		display: inherit !important;
-		// set background to black to hide content behind
-		background-color: $background-colour;
-
-		// move up to the same height as the menu and fix to bottom
-		bottom: $nav-hori-lines * 1em;
-		position: fixed;
-
-		width: $total-width;
-
-		// nudge up farther, enough to show
-		padding-bottom: 2em;
-
-	}
-
-	.nav-menu {
-		/* auto add scrollbar, and hide overflow */
-		background-color: $background-colour;
-		overflow: auto;
-		white-space: nowrap;
-		// flex to make horizontally scroll
-		display: flex;
-		// i don't think i need these, but i'm too paranoid to bin them
-		// justify-content: flex-start;
-		// flex-direction: row;
-		overflow-x: auto;
-		overflow-y: hidden;
-		// white-space: nowrap;
-
-		bottom: 0;
-		position: fixed;
-
-		// padding: 1em 0ch;
-		padding-top: 1em;
-
-		width: $total-width;
-
-			& > li {
-				padding-right: 4ch;
-			}
-		}
-	footer {
-		/* nudge footer up, nav lines + 1 for hr */
-		margin-bottom: $nav-hori-lines + 1em;
-	}
-}
-
-
+/*===========================================================================*/
 
 /*code used for folding menu:
 .nav-menu-folder {
