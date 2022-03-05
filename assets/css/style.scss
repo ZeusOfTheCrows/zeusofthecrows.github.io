@@ -25,7 +25,18 @@
 .site-header {
 	grid-area: header;
 }
-#nav-menu{
+.skip-nav-link {
+	// https://youtu.be/jDDaOFr9nqQ
+	position: absolute;
+	transform: translateY(-120%);
+	// background:
+	// border-radius: 0, 0, 1, 1;
+	transition: transform 325ms ease-in;
+}
+.skip-nav-link {
+	transform: translateY(0);
+}
+#nav-menu {
 	grid-area: menu;
 }
 #content {
@@ -360,6 +371,11 @@ tr td:nth-child(n+2) {
 code {
 	font-family: $code-font;
 	color: $text-09;
+}
+
+abbr {
+	// remove dotted underline
+	text-decoration: none;
 }
 
 /*============================specific styles================================*/

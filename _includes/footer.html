@@ -1,10 +1,10 @@
 <br />
 <hr />
 {%- if page.edit_date -%}
-	<p>page last modified at {{ page.edit_date }}</p>
+	<p>page last modified at <time datetime="{{ page.edit_date }}">{{ page.edit_date }}</time></p>
 	<p>(ɔ) {{ page.edit_date | split: "-" | first }} ZeusOfTheCrows</p>
 {%- else -%}
-	<p>site last modified at {{ site.edit_date }}</p>
+	<p>site last modified at <time datetime="{{ site.edit_date }}">{{ site.edit_date }}</time></p>
 	<p>(ɔ) {{ site.edit_date | split: "-" | first }} ZeusOfTheCrows</p>
 {%- endif -%}
 <p><a href="#">^ back to top ^</a></p>

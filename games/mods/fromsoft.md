@@ -88,9 +88,9 @@ I like [the Detailed UI mod](https://www.nexusmods.com/darksouls3/mods/91) by Ce
 * To install:
 	* Download the iGP11, and the [Detailed UI mod](https://www.nexusmods.com/darksouls3/mods/91)
 	* Unpack files from `[detailed_ui]` to `[game_directory]\Game\iGP11\tex_override`
-	* Copy `65536_12[..]05.dds`{:title="65536_12831202783399872305.dds"} to `[game_directory]\Game\iGP11\tex_override`, replacing the other
+	* Copy <code><abbr title="65536_12831202783399872305.dds"}65536_12[..]05.dds</abbr></code> to `[game_directory]\Game\iGP11\tex_override`, replacing the other
 		* (If you want to replace the blood echoes symbol with a normal souls symbol)
-		* copy `65536_25[..]59.dds`{:title="65536_2579900381049114659.dds"}  as well
+		* copy <code><abbr title="65536_2579900381049114659.dds">65536_25[..]59.dds</abbr></code>  as well
 
 <!-- html is to allow title (tooltip) property in code element -->
 

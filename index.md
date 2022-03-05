@@ -22,6 +22,8 @@ i'm not great at words, but if you really must have some check my about page, or
 
 i'm very good at not finishing things, so expect this site to be a continual work in progress...
 
+if this site has accessibility issues, please let me know: i'm not so good at that sort of thing, so would like to be told if/how to improve.
+
 <small class="weak">(text will look blurry in webkit browsers, due to the fact that they use subpixel antialiasing by default. i'm afraid there's nothing i can do to fix this, as far as i know. vive la fox)</small>
 
 <!-- /?\ ztodo limit post list to a few posts, add an archive page -->

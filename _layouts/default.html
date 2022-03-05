@@ -7,10 +7,11 @@
 	<body>
 		<div class="whole-wrapper">
 			<header class="site-header" role="banner">
+				<a class="skip-nav-link" href="#content"></a>
 				{% include header.html %}
 			</header>
 
-			<div id="nav-menu-wrapper" aria-label="nav menu" role="navigation">
+			<div id="nav-menu-wrapper" aria-label="main navigation" role="navigation">
 				{% include tree-nav-menu.html %}
 				<hr id="wr-divider" />
 				{% include webring-navs.html %}
