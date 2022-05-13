@@ -36,6 +36,24 @@ All WE UI user properties should reflect properly, [source is available here](ht
 
 ---
 
+## Dieselpunk Train Town
+
+[Workshop (Dual Monitor)](https://steamcommunity.com/sharedfiles/filedetails/?id=2807544134) {{ site.sep_char }} [Workshop (Ultrawide)](https://steamcommunity.com/sharedfiles/filedetails/?id=2807437541) {{ site.sep_char }} [Source (coming)](/assets/zips/desktops/wpe/dieselpunk-train-town.7z)
+
+dieselpunk* train at station
+
+contains seasonal alternative wallpapers, with option to automatically change
+
+comes dual monitor & ultra widescreen flavours
+
+original art - [Train Town by Yoga Satyadana](https://www.artstation.com/artwork/Qzo6aL)
+
+\*or steampunk, i guess
+
+![Amber Dec Terminal Preview](/assets/images/desktops/wpe/dieselpunk-train-town.png){: .showcase .sc-wide .sc-mid}
+
+---
+
 ## Commodore Amiga 500
 
 [Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=2272437056) {{ site.sep_char }} [Github](https://github.com/ZeusOfTheCrows/we-amber-terminal/tree/Amiga-500)
