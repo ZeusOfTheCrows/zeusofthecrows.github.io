@@ -44,7 +44,7 @@ dieselpunk* train at station
 
 contains seasonal alternative wallpapers, with option to automatically change
 
-comes dual monitor & ultra widescreen flavours
+comes in dual monitor & ultra widescreen flavours
 
 original art - [Train Town by Yoga Satyadana](https://www.artstation.com/artwork/Qzo6aL)
 
