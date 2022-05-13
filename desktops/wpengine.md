@@ -46,7 +46,7 @@ contains seasonal alternative wallpapers, with option to automatically change
 
 comes in dual monitor & ultra widescreen flavours
 
-original art - [Train Town by Yoga Satyadana
+original art - [Train Town by Yoga Satyadana](https://www.artstation.com/artwork/Qzo6aL)
 
 ![Amber Dec Terminal Preview](/assets/images/desktops/wpe/dieselpunk-train-town.png){: .showcase .sc-wide .sc-mid}
 
