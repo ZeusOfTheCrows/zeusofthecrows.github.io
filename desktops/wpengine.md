@@ -38,17 +38,15 @@ All WE UI user properties should reflect properly, [source is available here](ht
 
 ## Dieselpunk Train Town
 
-[Workshop (Dual Monitor)](https://steamcommunity.com/sharedfiles/filedetails/?id=2807544134) {{ site.sep_char }} [Workshop (Ultrawide)](https://steamcommunity.com/sharedfiles/filedetails/?id=2807437541) {{ site.sep_char }} [Source (temp)](/assets/zips/desktops/wpe/)
+[Workshop (dm)](https://steamcommunity.com/sharedfiles/filedetails/?id=2807544134) {{ site.sep_char }} [Workshop (uw)](https://steamcommunity.com/sharedfiles/filedetails/?id=2807437541) {{ site.sep_char }} [Source (temp)](/assets/zips/desktops/wpe/)
 
-dieselpunk* train at station
+dieselpunk train at station
 
 contains seasonal alternative wallpapers, with option to automatically change
 
 comes in dual monitor & ultra widescreen flavours
 
-original art - [Train Town by Yoga Satyadana](https://www.artstation.com/artwork/Qzo6aL)
-
-\*or steampunk, i guess
+original art - [Train Town by Yoga Satyadana
 
 ![Amber Dec Terminal Preview](/assets/images/desktops/wpe/dieselpunk-train-town.png){: .showcase .sc-wide .sc-mid}
 
