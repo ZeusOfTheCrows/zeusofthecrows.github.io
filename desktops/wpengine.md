@@ -38,7 +38,7 @@ All WE UI user properties should reflect properly, [source is available here](ht
 
 ## Dieselpunk Train Town
 
-[Workshop (dm)](https://steamcommunity.com/sharedfiles/filedetails/?id=2807544134) {{ site.sep_char }} [Workshop (uw)](https://steamcommunity.com/sharedfiles/filedetails/?id=2807437541) {{ site.sep_char }} [Source (temp)](/assets/zips/desktops/wpe/)
+[Workshop (dm)](https://steamcommunity.com/sharedfiles/filedetails/?id=2807544134) {{ site.sep_char }} [Workshop (uw)](https://steamcommunity.com/sharedfiles/filedetails/?id=2807437541) {{ site.sep_char }} [Source (dm)](/assets/zips/desktops/wpe/dieselpunk-train-town-dm.7z) {{ site.sep_char }} [Source (uw)](/assets/zips/desktops/wpe/dieselpunk-train-town-uw.7z) {{ site.sep_char }} [Source (xcf)](/assets/zips/desktops/wpe/dieselpunk-train-town-gimp.7z)
 
 dieselpunk train at station
 
