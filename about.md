@@ -37,7 +37,7 @@ OS: Windows. Not because I like it, but because Linux just isn't very good. (I k
 
 ---
 
-Music: [Spotify](https://open.spotify.com/playlist/5q8crqSxKiqtpIKnAgkYRU?si=UEucTXZZRP2mZ2PBVUpY1A): most genres apart from hiphop/rnb. mostly rock/metal, but a plenty of synthwave  (mostly sovietwave), new wave, 1st/2nd wave country, and others.
+Music: [Spotify](https://open.spotify.com/playlist/5q8crqSxKiqtpIKnAgkYRU?si=UEucTXZZRP2mZ2PBVUpY1A): most genres apart from hiphop/rnb. mostly rock/metal, but a plenty of synthwave (mostly sovietwave), new wave, 1st/2nd wave country, and others.
 
 ---
 
