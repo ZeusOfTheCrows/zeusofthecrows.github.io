@@ -77,6 +77,7 @@ Normal: [Download](/assets/zips/games/mods/ds2/nsx-button-prompts.7z) {{ site.se
 	* unpack files from `.\tex_override` to `[game_directory]\game\igp11\tex_override
 
 ![dark souls 3 nintendo icons mod preview](https://staticdelivery.nexusmods.com/mods/1392/images/993/993-1627386166-97632564.jpeg){: .showcase .sc-wide .sc-btm}
+
 ---
 
 ### Elden Ring
@@ -84,15 +85,19 @@ Normal: [Download](/assets/zips/games/mods/ds2/nsx-button-prompts.7z) {{ site.se
 [Download](/assets/zips/games/mods/er/nsx-button-prompts.7z) {{ site.sep_char }} [Nexus](https://www.nexusmods.com/eldenring/mods/6)
 
 * To install with ModEngine 2:
-	* Download and extract ModEngine 2
-	* Unpack mod folder to your mod engine install directory
-		* One can also rename the mod folder, and add the new name to config_eldenring.toml
-	* Run game via launchmod_eldenring.bat
+  * Download and extract ModEngine 2
+  * Unpack mod folder to your mod engine install directory
+    * One can also rename the mod folder, and add the new name to config_eldenring.toml
+
+  * Run game via launchmod_eldenring.bat
+
 * To install with UXM:
-	* To be honest I don't know, I don't use it
-	* It should work, but I haven't tested it
+  * To be honest I don't know, I don't use it
+  * It should work, but I haven't tested it
+
 
 Made with ER.BDT.Tool; and Yabber.
+
 It's a lazy implementation, but elden ring makes modding so annoying I couldn't be bothered to do it better. It may be improved in the future, but no promises.
 
 ![elden ring nintendo icons mod preview](https://staticdelivery.nexusmods.com/mods/4333/images/6/6-1654554125-465066405.jpeg){: .showcase .sc-wide .sc-btm}
