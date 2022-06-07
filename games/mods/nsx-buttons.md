@@ -100,7 +100,7 @@ Made with [ER.BDT.Tool](https://github.com/Ekey/ER.BDT.Tool); and [Yabber](https
 
 It's a lazy implementation, but elden ring makes modding so annoying I couldn't be bothered to do it better. It may be improved in the future, but no promises.
 
-![elden ring nintendo icons mod preview](https://staticdelivery.nexusmods.com/mods/4333/images/6/6-1654554125-465066405.jpeg){: .showcase .sc-wide .sc-mid}
+![elden ring nintendo icons mod preview](https://staticdelivery.nexusmods.com/mods/4333/images/6/6-1654629370-735102110.jpeg){: .showcase .sc-wide .sc-mid}
 
 ---
 
