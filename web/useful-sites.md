@@ -16,6 +16,7 @@ Also, for the sites not in your native language, I recommend [this firefox exten
 
 - [dlanham](https://dlanham.com/): **Beautiful** art and animation, most is available as [paid] wallpapers.
 - [door2windows](http://www.door2windows.com/): Bunch of customisation programmes for Windows.
+- [pce.js](https://jamesfriend.com.au/pce-js/ibmpc-games/): javascript pc dos emulator
 - [signalnoise](https://signalnoise.com/): more art, this time of a synthwave flavour. this site introduced me to several bands, and encouraged me to watch drive.
 - [sensefulsolutions](http://www.sensefulsolutions.com/): “Tech solutions that make sense.”
 - [xahlee](http://xahlee.info/): Of course I had to include Xah Lee. Whilst I disagree with him on a surprising number of points, I appreciate what he does.
