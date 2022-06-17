@@ -151,6 +151,12 @@ mark {
 	background-color: var(--d-ylw);
 }
 
+.ms-bold {  // ms sans serif style bold by doubling text width
+	text-shadow: 0.5px 0px var(--txt-1),
+	             1.0px 0px var(--txt-1),
+	             1.5px 0px var(--txt-1);
+}
+
 .mc-window { // macindows window
 	// margin: 8px;
 	border: 2px solid var(--d-aqa);
@@ -216,6 +222,7 @@ mark {
 	margin: 0px;
 	padding: 0px;
 	list-style-type:none;
+	display: inline-block;
 	}
 
 	& #btn-start {
@@ -225,14 +232,15 @@ mark {
 		line-height: 29px;  // }
 		font-family: "Fira Sans";
 		font-size: 12pt;
-		text-shadow: 0.5px 0px var(--txt-1),
-		             1.0px 0px var(--txt-1),
-		             1.5px 0px var(--txt-1);
-		color: transparent;
+		// text-shadow: 0.5px 0px var(--txt-1),
+		//              1.0px 0px var(--txt-1),
+		//              1.5px 0px var(--txt-1);
+		// color: transparent;
 		letter-spacing: 1px;
 
 		& #start-orb {
 			color: var(--s-org);
+			// padding-top: 0.4em;  // hacky
 			height: 0.8em;
 			width: auto;
 		}
@@ -241,7 +249,7 @@ mark {
 			// content: "";
 			// background-image: url("/stadt/assets/images/logo.svg");
 			// width: 100px;
-		// 	content: url("../../favicon.gif");
+			//	content: url("../../favicon.gif");
 		// }
 	}
 
@@ -255,31 +263,37 @@ mark {
 		}
 	}
 
-	& #taskbar-btns {
+	& #taskbar-btns, #taskbar-tray {
 		display: flex;
 		flex-direction: row;
 		// flex-wrap: nowrap;  // default
 		// justify-content: flex-start;  // default
-		align-items: center;  // default
-		margin: 0px;
-		padding: 0px;
+		align-items: center;
 		& li {
-			// vertical-align: text-top; // ztodo this is hacky
 			display: inline-block;
-			padding: 0px;
 			margin-right: 4px;
-			// list-style-type:none;
 		}
 	}
 
 	& #taskbar-tray {
-		//ztodo
+		height: 29px;
+		// width: 256px;
+
+		justify-content: flex-end;
+		align-items: center;
+
+		border: 2px;
+		border-style: solid;
+		border-top-color:    var(--btn-lolite);
+		border-left-color:   var(--btn-lolite);
+		border-bottom-color: var(--btn-hilite);
+		border-right-color:  var(--btn-hilite);
 	}
 }
 
 #taskbar-balloon {
 	position: absolute;
-	bottom: 48px;
+	bottom: 44px;
 	right: 32px;
 
 	background-color: var(--bgd-0);
