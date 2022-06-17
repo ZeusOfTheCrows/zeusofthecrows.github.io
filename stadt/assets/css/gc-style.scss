@@ -16,7 +16,7 @@
 :root {
 	--h-pad: 1em; // horizontal padding
 	--v-pad: 1em; // vertical padding
-	//console style font (used for '95 buttons)
+	//console style font (used for '95/98 buttons)
 	          /* windows,    macos    generic */
 	--csl-fnt: "consolas", "monaco", monospace;
 
@@ -152,9 +152,15 @@ mark {
 }
 
 .ms-bold {  // ms sans serif style bold by doubling text width
-	text-shadow: 0.5px 0px var(--txt-1),
-	             1.0px 0px var(--txt-1),
-	             1.5px 0px var(--txt-1);
+	// text-shadow: 0.5px 0px var(--txt-1),
+	             // 1.0px 0px var(--txt-1)/*,
+	             // 1.5px 0px var(--txt-1)*/;
+
+		// font-family: "Fira Sans";
+		// font-size: 12pt;
+		// letter-spacing: 1px;
+		font-family: "Fira Sans";
+		font-weight: bold;
 }
 
 .mc-window { // macindows window
@@ -169,12 +175,12 @@ mark {
 	padding: 8px;
 }
 
-.btn-95 {
+.btn-9x {
 	display: inline-block;
 	text-align: center;
 	// justify-content: center;
 	margin: 1px;
-	padding: 2px;
+	// padding: 2px;
 	margin: auto;
 	// width: 88px;
 	// height: 31px;
@@ -185,12 +191,12 @@ mark {
 	background: var(--bgd-2);
 
 	/* borders */
-	border-width: 2px;
-	border-style: solid;
-	border-top-color:    var(--btn-hilite);
-	border-left-color:   var(--btn-hilite);
-	border-bottom-color: var(--btn-lolite);
-	border-right-color:  var(--btn-lolite);
+	// border-width: 2px;
+	// border-style: solid;
+	// border-top-color:    var(--btn-hilite);
+	// border-left-color:   var(--btn-hilite);
+	// border-bottom-color: var(--btn-lolite);
+	// border-right-color:  var(--btn-lolite);
 
 	&:active {
 		border-top-color:    var(--btn-lolite);
@@ -201,7 +207,61 @@ mark {
 	}
 }
 
-.taskbar-95 {
+.window-9x,
+.btn-9x,
+.window-dec {
+	background-color: var(--bgd-2);
+	// padding: 4px;
+	padding: 2px;
+	border-width: 2px;
+	border-style: solid;
+	border-top-color:    var(--btn-hilite);
+	border-left-color:   var(--btn-hilite);
+	border-bottom-color: var(--btn-lolite);
+	border-right-color:  var(--btn-lolite);
+}
+.window-title {
+	background-color: var(--d-blu);
+	color: var(--txt-0);
+	margin: 0px 0px 2px 0px;
+	padding: 0px 2px;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	// align-items: center;
+
+	& .window-decs li {
+		display: inline-block;
+		margin: 0px;
+		padding: -2px 0px;
+		font-family: "Helvetica";
+		// height: 1em;
+	}
+}
+
+.window-content {
+	margin: 0px;
+	border-width: 2px;
+	border-style: solid;
+	border-top-color:    var(--btn-lolite);
+	border-left-color:   var(--btn-lolite);
+	border-bottom-color: var(--btn-hilite);
+	border-right-color:  var(--btn-hilite);
+}
+
+#music-player {
+	position: absolute;
+	bottom: 512px;
+	// width:  512px;
+	// height: 256px;
+	& iframe {
+		width:  512px;
+		height: 256px;
+	}
+}
+
+.taskbar-9x {
 	position: absolute;
 	bottom: 0px;
 
@@ -230,13 +290,13 @@ mark {
 		height: 29px;       // } this is really hacky, but it's
 		margin-bottom: 2px; // } the only thing that works
 		line-height: 29px;  // }
-		font-family: "Fira Sans";
-		font-size: 12pt;
-		// text-shadow: 0.5px 0px var(--txt-1),
-		//              1.0px 0px var(--txt-1),
-		//              1.5px 0px var(--txt-1);
-		// color: transparent;
-		letter-spacing: 1px;
+		// font-family: "Fira Sans";
+		// font-size: 12pt;
+		// // text-shadow: 0.5px 0px var(--txt-1),
+		// //              1.0px 0px var(--txt-1),
+		// //              1.5px 0px var(--txt-1);
+		// // color: transparent;
+		// letter-spacing: 1px;
 
 		& #start-orb {
 			color: var(--s-org);
