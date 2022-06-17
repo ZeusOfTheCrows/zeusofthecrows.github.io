@@ -51,6 +51,8 @@
 		--s-ppl: #D3869B;
 		--s-aqa: #8EC07C;
 		--s-org: #FE8019;
+		--btn-hilite: var(--bgd-4);
+		--btn-lolite: var(--bgd-0);
 	}
 }
 @media (prefers-color-scheme: light) {
@@ -73,6 +75,8 @@
 		--s-ppl: #8F3F71;
 		--s-aqa: #427B58;
 		--s-org: #AF3A03;
+		--btn-hilite: var(--bgd-0);
+		--btn-lolite: var(--bgd-4);
 	}
 }
 
@@ -176,16 +180,16 @@ mark {
 	/* borders */
 	border-width: 2px;
 	border-style: solid;
-	border-top-color: var(--bgd-4);
-	border-left-color: var(--bgd-4);
-	border-bottom-color:var(--bgd-0);
-	border-right-color: var(--bgd-0);
+	border-top-color: var(--btn-hilite);
+	border-left-color: var(--btn-hilite);
+	border-bottom-color:var(--btn-lolite);
+	border-right-color: var(--btn-lolite);
 
 	&:active {
-		border-top-color: var(--bgd-0);
-		border-left-color: var(--bgd-0);
-		border-bottom-color: var(--bgd-4);
-		border-right-color: var(--bgd-4);
+		border-top-color: var(--btn-lolite);
+		border-left-color: var(--btn-lolite);
+		border-bottom-color: var(--btn-hilite);
+		border-right-color: var(--btn-hilite);
 
 	}
 }
@@ -224,7 +228,18 @@ mark {
 		margin-left: 1px;
 		width: 70px;
 		height: 27px;
-		font-family: "FixedsysEx", "MS Sans Serif", arial, sans-serif;
+		font-family: "MS Sans Serif", arial, sans-serif;
+		font-size: 12pt;
+		text-align: center;
+		vertical-align: middle;
+
+		text-shadow: 0.5px 0px var(--txt-1), 1.5px 0px var(--txt-1);
+		color: transparent;
+		letter-spacing: 1px;
+		// font-family: "FixedsysEx", "MS Sans Serif", arial, sans-serif;
+		// &:before {
+		// 	content: url("../../favicon.gif");
+		// }
 	}
 }
 
