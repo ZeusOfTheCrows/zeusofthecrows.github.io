@@ -2,6 +2,9 @@
 ---
 
 // https://www.deviantart.com/niivu/art/Macindows-870073866
+// https://gist.github.com/bluh/2b95102fd6d3732dc9825be749498fa9
+// https://88x31.tumblr.com/
+// https://www.reddit.com/r/desktops/comments/nlq789/recreated_windows_95_in_my_desktop_fully/
 
 @font-face {
 	font-family: "FixedsysEx";
@@ -97,8 +100,8 @@ html {
 }
 
 body {
-	background-color: var(--d-aqa);
-	// background-image: url(chrome://global/skin/media/imagedoc-darknoise.png);
+	// background-color: var(--d-aqa);
+	background-image: url("/stadt/assets/images/backgrounds/chainlink.jpg");
 	color: var(--txt-1);
 	font-family: "Fira Sans";
 	margin:0;
@@ -189,14 +192,6 @@ mark {
 	font-family: var(--csl-fnt);
 	text-decoration: none;
 	background: var(--bgd-2);
-
-	/* borders */
-	// border-width: 2px;
-	// border-style: solid;
-	// border-top-color:    var(--btn-hilite);
-	// border-left-color:   var(--btn-hilite);
-	// border-bottom-color: var(--btn-lolite);
-	// border-right-color:  var(--btn-lolite);
 
 	&:active {
 		border-top-color:    var(--btn-lolite);
@@ -299,8 +294,9 @@ mark {
 		// letter-spacing: 1px;
 
 		& #start-orb {
+			background-size: 16px 16px;
 			color: var(--s-org);
-			// padding-top: 0.4em;  // hacky
+			padding-top: 0.4em;  // hacky
 			height: 0.8em;
 			width: auto;
 		}
@@ -309,7 +305,9 @@ mark {
 			// content: "";
 			// background-image: url("/stadt/assets/images/logo.svg");
 			// width: 100px;
-			//	content: url("../../favicon.gif");
+			// content: "";
+			// background-image: url("../../favicon.ico");
+			// background-size: 16px 16px;
 		// }
 	}
 
