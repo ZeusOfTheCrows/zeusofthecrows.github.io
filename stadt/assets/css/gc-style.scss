@@ -87,6 +87,9 @@ body {
 	background-color: var(--bgd-0);
 	color: var(--txt-1);
 	font-family: "Fira Sans";
+	margin:0;
+	padding:0;
+	border:0;
 }
 
 h1, h2 {
@@ -177,6 +180,43 @@ mark {
 	}
 }
 
+.taskbar-95 {
+	display: block;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	padding: 0px;
+	margin: 0px;
+	// color: black !important;
+	font-family: var(--csl-fnt);
+	text-decoration: none;
+	background: #C0C0C0;
+
+	/* borders */
+	border-top: 2px solid white;
+
+	& ul {
+		margin: 0px;
+		padding: 0px;
+		& li {
+			vertical-align: text-top; // ztodo this is hacky
+			display: inline-block;
+			padding: 0px;
+			list-style-type:none;
+		}
+	}
+
+	& #btn-start {
+		// top: 0;
+		margin: 1px 0px 0px 1px;
+		width: 70px;
+		height: 27px;
+		font-family: arial, "MS Sans Serif";
+	}
+}
+
 #content {
 	width: min(100%, 1100px);
 	margin: auto;
@@ -232,13 +272,15 @@ mark {
 }
 
 #brands {
-	bottom: 0;
+	// bottom: 0;
 
-	margin-top: auto;
-
+	// margin-top: auto;
+	padding: 0;
+	margin: 0;
 
 	& * {
 		padding: 0;
+		margin: 0;
 	}
 }
 
