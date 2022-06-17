@@ -3,6 +3,15 @@
 
 // https://www.deviantart.com/niivu/art/Macindows-870073866
 
+@font-face {
+	font-family: "FixedsysEx";
+	font-style: normal;
+	font-weight: normal;
+	src: local("Fixedsys Excelsior"),
+	       url("/assets/fonts/FixedsysEx.ttf") format("truetype"),
+	       url("/assets/fonts/FixedsysEx.woff") format("woff");
+}
+
 /* variables */
 :root {
 	--h-pad: 1em; // horizontal padding
@@ -84,7 +93,7 @@ html {
 }
 
 body {
-	background-color: var(--bgd-0);
+	background-color: var(--d-aqa);
 	color: var(--txt-1);
 	font-family: "Fira Sans";
 	margin:0;
@@ -158,24 +167,25 @@ mark {
 	margin: auto;
 	// width: 88px;
 	// height: 31px;
-	color: black !important;
+	// color: black !important;
+	color: var(--txt-1) !important; //!important overrides link styling
 	font-family: var(--csl-fnt);
 	text-decoration: none;
-	background: #C0C0C0;
+	background: var(--bgd-2);
 
 	/* borders */
 	border-width: 2px;
 	border-style: solid;
-	border-top-color: white;
-	border-left-color: white;
-	border-bottom-color:black;
-	border-right-color: black;
+	border-top-color: var(--bgd-4);
+	border-left-color: var(--bgd-4);
+	border-bottom-color:var(--bgd-0);
+	border-right-color: var(--bgd-0);
 
 	&:active {
-		border-top-color: black;
-		border-left-color: black;
-		border-bottom-color: white;
-		border-right-color: white;
+		border-top-color: var(--bgd-0);
+		border-left-color: var(--bgd-0);
+		border-bottom-color: var(--bgd-4);
+		border-right-color: var(--bgd-4);
 
 	}
 }
@@ -187,15 +197,15 @@ mark {
 	width: 100%;
 	white-space: nowrap;
 	overflow: hidden;
-	padding: 0px;
-	margin: 0px;
+	// padding: 0px;
+	// margin: 0px;
 	// color: black !important;
-	font-family: var(--csl-fnt);
+	// font-family: var(--csl-fnt);
 	text-decoration: none;
-	background: #C0C0C0;
+	background: var(--bgd-2);
 
 	/* borders */
-	border-top: 2px solid white;
+	border-top: 2px solid var(--bgd-4);
 
 	& ul {
 		margin: 0px;
@@ -210,10 +220,11 @@ mark {
 
 	& #btn-start {
 		// top: 0;
-		margin: 1px 0px 0px 1px;
+		margin-top: 1px;
+		margin-left: 1px;
 		width: 70px;
 		height: 27px;
-		font-family: arial, "MS Sans Serif";
+		font-family: "FixedsysEx", "MS Sans Serif", arial, sans-serif;
 	}
 }
 
