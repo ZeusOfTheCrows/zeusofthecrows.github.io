@@ -98,6 +98,7 @@ html {
 
 body {
 	background-color: var(--d-aqa);
+	// background-image: url(chrome://global/skin/media/imagedoc-darknoise.png);
 	color: var(--txt-1);
 	font-family: "Fira Sans";
 	margin:0;
@@ -195,9 +196,11 @@ mark {
 }
 
 .taskbar-95 {
-	display: block;
 	position: absolute;
 	bottom: 0px;
+
+	display: flex;
+	justify-content: space-between;
 
 	/* borders */
 	border-top: 2px solid var(--bgd-4);
@@ -206,35 +209,40 @@ mark {
 
 	white-space: nowrap;
 	overflow: hidden;
-	vertical-align: text-top;
-	// padding: 0px;
-	// margin: 0px;
-	// color: black !important;
-	// font-family: var(--csl-fnt);
 	text-decoration: none;
 	background: var(--bgd-2);
 
 	& * {
 	margin: 0px;
 	padding: 0px;
-
+	list-style-type:none;
 	}
 
-	& ul {
-		display: flex;
-		flex-direction: row;
-		// flex-wrap: nowrap;  // default
-		// justify-content: flex-start;  // default
-		align-items: center;  // default
-		margin: 0px;
-		padding: 0px;
-		& li {
-			// vertical-align: text-top; // ztodo this is hacky
-			display: inline-block;
-			padding: 0px;
-			margin-right: 4px;
-			list-style-type:none;
+	& #btn-start {
+		width: 76px;        // }
+		height: 29px;       // } this is really hacky, but it's
+		margin-bottom: 2px; // } the only thing that works
+		line-height: 29px;  // }
+		font-family: "Fira Sans";
+		font-size: 12pt;
+		text-shadow: 0.5px 0px var(--txt-1),
+		             1.0px 0px var(--txt-1),
+		             1.5px 0px var(--txt-1);
+		color: transparent;
+		letter-spacing: 1px;
+
+		& #start-orb {
+			color: var(--s-org);
+			height: 0.8em;
+			width: auto;
 		}
+
+		// &:before {  // proof of concept inline start orb
+			// content: "";
+			// background-image: url("/stadt/assets/images/logo.svg");
+			// width: 100px;
+		// 	content: url("../../favicon.gif");
+		// }
 	}
 
 	& #btn-sep {
@@ -247,19 +255,65 @@ mark {
 		}
 	}
 
-	& #btn-start {
-		width: 70px;        // }
-		height: 29px;       // } this is really hacky, but it's
-		margin-bottom: 2px; // } the only thing that works
-		line-height: 29px;  // }
-		font-family: "Fira Sans";
-		font-size: 12pt;
-		text-shadow: 0.5px 0px var(--txt-1), 1.5px 0px var(--txt-1);
-		color: transparent;
-		letter-spacing: 1px;
-		// &:before {  // proof of concept inline start orb
-		// 	content: url("../../favicon.gif");
-		// }
+	& #taskbar-btns {
+		display: flex;
+		flex-direction: row;
+		// flex-wrap: nowrap;  // default
+		// justify-content: flex-start;  // default
+		align-items: center;  // default
+		margin: 0px;
+		padding: 0px;
+		& li {
+			// vertical-align: text-top; // ztodo this is hacky
+			display: inline-block;
+			padding: 0px;
+			margin-right: 4px;
+			// list-style-type:none;
+		}
+	}
+
+	& #taskbar-tray {
+		//ztodo
+	}
+}
+
+#taskbar-balloon {
+	position: absolute;
+	bottom: 48px;
+	right: 32px;
+
+	background-color: var(--bgd-0);
+	width: 256px;
+	height: 64px;
+
+	border: 2px solid var(--txt-2);
+	border-radius: 16px;
+	padding: 12px;
+
+	// https://codingislove.com/css-speech-bubbles/
+	&:before {
+		content: "";
+		width: 0px;
+		height: 0px;
+		position: absolute;
+		border-left: 10px solid transparent;
+		border-right: 10px solid var(--txt-0);
+		border-top: 10px solid var(--txt-0);
+		border-bottom: 10px solid transparent;
+		right: 22px;
+		bottom: -20px;
+	}
+	&:after {
+		content: "";
+		width: 0px;
+		height: 0px;
+		position: absolute;
+		border-left: 10px solid transparent;
+		border-right: 10px solid var(--bgd-0);
+		border-top: 10px solid var(--bgd-0);
+		border-bottom: 10px solid transparent;
+		right: 24px;
+		bottom: -16px;
 	}
 }
 
@@ -309,26 +363,14 @@ mark {
 
 }
 
-#footer {
-	grid-column-start: 1;
-	grid-column-end:   4;
-
-	grid-row-start: 3;
-	grid-row-end:   3;
-}
-
-// #brands {
-	// bottom: 0;
-
-	// margin-top: auto;
-	// padding: 0;
-	// margin: 0;
-
-	// & * {
-		// padding: 0;
-		// margin: 0;
-	// }
+// #footer {
+	// grid-column-start: 1;
+	// grid-column-end:   4;
+//
+	// grid-row-start: 3;
+	// grid-row-end:   3;
 // }
+
 
 .img-grid {
 	width: 100%;
