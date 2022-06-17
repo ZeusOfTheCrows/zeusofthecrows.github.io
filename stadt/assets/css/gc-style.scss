@@ -165,7 +165,7 @@ mark {
 .btn-95 {
 	display: inline-block;
 	text-align: center;
-	justify-content: center;
+	// justify-content: center;
 	margin: 1px;
 	padding: 2px;
 	margin: auto;
@@ -180,16 +180,16 @@ mark {
 	/* borders */
 	border-width: 2px;
 	border-style: solid;
-	border-top-color: var(--btn-hilite);
-	border-left-color: var(--btn-hilite);
-	border-bottom-color:var(--btn-lolite);
-	border-right-color: var(--btn-lolite);
+	border-top-color:    var(--btn-hilite);
+	border-left-color:   var(--btn-hilite);
+	border-bottom-color: var(--btn-lolite);
+	border-right-color:  var(--btn-lolite);
 
 	&:active {
-		border-top-color: var(--btn-lolite);
-		border-left-color: var(--btn-lolite);
+		border-top-color:    var(--btn-lolite);
+		border-left-color:   var(--btn-lolite);
 		border-bottom-color: var(--btn-hilite);
-		border-right-color: var(--btn-hilite);
+		border-right-color:  var(--btn-hilite);
 
 	}
 }
@@ -197,10 +197,16 @@ mark {
 .taskbar-95 {
 	display: block;
 	position: absolute;
-	bottom: 0;
-	width: 100%;
+	bottom: 0px;
+
+	/* borders */
+	border-top: 2px solid var(--bgd-4);
+	padding: 2px 2px 0px 2px;
+	width: calc(100% - 4px);  // 4px padding otherwise scrollbar
+
 	white-space: nowrap;
 	overflow: hidden;
+	vertical-align: text-top;
 	// padding: 0px;
 	// margin: 0px;
 	// color: black !important;
@@ -208,36 +214,50 @@ mark {
 	text-decoration: none;
 	background: var(--bgd-2);
 
-	/* borders */
-	border-top: 2px solid var(--bgd-4);
+	& * {
+	margin: 0px;
+	padding: 0px;
+
+	}
 
 	& ul {
+		display: flex;
+		flex-direction: row;
+		// flex-wrap: nowrap;  // default
+		// justify-content: flex-start;  // default
+		align-items: center;  // default
 		margin: 0px;
 		padding: 0px;
 		& li {
-			vertical-align: text-top; // ztodo this is hacky
+			// vertical-align: text-top; // ztodo this is hacky
 			display: inline-block;
 			padding: 0px;
+			margin-right: 4px;
 			list-style-type:none;
 		}
 	}
 
-	& #btn-start {
-		// top: 0;
-		margin-top: 1px;
-		margin-left: 1px;
-		width: 70px;
-		height: 27px;
-		font-family: "MS Sans Serif", arial, sans-serif;
-		font-size: 12pt;
-		text-align: center;
-		vertical-align: middle;
+	& #btn-sep {
+		height: 20px;
+		&:active {  // "disable" clicking on separator
+			border-top-color:    var(--btn-hilite);
+			border-left-color:   var(--btn-hilite);
+			border-bottom-color: var(--btn-lolite);
+			border-right-color:  var(--btn-lolite);
+		}
+	}
 
+	& #btn-start {
+		width: 70px;        // }
+		height: 29px;       // } this is really hacky, but it's
+		margin-bottom: 2px; // } the only thing that works
+		line-height: 29px;  // }
+		font-family: "Fira Sans";
+		font-size: 12pt;
 		text-shadow: 0.5px 0px var(--txt-1), 1.5px 0px var(--txt-1);
 		color: transparent;
 		letter-spacing: 1px;
-		// font-family: "FixedsysEx", "MS Sans Serif", arial, sans-serif;
-		// &:before {
+		// &:before {  // proof of concept inline start orb
 		// 	content: url("../../favicon.gif");
 		// }
 	}
@@ -297,18 +317,18 @@ mark {
 	grid-row-end:   3;
 }
 
-#brands {
+// #brands {
 	// bottom: 0;
 
 	// margin-top: auto;
-	padding: 0;
-	margin: 0;
+	// padding: 0;
+	// margin: 0;
 
-	& * {
-		padding: 0;
-		margin: 0;
-	}
-}
+	// & * {
+		// padding: 0;
+		// margin: 0;
+	// }
+// }
 
 .img-grid {
 	width: 100%;
