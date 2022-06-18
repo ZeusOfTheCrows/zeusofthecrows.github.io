@@ -1,24 +1,26 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
 
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="theme-color" content="#282828" />
 		<meta name="color-scheme" content="dark light" />
-
-		<!--<title>
-			{% if page.title %}{{ page.title | slugify: "raw" }} {{ site.sep_char }} {% else %}{% endif %} {{ site.title | downcase | escape }}
-		</title>-->
 		<title>Ɀeus' Stadt</title>
 		<meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}" />
 		<link rel="stylesheet" href="./assets/css/gc-style.css" />
-		<!-- i don't know if this needs to be here? -->
+		<!-- for icon font -->
+		<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css">
 		<link rel="shortcut icon" type="image/x-icon" href="./favicon.gif" />
 		<link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}" />
 	</head>
 
 	<body>
+		<!--   ___                 -->
+		<!--  ' //  ___ __ __ __    -->
+		<!--   //  //_\)|| ||(/_'  -->
+		<!--  //__,\\__,`l,l|,_/)  -->
+		<!--  oi! what you doing in me source code, cunt?  -->
 		{{ content }}
 	</body>
 

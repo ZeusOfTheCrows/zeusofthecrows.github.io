@@ -26,9 +26,7 @@ description: >- # this means to ignore newlines until "baseurl:"
 #baseurl: "/" # the subpath of your site, e.g. /blog
 url: "zeusofthecrows.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 markdown: kramdown
-mastodon_username: zeusofthecrows
-github_username: zeusofthecrows
-reddit_username: zeusofthecrows
+lang: en-GB
 sep_char: ¦ # separator character for lists (one ¦ two ¦ three)
 edit_date: 2022-06-18
 
