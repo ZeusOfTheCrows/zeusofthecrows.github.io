@@ -209,7 +209,7 @@ mark {
 
 .window-9x,
 .btn-9x,
-.window-decs li {
+.window-decs li:before {
 	background-color: var(--bgd-2);
 	// padding: 4px;
 	padding: 2px;
@@ -233,39 +233,36 @@ mark {
 
 	& .window-decs {
 		margin: 0px;
-		& li {
-			display: inline-block;
-			position: relative;
-			bottom: 2px;
-			margin: 0px;
-			padding: 0px;
-			// padding: -2px 0px;
-			font-family: "Material Design Icons";
-			font-size: 0.6em;
-			width: 1.2em;  // make square(ish)
-			// height: 0.6em;
-		}/*
+
 		& .window-min:before {
-			// position: absolute;
-			// left: 2px;
-			font-family: "Material Design Icons";
-			font-size: 0.6em;
 			content: "󰖰";
 		}
 		& .window-max:before {
-			// position: relative;
-			// left: 2px;
-			font-family: "Material Design Icons";
-			font-size: 0.6em;
 			content: "󰖯";
 		}
 		& .window-cls:before {
-			// position: static;
-			// left: 2px;
-			font-family: "Material Design Icons";
-			font-size: 0.6em;
 			content: "󰖭";
-		}*/
+		}
+
+		& li {
+			visibility: hidden;  // hide to replace with before
+			font-family: "Material Design Icons";
+			margin-right: 16px;  // ztodo why this arbitrary number?
+
+			&:before {  // attributes for all buttons
+				content: " ";
+				visibility: visible;
+				display: inline-block;
+				position: absolute;
+				margin: 0px;
+				padding: 0px;
+				top: 4px;  // the tip says this has no effect but it really does
+				// font-family: "Material Design Icons";
+				font-size: 0.6em;
+				width: 1.2em;  // make square(ish)
+				height: 1.2em;
+			}
+		}
 	}
 }
 
@@ -283,8 +280,6 @@ mark {
 	position: absolute;
 	bottom: 512px;
 	left: 64px;
-	// width:  512px;
-	// height: 256px;
 	& iframe {
 		width:  512px;
 		height: 256px;
@@ -316,6 +311,8 @@ mark {
 	}
 
 	& #btn-start {
+		// display: inline-flex;  // ztodo maybe try this
+		// flex-direction: space-around;
 		width: 76px;        // }
 		height: 29px;       // } this is really hacky, but it's
 		margin-bottom: 2px; // } the only thing that works
