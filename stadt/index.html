@@ -3,41 +3,38 @@ layout: gc-default
 ---
 
 <div id="content" aria-label="Content">
-
-	<!-- <header id="header" class="mc-window"> -->
-		<!-- <p> -->
-			<!-- <img src="./assets/images/gideon-shield.svg" style="border-radius: 8px; height: 100px;"> ZeusOfTheCrows -->
-		<!-- </p> -->
-	<!-- </header> -->
-
 	<div id="music-player" class="window-9x">
 		<div class="window-title">
-			<span class=" ms-bold">My Spotify Playlist</span>
+			<span class=" ms-bold">Music Player</span>
 			<ul class="window-decs">
 				<li class="window-min"></li>
 				<li class="window-max"></li>
 				<li class="window-cls"></li>
 			</ul>
 		</div>
+		<div class="window-menu">
+			<ul>
+				<li><u>D</u>isc</li>
+				<li><u>V</u>iew</li>
+				<li><u>P</u>lay</li>
+				<li>F<u>a</u>vourites</li>
+				<li><u>H</u>elp</li>
+			</ul>
+		</div>
 		<div class="window-content">
-			<iframe src="https://open.spotify.com/embed/playlist/5q8crqSxKiqtpIKnAgkYRU?utm_source=generator&theme=0" width="100%" height="200" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+			<iframe src="https://open.spotify.com/embed/playlist/5q8crqSxKiqtpIKnAgkYRU?theme=1" width="100%"frameBorder="0" allowfullscreen=""></iframe>
 		</div>
 	</div>
 
-	<div id="sidebar-left" class="mc-window">
-
+	<div id="link-to-me" class="window-9x">
 		<p>
 			feel free to steal any images you like - most images that i haven't made
 			myself link to the site i found them (or the inspiration for them).
 		</p>
 
-		<p>
-			lorem ipsum dolor sit amet etc.
-		</p>
-
 		<hr />
 
-		<p>
+		<p style="text-align: center;">
 			<b>link to me!</b>:
 			<ul id="zeus-buttons" class="img-grid">
 				<li><a href="./">
@@ -59,10 +56,6 @@ layout: gc-default
 			</ul>
 		</p>
 
-		<hr />
-
-		<!--<iframe src="https://open.spotify.com/embed/playlist/5q8crqSxKiqtpIKnAgkYRU" width="100%" height="250" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>-->
-		<iframe src="https://open.spotify.com/embed/playlist/5q8crqSxKiqtpIKnAgkYRU?utm_source=generator&theme=0" width="100%" height="200" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
 	</div>
 
 	<div id="main-content" class="mc-window">
@@ -78,44 +71,16 @@ layout: gc-default
 		</p>
 	</div>
 
-	<div id="sidebar-right" class="mc-window">
-
-		<p>
-			<ul id="antipixels" class="img-grid">
-				<!-- <li><img class="btn-150x15" src="./assets/images/antipix/test-wide.png"></li> -->
-				<li><a href="https://keysklubhouse.neocities.org/home.html">
-						<img class="btn-80x15" src="./assets/images/antipix/tea.png"
-							alt="tea powered" />
-					</a></li>
-				<li><a>
-						<img class="btn-80x15" src="./assets/images/antipix/gb.png"
-							alt="made in gb" />
-					</a></li>
-				<li><a href="https://web.archive.org/web/20120827101340/http://dyke.web.fc2.com:80/">
-						<img class="btn-80x15" src="./assets/images/antipix/lgbt.png"
-							alt="lgbt+ friendly" />
-					</a></li>
-					<li><a href="https://web.archive.org/web/20120827101340/http://dyke.web.fc2.com:80/">
-						<img class="btn-80x15" src="./assets/images/antipix/open.gif"
-							alt="lgbt+ friendly" />
-					</a></li>
-			</ul>
-		</p>
-
-		<hr />
-
+	<div id="webrings" class="window-9x">
 		<!-- js for yesterweb ring -->
 		<script src="https://yesterwebring.neocities.org/script.js"></script>
 		<webring-css site="https://zeusofthecrows.github.io/"></webring-css>
-
 			<style>:root {
 				--textColor: var(--s-grn);
 				--bgColor: var(--bgd-3);
 				--linkColor: var(--s-blu);
 			}</style>
-
 			<style>
-
 				@font-face {
 					font-family: "FixedsysEx";
 					font-style: normal;
@@ -124,7 +89,6 @@ layout: gc-default
 					       url("/assets/fonts/FixedsysEx.ttf") format("truetype"),
 					       url("/assets/fonts/FixedsysEx.woff") format("woff");
 				}
-
 				:root {
 					/* --mybg: linear-gradient(var(--d-red), var(--d-blu)); */
 					--mybg: url("https://color.firefox.com/images/bg-031-9570e8d1f7a5f835c92e764693337f43.svg");
@@ -144,7 +108,6 @@ layout: gc-default
 					/* --h1margin: 0; */
 					/* --textmargin:0; */
 				}
-
 			</style>
 
 			<hr />
@@ -276,6 +239,10 @@ layout: gc-default
 		<li><a>
 			<img class="btn-80x15" src="./assets/images/antipix/gb.png"
 				alt="made in gb" />
+		</a></li>
+		<li><a>
+			<img class="btn-80x15" src="./assets/images/antipix/trans.png"
+				alt="trans inclusionary" />
 		</a></li>
 		<li><a>
 			<img class="btn-80x15" src="./assets/images/antipix/slava-ukraini.png"
