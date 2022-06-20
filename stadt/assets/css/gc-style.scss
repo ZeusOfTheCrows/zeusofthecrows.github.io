@@ -5,7 +5,7 @@
 // https://gist.github.com/bluh/2b95102fd6d3732dc9825be749498fa9
 // https://88x31.tumblr.com/
 // https://www.reddit.com/r/desktops/comments/nlq789/recreated_windows_95_in_my_desktop_fully/
-// ztodo theme spotify player
+// ztodo remove spotify player
 // ztodo consolidate fonts
 
 @font-face {
@@ -35,33 +35,31 @@
 	--d-ppl: #B16286;
 	--d-aqa: #689D6A;
 	--d-org: #D65D0E;
+
+	// dark mode colours
+	--bgd-0: #282828;
+	--bgd-1: #3C3836;
+	--bgd-2: #504945;
+	--bgd-3: #665C54;
+	--bgd-4: #7C6F64;
+	--bgd-5: #928374;
+	--txt-4: #A89984;
+	--txt-3: #BDAE93;
+	--txt-2: #D5C4A1;
+	--txt-1: #EBDBB2;
+	--txt-0: #FBF1C7;
+	--s-red: #FB4943;
+	--s-grn: #B8BB26;
+	--s-ylw: #FABD2F;
+	--s-blu: #83A598;
+	--s-ppl: #D3869B;
+	--s-aqa: #8EC07C;
+	--s-org: #FE8019;
+	--btn-hilite: var(--bgd-4);
+	--btn-lolite: var(--bgd-0);
 }
 
 /* light mode colours */
-@media (prefers-color-scheme: dark) {
-	:root {
-		--bgd-0: #282828;
-		--bgd-1: #3C3836;
-		--bgd-2: #504945;
-		--bgd-3: #665C54;
-		--bgd-4: #7C6F64;
-		--bgd-5: #928374;
-		--txt-4: #A89984;
-		--txt-3: #BDAE93;
-		--txt-2: #D5C4A1;
-		--txt-1: #EBDBB2;
-		--txt-0: #FBF1C7;
-		--s-red: #FB4943;
-		--s-grn: #B8BB26;
-		--s-ylw: #FABD2F;
-		--s-blu: #83A598;
-		--s-ppl: #D3869B;
-		--s-aqa: #8EC07C;
-		--s-org: #FE8019;
-		--btn-hilite: var(--bgd-4);
-		--btn-lolite: var(--bgd-0);
-	}
-}
 @media (prefers-color-scheme: light) {
 	:root {
 		--bgd-0: #FBF1C7;
@@ -98,10 +96,6 @@ html {
 		display: block;
 		height: 2em;
 		margin: -2em 0 0;
-	}
-
-	& head title:after {
-		content: "test";
 	}
 }
 
@@ -149,12 +143,33 @@ a {
 	}
 }
 
-.btn-88x31, .btn-80x15, .btn-150x15, .pixel-art {
+.btn-88x31,
+.btn-80x15,
+.btn-150x15,
+.pixel-art,
+.window-title:before {
 	/* render pixel art pixelly when zoomed in */
 	image-rendering: pixelated;   /* fallback, pixellated */
 	image-rendering: crisp-edges; /* unsure, filter e.g. hq2x */
 }
-
+.btn-88x31 {
+	width:  88px;
+	height: 31px;
+}
+.btn-80x15 {
+	width:  80px;
+	height: 15px;
+}
+.btn-150x15 {
+	width: 150px;
+	height: 15px;
+}
+.window-title:before {
+		content: url(/stadt/assets/images/window-icons/cd-player.png);
+		height: 16px;
+		width: 16px;  // ztodo make generic
+		padding-right: 2px;  // ztodo this is not vertically centred
+	}
 /* colour highlighted text */
 mark {
 	margin: -0.5em -0.5ch;
@@ -225,11 +240,12 @@ mark {
 	border-bottom-color: var(--btn-lolite);
 	border-right-color:  var(--btn-lolite);
 }
-.window-title {
+.window-titlebar {
 	background-color: var(--s-blu);
 	color: var(--bgd-1);
 	margin: 0px 0px 2px 0px;
 	padding: 0px 2px;
+	height: 20px;
 
 	display: flex;
 	flex-direction: row;
@@ -273,12 +289,14 @@ mark {
 }
 .window-menu ul {
 	margin: 0px;
+	padding: 0px;
 	& li {
 		display: inline-block;
+		padding-left: 2px;
 	}
 }
 
-.window-content {
+.indent-95 {
 	margin: 0px;
 	border-width: 2px;
 	border-style: solid;
@@ -292,6 +310,11 @@ mark {
 	position: absolute;
 	bottom: 512px;
 	left: 64px;
+
+	& .window-title:before {
+		content: url(/stadt/assets/images/window-icons/cd-player.png);
+	}
+
 	& iframe {
 		width:  512px;
 		height: 256px;
@@ -434,10 +457,10 @@ mark {
 }
 
 #content {
-	// width: min(100%, 1100px);
-	// margin: auto;
-	// display: grid;
-	// grid-gap: 16px 16px; // row column
+	width: min(100%, 1100px);
+	margin: auto;
+	display: grid;
+	grid-gap: 16px 16px; // row column
 }
 
 #sidebar-left, #sidebar-right {
