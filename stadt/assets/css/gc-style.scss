@@ -165,7 +165,7 @@ a {
 	height: 15px;
 }
 .window-title:before {
-		content: url(/stadt/assets/images/window-icons/cd-player.png);
+		// content: url(/stadt/assets/images/window-icons/cd-player.png);
 		height: 16px;
 		width: 16px;  // ztodo make generic
 		padding-right: 2px;  // ztodo this is not vertically centred
@@ -337,11 +337,12 @@ mark {
 
 		& #current-song {
 			width: 274px;  // narrowest it can be and still have a volume scrubber
+			height: calc(100% - 9px);  // list elements have bottom padding of 9?
 			// height: 60px;
 			// background-color: var(--d-org);
 			// maybe album art? if taller
 			// background: url("/stadt/assets/images/backgrounds/chainlink.jpg");
-			background: url("/stadt/assets/images/backgrounds/chainlink.jpg");
+			background: url("/stadt/assets/images/backgrounds/swirl.gif");
 			grid-area: 1 / 1 / 2 / 3;
 			// display: inline-flex;
 			// justify-content: center;
@@ -375,12 +376,12 @@ mark {
 			text-align: right;
 			// width: 64px;
 			margin: 0px;
-			padding: 4px;
+			padding: 2px 2px;  // for border size
 			grid-column: 1 / 2;
 		}
 		& .current-info {
 			margin: 0px;
-			padding: 2px;
+			padding: 0px 2px;
 			// background-color: var(--bgd-3);
 			// width: auto;
 			grid-column: 2 / 4;
