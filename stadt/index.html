@@ -22,23 +22,26 @@ layout: gc-default
 				<li><u>H</u>elp</li>
 			</ul>
 		</div>
-		<div class="window-content" style="padding: 1px; width: 100%; display: grid;">
-			<!-- narrowest it can be and still have a volume scrubber -->
-			<audio controls preload="none" style="width: 274px; margin: 8px;
-				border-radius: 0px;  opacity: 0.5; grid-column-start: 1; grid-column-end: 3;
-				" id="current-song" class="indent-95">
-				<!-- https://css-tricks.com/lets-create-a-custom-audio-player ? -->
-				<!-- all 3 so i can change the song file without altering html -->
-				<source src="./assets/music/zeus-current-song.ogg"	type="audio/ogg" />
-				<source src="./assets/music/zeus-current-song.wav"	type="audio/wav" />
-				<source src="./assets/music/zeus-current-song.mp3"	type="audio/mp3" />
-			</audio>
-				<p style="text-align: right; grid-column-start: 1; grid-column-end: 2;">Artist:</p>
-				<p style=" grid-column-start: 2; grid-column-end: 3;" class="indent-95">Abney Park</p>
+		<div class="window-content">
+			<div id="current-song" class="indent-95">
+				<audio controls preload="none">
+					<source src="./assets/music/zeus-current-song.ogg"	type="audio/ogg" />
+					<source src="./assets/music/zeus-current-song.wav"	type="audio/wav" />
+					<source src="./assets/music/zeus-current-song.mp3"	type="audio/mp3" />
+					<!-- https://css-tricks.com/lets-create-a-custom-audio-player ? -->
+					<!-- all 3 so i can change the song file without altering html -->
+				</audio>
+			</div>
+
+			<p class="current-label current-artist"><u>A</u>rtist:</p>
+			<p class="current-label current-title" >Trac<u>k</u>:</p>
+			<p class="current-info  current-artist indent-95">Abney Park</p>
+			<p class="current-info  current-title  indent-95">Airship Pirate</p>
+				<!-- <p style="text-align: right; grid-column-start: 1; grid-column-end: 2;">Artist:</p>
+				<p style="grid-column-start: 2; grid-column-end: 3;" class="indent-95">Abney Park</p>
 				<p style="text-align: right;  grid-column-start: 1; grid-column-end: 2;">Title:</p>
-				<p style="grid-column-start: 2; grid-column-end: 3;" class="indent-95">Airship Pirate</p>
-				</tr>
-			</table>
+				<p style="grid-column-start: 2; grid-column-end: 3;" class="indent-95">Airship Pirate</p> -->
+			<!-- </div> -->
 			<!-- <table style="width: 100%;">
 				<tr>
 					<td style="text-align: right;">Artist:</td>
@@ -49,6 +52,17 @@ layout: gc-default
 					<td class="indent-95">Airship Pirate</td>
 				</tr>
 			</table> -->
+
+			<ul class="button-grid">
+				<li><a href="#">
+					<img class="btn-88x31"
+						src="/stadt/assets/images/buttons/music/licence.png"
+						alt="not licensed to supply recorded music" /></a></li>
+				<li><a href="https://open.spotify.com/playlist/5q8crqSxKiqtpIKnAgkYRU">
+					<img class="btn-88x31"
+						src="/stadt/assets/images/buttons/music/z-spotify.gif"
+						alt="not licensed to supply recorded music" /></a></li>
+			</ul>
 			<!-- <iframe src="https://open.spotify.com/embed/playlist/5q8crqSxKiqtpIKnAgkYRU?theme=1" width="100%"frameBorder="0" allowfullscreen=""></iframe> -->
 		</div>
 	</div>
@@ -90,7 +104,7 @@ layout: gc-default
 
 	</div>
 
-	<div id="main-content" class="mc-window">
+	<div id="main-content" class="window-9x">
 		<h1>welcome!</h1>
 		<p>
 			this website is dark mode compatible!
@@ -98,9 +112,8 @@ layout: gc-default
 			i don't really know why i thought making this would be a good idea -
 			i'm terrible at words - but i like the idea of a hideous geocities-esque
 			site (stadt because i rather like the word).
-		</p><p>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In nisl nisi scelerisque eu ultrices vitae auctor eu. Mauris nunc congue nisi vitae. Varius quam quisque id diam vel quam elementum pulvinar. Et malesuada fames ac turpis egestas sed. Sit amet nisl suscipit adipiscing bibendum. Viverra justo nec ultrices dui sapien eget mi. Nisi porta lorem mollis aliquam ut porttitor leo a. Vitae tortor condimentum lacinia quis vel eros donec ac. Quisque non tellus orci ac auctor. Hendrerit dolor magna eget est lorem ipsum dolor. Amet venenatis urna cursus eget nunc scelerisque viverra. Tristique senectus et netus et malesuada fames ac turpis egestas. Lacinia quis vel eros donec ac odio. Consectetur lorem donec massa sapien faucibus et. Quis auctor elit sed vulputate. Porta lorem mollis aliquam ut porttitor leo. Donec enim diam vulputate ut pharetra sit amet aliquam id. Blandit aliquam etiam erat velit scelerisque in dictum non consectetur.
 		</p>
+		<!-- <iframe src="../../" style="height: 256px; width: 512px;"></iframe> -->
 	</div>
 
 	<div id="webrings" class="window-9x">

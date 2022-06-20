@@ -290,14 +290,25 @@ mark {
 .window-menu ul {
 	margin: 0px;
 	padding: 0px;
+	cursor: default;
+
 	& li {
 		display: inline-block;
-		padding-left: 2px;
+		padding: 0px 4px;
+		user-select: none;
+
+		&:hover {
+			background-color: var(--bgd-3);
+		}
+		&:active u {
+			color: var(--txt-0);
+		}
 	}
 }
 
 .indent-95 {
 	margin: 0px;
+	background-color: var(--bgd-0);
 	border-width: 2px;
 	border-style: solid;
 	border-top-color:    var(--btn-lolite);
@@ -308,17 +319,87 @@ mark {
 
 #music-player {
 	position: absolute;
-	bottom: 512px;
+	top: 512px;
 	left: 64px;
 
 	& .window-title:before {
 		content: url(/stadt/assets/images/window-icons/cd-player.png);
 	}
 
-	& iframe {
-		width:  512px;
-		height: 256px;
+	& .window-content {
+		// padding: 1px;
+		// width: 100%;
+		padding: 8px;
+		display: grid;
+		gap: 4px 8px;
+		grid-template-row:     min-content;
+		grid-template-columns: max-content;
+
+		& #current-song {
+			width: 274px;  // narrowest it can be and still have a volume scrubber
+			// height: 60px;
+			// background-color: var(--d-org);
+			// maybe album art? if taller
+			// background: url("/stadt/assets/images/backgrounds/chainlink.jpg");
+			background: url("/stadt/assets/images/backgrounds/chainlink.jpg");
+			grid-area: 1 / 1 / 2 / 3;
+			// display: inline-flex;
+			// justify-content: center;
+
+			& audio {
+				width: 100%;
+				height: 100%;
+				border-radius: 0px;
+				opacity: 0.8;
+
+				// i think this is probably an unanounced feature–let it sleep for now
+				// --media-background: var(--bgd-0);
+				// --duration-color: var(--d-ylw);
+			}
+		}
+		& .button-grid {  // ztodo make generic
+			// why does everything have padding-left: 40px;?? ztodo
+			list-style-type:none;
+			display: inline-block;
+			padding: 0px;
+			margin: 0px;
+			grid-area: 1 / 3 / 2 / 4;
+		}
+		& .current-artist {
+			grid-row: 2 / 3;
+		}
+		& .current-title {
+			grid-row: 3 / 4;
+		}
+		& .current-label {
+			text-align: right;
+			// width: 64px;
+			margin: 0px;
+			padding: 4px;
+			grid-column: 1 / 2;
+		}
+		& .current-info {
+			margin: 0px;
+			padding: 2px;
+			// background-color: var(--bgd-3);
+			// width: auto;
+			grid-column: 2 / 4;
+		}
+
+		// & #current-song-info > p:nth-child(2n) {
+			// text-align: right;
+			// grid-area: 2 / 1 / 3 / 2;
+		// }
+		// & #current-song-info > p:nth-child(2n+1) {
+			// text-align: right; grid-column-start: 2; grid-column-end: 3;
+			// grid-area: 2 / 2 / 3 / 3;
+		// }
 	}
+
+	// & iframe {
+	// 	width:  512px;
+	// 	height: 256px;
+	// }
 }
 
 .taskbar-9x {
