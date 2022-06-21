@@ -501,15 +501,57 @@ mark {
 }
 
 #startmenu-9x {
-		position: absolute;
-		display: none;
-		top:    0px;
-		left:   0px;
-		width:  100vw;
-		height: 100vh;
-		// background-color: red;
+	position: absolute;
+	display: none;
+	top:    0px;
+	left:   0px;
+	width:  100vw;
+	height: 100vh;
+	// background-color: red;
+
+	&:target {
+		display: block;
+	}
 
 	& #startmenu-window {
+		position: absolute;
+		display: block;  //does this get overriden?
+		bottom: 39px;  // ztodo make var (taskbar height)
+		left: 0px;
+
+		display: grid;
+		grid-auto-flow: column;
+		gap: 4px;
+
+		&:before {
+			display: block;
+			width: 32px;
+			height: calc(100% - 8px);  // 2 * vertical padding
+
+			grid-column: 1 / 2;
+
+			background-color: var(--d-blu);
+			color: var(--bgd-3);
+			content: "ⱿeusOfTheCrows";
+			font-weight: bold;
+			font-size: 18pt;
+			padding: 4px 2px;
+
+			writing-mode: vertical-rl;
+			transform: rotate(180deg);
+
+		}
+
+		& ul {
+			grid-column: 2 / 3;
+			// padding: 4px;
+			// width: 64px;
+			display: initial;
+
+			& .btn-sep {
+				width: 100%;
+			}
+		}
 	}
 
 	& #dismiss-startmenu {
@@ -521,10 +563,6 @@ mark {
 		height: 100vh;
 		cursor: default;
 		// background-color: red;
-	}
-
-	&:target {
-		display: block;
 	}
 }
 
@@ -633,7 +671,8 @@ mark {
 	flex-flow: row wrap;
 
 	& img {
-		margin: 0px 1px;
+		// margin: 0px 1px;
+		margin: 0px;
 	}
 
 	& ::marker {
