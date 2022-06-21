@@ -436,6 +436,16 @@ mark {
 		height: 29px;       // } this is really hacky, but it's
 		margin-bottom: 2px; // } the only thing that works
 		line-height: 29px;  // }
+
+		&:focus {
+			outline: none;
+			-moz-focusring: none;
+			// border: none;
+		}
+		&:focus-visible {
+			outline: 4px solid blue;
+			-moz-focusring: 4px solid red;
+		}
 		// font-family: "Fira Sans";
 		// font-size: 12pt;
 		// // text-shadow: 0.5px 0px var(--txt-1),
@@ -501,7 +511,7 @@ mark {
 }
 
 #startmenu-9x {
-	position: absolute;
+	position: fixed;
 	display: none;
 	top:    0px;
 	left:   0px;
@@ -555,7 +565,7 @@ mark {
 	}
 
 	& #dismiss-startmenu {
-		position: absolute;
+		position: fixed;
 		display: block;
 		top:    0px;
 		left:   0px;
@@ -567,7 +577,7 @@ mark {
 }
 
 #taskbar-balloon {
-	position: absolute;  // this should be sticky, but breaks - ztodo?
+	position: fixed;  // this should be sticky, but breaks - ztodo?
 	bottom: 44px;
 	right: 32px;
 
