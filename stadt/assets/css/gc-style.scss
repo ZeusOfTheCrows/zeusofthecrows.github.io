@@ -308,7 +308,7 @@ mark {
 	}
 }
 
-.indent-95 {
+.indent-9x {
 	margin: 0px;
 	background-color: var(--bgd-0);
 	border-width: 2px;
@@ -463,7 +463,7 @@ mark {
 		// }
 	}
 
-	& #btn-sep {
+	& .btn-sep {
 		height: 20px;
 		&:active {  // "disable" clicking on separator
 			border-top-color:    var(--btn-hilite);
@@ -522,7 +522,8 @@ mark {
 
 		display: grid;
 		grid-auto-flow: column;
-		gap: 4px;
+		// gap: 4px;
+		gap: 0px;
 
 		&:before {
 			display: block;
@@ -543,14 +544,25 @@ mark {
 
 		}
 
-		& ul {
+		& #startmenu-btns {
 			grid-column: 2 / 3;
 			// padding: 4px;
 			// width: 64px;
 			display: initial;
+			margin: 4px 0px;
 
-			& .btn-sep {
-				width: 100%;
+			& .startmenu-sep {
+				height: 4px;
+				margin-top: 4px;
+				margin-bottom: 6px;
+				& .btn-sep {
+					display: block;
+					width: 100%;
+				}
+			}
+
+			& .startmenu-btn {
+				padding: 0px 8px;
 			}
 		}
 	}
@@ -568,7 +580,7 @@ mark {
 }
 
 #taskbar-balloon {
-	position: fixed;  // this should be sticky, but breaks - ztodo?
+	position: fixed;
 	bottom: 44px;
 	right: 32px;
 
@@ -672,8 +684,8 @@ mark {
 	flex-flow: row wrap;
 
 	& img {
-		// margin: 0px 1px;
-		margin: 0px;
+		margin: 0px 1px;
+		// margin: 0px;
 	}
 
 	& ::marker {
