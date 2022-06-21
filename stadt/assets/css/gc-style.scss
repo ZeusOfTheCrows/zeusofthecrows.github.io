@@ -437,15 +437,6 @@ mark {
 		margin-bottom: 2px; // } the only thing that works
 		line-height: 29px;  // }
 
-		&:focus {
-			outline: none;
-			-moz-focusring: none;
-			// border: none;
-		}
-		&:focus-visible {
-			outline: 4px solid blue;
-			-moz-focusring: 4px solid red;
-		}
 		// font-family: "Fira Sans";
 		// font-size: 12pt;
 		// // text-shadow: 0.5px 0px var(--txt-1),
