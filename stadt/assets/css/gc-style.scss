@@ -8,6 +8,7 @@
 // ztodo consolidate fonts
 // maybe use grid? probably not
 // https://win98icons.alexmeub.com/
+// ztodo lots of things have mar 0 pad 0 - maybe consolidate?
 // https://news-cdn.softpedia.com/images/news2/windows-95-is-now-available-on-linux-mac-and-windows-as-an-electron-app-522375-8.jpg
 
 @font-face {
@@ -20,6 +21,7 @@
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap');
 
 /* variables */
 :root {
@@ -90,7 +92,6 @@
 html {
 	/* smoothly scroll to anchor link */
 	scroll-behavior: smooth;
-
 		/* this is here because i think it's semantically easier to read */
 		/* offset anchor link down from the top of the page */
 	& :target:before {
@@ -98,6 +99,26 @@ html {
 		display: block;
 		height: 2em;
 		margin: -2em 0 0;
+	}
+
+	/* colour scrollbars with css */
+	scrollbar-color: var(--bgd-2) var(--bgd-1);
+	/* colour scrollbars, but this time for webkit being dumb */
+	&::-webkit-scrollbar {
+		// border-radius: $crnr-radius;
+		// background-color: $background-colour;
+	}
+	&::-webkit-scrollbar-thumb {
+		// border-radius: $crnr-radius;
+		// background-color: $text-07;
+	}
+	&::-webkit-scrollbar-button {
+		// border-radius: $crnr-radius;
+		// background-color: $text-08;
+	}
+	&::-webkit-scrollbar-corner {
+		// border-radius: $crnr-radius;
+		// background-color: $background-colour;
 	}
 }
 
@@ -113,19 +134,25 @@ body {
 	border:0;
 }
 
-h1, h2 {
+h1,
+h2 {
 	color: var(--s-org);
 	border-bottom: 0.1em solid var(--d-org);
 }
-h3, h4, h5, h6 {
+h3,
+h4,
+h5,
+h6 {
 	color: var(--s-org);
 }
 
-strong, b { // bold (for ctrl+f)
+strong,
+b { // bold (for ctrl+f)
 	color: var(--txt-0);
 }
 
-em, i { // italic (for ctrl+f)
+em,
+i { // italic (for ctrl+f)
 	color: var(--s-ylw);
 }
 
@@ -143,6 +170,13 @@ a {
 	&:active, &:focus {
 		color: var(--s-red);
 	}
+}
+
+pre,
+code,  // maybe use fira code?
+samp,
+.ascii-art {
+	font-family: "Fira Mono", "Fira Code", monospace;
 }
 
 .btn-88x31,
@@ -205,7 +239,11 @@ mark {
 }
 
 .btn-9x,
-.window-decs li {  // ztodo window buttons don't click
+.window-decs li
+html::-webkit-scrollbar,
+html::-webkit-scrollbar-thumb,
+html::-webkit-scrollbar-button,
+html::-webkit-scrollbar-corner {  // ztodo window buttons don't click
 	display: inline-block;
 	text-align: center;
 	// justify-content: center;
@@ -256,7 +294,7 @@ mark {
 	align-items: center;
 
 	& .window-decs {
-		margin: 0px;
+		margin: 0;
 
 		& .window-min:before {
 			content: "󰖰";
@@ -278,8 +316,8 @@ mark {
 				visibility: visible;
 				display: inline-block;
 				position: absolute;
-				margin: 0px;
-				padding: 0px;
+				margin: 0;
+				padding: 0;
 				top: 4px;  // the tip says this has no effect but it really does
 				// font-family: "Material Design Icons";
 				font-size: 0.6em;
@@ -291,8 +329,8 @@ mark {
 	}
 }
 .window-menu ul {
-	margin: 0px;
-	padding: 0px;
+	margin: 0;
+	padding: 0;
 	cursor: default;
 
 	& li {
@@ -310,7 +348,7 @@ mark {
 }
 
 .indent-9x {
-	margin: 0px;
+	margin: 0;
 	background-color: var(--bgd-0);
 	border-width: 2px;
 	border-style: solid;
@@ -351,9 +389,9 @@ mark {
 			// justify-content: center;
 
 			& audio {
-				width: 100%;
+				width:  100%;
 				height: 100%;
-				border-radius: 0px;
+				border-radius: 0;
 				opacity: 0.8;
 
 				// i think this is probably an unanounced feature–let it sleep for now
@@ -365,8 +403,8 @@ mark {
 			// why does everything have padding-left: 40px;?? ztodo
 			list-style-type:none;
 			display: inline-block;
-			padding: 0px;
-			margin: 0px;
+			padding: 0;
+			margin: 0;
 			grid-area: 1 / 3 / 2 / 4;
 		}
 		& .current-artist {
@@ -378,12 +416,12 @@ mark {
 		& .current-label {
 			text-align: right;
 			// width: 64px;
-			margin: 0px;
+			margin: 0;
 			padding: 2px 2px;  // for border size
 			grid-column: 1 / 2;
 		}
 		& .current-info {
-			margin: 0px;
+			margin: 0;
 			padding: 0px 2px;
 			// background-color: var(--bgd-3);
 			// width: auto;
@@ -412,14 +450,25 @@ mark {
 	left: 128px;
 
 	& .window-content {
-		width: 512px;
-		height: 256px;
+		padding: 4px 8px;
+		display: grid;
+		grid-auto-flow: row;
+		overflow-y: scroll;  // add dummy scrollbar for æsthetic
+
+		& pre {
+			margin: 0;
+			grid-rows: 1 / 2;
+
+			// &:after {
+
+			// }
+		}
 	}
 }
 
 .taskbar-9x {
 	position: fixed;
-	bottom: 0px;
+	bottom: 0;
 
 	display: flex;
 	justify-content: space-between;
@@ -435,8 +484,8 @@ mark {
 	background: var(--bgd-2);
 
 	& * {
-	margin: 0px;
-	padding: 0px;
+	margin: 0;
+	padding: 0;
 	list-style-type:none;
 	display: inline-block;
 	}
@@ -516,8 +565,8 @@ mark {
 #startmenu-9x {
 	position: fixed;
 	display: none;
-	top:    0px;
-	left:   0px;
+	top:    0;
+	left:   0;
 	width:  100vw;
 	height: 100vh;
 	// background-color: red;
@@ -530,12 +579,12 @@ mark {
 		position: absolute;
 		display: block;  //does this get overriden?
 		bottom: 39px;  // ztodo make var (taskbar height)
-		left: 0px;
+		left: 4px;
 
 		display: grid;
 		grid-auto-flow: column;
 		// gap: 4px;
-		gap: 0px;
+		gap: 0;
 
 		&:before {
 			display: block;
@@ -582,8 +631,8 @@ mark {
 	& #dismiss-startmenu {
 		position: fixed;
 		display: block;
-		top:    0px;
-		left:   0px;
+		top:    0;
+		left:   0;
 		width:  100vw;
 		height: 100vh;
 		cursor: default;
@@ -607,26 +656,26 @@ mark {
 	// https://codingislove.com/css-speech-bubbles/
 	&:before {
 		content: "";
-		width: 0px;
+		width:  0px;
 		height: 0px;
 		position: absolute;
-		border-left: 10px solid transparent;
-		border-right: 10px solid var(--txt-0);
-		border-top: 10px solid var(--txt-0);
+		border-left:   10px solid transparent;
+		border-right:  10px solid var(--txt-0);
+		border-top:    10px solid var(--txt-0);
 		border-bottom: 10px solid transparent;
-		right: 22px;
+		right:   22px;
 		bottom: -20px;
 	}
 	&:after {
 		content: "";
-		width: 0px;
+		width:  0px;
 		height: 0px;
 		position: absolute;
-		border-left: 10px solid transparent;
-		border-right: 10px solid var(--bgd-0);
-		border-top: 10px solid var(--bgd-0);
+		border-left:   10px solid transparent;
+		border-right:  10px solid var(--bgd-0);
+		border-top:    10px solid var(--bgd-0);
 		border-bottom: 10px solid transparent;
-		right: 24px;
+		right:   24px;
 		bottom: -16px;
 	}
 }
@@ -689,8 +738,8 @@ mark {
 
 .img-grid {
 	width: 100%;
-	margin: 0px;
-	padding: 0px; // this is because it's a list, and padding breaks it
+	margin: 0;
+	padding: 0; // this is because it's a list, and padding breaks it
 	justify-content: center;
 	display: flex; //this is because i want it to be dynamic to width of sidebar
 	flex-flow: row wrap;
