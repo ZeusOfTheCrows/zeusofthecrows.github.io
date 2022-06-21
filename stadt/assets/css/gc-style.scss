@@ -219,6 +219,7 @@ mark {
 	font-family: var(--csl-fnt);
 	text-decoration: none;
 	background: var(--bgd-2);
+	user-select: none;
 
 	&:active {
 		border-top-color:    var(--btn-lolite);
@@ -334,7 +335,7 @@ mark {
 		padding: 8px;
 		display: grid;
 		gap: 4px 8px;
-		grid-template-row:     min-content;
+		grid-template-rows:     min-content;
 		grid-template-columns: max-content;
 
 		& #current-song {
@@ -403,6 +404,17 @@ mark {
 	// 	width:  512px;
 	// 	height: 256px;
 	// }
+}
+
+#welcome {
+	position: absolute;
+	top: 64px;
+	left: 128px;
+
+	& .window-content {
+		width: 512px;
+		height: 256px;
+	}
 }
 
 .taskbar-9x {
