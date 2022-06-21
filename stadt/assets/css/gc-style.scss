@@ -7,6 +7,8 @@
 // https://www.reddit.com/r/desktops/comments/nlq789/recreated_windows_95_in_my_desktop_fully/
 // ztodo consolidate fonts
 // maybe use grid? probably not
+// https://win98icons.alexmeub.com/
+// https://news-cdn.softpedia.com/images/news2/windows-95-is-now-available-on-linux-mac-and-windows-as-an-electron-app-522375-8.jpg
 
 @font-face {
 	font-family: "FixedsysEx";
@@ -498,8 +500,36 @@ mark {
 	}
 }
 
+#startmenu-9x {
+		position: absolute;
+		display: none;
+		top:    0px;
+		left:   0px;
+		width:  100vw;
+		height: 100vh;
+		// background-color: red;
+
+	& #startmenu-window {
+	}
+
+	& #dismiss-startmenu {
+		position: absolute;
+		display: block;
+		top:    0px;
+		left:   0px;
+		width:  100vw;
+		height: 100vh;
+		cursor: default;
+		// background-color: red;
+	}
+
+	&:target {
+		display: block;
+	}
+}
+
 #taskbar-balloon {
-	position: absolute;
+	position: absolute;  // this should be sticky, but breaks - ztodo?
 	bottom: 44px;
 	right: 32px;
 
