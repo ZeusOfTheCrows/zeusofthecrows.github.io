@@ -352,8 +352,8 @@ mark {
 
 #welcome {
 	position: absolute;
-	top: 64px;
-	left: 128px;
+	top: 10vh;
+	left: 10vw;
 
 	& .window-title:before {
 		content: url(/stadt/assets/images/window-icons/notepad.png);
