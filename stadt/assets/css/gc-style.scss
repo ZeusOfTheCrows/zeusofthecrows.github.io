@@ -361,12 +361,13 @@ mark {
 
 #welcome {
 	position: absolute;
+	z-index: 49;  // halfway
 	top: 10vh;
 	left: 10vw;
 	width: 512px;
 
 	& .window-title:before {
-		content: url(/stadt/assets/images/window-icons/notepad.png);
+		content: url(/stadt/assets/images/window-icons/stadt.png);
 	}
 
 	& .window-content {
@@ -427,6 +428,7 @@ mark {
 
 #music-player {
 	position: absolute;
+	z-index: 45;
 	top: 512px;
 	left: 64px;
 
@@ -513,6 +515,7 @@ mark {
 
 .taskbar-9x {
 	position: fixed;
+	z-index: 97;
 	bottom: 0;
 
 	display: flex;
@@ -609,6 +612,7 @@ mark {
 
 #startmenu-9x {
 	position: fixed;
+	z-index: 99;
 	display: none;
 	top:    0;
 	left:   0;
@@ -687,6 +691,7 @@ mark {
 
 #taskbar-balloon {
 	position: fixed;
+	z-index: 98;
 	bottom: 44px;
 	right: 32px;
 
