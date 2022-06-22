@@ -356,20 +356,42 @@ mark {
 	position: absolute;
 	top: 10vh;
 	left: 10vw;
+	width: 512px;
 
 	& .window-title:before {
 		content: url(/stadt/assets/images/window-icons/notepad.png);
 	}
 
 	& .window-content {
-		padding: 4px 8px;
+		// padding: 4px 8px;
+		padding: 8px;
 		display: grid;  // ztodo this is a genericise test
-		grid-auto-flow: row;
-		overflow-y: scroll;  // add dummy scrollbar for æsthetic
+		gap: 4px;
+		grid-template-areas:
+			"title title"
+			"body btns"
+			"footer btns";
+		// overflow-y: scroll;  // add dummy scrollbar for æsthetic
 
-		& pre {
-			margin: 0;
+		& #welcome-title {
+			grid-area: title;
+			font-size: 2rem;
+			font-weight: bold;
 		}
+		& #welcome-body {
+			grid-area: body;
+			padding: 16px;
+			& p {
+				padding-top: 0;
+			}
+		}
+		& #zeus-buttons {
+			grid-area: btns;
+			width: 96px;
+		}
+		// & pre {
+			// margin: 0;
+		// }
 	}
 }
 
@@ -388,7 +410,7 @@ mark {
 		padding: 8px;
 		display: grid;
 		gap: 4px 8px;
-		grid-template-rows:     min-content;
+		grid-template-rows:    min-content;
 		grid-template-columns: max-content;
 
 		& #current-song {

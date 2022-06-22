@@ -8,35 +8,46 @@ layout: gc-default
 		<div class="window-titlebar">
 			<!-- <img class="window-icon pixel-art" -->
 				<!-- src="./assets/images/window-icons/cd-player.png" /> -->
-			<span class="window-title ms-bold">welcome.txt - Notepad</span>
+			<span class="window-title ms-bold">Welcome</span>
 			<ul class="window-decs">
 				<li class="window-min"></li>
 				<li class="window-max"></li>
 				<li class="window-cls"></li>
 			</ul>
 		</div>
-		<div class="window-menu">
-			<ul>
-				<li><u>F</u>ile</li>
-				<li><u>E</u>dit</li>
-				<li><u>S</u>earch</li>
-				<li><u>H</u>elp</li>
-			</ul>
-		</div>
-		<div class="window-content indent-9x">
-			<pre class="ascii-art">
-__  __   _      __                          __
-\\  \\   / ___ '||  ___  ___ __  _  _   ___ ||
- \\ /\\ / //_\) || // \)// \\ ||'||'|| //_\)||
-  \/  \/  \\__,_||_\\__,\\_//_||_||_||_\\__,()
+		<div class="window-content">
+			<div id="welcome-title">
+				<span>Welcome to</span>
+				<span>Ɀeus' Stadt</span>
+			</div>
+			<div id="welcome-body" class="indent-9x">
+				<p>this website is dark mode compatible!</p>
 
-this website is dark mode compatible!
-
-i don't really know why i thought making this
-would be a good idea - i'm terrible at words -
-but i like the idea of a hideous geocities-esque
-site (stadt because i rather like the word).
-			</pre>
+				<p>i don't really know why i thought making this
+				   would be a good idea - i'm terrible at words -
+				   but i wanted a hideous geocities-esque	site
+				   (stadt because i rather like the word).</p>
+			</div>
+			<div>
+				<ul id="zeus-buttons" class="img-grid">
+					<li><a href="https://zeusofthecrows.github.io/stadt/">
+						<img class="btn-88x31" src="./assets/images/buttons/zeus-train.gif"
+							alt="zeus british rail" />
+					</a></li>
+					<li><a href="https://zeusofthecrows.github.io/">
+						<img class="btn-88x31" src="./assets/images/buttons/zeus-term.gif"
+							alt="zeus terminal" />
+					</a></li>
+					<li><a href="https://zeusofthecrows.neocities.org">
+						<img class="btn-88x31" src="./assets/images/buttons/zeus-scan.gif"
+							alt="zeus radar scanner">
+					</a></li>
+					<li><a href="https://zeusofthecrows.github.io/">
+						<img class="btn-88x31" src="./assets/images/buttons/zeus-term-green.gif"
+							alt="zeus terminal green" />
+					</a></li>
+				</ul>
+			</div>
 		</div>
 	</div>
 
@@ -131,57 +142,58 @@ site (stadt because i rather like the word).
 		<!-- js for yesterweb ring -->
 		<script src="https://yesterwebring.neocities.org/script.js"></script>
 		<webring-css site="https://zeusofthecrows.github.io/"></webring-css>
-			<style>:root {
-				--textColor: var(--s-grn);
-				--bgColor: var(--bgd-3);
-				--linkColor: var(--s-blu);
-			}</style>
-			<style>
-				@font-face {
-					font-family: "FixedsysEx";
-					font-style: normal;
-					font-weight: normal;
-					src: local("Fixedsys Excelsior"),
-					       url("/assets/fonts/FixedsysEx.ttf") format("truetype"),
-					       url("/assets/fonts/FixedsysEx.woff") format("woff");
-				}
-				:root {
-					/* --mybg: linear-gradient(var(--d-red), var(--d-blu)); */
-					--mybg: url("https://color.firefox.com/images/bg-031-9570e8d1f7a5f835c92e764693337f43.svg");
-					--myborder: 3px double var(--d-grn);
-					--mycolor: var(--txt-3);
-					--mylinkcolor: var(--txt-0);
-					--mytitle: var(--txt-0);
-					--fontfamily: "FixedsysEx";
-					--titlesize: 12pt;
-					--borderradius: 4px;
-					--bgcolor: var(--bgd-2);
-					 --mywidth: 80%;
-					/* --myheight:60px; */
-					/* --textsize:10px; */
-					--textfamily: var(--csl-fnt);
-					/* --padding: 12px; */
-					/* --h1margin: 0; */
-					/* --textmargin:0; */
-				}
-			</style>
+		<!-- ztodo put this into css file -->
+		<style>:root {
+			--textColor: var(--s-grn);
+			--bgColor: var(--bgd-3);
+			--linkColor: var(--s-blu);
+		}</style>
+		<style>
+			@font-face {
+				font-family: "FixedsysEx";
+				font-style: normal;
+				font-weight: normal;
+				src: local("Fixedsys Excelsior"),
+				       url("/assets/fonts/FixedsysEx.ttf") format("truetype"),
+				       url("/assets/fonts/FixedsysEx.woff") format("woff");
+			}
+			:root {
+				/* --mybg: linear-gradient(var(--d-red), var(--d-blu)); */
+				--mybg: url("https://color.firefox.com/images/bg-031-9570e8d1f7a5f835c92e764693337f43.svg");
+				--myborder: 3px double var(--d-grn);
+				--mycolor: var(--txt-3);
+				--mylinkcolor: var(--txt-0);
+				--mytitle: var(--txt-0);
+				--fontfamily: "FixedsysEx";
+				--titlesize: 12pt;
+				--borderradius: 4px;
+				--bgcolor: var(--bgd-2);
+				 --mywidth: 80%;
+				/* --myheight:60px; */
+				/* --textsize:10px; */
+				--textfamily: var(--csl-fnt);
+				/* --padding: 12px; */
+				/* --h1margin: 0; */
+				/* --textmargin:0; */
+			}
+		</style>
 
-			<hr />
+		<hr />
 
-			<div id="geekring">
-				<p style="font-size: 0.8em; font-family: var(--csl-fnt); font-weight: bold; text-align: center;">
-					Check out the other awesome websites in
-					<span style="font-style: oblique;">The
-						<a href="https://geekring.net" style="text-decoration: underline dotted; font-style: oblique;">
-							Geek Ring!
-						</a></span></p>
-				<a href="http://geekring.net/site/139/previous"
-					class="btn-9x" style="width: 112px;"><- Previous</a>
-				<a href="http://geekring.net/site/139/random"
-					class="btn-9x" style="width: 112px;">Random</a>
-				<a href="http://geekring.net/site/139/next"
-					class="btn-9x" style="width: 112px;">Next -></a>
-			</div>
+		<div id="geekring">
+			<p style="font-size: 0.8em; font-family: var(--csl-fnt); font-weight: bold; text-align: center;">
+				Check out the other awesome websites in
+				<span style="font-style: oblique;">The
+					<a href="https://geekring.net" style="text-decoration: underline dotted; font-style: oblique;">
+						Geek Ring!
+					</a></span></p>
+			<a href="http://geekring.net/site/139/previous"
+				class="btn-9x" style="width: 112px;"><- Previous</a>
+			<a href="http://geekring.net/site/139/random"
+				class="btn-9x" style="width: 112px;">Random</a>
+			<a href="http://geekring.net/site/139/next"
+				class="btn-9x" style="width: 112px;">Next -></a>
+		</div>
 	</div>
 </div>
 
