@@ -237,6 +237,10 @@ mark {
 	padding: 8px;
 }
 
+.window-9x {
+	position: absolute;
+}
+
 .btn-9x,
 .window-decs li {  // ztodo window buttons don't click
 	display: inline-block;
@@ -410,6 +414,10 @@ mark {
 		}
 		& #welcome-footer {
 			grid-area: footer;
+
+			// & input[type="checkbox"] {
+				// visibility: hidden;
+			// }
 		}
 		// & pre {
 			// margin: 0;
