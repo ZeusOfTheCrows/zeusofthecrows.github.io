@@ -280,6 +280,8 @@ mark {
 	padding: 0px 2px;
 	height: 20px;
 
+	user-select: none;
+
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
