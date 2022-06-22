@@ -17,11 +17,11 @@ layout: gc-default
 		</div>
 		<div class="window-content">
 			<div id="welcome-title">
-				<span>Welcome to</span>
-				<span>Ɀeus' Stadt</span>
+				<span id="welcome-serif">Welcome to</span>
+				<span id="welcome-sans">{{ site.gc-title }}</span>
 			</div>
 			<div id="welcome-body" class="indent-9x">
-				<p>this website is dark mode compatible!</p>
+				<p><strong>this website is dark mode compatible!</strong></p>
 
 				<p>i don't really know why i thought making this
 				   would be a good idea - i'm terrible at words -
@@ -47,6 +47,11 @@ layout: gc-default
 							alt="zeus terminal green" />
 					</a></li>
 				</ul>
+			</div>
+			<div id="welcome-footer">
+				<input type="checkbox" name="show-on-start" class="indent-9x" />
+				<!-- ztodo not windows -->
+				<span><u>S</u>how this Welcome Screen next time you start Windows</span>
 			</div>
 		</div>
 	</div>

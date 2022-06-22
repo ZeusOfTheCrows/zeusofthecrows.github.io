@@ -30,6 +30,9 @@
 	//console style font (used for '95/98 buttons)
 	          /* windows,    macos    generic */
 	--csl-fnt: "consolas", "monaco", monospace;
+	--fnt-serif: "Times New Roman", serif;
+	--fnt-sans:  "Fira Sans", sans-serif;
+	--fnt-mono:  "Fira Mono", monospace;
 
 	/* universal colours */
 	--d-red: #CC241D;
@@ -144,7 +147,7 @@ h6 {
 
 strong,
 b { // bold (for ctrl+f)
-	color: var(--txt-0);
+	// color: var(--txt-0);
 }
 
 em,
@@ -366,21 +369,37 @@ mark {
 		// padding: 4px 8px;
 		padding: 8px;
 		display: grid;  // ztodo this is a genericise test
-		gap: 4px;
+		gap: 8px;
 		grid-template-areas:
 			"title title"
 			"body btns"
-			"footer btns";
+			"footer footer";
 		// overflow-y: scroll;  // add dummy scrollbar for æsthetic
 
 		& #welcome-title {
 			grid-area: title;
 			font-size: 2rem;
 			font-weight: bold;
+
+			& #welcome-serif {
+				font-family: var(--fnt-serif);
+				font-size: 1.1em;  // just a mite bigger
+				color: var(--txt-2);
+			}
+			& #welcome-sans {
+				color: var(--txt-0);
+			}
 		}
 		& #welcome-body {
 			grid-area: body;
-			padding: 16px;
+			padding: 12px 16px;
+
+			&:after {
+				background-color: red;
+				content: "";
+				width: 100%;
+				height: 100%;
+			}
 			& p {
 				padding-top: 0;
 			}
@@ -388,6 +407,9 @@ mark {
 		& #zeus-buttons {
 			grid-area: btns;
 			width: 96px;
+		}
+		& #welcome-footer {
+			grid-area: footer;
 		}
 		// & pre {
 			// margin: 0;
