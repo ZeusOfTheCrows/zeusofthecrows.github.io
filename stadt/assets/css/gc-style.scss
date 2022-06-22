@@ -104,21 +104,17 @@ html {
 	/* colour scrollbars with css */
 	scrollbar-color: var(--bgd-2) var(--bgd-1);
 	/* colour scrollbars, but this time for webkit being dumb */
-	&::-webkit-scrollbar {
-		// border-radius: $crnr-radius;
-		// background-color: $background-colour;
-	}
-	&::-webkit-scrollbar-thumb {
-		// border-radius: $crnr-radius;
-		// background-color: $text-07;
-	}
-	&::-webkit-scrollbar-button {
-		// border-radius: $crnr-radius;
-		// background-color: $text-08;
-	}
+	&::-webkit-scrollbar,
+	&::-webkit-scrollbar-thumb,
+	&::-webkit-scrollbar-button,
 	&::-webkit-scrollbar-corner {
-		// border-radius: $crnr-radius;
-		// background-color: $background-colour;
+		border-radius: 0;
+	}
+	&::-webkit-scrollbar{
+		background-color: var(--bgd-1);
+	}
+	&::-webkit-scrollbar-thumb{
+		background-color: var(--bgd-2);
 	}
 }
 
@@ -239,11 +235,7 @@ mark {
 }
 
 .btn-9x,
-.window-decs li
-html::-webkit-scrollbar,
-html::-webkit-scrollbar-thumb,
-html::-webkit-scrollbar-button,
-html::-webkit-scrollbar-corner {  // ztodo window buttons don't click
+.window-decs li {  // ztodo window buttons don't click
 	display: inline-block;
 	text-align: center;
 	// justify-content: center;
@@ -358,6 +350,27 @@ html::-webkit-scrollbar-corner {  // ztodo window buttons don't click
 	border-right-color:  var(--btn-hilite);
 }
 
+#welcome {
+	position: absolute;
+	top: 64px;
+	left: 128px;
+
+	& .window-title:before {
+		content: url(/stadt/assets/images/window-icons/notepad.png);
+	}
+
+	& .window-content {
+		padding: 4px 8px;
+		display: grid;  // ztodo this is a genericise test
+		grid-auto-flow: row;
+		overflow-y: scroll;  // add dummy scrollbar for æsthetic
+
+		& pre {
+			margin: 0;
+		}
+	}
+}
+
 #music-player {
 	position: absolute;
 	top: 512px;
@@ -442,28 +455,6 @@ html::-webkit-scrollbar-corner {  // ztodo window buttons don't click
 	// 	width:  512px;
 	// 	height: 256px;
 	// }
-}
-
-#welcome {
-	position: absolute;
-	top: 64px;
-	left: 128px;
-
-	& .window-content {
-		padding: 4px 8px;
-		display: grid;
-		grid-auto-flow: row;
-		overflow-y: scroll;  // add dummy scrollbar for æsthetic
-
-		& pre {
-			margin: 0;
-			grid-rows: 1 / 2;
-
-			// &:after {
-
-			// }
-		}
-	}
 }
 
 .taskbar-9x {
