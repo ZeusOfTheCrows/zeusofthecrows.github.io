@@ -21,7 +21,8 @@
 	       url("/assets/fonts/FixedsysEx.woff") format("woff");
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,600;0,900;1,400;1,600;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap');
 
 /* variables */
@@ -479,6 +480,7 @@ samp,
 			grid-auto-flow: column;
 			grid-template-columns: repeat(3, 1fr);
 			gap: 2px;
+
 			& p {
 				// grid-area: label;
 				text-align: center;
@@ -498,9 +500,35 @@ samp,
 					}
 				}
 			}
+
 			& .btn-9x {
 				width: 90px;
 				grid-row: 2 / 3;
+			}
+		}
+
+		& #wr-hotline {
+			padding: 8px;
+			font-family: var(--fnt-sans);
+			font-size: 2em;
+			font-weight: 900;
+			font-style: oblique;
+			text-transform: uppercase;
+
+			text-shadow: 0.05em 0.05em var(--d-ppl);
+
+			& a {
+				color: var(--s-blu);
+
+				&:visited {
+					color: var(--s-grn);
+				}
+				&:hover {
+					color: var(--s-ppl);
+				}
+				&:active {
+					color: var(--s-aqa);
+				}
 			}
 		}
 	}
