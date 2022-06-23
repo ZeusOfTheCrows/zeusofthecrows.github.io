@@ -11,6 +11,7 @@
 // ztodo lots of things have mar 0 pad 0 - maybe consolidate?
 // https://news-cdn.softpedia.com/images/news2/windows-95-is-now-available-on-linux-mac-and-windows-as-an-electron-app-522375-8.jpg
 
+/* =============================== variables =============================== */
 @font-face {
 	font-family: "FixedsysEx";
 	font-style: normal;
@@ -93,6 +94,7 @@
 	}
 }
 
+/* ======================== element generic styles ========================= */
 html {
 	/* smoothly scroll to anchor link */
 	scroll-behavior: smooth;
@@ -156,6 +158,14 @@ i { // italic (for ctrl+f)
 	color: var(--s-ylw);
 }
 
+/* colour highlighted text */
+mark {
+	margin: -0.5em -0.5ch;
+	padding: 0.5em 0.5ch;
+	background-color: var(--d-ylw);
+}
+
+
 a {
 	// i just think this layout is easier to read
 	&:link {
@@ -171,6 +181,8 @@ a {
 		color: var(--s-red);
 	}
 }
+
+/* ========================= class generic styles ========================== */
 
 pre,
 code,  // maybe use fira code?
@@ -188,6 +200,25 @@ samp,
 	image-rendering: pixelated;   /* fallback, pixellated */
 	image-rendering: crisp-edges; /* unsure, filter e.g. hq2x */
 }
+
+.img-grid {
+	width: 100%;
+	margin: 0;
+	padding: 0; // this is because it's a list, and padding breaks it
+	justify-content: center;
+	display: flex; //this is because i want it to be dynamic to width of sidebar
+	flex-flow: row wrap;
+
+	& img {
+		margin: 0px 1px;
+		// margin: 0px;
+	}
+
+	& ::marker {
+		content: "";
+	}
+}
+
 .btn-88x31 {
 	width:  88px;
 	height: 31px;
@@ -199,18 +230,6 @@ samp,
 .btn-150x15 {
 	width: 150px;
 	height: 15px;
-}
-.window-title:before {
-		// content: url(/stadt/assets/images/window-icons/cd-player.png);
-		height: 16px;
-		width: 16px;  // ztodo make generic
-		padding-right: 2px;  // ztodo this is not vertically centred
-	}
-/* colour highlighted text */
-mark {
-	margin: -0.5em -0.5ch;
-	padding: 0.5em 0.5ch;
-	background-color: var(--d-ylw);
 }
 
 .ms-bold {
@@ -225,21 +244,10 @@ mark {
 		font-family: var(--fnt-sans);
 		font-weight: bold;
 }
+
 // .swash-z::first-letter {
 	// placeholder in case i need to format the special glyph
 // }
-
-.mc-window { // macindows window
-	// margin: 8px;
-	border: 2px solid var(--d-aqa);
-	padding: 12px;
-	border-radius: 8px;
-	box-shadow: 4px 7px 0px 0px var(--bgd-2);
-
-	background: var(--bgd-1);
-
-	padding: 8px;
-}
 
 .window-9x {
 	position: absolute;
@@ -310,6 +318,14 @@ mark {
 	justify-content: space-between;
 	align-items: center;
 
+	& .window-title:before {
+		// content: url(/stadt/assets/images/window-icons/cd-player.png);
+		height: 16px;
+		width: 16px;  // ztodo make generic
+		padding-top: 10px;  //!\ this assumes images are always 16x16
+		padding-right: 2px;
+	}
+
 	& .window-decs {
 		margin: 0;
 
@@ -345,6 +361,7 @@ mark {
 		}
 	}
 }
+
 .window-menu ul {
 	margin: 0;
 	padding: 0;
@@ -367,6 +384,8 @@ mark {
 	display: grid;
 }
 
+/* ============================ specific styles ============================ */
+
 #welcome {
 	position: absolute;
 	z-index: 49;  // halfway
@@ -381,7 +400,6 @@ mark {
 	& .window-content {
 		// padding: 4px 8px;
 		padding: 8px;
-		display: grid;  // ztodo this is a genericise test
 		gap: 8px;
 		grid-template-areas:
 			"title title"
@@ -448,7 +466,6 @@ mark {
 		// padding: 1px;
 		// width: 100%;
 		padding: 8px;
-		display: grid;
 		gap: 4px 8px;
 		grid-template-rows:    min-content;
 		grid-template-columns: max-content;
@@ -573,7 +590,7 @@ mark {
 	}
 }
 
-.taskbar-9x {
+#taskbar-9x {
 	position: fixed;
 	z-index: 97;
 	bottom: 0;
@@ -656,7 +673,7 @@ mark {
 
 	& #taskbar-tray {
 		height: 29px;
-		// width: 256px;
+		padding: 0px 2px;
 
 		justify-content: flex-end;
 		align-items: center;
@@ -667,6 +684,10 @@ mark {
 		border-left-color:   var(--btn-lolite);
 		border-bottom-color: var(--btn-hilite);
 		border-right-color:  var(--btn-hilite);
+
+		& * {
+			padding: 2px;
+		}
 	}
 }
 
@@ -752,7 +773,7 @@ mark {
 	position: fixed;
 	z-index: 98;
 	bottom: 44px;
-	right: 32px;
+	right: 56px;
 
 	background-color: var(--bgd-0);
 	width: 256px;
@@ -789,79 +810,7 @@ mark {
 	}
 }
 
-#content {
-	width: min(100%, 1100px);
-	margin: auto;
-	display: grid;
-	grid-gap: 16px 16px; // row column
-}
-
-#sidebar-left, #sidebar-right {
-
-	width: 25%vw;
-	max-width: calc(176px + var(--h-pad)); //ztodo variable
-
-	// text-align: justify;
-}
-
-#header {
-	// height: 100px;
-	// position: sticky
-	grid-row-start: 1;
-	grid-row-end:   1;
-	grid-column-start: 1;
-	grid-column-end:   4;
-}
-
-#sidebar-left {
-	grid-row-start: 2;
-	grid-row-end:   2;
-	grid-column-start: 1;
-	grid-column-end:   1;
-}
-
-#sidebar-right {
-	grid-row-start: 2;
-	grid-row-end:   2;
-	grid-column-start: 3;
-	grid-column-end:   3;
-}
-
-#main-content {
-	grid-row-start: 2;
-	grid-row-end:   2;
-	// width: auto; // implicit
-	grid-column-start: 2;
-	grid-column-end:   2;
-
-}
-
-// #footer {
-	// grid-column-start: 1;
-	// grid-column-end:   4;
-//
-	// grid-row-start: 3;
-	// grid-row-end:   3;
-// }
-
-
-.img-grid {
-	width: 100%;
-	margin: 0;
-	padding: 0; // this is because it's a list, and padding breaks it
-	justify-content: center;
-	display: flex; //this is because i want it to be dynamic to width of sidebar
-	flex-flow: row wrap;
-
-	& img {
-		margin: 0px 1px;
-		// margin: 0px;
-	}
-
-	& ::marker {
-		content: "";
-	}
-}
+/* ============================== animations =============================== */
 
 // marquee animation copied from: https://hotlinecafe.com/
 .marquee-container {
