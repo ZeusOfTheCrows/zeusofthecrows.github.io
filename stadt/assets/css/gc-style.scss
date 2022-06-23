@@ -200,6 +200,7 @@ samp,
 		// font-size: 12pt;
 		// letter-spacing: 1px;
 		font-family: var(--fnt-sans);
+		// font-size: 1.2em;
 		font-weight: bold;
 }
 
@@ -304,7 +305,7 @@ samp,
 	background-color: var(--s-blu);
 	color: var(--bgd-1);
 	margin: 0px 0px 2px 0px;
-	padding: 0px 2px;
+	padding: 1px 2px;
 	height: 20px;
 
 	user-select: none;
@@ -314,16 +315,20 @@ samp,
 	justify-content: space-between;
 	align-items: center;
 
-	& .window-title:before {
-		// content: url(/stadt/assets/images/window-icons/cd-player.png);
-		height: 16px;
-		width: 16px;  // ztodo make generic
-		padding-top: 10px;  //!\ this assumes images are always 16x16
-		padding-right: 2px;
+
+	& .window-title {
+		// placeholder
+
+		& .window-icon {
+			vertical-align: middle;
+		}
 	}
 
 	& .window-decs {
 		margin: 0;
+		font-size: 1.2em;
+		margin-right: 2px;
+		padding: 0px;
 
 		& .window-min:before {
 			content: "󰖰";
@@ -331,24 +336,25 @@ samp,
 		& .window-max:before {
 			content: "󰖯";
 		}
+		& .window-hlp:before {
+			content: "󰋖";
+		}
 		& .window-cls:before {
 			content: "󰖭";
 		}
 
 		& li {
-			visibility: hidden;  // hide to replace with before
+			visibility: hidden;  // hide to replace with before pseudo
 			font-family: "Material Design Icons";
-			margin-right: 16px;  // ztodo why this arbitrary number?
+			margin-right: 0.8em;  // because the actual element is hidden
 
 			&:before {  // attributes for all buttons
-				content: " ";
 				visibility: visible;
 				display: inline-block;
 				position: absolute;
 				margin: 0;
 				padding: 0;
 				top: 4px;  // the tip says this has no effect but it really does
-				// font-family: "Material Design Icons";
 				font-size: 0.6em;
 				color: var(--txt-0);
 				width: 1.2em;  // make square(ish)
@@ -387,10 +393,6 @@ samp,
 	top: 30vh;
 	left: calc(50vw - 256px);
 	width: 512px;
-
-	& .window-title:before {
-		// content: url(/stadt/assets/images/window-icons/stadt.png);
-	}
 
 	& .window-content {
 		// padding: 4px 8px;
@@ -452,10 +454,6 @@ samp,
 	z-index: 45;
 	top: 45vh;
 	left: 15vw;
-
-	& .window-title:before {
-		content: url(/stadt/assets/images/window-icons/cd-player.png);
-	}
 
 	& .window-content {
 		// padding: 1px;
@@ -806,6 +804,7 @@ samp,
 }
 
 /* ============================== animations =============================== */
+/* ================================ unused ================================= */
 
 // marquee animation copied from: https://hotlinecafe.com/
 .marquee-container {
