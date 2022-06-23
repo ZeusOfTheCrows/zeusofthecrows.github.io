@@ -366,8 +366,8 @@ mark {
 #welcome {
 	position: absolute;
 	z-index: 49;  // halfway
-	top: 10vh;
-	left: 10vw;
+	top: 30vh;
+	left: calc(50vw - 256px);
 	width: 512px;
 
 	& .window-title:before {
@@ -433,8 +433,8 @@ mark {
 #music-player {
 	position: absolute;
 	z-index: 45;
-	top: 512px;
-	left: 64px;
+	top: 45vh;
+	left: 15vw;
 
 	& .window-title:before {
 		content: url(/stadt/assets/images/window-icons/cd-player.png);
