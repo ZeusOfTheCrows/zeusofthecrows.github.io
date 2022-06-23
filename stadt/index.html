@@ -171,46 +171,15 @@ layout: gc-default
 			<p>this site is a proud member of the following webrings</p>
 			<p>to find out more about webrings, visit [ztodo link here]</p>
 		</div>
-		<div id="wr-yesterweb">
+		<!-- /!\ div *must* have this class /!\ -->
+		<div id="wr-yester" class="yw-widget-full yw-raw"
+			data-yw-url="https://zeusofthecrows.github.io/"></div>
 			<!-- js for yesterweb ring -->
-			<script src="https://yesterwebring.neocities.org/script.js"></script>
-			<webring-css site="https://zeusofthecrows.github.io/"></webring-css>
-			<!-- ztodo put this into css file -->
-			<style>:root {
-				--textColor: var(--s-grn);
-				--bgColor: var(--bgd-3);
-				--linkColor: var(--s-blu);
-			}</style>
-			<style>
-				@font-face {
-					font-family: "FixedsysEx";
-					font-style: normal;
-					font-weight: normal;
-					src: local("Fixedsys Excelsior"),
-					       url("/assets/fonts/FixedsysEx.ttf") format("truetype"),
-					       url("/assets/fonts/FixedsysEx.woff") format("woff");
-				}
-				:root {
-					/* --mybg: linear-gradient(var(--d-red), var(--d-blu)); */
-					--mybg: url("https://color.firefox.com/images/bg-031-9570e8d1f7a5f835c92e764693337f43.svg");
-					--myborder: 3px double var(--d-grn);
-					--mycolor: var(--txt-3);
-					--mylinkcolor: var(--txt-0);
-					--mytitle: var(--txt-0);
-					--fontfamily: "FixedsysEx";
-					--titlesize: 12pt;
-					--borderradius: 4px;
-					--bgcolor: var(--bgd-2);
-					 --mywidth: 80%;
-					/* --myheight:60px; */
-					/* --textsize:10px; */
-					--textfamily: var(--csl-fnt);
-					/* --padding: 12px; */
-					/* --h1margin: 0; */
-					/* --textmargin:0; */
-				}
-			</style>
-		</div>
+		<script src="https://yesterweb.org/js/widget.js"></script>
+
+			<!-- <script src="https://yesterwebring.neocities.org/script.js"></script> -->
+			<!-- <webring-css site="https://zeusofthecrows.github.io/"></webring-css> -->
+		<!-- </div> -->
 
 		<div id="wr-geekring" class="indent-9x">
 			<!-- <p style="font-size: 0.8em; font-family: var(--csl-fnt); font-weight: bold; text-align: center;"> -->

@@ -460,9 +460,9 @@ samp,
 	left: 65vw;
 
 	& .window-content {
-		width: 480px;
+		width: 440px;
 		padding: 4px;
-		gap: 4px;
+		gap: 8px;
 		grid-template-areas:
 			"intro yester"
 			"geek  geek  "
@@ -470,6 +470,54 @@ samp,
 
 		& #wr-intro {
 			grid-area: intro;
+		}
+
+		& #wr-yester {
+
+			@font-face {
+				font-family: "Yesterweb Nova Square";
+				src: url("https://cloudflare-ipfs.com/ipfs/QmaKT1nHC9JM5xmz7cRuRcB8jrkRjxdPsLaLnyzEta3e8R/NovaSquare.woff") format("woff");
+			}
+
+			// background-image: url("https://cloudflare-ipfs.com/ipfs/QmaKT1nHC9JM5xmz7cRuRcB8jrkRjxdPsLaLnyzEta3e8R/gridnew.gif");
+			background: var(--bgd-0);
+
+			text-align: center;
+
+			border-width: 2px;
+			border-style: solid;
+			border-top-color:    var(--s-grn);
+			border-left-color:   var(--s-grn);
+			border-bottom-color: var(--d-grn);
+			border-right-color:  var(--d-grn);
+
+			& .yw-title {
+				font-family: "Yesterweb Nova Square";
+				color: var(--s-grn);
+			}
+			& a {
+				color: var(--s-grn);
+			}
+		}
+
+		& #wr-yesterweb-disable {
+			--mybg: linear-gradient(var(--d-red), var(--d-blu));
+			// --mybg: url("https://color.firefox.com/images/bg-031-9570e8d1f7a5f835c92e764693337f43.svg");
+			--myborder: 3px double var(--d-grn);
+			--mycolor: var(--txt-3);
+			--mylinkcolor: var(--txt-0);
+			--mytitle: var(--txt-0);
+			--fontfamily: "FixedsysEx";
+			--titlesize: 12pt;
+			--borderradius: 4px;
+			--bgcolor: var(--bgd-2);
+			 --mywidth: 80%;
+			/* --myheight:60px; */
+			/* --textsize:10px; */
+			--textfamily: var(--csl-fnt);
+			/* --padding: 12px; */
+			/* --h1margin: 0; */
+			/* --textmargin:0; */
 		}
 
 		& #wr-geekring {
