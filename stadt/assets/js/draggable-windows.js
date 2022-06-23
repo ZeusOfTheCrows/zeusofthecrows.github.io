@@ -13,9 +13,6 @@ function dragElement(elmnt) {
 		// if present, the header is where you move the DIV from:
 		elmnt.getElementsByClassName("window-titlebar")[0].onmousedown = dragMouseDown;
 		// document.getElementById(elmnt.id + "-titlebar").onmousedown = dragMouseDown;
-	} else {
-		// otherwise, move the DIV from anywhere inside the DIV:
-		elmnt.onmousedown = dragMouseDown;
 	}
 
 	function dragMouseDown(e) {
