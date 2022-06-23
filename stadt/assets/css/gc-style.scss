@@ -190,6 +190,18 @@ samp,
 .ascii-art {
 	font-family: var(--fnt-mono);
 }
+.ms-bold {
+	// ms sans serif style bold by doubling text width
+	// text-shadow: 0.5px 0px var(--txt-1),
+	             // 1.0px 0px var(--txt-1)/*,
+	             // 1.5px 0px var(--txt-1)*/;
+
+		// font-family: "Fira Sans";
+		// font-size: 12pt;
+		// letter-spacing: 1px;
+		font-family: var(--fnt-sans);
+		font-weight: bold;
+}
 
 .btn-88x31,
 .btn-80x15,
@@ -232,19 +244,6 @@ samp,
 	height: 15px;
 }
 
-.ms-bold {
-	// ms sans serif style bold by doubling text width
-	// text-shadow: 0.5px 0px var(--txt-1),
-	             // 1.0px 0px var(--txt-1)/*,
-	             // 1.5px 0px var(--txt-1)*/;
-
-		// font-family: "Fira Sans";
-		// font-size: 12pt;
-		// letter-spacing: 1px;
-		font-family: var(--fnt-sans);
-		font-weight: bold;
-}
-
 // .swash-z::first-letter {
 	// placeholder in case i need to format the special glyph
 // }
@@ -252,7 +251,6 @@ samp,
 .window-9x {
 	position: absolute;
 }
-
 .indent-9x {
 	margin: 0;
 	background-color: var(--bgd-0);
@@ -263,7 +261,6 @@ samp,
 	border-bottom-color: var(--btn-hilite);
 	border-right-color:  var(--btn-hilite);
 }
-
 .outdent-9x,
 .window-9x,
 .btn-9x,
@@ -303,7 +300,6 @@ samp,
 
 	}
 }
-
 .window-titlebar {
 	background-color: var(--s-blu);
 	color: var(--bgd-1);
@@ -361,7 +357,6 @@ samp,
 		}
 	}
 }
-
 .window-menu ul {
 	margin: 0;
 	padding: 0;
@@ -376,7 +371,7 @@ samp,
 			background-color: var(--bgd-3);
 		}
 		&:active u {
-			color: var(--txt-0);
+			color: var(--s-ppl);
 		}
 	}
 }
@@ -418,7 +413,7 @@ samp,
 				color: var(--txt-2);
 			}
 			& #welcome-sans {
-				color: var(--txt-0);
+				color: var(--s-org);
 			}
 		}
 		& #welcome-body {
