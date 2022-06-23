@@ -245,32 +245,18 @@ mark {
 	position: absolute;
 }
 
-.btn-9x,
-.window-decs li {  // ztodo window buttons don't click
-	display: inline-block;
-	text-align: center;
-	// justify-content: center;
-	margin: 1px;
-	// padding: 2px;
-	margin: auto;
-	// width: 88px;
-	// height: 31px;
-	// color: black !important;
-	color: var(--txt-1) !important; //!important overrides link styling
-	font-family: var(--csl-fnt);
-	text-decoration: none;
-	background: var(--bgd-2);
-	user-select: none;
-
-	&:active {
-		border-top-color:    var(--btn-lolite);
-		border-left-color:   var(--btn-lolite);
-		border-bottom-color: var(--btn-hilite);
-		border-right-color:  var(--btn-hilite);
-
-	}
+.indent-9x {
+	margin: 0;
+	background-color: var(--bgd-0);
+	border-width: 2px;
+	border-style: solid;
+	border-top-color:    var(--btn-lolite);
+	border-left-color:   var(--btn-lolite);
+	border-bottom-color: var(--btn-hilite);
+	border-right-color:  var(--btn-hilite);
 }
 
+.outdent-9x,
 .window-9x,
 .btn-9x,
 .window-decs li:before {
@@ -284,6 +270,32 @@ mark {
 	border-bottom-color: var(--btn-lolite);
 	border-right-color:  var(--btn-lolite);
 }
+.btn-9x,
+.window-decs li {  // ztodo window buttons don't click
+	display: inline-block;
+	text-align: center;
+	// justify-content: center;
+	margin: 1px;
+	// padding: 2px;
+	margin: auto;
+	// width: 88px;
+	// height: 31px;
+	// color: black !important;
+	color: var(--txt-1) !important; //!important overrides link styling
+	// font-family: var(--fnt-mono);
+	text-decoration: none;
+	background: var(--bgd-2);
+	user-select: none;
+
+	&:active {
+		border-top-color:    var(--btn-lolite);
+		border-left-color:   var(--btn-lolite);
+		border-bottom-color: var(--btn-hilite);
+		border-right-color:  var(--btn-hilite);
+
+	}
+}
+
 .window-titlebar {
 	background-color: var(--s-blu);
 	color: var(--bgd-1);
@@ -351,16 +363,8 @@ mark {
 		}
 	}
 }
-
-.indent-9x {
-	margin: 0;
-	background-color: var(--bgd-0);
-	border-width: 2px;
-	border-style: solid;
-	border-top-color:    var(--btn-lolite);
-	border-left-color:   var(--btn-lolite);
-	border-bottom-color: var(--btn-hilite);
-	border-right-color:  var(--btn-hilite);
+.window-content {
+	display: grid;
 }
 
 #welcome {
@@ -371,7 +375,7 @@ mark {
 	width: 512px;
 
 	& .window-title:before {
-		content: url(/stadt/assets/images/window-icons/stadt.png);
+		// content: url(/stadt/assets/images/window-icons/stadt.png);
 	}
 
 	& .window-content {
@@ -519,6 +523,54 @@ mark {
 	// 	width:  512px;
 	// 	height: 256px;
 	// }
+}
+
+#webrings {
+	position: absolute;
+	z-index: 46;
+	top: 50vh;
+	left: 65vw;
+	width: 320px;
+
+	& .window-content {
+		padding: 4px;
+		gap: 4px;
+
+		& #geekring {
+			background: linear-gradient(var(--d-aqa), var(--d-blu));
+			padding: 2px;
+			display: grid;
+			// grid-template-areas:
+				// "label label label"
+				// "btn-1 btn-2 btn-3";
+			grid-auto-flow: column;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 2px;
+			& p {
+				// grid-area: label;
+				text-align: center;
+				grid-column: 1 / 4;
+				grid-row:    1 / 2;
+				font-family: var(--fnt-sans);
+				font-size: 1.4em;
+				font-weight: bold;
+				-webkit-text-stroke: 0.8px var(--txt-2);
+				-webkit-text-fill-color:   var(--bgd-0);
+
+				& span {
+					font-style: oblique;
+
+					& a {
+						text-decoration: underline dotted;
+					}
+				}
+			}
+			& .btn-9x {
+				width: 90px;
+				grid-row: 2 / 3;
+			}
+		}
+	}
 }
 
 .taskbar-9x {
