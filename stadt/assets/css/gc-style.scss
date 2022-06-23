@@ -386,7 +386,7 @@ samp,
 }
 
 /* ============================ specific styles ============================ */
-
+/* -------------------------------- windows -------------------------------- */
 #welcome {
 	position: absolute;
 	z-index: 49;  // halfway
@@ -449,11 +449,59 @@ samp,
 	}
 }
 
+#webrings {
+	position: absolute;
+	z-index: 46;
+	top: 35vh;
+	left: 65vw;
+	width: 320px;
+
+	& .window-content {
+		padding: 4px;
+		gap: 4px;
+
+		& #geekring {
+			background: linear-gradient(var(--d-aqa), var(--d-blu));
+			padding: 2px;
+			display: grid;
+			// grid-template-areas:
+				// "label label label"
+				// "btn-1 btn-2 btn-3";
+			grid-auto-flow: column;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 2px;
+			& p {
+				// grid-area: label;
+				text-align: center;
+				grid-column: 1 / 4;
+				grid-row:    1 / 2;
+				font-family: var(--fnt-sans);
+				font-size: 1.4em;
+				font-weight: bold;
+				-webkit-text-stroke: 0.8px var(--txt-2);
+				-webkit-text-fill-color:   var(--bgd-0);
+
+				& span {
+					font-style: oblique;
+
+					& a {
+						text-decoration: underline dotted;
+					}
+				}
+			}
+			& .btn-9x {
+				width: 90px;
+				grid-row: 2 / 3;
+			}
+		}
+	}
+}
+
 #music-player {
 	position: absolute;
 	z-index: 45;
 	top: 45vh;
-	left: 15vw;
+	left: 10vw;
 
 	& .window-content {
 		// padding: 1px;
@@ -535,54 +583,7 @@ samp,
 	// }
 }
 
-#webrings {
-	position: absolute;
-	z-index: 46;
-	top: 50vh;
-	left: 65vw;
-	width: 320px;
-
-	& .window-content {
-		padding: 4px;
-		gap: 4px;
-
-		& #geekring {
-			background: linear-gradient(var(--d-aqa), var(--d-blu));
-			padding: 2px;
-			display: grid;
-			// grid-template-areas:
-				// "label label label"
-				// "btn-1 btn-2 btn-3";
-			grid-auto-flow: column;
-			grid-template-columns: repeat(3, 1fr);
-			gap: 2px;
-			& p {
-				// grid-area: label;
-				text-align: center;
-				grid-column: 1 / 4;
-				grid-row:    1 / 2;
-				font-family: var(--fnt-sans);
-				font-size: 1.4em;
-				font-weight: bold;
-				-webkit-text-stroke: 0.8px var(--txt-2);
-				-webkit-text-fill-color:   var(--bgd-0);
-
-				& span {
-					font-style: oblique;
-
-					& a {
-						text-decoration: underline dotted;
-					}
-				}
-			}
-			& .btn-9x {
-				width: 90px;
-				grid-row: 2 / 3;
-			}
-		}
-	}
-}
-
+/* -------------------------------- taskbar -------------------------------- */
 #taskbar-9x {
 	position: fixed;
 	z-index: 97;
@@ -766,14 +767,14 @@ samp,
 	position: fixed;
 	z-index: 98;
 	bottom: 44px;
-	right: 56px;
+	right: 80px;
 
 	background-color: var(--bgd-0);
 	width: 256px;
 	// height: 64px;
 
 	border: 2px solid var(--txt-2);
-	border-radius: 16px;
+	border-radius: 12px;
 	padding: 12px;
 
 	// https://codingislove.com/css-speech-bubbles/
@@ -786,7 +787,7 @@ samp,
 		border-right:  10px solid var(--txt-0);
 		border-top:    10px solid var(--txt-0);
 		border-bottom: 10px solid transparent;
-		right:   22px;
+		right:   16px;
 		bottom: -20px;
 	}
 	&:after {
@@ -798,7 +799,7 @@ samp,
 		border-right:  10px solid var(--bgd-0);
 		border-top:    10px solid var(--bgd-0);
 		border-bottom: 10px solid transparent;
-		right:   24px;
+		right:   18px;
 		bottom: -16px;
 	}
 }

@@ -68,7 +68,9 @@
 			<img src="./assets/images/window-icons/stadt-nc.png"></a>
 		<a>
 			<img src="./assets/images/window-icons/cassette.png"></a>
-		<time>15:08</time>
+		<time datetime="{{ site.gc_edit_date }}">
+			{{ site.gc_edit_date | date: "%Y-%m-%d" }}
+		</time>
 	</div>
 </footer>
 
@@ -155,4 +157,7 @@
 				alt="ibm pc compatible" />
 		</a></li>
 	</ul>
+	<!-- <span>site last edited on -->
+		<!-- <time datetime="{{ site.gc_edit_date }}">{{ site.gc_edit_date | date_to_long_string: "ordinal" }}</time> -->
+	<!-- </span> -->
 </div>

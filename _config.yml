@@ -19,17 +19,18 @@
 # in the templates via {{ site.myvariable }}.
 
 title: ZeusOfTheCrows
-gc-title: Ɀeus' Stadt
 # (downcased in head.html)
+gc-title: Ɀeus' Stadt
 email: zeusofthecrows+site(ⓐ)gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  I'd love to have some words here, but I don't know what
+  ...it sure is an attempt at a website
 #baseurl: "/" # the subpath of your site, e.g. /blog
 url: "zeusofthecrows.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 markdown: kramdown
 lang: en-GB
 sep_char: ¦ # separator character for lists (one ¦ two ¦ three)
-edit_date: 2022-06-18
+edit_date: 2022-06-23
+gc_edit_date: 2022-06-23
 
 kramdown:
   # disable smart quotes/apostrophes
