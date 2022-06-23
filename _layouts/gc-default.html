@@ -26,8 +26,11 @@
 	</head>
 
 	<body>
-		{{ content }}
+		<main id="window-area" aria-label="Content">
+			{{ content }}
+		</main>
 		<script src="/stadt/assets/js/draggable-windows.js"></script>
+		{% include gc-footer.html %}
 	</body>
 
 </html>
