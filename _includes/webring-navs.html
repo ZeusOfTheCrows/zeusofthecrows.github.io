@@ -1,26 +1,58 @@
-<div class="webrings">
-	<p>this site is a proud member of the following webrings!</p>
+<div class="webrings-container">
+	<div id="wr-intro">
+		<p>this site is a proud member of the following webrings! to discover
+			more, click on their titles; or find more
+			<a href="https://nerdlistings.info/">here</a></p>
+	</div>
 
-	<hr />
+	<div id="wr-geekring" class="webring">
+		<em><a href="http://geekring.net/">geekring</a></em>
 
-	<p><i>geekring</i>
-	<br />
-	check some other geeky websites here</p>
-	<!-- zero width non-joiner to prevent ligatures -->
-	<a href="http://geekring.net/site/139/previous"><&zwnj;<&zwnj;<</a> {{ site.sep_char }}
-	<a href="http://geekring.net/site/139/random">?&zwnj;?&zwnj;?</a> {{ site.sep_char }}
-	<a href="http://geekring.net/site/139/next">>&zwnj;>&zwnj;></a>
+		<br /><br />
 
-	<br /><br /> <!-- why a double break? i don't know -->
-	<hr />
+		<ul>
+			<li><a href="http://geekring.net/site/139/previous"><&zwnj;<&zwnj;<</a></li>
+			<li>{{ site.sep_char }}</li>
+			<li><a href="http://geekring.net/site/139/random"  >?&zwnj;?&zwnj;?</a></li>
+			<li>{{ site.sep_char }}</li>
+			<li><a href="http://geekring.net/site/139/next"    >>&zwnj;>&zwnj;></a></li>
+		</ul>
 
-	<p><i>yesterweb</i>
-	<br />
-	nostalgic for the old web? browse here</p>
-	<a href="https://webring.yesterweb.org/noJS/index.php?d=prev&url=https://zeusofthecrows.github.io/"
-		><&zwnj;<&zwnj;<</a>  {{ site.sep_char }}
-	<a href="https://webring.yesterweb.org/noJS/index.php?d=rand&url=https://zeusofthecrows.github.io/"
-		>?&zwnj;?&zwnj;?</a>  {{ site.sep_char }}
-	<a href="https://webring.yesterweb.org/noJS/index.php?d=next&url=https://zeusofthecrows.github.io/"
-		>>&zwnj;>&zwnj;></a>
+		<p>a webring for geeks of all sorts, except those who feel excluded by
+		the use of the word geek. if you're a geek, this is for you.</p>
+	</div>
+
+	<div id="wr-yester" class="webring">
+		<em><a href="http://yesterweb.org/webring/">yesterweb</a></em>
+
+		<br /><br />
+
+		<ul>
+			<li><a href="https://webring.yesterweb.org/noJS/index.php?d=prev&url=https://zeusofthecrows.github.io/"><&zwnj;<&zwnj;<</a></li>
+			<li>{{ site.sep_char }}</li>
+			<li><a href="https://webring.yesterweb.org/noJS/index.php?d=rand&url=https://zeusofthecrows.github.io/">?&zwnj;?&zwnj;?</a></li>
+			<li>{{ site.sep_char }}</li>
+			<li><a href="https://webring.yesterweb.org/noJS/index.php?d=next&url=https://zeusofthecrows.github.io/">>&zwnj;>&zwnj;></a></li>
+		</ul>
+
+		<p>if you believe that the internet is being wrongly controlled by
+			capitalism, then you belong here.</p>
+	</div>
+
+	<div id="wr-hotline" class="webring">
+		<em><a href="https://hotlinewebring.club/">hotline</a></em>
+
+		<br /><br />
+
+		<ul>
+			<li><a href="https://hotlinewebring.club/zeus/previous/"><&zwnj;<&zwnj;<</a></li>
+			<li>{{ site.sep_char }}</li>
+			<li><a href="https://hotlinewebring.club/">☎☎☎</a></li>
+			<li>{{ site.sep_char }}</li>
+			<li><a href="https://hotlinewebring.club/zeus/next/">>&zwnj;>&zwnj;></a></li>
+		</ul>
+
+		<p>do you long for a simpler time, when america was online and the only
+			person you could ask was jeeves?</p>
+	</div>
 </div>

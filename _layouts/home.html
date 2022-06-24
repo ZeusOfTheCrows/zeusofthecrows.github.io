@@ -11,8 +11,12 @@ layout: default
 	{% for post in site.posts %}
 		<li class="post-list"
 			><a class="post-title" href="{{ post.url | relative_url }}"
-			                             >{{ post.title | escape }}</a>
+			                            >{{ post.title | escape }}</a>
 			{{ post.excerpt | strip_html}}
 		</li>
 	{% endfor %}
 </ul>
+
+<hr />
+
+{% include webring-navs.html %}

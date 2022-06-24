@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
 	<head>
 	{% include head.html %}
 	</head>
@@ -14,7 +14,6 @@
 			<div id="nav-menu-wrapper" aria-label="main navigation" role="navigation">
 				{% include tree-nav-menu.html %}
 				<hr id="wr-divider" />
-				{% include webring-navs.html %}
 			</div>
 
 			<main id="content" aria-label="content" role="content">

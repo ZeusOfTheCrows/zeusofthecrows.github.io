@@ -6,8 +6,9 @@
 // * "//" comments are sass only, "/*" comments get compiled to css
 
 /*==================================imports==================================*/
-@import "nav-menu.scss";
 @import "vars.scss";
+@import "nav-menu.scss";
+@import "webrings.scss";
 
 /*================================= layout ==================================*/
 .whole-wrapper {
@@ -25,7 +26,7 @@
 .site-header {
 	grid-area: header;
 }
-.skip-nav-link {
+.skip-nav-link {  // ztodo this was broken at some point
 	// https://youtu.be/jDDaOFr9nqQ
 	position: absolute;
 	transform: translateY(-120%);
@@ -48,11 +49,11 @@
 
 @media only screen and (max-width: $logo-breakpoint) {
 	.whole-wrapper {
-	grid-template-columns: 100%;
-	grid-template-areas:
-		"header"
-		"content"
-		"footer";
+		// grid-template-columns: 100%;  // ztodo what the fuck did i mean by this?
+		grid-template-areas:
+			"header"
+			"content"
+			"footer";
 	}
 	.site-header {
 		grid-area: header;
@@ -227,13 +228,6 @@ h1, h2, h3, h4, h5, h6, em, i, strong, b, th {
 	line-height: inherit;
 	font-size: inherit;
 }
-
-h1, h2 {
-		// &::after {
-			// add a horizontal line
-			// this is done farther down, by the hr block
-		// }
-}
 h1 {
 	color: $text-14;
 }
@@ -272,7 +266,7 @@ em, i {
 }
 
 /* de-emphasise text. i'm undecided as to the best way to do this:
-.weak class (antithesis of strong), <small> tag (semantically dubious) */
+.weak class (antonym of strong), <small> tag (semantically dubious) */
 .weak, small {
 	font-size: inherit;
 	color: $text-08;
@@ -312,7 +306,7 @@ hr {
 hr::before, h1::after, h2::after {
 	/* is in the ::before of the hr so i can put a line break in the ::after */
 	color: $text-09;
-	width: 100%;
+	// width: 100%;
 	display: block;
 	content: $hr-content;
 	white-space: nowrap;

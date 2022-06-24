@@ -1,0 +1,33 @@
+div.webrings-container{
+	display: grid;
+	grid-auto-flow: column;
+	grid-template-areas:
+		"intro intro intro intro"
+		"geek yester hotln placeholder";
+	// row-gap: 1em;
+	column-gap: 2ch;
+
+	& .webring {
+		// display: flex;
+		// flex-direction: row;
+		// justify-content: center;
+
+		& li {
+			display: inline-block;
+		}
+	}
+
+	& #wr-intro {
+		grid-area: intro;
+	}
+	& #wr-geekring {
+		grid-area: geek;
+	}
+	& #wr-yester {
+		grid-area: yester;
+	}
+	& #wr-hotline {
+		grid-area: hotln;
+		padding: 0ch 1em;
+	}
+}
