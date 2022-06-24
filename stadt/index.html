@@ -30,22 +30,18 @@ layout: gc-default
 			   (stadt because i rather like the word).</p>
 		</div>
 		<div>
-			<ul id="zeus-buttons" class="img-grid">
-				<li><a href="https://zeusofthecrows.github.io/stadt/">
-					<img src="./assets/images/buttons/my-links/zeus-train.png"
-						class="btn-88x31" alt="zeus british rail" />
+			<ul id="page-info-buttons" class="img-grid">
+				<li><a>
+					<img src="./assets/images/buttons/page-info/1080.png"
+						class="btn-88x31" alt="best viewed 1080p"/>
 				</a></li>
-				<li><a href="https://zeusofthecrows.github.io/">
-					<img src="./assets/images/buttons/my-links/zeus-term.png"
-						class="btn-88x31" alt="zeus terminal"/>
+				<li><a>
+					<img src="./assets/images/buttons/page-info/cookies.png"
+						class="btn-88x31" alt="absolutely no cookies"/>
 				</a></li>
-				<li><a href="https://zeusofthecrows.neocities.org">
-					<img src="./assets/images/buttons/my-links/zeus-scan.png"
-						class="btn-88x31" alt="zeus radar scanner">
-				</a></li>
-				<li><a href="https://zeusofthecrows.github.io/">
-					<img src="./assets/images/buttons/my-links/zeus-term-green.png"
-						alt="zeus terminal green" class="btn-88x31" />
+				<li><a href="#js-disclaimer">
+					<img src="./assets/images/buttons/page-info/js-warning.png"
+						class="btn-88x31" alt="warning page contains js"/>
 				</a></li>
 			</ul>
 		</div>
@@ -171,15 +167,32 @@ layout: gc-default
 			<p>this site is a proud member of the following webrings</p>
 			<p>to find out more about webrings, visit [ztodo link here]</p>
 		</div>
-		<!-- /!\ div *must* have this class /!\ -->
+		<!-- /!\ div *must* have these classes /!\ -->
 		<div id="wr-yester" class="yw-widget-full yw-raw"
-			data-yw-url="https://zeusofthecrows.github.io/"></div>
-			<!-- js for yesterweb ring -->
-		<script src="https://yesterweb.org/js/widget.js"></script>
+			data-yw-url="https://zeusofthecrows.github.io/">
+			<!-- all this content is a placeholder for users with js disabled -->
+			<h3 class="yw-title yw-title-nojs">Yesterweb Ring</h3>
+			<p>This site, <strong><a href="https://zeusofthecrows.github.io/stadt">
+				ZeusOfTheCrows</a></strong>, is keeping the old web alive. Thanks,
+				<strong>~Zeus</strong>!
+			</p>
+			<p>
+				<a href="https://webring.yesterweb.org/noJS/index.php?d=prev&url=https://zeusofthecrows.github.io/">
+					[Next]</a>
+				<a href="https://webring.yesterweb.org/noJS/index.php?d=next&url=https://zeusofthecrows.github.io/">
+					[Prev]</a>
+				<a href="https://webring.yesterweb.org/noJS/index.php?d=rand&url=https://zeusofthecrows.github.io/">
+					[Rand]</a>
+				<br />
+				<a href="https://yesterweb.org/webring/members.html">
+					[members]</a>
+			</p>
+		</div>
 
-			<!-- <script src="https://yesterwebring.neocities.org/script.js"></script> -->
-			<!-- <webring-css site="https://zeusofthecrows.github.io/"></webring-css> -->
-		<!-- </div> -->
+		<!-- js for yesterweb ring -->
+		<script src="https://yesterweb.org/js/widget.js"></script>
+		<!-- local to avoid spamming the server -->
+		<!-- <script src="./assets/js/yw-ring-local.js"></script> -->
 
 		<div id="wr-geekring" class="indent-9x">
 			<!-- <p style="font-size: 0.8em; font-family: var(--csl-fnt); font-weight: bold; text-align: center;"> -->

@@ -248,6 +248,10 @@ samp,
 
 .window-9x {
 	position: absolute;
+
+	&:target {
+		z-index: 90;  // ztodo test this
+	}
 }
 .indent-9x {
 	margin: 0;
@@ -436,7 +440,7 @@ samp,
 				padding-top: 0;
 			}
 		}
-		& #zeus-buttons {
+		& #page-info-buttons {
 			grid-area: btns;
 			width: 96px;
 		}
@@ -473,6 +477,7 @@ samp,
 		}
 
 		& #wr-yester {
+			grid-area: yester;
 
 			@font-face {
 				font-family: "Yesterweb Nova Square";
@@ -492,8 +497,9 @@ samp,
 			border-right-color:  var(--d-grn);
 
 			& .yw-title {
-				font-family: "Yesterweb Nova Square";
+				font-family: "Yesterweb Nova Square", Impact;
 				color: var(--s-grn);
+				font-weight: normal;
 			}
 			& a {
 				color: var(--s-grn);
@@ -687,14 +693,14 @@ samp,
 /* -------------------------------- taskbar -------------------------------- */
 #taskbar-9x {
 	position: fixed;
-	z-index: 97;
+	z-index: 87;
 	bottom: 0;
 
 	display: flex;
 	justify-content: space-between;
 
 	/* borders */
-	border-top: 2px solid var(--bgd-4);
+	border-top: 2px solid var(--btn-hilite);
 	padding: 2px 2px 0px 2px;
 	width: calc(100% - 4px);  // 4px padding otherwise scrollbar
 
@@ -788,7 +794,7 @@ samp,
 
 #startmenu-9x {
 	position: fixed;
-	z-index: 99;
+	z-index: 89;
 	display: none;
 	top:    0;
 	left:   0;
@@ -866,7 +872,7 @@ samp,
 
 #taskbar-balloon {
 	position: fixed;
-	z-index: 98;
+	z-index: 88;
 	bottom: 44px;
 	right: 80px;
 
