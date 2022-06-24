@@ -8,9 +8,12 @@ div.webrings-container{
 	column-gap: 2ch;
 
 	& .webring {
-		// display: flex;
-		// flex-direction: row;
-		// justify-content: center;
+		/* for centring the titles/links */
+		text-align: center;
+		& p,
+		& ul, {
+			display: inline-block;
+		}
 
 		& li {
 			display: inline-block;
