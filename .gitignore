@@ -13,3 +13,6 @@ references/
 
 # quick manual copy backup files
 *.zbk
+
+# aseprite files
+*.ase

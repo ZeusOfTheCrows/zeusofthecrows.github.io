@@ -20,8 +20,6 @@ new here? check the stuff i think is least crap:
 
 ---
 
-i'm not great at words, but if you really must have some [this (very wip) page might be more up your street](/stadt/). - /!\ JS warning
-
 i'm very good at not finishing things, so expect this site to be a continual work in progress...
 
 if this site has accessibility issues, please let me know: i'm not so good at that sort of thing, so would like to be told if/how to improve.

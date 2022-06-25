@@ -3,9 +3,10 @@ div.webrings-container{
 	grid-auto-flow: column;
 	grid-template-areas:
 		"intro intro intro intro"
-		"geek yester hotln placeholder";
+		"hotln yester geek placeholder";
 	// row-gap: 1em;
 	column-gap: 2ch;
+		// padding: 0ch 1em;
 
 	& .webring {
 		/* for centring the titles/links */
@@ -31,6 +32,16 @@ div.webrings-container{
 	}
 	& #wr-hotline {
 		grid-area: hotln;
-		padding: 0ch 1em;
 	}
+}
+
+@media only screen and (max-width: $logo-breakpoint) {
+	div.webrings-container{
+		display: grid;
+		grid-auto-flow: column;
+		grid-template-areas:
+			"intro intro"
+			"geek yester"
+			"hotln placeholder";
+		}
 }
