@@ -12,12 +12,12 @@
 				{% include header.html %}
 			</header>
 
-			<nav id="nav-menu-wrapper" aria-label="main navigation" role="navigation">
+			<nav id="nav-menu-wrapper" aria-label="main navigation">
 				{% include tree-nav-menu.html %}
 				<hr id="tree-nav-end" />
 			</nav>
 
-			<main id="content" aria-label="content" role="content">
+			<main id="content" aria-label="content" role="main">
 				{% comment %} <!-- cosmetically replace | with ¦ --> {% endcomment %}
 				{{ content | replace: "|", "¦" }}
 			</main>
