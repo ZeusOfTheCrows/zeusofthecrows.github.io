@@ -6,22 +6,23 @@
 
 	<body>
 		<div class="whole-wrapper">
-			<header class="site-header" role="banner">
-				<a class="skip-nav-link" href="#content"></a>
+			<a class="skip-nav-link" href="#content">Skip to Content</a>
+
+			<header class="site-header">
 				{% include header.html %}
 			</header>
 
-			<div id="nav-menu-wrapper" aria-label="main navigation" role="navigation">
+			<nav id="nav-menu-wrapper" aria-label="main navigation" role="navigation">
 				{% include tree-nav-menu.html %}
-				<hr id="wr-divider" />
-			</div>
+				<hr id="tree-nav-end" />
+			</nav>
 
 			<main id="content" aria-label="content" role="content">
 				{% comment %} <!-- cosmetically replace | with ¦ --> {% endcomment %}
 				{{ content | replace: "|", "¦" }}
 			</main>
 
-			<footer id="footer" role="footer">
+			<footer id="footer">
 				{% include footer.html %}
 			</footer>
 		</div>

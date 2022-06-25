@@ -1,22 +1,27 @@
 ---
 layout: default
 ---
-
-{{ content }}
-
-<hr />
-
-<ul class="post-wrapper">
-	<!-- ztodo limit this to a few posts, add an archive page -->
-	{% for post in site.posts %}
-		<li class="post-list"
-			><a class="post-title" href="{{ post.url | relative_url }}"
-			                            >{{ post.title | escape }}</a>
-			{{ post.excerpt | strip_html}}
-		</li>
-	{% endfor %}
-</ul>
+<section>
+	{{ content }}
+</section>
 
 <hr />
 
-{% include webring-navs.html %}
+<section>
+	<ul class="post-wrapper">
+		<!-- ztodo limit this to a few posts, add an archive page -->
+		{% for post in site.posts %}
+			<li class="post-list"
+				><a class="post-title" href="{{ post.url | relative_url }}"
+				                            >{{ post.title | escape }}</a>
+				{{ post.excerpt | strip_html}}
+			</li>
+		{% endfor %}
+	</ul>
+</section>
+
+<hr />
+
+<section>
+	{% include webring-navs.html %}
+</section>

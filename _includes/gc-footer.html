@@ -1,7 +1,7 @@
 <footer id="taskbar-9x">
 	<ul id="taskbar-btns">
-		<li><a id="btn-start" class="btn-9x" href="#startmenu-9x"
-		aria-role="button"> <!--should this be an actual button?-->
+		<!--should this be an actual button?-->
+		<li><a id="btn-start" class="btn-9x" href="#startmenu-9x" role="button">
 			<!-- <img id="start-orb" src="./assets/images/logo.svg" -->
 				<!-- alt="start orb: zeus logo" /> -->
 			<svg id="start-orb" xmlns="http://www.w3.org/2000/svg"
@@ -18,11 +18,12 @@
 		<li><a id="taskbar-sep" class="btn-9x btn-sep">
 		</a></li>
 		<li><a>
-			<img class="btn-88x31" src="./assets/images/buttons/z-cnstr-dm-3d.png" />
+			<img class="btn-88x31" src="./assets/images/buttons/z-cnstr-dm-3d.png"
+				alt="site under construction" />
 		</a></li>
 		<li><a href="https://colemak.org/">
 			<img class="btn-88x31" src="./assets/images/buttons/colemak.png"
-				alt="" />
+				alt="i use colemak (wide)" />
 		</a></li>
 		<li><a>
 			<img class="btn-88x31" src="./assets/images/buttons/mars.png"
@@ -42,7 +43,7 @@
 		</a></li>
 		<li><a>
 			<img class="btn-88x31" src="./assets/images/buttons/seed.png"
-				alt="" />
+				alt="seed your torrents" />
 		</a></li>
 		<li><a>
 			<img class="btn-88x31" src="./assets/images/buttons/still-you.png"
@@ -55,12 +56,19 @@
 	</ul>
 	<div id="taskbar-tray">
 		<a href="https://zeusofthecrows.github.io/stadt">
-			<img src="./assets/images/window-icons/stadt-gp.png"></a>
+			<img src="./assets/images/window-icons/stadt-gp.png"
+				alt="github pages site mirror" />
+		</a>
 		<a href="https://zeusofthecrows.neocities.org">
-			<img src="./assets/images/window-icons/stadt-nc.png"></a>
+			<img src="./assets/images/window-icons/stadt-nc.png"
+				alt="neocities site mirror" />
+		</a>
 		<a>
-			<img src="./assets/images/window-icons/cassette.png"></a>
-		<time datetime="{{ site.gc_edit_date }}">
+			<img src="./assets/images/window-icons/cassette.png"
+				alt="" />
+		</a>
+		<time datetime="{{ site.gc_edit_date | date: '%Y-%m-%d' }}">
+			<!-- ztodo title="site last edited on	{{ site.gc_edit_date | date: format: 'long' }}"> -->
 			{{ site.gc_edit_date | date: "%Y-%m-%d" }}
 		</time>
 	</div>
