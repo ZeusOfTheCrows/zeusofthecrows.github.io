@@ -108,6 +108,13 @@ html {
 		margin: -2em 0 0;
 	}
 
+	& ::selection {
+		background: var(--d-blu);
+	}
+	& a::selection {
+		color: var(--txt-1);
+	}
+
 	/* colour scrollbars with css */
 	scrollbar-color: var(--bgd-2) var(--bgd-1);
 	/* colour scrollbars, but this time for webkit being dumb */
