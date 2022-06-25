@@ -37,11 +37,10 @@ a.skip-nav-link {
 	top: 0;
 	left: 0;
 	transform: translateY(-3em);
-	background: $text-07;
+	background: $background-emph;
 	color: $text-12 !important;  // !important as this is an accessibility item
 	padding: 2ch 2em;
-	// width: 100%;
-	border-radius: 0 0 2px 0;
+	border-radius: 0 0 $crnr-radius 0;
 	&:focus {
 		transform: translateY(0);
 		transition: transform 325ms ease-in;
@@ -178,7 +177,7 @@ html {
 
 /* change selected text colour */
 ::selection {
-		background: $text-07;
+		background: $background-emph;
 	}
 
 body {
@@ -248,7 +247,7 @@ em, i, strong, b {
 	padding: 0em  1ch;
 	background-color: $background-emph;
 	/* i know this doesn't make sense, but i think it looks better */
-	border-radius: $crnr-radius;;
+	border-radius: $crnr-radius;
 	box-shadow: 0 0 $text-glow $background-emph;
 }
 
@@ -273,11 +272,9 @@ a {
 		color: $text-11;
 		text-decoration: underline;
 	}
-
 	&:visited {
 		color: $text-09;
 	}
-
 	/* links glow brighter when hovered over */
 	&:hover {
 		text-shadow: 0 0 $text-glow * 1.2;
@@ -286,6 +283,14 @@ a {
 	/* text glows brightest when clicked */
 	&:active {
 		text-shadow: 0 0 $text-glow * 1.5;
+	}
+	&:focus {
+		outline: none;
+		background: $background-emph;
+		color: $text-12;
+		&::-moz-focus-inner {
+			border: 0;
+		}
 	}
 }
 

@@ -3,7 +3,7 @@ div.webrings-container{
 	grid-auto-flow: column;
 	grid-template-areas:
 		"intro intro intro intro"
-		"hotln yester geek placeholder";
+		"hotln yester geek nojs";
 	// row-gap: 1em;
 	column-gap: 2ch;
 		// padding: 0ch 1em;
@@ -41,7 +41,7 @@ div.webrings-container{
 		grid-auto-flow: column;
 		grid-template-areas:
 			"intro intro"
-			"geek yester"
-			"hotln placeholder";
+			"hotln yester"
+			"geek  nojs";
 		}
 }

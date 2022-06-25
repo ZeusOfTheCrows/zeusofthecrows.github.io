@@ -21,8 +21,7 @@ $text-11: #F37D00;           // text emphasised 1 - h4, strong, b, link
 $text-10: #E37100;           // base text colour
 $text-09: #AE4900;           // text deemphasised 1 - hr
 $text-08: #862C00;           // text deemphasised 2 - visited link
-$text-07: #551400;           // text deemphasised 3 - mostly background
-                             //                  of highlighted content
+$text-07: #551400;           // text deemphasised 3
 
 //============= numbers ===========//
 $crnr-radius: 1px;
@@ -46,8 +45,7 @@ $hori-padd: 2ch; //horizontal padding, only used between nav menu and content
 $logo-breakpoint: 86ch;
 // $total-width: 112ch;
 $total-width: min(88vw, 112ch);
-// $navmenu-width: {{ site.nav_vert_chars }} + 0ch;
-$navmenu-width: $nav-vert-chars + 0ch;
+$navmenu-width: $nav-vert-chars + 0ch;  // + 0ch makes the whole value ch
 
 // set content width to subset of total width
 // this is overridden when nav-menu is hidden (@media query)
