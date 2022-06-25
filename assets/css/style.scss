@@ -31,7 +31,7 @@
 	grid-area: header;
 }
 
-a.skip-nav-link {  // ztodo this was broken at some point
+a.skip-nav-link {
 	// https://youtu.be/jDDaOFr9nqQ
 	position: fixed;
 	top: 0;
@@ -41,7 +41,7 @@ a.skip-nav-link {  // ztodo this was broken at some point
 	color: $text-12 !important;  // !important as this is an accessibility item
 	padding: 2ch 2em;
 	// width: 100%;
-	border-radius: 0 0 8px 0;
+	border-radius: 0 0 2px 0;
 	&:focus {
 		transform: translateY(0);
 		transition: transform 325ms ease-in;
@@ -174,23 +174,16 @@ html {
 		border-radius: $crnr-radius;
 		background-color: $background-colour;
 	}
-
-	/* change selected text colour */
-	&::selection {
-		color: $background-colour;
-		background: $text-07;
-	}
 }
 
+/* change selected text colour */
 ::selection {
-		// color: $background-colour;
 		background: $text-07;
 	}
 
 body {
 	background-color: $background-colour;
 	color: $text-10;
-	// line-height: 1.1em;
 	line-height: 1em;
 	font-family: $text-font;
 	font-size: $text-size;
