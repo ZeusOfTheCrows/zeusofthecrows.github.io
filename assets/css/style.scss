@@ -14,6 +14,10 @@
 .whole-wrapper {
 	display: grid;
 	width: min(88vw, 112ch);
+	/* limit max width, and centre */
+	// width: $total-width;
+	margin: 2vh auto;
+	// padding: 2vh 0;
 	// i don't know why i can't just use "1fr", but it doesn't work
 	grid-template-columns: 17ch calc(100% - 17ch);
 	grid-row-gap: 0px;
@@ -26,16 +30,22 @@
 .site-header {
 	grid-area: header;
 }
-.skip-nav-link {  // ztodo this was broken at some point
+
+a.skip-nav-link {  // ztodo this was broken at some point
 	// https://youtu.be/jDDaOFr9nqQ
-	position: absolute;
-	transform: translateY(-120%);
-	// background:
-	// border-radius: 0, 0, 1, 1;
-	transition: transform 325ms ease-in;
-}
-.skip-nav-link {
-	transform: translateY(0);
+	position: fixed;
+	top: 0;
+	left: 0;
+	transform: translateY(-3em);
+	background: $text-07;
+	color: $text-12 !important;  // !important as this is an accessibility item
+	padding: 2ch 2em;
+	// width: 100%;
+	border-radius: 0 0 8px 0;
+	&:focus {
+		transform: translateY(0);
+		transition: transform 325ms ease-in;
+	}
 }
 #nav-menu {
 	grid-area: menu;
@@ -137,14 +147,13 @@ html {
 	/* smoothly scroll to anchor link */
 	scroll-behavior: smooth;
 
-		/* this is here because i think it's semantically easier to read */
 		/* offset anchor link down from the top of the page */
-	& :target:before {
-		content: "";
-		display: block;
-		height: 2em;
-		margin: -2em 0 0;
-	}
+	// & :target:before {
+		// content: "";
+		// display: block;
+		// height: 2em;
+		// margin: -2em 0 0;
+	// }
 
 	/* colour scrollbars with css */
 	scrollbar-color: $text-07 $background-colour;
@@ -187,11 +196,6 @@ body {
 	font-size: $text-size;
 	/* for glow effect */
 	text-shadow: 0px 0px $text-glow;
-
-	/* limit max width, and centre */
-	width: $total-width;
-	margin: 0 auto;
-	padding: 2vh 0;
 }
 
 .contents-intro-container {

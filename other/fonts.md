@@ -29,7 +29,7 @@ various fonts that i've made.
 
 14Seg: [Download](https://github.com/ZeusOfTheCrows/DSegstended/releases/latest/download/DSeg14.zip) {{ site.sep_char }} 7Seg: [Download](https://github.com/ZeusOfTheCrows/DSegstended/releases/latest/download/DSeg7.zip) {{ site.sep_char }} [Github](https://github.com/ZeusOfTheCrows/DSegstended/)
 
-my fork of keshikan's excellent dseg font, with cyrillic [кирилица] and greek [ελληνικο, no diacritics/tonal marks] support, several more characters, and a few changed glyphs. comes with a voluminous quantity of weights, and four different styles (classic, classic-mini, modern, and modern-mini).
+my fork of keshikan's excellent dseg font, with cyrillic and greek (no diacritics/tonal marks) support, several more characters, and a few changed glyphs. comes with a voluminous quantity of weights, and four different styles (classic, classic-mini, modern, and modern-mini).
 
 ![](/assets/images/fonts/dsegstended.png){: .showcase .sc-full}
 
