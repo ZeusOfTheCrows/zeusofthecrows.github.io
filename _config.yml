@@ -102,6 +102,7 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
+  - Readme.md
   - /stadt/notes.txt
   - /stadt/stadt.sublime-project
   - /stadt/stadt.sublime-workspace
