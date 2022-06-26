@@ -1,0 +1,315 @@
+---
+---
+/* -------------------------------- windows -------------------------------- */
+#welcome {
+	z-index: 49;  // halfway
+	top: 30vh;
+	left: calc(50vw - 256px);
+	width: 512px;
+
+	& .window-content {
+		// padding: 4px 8px;
+		padding: 8px;
+		gap: 8px;
+		grid-template-areas:
+			"title title"
+			"body btns"
+			"footer footer";
+		// overflow-y: scroll;  // add dummy scrollbar for notepad æsthetic
+
+		& #welcome-title {
+			grid-area: title;
+			font-size: 2rem;
+			font-weight: 700;
+
+			& #welcome-serif {
+				font-family: var(--fnt-serif);
+				font-size: 1.15em;  // just a mite bigger
+				color: var(--txt-2);
+			}
+			& #welcome-sans {
+				color: var(--s-org);
+			}
+		}
+		& #welcome-body {
+			grid-area: body;
+			padding: 12px 16px;
+			// background-image: linear-gradient(var(--s-ylw), var(--s-ylw));
+			// background-blend-mode: overlay;  // mixing colours
+
+			& p {
+				padding-top: 0;
+			}
+		}
+		& #page-info-buttons {
+			grid-area: btns;
+			width: 96px;
+		}
+		& #welcome-footer {
+			grid-area: footer;
+
+			// & input[type="checkbox"] {
+				// visibility: hidden;
+			// }
+		}
+		// & pre {
+			// margin: 0;
+		// }
+	}
+}
+
+#intro-text {
+	z-index: 40;
+	top: 12vh;
+	left: 12vw;
+	width: 512px;
+
+	& .window-content {
+		margin: 2px;
+		padding: 8px;
+		overflow-y: scroll;  // add dummy scrollbar for notepad æsthetic
+	}
+}
+
+#webrings {
+	z-index: 46;
+	top: 35vh;
+	left: 65vw;
+
+	& .window-content {
+		width: 440px;
+		padding: 4px;
+		gap: 8px;
+		grid-template-areas:
+			"intro yester"
+			"geek  geek  "
+			"hotln hotln ";
+
+		& #wr-intro {
+			grid-area: intro;
+		}
+
+		& #wr-yester {
+			grid-area: yester;
+
+			// background-image: url("https://cloudflare-ipfs.com/ipfs/QmaKT1nHC9JM5xmz7cRuRcB8jrkRjxdPsLaLnyzEta3e8R/gridnew.gif");
+			background: var(--bgd-0);
+
+			text-align: center;
+
+			border-width: 2px;
+			border-style: solid;
+			border-top-color:    var(--s-grn);
+			border-left-color:   var(--s-grn);
+			border-bottom-color: var(--d-grn);
+			border-right-color:  var(--d-grn);
+
+			& .yw-title {
+				font-family: "Yesterweb Nova Square", Impact;
+				color: var(--s-grn);
+				font-weight: normal;
+			}
+			& a {
+				color: var(--s-grn);
+			}
+		}
+
+		& #wr-yesterweb-disable {
+			--mybg: linear-gradient(var(--d-red), var(--d-blu));
+			// --mybg: url("https://color.firefox.com/images/bg-031-9570e8d1f7a5f835c92e764693337f43.svg");
+			--myborder: 3px double var(--d-grn);
+			--mycolor: var(--txt-3);
+			--mylinkcolor: var(--txt-0);
+			--mytitle: var(--txt-0);
+			--fontfamily: "FixedsysEx";
+			--titlesize: 12pt;
+			--borderradius: 4px;
+			--bgcolor: var(--bgd-2);
+			 --mywidth: 80%;
+			/* --myheight:60px; */
+			/* --textsize:10px; */
+			--textfamily: var(--csl-fnt);
+			/* --padding: 12px; */
+			/* --h1margin: 0; */
+			/* --textmargin:0; */
+		}
+
+		& #wr-geekring {
+			grid-area: geek;
+			padding: 8px;
+			// width: 400px;
+
+			background: linear-gradient(var(--d-aqa), var(--d-blu));
+
+			display: grid;
+			// grid-template-areas:
+				// "label label label"
+				// "btn-1 btn-2 btn-3";
+			grid-auto-flow: column;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 2px;
+
+			& p {
+				// grid-area: label;
+				text-align: center;
+				grid-column: 1 / 4;
+				grid-row:    1 / 2;
+				font-family: var(--fnt-sans);
+				// font-size: 1.2em;
+				font-weight: bold;
+				-webkit-text-stroke: 0.8px var(--txt-2);
+				-webkit-text-fill-color: var(--bgd-0);
+
+				& span {
+					font-style: oblique;
+
+					& a {
+						text-decoration: underline dotted;
+					}
+				}
+			}
+
+			& .btn-9x {
+				width: 88px;
+				grid-row: 2 / 3;
+			}
+		}
+
+		& #wr-hotline {
+			grid-area: hotln;
+
+			text-align: center;
+			font-family: var(--fnt-sans);
+			font-size: 2em;
+			font-weight: 900;
+			font-style: oblique;
+			text-transform: uppercase;
+
+			text-shadow: 0.05em 0.05em var(--d-ppl);
+
+			& a {
+				color: var(--s-blu);
+
+				&:visited {
+					color: var(--s-grn);
+				}
+				&:hover {
+					color: var(--s-ppl);
+				}
+				&:active {
+					color: var(--s-aqa);
+				}
+			}
+		}
+	}
+}
+
+//#js-disclaimer {
+//	top: 70vh;
+//	left: 5vw;
+//
+//	& .window-content {
+//		padding: 4px;
+//		width: 512px;
+//
+//		& table,
+//		& th,
+//		& td {
+//			// border: 1px solid black;
+//		}
+//
+//		& table {
+//			font-size: 0.75em;
+//
+//			& tbody tr:first-of-type(td) {
+//				text-align: right;
+//			}
+//		}
+//	}
+//}
+
+#music-player {
+	z-index: 45;
+	top: 45vh;
+	left: 10vw;
+
+	& .window-content {
+		// padding: 1px;
+		// width: 100%;
+		padding: 8px;
+		gap: 4px 8px;
+		grid-template-rows:    min-content;
+		grid-template-columns: max-content;
+
+		& #current-song {
+			width: 274px;  // narrowest it can be and still have a volume scrubber
+			height: calc(100% - 9px);  // list elements have bottom padding of 9?
+			// height: 60px;
+			// background-color: var(--d-org);
+			// maybe album art? if taller
+			// background: url("/stadt/assets/images/backgrounds/chainlink.jpg");
+			// ztodo this image is not permanent
+			background: url("/stadt/assets/images/backgrounds/swirl.png");
+			grid-area: 1 / 1 / 2 / 3;
+			// display: inline-flex;
+			// justify-content: center;
+
+			& audio {
+				width:  100%;
+				height: 100%;
+				border-radius: 0;
+				opacity: 0.8;
+
+				/* ooh chrome aren't we special */
+				&::-webkit-media-controls-enclosure {
+					border-radius: 0;
+				}
+				// i think this is probably an unanounced feature–let it sleep for now
+				// --media-background: var(--bgd-0);
+				// --duration-color: var(--d-ylw);
+			}
+		}
+		& .button-grid {  // ztodo make generic
+			// why does everything have padding-left: 40px;?? ztodo
+			list-style-type:none;
+			display: inline-block;
+			padding: 0;
+			margin: 0;
+			grid-area: 1 / 3 / 2 / 4;
+		}
+		& .current-artist {
+			grid-row: 2 / 3;
+		}
+		& .current-title {
+			grid-row: 3 / 4;
+		}
+		& .current-label {
+			text-align: right;
+			// width: 64px;
+			margin: 0;
+			padding: 2px 2px;  // for border size
+			grid-column: 1 / 2;
+		}
+		& .current-info {
+			margin: 0;
+			padding: 0px 2px;
+			// background-color: var(--bgd-3);
+			// width: auto;
+			grid-column: 2 / 4;
+		}
+
+		// & #current-song-info > p:nth-child(2n) {
+			// text-align: right;
+			// grid-area: 2 / 1 / 3 / 2;
+		// }
+		// & #current-song-info > p:nth-child(2n+1) {
+			// text-align: right; grid-column-start: 2; grid-column-end: 3;
+			// grid-area: 2 / 2 / 3 / 3;
+		// }
+	}
+
+	// & iframe {
+	// 	width:  512px;
+	// 	height: 256px;
+	// }
+}

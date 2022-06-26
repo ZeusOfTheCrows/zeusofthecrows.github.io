@@ -1,16 +1,23 @@
 ---
 layout: gc-default
+css-file: homepage
+title:
 ---
 
 <div id="desktop-area">
 
-	<div class="desktop-icons-flex-container">
+	<nav class="desktop-icons-flex-container">
+		<a class="desktop-icon" href="./thoughts">
+			<img src="./assets/images/desktop-icons/thoughts.png">
+			<br />
+			Thoughts.lnk
+		</a>
 		<a class="desktop-icon" href="./teeny-towers">
 			<img src="./assets/images/desktop-icons/teeny-towers.png">
 			<br />
 			<s>Teeny Towers</s>
 		</a>
-	</div>
+	</nav>
 
 	<div id="wall-imgs">
 		<a id="curiosity" class="wall-img">
@@ -25,7 +32,7 @@ layout: gc-default
 	</div>
 </div>
 
-<div id="welcome" class="window-9x">
+<div id="welcome" class="window-9x window-fixed">
 	<div id="welcome-titlebar" class="window-titlebar">
 		<a href="#welcome" class="window-title ms-bold">Welcome</a>
 		<ul class="window-decs">
@@ -71,7 +78,7 @@ layout: gc-default
 </div>
 
 {% comment %} <!--
-<div id="js-disclaimer" class="window-9x">
+<div id="js-disclaimer" class="window-9x window-fixed">
 	<div id="js-titlebar" class="window-titlebar">
 		<a href="#js-disclaimer" class="window-title ms-bold">
 			<img class="window-icon pixel-art"
@@ -119,7 +126,7 @@ layout: gc-default
 </div>
 <!--unfinished, as i've decided to remove js entirely--> {% endcomment %}
 
-<div id="intro-text" class="window-9x">
+<div id="intro-text" class="window-9x window-fixed">
 	<div class="window-titlebar">
 		<a href="#intro-text" class="window-title ms-bold">
 			<img class="window-icon pixel-art"
@@ -183,7 +190,7 @@ layout: gc-default
 		</div>
 </div>
 
-<div id="music-player" class="window-9x">
+<div id="music-player" class="window-9x window-fixed">
 	<div class="window-titlebar">
 		<a href="#music-player" class="window-title ms-bold">
 			<img class="window-icon pixel-art"
@@ -235,7 +242,7 @@ layout: gc-default
 	</div>
 </div>
 
-<div id="webrings" class="window-9x">
+<div id="webrings" class="window-9x window-fixed">
 	<div id="webrings-titlebar" class="window-titlebar">
 		<a href="#webrings" class="window-title ms-bold">
 			<img class="window-icon pixel-art"

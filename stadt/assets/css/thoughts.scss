@@ -1,0 +1,35 @@
+---
+---
+/* -------------------------------- windows -------------------------------- */
+
+
+div.window-content {
+	& .notepad-text {
+		font-family: var(--fnt-mono);
+		padding: 16px;
+		overflow-y: scroll;  // add dummy scrollbar for notepad æsthetic
+	}
+}
+
+.window-9x {
+	padding: 4px;
+		// &:after {  // for scrolling past end of page
+		// content: "";
+		// display: inline-block;
+		// height: 256px;
+	// }
+}
+
+// .window-content {
+// }
+
+#dark-souls {
+	z-index: 49;
+	bottom: 256px;
+	left: 10vw;
+
+	& .notepad-text {
+		width: 768px;
+		height: 512px;
+	}
+}
