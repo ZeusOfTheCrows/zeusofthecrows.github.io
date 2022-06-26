@@ -27,7 +27,7 @@
 }
 
 // @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,600;0,900;1,400;1,600;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap');
 
 /* variables */
@@ -212,7 +212,7 @@ samp,
 		// letter-spacing: 1px;
 		font-family: var(--fnt-sans);
 		// font-size: 1.2em;
-		font-weight: bold;
+		font-weight: 600;
 }
 
 .btn-88x31,
@@ -433,7 +433,7 @@ samp,
 		& #welcome-title {
 			grid-area: title;
 			font-size: 2rem;
-			font-weight: bold;
+			font-weight: 700;
 
 			& #welcome-serif {
 				font-family: var(--fnt-serif);
@@ -859,7 +859,7 @@ samp,
 			background-color: var(--d-blu);
 			color: var(--bgd-2);
 			// content: "ⱿeusOfTheCrows";
-			font-weight: bold;
+			font-weight: 700;
 			font-size: 18pt;
 			padding: 4px 2px;
 
