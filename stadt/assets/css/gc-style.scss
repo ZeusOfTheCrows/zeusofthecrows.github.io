@@ -311,7 +311,8 @@ samp,
 	}
 }
 .window-titlebar {
-	background-color: var(--s-blu);
+	background: linear-gradient(90deg, var(--s-blu), var(--d-blu));
+	// background-color: var(--s-blu);
 	color: var(--bgd-1);
 	margin: 0px 0px 2px 0px;
 	padding: 1px 2px;
@@ -400,7 +401,6 @@ samp,
 /* ============================ specific styles ============================ */
 /* -------------------------------- desktop -------------------------------- */
 #window-area {
-
 }
 #desktop-area {
 	position: fixed;
@@ -412,6 +412,37 @@ samp,
 
 	display: grid;
 	grid-auto-flow: row;
+
+	& #wall-imgs {
+		display: block;
+		position: fixed;
+
+		& #curiosity {
+			top: 5vh;
+			right: 10vw;
+		}
+		& #leptaniform {
+			bottom: 5vh;
+			left: 20vw;
+			filter: sepia(1);
+		}
+
+		& .wall-img {
+			display: block;
+			position: fixed;
+			font-size: 0.5em;
+			width: min-content;
+
+			color: var(--bgd-0);
+			opacity: 0;
+
+			&:hover {
+				// visibility: visible;
+				// display: block !important;
+				opacity: 0.9;
+			}
+		}
+	}
 }
 /* -------------------------------- windows -------------------------------- */
 #welcome {
@@ -428,7 +459,7 @@ samp,
 			"title title"
 			"body btns"
 			"footer footer";
-		// overflow-y: scroll;  // add dummy scrollbar for æsthetic
+		// overflow-y: scroll;  // add dummy scrollbar for notepad æsthetic
 
 		& #welcome-title {
 			grid-area: title;
@@ -468,6 +499,19 @@ samp,
 		// & pre {
 			// margin: 0;
 		// }
+	}
+}
+
+#intro-text {
+	z-index: 40;
+	top: 15vh;
+	left: 15vw;
+	width: 512px;
+
+	& .window-content {
+		margin: 2px;
+		padding: 8px;
+		overflow-y: scroll;  // add dummy scrollbar for notepad æsthetic
 	}
 }
 
@@ -604,7 +648,6 @@ samp,
 	}
 }
 
-//
 //#js-disclaimer {
 //	top: 70vh;
 //	left: 5vw;
@@ -713,13 +756,6 @@ samp,
 	// 	width:  512px;
 	// 	height: 256px;
 	// }
-}
-
-#link-to-me {  // ztodo temp
-	z-index: 40;
-	top: 15vh;
-	left: 15vw;
-	width: 512px;
 }
 
 /* -------------------------------- taskbar -------------------------------- */
