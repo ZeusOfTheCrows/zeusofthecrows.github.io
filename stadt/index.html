@@ -8,9 +8,7 @@ layout: gc-default
 
 <div id="welcome" class="window-9x">
 	<div id="welcome-titlebar" class="window-titlebar">
-		<!-- <img class="window-icon pixel-art" -->
-			<!-- src="./assets/images/window-icons/cd-player.png" /> -->
-		<span class="window-title ms-bold">Welcome</span>
+		<a href="#welcome" class="window-title ms-bold">Welcome</a>
 		<ul class="window-decs">
 			<li class="window-hlp"></li>
 			<li class="window-cls"></li>
@@ -39,7 +37,7 @@ layout: gc-default
 					<img src="./assets/images/buttons/page-info/cookies.png"
 						class="btn-88x31" alt="absolutely no cookies"/>
 				</a></li>
-				<li><a href="#js-disclaimer">
+				<li><a href="https://nojs.sugarfi.dev/#why" title="no it doesn't, i need to remove this">
 					<img src="./assets/images/buttons/page-info/js-warning.png"
 						class="btn-88x31" alt="warning page contains js"/>
 				</a></li>
@@ -52,6 +50,54 @@ layout: gc-default
 		</div>
 	</div>
 </div>
+
+{% comment %} <!--
+<div id="js-disclaimer" class="window-9x">
+	<div id="js-titlebar" class="window-titlebar">
+		<a href="#js-disclaimer" class="window-title ms-bold">
+			<img class="window-icon pixel-art"
+				src="./assets/images/window-icons/warning.png" alt="" />
+			JS Disclaimer
+		</a>
+		<ul class="window-decs">
+			<li class="window-cls"></li>
+		</ul>
+	</div>
+	<div class="window-content">
+		<p>
+			this page contains certain javascript elements. it should run fine
+			with js disabled, but here is an explanation of what each script does
+		</p>
+		<table id="js-descript">
+			<thead>
+				<tr>
+					<th class="indent-9x">script name</th>
+					<th class="indent-9x">description</th>
+					<th class="indent-9x">impact</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="indent-9x">draggable-windows.js</td>
+					<td class="indent-9x">
+						allows the "windows" to be moveable. without it, some windows
+						may be occluded on some page sizes.
+					</td>
+					<td class="indent-9x js-blu">low</td>
+				</tr>
+				<tr>
+					<td>widget.js</td>
+					<td>
+						loads the yesterwebring widget. this will load without the
+						js, but will look slightly uglier. for more information visit
+						<a href="https://yesterweb.org/">yesterweb.org</a>
+					</td>
+					<td class="js-grn">nominal</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div><!--unfinished, as i've decided to remove js entirely--> {% endcomment %}
 
 <div id="link-to-me" class="window-9x">
 	<p>
@@ -97,8 +143,11 @@ layout: gc-default
 
 <div id="music-player" class="window-9x">
 	<div class="window-titlebar">
-		<span class="window-title ms-bold"><img class="window-icon pixel-art"
-			src="./assets/images/window-icons/cd-audio.png" alt="" />CD Audio</span>
+		<a href="#music-player" class="window-title ms-bold">
+			<img class="window-icon pixel-art"
+				src="./assets/images/window-icons/cd-audio.png" alt="" />
+			CD Audio
+		</a>
 		<ul class="window-decs">
 			<li class="window-min"></li>
 			<li class="window-max"></li>
@@ -119,7 +168,7 @@ layout: gc-default
 				<source src="./assets/music/zeus-current-song.ogg"	type="audio/ogg" />
 				<source src="./assets/music/zeus-current-song.wav"	type="audio/wav" />
 				<source src="./assets/music/zeus-current-song.mp3"	type="audio/mp3" />
-				<!-- https://css-tricks.com/lets-create-a-custom-audio-player ? -->
+				<!-- https://css-tricks.com/lets-create-a-custom-audio-player ?
 				<!-- all 3 so i can change the song file without altering html -->
 			</audio>
 		</div>
@@ -146,8 +195,11 @@ layout: gc-default
 
 <div id="webrings" class="window-9x">
 	<div id="webrings-titlebar" class="window-titlebar">
-		<span class="window-title ms-bold"><img class="window-icon pixel-art"
-			src="./assets/images/window-icons/webring.png" alt="" /> Webrings</span>
+		<a href="#webrings" class="window-title ms-bold">
+			<img class="window-icon pixel-art"
+				src="./assets/images/window-icons/webring.png" alt="" />
+			Webrings
+		</a>
 		<ul class="window-decs">
 			<li class="window-min"></li>
 			<li class="window-cls"></li>
@@ -191,13 +243,12 @@ layout: gc-default
 		</div>
 
 		<!-- js for yesterweb ring -->
-		<script src="./assets/js/yw-ring-local.js"></script>
+		<!-- <script src="./assets/js/yw-ring-local.js"></script> -->
 		<!-- local to avoid spamming the server -->
 		<!-- <script src="./assets/js/yw-ring-local.js"></script> -->
 		<!-- <script src="https://yesterweb.org/js/widget.js"></script> -->
 
 		<div id="wr-geekring" class="indent-9x">
-			<!-- <p style="font-size: 0.8em; font-family: var(--csl-fnt); font-weight: bold; text-align: center;"> -->
 				<p>Check out the other awesome websites in <span>The
 					<a href="https://geekring.net">Geek Ring!</a></span></p>
 			<a href="http://geekring.net/site/139/previous"

@@ -98,7 +98,7 @@
 /* ======================== element generic styles ========================= */
 html {
 	/* smoothly scroll to anchor link */
-	scroll-behavior: smooth;
+	// scroll-behavior: smooth;  // overflow-anchor: none below
 		/* this is here because i think it's semantically easier to read */
 		/* offset anchor link down from the top of the page */
 	& :target:before {
@@ -138,6 +138,8 @@ body {
 	margin:0;
 	padding:0;
 	border:0;
+
+	overflow-anchor: none;
 }
 
 h1,
@@ -254,10 +256,10 @@ samp,
 // }
 
 .window-9x {
-	position: absolute;
+	position: fixed;
 
 	&:target {
-		z-index: 90;  // ztodo test this
+		z-index: 90 !important;  // makes page scroll sometimes - is this acceptable?
 	}
 }
 .indent-9x {
@@ -288,15 +290,9 @@ samp,
 .window-decs li {  // ztodo window buttons don't click
 	display: inline-block;
 	text-align: center;
-	// justify-content: center;
 	margin: 1px;
-	// padding: 2px;
 	margin: auto;
-	// width: 88px;
-	// height: 31px;
-	// color: black !important;
 	color: var(--txt-1) !important; //!important overrides link styling
-	// font-family: var(--fnt-mono);
 	text-decoration: none;
 	background: var(--bgd-2);
 	user-select: none;
@@ -324,8 +320,11 @@ samp,
 	align-items: center;
 
 
-	& .window-title {
-		// placeholder
+	& a.window-title {
+		/* remove link styling for titles */
+		color: inherit;
+		text-decoration: none;
+		cursor: default;
 
 		& .window-icon {
 			vertical-align: middle;
@@ -395,6 +394,9 @@ samp,
 
 /* ============================ specific styles ============================ */
 /* -------------------------------- desktop -------------------------------- */
+#window-area {
+
+}
 #desktop-area {
 	position: fixed;
 	width:  100%;
@@ -408,7 +410,6 @@ samp,
 }
 /* -------------------------------- windows -------------------------------- */
 #welcome {
-	position: absolute;
 	z-index: 49;  // halfway
 	top: 30vh;
 	left: calc(50vw - 256px);
@@ -466,7 +467,6 @@ samp,
 }
 
 #webrings {
-	position: absolute;
 	z-index: 46;
 	top: 35vh;
 	left: 65vw;
@@ -604,8 +604,32 @@ samp,
 	}
 }
 
+//
+//#js-disclaimer {
+//	top: 70vh;
+//	left: 5vw;
+//
+//	& .window-content {
+//		padding: 4px;
+//		width: 512px;
+//
+//		& table,
+//		& th,
+//		& td {
+//			// border: 1px solid black;
+//		}
+//
+//		& table {
+//			font-size: 0.75em;
+//
+//			& tbody tr:first-of-type(td) {
+//				text-align: right;
+//			}
+//		}
+//	}
+//}
+
 #music-player {
-	position: absolute;
 	z-index: 45;
 	top: 45vh;
 	left: 10vw;
@@ -692,7 +716,6 @@ samp,
 }
 
 #link-to-me {  // ztodo temp
-	position: absolute;
 	z-index: 40;
 	top: 15vh;
 	left: 15vw;
