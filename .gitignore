@@ -22,3 +22,16 @@ references/
 
 # you should be using apngs
 *.gif
+
+# window icon resources
+/stadt/assets/images/window-icons/
+/stadt/assets/images/All [Without duplicates]/
+
+# moot favicon sizes
+/favicons
+
+# unused backgrounds
+/stadt/assets/images/backgrounds
+/stadt/assets/images/buttons/page-info/js-warning.png
+/stadt/assets/js
+/stadt/notes.txt
