@@ -60,8 +60,8 @@
 
 #intro-text {
 	z-index: 40;
-	top: 12vh;
-	left: 12vw;
+	top: 10vh;
+	left: 10vw;
 	width: 512px;
 
 	& .window-content {
@@ -204,34 +204,10 @@
 	}
 }
 
-//#js-disclaimer {
-//	top: 70vh;
-//	left: 5vw;
-//
-//	& .window-content {
-//		padding: 4px;
-//		width: 512px;
-//
-//		& table,
-//		& th,
-//		& td {
-//			// border: 1px solid black;
-//		}
-//
-//		& table {
-//			font-size: 0.75em;
-//
-//			& tbody tr:first-of-type(td) {
-//				text-align: right;
-//			}
-//		}
-//	}
-//}
-
 #music-player {
 	z-index: 45;
-	top: 45vh;
-	left: 10vw;
+	top: 65vh;
+	left: 35vw;
 
 	& .window-content {
 		// padding: 1px;
