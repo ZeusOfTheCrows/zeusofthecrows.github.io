@@ -222,6 +222,7 @@ code {
 .btn-88x31,
 .btn-80x15,
 .btn-150x15,
+.tower,
 .pixel-art,
 .desktop-icon img,
 .window-title:before {
@@ -261,6 +262,33 @@ code {
 	width: 150px;
 	height: 15px;
 }
+.tower {
+	&.sign,
+	&.room {
+		width: 100px;
+		height: 50px;
+	}
+	&.room-wide {
+		width: 200px;
+		height: 50px;
+	}
+	&.lift {
+		width:  50px;
+		height: 50px;
+	}
+	&.wall {
+		width:  15px;
+		height: 50px;
+	}
+	&.roof {
+		width: 680px;
+		height: 13px;
+	}
+	&.lift {
+		width:  50px;
+		height: 50px;
+	}
+}
 
 // .swash-z::first-letter {
 	// placeholder in case i need to format the special glyph
@@ -287,7 +315,7 @@ code {
 	border-right-color:  var(--btn-hilite);
 }
 .outdent-9x,
-.window-9x,
+.window-9x:not(.window-maximised),
 .btn-9x,
 .window-decs li:before {
 	background-color: var(--bgd-2);
@@ -299,6 +327,11 @@ code {
 	border-left-color:   var(--btn-hilite);
 	border-bottom-color: var(--btn-lolite);
 	border-right-color:  var(--btn-lolite);
+}
+.window-maximised {
+	background-color: var(--bgd-2);
+	width: 100%;
+	height: 100%;
 }
 .btn-9x,
 .window-decs li {  // ztodo window buttons don't click
@@ -357,6 +390,9 @@ code {
 		}
 		& .window-max:before {
 			content: "󰖯";
+		}
+		& .window-rst:before {
+			content: "󰖲";
 		}
 		& .window-hlp:before {
 			content: "󰋖";
