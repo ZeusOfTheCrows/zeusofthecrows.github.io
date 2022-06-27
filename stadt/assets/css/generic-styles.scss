@@ -29,6 +29,7 @@
 // @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap');
 
 /* variables */
 :root {
@@ -40,7 +41,8 @@
 	--fnt-serif: "Times New Roman", serif;
 	--fnt-sans:  "Fira Sans", Helvetica, Arial, sans-serif;
 	--fnt-mono:  "Fira Mono", monospace;
-	--fnt-zswa:  "Arial", sans-serif;  // font for "Ɀ"
+	--fnt-code:  "Fira Code", "Fira Mono", monospace;
+	--fnt-zswa:  "Arial", sans-serif;  // font for "Ɀ" - unused
 
 	/* universal colours */
 	--d-red: #CC241D;
@@ -196,10 +198,12 @@ a {
 /* ========================= class generic styles ========================== */
 
 pre,
-code,  // maybe use fira code?
 samp,
 .ascii-art {
 	font-family: var(--fnt-mono);
+}
+code {
+	font-family: var(--fnt-code);
 }
 .ms-bold {
 	// ms sans serif style bold by doubling text width
@@ -395,7 +399,7 @@ samp,
 			background-color: var(--bgd-3);
 		}
 		&:active u {
-			color: var(--s-ppl);
+			color: var(--s-ylw);
 		}
 	}
 }
