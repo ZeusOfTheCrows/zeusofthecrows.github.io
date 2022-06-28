@@ -7,9 +7,10 @@ div.window-content {
 		font-family: var(--fnt-mono);
 		padding: 16px;
 		overflow-y: scroll;  // add dummy scrollbar for notepad æsthetic
+		overscroll-behavior: contain;  // i think this is no longer necessary?
 
 		/* defaults, can be overriden in html*/
-		width: 768px;
+		width: 704px;
 		max-height: 512px;
 	}
 }

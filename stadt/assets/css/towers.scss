@@ -3,9 +3,17 @@
 /* -------------------------------- windows -------------------------------- */
 
 .window-content {
-	height: 100%;
+	display: flex;
+	justify-content: space-between;
+	flex-flow: column;
+	background: darkolivegreen;
+	min-height: 100%;
+	// height: 100%;
 }
 #tower-container {
+	// position: absolute;
+	// bottom: 0;
+	// margin: 0 auto;
 	line-height: 65%;
 	text-align: center;
 }
