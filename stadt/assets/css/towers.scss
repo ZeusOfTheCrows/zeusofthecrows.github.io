@@ -2,33 +2,57 @@
 ---
 /* -------------------------------- windows -------------------------------- */
 
+blockquote {
+	margin-left:  16px;
+	padding-left: 16px;
+	border-left: 4px solid #605617;
+}
+
 #page-window {
 	height: 100%;
 }
 
 #whole-wrapper {
-	display: flex;
-	justify-content: space-between;
-	flex-flow: column;
-	&:after {
-		background: url("https://wallpapercave.com/wp/wp3102483.jpg");  // ztodo placeholder
-		background-attachment: fixed;
-		background-position: center bottom;
-		background-repeat: no-repeat;
-		filter: blur(50px);
-		height: 100%;
-	}
+	// display: flex;
+	// justify-content: space-between;
+	// flex-flow: column;
 	height: 100vh;
 }
+
+#background-image {
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: -1;
+	width: 100%;
+	height: 100%;
+
+	filter: blur(5px) brightness(50%);
+	background: url("https://i.imgur.com/0PKzIBi.jpeg");  // ztodo placeholder
+	background-attachment: fixed;
+	background-position: center bottom;
+	background-repeat: no-repeat;
+}
+
+#intro-text {
+	max-width: 1024px;
+	margin: 128px auto;
+	padding: 24px;
+
+	background: #001D2880;  // #HEXA
+	border-radius: 64px;
+}
+
 #tower-container {
-	// position: absolute;
-	// bottom: 0;
-	// margin: 0 auto;
-	line-height: 65%;
+	position: fixed;
+	bottom: 0;
+	margin-left: calc(50vw - 258px);  // ztodo this is really ugly
+	// line-height: 65%;
+	line-height: 0;
 	text-align: center;
-	& * {
-		text-align: left;
-	}
+	// & * {
+		// text-align: left;
+	// }
 }
 
 .tower {
@@ -40,6 +64,11 @@
 			transform: scale(2);
 			transition: 0.2s ease-in-out 0.5s;
 		}
+
+		// &[src="/stadt/assets/images/towers/vacant.png"]:not(:hover) {
+			// breaks z-index for some reason?
+			// filter: brightness(70%);
+		// }
 	}
 
 	/* sizes */
