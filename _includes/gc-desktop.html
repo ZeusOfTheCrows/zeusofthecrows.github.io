@@ -1,17 +1,25 @@
 <nav class="desktop-icons-flex-container">
-	<a class="desktop-icon" href="..">
-		<img src="/stadt/assets/images/desktop-icons/home.png">
-		<br />
-		Return Home
-	</a>
 	<a class="desktop-icon" href="./thoughts">
 		<img src="/stadt/assets/images/desktop-icons/thoughts.png">
 		<br />
 		Thoughts
 	</a>
-	<a class="desktop-icon" href="./towers" title="not really finished">
+	<a class="desktop-icon">
 		<img src="/stadt/assets/images/desktop-icons/teeny-towers.png">
 		<br />
-		Teeny Towers
+		<s class="captioned" title="coming soon">Teeny Towers</s>
 	</a>
+	{% if page.title %}
+	<a class="desktop-icon" href="/stadt/">
+		<img src="/stadt/assets/images/desktop-icons/home.png">
+		<br />
+		Return Home
+	</a>
+	{% else %}
+	<a class="desktop-icon" href=".." title=":(">
+		<img src="/stadt/assets/images/desktop-icons/exit-stadt.png">
+		<br />
+		Exit Stadt
+	</a>
+	{% endif %}
 </nav>

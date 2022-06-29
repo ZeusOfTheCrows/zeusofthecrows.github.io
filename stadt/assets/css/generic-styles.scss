@@ -265,33 +265,6 @@ code {
 	width: 150px;
 	height: 15px;
 }
-.tower {
-	&.sign,
-	&.room {
-		width: 100px;
-		height: 50px;
-	}
-	&.room-wide {
-		width: 200px;
-		height: 50px;
-	}
-	&.lift {
-		width:  50px;
-		height: 50px;
-	}
-	&.wall {
-		width:  15px;
-		height: 50px;
-	}
-	&.roof {
-		width: 480px;
-		height: 13px;
-	}
-	&.lift {
-		width:  50px;
-		height: 50px;
-	}
-}
 
 // .swash-z::first-letter {
 	// placeholder in case i need to format the special glyph

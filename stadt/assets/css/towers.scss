@@ -2,13 +2,23 @@
 ---
 /* -------------------------------- windows -------------------------------- */
 
-.window-content {
+#page-window {
+	height: 100%;
+}
+
+#whole-wrapper {
 	display: flex;
 	justify-content: space-between;
 	flex-flow: column;
-	background: darkolivegreen;
-	min-height: 100%;
-	// height: 100%;
+	&:after {
+		background: url("https://wallpapercave.com/wp/wp3102483.jpg");  // ztodo placeholder
+		background-attachment: fixed;
+		background-position: center bottom;
+		background-repeat: no-repeat;
+		filter: blur(50px);
+		height: 100%;
+	}
+	height: 100vh;
 }
 #tower-container {
 	// position: absolute;
@@ -16,4 +26,63 @@
 	// margin: 0 auto;
 	line-height: 65%;
 	text-align: center;
+	& * {
+		text-align: left;
+	}
+}
+
+.tower {
+	/* grow rooms on hover */
+	transition: 0.2s ease-in-out 0s;
+	&.room,
+	&.room-wide {
+		&:hover {
+			transform: scale(2);
+			transition: 0.2s ease-in-out 0.5s;
+		}
+	}
+
+	/* sizes */
+	height: 50px;
+	&.sign {
+		width: 150px;
+		padding-left: 30px;  // for lift shaft
+	}
+	&.room {
+		width: 100px;
+	}
+	&.room-wide {
+		width: 200px;
+	}
+	&.lift {
+		width:  50px;
+	}
+	&.lwal {
+		width: 5px;
+	}
+	&.mwal {
+		width: 30px;
+	}
+	&.rwal {
+		width: 30px;
+	}
+	&.lruf,
+	&.rruf {
+		height: 10px;
+	}
+	&.lruf {
+		width: 60px;
+		padding-right: 20px;
+	}
+	&.rruf {
+		width: 435px	;
+	}
+	&.wall {
+		width:  15px;
+		height: 50px;
+	}
+	&.roof {
+		width: 480px;
+		height: 13px;
+	}
 }
