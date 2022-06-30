@@ -1,25 +1,39 @@
 ---
 ---
-/* -------------------------------- windows -------------------------------- */
 
-blockquote {
-	margin-left:  16px;
-	padding-left: 16px;
-	border-left: 4px solid #605617;
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+
+#main-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
 }
 
-#page-window {
-	height: 100%;
-}
+#sidebar-right {
+	& .floating-img-container {
+		text-align: center;
+	}
 
-#whole-wrapper {
-	// display: flex;
-	// justify-content: space-between;
-	// flex-flow: column;
-	height: 100vh;
+	& blockquote {
+		margin-left:  16px;
+		padding-left: 16px;
+		border-left: 4px solid var(--d-ppl);
+
+		& ul {
+			list-style: square;
+
+			& li {
+				padding-bottom: 0.5em;
+			}
+		}
+
+	}
+
 }
 
 #background-image {
+	display: none;
 	position: fixed;
 	left: 0;
 	top: 0;
@@ -35,22 +49,39 @@ blockquote {
 }
 
 #intro-text {
-	max-width: 1024px;
-	margin: 128px auto;
+	max-width: 720px;
+	margin: 32px auto;
 	padding: 24px;
 
-	background: #001D2880;  // #HEXA
+	// background: #001D2880;  // #HEXA
 	border-radius: 64px;
+
+	& h1.tt-logo {
+		white-space: pre-line;
+		line-height: 70%;
+		text-align: center;
+		text-indent: 1ch;
+		// "Fantasy" only works when capitalised in firefox…
+		font-family: "Cooper Black", "Shrikhand", Fantasy;  //?\ font
+		font-size: 3em;
+		font-weight: 900;
+
+		border: none;
+		color: var(--txt-0);
+		text-stroke: 1px var(--txt-0);  // for future maybe
+		-webkit-text-stroke: 1px var(--txt-0);
+		-webkit-text-fill-color: var(--s-ppl);
+		text-shadow: -4px 4px var(--d-ppl);
+	}
 }
 
 #tower-container {
-	position: fixed;
+	position: relative;
 	bottom: 0;
-	margin-left: calc(50vw - 258px);  // ztodo this is really ugly
+	margin: 0 auto;
 	line-height: 0;
 	text-align: center;  // for roof sign
 	display: grid;
-	// grid-template-columns: 5px 50px 30px repeat(4, 100px) 30px;
 	grid-template-columns: repeat(8, min-content);
 	gap: 0;
 	grid-auto-flow: row;

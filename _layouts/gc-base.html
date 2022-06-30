@@ -10,21 +10,26 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="color-scheme" content="dark light" />
-		<!-- dulled colour to match textured background -->
-		<meta name="theme-color" content="#5A7A5B" />
 		<title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.gc-title }}</title>
 		<meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}" />
 		<link rel="stylesheet" href="/stadt/assets/css/generic-styles.css" />
 		<link rel="stylesheet" href="/stadt/assets/css/{{ page.css-file }}.css" />
 		{% if page.layout == "gc-maximised" %}
 		<link rel="stylesheet" href="/stadt/assets/css/maximised.css" />
+		<!-- matches titlebar colour in maximised view -->
+		<meta name="theme-color" content="#458588" />
 		{% endif %}
+		<!-- dulled colour to match textured background -->
+		<meta name="theme-color" content="#5A7A5B" />
 		<!-- for icon font -->
 		<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css">
 		<!-- this doesn't work properly - always uses 32px -->
 		<!-- <link rel="shortcut icon" type="image/x-icon" href="/stadt/favicon-16.png"  sizes="16x16" /> -->
 		<!-- <link rel="shortcut icon" type="image/x-icon" href="/stadt/favicon-32.png"  sizes="32x32" /> -->
 		<link rel="shortcut icon" type="image/x-icon" href="/stadt/favicon.ico" />
+		{% if page.window_icon != blank %}
+		<link rel="shortcut icon" type="image/x-icon" href="/stadt/assets/images/window-icons/{{ page.window_icon }}" />
+		{% endif %}
 		<link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}" />
 	</head>
 

@@ -1,26 +1,30 @@
 ---
-layout: gc-base
+layout: gc-maximised
 css-file: towers
 title: Teeny Towers
 programme:
-dent_style: indent
+window_icon: towers.png
 ---
-<div id="whole-wrapper">
+
+<div id="main-content" class="indent-9x">
+	<!-- has to be a separate div for blur() filter -->
 	<div id="background-image"></div>
 	<div id="intro-text">
-		<p>
+		<h1 class="tt-logo">Teeny
+		                   Towers</h1>
+		<h3>
 			welcome to teeny towers, a virtual building in which
 			<strong>you</strong> can take up residence!
-		</p>
+		</h3>
 		<p>
-			want to take part? design your own room<sup>1</sup>, and send it to me
-			- feel free to request a storey/<span class="captioned"
+			want to move in or start a business? design your own room, and send it
+			to me - feel free to request a storey/<span class="captioned"
 				title="volatile, i may change the building shape">location</span>
-			and i'll at it to this tower
+			and i'll add it to this tower
 		</p>
 		<p>
 			want to create your own tower? please feel free to add my
-			room to it!<sup>3</sup>
+			room to it!
 		</p>
 		<p><a href="https://zeusofthecrows.github.io/stadt/">
 			<img class="tower room" src="/stadt/assets/images/towers/zeus-room.png"
@@ -35,61 +39,7 @@ dent_style: indent
 		<p>
 			this concept was the brainchild of Key's Klubhouse, read more about it
 			<a href="https://keysklubhouse.neocities.org/teenytowers.html">here</a>
-			<br />
-			rules from that site:
 		</p>
-		<blockquote>
-			<ul>
-				<li>
-					You must follow the template for room size, floor level, and
-					general scale. Please also keep the border color the same shade.
-					You may build as many rooms as you please!
-				</li>
-				<li>
-					Your room can be as simple or as complex as you like, provided
-					it fits the dimensions. Animation is absolutely allowed!
-					Additionally, you may combine a maximum of two rooms
-					side-by-side without a border between (to make one large room).
-				</li>
-				<li>
-					<s>Keep it PG! We're a family-friendly organization!</s><sup>2</sup>
-				</li>
-				<li>
-					Much like other adoptable games, you may 'adopt' other builder's
-					rooms, combining them with the provided lobby, elevator, vacancy
-					and rooftop sign tiles to build your tower.
-				</li>
-				<li>
-					Remember to link all rooms back to their builder's site!
-				</li>
-			</ul>
-		</blockquote>
-		<footer><small>
-			<p>
-				<sup>1</sup>template room by key:
-				<br />
-				<img src="/stadt/assets/images/towers/template.png" alt="room template layout" />
-				<br />
-				The door and windows are examples only; you can use them or change
-				them or omit them entirely, it's up to you!
-			</p>
-			<p>
-				<sup>2</sup>unlike key, i'm perfectly happy to accept explicit
-				images (within reason), but if you make one bear in mind other
-				sites might not be
-			</p>
-			<p>
-				<sup>3</sup>feel free to use any of my images, or make your own:
-				<br />
-				<img src="/stadt/assets/images/towers/vacant.png" alt="tiny empty room with 'to let' sign" />
-				<img src="/stadt/assets/images/towers/structure/roofsign.png" alt="a tiny neon sign reading 'TEENY TOWERS' (the 'N' is dying)" />
-			</p>
-			<p>
-				teeny towers was conceptualised by key, and inspired by the now defunct
-				<a href="http://www.geocities.ws/evikun/evibuild.htm">honey building</a>
-			</p>
-			<p>(bonus points if you know what tower this was inspired by)</p>
-		</small></footer>
 	</div>
 
 	<div id="tower-container">
@@ -155,4 +105,60 @@ dent_style: indent
 		<a class="tower rwal"><img src="/stadt/assets/images/towers/structure/bf-wall-r.png" alt="" /></a>
 		<!--==================================================================-->
 	</div>
+</div>
+<div id="sidebar-right">
+	<p>
+		this concept was the brainchild of Key's Klubhouse, read more about it
+		<a href="https://keysklubhouse.neocities.org/teenytowers.html">here</a>
+		<br />
+		rules from key's site:
+	</p>
+	<blockquote>
+		<ul>
+			<li>
+				You must follow the template for room size, floor level, and
+				general scale. Please also keep the border color the same shade.
+				You may build as many rooms as you please!
+			</li>
+			<li>
+				Your room can be as simple or as complex as you like, provided
+				it fits the dimensions. Animation is absolutely allowed!
+				Additionally, you may combine a maximum of two rooms
+				side-by-side without a border between (to make one large room).
+			</li>
+			<li>
+				<s>Keep it PG! We're a family-friendly organization!</s><sup>†</sup>
+			</li>
+			<li>
+				Much like other adoptable games, you may 'adopt' other builder's
+				rooms, combining them with the provided lobby, elevator, vacancy
+				and rooftop sign tiles to build your tower.
+			</li>
+			<li>
+				Remember to link all rooms back to their builder's site!
+			</li>
+		</ul>
+	</blockquote>
+	<footer><small>
+		<p>
+			<sup>†</sup>unlike key, i'm perfectly happy to accept explicit
+			images (within reason), but if you make one bear in mind other
+			sites might not be
+		</p>
+		<p>
+			template room by key:
+			<div class="floating-img-container">
+				<img src="/stadt/assets/images/towers/template.png" alt="room template layout" />
+			</div>
+			The door and windows are examples only; you can use them or change
+			them or omit them entirely, it's up to you!
+		</p>
+
+		<p>
+			feel free to use any of my images, or make your own:
+			<div class="floating-img-container">
+				<img src="/stadt/assets/images/towers/vacant.png" alt="tiny empty room with 'to let' sign" />
+				<img src="/stadt/assets/images/towers/structure/roofsign.png" alt="a tiny neon sign reading 'TEENY TOWERS' (the 'N' is dying)" />
+			</div>
+		</p>
 </div>
