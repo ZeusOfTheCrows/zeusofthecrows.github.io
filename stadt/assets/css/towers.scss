@@ -47,40 +47,54 @@ blockquote {
 	position: fixed;
 	bottom: 0;
 	margin-left: calc(50vw - 258px);  // ztodo this is really ugly
-	// line-height: 65%;
 	line-height: 0;
-	text-align: center;
-	// & * {
-		// text-align: left;
-	// }
+	text-align: center;  // for roof sign
+	display: grid;
+	// grid-template-columns: 5px 50px 30px repeat(4, 100px) 30px;
+	grid-template-columns: repeat(8, min-content);
+	gap: 0;
+	grid-auto-flow: row;
+	& .sign {
+		grid-column: 3 / -1;  // span to end (-1) to avoid anything else on same row
+	}
+	& .room.wide {
+		grid-column-end: span 2;
+	}
 }
 
 .tower {
 	/* grow rooms on hover */
 	transition: 0.2s ease-in-out 0s;
-	&.room,
-	&.room-wide {
-		&:hover {
-			transform: scale(2);
-			transition: 0.2s ease-in-out 0.5s;
-		}
-
-		// &[src="/stadt/assets/images/towers/vacant.png"]:not(:hover) {
-			// breaks z-index for some reason?
-			// filter: brightness(70%);
-		// }
+	&.room:hover {
+		transform: scale(2);
+		transition: 0.2s ease-in-out 0.5s;
 	}
 
 	/* sizes */
 	height: 50px;
-	&.sign {
-		width: 150px;
-		padding-left: 30px;  // for lift shaft
+
+	&.roof {
+		height: 10px;
+		&.left {
+			width: 5px;
+		}
+		&.lift {
+			width: 50px;
+		}
+		&.brdg {  // bridge
+			width: 30px;
+		}
+		&.sect {  // room sized section
+			width: 100px;
+		}
+		&.right {
+			width: 30px;
+		}
 	}
 	&.room {
 		width: 100px;
 	}
-	&.room-wide {
+	&.room.wide {
 		width: 200px;
 	}
 	&.lift {
@@ -94,24 +108,5 @@ blockquote {
 	}
 	&.rwal {
 		width: 30px;
-	}
-	&.lruf,
-	&.rruf {
-		height: 10px;
-	}
-	&.lruf {
-		width: 60px;
-		padding-right: 20px;
-	}
-	&.rruf {
-		width: 435px	;
-	}
-	&.wall {
-		width:  15px;
-		height: 50px;
-	}
-	&.roof {
-		width: 480px;
-		height: 13px;
 	}
 }

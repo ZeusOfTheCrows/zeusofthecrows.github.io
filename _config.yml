@@ -76,6 +76,9 @@ defaults:
     # values:
       # layout: directory
 
+feed:
+  disable_in_development: true
+
 
 sass:
   sass_dir: _sass
@@ -109,4 +112,5 @@ exclude:
   - /stadt/stadt.sublime-workspace
   - /stadt/assets/images/backgrounds/*.gif
   - /stadt/assets/images/buttons/*.gif
+  - /*.ase
   - /stadt/assets/images/gifs/
