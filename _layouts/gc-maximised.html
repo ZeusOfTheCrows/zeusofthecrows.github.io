@@ -1,0 +1,72 @@
+---
+layout: gc-base
+---
+
+<div id="page-window" class="window-9x window-fixed window-maximised">
+	<div class="window-titlebar">
+		<a class="window-title ms-bold">
+			<img class="window-icon pixel-art"
+				src="/stadt/assets/images/window-icons/{{ page.window_icon }}" alt="" />
+			{{ page.title }}{{ page.programme }}
+		</a>
+		<ul class="window-decs">
+			<li class="window-min"></li>
+			<li class="window-rst"></li>
+			<li class="window-cls"></li>
+		</ul>
+	</div>
+	<div class="window-menu">
+		<ul>
+			<li><u>F</u>ile</li>
+			<li><u>A</u>ction</li>
+			<li><u>V</u>iew</li>
+			<li><u>H</u>elp</li>
+		</ul>
+	</div>
+	<div class="window-content">
+		<nav id="sidebar-left">
+			<ul>
+				<li>
+					<a href="/stadt/">
+						<img src="/stadt/assets/images/window-icons/home.png" />
+						Return Home
+					</a>
+				</li>
+				<hr />
+				<li>
+					<a href="/stadt/thoughts/">
+						<img src="/stadt/assets/images/window-icons/home.png" />
+						Thoughts
+					</a>
+				</li>
+				<li>
+					<a href="/stadt/logfile/">
+						<img src="/stadt/assets/images/window-icons/home.png" />
+						Logfile
+					</a>
+				</li>
+				<li>
+					<a class="captioned" title="coming soon™">
+						<img src="/stadt/assets/images/window-icons/home.png" />
+						<s>Image Collection</s>
+					</a>
+				</li>
+				<li>
+					<a class="captioned" title="coming soon™">
+						<img src="/stadt/assets/images/window-icons/home.png" />
+						<s>About Me</s>
+					</a>
+				</li>
+				<li>
+					<a href="/stadt/towers/">
+						<img src="/stadt/assets/images/window-icons/home.png" />
+						Teeny Towers
+					</a>
+				</li>
+			</ul>
+		</nav>
+		{{ content }}
+	</div>
+</div>
+
+{% include gc-footer.html %}
