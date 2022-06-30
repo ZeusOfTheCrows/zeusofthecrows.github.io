@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: 'en' }}">
-
 	<head>
 		<!--   ___                 -->
 		<!--  ' //  ___ __ __ __    -->
@@ -17,6 +16,9 @@
 		<meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}" />
 		<link rel="stylesheet" href="/stadt/assets/css/generic-styles.css" />
 		<link rel="stylesheet" href="/stadt/assets/css/{{ page.css-file }}.css" />
+		{% if page.layout == "gc-maximised" %}
+		<link rel="stylesheet" href="/stadt/assets/css/maximised.css" />
+		{% endif %}
 		<!-- for icon font -->
 		<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css">
 		<!-- this doesn't work properly - always uses 32px -->

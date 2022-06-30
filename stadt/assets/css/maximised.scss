@@ -1,0 +1,37 @@
+---
+---
+#page-window {
+	border: none;
+	width: calc(100% - 4px);  // ztodo this is hacky
+	height: 100%;
+}
+
+.window-content {
+	display: grid;
+	// grid-template-areas:
+	// 	"left main right";
+	grid-template-columns: 256px 1fr 512px;
+}
+
+#sidebar-left {
+	& ul {
+		padding: 0 30px;
+		// padding-left: 5%;//?
+		& li {
+			padding: 0.3em 0;
+			list-style: none;
+
+			&:hover {
+				background: var(--bgd-3);
+			}
+
+			&::before {
+				content: "▷ ";
+			}
+		}
+	}
+}
+
+#sidebar-right {  // in html file, not layout
+	padding: 30px;
+}

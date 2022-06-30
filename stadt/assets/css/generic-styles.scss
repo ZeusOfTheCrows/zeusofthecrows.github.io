@@ -161,14 +161,19 @@ h6 {
 	color: var(--s-org);
 }
 
-strong,
-b { // bold (for ctrl+f)
-	// color: var(--txt-0);
+strong {
+	color: var(--s-ylw);
 }
 
-em,
+b { // bold (for ctrl+f)
+	color: var(--d-ylw);
+}
+
+em {
+	color: var(--s-org);
+}
 i { // italic (for ctrl+f)
-	color: var(--s-ylw);
+	color: var(--d-org);
 }
 
 /* colour highlighted text */
@@ -282,7 +287,7 @@ code {
 }
 .indent-9x {
 	margin: 0;
-	background-color: var(--bgd-0);
+	background-color: var(--bgd-1);
 	border-width: 2px;
 	border-style: solid;
 	border-top-color:    var(--btn-lolite);
@@ -291,7 +296,7 @@ code {
 	border-right-color:  var(--btn-hilite);
 }
 .outdent-9x,
-.window-9x:not(.window-maximised),
+.window-9x/* :not(.window-maximised), */,
 .btn-9x,
 .window-decs li:before {
 	background-color: var(--bgd-2);

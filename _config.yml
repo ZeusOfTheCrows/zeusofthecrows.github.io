@@ -78,6 +78,7 @@ defaults:
 
 feed:
   disable_in_development: true
+  # doesn't do anything yet, soon hopefully
 
 
 sass:

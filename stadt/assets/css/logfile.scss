@@ -1,0 +1,70 @@
+---
+---
+
+#main-content {
+	padding: 24px;
+	overflow-y: scroll;
+
+	& p {
+		max-width: 720px;
+	}
+
+	div.log-file {
+		border-bottom: 2px solid var(--d-org);
+		margin-bottom: 2em;
+	}
+
+	& ::before,
+	& ::after {
+		color: var(--d-aqa);
+	}
+
+	& a.attachment {
+		text-decoration: none !important;  //overrides link styling
+
+		&::before,
+		&::after {
+			display: block;
+		}
+		&::before {
+			content: "<img src=\""attr(href)"\">";
+		}
+		&::after {
+			content: "</img>";
+		}
+		& img {
+			padding-left: 4ch;
+			max-width:  400px;
+			max-height: 300px;
+		}
+	}
+
+	& p {
+		&::before,
+		&::after {
+			display: block;
+		}
+		padding-left: 3ch;
+		&::before {
+			white-space: pre;
+			margin-left: -3ch;
+			content: "<p>";
+		}
+		&::after {
+			white-space: pre;
+			margin-left: -3ch;
+			// transform: translateX(-3ch);
+			content: "</p>";
+		}
+	}
+
+	& time.log-date {
+		color: var(--d-ppl);
+		&::before {
+			content: "<time>";
+		}
+		&::after {
+			content: "</time>";
+		}
+	}
+}
