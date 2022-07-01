@@ -96,7 +96,9 @@
 .tower {
 	/* grow rooms on hover */
 	transition: 0.2s ease-in-out 0s;
-	&.room:hover {
+	&.room:hover,
+	&.room:focus,
+	&.room:focus-within {
 		transform: scale(2);
 		transition: 0.2s ease-in-out 0.5s;
 	}

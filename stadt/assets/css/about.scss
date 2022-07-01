@@ -1,0 +1,14 @@
+---
+---
+
+.favs-list {
+	list-style: none;
+
+	& .fav-item {
+		color: var(--d-grn);
+	}
+	& .unfav-item {
+		color: var(--d-red);
+	}
+}
+

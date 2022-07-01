@@ -226,6 +226,10 @@ code {
 .captioned {
 	color: var(--s-aqa);
 }
+.ipa {
+	font-family: "Fira Sans", Arial, Sans-Serif;  // don't fallback to helvetica
+}
+
 
 .btn-88x31,
 .btn-80x15,
