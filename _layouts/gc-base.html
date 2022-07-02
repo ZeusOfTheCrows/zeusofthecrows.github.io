@@ -12,7 +12,7 @@
 		<meta name="color-scheme" content="dark light" />
 		<title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.gc-title }}</title>
 		<meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}" />
-		<link rel="stylesheet" href="/stadt/assets/css/generic-styles.css" />
+		<link rel="stylesheet" href="/stadt/assets/css/global.css" />
 		<link rel="stylesheet" href="/stadt/assets/css/{{ page.css-file }}.css" />
 		{% if page.layout == "gc-maximised" %}
 		<link rel="stylesheet" href="/stadt/assets/css/maximised.css" />
@@ -26,9 +26,10 @@
 		<!-- this doesn't work properly - always uses 32px -->
 		<!-- <link rel="shortcut icon" type="image/x-icon" href="/stadt/favicon-16.png"  sizes="16x16" /> -->
 		<!-- <link rel="shortcut icon" type="image/x-icon" href="/stadt/favicon-32.png"  sizes="32x32" /> -->
-		<link rel="shortcut icon" type="image/x-icon" href="/stadt/favicon.ico" />
-		{% if page.window_icon != blank %}
+		{% if page.window_icon != nil %}
 		<link rel="shortcut icon" type="image/x-icon" href="/stadt/assets/images/window-icons/{{ page.window_icon }}" />
+		{% else %}
+		<link rel="shortcut icon" type="image/x-icon" href="/stadt/favicon.ico" />
 		{% endif %}
 		<link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}" />
 	</head>

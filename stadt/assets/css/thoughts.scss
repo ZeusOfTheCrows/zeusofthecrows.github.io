@@ -16,7 +16,8 @@ div.window-content {
 }
 
 #window-area {
-	padding-bottom: 100vh;
+	height: 100vh;
+	margin-bottom:   50vh;  // allow overscrolling
 }
 
 .window-9x {
@@ -28,5 +29,23 @@ div.window-content {
 	}
 	&.window-align-right {
 		right: 10vw;
+	}
+}
+
+/* ------------------------------ decorations ------------------------------ */
+
+hr {
+	background: none;
+	border: 0;
+	margin: 0.5em 0;
+	padding: 0;
+
+	&::after {
+		content: "☙ ⁂ ❧";
+		// content: "🙡 ⁂ 🙣";  // alt
+		color: var(--s-grn);
+		display: block;
+		line-height: 1;
+		text-align: center;
 	}
 }

@@ -2,15 +2,16 @@
 ---
 #page-window {
 	border: none;
-	width: calc(100% - 4px);  // ztodo this is hacky
-	height: 100%;
+	width:  calc(100% - 4px);  // ztodo this is hacky
+	height: calc(100% - 37px); // i'm not sure this is that great either
+	display: table;
 }
 
 .window-content {
-	display: grid;
-	// grid-template-areas:
-	// 	"left main right";
-	grid-template-columns: 256px 1fr 512px;
+	box-sizing: border-box;
+	height: calc(100% - 37px); // i'm not sure this is that great either
+	margin: 24px;
+	grid-template-columns: 256px minmax(50%, 1fr) minmax(20%, 512px);
 }
 
 #sidebar-left {

@@ -103,6 +103,13 @@
 }
 
 /* ======================== element generic styles ========================= */
+html,
+body {
+	/* if you don't know why, google it */
+	width:  100%;
+	height: 100%;
+}
+
 html {
 	/* smoothly scroll to anchor link */
 	// scroll-behavior: smooth;  // overflow-anchor: none below
@@ -116,7 +123,9 @@ html {
 	}
 
 	& ::selection {
+		border-radius: 0.1em; // this doesn't work but it would be nice if it did
 		background: var(--d-blu);
+		color: var(--bgd-0);
 	}
 	& a::selection {
 		color: var(--txt-1);
@@ -153,6 +162,10 @@ h1,
 h2 {
 	color: var(--s-org);
 	border-bottom: 0.1em solid var(--d-org);
+	& mark {
+		border-bottom-left-radius:  0;
+		border-bottom-right-radius: 0;
+	}
 }
 h3,
 h4,
@@ -172,17 +185,49 @@ b { // bold (for ctrl+f)
 em {
 	color: var(--s-org);
 }
-i { // italic (for ctrl+f)
+i,
+q { // italic & quote (for ctrl+f)
 	color: var(--d-org);
+	font-style: italic;
+}
+
+blockquote {
+	margin-left: 1ch;
+	border-left: 0.4ch solid var(--d-ylw);
+	padding-left: 1.6ch;
+	position: relative;
+	display: block;
+	overflow: clip;  // hide glyph in short quotes
+	z-index: 99;  // create a new stacking index
+
+	&::before {
+		content: open-quote;
+		position: absolute;
+		display: block;
+		z-index: -1;  // hide behind text
+
+		color: var(--bgd-2);
+		top: -0.2em;
+		left: -0.05em;
+		font-size: 8em;
+	}
+	&::after {
+		content: close-quote;  // reset quote back to double
+		visibility: hidden;    // (nested quotes become single)
+		position: absolute;    // (don't mess with positioning)
+	}
 }
 
 /* colour highlighted text */
 mark {
-	margin: -0.5em -0.5ch;
-	padding: 0.5em 0.5ch;
+	margin-left:  -0.5ch;
+	margin-right: -0.5ch;
+	padding-left:  0.5ch;
+	padding-right: 0.5ch;
+	border-radius: 0.1em;
 	background-color: var(--d-ylw);
+	color: var(--txt-0);
 }
-
 
 a {
 	// i just think this layout is easier to read
@@ -339,6 +384,8 @@ code {
 }
 .window-titlebar {
 	background: linear-gradient(90deg, var(--s-blu), var(--d-blu));
+	/* hmmnn not sure about this yet - it looks kind of 3d */
+	background: linear-gradient(to bottom right, var(--s-blu), var(--d-blu));
 	// background-color: var(--s-blu);
 	color: var(--bgd-1);
 	margin: 0px 0px 2px 0px;
@@ -456,18 +503,18 @@ code {
 		& .desktop-icon {
 			// width: min-content;  // to centre text
 			text-align: center;
-			color: var(--txt-1);
+			color: var(--bgd-0);
 
 			&:visited {
-				color: var(--txt-2);
+				color: var(--bgd-2);
 			}
 			&:hover,
 			&:focus {
-				color: var(--txt-0);
+				color: var(--bgd-0);
 			}
 
 			& img {
-				width: 64px;
+				width: 32px;
 			}
 		}
 	}

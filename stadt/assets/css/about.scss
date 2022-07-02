@@ -1,6 +1,15 @@
 ---
 ---
 
+#main-content {
+	padding: 24px;
+	overflow-y: scroll;
+	height: 100%;
+	height: calc(100% - 37px); // i'm not sure this is that great either
+	// box-sizing: border-box;
+	// margin: 50px;
+
+}
 .favs-list {
 	list-style: none;
 
@@ -12,3 +21,7 @@
 	}
 }
 
+img#standard {
+	position: absolute;
+	bottom: -168px;
+}
