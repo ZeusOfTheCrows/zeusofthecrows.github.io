@@ -413,21 +413,35 @@ code {
 		font-size: 1.2em;
 		margin-right: 2px;
 		padding: 0px;
+		color: red;
+
+		& :before {
+			content: "";
+			background-size: 1em;  // overwrite inherent svg size
+			background-repeat: no-repeat;
+			background-position: center;
+			//!\ remember to add 'fill="currentColor"' to downloaded svgs
+
+			/* ================================================================ *\
+			|       all window decoration svgs from material design icons:       |
+			|                  https://materialdesignicons.com/                  |
+			\* ================================================================ */
+		}
 
 		& .window-min:before {
-			content: "󰖰";
+			background-image: url("/stadt/assets/images/svg-icons/min.svg");
 		}
 		& .window-max:before {
-			content: "󰖯";
+			background-image: url("/stadt/assets/images/svg-icons/max.svg");
 		}
 		& .window-rst:before {
-			content: "󰖲";
+			background-image: url("/stadt/assets/images/svg-icons/rst.svg");
 		}
 		& .window-hlp:before {
-			content: "󰋖";
+			background-image: url("/stadt/assets/images/svg-icons/hlp.svg");
 		}
 		& .window-cls:before {
-			content: "󰖭";
+			background-image: url("/stadt/assets/images/svg-icons/cls.svg");
 		}
 
 		& li {

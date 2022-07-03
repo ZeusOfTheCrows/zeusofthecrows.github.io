@@ -191,7 +191,8 @@
 			& a {
 
 				&[lang="und-Zsym"]{
-					font-variant-emoji: text;  //[nyi]: https://drafts.csswg.org/css-fonts-4/#font-variant-emoji-prop
+					//[nyi]: https://drafts.csswg.org/css-fonts-4/#font-variant-emoji-prop
+					font-variant-emoji: text;
 				}
 				color: var(--s-blu);
 
@@ -216,7 +217,7 @@
 				left: 0px;
 
 				z-index: -1;
-				background-image: url(https://i.ytimg.com/vi/IJ4L2TgeyKs/maxresdefault.jpg);
+				background-image: url(/stadt/assets/images/other/hotline.png);
 				background-size: cover;
 				background-position: center;
 				border-radius: 4px;
