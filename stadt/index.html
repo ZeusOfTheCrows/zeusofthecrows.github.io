@@ -4,7 +4,7 @@ css-file: homepage
 title:
 ---
 
-<div id="welcome" class="window-9x window-fixed">
+<div id="welcome" class="window-9x">
 	<div id="welcome-titlebar" class="window-titlebar">
 		<a href="#welcome" class="window-title ms-bold">Welcome</a>
 		<ul class="window-decs">
@@ -59,7 +59,7 @@ title:
 	</div>
 </div>
 
-<div id="intro-text" class="window-9x window-fixed">
+<div id="intro-text" class="window-9x">
 	<div class="window-titlebar">
 		<a href="#intro-text" class="window-title ms-bold">
 			<img class="window-icon pixel-art"
@@ -139,7 +139,66 @@ title:
 	</div>
 </div>
 
-<div id="music-player" class="window-9x window-fixed">
+<!--
+<div id="radio-player" class="window-9x window-fixed">
+	<div class="window-titlebar">
+		<a href="#music-player" class="window-title ms-bold">
+			<img class="window-icon pixel-art"
+				src="./assets/images/window-icons/cd-audio.png" alt="" />
+			CD Audio
+		</a>
+		<ul class="window-decs" aria-hidden="true">
+			<li class="window-min"></li>
+			<li class="window-max"></li>
+			<li class="window-cls"></li>
+		</ul>
+	</div>
+	<div class="window-menu">
+		<ul>
+			<li><u>D</u>isc</li>
+			<li><u>V</u>iew</li>
+			<li><u>O</u>ptions</li>
+			<li><u>H</u>elp</li>
+		</ul>
+	</div>
+	<div class="window-content">
+		<div id="current-song" class="indent-9x">
+			<audio controls preload="none">
+				<source src="https://radio.yesterweb.org/radio/8000/radio.mp3"	type="audio/mp3" />
+				<!-- https://css-tricks.com/lets-create-a-custom-audio-player ? --\>
+				<!-- all 3 so i can change the song file without altering html --\>
+			</audio>
+		</div>
+			<!-- ztodo why is this not a table? --\>
+			<!-- https://airshippirates.abneypark.com/story.html --\>
+		<p class="current-label current-artist"><u>A</u>rtist:</p>
+		<p class="current-label current-title" >Trac<u>k</u>:</p>
+		<p class="current-info  current-artist indent-9x">
+			<a href="https://abneypark.com/">Abney Park</a>
+		</p>
+		<p class="current-info  current-title  indent-9x">
+			<a href="https://open.spotify.com/track/4LcBPS0aOSrQ4trRwFli3t">
+				Airship Pirate
+			</a>
+		</p>
+
+		<ul class="button-grid">
+			<li><a href="https://yesterweb.org/radio/">
+				<img class="btn-88x31"
+					src="/stadt/assets/images/buttons/music/licence.png"
+					alt="not licensed to supply recorded music" />
+			</a></li>
+			<li><a href="https://open.spotify.com/playlist/5q8crqSxKiqtpIKnAgkYRU">
+				<img class="btn-88x31"
+					src="/stadt/assets/images/buttons/music/sovietwave.png"
+					alt="fan of sovietwave" />
+			</a></li>
+		</ul>
+	</div>
+</div>
+-->
+
+<div id="music-player" class="window-9x">
 	<div class="window-titlebar">
 		<a href="#music-player" class="window-title ms-bold">
 			<img class="window-icon pixel-art"
@@ -198,7 +257,7 @@ title:
 	</div>
 </div>
 
-<div id="webrings" class="window-9x window-fixed">
+<div id="webrings" class="window-9x">
 	<div id="webrings-titlebar" class="window-titlebar">
 		<a href="#webrings" class="window-title ms-bold">
 			<img class="window-icon pixel-art"
@@ -254,8 +313,10 @@ title:
 		<!-- <script src="https://yesterweb.org/js/widget.js"></script> -->
 
 		<div id="wr-geekring" class="indent-9x">
-				<p>Check out the other awesome websites in <span>The
-					<a href="https://geekring.net">Geek Ring!</a></span></p>
+			<p>
+				Check out the other awesome websites in <span>The
+				<a href="https://geekring.net">Geek Ring!</a></span>
+			</p>
 			<a href="http://geekring.net/site/139/previous"
 				class="btn-9x">&lt;- Previous</a>
 			<a href="http://geekring.net/site/139/random"
@@ -265,8 +326,11 @@ title:
 		</div>
 
 		<div id="wr-hotline">
-			<p><a href="https://hotlinewebring.club/zeus/previous">&lt;&lt;&lt;&lt;</a>
-				<a href="https://hotlinewebring.club/"             >☎ Hotline ☎</a>
+			<p>
+				<a href="https://hotlinewebring.club/zeus/previous">&lt;&lt;&lt;&lt;</a>
+				<!-- this is a perversion of the lang attribute, but it's the only
+					way to get chrome android to display emojis as monochrome -->
+				<a href="https://hotlinewebring.club/"lang="und-Zsym">&#9742; Hotline &#9742;</a>
 				<a href="https://hotlinewebring.club/zeus/next"    >&gt;&gt;&gt;&gt;</a>
 			</p>
 		</div>

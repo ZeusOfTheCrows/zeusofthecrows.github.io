@@ -2,6 +2,25 @@
 ---
 /* -------------------------------- windows -------------------------------- */
 
+#desktop-area {
+	background-image:
+		url("/stadt/assets/images/backgrounds/palmtreesblack.png");
+
+		// i don't really like duplicated media queries, but i don't see another way
+		@media (prefers-color-scheme: light) {
+			background-image:
+			url("/stadt/assets/images/backgrounds/palmtreespink.png");
+		}
+
+		//!\ remember to do this with background images
+		& .desktop-icons-flex-container {
+			margin: 32px;
+			padding: 16px;
+			background-color: var(--bgd-0);
+			border-radius: 8px;
+		}
+}
+
 div.window-content {
 	& .notepad-text {
 		font-family: var(--fnt-mono);
@@ -22,7 +41,6 @@ div.window-content {
 
 .window-9x {
 	z-index: 10; // means i can have manually lower
-	padding: 4px;
 
 	&.window-align-left {
 		left: 10vw;

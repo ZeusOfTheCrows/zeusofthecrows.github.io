@@ -33,11 +33,6 @@
 
 /* variables */
 :root {
-	--h-pad: 1em; // horizontal padding
-	--v-pad: 1em; // vertical padding
-	//console style font (used for '95/98 buttons)
-	          /* windows,    macos    generic */
-	--csl-fnt: "consolas", "monaco", monospace;
 	--fnt-serif: "Times New Roman", serif;
 	--fnt-sans:  "Fira Sans", Helvetica, Arial, sans-serif;
 	--fnt-mono:  "Fira Mono", monospace;
@@ -53,7 +48,7 @@
 	--d-aqa: #689D6A;
 	--d-org: #D65D0E;
 
-/* dark mode colours */
+	/* dark mode colours */
 	--bgd-0: #282828;
 	--bgd-1: #3C3836;
 	--bgd-2: #504945;
@@ -105,9 +100,12 @@
 /* ======================== element generic styles ========================= */
 html,
 body {
-	/* if you don't know why, google it */
-	width:  100%;
-	height: 100%;
+	/* prevents zooming on mobile *//* no it doesn't */
+	-webkit-text-size-adjust: none;
+	-moz-text-size-adjust: none;
+	text-size-adjust: none;
+	width:  100vw;
+	height: 100vh;
 }
 
 html {
@@ -225,8 +223,8 @@ mark {
 	padding-left:  0.5ch;
 	padding-right: 0.5ch;
 	border-radius: 0.1em;
-	background-color: var(--d-ylw);
-	color: var(--txt-0);
+	background-color: var(--s-ylw);
+	color: var(--bgd-0);
 }
 
 a {
@@ -274,7 +272,6 @@ code {
 .ipa {
 	font-family: "Fira Sans", Arial, Sans-Serif;  // don't fallback to helvetica
 }
-
 
 .btn-88x31,
 .btn-80x15,
@@ -385,7 +382,7 @@ code {
 .window-titlebar {
 	background: linear-gradient(90deg, var(--s-blu), var(--d-blu));
 	/* hmmnn not sure about this yet - it looks kind of 3d */
-	background: linear-gradient(to bottom right, var(--s-blu), var(--d-blu));
+	// background: linear-gradient(to bottom right, var(--s-blu), var(--d-blu));
 	// background-color: var(--s-blu);
 	color: var(--bgd-1);
 	margin: 0px 0px 2px 0px;
@@ -472,6 +469,7 @@ code {
 	}
 }
 .window-content {
+	margin: 2px;
 	display: grid;
 }
 
@@ -503,14 +501,14 @@ code {
 		& .desktop-icon {
 			// width: min-content;  // to centre text
 			text-align: center;
-			color: var(--bgd-0);
+			color: var(--txt-0);
 
 			&:visited {
-				color: var(--bgd-2);
+				color: var(--txt-2);
 			}
 			&:hover,
 			&:focus {
-				color: var(--bgd-0);
+				color: var(--txt-0);
 			}
 
 			& img {
