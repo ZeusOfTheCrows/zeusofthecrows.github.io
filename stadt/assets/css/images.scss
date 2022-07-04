@@ -1,0 +1,55 @@
+---
+---
+/* -------------------------------- windows -------------------------------- */
+
+#desktop-area {
+	background-image:
+		linear-gradient(var(--d-blu), var(--d-ppl), var(--d-red), var(--d-org), var(--d-ylw));
+}
+
+div.window-content {
+	& .notepad-text {
+		font-family: var(--fnt-mono);
+		padding: 16px;
+		overflow-y: scroll;  // add dummy scrollbar for notepad æsthetic
+		overscroll-behavior: contain;  // i think this is no longer necessary?
+
+		/* defaults, can be overriden in html*/
+		width: 704px;
+		max-height: 512px;
+	}
+}
+
+#window-area {
+	height: 100vh;
+	margin-bottom:   50vh;  // allow overscrolling
+}
+
+.window-9x {
+	z-index: 10; // means i can have manually lower
+
+	&.window-align-left {
+		left: 10vw;
+	}
+	&.window-align-right {
+		right: 10vw;
+	}
+}
+
+/* ------------------------------ decorations ------------------------------ */
+
+hr {
+	background: none;
+	border: 0;
+	margin: 0.5em 0;
+	padding: 0;
+
+	&::after {
+		content: "☙ ⁂ ❧";
+		// content: "🙡 ⁂ 🙣";  // alt
+		color: var(--s-grn);
+		display: block;
+		line-height: 1;
+		text-align: center;
+	}
+}

@@ -30,7 +30,7 @@ markdown: kramdown
 lang: en-GB
 sep_char: ¦ # separator character for lists (one ¦ two ¦ three)
 edit_date: 2022-06-25
-gc_edit_date: 2022-06-25
+gc_edit_date: 2022-07-04
 
 kramdown:
   # disable smart quotes/apostrophes
@@ -113,5 +113,11 @@ exclude:
   - /stadt/stadt.sublime-workspace
   - /stadt/assets/images/backgrounds/*.gif
   - /stadt/assets/images/buttons/*.gif
+  - /stadt/assets/images/towers/*.gif
+  - /stadt/assets/images/towers/structure/*.gif
   - /*.ase
   - /stadt/assets/images/gifs/
+  - /stadt/assets/images/*/*.url
+  - /stadt/assets/js/*.*
+  - /stadt/assets/images/buttons/page-info/js-warning.png
+  - /stadt/assets/images/window-icons/png/*
