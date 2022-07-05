@@ -11,15 +11,23 @@
 
 .window-content {
 	box-sizing: border-box;
-	// height: calc(100% - 37px); // i'm not sure this is that great either
-	margin: 24px;
-	grid-template-columns: 256px minmax(50%, 1fr) minmax(20%, 512px);
+	// max-height: calc(100% - 128px); // i'm not sure this is that great either
+	max-height: 90vh; // i'm not sure this is that great either
+	margin: 8px 24px;
+	grid-template-columns: 192px minmax(50%, 1fr) minmax(20%, 384px);
+	gap: 20px;
+}
+
+#main-content {
+	padding: 24px;
+	overflow-y: scroll;
+	// height: 100%;
+	height: calc(100vh - 192px); // i'm not sure this is that great either
 }
 
 #sidebar-left {
 	& ul {
-		padding: 0 30px 0 15px;
-		// padding-left: 5%;//?
+		padding-left: 0;//?
 		& li {
 			padding: 0.3em 0;
 			list-style: none;
@@ -30,8 +38,8 @@
 			}
 
 			&::before {
-				padding: 0 15px;
-				// padding-right: 1ch;
+				// padding: 0 15px;
+				padding-right: 1ch;
 				content: "▹";
 			}
 		}
@@ -39,5 +47,5 @@
 }
 
 #sidebar-right {  // in html file, not layout
-	padding: 30px;
+	// padding: 30px;
 }

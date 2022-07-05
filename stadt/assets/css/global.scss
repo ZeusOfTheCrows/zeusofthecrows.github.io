@@ -158,18 +158,23 @@ body {
 
 h1,
 h2 {
-	color: var(--s-org);
 	border-bottom: 0.1em solid var(--d-org);
 	& mark {
 		border-bottom-left-radius:  0;
 		border-bottom-right-radius: 0;
 	}
 }
+h1,
+h2,
 h3,
 h4,
 h5,
 h6 {
+	text-align: center;
 	color: var(--s-org);
+	&:target {
+		color: var(--s-grn);
+	}
 }
 
 strong {

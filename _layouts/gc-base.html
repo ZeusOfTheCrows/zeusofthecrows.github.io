@@ -13,16 +13,15 @@
 		<title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.gc-title }}</title>
 		<meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}" />
 		<link rel="stylesheet" href="/stadt/assets/css/global.css" />
-		<link rel="stylesheet" href="/stadt/assets/css/{{ page.css-file }}.css" />
 		{% if page.layout == "gc-maximised" %}
 		<link rel="stylesheet" href="/stadt/assets/css/maximised.css" />
 		<!-- matches titlebar colour in maximised view -->
 		<meta name="theme-color" content="#458588" />
 		{% endif %}
+		<!-- load page css file last for priority if equal specificity -->
+		<link rel="stylesheet" href="/stadt/assets/css/{{ page.css-file }}.css" />
 		<!-- dulled colour to match textured background -->
 		<meta name="theme-color" content="#5A7A5B" />
-		<!-- for icon font -->
-		<!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css"> -->
 		<!-- this doesn't work properly - always uses 32px -->
 		<!-- <link rel="shortcut icon" type="image/x-icon" href="/stadt/favicon-16.png"  sizes="16x16" /> -->
 		<!-- <link rel="shortcut icon" type="image/x-icon" href="/stadt/favicon-32.png"  sizes="32x32" /> -->
@@ -31,7 +30,8 @@
 		{% else %}
 		<link rel="shortcut icon" type="image/x-icon" href="/stadt/favicon.ico" />
 		{% endif %}
-		<link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}" />
+		<!-- this is only good for seo, i think, and causes problems with neocities -->
+		<!-- <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}" /> -->
 	</head>
 
 	<body>
