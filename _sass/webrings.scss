@@ -1,12 +1,25 @@
 div.webrings-container{
+	padding-top: 1em;
 	display: grid;
 	grid-auto-flow: column;
 	grid-template-areas:
-		"intro intro intro intro"
-		"hotln yester geek nojs";
+		"nojs yester geek hotln";
 	// row-gap: 1em;
 	column-gap: 2ch;
 		// padding: 0ch 1em;
+
+	& #wr-nojs {
+		grid-area: nojs;
+	}
+	& #wr-geekring {
+		grid-area: geek;
+	}
+	& #wr-yester {
+		grid-area: yester;
+	}
+	& #wr-hotline {
+		grid-area: hotln;
+	}
 
 	& .webring {
 		/* for centring the titles/links */
@@ -20,19 +33,6 @@ div.webrings-container{
 			display: inline-block;
 		}
 	}
-
-	& #wr-intro {
-		grid-area: intro;
-	}
-	& #wr-geekring {
-		grid-area: geek;
-	}
-	& #wr-yester {
-		grid-area: yester;
-	}
-	& #wr-hotline {
-		grid-area: hotln;
-	}
 }
 
 @media only screen and (max-width: $logo-breakpoint) {
@@ -40,8 +40,9 @@ div.webrings-container{
 		display: grid;
 		grid-auto-flow: column;
 		grid-template-areas:
-			"intro intro"
-			"hotln yester"
-			"geek  nojs";
+			"nojs yester"
+			"geek  hotln"
+			"break break"
+			"intro intro";
 		}
 }
