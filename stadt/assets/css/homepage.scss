@@ -1,5 +1,11 @@
 ---
 ---
+/* for nojs */
+@font-face {
+	font-family: "04b03";
+	src: url("/stadt/assets/fonts/04B_03__.ttf") format("truetype");
+}
+
 /* -------------------------------- windows -------------------------------- */
 #welcome {
 	z-index: 49;  // halfway
@@ -80,14 +86,56 @@
 		padding: 4px;
 		gap: 8px;
 		grid-template-areas:
-			"intro yester"
-			"geek  geek  "
-			"hotln hotln ";
+			"intro intro"
+			"nojs yester"
+			"geek  geek "
+			"hotln hotln";
 
 		& #wr-intro {
 			grid-area: intro;
 			text-align: center;
-			font-size: 1.2em;
+		}
+
+		& #wr-nojs {
+			grid-area: nojs;
+
+			font-family: "04b03", system, chicago, sans-serif;
+			background-color: var(--bgd-3);
+			color: var(--txt-1);
+			& a:link {
+				color: var(--s-ppl);
+				text-shadow: 0 0 2px;
+				&:visited {
+					color: var(--d-ppl);
+				}
+			}
+			border: 2px solid var(--bgd-0);
+			gap: 4px;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+
+			display: grid;
+			grid-template-areas:
+				"prev prev next next"
+				"spc2 rand rand spc3"
+				"spc2 link link spc3";
+
+			& #site {
+				display: none;
+			}
+			& #prev {
+				grid-area: prev;
+			}
+			& #next {
+				grid-area: next;
+			}
+			& #rand {
+				grid-area: rand;
+			}
+			& #link {
+				grid-area: link;
+			}
 		}
 
 		& #wr-yester {
@@ -97,6 +145,9 @@
 			background: var(--bgd-0);
 
 			text-align: center;
+
+			padding-left: 4px;
+			padding-right: 4px;
 
 			border-width: 2px;
 			border-style: solid;
@@ -113,26 +164,6 @@
 			& a {
 				color: var(--s-grn);
 			}
-		}
-
-		& #wr-yesterweb-disable {
-			--mybg: linear-gradient(var(--d-red), var(--d-blu));
-			// --mybg: url("https://color.firefox.com/images/bg-031-9570e8d1f7a5f835c92e764693337f43.svg");
-			--myborder: 3px double var(--d-grn);
-			--mycolor: var(--txt-3);
-			--mylinkcolor: var(--txt-0);
-			--mytitle: var(--txt-0);
-			--fontfamily: "FixedsysEx";
-			--titlesize: 12pt;
-			--borderradius: 4px;
-			--bgcolor: var(--bgd-2);
-			 --mywidth: 80%;
-			/* --myheight:60px; */
-			/* --textsize:10px; */
-			--textfamily: var(--csl-fnt);
-			/* --padding: 12px; */
-			/* --h1margin: 0; */
-			/* --textmargin:0; */
 		}
 
 		& #wr-geekring {
