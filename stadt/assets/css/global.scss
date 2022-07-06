@@ -349,6 +349,7 @@ code {
 .outdent-9x,
 .window-9x/* :not(.window-maximised), */,
 .btn-9x,
+.btn-dropdown:before,
 .window-decs li:before {
 	background-color: var(--bgd-2);
 	// padding: 4px;
@@ -366,6 +367,7 @@ code {
 	height: 100%;
 }
 .btn-9x,
+.btn-dropdown,
 .window-decs li {  // ztodo window buttons don't click
 	display: inline-block;
 	text-align: center;
@@ -384,6 +386,22 @@ code {
 
 	}
 }
+.btn-dropdown {
+	margin: 0;
+	font-size: 1.2em;
+	margin-right: 2px;
+	padding: 0px;
+	color: red;
+
+	& :before {
+		content: "";
+		background-size: 1em;  // overwrite inherent svg size
+		background-repeat: no-repeat;
+		background-position: center;
+		//!\ remember to add 'fill="currentColor"' to downloaded svgs
+	}
+}
+
 .window-titlebar {
 	background: linear-gradient(90deg, var(--s-blu), var(--d-blu));
 	/* hmmnn not sure about this yet - it looks kind of 3d */
@@ -426,6 +444,7 @@ code {
 			background-repeat: no-repeat;
 			background-position: center;
 			//!\ remember to add 'fill="currentColor"' to downloaded svgs
+			//!\ ztodo these are black on chromium browsers!
 
 			/* ================================================================ *\
 			|       all window decoration svgs from material design icons:       |

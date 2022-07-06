@@ -275,6 +275,9 @@
 				// --duration-color: var(--d-ylw);
 			}
 		}
+		& table {
+			grid-column: 1 / 4;
+		}
 		& .button-grid {  // ztodo make generic
 			// why does everything have padding-left: 40px;?? ztodo
 			list-style-type:none;
