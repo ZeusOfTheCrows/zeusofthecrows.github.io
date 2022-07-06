@@ -121,19 +121,19 @@
 				"spc2 rand rand spc3"
 				"spc2 link link spc3";
 
-			& #site {
+			& #nojs-site {
 				display: none;
 			}
-			& #prev {
+			& #nojs-prev {
 				grid-area: prev;
 			}
-			& #next {
+			& #nojs-next {
 				grid-area: next;
 			}
-			& #rand {
+			& #nojs-rand {
 				grid-area: rand;
 			}
-			& #link {
+			& #nojs-link {
 				grid-area: link;
 			}
 		}
