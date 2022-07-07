@@ -402,6 +402,20 @@ code {
 	}
 }
 
+@font-face {
+	font-family: "Material Design Icons";
+	src: /* subset with used chars for download size */
+		url("/stadt/assets/fonts/mdi-subset.woff2") format("woff2"),
+		url("https://cdn.jsdelivr.net/npm/@mdi/font@6.5.95/fonts/materialdesignicons-webfont.eot?#iefix&v=6.5.95") format("embedded-opentype"),
+		url("https://cdn.jsdelivr.net/npm/@mdi/font@6.5.95/fonts/materialdesignicons-webfont.woff2?v=6.5.95")      format("woff2"),
+		url("https://cdn.jsdelivr.net/npm/@mdi/font@6.5.95/fonts/materialdesignicons-webfont.woff?v=6.5.95")       format("woff"),
+		url("https://cdn.jsdelivr.net/npm/@mdi/font@6.5.95/fonts/materialdesignicons-webfont.ttf?v=6.5.95")        format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+
 .window-titlebar {
 	background: linear-gradient(90deg, var(--s-blu), var(--d-blu));
 	/* hmmnn not sure about this yet - it looks kind of 3d */
@@ -431,41 +445,30 @@ code {
 		}
 	}
 
+	/* ====================================================================== *\
+	||         all window decoration svgs from material design icons:         ||
+	||                    https://materialdesignicons.com/                    ||
+	\* ====================================================================== */
 	& .window-decs {
 		margin: 0;
 		font-size: 1.2em;
 		margin-right: 2px;
 		padding: 0px;
-		color: red;
-
-		& :before {
-			content: "";
-			background-size: 1em;  // overwrite inherent svg size
-			background-repeat: no-repeat;
-			background-position: center;
-			//!\ remember to add 'fill="currentColor"' to downloaded svgs
-			//!\ ztodo these are black on chromium browsers!
-
-			/* ================================================================ *\
-			|       all window decoration svgs from material design icons:       |
-			|                  https://materialdesignicons.com/                  |
-			\* ================================================================ */
-		}
 
 		& .window-min:before {
-			background-image: url("/stadt/assets/images/svg-icons/min.svg");
+			content: "󰖰";
 		}
 		& .window-max:before {
-			background-image: url("/stadt/assets/images/svg-icons/max.svg");
+			content: "󰖯";
 		}
 		& .window-rst:before {
-			background-image: url("/stadt/assets/images/svg-icons/rst.svg");
+			content: "󰖲";
 		}
 		& .window-hlp:before {
-			background-image: url("/stadt/assets/images/svg-icons/hlp.svg");
+			content: "󰋖";
 		}
 		& .window-cls:before {
-			background-image: url("/stadt/assets/images/svg-icons/cls.svg");
+			content: "󰖭";
 		}
 
 		& li {
@@ -480,10 +483,11 @@ code {
 				margin: 0;
 				padding: 0;
 				top: 4px;  // the tip says this has no effect but it really does
+				width: 1.2em;
 				font-size: 0.6em;
+				line-height: 1.2em;  // for vert cenre in chrome
 				color: var(--txt-0);
-				width: 1.2em;  // make square(ish)
-				height: 1.2em;
+				aspect-ratio: 1 / 1;
 			}
 		}
 	}
