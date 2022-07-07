@@ -30,7 +30,7 @@ markdown: kramdown
 lang: en-GB
 sep_char: ¦ # separator character for lists (one ¦ two ¦ three)
 edit_date: 2022-06-25
-gc_edit_date: 2022-07-04
+gc_edit_date: 2022-07-07
 
 kramdown:
   # disable smart quotes/apostrophes
