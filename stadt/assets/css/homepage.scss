@@ -353,3 +353,28 @@
 	// 	height: 256px;
 	// }
 }
+
+#quote {
+	z-index: 35;
+	top:   5vh;
+	left: 70vw;
+	width: 50ch;
+
+	& blockquote {
+		font-family: var(--fnt-serif);
+		font-size: 1.2em;
+		padding: 1em;
+	}
+	& footer {
+		display: flex;
+
+		& a,
+		& time {
+			width: 100%;
+			padding: 2px 1ch;
+		}
+		& time {
+			text-align: right;
+		}
+	}
+}
