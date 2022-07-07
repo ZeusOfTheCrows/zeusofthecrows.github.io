@@ -146,13 +146,13 @@ html {
 	/* smoothly scroll to anchor link */
 	scroll-behavior: smooth;
 
-		/* offset anchor link down from the top of the page */
-	// & :target:before {
-		// content: "";
-		// display: block;
-		// height: 2em;
-		// margin: -2em 0 0;
-	// }
+	/* offset anchor link down from the top of the page */
+	& :target:before {
+		content: "";
+		display: block;
+		height: 2em;
+		margin: -2em 0 0;
+	}
 
 	/* colour scrollbars with css */
 	scrollbar-color: $text-07 $background-colour;

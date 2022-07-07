@@ -44,6 +44,31 @@
 			}
 		}
 	}
+
+	#sass-code-container {
+		display: grid;
+		grid-auto-flow: column;
+		align-items: center;
+
+		& p {
+			text-decoration: underline overline; /* wombling free */
+			color: var(--s-org);
+		}
+		& p:before,
+		& p:after {
+			content: "";
+			border-left: 1px solid;
+			display: block;
+			height: 5em;
+			margin-left: 0.9ch;
+		}
+
+		& code {
+			tab-size: 0;
+			-moz-tab-size: 0;
+			white-space: pre;
+		}
+	}
 }
 
 .favs-list {

@@ -41,10 +41,11 @@ window_icon: about.png
 
 	<div id="about-site">
 		<h1>the site in front of the twat</h1>
+
 		<h2>why windows 9x?</h2>
 		<p>
 			because it's easy, really. i never properly used windows 9x for any
-			period of time, but i did use the windows classic theme back when it
+			period of time, though i did use the windows classic theme back when it
 			existed (yes, even from a very young age i was nostalgic for a time
 			when i didn't exist)
 		</p>
@@ -57,7 +58,8 @@ window_icon: about.png
 		<h2 id="site-rating">rating</h2>
 		<p>
 			in reality it's not really that explicit, but i don't want to have to
-			hamper myself by having to adher to a site rating
+			hamper myself by having to adher to a site rating; especially as
+			ratings are so subjective
 		</p>
 		<p>
 			read the following and make your own decision as to whether to
@@ -92,8 +94,8 @@ window_icon: about.png
 				<td>illegal content</td>
 				<td class="rating-3">high</td>
 				<td>
-					i consider laws a set of morals for those who don't have any
-					of their own, so i tend to ignore them
+					i consider laws a set of morals for those with none of their
+					own, so i tend to ignore them
 				</td>
 			</tr>
 			<tr>
@@ -105,6 +107,56 @@ window_icon: about.png
 				</td>
 			</tr>
 		</table>
+
+		<h2>site creation</h2>
+		<p>this site is assembled by jekyll…</p>
+		<p>
+			now, before you consider me <q>not getting in the spirit of
+			geocities</q>, it's mostly because my main site is hosted on
+			github pages, and jekyll/sass support comes free with that.
+		</p>
+		<p>
+			all the html is written by hand in sublime text
+			<small>
+				(i wanted a programme that wasn't electron, and therefore
+				opened faster than a geriatric snail, so it was that or n++;
+				and sublime's auto-tag closing is handy)
+			</small>
+			and the only thing is use sass for is nesting css, which i
+			think is neater and more readable than flat css
+		</p>
+
+		<div id="sass-code-container">
+			<code>
+				a:link {
+				  color: blue;
+				  &:visited {
+				    color: purple;
+				  }
+				  &:active {
+				    color: red;
+				  }
+				}
+			</code>
+			<p>VS</p>
+			<code>
+				a:link {
+				  color: blue;
+				}
+				a:visited {
+				  color: purple;
+				}
+				a:active {
+				  color: red;
+				}
+			</code>
+		</div>
+		<p>
+			it's also duplicated data, which i'm not too keen on; but ghp gives
+			me version history and all sorts of niceties, and neocities has
+			the community aspect that i like, so not being able to pick one,
+			i went for both
+		</p>
 	</div>
 
 	<!-- <img id="standard" src="/stadt/assets/images/other/standard.png" /> -->

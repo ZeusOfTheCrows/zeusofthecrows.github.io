@@ -1,6 +1,19 @@
 ---
 ---
 /* -------------------------------- windows -------------------------------- */
+:root {
+	scroll-behavior: smooth;
+	// can't get it to revert for the windows
+	// scrollbar-color: var(--d-blu) var(--d-ppl) !important;
+}
+
+html :target:before {
+	content: " ";
+	display: block;
+	height:  500px;
+	width: 20px;
+	margin: -500px 0 0;
+}
 
 #desktop-area {
 	background-image:
@@ -19,24 +32,41 @@
 			background-color: var(--bgd-0);
 			border-radius: 8px;
 		}
+
 }
 
 div.window-content {
 	& .notepad-text {
-		font-family: var(--fnt-mono);
+		font-family: var(--fnt-sans);
+		line-height: 1.5em;
+		//may be nice for larger screens, but not quite yet
+		// font-family: garamond, sans-serif;
+		// font-size: 1.2em;
+
 		padding: 16px;
 		overflow-y: scroll;  // add dummy scrollbar for notepad æsthetic
-		overscroll-behavior: contain;  // i think this is no longer necessary?
+		// i thought this was a good idea, but actually it's annoying
+		// overscroll-behavior: contain;
 
 		/* defaults, can be overriden in html*/
 		width: 704px;
 		max-height: 512px;
+
+		& ol {
+			list-style: lower-alpha;
+
+			& ::marker {
+				color: var(--s-blu);
+			}
+		}
 	}
 }
 
 #window-area {
 	height: 100vh;
+	// margin-top: 20vh;
 	margin-bottom:   50vh;  // allow overscrolling
+
 }
 
 .window-9x {

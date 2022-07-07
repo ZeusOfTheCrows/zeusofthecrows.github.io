@@ -23,6 +23,7 @@
 	overflow-y: scroll;
 	// height: 100%;
 	height: calc(100vh - 192px); // i'm not sure this is that great either
+	overflow-x: clip;
 }
 
 #sidebar-left {
