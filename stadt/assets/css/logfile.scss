@@ -14,6 +14,12 @@
 		margin-bottom: 2em;
 	}
 
+	& img {
+		border-radius: 8px;
+		border-style: ridge;
+		margin: 0.1em 4ch;
+	}
+
 	& ::before,
 	& ::after {
 		color: var(--d-aqa);
@@ -33,7 +39,7 @@
 			content: "</img>";
 		}
 		& img {
-			padding-left: 4ch;
+			// padding-left: 4ch;  // for tags, superceded by global padding
 			max-width:  400px;
 			max-height: 200px;
 		}

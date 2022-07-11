@@ -102,9 +102,12 @@
 			font-family: "04b03", system, chicago, sans-serif;
 			background-color: var(--bgd-3);
 			color: var(--txt-1);
-			& a:link {
-				color: var(--s-ppl);
+			& a {
 				text-shadow: 0 0 2px;
+
+				&:link {
+					color: var(--s-ppl);
+				}
 				&:visited {
 					color: var(--d-ppl);
 				}
@@ -376,5 +379,43 @@
 		& time {
 			text-align: right;
 		}
+	}
+}
+
+/* ============================== animations =============================== */
+
+#welcome-sans {
+	animation: colour-cycle 5s linear infinite;
+}
+@media (prefers-reduced-motion) {
+	#welcome-sans {
+		animation: none;
+	}
+}
+
+@keyframes colour-cycle {
+	0% {
+		color: var(--s-org);
+	}
+	14% {
+		color: var(--s-ylw);
+	}
+	29% {
+		color: var(--s-grn);
+	}
+	43% {
+		color: var(--s-aqa);
+	}
+	57% {
+		color: var(--s-blu);
+	}
+	71% {
+		color: var(--s-ppl);
+	}
+	86% {
+		color: var(--s-red);
+	}
+	100% {
+		color: var(--s-org);
 	}
 }

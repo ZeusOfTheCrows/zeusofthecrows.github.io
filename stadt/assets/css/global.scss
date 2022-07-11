@@ -126,9 +126,8 @@ html {
 		border-radius: 0.1em; // this doesn't work but it would be nice if it did
 		background: var(--d-blu);
 		color: var(--bgd-0);
-	}
-	& a::selection {
-		color: var(--txt-1);
+		// doesn't work in ff? even with !important
+		text-decoration-color: var(--bgd-0);
 	}
 
 	/* colour scrollbars with css */
@@ -240,13 +239,10 @@ a {
 	// i just think this layout is easier to read
 	&:link {
 		color: var(--s-blu);
-		// text-decoration: underline;
 	}
-
 	&:visited {
 		color: var(--s-ppl);
 	}
-
 	&:active, &:focus {
 		color: var(--s-red);
 	}
