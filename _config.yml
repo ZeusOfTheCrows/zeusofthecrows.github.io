@@ -30,7 +30,7 @@ markdown: kramdown
 lang: en-GB
 sep_char: ¦ # separator character for lists (one ¦ two ¦ three)
 edit_date: 2022-06-25
-gc_edit_date: 2022-07-07
+gc_edit_date: 2022-07-13
 
 kramdown:
   # disable smart quotes/apostrophes
@@ -86,6 +86,10 @@ sass:
   style: expanded
   indent_type: tab
   indent_width: 1
+  indentation:
+    - 1
+    -
+      size: tab
 
 
 # Exclude from processing.

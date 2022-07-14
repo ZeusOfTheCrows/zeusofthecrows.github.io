@@ -360,7 +360,7 @@
 #quote {
 	z-index: 35;
 	top:   5vh;
-	left: 70vw;
+	left: 60vw;
 	width: 50ch;
 
 	& blockquote {
@@ -369,16 +369,35 @@
 		padding: 1em;
 	}
 	& footer {
-		display: flex;
+		// display: flex;
+		padding: 2px 1ch;
+		text-align: right;
+		color: var(--txt-3);
 
-		& a,
-		& time {
-			width: 100%;
-			padding: 2px 1ch;
+		& a {
+			&::before,
+			&::after {
+				color: var(--txt-3);
+				text-decoration: none;
+				display: inline-block;
+			}
+
+			&::before {
+				content: "\00a0–\00a0";
+			}
+			&::after {
+				content: ",";
+			}
 		}
-		& time {
-			text-align: right;
-		}
+
+		// & a,
+		// & time {
+			// width: 100%;
+			// padding: 2px 1ch;
+		// }
+		// & time {
+			// text-align: right;
+		// }
 	}
 }
 
