@@ -39,6 +39,9 @@
 	--fnt-code:  "Fira Code", "Fira Mono", monospace;
 	--fnt-zswa:  "Arial", sans-serif;  // font for "Ɀ" - unused
 
+	--tb-hite:  39px;  // taskbar height
+	--dt-padd: 128px;  //?\ desktop padding
+
 	/* universal colours */
 	--d-red: #CC241D;
 	--d-grn: #98971A;
@@ -367,7 +370,7 @@ code {
 	border-right-color:  var(--btn-lolite);
 }
 .window-maximised {
-	background-color: var(--bgd-2);
+	// background-color: var(--bgd-2);
 	width: 100%;
 	height: 100%;
 }
@@ -523,12 +526,13 @@ code {
 /* ============================ specific styles ============================ */
 /* -------------------------------- desktop -------------------------------- */
 #window-area {
+	//!\ beware scrolling (e.g. thoughts page)
 	// this makes the desktop icons unclickable
-	position: absolute;
-	top:     0px;
-	left:  128px;
-	right:   0px;
-	bottom: 39px;
+	// position: absolute;
+	// top:     0px;
+	// left:  128px;
+	// right:   0px;
+	// bottom: 39px;
 	// overflow-x: hidden;
 }
 #desktop-area {
