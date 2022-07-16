@@ -201,13 +201,17 @@ q { // italic & quote (for ctrl+f)
 }
 
 blockquote {
-	margin-left: 1ch;
+	// margin-left: 1ch;
+	margin: 1em 0;
+	padding: 0.5em 1.6ch;
 	border-left: 0.4ch solid var(--d-ylw);
 	padding-left: 1.6ch;
+	font-size: 1.1em;
+
 	position: relative;
 	display: block;
 	overflow: clip;  // hide glyph in short quotes
-	z-index: 99;  // create a new stacking index
+	isolation: isolate;  // create a new stacking index
 
 	&::before {
 		content: open-quote;
@@ -216,8 +220,8 @@ blockquote {
 		z-index: -1;  // hide behind text
 
 		color: var(--bgd-2);
-		top: -0.2em;
-		left: -0.05em;
+		top: -0.2em;  // or top: 0.3em;, needs further testing
+		left: 0em;
 		font-size: 8em;
 	}
 	&::after {
@@ -257,6 +261,10 @@ pre,
 samp,
 .ascii-art {
 	font-family: var(--fnt-mono);
+}
+.ascii-art {
+	-moz-tab-size: 0;
+	tab-size: 0;
 }
 code {
 	font-family: var(--fnt-code);
@@ -430,6 +438,8 @@ code {
 	// background: linear-gradient(to bottom right, var(--s-blu), var(--d-blu));
 	// background-color: var(--s-blu);
 	color: var(--bgd-1);
+
+	position: relative;
 	margin: 0px 0px 2px 0px;
 	padding: 1px 2px;
 	height: 20px;
@@ -490,7 +500,7 @@ code {
 				position: absolute;
 				margin: 0;
 				padding: 0;
-				top: 4px;  // the tip says this has no effect but it really does
+				top: 2px;  // the tip says this has no effect but it really does
 				width: 1.2em;
 				font-size: 0.6em;
 				line-height: 1.2em;  // for vert cenre in chrome

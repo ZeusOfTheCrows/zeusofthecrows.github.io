@@ -35,22 +35,24 @@ html :target:before {
 
 }
 
-div.window-content {
-	& .notepad-text {
+.window-content {
+	// & .notepad-text {
 		font-family: var(--fnt-sans);
 		line-height: 1.5em;
 		//may be nice for larger screens, but not quite yet
 		// font-family: garamond, sans-serif;
 		// font-size: 1.2em;
+		display: revert;  // otherwise blockquotes are hidden - bug?
 
 		padding: 16px;
+		height: 90%;
 		overflow-y: scroll;  // add dummy scrollbar for notepad æsthetic
 		// i thought this was a good idea, but actually it's annoying
 		// overscroll-behavior: contain;
 
-		/* defaults, can be overriden in html*/
-		width: 704px;
-		max-height: 512px;
+		// /* defaults, can be overriden in html*/
+		// width: 704px;
+		// max-height: 512px;
 
 		& ol {
 			list-style: lower-alpha;
@@ -58,29 +60,121 @@ div.window-content {
 			& ::marker {
 				color: var(--s-blu);
 			}
-		}
+		// }
 	}
 }
 
 #window-area {
-	height: 100vh;
+	// height: 100vh;
+	// position: absolute;
+	padding-top:         	32px;
+	padding-right:       	32px;
+	padding-left: calc(  	32px + var(--dt-padd));
+	padding-bottom: calc(	32px + var(--tb-hite));
 	// margin-top: 20vh;
-	margin-bottom:   50vh;  // allow overscrolling
-
+	// margin-bottom:   50vh;  // allow overscrolling - doesn't work with grid
+	display: grid;
+	// grid-template-columns: repeat(auto-fill, 720px);
+	grid-template-columns: repeat(auto-fill, 48em);
+	justify-content: end;
+	gap: 4vw;
 }
 
 .window-9x {
 	z-index: 10; // means i can have manually lower
+	position: static;
+	grid-row-end: span 2;
+	display: flex;
+	flex-direction: column;
 
-	&.window-align-left {
-		left: 10vw;
-	}
-	&.window-align-right {
-		right: 10vw;
-	}
+	// width: 704px;
+	max-height: 640px;
+}
+
+p {
+	margin-block: 1.5em;
+}
+
+/* ---------------------------- specific tweaks ---------------------------- */
+
+#page-intro {
+	grid-row-end: span 1;
+}
+
+#pirated-music {
+	margin: 1em;
+	padding: 1em;
+}
+
+.window-9x:last-child {
+	margin-bottom: 24vw;
 }
 
 /* ------------------------------ decorations ------------------------------ */
+
+dl {
+	& dd {
+		line-height: initial;  // i'm not sure this is best practice - maybe just 1
+	}
+}
+
+blockquote::before {
+		top: 0.3em;  // why is this so different?
+}
+
+kbd {  // keyboard (ctrl+f)
+	// background-color: var(--bgd-4);
+	padding-inline: 0.3em;
+	padding-top: 0.3em;
+	border-radius: 0.2em;
+	font-size: 1em;
+	box-shadow:
+			-2px -2px 0 var(--btn-hilite),
+			 2px  2px 0 var(--btn-lolite);
+
+	// for after (widthless border)
+	// position: relative;
+	// isolation: isolate
+	// &::after {
+		// content: "";
+		// inset: -2px;
+		// background: red;
+		// inset: -0.1em;
+		// background: #f00;
+		// z-index: -1;
+		// top: -0.2em;
+		// bottom: 0;
+		// border-radius: 0.3em;
+	// }
+}
+
+code {
+
+	&.codeblock {
+		font-family: var(--fnt-code);
+		-moz-tab-size:	4;  // may be obsolete?
+		tab-size:     	4;
+		display: block;
+		white-space: pre;
+		margin: 0.5em;
+		padding: 0.5em;
+		background: var(--bgd-0);
+	}
+
+	& .obj {
+		color: var(--s-red);
+	}
+	& .opr {
+		color: var(--s-grn);
+	}
+	& .val {
+		color: var(--s-ppl);
+	}
+	& .cmt {
+		color: var(--d-org);
+		font-style: italic;
+	}
+}
 
 hr {
 	background: none;
