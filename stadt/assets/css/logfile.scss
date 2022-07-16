@@ -12,6 +12,14 @@
 	div.log-file {
 		border-bottom: 2px solid var(--d-org);
 		margin-bottom: 2em;
+		&.site-update {
+			color: var(--s-blu);
+			&::before {
+				content: "<site update />";
+				display: block;
+				margin-bottom: 1em;
+			}
+		}
 	}
 
 	& img {
