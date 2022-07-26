@@ -51,6 +51,13 @@
 	--dt-padd: 128px;  //?\ desktop padding
 
 	/* universal colours */
+	// --d-red: hsl(2,  	75.1%,	45.7%);
+	// --d-grn: hsl(60, 	70.8%,	34.9%);
+	// --d-ylw: hsl(40, 	73.4%,	48.6%);
+	// --d-blu: hsl(183,	32.7%,	40.2%);
+	// --d-ppl: hsl(333,	33.6%,	53.9%);
+	// --d-aqa: hsl(122,	21.3%,	51.2%);
+	// --d-org: hsl(24, 	87.7%,	44.7%);
 	--d-red: #CC241D;
 	--d-grn: #98971A;
 	--d-ylw: #D79921;
@@ -59,7 +66,25 @@
 	--d-aqa: #689D6A;
 	--d-org: #D65D0E;
 
-	/* dark mode colours */
+	// /* dark mode colours */
+	// --bgd-0: hsl(0,  	0%,   	15.7%);
+	// --bgd-1: hsl(20, 	5.3%, 	22.4%);
+	// --bgd-2: hsl(22, 	7.4%, 	29.2%);
+	// --bgd-3: hsl(27, 	9.7%, 	36.5%);
+	// --bgd-4: hsl(28, 	10.7%,	43.9%);
+	// --bgd-5: hsl(30, 	12.1%,	51.4%);
+	// --txt-4: hsl(35, 	17.1%,	58.8%);
+	// --txt-3: hsl(39, 	24.1%,	65.9%);
+	// --txt-2: hsl(40, 	38.2%,	73.3%);
+	// --txt-1: hsl(43, 	58.8%,	81%)	;
+	// --txt-0: hsl(48, 	86.7%,	88.2%);
+	// --s-red: hsl(2,  	95.8%,	62.4%);
+	// --s-grn: hsl(61, 	66.2%,	44.1%);
+	// --s-ylw: hsl(42, 	95.3%,	58.2%);
+	// --s-blu: hsl(157,	15.9%,	58%)	;
+	// --s-ppl: hsl(344,	46.7%,	67.6%);
+	// --s-aqa: hsl(104,	35.1%,	62%)	;
+	// --s-org: hsl(27, 	99.1%,	54.7%);
 	--bgd-0: #282828;
 	--bgd-1: #3C3836;
 	--bgd-2: #504945;
@@ -85,6 +110,26 @@
 /* light mode colours */
 @media (prefers-color-scheme: light) {
 	:root {
+		// --is-light-mode: true;  // placeholder idea
+
+		// --bgd-0: hsl(48,86.7%,88.2%);
+		// --bgd-1: hsl(43,58.8%,81%);
+		// --bgd-2: hsl(40,38.2%,73.3%);
+		// --bgd-3: hsl(39,24.1%,65.9%);
+		// --bgd-4: hsl(35,17.1%,58.8%);
+		// --bgd-5: hsl(30,12.1%,51.4%);
+		// --txt-4: hsl(28,10.7%,43.9%);
+		// --txt-3: hsl(27,9.7%,36.5%);
+		// --txt-2: hsl(22,7.4%,29.2%);
+		// --txt-1: hsl(20,5.3%,22.4%);
+		// --txt-0: hsl(0,0%,15.7%);
+		// --s-red: hsl(358,100%,30.8%);
+		// --s-grn: hsl(57,79.3%,26.5%);
+		// --s-ylw: hsl(37,80.1%,39.4%);
+		// --s-blu: hsl(190,89%,24.9%);
+		// --s-ppl: hsl(323,38.8%,40.4%);
+		// --s-aqa: hsl(143,30.2%,37.1%);
+		// --s-org: hsl(19,96.6%,34.9%);
 		--bgd-0: #FBF1C7;
 		--bgd-1: #EBDBB2;
 		--bgd-2: #D5C4A1;
@@ -230,7 +275,7 @@ blockquote {
 		display: block;
 		z-index: -1;  // hide behind text
 
-		color: var(--bgd-2);
+		color: var(--bgd-3);
 		top: -0.2em;  // or top: 0.3em;, needs further testing
 		left: 0em;
 		font-size: 8em;

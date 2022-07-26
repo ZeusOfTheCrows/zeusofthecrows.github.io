@@ -9,10 +9,32 @@
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
-	// for background div
+	// for background div:
 	isolation: isolate;
 	overflow: hidden;
 	position: relative;
+
+	&::before {  // has to be in :: before for blur() filter
+
+		content: "";
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		z-index: -1;
+		filter: blur(4px) brightness(55%);
+		@media (prefers-color-scheme: light) {  // maybe
+			filter:
+				blur(4px)
+				invert(100%)       	// } faux hsl invert
+				hue-rotate(180deg);	// }
+		}
+
+		background: url("/stadt/assets/images/backgrounds/city.png"); // ztodo source
+		background-attachment: fixed;
+		background-position: center bottom;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
 }
 
 #sidebar-right {
@@ -21,9 +43,6 @@
 	}
 
 	& blockquote {
-		margin-left:  16px;
-		padding-left: 16px;
-		border-left: 4px solid var(--d-ppl);
 
 		& ul {
 			list-style: square;
@@ -32,34 +51,28 @@
 				padding-bottom: 0.5em;
 			}
 		}
-
 	}
-
-}
-
-#background-image {
-	// display: none;
-	position: absolute;
-	z-index: -1;
-	width: 100%;
-	height: 100%;
-	overflow: clip;
-
-	filter: blur(4px) brightness(55%);
-	background: url("/stadt/assets/images/backgrounds/city.png"); // ztodo source
-	background-attachment: fixed;
-	background-position: center bottom;
-	background-repeat: no-repeat;
-	background-size: cover;
 }
 
 #intro-text {
+	position: relative;  // for background
 	max-width: 720px;
 	margin: 32px auto;
-	padding: 24px;
+	--padd: 24px;
+	padding: var(--padd);  // so below
 
-	// background: #001D2880;  // #HEXA
-	border-radius: 64px;
+	&::before {  // for opacity
+		content: "";
+		width: 100%;
+		height: 100%;
+		display: block;
+		position: absolute;
+		margin: calc(var(--padd) * -1);  // as above
+		background: var(--bgd-3);
+		border-radius: 32px;
+		opacity: 0.7;
+		z-index: -1;
+	}
 
 	& h1.tt-logo {
 		white-space: pre-line;
