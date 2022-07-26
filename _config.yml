@@ -63,7 +63,7 @@ defaults:
     values:
       layout: "page"
       # just using title doesn't work (presumably a bug),
-      # so i have to assign it to this as a workaround.
+      # so i have to assign it to "pseudo" as a workaround.
       # it's not used anywhere else, so can be freely renamed
       pseudo: :title
       # permalink: /:path/:name/

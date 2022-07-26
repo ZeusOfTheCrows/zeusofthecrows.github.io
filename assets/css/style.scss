@@ -359,6 +359,9 @@ tr td:nth-child(n+2) {
 	overflow: hidden;
 	display: block;
 	font-family: $code-font;
+	font-variant-ligatures: none;
+	-moz-tab-size: 0;
+	tab-size: 0;
 }
 
 code {
@@ -375,8 +378,6 @@ abbr {
 
 #ascii-header, #ascii-logo {
 	color: $text-14;
-	tab-size: 0;
-	-moz-tab-size: 0;
 	/* declared in html so it works in browsers like lynx */
 	/* white-space: pre */
 }

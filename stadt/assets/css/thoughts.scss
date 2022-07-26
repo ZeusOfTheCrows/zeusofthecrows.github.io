@@ -76,7 +76,7 @@ html :target:before {
 	display: grid;
 	// grid-template-columns: repeat(auto-fill, 720px);
 	grid-template-columns: repeat(auto-fill, 48em);
-	justify-content: end;
+	justify-content: center;
 	gap: 4vw;
 }
 
@@ -146,34 +146,6 @@ kbd {  // keyboard (ctrl+f)
 		// bottom: 0;
 		// border-radius: 0.3em;
 	// }
-}
-
-code {
-
-	&.codeblock {
-		font-family: var(--fnt-code);
-		-moz-tab-size:	4;  // may be obsolete?
-		tab-size:     	4;
-		display: block;
-		white-space: pre;
-		margin: 0.5em;
-		padding: 0.5em;
-		background: var(--bgd-0);
-	}
-
-	& .obj {
-		color: var(--s-red);
-	}
-	& .opr {
-		color: var(--s-grn);
-	}
-	& .val {
-		color: var(--s-ppl);
-	}
-	& .cmt {
-		color: var(--d-org);
-		font-style: italic;
-	}
 }
 
 hr {

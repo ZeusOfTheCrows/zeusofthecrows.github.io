@@ -1,8 +1,19 @@
 ---
 ---
 
+/* -------------------------------- layout --------------------------------- */
+
+#window-area {
+	padding-top:         	32px;
+	padding-right:       	32px;
+	padding-left: calc(  	32px + var(--dt-padd));
+	padding-bottom: calc(	32px + var(--tb-hite));
+}
+
 #browser {
-	inset: 16px;
+	position: relative;
+	display: flex;
+	flex-direction: column;
 }
 
 #nav-btns {
@@ -20,7 +31,13 @@
 }
 
 #address-bar {
-	width: 100%;
+	padding-left: 0.2em;
+	display: flex;
+	gap: 0.4em;
+
+	& span.indent-9x {
+		width: 100%;
+	}
 }
 
 #bookmarks-list {
@@ -32,11 +49,145 @@
 	}
 }
 
+.window-content {
+	inset: 0;
+	overflow-x: hidden;
+	position: relative;  // for warning banners
+
+	& .page-content {
+		padding: 5%;
+	}
+
+	/* -- lovely idea, needs work for light mode -- *\
+	--bgd-0: Black;
+	--bgd-1: #111;  //?
+	--bgd-2: #222;
+	--bgd-3: DarkSlateGrey;
+	--bgd-4: DimGrey;
+	--bgd-5: Grey;  //!
+	--txt-4: Wheat;
+	--txt-3: Tan;
+	--txt-2: BurlyWood;
+	--txt-1: PaleGoldenRod;
+	--txt-0: OldLace;
+
+	--d-red: FireBrick;
+	--d-grn: OliveDrab;
+	--d-ylw: GoldenRod;
+	--d-blu: DodgerBlue;
+	--d-ppl: Orchid;
+	--d-aqa: SeaGreen;
+	--d-org: Chocolate;
+
+	--s-red: IndianRed;
+	--s-grn: YellowGreen;
+	--s-ylw: Gold;
+	--s-blu: CadetBlue;
+	--s-ppl: Plum;
+	--s-aqa: MediumAquamarine;
+	--s-org: Orange;  // ?
+	\* ----------------------------- */
+}
+
+/* -------------------------------- content -------------------------------- */
+
+.banner-container {
+
+	position: absolute;
+	top:   0;
+	left:  0;
+	right: 0;
+
+	& .banner {
+		--inner-border-radius: 0.5em;
+
+		font-size: 0.8em;
+		background-color: var(--bgd-3);
+		//         	x-ofs,	y-offset,	blur,	spread,	colour
+		box-shadow:	0     	0.2em    	0.5em	-0.1em 	black;
+
+		& h6,
+		& p {
+			font-size: 1em;
+			display: inline-block;
+			position: relative;
+			margin:	 0;
+			padding: 0.4em;
+		}
+
+		& h6 {
+			height: 100%;
+			padding-right: 1em;
+
+			// fallback for clip paths unsupported
+			border-top-right-radius:   	var(--inner-border-radius);
+			border-bottom-right-radius:	var(--inner-border-radius);
+
+			clip-path: polygon(
+				0%              	0%,
+				calc(100% - 1em)	0,
+				100%            	50%,
+				calc(100% - 1em)	100%,
+				0%              	100%
+			);
+
+			color: var(--bgd-0);
+			background-color: var(--s-red);
+
+			&::before {
+				font-family: "Material Design Icons";
+				margin-left: 1em;
+				content: "󰀩 ";
+			}
+		}
+		&.success h6 { background-color: var(--s-grn) !important; }
+
+		& p.banner-close {
+			visibility: hidden;
+			position: absolute;
+			background-color: var(--d-blu);
+			border-top-left-radius:   	var(--inner-border-radius);
+			border-bottom-left-radius:	var(--inner-border-radius);
+			box-shadow: inherit;
+
+			right: 0;
+			padding-left: 1em;
+
+			&:hover {
+				visibility: visible;
+			}
+
+			&::before {
+				float: right;
+				visibility: visible;
+				font-family: "Material Design Icons";
+				content: "󰖭";
+
+				background-color: var(--bgd-2);
+				padding: 0.1em;
+				border-radius: 0.2em;
+			}
+		}
+	}
+}
+
+#johnverts {
+	margin-left:auto;
+	display:block;
+	margin-right:auto;
+	max-width:732px;
+	width:732px;
+	height:94px;
+	border:none;
+}
+
+/*======== removed =======*/
 #extensions {
 	max-width: 768px;
 	margin: auto;
 	// text-align: center;
 }
+
 #extensions,
 #extensions td {
 	// padding-left:  2px;
@@ -53,22 +204,4 @@
 #extensions td:nth-child(2) {
 	text-align: center;
 }
-
-.window-content {
-	inset: 0;
-	padding: 16px;
-	overflow-x: hidden;
-	// --d-ppl: purple;
-	// --txt-1: blanchedalmond;
-
-}
-
-#johnverts {
-	margin-left:auto;
-	display:block;
-	margin-right:auto;
-	max-width:732px;
-	width:732px;
-	height:94px;
-	border:none;
-}
+/*======== /removed =======*/

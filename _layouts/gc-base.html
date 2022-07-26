@@ -28,18 +28,20 @@
 		<!-- <link rel="shortcut icon" type="image/x-icon" href="/stadt/favicon-16.png"  sizes="16x16" /> -->
 		<!-- <link rel="shortcut icon" type="image/x-icon" href="/stadt/favicon-32.png"  sizes="32x32" /> -->
 		{% if page.window_icon != nil %}
-		<link rel="shortcut icon" type="image/x-icon" href="/stadt/assets/images/window-icons/{{ page.window_icon }}" />
+		<link rel="shortcut icon" type="image/png" href="/stadt/assets/images/window-icons/{{ page.window_icon }}" />
 		{% else %}
 		<link rel="shortcut icon" type="image/x-icon" href="/stadt/favicon.ico" />
 		{% endif %}
-		<!-- this is only good for seo, i think, and causes problems with neocities -->
-		<!-- <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}" /> -->
+		<!-- turns out cross-domain canonicals are acceptable -->
+		<link rel="canonical" href="https://zeusofthecrows.github.io{{ page.url | replace:'index.html','' | relative_url }}" />
 	</head>
 
 	<body>
 		<a class="skip-nav-link" href="#window-area" style="display: none;">Skip to Content</a>
 
 		{{ content }}
+
+		{% include gc-footer.html %}
 
 	</body>
 

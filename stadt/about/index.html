@@ -11,7 +11,7 @@ window_icon: about.png
 		<h1>the twat behind the screen</h1>  <!-- ztodo this is a crap header -->
 		<!-- <h2>pronouns</h2> -->
 		<!-- <p> -->
-			<!-- anything but they. i hate they. -->
+			<!-- whatever you feel. except they. i hate they. -->
 		<!-- </p> -->
 		<h2>name</h2>
 		<p>
@@ -127,28 +127,35 @@ window_icon: about.png
 		</p>
 
 		<div id="sass-code-container">
-			<code>
-				a:link {
-				  color: blue;
-				  &:visited {
-				    color: purple;
-				  }
-				  &:active {
-				    color: red;
-				  }
-				}
+			<!-- not super happy with the unindenting, but eh -->
+			<code class="codeblock">
+<span class="code obj">a</span> {
+	<span class="code opr">cursor</span>: <span class="code val">pointer</span>;
+	<span class="code obj">&</span>:<span class="code mod">link</span> {
+		<span class="code opr">color</span>: <span class="code val">blue</span>;
+	}
+	<span class="code obj">&</span>:<span class="code mod">visited</span> {
+		<span class="code opr">color</span>: <span class="code val">purple</span>;
+	}
+	<span class="code obj">a</span>:<span class="code mod">active</span> {
+		<span class="code opr">color</span>: <span class="code val">red</span>;
+	}
+}
 			</code>
 			<p>VS</p>
-			<code>
-				a:link {
-				  color: blue;
-				}
-				a:visited {
-				  color: purple;
-				}
-				a:active {
-				  color: red;
-				}
+			<code class="codeblock">
+<span class="code obj">a</span> {
+	<span class="code opr">cursor</span>: <span class="code val">pointer</span>;
+}
+<span class="code obj">a</span>:<span class="code mod">link</span> {
+	<span class="code opr">color</span>: <span class="code val">blue</span>;
+}
+<span class="code obj">a</span>:<span class="code mod">visited</span> {
+	<span class="code opr">color</span>: <span class="code val">purple</span>;
+}
+<span class="code obj">a</span>:<span class="code mod">active</span> {
+	<span class="code opr">color</span>: <span class="code val">red</span>;
+}
 			</code>
 		</div>
 		<p>

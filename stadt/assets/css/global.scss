@@ -12,14 +12,18 @@
 // https://news-cdn.softpedia.com/images/news2/windows-95-is-now-available-on-linux-mac-and-windows-as-an-electron-app-522375-8.jpg
 
 /* =============================== variables =============================== */
-// @font-face {
-	// font-family: "FixedsysEx";
-	// font-style: normal;
-	// font-weight: normal;
-	// src: local("Fixedsys Excelsior"),
-	       // url("/assets/fonts/FixedsysEx.ttf") format("truetype"),
-	       // url("/assets/fonts/FixedsysEx.woff") format("woff");
-// }
+
+@font-face {
+	font-family: "Material Design Icons";
+	src: /* subset with used chars for download size */
+		url("/stadt/assets/fonts/mdi-subset.woff2") format("woff2"),
+		url("https://cdn.jsdelivr.net/npm/@mdi/font@6.5.95/fonts/materialdesignicons-webfont.eot?#iefix&v=6.5.95") format("embedded-opentype"),
+		url("https://cdn.jsdelivr.net/npm/@mdi/font@6.5.95/fonts/materialdesignicons-webfont.woff2?v=6.5.95")      format("woff2"),
+		url("https://cdn.jsdelivr.net/npm/@mdi/font@6.5.95/fonts/materialdesignicons-webfont.woff?v=6.5.95")       format("woff"),
+		url("https://cdn.jsdelivr.net/npm/@mdi/font@6.5.95/fonts/materialdesignicons-webfont.ttf?v=6.5.95")        format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
 
 @font-face {
 	font-family: "Yesterweb Nova Square";
@@ -33,11 +37,12 @@
 
 /* variables */
 :root {
-	--fnt-serif: "Times New Roman", serif;
-	--fnt-sans:  "Fira Sans", Helvetica, Arial, sans-serif;
-	--fnt-mono:  "Fira Mono", monospace;
-	--fnt-code:  "Fira Code", "Fira Mono", monospace;
-	--fnt-zswa:  "Arial", sans-serif;  // font for "Ɀ" - unused
+	--fnt-serif:	"Times New Roman", serif;
+	--fnt-sans: 	"Fira Sans", Helvetica, Arial, sans-serif;
+	--fnt-mono: 	"Fira Mono", monospace;
+	--fnt-code: 	"Fira Code", "Fira Mono", monospace;
+	--fnt-ipa:  	"Fira Sans", Arial, Sans-Serif;  // don't fallback to helvetica
+	--fnt-zswa: 	"Arial", sans-serif;  // font for "Ɀ" - unused
 
 	--tb-hite:  39px;  // taskbar height
 	--dt-padd: 128px;  //?\ desktop padding
@@ -186,9 +191,12 @@ h6 {
 strong {
 	color: var(--s-ylw);
 }
-
 b { // bold (for ctrl+f)
 	color: var(--d-ylw);
+}
+
+small {
+	color: var(--txt-4);
 }
 
 em {
@@ -263,17 +271,22 @@ samp,
 	font-family: var(--fnt-mono);
 }
 .ascii-art {
+	white-space: pre;
+	overflow: hidden;
+	display: block;
+	font-variant-ligatures: none;
 	-moz-tab-size: 0;
 	tab-size: 0;
 }
-code {
+code {  // code formating below
 	font-family: var(--fnt-code);
 }
 .ms-bold {
 	// ms sans serif style bold by doubling text width
-	// text-shadow: 0.5px 0px var(--txt-1),
-	             // 1.0px 0px var(--txt-1)/*,
-	             // 1.5px 0px var(--txt-1)*/;
+	// text-shadow:
+		// 0.5px 0px var(--txt-1),
+		// 1.0px 0px var(--txt-1)/*,
+		// 1.5px 0px var(--txt-1)*/;
 
 		// font-family: "Fira Sans";
 		// font-size: 12pt;
@@ -286,7 +299,36 @@ code {
 	color: var(--s-aqa);
 }
 .ipa {
-	font-family: "Fira Sans", Arial, Sans-Serif;  // don't fallback to helvetica
+	font-family: var(--fnt-ipa);
+}
+
+code {
+	&.codeblock {
+		font-family: var(--fnt-code);
+		-moz-tab-size:	4;  // may be obsolete?
+		tab-size:     	4;
+		display: block;
+		white-space: pre;
+		margin: 0.5em;
+		padding: 0.5em;
+		background: var(--bgd-0);
+	}
+	& .obj {  // object
+		color: var(--s-red);
+	}
+	& .mod {  // modifier
+		color: var(--s-ylw);
+	}
+	& .opr {  // operator
+		color: var(--s-grn);
+	}
+	& .val {  // value
+		color: var(--s-ppl);
+	}
+	& .cmt {  // comment
+		color: var(--d-org);
+		font-style: italic;
+	}
 }
 
 .btn-88x31,
@@ -417,20 +459,6 @@ code {
 		//!\ remember to add 'fill="currentColor"' to downloaded svgs
 	}
 }
-
-@font-face {
-	font-family: "Material Design Icons";
-	src: /* subset with used chars for download size */
-		url("/stadt/assets/fonts/mdi-subset.woff2") format("woff2"),
-		url("https://cdn.jsdelivr.net/npm/@mdi/font@6.5.95/fonts/materialdesignicons-webfont.eot?#iefix&v=6.5.95") format("embedded-opentype"),
-		url("https://cdn.jsdelivr.net/npm/@mdi/font@6.5.95/fonts/materialdesignicons-webfont.woff2?v=6.5.95")      format("woff2"),
-		url("https://cdn.jsdelivr.net/npm/@mdi/font@6.5.95/fonts/materialdesignicons-webfont.woff?v=6.5.95")       format("woff"),
-		url("https://cdn.jsdelivr.net/npm/@mdi/font@6.5.95/fonts/materialdesignicons-webfont.ttf?v=6.5.95")        format("truetype");
-	font-weight: normal;
-	font-style: normal;
-}
-
-
 
 .window-titlebar {
 	background: linear-gradient(90deg, var(--s-blu), var(--d-blu));

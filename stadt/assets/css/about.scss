@@ -64,9 +64,10 @@
 		}
 
 		& code {
-			tab-size: 0;
-			-moz-tab-size: 0;
-			white-space: pre;
+			background-color: transparent;  //?\ hide standard codeblock colour
+			// tab-size: 0;
+			// -moz-tab-size: 0;
+			// white-space: pre;
 		}
 	}
 }
