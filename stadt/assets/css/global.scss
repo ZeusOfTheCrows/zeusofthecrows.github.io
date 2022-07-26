@@ -35,6 +35,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap');
 
+// for cyrillic localised forms (ff only for now)
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+
 /* variables */
 :root {
 	--fnt-serif:	"Times New Roman", serif;
@@ -214,7 +217,7 @@ blockquote {
 	padding: 0.5em 1.6ch;
 	border-left: 0.4ch solid var(--d-ylw);
 	padding-left: 1.6ch;
-	font-size: 1.1em;
+	// font-size: 1.1em;
 
 	position: relative;
 	display: block;
@@ -300,6 +303,9 @@ code {  // code formating below
 }
 .ipa {
 	font-family: var(--fnt-ipa);
+}
+.glyph-showcase[lang="sr"] {
+	font-family: "Overpass";
 }
 
 code {
@@ -557,6 +563,7 @@ code {
 	}
 }
 .window-content {
+	line-height: 1.3;
 	margin: 2px;
 	display: grid;
 }
