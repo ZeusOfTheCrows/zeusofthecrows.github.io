@@ -3,19 +3,17 @@
 /* -------------------------------- windows -------------------------------- */
 :root {
 	scroll-behavior: smooth;
+	scroll-padding-top: 10vh;
 	// can't get it to revert for the windows
 	// scrollbar-color: var(--d-blu) var(--d-ppl) !important;
 }
 
-html :target:before {
-	content: " ";
-	display: block;
-	height:  500px;
-	width: 20px;
-	margin: -500px 0 0;
-}
-
 #desktop-area {
+
+	background-image:
+		linear-gradient(to bottom right, var(--d-blu), var(--d-ppl)); //, var(--d-red), var(--d-org), var(--d-ylw));
+
+	/*
 	background-image:
 		url("/stadt/assets/images/backgrounds/palmtreesblack.png");
 
@@ -24,6 +22,7 @@ html :target:before {
 			background-image:
 			url("/stadt/assets/images/backgrounds/palmtreespink.png");
 		}
+	*/
 
 		//!\ remember to do this with background images
 		& .desktop-icons-flex-container {
@@ -36,7 +35,6 @@ html :target:before {
 }
 
 .window-content {
-	// & .notepad-text {
 		font-family: var(--fnt-sans);
 		line-height: 1.5em;
 		//may be nice for larger screens, but not quite yet
@@ -50,17 +48,12 @@ html :target:before {
 		// i thought this was a good idea, but actually it's annoying
 		// overscroll-behavior: contain;
 
-		// /* defaults, can be overriden in html*/
-		// width: 704px;
-		// max-height: 512px;
-
 		& ol {
 			list-style: lower-alpha;
 
 			& ::marker {
 				color: var(--s-blu);
 			}
-		// }
 	}
 }
 
