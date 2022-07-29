@@ -437,6 +437,7 @@ code {
 
 .window-9x {
 	position: absolute;
+	box-shadow: 8px 8px 8px -8px black;
 	&.window-fixed {
 		position: fixed;
 	}

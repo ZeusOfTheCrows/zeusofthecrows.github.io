@@ -86,7 +86,7 @@
 	--s-ppl: Plum;
 	--s-aqa: MediumAquamarine;
 	--s-org: Orange;  // ?
-	\* ----------------------------- */
+	\* ------------------------------------------- */
 }
 
 /* -------------------------------- content -------------------------------- */
@@ -171,13 +171,48 @@
 	}
 }
 
+.link-list {
+	& tr {
+		display: inline-block;
+
+		& td:nth-child(1) {
+			line-height: 0;
+		}
+	}
+	& td + td {
+		display: none;
+	}
+	td:hover,
+	td:focus-within {
+		outline: none;
+		background: var(--d-blu);
+		box-shadow: 2px 2px 2px var(--d-blu);
+		box-shadow: 0 0 8px 4px var(--d-blu);
+	}
+	td:hover + td,
+	td:focus-within + td {
+		display: block;
+		position: absolute;
+		margin-top: 1em;
+		width: 10em;
+		background: var(--bgd-0);
+		padding: 1em;
+		border-radius: 0.2em;
+		box-shadow: 0 0 8px 4px var(--d-blu);
+	}
+	td {
+		margin: 0;
+		padding: 0;
+	}
+}
+
 #johnvert {
-	margin-left:auto;
-	display:block;
-	margin-right:auto;
-	max-width:732px;
-	width:732px;
-	height:94px;
+	margin-inline: auto;
+	margin-block: 2em;
+	display: block;
+	max-width: 732px;
+	width: 732px;
+	height: 94px;
 	border:none;
 }
 
