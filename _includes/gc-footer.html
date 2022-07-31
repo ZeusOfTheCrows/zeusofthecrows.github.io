@@ -79,10 +79,17 @@
 			<img src="/stadt/assets/images/window-icons/cassette.png"
 				alt="" />
 		</a>
-		<time datetime="{{ site.gc_edit_date | date: '%Y-%m-%d' }}"
-			title="site last edited on the {{ site.gc_edit_date | date_to_long_string: 'ordinal' }}">
-			{{ site.gc_edit_date | date: "%Y-%m-%d" }}
+	{%- if page.edit_date -%}
+		<time datetime="{{ page.edit_date | date: '%Y-%m-%d' }}"
+			title="site last edited on the {{ page.edit_date | date_to_long_string: 'ordinal' }}">
+			{{ page.edit_date | date: "%Y-%m-%d" }}
 		</time>
+	{%- else -%}
+		<time datetime="{{ site.edit_date | date: '%Y-%m-%d' }}"
+			title="site last edited on the {{ site.edit_date | date_to_long_string: 'ordinal' }}">
+			{{ site.edit_date | date: "%Y-%m-%d" }}
+		</time>
+	{%- endif -%}
 	</div>
 </footer>
 

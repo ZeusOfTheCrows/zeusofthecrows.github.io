@@ -29,8 +29,9 @@ url: "zeusofthecrows.github.io" # the base hostname & protocol for your site, e.
 markdown: kramdown
 lang: en-GB
 sep_char: ¦ # separator character for lists (one ¦ two ¦ three)
-edit_date: 2022-06-27
-gc_edit_date: 2022-07-29
+edit_date: now
+# edit_date: 2022-06-27
+# gc_edit_date: 2022-07-29
 
 kramdown:
   # disable smart quotes/apostrophes
