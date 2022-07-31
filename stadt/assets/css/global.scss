@@ -400,19 +400,27 @@ code {
 .img-grid {
 	width: 100%;
 	margin: 0;
-	padding: 0; // this is because it's a list, and padding breaks it
-	justify-content: center;
-	display: flex; //this is because i want it to be dynamic to width of sidebar
-	flex-flow: row wrap;
+	padding: 0; // this is because it's a list, which has user agent padding
+
+	list-style-type: none;
+	text-align: center;
+
+	& li {
+		display: inline;
+		& a {
+			text-decoration: none;
+		}
+	}
 
 	& img {
+		display: inline;
 		margin: 0px 1px;
 		// margin: 0px;
 	}
 
-	& ::marker {
-		content: "";
-	}
+	// & ::marker {
+		// content: "";
+	// }
 }
 .btn-88x31 {
 	width:  88px;
@@ -637,30 +645,33 @@ code {
 
 	& .desktop-icons-flex-container {
 		width: min-content;
+		margin: 24px;  // in case i add a background
+		padding: 24px;
+
 		max-height: 80vh;
-		overflow: auto;
-
-		display: flex;  // to allow "min-content"
-		flex-flow: column nowrap;
-
-		gap: 24px;
-		padding: 48px;
+		overflow-y: auto;
 
 		& .desktop-icon {
-			// width: min-content;  // to centre text
 			text-align: center;
-			color: var(--txt-0);
+			color: var(--bgd-0);
+			display: block;
+
+			& + .desktop-icon {
+				margin-top: 24px;
+			}
 
 			&:visited {
-				color: var(--txt-2);
+				color: var(--bgd-2);
 			}
 			&:hover,
 			&:focus {
-				color: var(--txt-0);
+				color: var(--bgd-0);
 			}
 
 			& img {
 				width: 32px;
+				display: block;
+				margin-inline: auto;
 			}
 		}
 	}

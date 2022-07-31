@@ -25,18 +25,18 @@
 	*/
 
 		//!\ remember to do this with background images
-		& .desktop-icons-flex-container {
-			margin: 32px;
-			padding: 16px;
-			background-color: var(--bgd-0);
-			border-radius: 8px;
-		}
+		// & .desktop-icons-flex-container {
+			// margin: 32px;
+			// padding: 16px;
+			// background-color: var(--bgd-0);
+			// border-radius: 8px;
+		// }
 
 }
 
 .window-content {
 		font-family: var(--fnt-sans);
-		line-height: 1.5em;
+		// initial-letter: 2;  // soon
 		//may be nice for larger screens, but not quite yet
 		// font-family: garamond, sans-serif;
 		// font-size: 1.2em;
@@ -47,6 +47,11 @@
 		overflow-y: scroll;  // add dummy scrollbar for notepad æsthetic
 		// i thought this was a good idea, but actually it's annoying
 		// overscroll-behavior: contain;
+
+		& p {
+			line-height: 1.5em;
+			text-indent: 2ch;
+		}
 
 		& ol {
 			list-style: lower-alpha;
