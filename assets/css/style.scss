@@ -10,123 +10,6 @@
 @import "nav-menu.scss";
 @import "webrings.scss";
 
-/*================================= layout ==================================*/
-.whole-wrapper {
-	display: grid;
-	width: min(88vw, 112ch);
-	/* limit max width, and centre */
-	// width: $total-width;
-	margin: 2vh auto;
-	// padding: 2vh 0;
-	// i don't know why i can't just use "1fr", but it doesn't work
-	grid-template-columns: 17ch calc(100% - 17ch);
-	grid-row-gap: 0px;
-	grid-column-gap: 1em;
-	grid-template-areas:
-		"header header"
-		"menu  content"
-		"footer footer";
-}
-.site-header {
-	grid-area: header;
-}
-
-a.skip-nav-link {
-	// https://youtu.be/jDDaOFr9nqQ
-	position: fixed;
-	top: 0;
-	left: 0;
-	transform: translateY(-3em);
-	background: $background-emph;
-	color: $text-12 !important;  // !important as this is an accessibility item
-	padding: 2ch 2em;
-	border-radius: 0 0 $crnr-radius 0;
-	&:focus {
-		transform: translateY(0);
-		transition: transform 325ms ease-in;
-	}
-}
-#nav-menu {
-	grid-area: menu;
-}
-#content {
-	grid-area: content;
-}
-#footer {
-	grid-area: footer;
-}
-
-@media only screen and (max-width: $logo-breakpoint) {
-	.whole-wrapper {
-		// i think this makes sure things don't align side by side
-		grid-template-columns: 100%;
-		grid-template-areas:
-			"header"
-			"content"
-			"footer";
-	}
-	.site-header {
-		grid-area: header;
-	}
-	#nav-menu{
-		grid-area: menu;
-	}
-	#content {
-		grid-area: content;
-	}
-	#footer {
-		//positioned absolutely
-	}
-
-	.content {
-		width: $total-width;
-	}
-
-	hr.pre-hori-nav {
-		// show element to override inline hide
-		display: inherit !important;
-		// set background to black to hide content behind
-		background-color: $background-colour;
-
-		// move up to the same height as the menu and fix to bottom
-		bottom: $nav-hori-lines * 1em;
-		position: fixed;
-
-		width: $total-width;
-
-		// nudge up farther, enough to show
-		padding-bottom: 2em;
-	}
-
-	.nav-menu {
-		/* auto add scrollbar, and hide overflow */
-		background-color: $background-colour;
-		overflow: auto;
-		white-space: nowrap;
-		// flex to make horizontally scroll
-		display: flex;
-		// i don't think i need these, but i'm too paranoid to bin them
-		overflow-x: auto;
-		overflow-y: hidden;
-
-		bottom: -2ch;  /* how can this be negative? */
-		position: fixed;
-
-		// padding: 1em 0ch;
-		padding-top: 1em;
-
-		width: $total-width;
-
-			& > li {
-				padding-right: 4ch;
-			}
-		}
-	footer {
-		/* nudge footer up, nav lines + 1 for hr */
-		margin-bottom: $nav-hori-lines + 1em;
-	}
-}
-
 /*============================= generic styles ==============================*/
 * {
 	/*remove padding globally so text always aligns*/
@@ -374,7 +257,7 @@ abbr {
 	text-decoration: none;
 }
 
-/*============================specific styles================================*/
+/*=========================== specific styles ===============================*/
 
 #ascii-header, #ascii-logo {
 	color: $text-14;
@@ -506,5 +389,122 @@ without downcasing the <DIR> text*/
 		/*is !important to override inline style,
 		has inline style to hide when css isn't loaded*/
 		display: block !important;
+	}
+}
+
+/*================================= layout ==================================*/
+.whole-wrapper {
+	display: grid;
+	width: min(88vw, 112ch);
+	/* limit max width, and centre */
+	// width: $total-width;
+	margin: 2vh auto;
+	// padding: 2vh 0;
+	// i don't know why i can't just use "1fr", but it doesn't work
+	grid-template-columns: 17ch calc(100% - 17ch);
+	grid-row-gap: 0px;
+	grid-column-gap: 1em;
+	grid-template-areas:
+		"header header"
+		"menu  content"
+		"footer footer";
+}
+.site-header {
+	grid-area: header;
+}
+
+a.skip-nav-link {
+	// https://youtu.be/jDDaOFr9nqQ
+	position: fixed;
+	top: 0;
+	left: 0;
+	transform: translateY(-3em);
+	background: $background-emph;
+	color: $text-12 !important;  // !important as this is an accessibility item
+	padding: 2ch 2em;
+	border-radius: 0 0 $crnr-radius 0;
+	&:focus {
+		transform: translateY(0);
+		transition: transform 325ms ease-in;
+	}
+}
+#nav-menu {
+	grid-area: menu;
+}
+#content {
+	grid-area: content;
+}
+#footer {
+	grid-area: footer;
+}
+
+@media only screen and (max-width: $logo-breakpoint) {
+	.whole-wrapper {
+		// i think this makes sure things don't align side by side
+		grid-template-columns: 100%;
+		grid-template-areas:
+			"header"
+			"content"
+			"footer";
+	}
+	.site-header {
+		grid-area: header;
+	}
+	#nav-menu{
+		grid-area: menu;
+	}
+	#content {
+		grid-area: content;
+	}
+	#footer {
+		//positioned absolutely
+	}
+
+	.content {
+		width: $total-width;
+	}
+
+	hr.pre-hori-nav {
+		// show element to override inline hide
+		display: inherit !important;
+		// set background to black to hide content behind
+		background-color: $background-colour;
+
+		// move up to the same height as the menu and fix to bottom
+		bottom: $nav-hori-lines * 1em;
+		position: fixed;
+
+		width: $total-width;
+
+		// nudge up farther, enough to show
+		padding-bottom: 2em;
+	}
+
+	.nav-menu {
+		/* auto add scrollbar, and hide overflow */
+		background-color: $background-colour;
+		overflow: auto;
+		white-space: nowrap;
+		// flex to make horizontally scroll
+		display: flex;
+		// i don't think i need these, but i'm too paranoid to bin them
+		overflow-x: auto;
+		overflow-y: hidden;
+
+		bottom: -2ch;  /* how can this be negative? */
+		position: fixed;
+
+		// padding: 1em 0ch;
+		padding-top: 1em;
+
+		width: $total-width;
+
+			& > li {
+				padding-right: 4ch;
+			}
+		}
+	footer {
+		/* nudge footer up, nav lines + 1 for hr */
+		margin-bottom: $nav-hori-lines + 1em;
 	}
 }

@@ -861,8 +861,10 @@ code {
 
 			& .startmenu-sep {
 				height: 4px;
-				margin-top: 4px;
-				margin-bottom: 6px;
+				margin-top: 0px;
+				margin-bottom: 4px;
+				display: block;
+
 				& .btn-sep {
 					display: block;
 					width: 100%;
@@ -870,6 +872,7 @@ code {
 			}
 
 			& .startmenu-btn {
+				display: block;
 				padding: 0px 8px;
 			}
 		}

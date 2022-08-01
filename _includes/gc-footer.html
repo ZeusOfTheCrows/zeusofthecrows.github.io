@@ -12,12 +12,12 @@
 		</a></li>
 		<li><a id="taskbar-sep" class="btn-9x btn-sep">
 		</a></li>
-		<li><a>
+		<!--<li><a>
 			<img class="btn-88x31" src="/stadt/assets/images/buttons/z-cnstr-dm-3d.png"
 				alt="site under construction" />
-		</a></li>
+		</a></li> -->
 		<li><a href="https://colemak.org/">
-			<img class="btn-88x31" src="/stadt/assets/images/buttons/colemak.png"
+			<img class="btn-88x31" src="/stadt/assets/images/buttons/taskbar/colemak.png"
 				alt="i use colemak (wide)" />
 		</a></li>
 		<li><a href="https://yesterweb.org/no-to-web3/">
@@ -31,6 +31,10 @@
 		<li><a href="/stadt/about#site-rating">
 			<img class="btn-88x31" src="/stadt/assets/images/buttons/taskbar/rating.png"
 				alt="site rating: 18" />
+		</a></li>
+		<li><a href="/stadt/thoughts#css-puzzle">
+			<img class="btn-88x31" src="/stadt/assets/images/buttons/taskbar/css.png"
+				alt="css is difficult" />
 		</a></li>
 		<li><a href="/stadt/about#site-licence">
 			<img class="btn-88x31" src="/stadt/assets/images/buttons/taskbar/cc-by-sa.png"
@@ -52,9 +56,17 @@
 			<img class="btn-88x31" src="/stadt/assets/images/buttons/scheisskopf.png"
 				alt="" title="not sponsored, i just liked the font" />
 		</a></li>
+		<li><a href="http://svencoop.com/">
+			<img class="btn-88x31" src="/stadt/assets/images/buttons/taskbar/svencoop.png"
+				alt="sven coop" />
+		</a></li>
 		<li><a>
 			<img class="btn-88x31" src="/stadt/assets/images/buttons/seed.png"
 				alt="seed your torrents" />
+		</a></li>
+		<li><a href="https://en.wikipedia.org/wiki/Year_2038_problem">
+			<img class="btn-88x31" src="/stadt/assets/images/buttons/taskbar/2038.png"
+				alt="are you ready? year 2038" title="the epochalypse is coming" />
 		</a></li>
 		<li><a>
 			<img class="btn-88x31" src="/stadt/assets/images/buttons/still-you.png"
@@ -81,7 +93,7 @@
 		</a>
 	{%- if page.edit_date -%}
 		<time datetime="{{ page.edit_date | date: '%Y-%m-%d' }}"
-			title="site last edited on the {{ page.edit_date | date_to_long_string: 'ordinal' }}">
+			title="page last edited on the {{ page.edit_date | date_to_long_string: 'ordinal' }}">
 			{{ page.edit_date | date: "%Y-%m-%d" }}
 		</time>
 	{%- else -%}
@@ -108,6 +120,11 @@
 					<img class="btn-88x31" src="/stadt/assets/images/buttons/brands/neocities.png"
 					alt="hosted on neocities" />
 			</a></li>
+			<li class="startmenu-btn">
+				<a href="http://web.archive.org/web/https://zeusofthecrows.github.io/">
+					<img class="btn-88x31" src="/stadt/assets/images/buttons/brands/archive.png"
+					alt="internet archive" />
+			</a></li>
 			<li class="startmenu-sep"><a class="btn-sep indent-9x"></a></li>
 			<li class="startmenu-btn">
 				<a href="https://libresprite.github.io/">
@@ -124,6 +141,16 @@
 				<img class="btn-88x31" src="/stadt/assets/images/buttons/brands/apngasm.png"
 					alt="apng assembler" />
 			</a></li>
+			<li class="startmenu-btn">
+				<a href="http://www.libpng.org/pub/png/">
+				<img class="btn-88x31" src="/stadt/assets/images/buttons/brands/nowebp.png"
+					alt="no webp, just use png" />
+			</a></li>
+			<li class="startmenu-btn">
+				<a href="https://www.irfanview.com/">
+				<img class="btn-88x31" src="/stadt/assets/images/buttons/brands/irfanview.png"
+					alt="irfanview" />
+			</a></li>
 			<li class="startmenu-sep"><a class="btn-sep indent-9x"></a></li>
 			<li class="startmenu-btn">
 				<a href="https://www.mozilla.org/en-GB/firefox/new/">
@@ -134,6 +161,11 @@
 				<a href="https://ddg.gg/">
 				<img class="btn-88x31" src="/stadt/assets/images/buttons/brands/ddg.png"
 					alt="duckduckgo" />
+			</a></li>
+			<li class="startmenu-btn">
+				<a href="https://dosbox-x.com/wiki/Guide%3AInstalling-Windows-98">
+				<img class="btn-88x31" src="/stadt/assets/images/buttons/brands/win98.png"
+					alt="windows 98 in dosbox" />
 			</a></li>
 			<li class="startmenu-btn">
 				<a href="https://www.mozilla.org/en-GB/firefox/">

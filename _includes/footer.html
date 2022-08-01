@@ -3,11 +3,17 @@
 {%- if page.edit_date -%}
 	<p>page last modified at <time datetime="{{ page.edit_date | date: '%Y-%m-%d' }}">
 		{{ page.edit_date | date: "%Y-%m-%d" }}</time></p>
-	<p>(ɔ) {{ page.edit_date | date: "%Y" }} ZeusOfTheCrows</p>
+	<p>
+		<span title="all wrongs reserved">(ɔ)</span>
+		{{ page.edit_date | date: "%Y" }} ZeusOfTheCrows
+	</p>
 {%- else -%}
 	<p>site last modified at <time datetime="{{ site.edit_date | date: '%Y-%m-%d' }}">
 		{{ site.edit_date | date: "%Y-%m-%d"  }}</time></p>
-	<p>(ɔ) {{ site.edit_date | date: "%Y" }} ZeusOfTheCrows</p>
+	<p>
+		<span title="all wrongs reserved">(ɔ)</span>
+		{{ site.edit_date | date: "%Y" }} ZeusOfTheCrows
+	</p>
 {%- endif -%}
 <p><a href="#">^ back to top ^</a></p>
 <hr />
