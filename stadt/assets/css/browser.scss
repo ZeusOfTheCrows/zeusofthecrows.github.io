@@ -17,8 +17,8 @@
 }
 
 #nav-btns {
-	justify-content: flex-start;
-	align-items: center;
+	text-align: left;
+
 	& li {
 		margin: 0;
 		padding: 0;
@@ -41,8 +41,8 @@
 }
 
 #bookmarks-list {
-	justify-content: flex-start;
-	align-items: center;
+	text-align: left;
+
 	& .bm-label {
 		// temp
 		padding: 4px;
@@ -55,7 +55,8 @@
 	position: relative;  // for warning banners
 
 	& .page-content {
-		padding: 5%;
+		padding: max(32px, 5%);
+		padding-top: max(64px, 5%);
 	}
 
 	/* -- lovely idea, needs work for light mode -- *\
@@ -168,6 +169,29 @@
 				border-radius: 0.2em;
 			}
 		}
+	}
+}
+
+.btn-code {
+	display: none;
+	width: 30em;
+	height: 6em;
+	font-family: var(--fnt-code);  // not global
+	margin-inline: auto;
+	background-color: var(--bgd-2);
+
+	// &:target {
+	//	display: block;
+	// }
+}
+
+#my-links {
+	& input[type="radio"] {
+		display: none;
+	}
+
+	& input:checked + textarea {
+		display: block;
 	}
 }
 

@@ -20,10 +20,11 @@
 
 #main-content {
 	padding: 24px;
-	overflow-y: scroll;
 	// height: 100%;
 	height: calc(100vh - 192px); // i'm not sure this is that great either
-	overflow-x: clip;
+	// overflow-y: scroll;
+	// overflow-x: clip;
+	overflow: auto;
 }
 
 #sidebar-left {

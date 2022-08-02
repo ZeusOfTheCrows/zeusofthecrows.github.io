@@ -6,7 +6,7 @@ programme: " - Generic Browser"
 window_icon: globe.png
 ---
 
-<div id="browser" class="window-9x">
+<main id="browser" class="window-9x">
 	<div class="window-titlebar">
 		<a href="#intro-text" class="window-title ms-bold">
 			<img class="window-icon pixel-art"
@@ -81,7 +81,7 @@ window_icon: globe.png
 				C:\USERS\ZEUS\DOCUMENTS\WEB\LINKS.HTM
 			</span>
 		</div>
-		<ul id="bookmarks-list" class="img-grid">
+		<!--<ul id="bookmarks-list" class="img-grid">
 			<li class="bm-label"><s>friends</s></li>
 			<li class="nav-sep indent-9x"></li>
 			<li class="bm-label">admirees</li>
@@ -107,7 +107,7 @@ window_icon: globe.png
 				<img class="btn-88x31" src="/stadt/assets/images/buttons/my-links/zeus-term-green.png"
 					alt="zeus terminal green" title="i prefer the amber one, but this is for if your website is themed green" />
 			</a></li>
-		</ul>
+		</ul>-->
 	</div>
 	<div class="window-content indent-9x">
 		<div class="banner-container">
@@ -116,8 +116,9 @@ window_icon: globe.png
 				<h6>No Adblock Detected!</h6>
 				<p>
 					it looks like you are not using an adblocker. this slows your browser,
-					and hurts your privacy. as of <time>2022-07-23</time>, i recommend
-					<a href="https://github.com/gorhill/uBlock">µBlock Origin</a>
+					and hurts your privacy
+				<!--  as of <time>2022-07-23</time>, i recommend
+					<a href="https://github.com/gorhill/uBlock">µBlock Origin</a> -->
 				</p>
 				<p class="banner-close">
 					to hide this warning, right-click and select <samp>block element</samp>
@@ -134,8 +135,8 @@ window_icon: globe.png
 			</div>
 		</div>
 		<div class="page-content">
-			<section id="intro">
-				<h2>Outbound links</h2>
+			<article id="intro">
+				<h2>outbound links</h2>
 				<p>
 					here are a bunch of websites i like or find interesting. the
 					formatting isn't there yet, but eh
@@ -149,12 +150,12 @@ window_icon: globe.png
 					there are a few lesser known extensions that i recommend, i'll list
 					these on my recommended software page
 				</p>
-			</section>
+			</article>
 
 			<!-- http://www.hoary.org/browse/ -->
 
-			<section id="cities">
-				<h2>Geocities-esque Personal Sites</h2>
+			<article id="cities">
+				<h2>geocities Sites</h2>
 				<p>
 					ztodo intro here
 				</p>
@@ -337,19 +338,16 @@ window_icon: globe.png
 						</td>
 					</tr>
 				</table>
-			</section>
+			</article>
 
 			<!-- comment out to ease server stress when testing -->
-			<iframe id="johnvert" class="mockvert"
-				src="https://john.citrons.xyz/embed?ref=zeusofthecrows.github.io">
-				your browser does not support iframes
-			</iframe>
+			<!-- <iframe id="johnvert" class="mockvert" -->
+				<!-- src="https://john.citrons.xyz/embed?ref=zeusofthecrows.github.io"> -->
+				<!-- your browser does not support iframes -->
+			<!-- </iframe> -->
 
-			<section id="discovery">
-				<h2>
-					sites designed for discovery of other personal sites
-					<!-- ztodo bad title -->
-				</h2>
+			<article id="discovery">
+				<h2>discovery sites</h2>
 				<table id="discovery-list" class="link-list">
 					<tr>
 						<td><a href="https://nightfall.city/">
@@ -398,7 +396,8 @@ window_icon: globe.png
 					<dt><a href="https://emreed.net/LowTech_Directory.html">
 						low tech webring
 					</a></dt>
-				</dt>
+				</dl>
+			</article>
 
 		<!-- <ul id="bookmarks-list" class="img-grid marquee-rtl"> -->
 			<!-- like this train? https://en.wikipedia.org/wiki/Garratt -->
@@ -428,4 +427,77 @@ window_icon: globe.png
 					class="btn-88x31" alt="train passenger carriage"/>
 			</a></li>
 		</ul> -->
-</div>
+		<article id="my-links">
+				<p>
+					want to link to me? i'm confused, but flattered
+				</p>
+				<ul class="img-grid">
+					<li><label for="train-btn">
+						<img class="btn-88x31" src="/stadt/assets/images/buttons/my-links/zeus-train.png"
+							alt="zeus british rail" />
+					</label></li>
+					<li><label for="term-btn">
+						<img class="btn-88x31" src="/stadt/assets/images/buttons/my-links/zeus-term.png"
+							alt="zeus terminal" />
+					</label></li>
+					<li><label for="green-btn">
+						<img class="btn-88x31" src="/stadt/assets/images/buttons/my-links/zeus-term-green.png"
+							alt="zeus terminal green"
+							title="i prefer the amber one, but this is for if your website is themed green" />
+					</label></li>
+				</ul>
+				<input type="radio" name="btn-tabs" id="train-btn" checked="" />
+				<textarea id="train-btn-code" class="btn-code indent-9x">
+<a href="https://zeusofthecrows.github.io/stadt/">
+	<img src="/buttons/zeus-train.png"
+		alt="ɀeus' stadt" />
+</a></textarea>
+				<input type="radio" name="btn-tabs" id="term-btn" />
+				<textarea id="term-btn-code" class="btn-code">
+<a href="https://zeusofthecrows.github.io/">
+	<img src="/buttons/zeus-term.png"
+		alt="ZeusOfTheCrows" />
+</a></textarea>
+				<input type="radio" name="btn-tabs" id="green-btn" />
+				<textarea id="green-btn-code" class="btn-code">
+<a href="https://zeusofthecrows.github.io/">
+	<img src="/buttons/zeus-term-green.png"
+		alt="ZeusOfTheCrows" />
+</a></textarea>
+<!--
+		<article id="my-links">
+				<p>
+					want to link to me? i'm confused, but flattered
+				</p>
+				<ul class="img-grid">
+					<li><a href="#train-btn-code">
+						<img class="btn-88x31" src="/stadt/assets/images/buttons/my-links/zeus-train.png"
+							alt="zeus british rail" />
+					</a></li>
+					<li><a href="#term-btn-code">
+						<img class="btn-88x31" src="/stadt/assets/images/buttons/my-links/zeus-term.png"
+							alt="zeus terminal" />
+					</a></li>
+					<li><a href="#green-btn-code">
+						<img class="btn-88x31" src="/stadt/assets/images/buttons/my-links/zeus-term-green.png"
+							alt="zeus terminal green"
+							title="i prefer the amber one, but this is for if your website is themed green" />
+					</a></li>
+				</ul>
+				<textarea id="train-btn-code" class="btn-code indent-9x">
+<a href="https://zeusofthecrows.github.io/stadt/">
+	<img src="/buttons/zeus-train.png"
+		alt="ɀeus' stadt" />
+</a></textarea>
+				<textarea id="term-btn-code" class="btn-code">
+<a href="https://zeusofthecrows.github.io/">
+	<img src="/buttons/zeus-term.png"
+		alt="ZeusOfTheCrows" />
+</a></textarea>
+				<textarea id="green-btn-code" class="btn-code">
+<a href="https://zeusofthecrows.github.io/">
+	<img src="/buttons/zeus-term-green.png"
+		alt="ZeusOfTheCrows" />
+</a></textarea> -->
+		</article>
+</main>

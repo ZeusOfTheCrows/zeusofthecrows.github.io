@@ -206,12 +206,21 @@ html {
 body {
 	color: var(--txt-1);
 	font-family: var(--fnt-sans);
+	tab-size: 2;
 	margin:0;
 	padding:0;
 	border:0;
 
 	overflow-anchor: none;
 }
+
+h1 {font-size:   2em}
+h2 {font-size: 1.8em}
+h3 {font-size: 1.6em}
+h4 {font-size: 1.4em}
+h4 {font-size: 1.2em}
+h5 {font-size:   1em}
+h5 {font-size: 0.8em}
 
 h1,
 h2 {
@@ -454,7 +463,8 @@ code {
 		z-index: 90 !important;  // makes page scroll sometimes - is this acceptable?
 	}
 }
-.indent-9x {
+.indent-9x,
+textarea {
 	margin: 0;
 	background-color: var(--bgd-1);
 	border-width: 2px;
@@ -463,6 +473,10 @@ code {
 	border-left-color:   var(--btn-lolite);
 	border-bottom-color: var(--btn-hilite);
 	border-right-color:  var(--btn-hilite);
+}
+textarea {
+	color: var(--txt-2);
+	padding: 1em 1ch;
 }
 .outdent-9x,
 .window-9x/* :not(.window-maximised), */,
