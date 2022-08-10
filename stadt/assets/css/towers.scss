@@ -1,7 +1,7 @@
 ---
 ---
 
-@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 
 #main-content {
 	padding: 0px;
@@ -14,7 +14,7 @@
 	overflow: hidden;
 	position: relative;
 
-	&::before {  // has to be in :: before for blur() filter
+	&::before {  // has to be in ::before for blur() filter
 
 		content: "";
 		width: 100%;
@@ -25,7 +25,7 @@
 		@media (prefers-color-scheme: light) {  // maybe
 			filter:
 				blur(4px)
-				invert(100%)       	// } faux hsl invert
+				// invert(100%)       	// } faux hsl invert
 				hue-rotate(180deg);	// }
 		}
 
@@ -35,8 +35,8 @@
 		\* ===================================================================== */
 		background-attachment: fixed;
 		background-position: center bottom;
-		background-repeat: no-repeat;
-		background-size: cover;
+		background-repeat: repeat-x;
+		background-size: contain;
 	}
 }
 
@@ -77,22 +77,51 @@
 		z-index: -1;
 	}
 
-	& h1.tt-logo {
-		white-space: pre-line;
-		line-height: 70%;
-		text-align: center;
-		text-indent: 1ch;
+	& h1.tt-logo {  // all of this is due to chrome not supporting paint-order:
+		visibility: hidden;
+		font-size: 3.5em;
 		// "Fantasy" only works when capitalised in firefox…
-		font-family: "Cooper Black", "Shrikhand", Fantasy;  //?\ font
-		font-size: 3em;
+		font-family: "Cooper Black", "Averia Serif Libre", "Shrikhand", Fantasy;
 		font-weight: 900;
 
-		border: none;
-		color: var(--txt-0);
-		text-stroke: 1px var(--txt-0);  // for future maybe
-		-webkit-text-stroke: 1px var(--txt-0);
-		-webkit-text-fill-color: var(--s-ppl);
-		text-shadow: -4px 4px var(--d-ppl);
+		&::before,
+		&::after {
+			visibility: visible;
+			position: absolute;
+			inset-inline: 0;
+
+			content: "Teeny\aTowers";
+			white-space: pre-line;
+			line-height: 65%;
+			text-align: center;
+			text-indent: 1ch;
+
+			border: none;
+			color: var(--s-ppl);
+		}
+		&::before {
+			text-stroke: 0.08em var(--txt-0);  // for future maybe
+			-webkit-text-stroke: 0.08em var(--txt-0);
+			-webkit-text-fill-color: var(--s-ppl);
+			text-shadow: -0.08em 0.08em var(--d-ppl);
+			paint-order: stroke fill;  // only in firefox/safari
+
+			@media (prefers-color-scheme: light) {
+				text-stroke: 0.04em var(--bgd-0);  // for future maybe
+				-webkit-text-stroke: 0.04em var(--bgd-0);
+				-webkit-text-fill-color: var(--d-ppl);
+				text-shadow: -0.08em 0.08em var(--s-ppl);
+			}
+		}
+		// pure css-spec ver. - kind of ugly, and probably unnecessary:
+		// --pos-offs: 0.02em
+		// --neg-offs: calc(var(--pos-offs) * -1)
+		// text-shadow:
+			// var(--pos-offs) var(--pos-offs) var(--txt-0),
+			// var(--pos-offs) var(--neg-offs) var(--txt-0),
+			// var(--neg-offs) var(--neg-offs) var(--txt-0),
+			// var(--neg-offs) var(--pos-offs) var(--txt-0),
+			// -0.08em  0.08em var(--d-ppl);
 	}
 }
 

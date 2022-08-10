@@ -9,6 +9,8 @@
 		<!--  you won't get no head from me  -->
 		<meta charset="utf-8">
 		<!-- <meta name="viewport" content="width=device-width, initial-scale=1" /> -->
+		<!-- ugly hack: forcs viewport size for mobile devices: -->
+		<meta name="viewport" content="width=1920">
 		<meta name="color-scheme" content="dark light" />
 		<title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.gc-title }}</title>
 		<meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}" />
@@ -34,6 +36,14 @@
 		{% endif %}
 		<!-- turns out cross-domain canonicals are acceptable -->
 		<link rel="canonical" href="https://zeusofthecrows.github.io{{ page.url | replace:'index.html','' | relative_url }}" />
+		<!-- for google fonts (hmmmm) -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<!-- fira -->
+		<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Fira+Mono&family=Fira+Sans:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
+		{{ page.custom-font }}
+		<!-- for cyrillic localised forms (ff only right now) -->
+		<link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@700&display=swap" rel="stylesheet">
 	</head>
 
 	<body>
