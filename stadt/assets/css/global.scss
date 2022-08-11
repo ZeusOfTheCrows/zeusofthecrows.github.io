@@ -291,9 +291,9 @@ blockquote {
 		font-size: 8em;
 	}
 	&::after {
-		content: close-quote;  // reset quote back to double
-		visibility: hidden;    // (nested quotes become single)
-		position: absolute;    // (don't mess with positioning)
+		content: no-close-quote;  // reset quote back to double
+		// visibility: hidden;    // (nested quotes become single)
+		// position: absolute;    // (don't mess with positioning)
 	}
 }
 
@@ -804,6 +804,29 @@ textarea {
 		}
 	}
 
+	& #taskbar-btns {
+		flex-shrink: 1;
+		flex-grow: 1;
+		overflow: hidden;
+		width: 100%;
+
+		-webkit-mask-image: linear-gradient(to left, transparent 0px 8px, black 32px 64px);
+		mask-image: linear-gradient(to left, transparent 0px 8px, black 32px 64px);
+		// background-image: linear-gradient(to left, blue 0px 8px, red 32px 64px);
+
+		// & #taskbar-btns:after {
+			// content: '';
+			// z-index: 5;
+			// width: 100%;
+			// height: 100%;
+			// position: absolute;
+			// background: red;
+			// background: linear-gradient(to right, transparent 100px, white);
+			// right: 0;
+			// background-color: red;
+		// }
+	}
+
 	& #taskbar-tray {
 		height: 29px;
 		padding: 0px 2px;
@@ -920,6 +943,7 @@ textarea {
 	padding: 12px;
 
 	// https://codingislove.com/css-speech-bubbles/
+	// https://css-tricks.com/the-shapes-of-css/
 	&:before {
 		content: "";
 		width:  0px;
