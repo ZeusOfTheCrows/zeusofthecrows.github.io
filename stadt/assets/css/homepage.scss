@@ -404,12 +404,66 @@
 /* ============================== animations =============================== */
 
 #welcome-sans {
+	// rainbow text
 	animation: colour-cycle 5s linear infinite;
+	// glitch text (needs work)
+	/* color: var(--txt-0) !important;
+
+	position: relative;
+		// &::before,
+		&::after {
+		position: absolute;
+		left: 0;
+		top: 0;
+		content: "Ɀeus' Stadt";
+		// https://discourse.wicg.io/t/text-content-css-value-akin-to-attr/629/15
+		// https://lists.w3.org/Archives/Public/www-style/2013Oct/0617.html
+		// content: text()
+		text-shadow:
+			0.065em 	0       	0	var(--d-red),
+			-0.045em	-0.065em	0	var(--d-grn),
+			0.045em 	0.065em 	0	var(--d-blu);
+			opacity: 0.8;
+
+		}
+
+		&::after {
+			// color: red !important;
+			animation: glitch-text 5s linear infinite;
+			// clip-path: polygon(0 0, 100% 0, 100% 35%, 0 65%);
+			transform: translate(-0.075em, -0.05em);
+		}*/
 }
+
 @media (prefers-reduced-motion) {
 	#welcome-sans {
 		animation: none;
 	}
+}
+
+@keyframes glitch-text {
+	/* needs work */
+	0% {
+		clip-path: polygon(0% 20%, 100% 0%, 100% 15%, 0% 85%);
+	}
+	19% {
+		clip-path: polygon(0% 20%, 100% 0%, 100% 15%, 0% 85%);
+	}
+	20% {
+		clip-path: polygon(0% 0%, 100% 0%, 100% 35%, 0% 65%);
+	}
+	39% {
+		clip-path: polygon(0% 0%, 100% 0%, 100% 35%, 0% 65%);
+	}
+	40% {
+		clip-path: polygon(0% 0%, 100% 30%, 100% 30%, 0% 20%);
+	}
+	69% {
+		clip-path: polygon(0% 0%, 100% 30%, 100% 30%, 0% 20%);
+	}
+	// 100% {
+		// clip-path: polygon(0% 85%, 100% 90%, 100% 20%, 0% 100%);
+	// }
 }
 
 @keyframes colour-cycle {

@@ -11,6 +11,9 @@
 		<!-- <meta name="viewport" content="width=device-width, initial-scale=1" /> -->
 		<!-- ugly hack: forcs viewport size for mobile devices: -->
 		<meta name="viewport" content="width=1920">
+		<!-- all of these would be better, but none of them work -->
+		<!-- <meta name="viewport" content="min-width=1920" initial-scale="1"> -->
+		<!-- <meta name="viewport" content="height=1080"> -->
 		<meta name="color-scheme" content="dark light" />
 		<title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.gc-title }}</title>
 		<meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}" />

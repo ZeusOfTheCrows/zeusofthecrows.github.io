@@ -1,159 +1,60 @@
 ---
 layout: gc-maximised
-css-file: towers
-title: Teeny Towers
+css-file: library
+title: Library
 programme:
-window_icon: towers.png
+window_icon: library.png
+custom-font: <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+edit_date: 2022-08-11
 ---
 
 <div id="main-content" class="indent-9x">
-	<!-- has to be a separate div for blur() filter -->
-	<div id="background-image"></div>
-	<div id="intro-text">
-		<h1 class="tt-logo">Teeny<br />Towers</h1>
-		<h3>
-			welcome to teeny towers, a virtual building in which
-			<strong>you</strong> can take up residence!
-		</h3>
-		<p>
-			want to move in or start a business? design your own room, and send it
-			to me - feel free to request a storey/<span class="captioned"
-				title="volatile, i may change the building shape">location</span>
-			and i'll add it to this tower
-		</p>
-		<p>
-			want to create your own tower? please feel free to add my
-			room to it!
-		</p>
-		<p><a href="https://zeusofthecrows.github.io/stadt/">
-			<img class="tower room" src="/stadt/assets/images/towers/zeus-room.png"
-				alt="a tiny dimly-lit room with airmchair, arched neo-gothic window, and two monitors: one crt, scrolling text; one lcd, bluescreening" />
-			</a>
-		</p>
-		<p>
-			i know this tower is <em>very</em> teeny at
-			the moment, but it's not really finished yet… (i.e. the formatting is
-			wank and the background is a placeholder)
-		</p>
-		<p>
-			this concept was the brainchild of Key's Klubhouse, read more about it
-			<a href="https://keysklubhouse.neocities.org/teenytowers.html">here</a>
-		</p>
-	</div>
+	<h1>Library</h1>
+	<div id="games-list">
 
-	<div id="tower-container">
-		<a class="tower sign"><img src="/stadt/assets/images/towers/structure/roofsign.png" alt="a tiny rooftop neon sign reading 'TEENY TOWERS' (the 'N' is dying)" /></a>
-		<!--==================================================================-->
-		<a class="tower roof left"><img src="/stadt/assets/images/towers/structure/bf-roof-tl.png" alt="" /></a>
-		<a class="tower roof lift"><img src="/stadt/assets/images/towers/structure/bf-roof-l.png" alt="" /></a>
-		<a class="tower roof brdg"><img src="/stadt/assets/images/towers/structure/bf-roof-m.png" alt="" /></a>
-		<!---------------------------------------------------------------------->
-		<a class="tower roof sect"><img src="/stadt/assets/images/towers/structure/bf-roof-s.png" alt="" /></a>
-		<a class="tower roof sect"><img src="/stadt/assets/images/towers/structure/bf-roof-s.png" alt="" /></a>
-		<a class="tower roof sect"><img src="/stadt/assets/images/towers/structure/bf-roof-s.png" alt="" /></a>
-		<a class="tower roof sect"><img src="/stadt/assets/images/towers/structure/bf-roof-s.png" alt="" /></a>
-		<a class="tower roof right"><img src="/stadt/assets/images/towers/structure/bf-roof-tr.png" alt="" /></a>
-		<!--==================================================================-->
-		<a class="tower lwal"><img src="/stadt/assets/images/towers/structure/bf-wall-l.png" alt="" /></a>
-		<a class="tower lift"><img src="/stadt/assets/images/towers/structure/lifts.png" alt="a tiny pixelated set of lifts" /></a>
-		<a class="tower mwal"><img src="/stadt/assets/images/towers/structure/bf-wall-m.png" alt="bridge between lift shaft and building" /></a>
-		<!---------------------------------------------------------------------->
-		<a class="tower room"><img src="/stadt/assets/images/towers/vacant.png" alt="a tiny empty room with 'to let' sign" /></a>
-		<a class="tower room" href="https://zeusofthecrows.github.io/stadt/"
-			><img src="/stadt/assets/images/towers/zeus-room.png"
-			alt="a tiny dimly-lit room with airmchair, arched neo-gothic window, and two monitors: one crt, scrolling text; one lcd, bluescreening" /></a>
-		<a class="tower room" href="https://keysklubhouse.neocities.org/home.html"
-			><img src="/stadt/assets/images/towers/key-studio.png"
-			alt="a tiny room with soundproofing panelling on the walls, a greenscreen, a computer desk with three monitors, several gaming-related toys on a shelf, and a black cat sleeping in a corner" /></a>
-		<a class="tower room"><img src="/stadt/assets/images/towers/vacant.png" alt="a tiny empty room with 'to let' sign" /></a>
-		<a class="tower rwal"><img src="/stadt/assets/images/towers/structure/bf-wall-r.png" alt="" /></a>
-		<!--==================================================================-->
-		<a class="tower lwal"><img src="/stadt/assets/images/towers/structure/bf-wall-l.png" alt="" /></a>
-		<a class="tower lift"><img src="/stadt/assets/images/towers/structure/lifts.png" alt="a tiny pixelated set of lifts" /></a>
-		<a class="tower mwal"><img src="/stadt/assets/images/towers/structure/bf-wall-m.png" alt="bridge between lift shaft and building" /></a>
-		<!---------------------------------------------------------------------->
-		<a class="tower room"><img src="/stadt/assets/images/towers/vacant.png" alt="a tiny empty room with 'to let' sign" /></a>
-		<a class="tower room"><img src="/stadt/assets/images/towers/vacant.png" alt="a tiny empty room with 'to let' sign" /></a>
-		<a class="tower room"><img src="/stadt/assets/images/towers/vacant.png" alt="a tiny empty room with 'to let' sign" /></a>
-		<a class="tower room"><img src="/stadt/assets/images/towers/vacant.png" alt="a tiny empty room with 'to let' sign" /></a>
-		<a class="tower rwal"><img src="/stadt/assets/images/towers/structure/bf-wall-r.png" alt="" /></a>
-		<!--==================================================================-->
-		<a class="tower lwal"><img src="/stadt/assets/images/towers/structure/bf-wall-l.png" alt="" /></a>
-		<a class="tower lift"><img src="/stadt/assets/images/towers/structure/lifts.png" alt="a tiny pixelated set of lifts" /></a>
-		<a class="tower mwal"><img src="/stadt/assets/images/towers/structure/bf-wall-m.png" alt="bridge between lift shaft and building" /></a>
-		<!---------------------------------------------------------------------->
-		<a class="tower room" href="https://keysklubhouse.neocities.org/teenytowers.html"
-				><img src="/stadt/assets/images/towers/key-lobby.png"
-				alt="a tiny pixelated building lobby" /></a>
-		<a class="tower room" href="https://dokodemo.neocities.org/"
-				><img src="/stadt/assets/images/towers/sunny-cafe.png"
-				alt="a tiny lobby café" /></a>
-		<a class="tower room"><img src="/stadt/assets/images/towers/vacant.png" alt="a tiny empty room with 'to let' sign" /></a>
-		<a class="tower room"><img src="/stadt/assets/images/towers/vacant.png" alt="a tiny empty room with 'to let' sign" /></a>
-		<a class="tower rwal"><img src="/stadt/assets/images/towers/structure/bf-wall-r.png" alt="" /></a>
-		<!--==================================================================-->
-		<a class="tower lwal"><img src="/stadt/assets/images/towers/structure/bf-wall-l.png" alt="" /></a>
-		<a class="tower lift"><img src="/stadt/assets/images/towers/structure/lifts.png" alt="a tiny pixelated set of lifts" /></a>
-		<a class="tower mwal"><img src="/stadt/assets/images/towers/structure/bf-wall-m.png" alt="bridge between lift shaft and building" /></a>
-		<!---------------------------------------------------------------------->
-		<a class="tower room"><img src="/stadt/assets/images/towers/vacant.png" alt="a tiny empty room with 'to let' sign" /></a>
-		<a class="tower room"><img src="/stadt/assets/images/towers/vacant.png" alt="a tiny empty room with 'to let' sign" /></a>
-		<a class="tower room wide"href="https://keysklubhouse.neocities.org/teenytowers.html"
-				><img src="/stadt/assets/images/towers/garage.png"
-				alt="a tiny parking garage" /></a>
-		<a class="tower rwal"><img src="/stadt/assets/images/towers/structure/bf-wall-r.png" alt="" /></a>
-		<!--==================================================================-->
+	</div>
+	<table id="books-list" class="covers-list">
+		<tr class="cover-card">
+			<td class="card image">
+				<img class="book cover" alt="Horus Rising"
+				src="/stadt/assets/images/library/books/horus-rising.jpg" />
+			</td>
+			<td class="card content">
+				<h6>Horus Rising</h6>
+				i've always liked the warhammer 40k (/30k) art style & universe, and now
+				i've finally got around to reading the books, i'm wholly not disappointed.
+				this is really good
+			</td>
+		</tr>
+		<tr class="cover-card">
+			<td class="card image">
+				<img class="book cover" alt="Ready Player Two"
+					src="/stadt/assets/images/library/books/ready-player-one.jpg" />
+			</td>
+			<td class="card content">
+				<h6>Ready Player Two</h6>
+				enjoyed this more than i expected, but not as much as ready player one.
+				it does get better as i goes on though, i actually really liked the final
+				few chapters
+			</td>
+		</tr>
+	</table>
+	<div id="music-list" class="covers-list">
+
 	</div>
 </div>
-<div id="sidebar-right">
-	<h1 title="from key's site">Rules:</h1>
-	<blockquote>
-		<ul>
-			<li>
-				You must follow the template for room size, floor level, and
-				general scale. Please also keep the border color the same shade.
-				You may build as many rooms as you please!
-			</li>
-			<li>
-				Your room can be as simple or as complex as you like, provided
-				it fits the dimensions. Animation is absolutely allowed!
-				Additionally, you may combine a maximum of two rooms
-				side-by-side without a border between (to make one large room).
-			</li>
-			<li>
-				<s>Keep it PG! We're a family-friendly organization!</s><sup>†</sup>
-			</li>
-			<li>
-				Much like other adoptable games, you may 'adopt' other builder's
-				rooms, combining them with the provided lobby, elevator, vacancy
-				and rooftop sign tiles to build your tower.
-			</li>
-			<li>
-				Remember to link all rooms back to their builder's site!
-			</li>
-		</ul>
-	</blockquote>
-	<footer><small>
-		<p>
-			<sup>†</sup>unlike key, i'm perfectly happy to accept explicit
-			images (within reason), but if you make one bear in mind other
-			sites might not be
-		</p>
-		<p>
-			template room by key:
-			<div class="floating-img-container">
-				<img src="/stadt/assets/images/towers/template.png" alt="room template layout" />
-			</div>
-			The door and windows are examples only; you can use them or change
-			them or omit them entirely, it's up to you!
-		</p>
-
-		<p>
-			feel free to use any of my images, or make your own:
-			<div class="floating-img-container">
-				<img src="/stadt/assets/images/towers/vacant.png" alt="tiny empty room with 'to let' sign" />
-				<img src="/stadt/assets/images/towers/structure/roofsign.png" alt="a tiny neon sign reading 'TEENY TOWERS' (the 'N' is dying)" />
-			</div>
-		</p>
-	</small></footer>
+<div id="sidebar-right" class="covers-list">
+	<p>
+		list of games/books/whatever, that i've enjoyed. i'm not including stuff
+		i didn't finish, or didn't like, because there's no point in drawing
+		attention to something just to say "it's bad"
+	</p>
+	<p>
+		mouse over / tab to an item for a brief comment (hold <kbd>ctrl</kbd> to
+		hide imagus image)
+	</p>
+	<p>
+		this list order is not indicative of quality in any way; it's solely
+		arranged by when i finished it
+	</p>
 </div>

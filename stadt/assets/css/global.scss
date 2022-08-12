@@ -308,8 +308,33 @@ mark {
 	color: var(--bgd-0);
 }
 
+kbd {  // keyboard (ctrl+f)
+	background-color: var(--bgd-3);
+	padding-inline: 0.3em;
+	padding-top: 0.3em;
+	border-radius: 0.2em;
+	font-size: 1em;
+	box-shadow:
+			-2px -2px 0 var(--btn-hilite),
+			 2px  2px 0 var(--btn-lolite);
+
+	// for after (widthless border)
+	// position: relative;
+	// isolation: isolate
+	// &::after {
+		// content: "";
+		// inset: -2px;
+		// background: red;
+		// inset: -0.1em;
+		// background: #f00;
+		// z-index: -1;
+		// top: -0.2em;
+		// bottom: 0;
+		// border-radius: 0.3em;
+	// }
+}
+
 a {
-	// i just think this layout is easier to read
 	&:link {
 		color: var(--s-blu);
 	}
