@@ -2,7 +2,7 @@
 title: NSX Buttons
 collection: leaf
 permalink: /:path/nsx-buttons/
-edit_date: 2021-12-31
+edit_date: 2022-08-15
 typora-root-url: ../../
 notes: ^ is only so typora correctly renders images
 ---
@@ -31,8 +31,8 @@ i find the nintendo layout a lot more intuitive, but colours make buttons a lot 
 
 Normal: [Download](/assets/zips/games/mods/des/nsx-button-prompts.7z) {{ site.sep_char }} A/B Switched [Download](/assets/zips/games/mods/des/nsx-button-prompts.7z) {{ site.sep_char }} Playstation [Download](/assets/zips/games/mods/des/nsx-button-prompts.7z) {{ site.sep_char }} [Nexus](https://www.nexusmods.com/demonssouls/mods/47)
 
-- to install: 
-	- unpack `.\USRDIR\` from your choice of archive to `[rom-directory]\PS3_GAME\`
+* to install:
+	* unpack `.\USRDIR\` from your choice of archive to `[rom-directory]\PS3_GAME\`
 
 ![demon's soul nintendo icons mod preview](https://staticdelivery.nexusmods.com/mods/2952/images/47/47-1627235435-1097188189.jpeg){: .showcase .sc-wide .sc-btm}
 
@@ -42,14 +42,14 @@ Normal: [Download](/assets/zips/games/mods/des/nsx-button-prompts.7z) {{ site.se
 
 Remastered [Download](/assets/zips/games/mods/ds1/nsx-button-prompts.7z) {{ site.sep_char }} [Nexus](https://www.nexusmods.com/demonssouls/mods/375) {{ site.sep_char }} PtDE [Download](/assets/zips/games/mods/ds1/ptde-nsx-button-prompts.7z) {{ site.sep_char }} [Nexus](https://www.nexusmods.com/demonssouls/mods/1778)
 
-- to install **remastered**:
-	- ﻿download [DSR TPUP](https://www.nexusmods.com/darksoulsremastered/mods/9)
-	- ﻿unpack files from .`\Texture Override` to `[TPUP_directory]\Texture Override`
-	- run DSR TPUP
-- to install **ptde**:
-	- /!\ the ptde version is untested, as i don't own ptde, but it *should* work /!\
-	- Download DSFix and enable texture override
-	- Copy png file to `[game_directory]\DATA\dsfix\tex_override`
+* to install **remastered**:
+	* download [DSR TPUP](https://www.nexusmods.com/darksoulsremastered/mods/9)
+	* unpack files from .`\Texture Override` to `[TPUP_directory]\Texture Override`
+	* run DSR TPUP
+* to install **ptde**:
+	* /!\ the ptde version is untested, as i don't own ptde, but it *should* work /!\
+	* Download DSFix and enable texture override
+	* Copy png file to `[game_directory]\DATA\dsfix\tex_override`
 
 ![dark souls 1 nintendo icons mod preview](https://staticdelivery.nexusmods.com/mods/2432/images/375/375-1627472569-32691204.jpeg){: .showcase .sc-wide .sc-mid}
 
@@ -85,15 +85,15 @@ Normal: [Download](/assets/zips/games/mods/ds2/nsx-button-prompts.7z) {{ site.se
 [Download](/assets/zips/games/mods/er/nsx-button-prompts.7z) {{ site.sep_char }} [Nexus](https://www.nexusmods.com/eldenring/mods/6)
 
 * To install with ModEngine 2:
-  * Download and extract ModEngine 2
-  * Unpack mod folder to your mod engine install directory
-    * One can also rename the mod folder, and add the new name to config_eldenring.toml
+	* Download and extract ModEngine 2
+	* Unpack mod folder to your mod engine install directory
+		* One can also rename the mod folder, and add the new name to config_eldenring.toml
 
-  * Run game via launchmod_eldenring.bat
+	* Run game via launchmod_eldenring.bat
 
 * To install with UXM:
-  * To be honest I don't know, I don't use it
-  * It should work, but I haven't tested it
+	* To be honest I don't know, I don't use it
+	* It should work, but I haven't tested it
 
 
 Made with [ER.BDT.Tool](https://github.com/Ekey/ER.BDT.Tool); and [Yabber](https://github.com/JKAnderson/Yabber/).
@@ -101,6 +101,34 @@ Made with [ER.BDT.Tool](https://github.com/Ekey/ER.BDT.Tool); and [Yabber](https
 It's a lazy implementation, but elden ring makes modding so annoying I couldn't be bothered to do it better. It may be improved in the future, but no promises.
 
 ![elden ring nintendo icons mod preview](https://staticdelivery.nexusmods.com/mods/4333/images/6/6-1654724459-751664911.jpeg){: .showcase .sc-wide .sc-mid}
+
+---
+
+## Games Kitchen
+
+### Blasphemous
+
+Normal: [Download](/assets/zips/games/mods/blasphemous/nsx-button-prompts.7z) {{ site.sep_char }} [Nexus](https://www.nexusmods.com/blasphemous/mods/14)
+
+blasphemous is such a good game - if you've never played it, let this page be
+your catalyst
+
+* to install (simple)
+	* locate your blasphemous folder
+		* (by default: `C:\Program Files (x86)\Steam\steamapps\common\Blasphemous`)
+	* (optionally) back up your vanilla `data.unity3d` file
+		* change the file extension or move to another folder, else the game will
+		load slowly
+	* copy `data.unity3d` to your `Blasphemous_Data\`
+
+* to install (for merging with other mods)
+	* follow the *import* section of
+		[this guide](https://github.com/RedFurryDemon/BlasphemousModdingNotes/blob/master/notes/Graphics.md)
+	* in step 4, select the texture `all_platform_buttons`
+	* load the included `all_platform_buttons-resources.assets-884.png`
+	* install as above
+
+![blasphemous nintendo icons mod preview](https://staticdelivery.nexusmods.com/mods/2950/images/14/14-1660601122-1743945224.jpeg){: .showcase .sc-wide .sc-mid}
 
 ---
 
@@ -112,9 +140,9 @@ Normal: [Download](/assets/zips/games/mods/cvlos/nsx-button-prompts.7z) {{ site.
 
  A & B aren't switched, like they are in my other mods, as i disliked jump being on A. only the face buttons for now, i may update later with back buttons + dpad if i can be arsed
 
-- to install: 
-	- copy `Data00.dat` to your game directory, overwriting existing file
-	- (a backup of the original file is included for convenient uninstallation, but one can safely
-		ignore it)
+* to install:
+	* copy `Data00.dat` to your game directory, overwriting existing file
+	* (a backup of the original file is included for convenient uninstallation,
+		but one can safely ignore it)
 
-![demon's soul nintendo icons mod preview](https://staticdelivery.nexusmods.com/mods/1897/images/5/5-1640738352-1765467313.jpeg){: .showcase .sc-wide .sc-top}
+![cv: lords of shadow nintendo icons mod preview](https://staticdelivery.nexusmods.com/mods/1897/images/5/5-1640738352-1765467313.jpeg){: .showcase .sc-wide .sc-top}

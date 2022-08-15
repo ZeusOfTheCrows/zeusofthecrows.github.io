@@ -1,7 +1,73 @@
 ---
 ---
 
-// @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+/* variables */
+:root {
+	/* universal colours */
+	--d-red: #ff5555;
+	--d-grn: #50fa7b;
+	--d-ylw: #f1fa8c;
+	--d-blu: #bd93f9;
+	--d-ppl: #ff79c6;
+	--d-aqa: #8be9fd;
+	--d-org: #ffb86c;
+
+	// /* dark mode colours */
+	--bgd-0: #21222c;
+	--bgd-1: #282a36;
+	--bgd-2: #383a59;
+	--bgd-3: #44475a;
+	--bgd-4: #6272a4;
+	--bgd-5: #6272a4;
+	--txt-4: #6272a4;
+	--txt-3: #6272a4;
+	--txt-2: #f8f8f2;
+	--txt-1: #f8f8f2;
+	--txt-0: #ffffff;
+	--s-red: #ff6e6e;
+	--s-grn: #69ff94;
+	--s-ylw: #ffffa5;
+	--s-blu: #d6acff;
+	--s-ppl: #ff92df;
+	--s-aqa: #a4ffff;
+	--s-org: #d8d890;
+	--btn-hilite: var(--bgd-4);
+	--btn-lolite: var(--bgd-0);
+}
+
+/* light mode colours */
+@media (prefers-color-scheme: light) {
+	:root {
+		--bgd-0: #21222c;
+		--bgd-1: #282a36;
+		--bgd-2: #383a59;
+		--bgd-3: #44475a;
+		--bgd-4: #6272a4;
+		--bgd-5: #6272a4;
+		--txt-4: #6272a4;
+		--txt-3: #6272a4;
+		--txt-2: #f8f8f2;
+		--txt-1: #f8f8f2;
+		--txt-0: #ffffff;
+		--s-red: #ff6e6e;
+		--s-grn: #69ff94;
+		--s-ylw: #ffffa5;
+		--s-blu: #d6acff;
+		--s-ppl: #ff92df;
+		--s-aqa: #a4ffff;
+		--s-org: #d8d890;
+		--btn-hilite: var(--bgd-4);
+		--btn-lolite: var(--bgd-0);
+	}
+}
+
+@font-face {
+	font-family: "Cooper";
+	src:
+		local("Cooper"),
+		local("Cooper Regular"),
+		local("Cooper-Regular");
+}
 
 #main-content {
 	padding: 0px;
@@ -22,12 +88,12 @@
 		position: absolute;
 		z-index: -1;
 		filter: blur(4px) brightness(55%);
-		@media (prefers-color-scheme: light) {  // maybe
-			filter:
-				blur(4px)
+		// @media (prefers-color-scheme: light) {  // maybe
+			// filter:
+				// blur(4px)
 				// invert(100%)       	// } faux hsl invert
-				hue-rotate(180deg);	// }
-		}
+				// hue-rotate(180deg);	// }
+		// }
 
 		background: url("/stadt/assets/images/backgrounds/city.png");
 		/* ========== source: streets of rage, gruvboxed by potamides ========== *\
@@ -81,7 +147,7 @@
 		visibility: hidden;
 		font-size: 3.5em;
 		// "Fantasy" only works when capitalised in firefox…
-		font-family: "Cooper Black", "Averia Serif Libre", "Shrikhand", Fantasy;
+		font-family: "Averia Serif Libre", "Cooper", Fantasy;
 		font-weight: 900;
 
 		&::before,
