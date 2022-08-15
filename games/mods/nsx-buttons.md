@@ -104,7 +104,7 @@ It's a lazy implementation, but elden ring makes modding so annoying I couldn't 
 
 ---
 
-## Games Kitchen
+## Game Kitchen
 
 ### Blasphemous
 
@@ -127,6 +127,9 @@ your catalyst
 	* in step 4, select the texture `all_platform_buttons`
 	* load the included `all_platform_buttons-resources.assets-884.png`
 	* install as above
+
+**/!\ game may load slowly first launch after installation - i'm not quite sure
+	why this is, but it's fine after that**
 
 ![blasphemous nintendo icons mod preview](https://staticdelivery.nexusmods.com/mods/2950/images/14/14-1660601122-1743945224.jpeg){: .showcase .sc-wide .sc-mid}
 
