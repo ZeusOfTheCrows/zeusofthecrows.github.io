@@ -9,14 +9,15 @@
 		<!--  you won't get no head from me  -->
 		<meta charset="utf-8">
 		<!-- <meta name="viewport" content="width=device-width, initial-scale=1" /> -->
-		<!-- ugly hack: forcs viewport size for mobile devices: -->
-		<meta name="viewport" content="width=1920">
-		<!-- all of these would be better, but none of them work -->
-		<!-- <meta name="viewport" content="min-width=1920" initial-scale="1"> -->
-		<!-- <meta name="viewport" content="height=1080"> -->
+		<!-- ugly hack: force viewport size for mobile devices: -->
+		<!-- <meta name="viewport" content="width=1920, height=1080"> -->
+		<!-- would be better, but doesn't work in firefox at least -->
+		<meta name="viewport" content="min-width=1920, min-height=1080">
 		<meta name="color-scheme" content="dark light" />
+
 		<title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.gc-title }}</title>
 		<meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}" />
+
 		<link rel="stylesheet" href="/stadt/assets/css/global.css" />
 		{% if page.layout == "gc-maximised" %}
 		<link rel="stylesheet" href="/stadt/assets/css/maximised.css" />
@@ -27,8 +28,10 @@
 		{% endif %}
 		<!-- load page css file last for priority if equal specificity -->
 		<link rel="stylesheet" href="/stadt/assets/css/{{ page.css-file }}.css" />
+
 		<!-- dulled colour to match textured background -->
 		<meta name="theme-color" content="#5A7A5B" />
+
 		<!-- this doesn't work properly - always uses 32px -->
 		<!-- <link rel="shortcut icon" type="image/x-icon" href="/stadt/favicon-16.png"  sizes="16x16" /> -->
 		<!-- <link rel="shortcut icon" type="image/x-icon" href="/stadt/favicon-32.png"  sizes="32x32" /> -->
@@ -37,8 +40,10 @@
 		{% else %}
 		<link rel="shortcut icon" type="image/x-icon" href="/stadt/favicon.ico" />
 		{% endif %}
+
 		<!-- turns out cross-domain canonicals are acceptable -->
 		<link rel="canonical" href="https://zeusofthecrows.github.io{{ page.url | replace:'index.html','' | relative_url }}" />
+
 		<!-- for google fonts (hmmmm) -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
