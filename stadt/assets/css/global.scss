@@ -814,7 +814,7 @@ textarea {
 		// }
 	}
 
-	& .btn-sep {
+	& .taskbar-sep {
 		height: 20px;
 		&:active {  // "disable" clicking on separator
 			border-top-color:    var(--btn-hilite);
@@ -882,16 +882,10 @@ textarea {
 	}
 }
 
-/* start menu open on focus: */
-#btn-start:focus + #startmenu-9x {
-	display: grid;
-}
-#startmenu-container:focus-within #startmenu-9x {
-	display: grid;
-}
-#startmenu-9x {
-	display: none;
-}
+/* start menu open on focus logic: */
+#btn-start:focus + #startmenu-9x { display: grid; }
+#startmenu-container:focus-within #startmenu-9x { display: grid; }
+#startmenu-9x { display: none; }
 
 #startmenu-9x {
 	position: fixed;
@@ -930,10 +924,9 @@ textarea {
 		margin: 4px 0px;
 
 		& .startmenu-sep {
-			height: 4px;
-			margin-top: 0px;
-			margin-bottom: 4px;
+			margin: 4px auto;
 			display: block;
+			width: 90%;
 
 			& .btn-sep {
 				display: block;
