@@ -1,17 +1,107 @@
 <footer id="taskbar-9x">
-	<ul id="taskbar-btns">
-		<!--should this be an actual button?-->
-		<li><a id="btn-start" class="btn-9x" href="#startmenu-9x" role="button">
-			<!-- <img id="start-orb" src="./assets/images/logo.svg" -->
-				<!-- alt="start orb: zeus logo" /> -->
+
+	<div id="startmenu-container">
+		<button id="btn-start" class="btn-9x">
+		<!-- <img id="start-orb" src="./assets/images/logo.svg" -->
+			<!-- alt="start orb: zeus logo" /> -->
+			<!--i think an inline svg is the only way to dynamically colourise it?-->
 			<svg id="start-orb" xmlns="http://www.w3.org/2000/svg"
 				viewBox="0 0 118.74818 118.74818" fill="currentColor">
 				<path d="M 2.2007507e-6,82.667355 54.543617,82.665325 38.746738,63.707245 Z M 72.833185,79.087305 90.831294,64.770155 72.073964,0.7521447 19.415661,0.7419447 59.448487,53.901585 41.434072,62.245865 86.468579,118.00112 Z m 15.474848,-31.06788 15.899807,1.3401 -1.08839,10.59137 -10.435455,3.20605 z m 18.268167,3.18261 -0.74292,6.80037 12.9149,-1.46545 z m -18.122438,66.773625 -1.296279,-3.64835 13.433617,3.6565 z m -4.314818,0.0265 -2.67918,-3.08375 -4.511502,3.08783 z" />
 			</svg>
 			<span class="ms-bold">Start</span>
-		</a></li>
-		<li><a id="taskbar-sep" class="btn-9x btn-sep">
-		</a></li>
+		</button>
+<!--
+		<span id="taskbar-sep" class="btn-9x btn-sep"></span>
+ -->
+		<div id="startmenu-9x" class="outdent-9x ms-bold">
+			<div id="startmenu-logo" class="swash-z">ⱿeusOfTheCrows</div>
+			<ul id="startmenu-btns" class="img-grid">
+				<li class="startmenu-btn">
+					<a href="https://github.com/ZeusOfTheCrows/zeusofthecrows.github.io/">
+						<img class="btn-88x31" src="/stadt/assets/images/buttons/brands/gh-pages.png"
+						alt="powered by github pages" />
+				</a></li>
+				<li class="startmenu-btn">
+					<a href="https://neocities.org/site/zeusofthecrows">
+						<img class="btn-88x31" src="/stadt/assets/images/buttons/brands/neocities.png"
+						data-img-source="unknown"
+						alt="hosted on neocities" />
+				</a></li>
+				<li class="startmenu-btn">
+					<a href="http://blog.archive.org/2015/02/11/locking-the-web-open-a-call-for-a-distributed-web/">
+						<img class="btn-88x31" src="/stadt/assets/images/buttons/brands/archive.png"
+						data-img-source="https://bytemoth.neocities.org/88s/"
+						alt="internet archive" />
+				</a></li>
+				<li class="startmenu-sep"><a class="btn-sep indent-9x"></a></li>
+				<li class="startmenu-btn">
+					<a href="https://libresprite.github.io/">
+					<img class="btn-88x31" src="/stadt/assets/images/buttons/brands/libresprite.png"
+						alt="bouncing libresprite logo" />
+				</a></li>
+				<li class="startmenu-btn">
+					<a href="https://www.aseprite.org/">
+					<img class="btn-88x31" src="/stadt/assets/images/buttons/brands/aseprite.png"
+						alt="aseprite old logo animated" />
+				</a></li>
+				<li class="startmenu-btn">
+					<a href="http://apngasm.sourceforge.net/">
+					<img class="btn-88x31" src="/stadt/assets/images/buttons/brands/apngasm.png"
+						alt="apng assembler" />
+				</a></li>
+				<li class="startmenu-btn">
+					<a href="http://www.libpng.org/pub/png/">
+					<img class="btn-88x31" src="/stadt/assets/images/buttons/brands/nowebp.png"
+						data-img-source="unknown"
+						alt="no webp, just use png" />
+				</a></li>
+				<li class="startmenu-btn">
+					<a href="https://www.irfanview.com/">
+					<img class="btn-88x31" src="/stadt/assets/images/buttons/brands/irfanview.png"
+						data-img-source="unknown"
+						alt="irfanview" />
+				</a></li>
+				<li class="startmenu-sep"><a class="btn-sep indent-9x"></a></li>
+				<li class="startmenu-btn">
+					<a href="https://www.mozilla.org/en-GB/firefox/new/">
+					<img class="btn-88x31" src="/stadt/assets/images/buttons/brands/firefox.png"
+						data-img-source="unknown"
+						alt="firefox" />
+				</a></li>
+				<li class="startmenu-btn">
+					<a href="https://ddg.gg/">
+					<img class="btn-88x31" src="/stadt/assets/images/buttons/brands/ddg.png"
+						alt="duckduckgo" />
+				</a></li>
+				<li class="startmenu-btn">
+					<a href="https://dosbox-x.com/wiki/Guide%3AInstalling-Windows-98">
+					<img class="btn-88x31" src="/stadt/assets/images/buttons/brands/win98.png"
+						alt="windows 98 in dosbox" />
+				</a></li>
+				<li class="startmenu-btn">
+					<a href="https://www.mozilla.org/en-GB/firefox/">
+					<img class="btn-88x31" src="/stadt/assets/images/buttons/brands/chromium.png"
+						alt="ie/chrome/brave logos 'same shit, different arsehole'" />
+				</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<span id="taskbar-sep" class="btn-9x btn-sep"></span>
+
+	<ul id="taskbar-btns">
+		<!--should this be an actual button?--><!--
+		<li id="startmenu-container">
+			<a id="btn-start" class="btn-9x" href="#0" role="button">
+			<!-- <img id="start-orb" src="./assets/images/logo.svg" --\>
+				<!-- alt="start orb: zeus logo" /> --\>
+				<svg id="start-orb" xmlns="http://www.w3.org/2000/svg"
+					viewBox="0 0 118.74818 118.74818" fill="currentColor">
+					<path d="M 2.2007507e-6,82.667355 54.543617,82.665325 38.746738,63.707245 Z M 72.833185,79.087305 90.831294,64.770155 72.073964,0.7521447 19.415661,0.7419447 59.448487,53.901585 41.434072,62.245865 86.468579,118.00112 Z m 15.474848,-31.06788 15.899807,1.3401 -1.08839,10.59137 -10.435455,3.20605 z m 18.268167,3.18261 -0.74292,6.80037 12.9149,-1.46545 z m -18.122438,66.773625 -1.296279,-3.64835 13.433617,3.6565 z m -4.314818,0.0265 -2.67918,-3.08375 -4.511502,3.08783 z" />
+				</svg>
+				<span class="ms-bold">Start</span>
+			</a>
 		<!--<li><a>
 			<img class="btn-88x31" src="/stadt/assets/images/buttons/z-cnstr-dm-3d.png"
 				alt="site under construction" />
@@ -58,7 +148,7 @@
 		</a></li>
 		<li><a href="https://www.fontstruct.com/fontstructions/show/1779988/zhowfrakt-eye-fs">
 			<img class="btn-88x31" src="/stadt/assets/images/buttons/scheisskopf.png"
-				alt="blackletter pixel font saying 'Scheißkopf'"" title="not sponsored, i just liked the font" />
+				alt="blackletter pixel font saying 'Scheißkopf'" title="not sponsored, i just liked the font" />
 		</a></li>
 		<li><a href="http://svencoop.com/">
 			<img class="btn-88x31" src="/stadt/assets/images/buttons/taskbar/svencoop.png"
@@ -115,83 +205,6 @@
 	{%- endif -%}
 	</div>
 </footer>
-
-<div id="startmenu-9x">
-	<!-- tickbox! no url pollution: https://uhded.com/modal-no-javascript -->
-	<a id="dismiss-startmenu" href="#0"></a>
-	<div id="startmenu-window" class="outdent-9x ms-bold">
-		<div id="startmenu-logo" class="swash-z">ⱿeusOfTheCrows</div>
-		<ul id="startmenu-btns" class="img-grid">
-			<li class="startmenu-btn">
-				<a href="https://github.com/ZeusOfTheCrows/zeusofthecrows.github.io/">
-					<img class="btn-88x31" src="/stadt/assets/images/buttons/brands/gh-pages.png"
-					alt="powered by github pages" />
-			</a></li>
-			<li class="startmenu-btn">
-				<a href="https://neocities.org/site/zeusofthecrows">
-					<img class="btn-88x31" src="/stadt/assets/images/buttons/brands/neocities.png"
-					data-img-source="unknown"
-					alt="hosted on neocities" />
-			</a></li>
-			<li class="startmenu-btn">
-				<a href="http://blog.archive.org/2015/02/11/locking-the-web-open-a-call-for-a-distributed-web/">
-					<img class="btn-88x31" src="/stadt/assets/images/buttons/brands/archive.png"
-					data-img-source="https://bytemoth.neocities.org/88s/"
-					alt="internet archive" />
-			</a></li>
-			<li class="startmenu-sep"><a class="btn-sep indent-9x"></a></li>
-			<li class="startmenu-btn">
-				<a href="https://libresprite.github.io/">
-				<img class="btn-88x31" src="/stadt/assets/images/buttons/brands/libresprite.png"
-					alt="bouncing libresprite logo" />
-			</a></li>
-			<li class="startmenu-btn">
-				<a href="https://www.aseprite.org/">
-				<img class="btn-88x31" src="/stadt/assets/images/buttons/brands/aseprite.png"
-					alt="aseprite old logo animated" />
-			</a></li>
-			<li class="startmenu-btn">
-				<a href="http://apngasm.sourceforge.net/">
-				<img class="btn-88x31" src="/stadt/assets/images/buttons/brands/apngasm.png"
-					alt="apng assembler" />
-			</a></li>
-			<li class="startmenu-btn">
-				<a href="http://www.libpng.org/pub/png/">
-				<img class="btn-88x31" src="/stadt/assets/images/buttons/brands/nowebp.png"
-					data-img-source="unknown"
-					alt="no webp, just use png" />
-			</a></li>
-			<li class="startmenu-btn">
-				<a href="https://www.irfanview.com/">
-				<img class="btn-88x31" src="/stadt/assets/images/buttons/brands/irfanview.png"
-					data-img-source="unknown"
-					alt="irfanview" />
-			</a></li>
-			<li class="startmenu-sep"><a class="btn-sep indent-9x"></a></li>
-			<li class="startmenu-btn">
-				<a href="https://www.mozilla.org/en-GB/firefox/new/">
-				<img class="btn-88x31" src="/stadt/assets/images/buttons/brands/firefox.png"
-					data-img-source="unknown"
-					alt="firefox" />
-			</a></li>
-			<li class="startmenu-btn">
-				<a href="https://ddg.gg/">
-				<img class="btn-88x31" src="/stadt/assets/images/buttons/brands/ddg.png"
-					alt="duckduckgo" />
-			</a></li>
-			<li class="startmenu-btn">
-				<a href="https://dosbox-x.com/wiki/Guide%3AInstalling-Windows-98">
-				<img class="btn-88x31" src="/stadt/assets/images/buttons/brands/win98.png"
-					alt="windows 98 in dosbox" />
-			</a></li>
-			<li class="startmenu-btn">
-				<a href="https://www.mozilla.org/en-GB/firefox/">
-				<img class="btn-88x31" src="/stadt/assets/images/buttons/brands/chromium.png"
-					alt="ie/chrome/brave logos 'same shit, different arsehole'" />
-			</a></li>
-		</ul>
-	</div>
-</div>
 
 <div id="taskbar-balloon">
 	<ul id="antipixels" class="img-grid">

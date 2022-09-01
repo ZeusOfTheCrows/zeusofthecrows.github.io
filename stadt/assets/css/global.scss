@@ -13,6 +13,8 @@
 
 /* =============================== variables =============================== */
 
+// https://fontlibrary.org/en/catalogue?order=&page=18
+
 @font-face {
 	font-family: "Material Design Icons";
 	src: /* subset with used chars for download size */
@@ -41,14 +43,14 @@
 
 /* variables */
 :root {
-	--fnt-serif:	"Times New Roman", serif;
+	--fnt-serif:	"Garamond", "Times New Roman", serif;
 	--fnt-sans: 	"Fira Sans", Helvetica, Arial, sans-serif;
 	--fnt-mono: 	"Fira Mono", monospace;
 	--fnt-code: 	"Fira Code", "Fira Mono", monospace;
 	--fnt-ipa:  	"Fira Sans", Arial, Sans-Serif;  // don't fallback to helvetica
 	--fnt-zswa: 	"Arial", sans-serif;  // font for "Ɀ" - unused
 
-	--tb-hite:  39px;  // taskbar height
+	--tb-hite:  37px;  // taskbar height
 	--dt-padd: 128px;  //?\ desktop padding
 
 	/* universal colours */
@@ -67,7 +69,7 @@
 	--d-aqa: #689D6A;
 	--d-org: #D65D0E;
 
-	// /* dark mode colours */
+	/* dark mode colours */
 	// --bgd-0: hsl(0,  	0%,   	15.7%);
 	// --bgd-1: hsl(20, 	5.3%, 	22.4%);
 	// --bgd-2: hsl(22, 	7.4%, 	29.2%);
@@ -215,13 +217,13 @@ body {
 	overflow-anchor: none;
 }
 
-h1 {font-size:   2em}
-h2 {font-size: 1.8em}
-h3 {font-size: 1.6em}
-h4 {font-size: 1.4em}
-h4 {font-size: 1.2em}
-h5 {font-size:   1em}
-h5 {font-size: 0.8em}
+h1 { font-size:   2em; }
+h2 { font-size: 1.8em; }
+h3 { font-size: 1.6em; }
+h4 { font-size: 1.4em; }
+h4 { font-size: 1.2em; }
+h5 { font-size:   1em; }
+h5 { font-size: 0.8em; }
 
 h1,
 h2 {
@@ -591,10 +593,11 @@ textarea {
 		}
 	}
 
-	/* ====================================================================== *\
-	||         all window decoration svgs from material design icons:         ||
-	||                    https://materialdesignicons.com/                    ||
-	\* ====================================================================== */
+	/* ======================================================================	*\
+	||         all window decoration svgs from material design icons:        	||
+	||                    https://materialdesignicons.com/                   	||
+	||             ztodo https://www.compart.com/en/unicode/U+1F5D7          	||
+	\* ======================================================================	*/
 	& .window-decs {
 		margin: 0;
 		font-size: 1.2em;
@@ -749,45 +752,49 @@ textarea {
 }
 /* -------------------------------- taskbar -------------------------------- */
 #taskbar-9x {
+	--h-gap: 4px;
+
 	position: fixed;
 	z-index: 87;
 	bottom: 0;
 
 	display: flex;
+	gap: var(--h-gap);
+	align-items: center;
 	justify-content: space-between;
 
 	/* borders */
+	box-sizing: border-box;
 	border-top: 2px solid var(--btn-hilite);
-	padding: 2px 2px 0px 2px;
-	width: calc(100% - 4px);  // 4px padding otherwise scrollbar
+	// padding: 2px 2px 1px 2px;  // i don't know where the extra pixel comes from?
+	padding: 2px;
+	width: 100%;
 
 	white-space: nowrap;
 	overflow: hidden;
 	text-decoration: none;
 	background: var(--bgd-2);
 
+	& img {
+		vertical-align: middle;  // or bottom
+	}
+
 	& * {
 	margin: 0;
 	padding: 0;
-	list-style-type:none;
+	list-style-type: none;
 	display: inline-block;
 	}
 
 	& #btn-start {
 		// display: inline-flex;  // ztodo maybe try this
 		// flex-direction: space-around;
-		width: 76px;        // }
-		height: 29px;       // } this is really hacky, but it's
-		margin-bottom: 2px; // } the only thing that works
-		line-height: 29px;  // }
+		box-sizing: border-box;
+		width: 88px;
+		height: 31px;
 
-		// font-family: "Fira Sans";
-		// font-size: 12pt;
-		// // text-shadow: 0.5px 0px var(--txt-1),
-		// //              1.0px 0px var(--txt-1),
-		// //              1.5px 0px var(--txt-1);
-		// // color: transparent;
-		// letter-spacing: 1px;
+		font-family: var(--fnt-mono);
+		font-size: 1em;
 
 		& #start-orb {
 			background-size: 16px 16px;
@@ -820,21 +827,22 @@ textarea {
 	& #taskbar-btns, #taskbar-tray {
 		display: flex;
 		flex-direction: row;
+		gap: var(--h-gap);
 		// flex-wrap: nowrap;  // default
 		// justify-content: flex-start;  // default
 		align-items: center;
 		& li {
 			display: inline-block;
-			margin-right: 4px;
+			// margin-right: var(--h-gap);
 		}
 	}
 
 	& #taskbar-btns {
+		// for mask
 		flex-shrink: 1;
 		flex-grow: 1;
 		overflow: hidden;
 		width: 100%;
-
 		-webkit-mask-image: linear-gradient(to left, transparent 0px 8px, black 32px 64px);
 		mask-image: linear-gradient(to left, transparent 0px 8px, black 32px 64px);
 		// background-image: linear-gradient(to left, blue 0px 8px, red 32px 64px);
@@ -853,7 +861,9 @@ textarea {
 	}
 
 	& #taskbar-tray {
-		height: 29px;
+		height: 100%;
+		box-sizing: border-box;
+		// height: 29px;
 		padding: 0px 2px;
 
 		justify-content: flex-end;
@@ -872,92 +882,77 @@ textarea {
 	}
 }
 
+/* start menu open on focus: */
+#btn-start:focus + #startmenu-9x {
+	display: grid;
+}
+#startmenu-container:focus-within #startmenu-9x {
+	display: grid;
+}
+#startmenu-9x {
+	display: none;
+}
+
 #startmenu-9x {
 	position: fixed;
-	z-index: 89;
-	display: none;
-	top:    0;
-	left:   0;
-	width:  100vw;
-	height: 100vh;
-	// background-color: red;
+	// display: block;  //does this get overriden?
+	bottom: var(--tb-hite);
+	left: 4px;
 
-	&:target {
+	// display: grid;
+	grid-auto-flow: column;
+	// gap: 4px;
+	gap: 0;
+
+	& #startmenu-logo {
 		display: block;
+		width: 32px;
+		height: calc(100% - 8px);  // 2 * vertical padding
+
+		grid-column: 1 / 2;
+
+		background-color: var(--d-blu);
+		color: var(--bgd-2);
+		// content: "ⱿeusOfTheCrows";
+		font-weight: 700;
+		font-size: 18pt;
+		padding: 4px 2px;
+
+		writing-mode: vertical-rl;
+		transform: rotate(180deg);
 	}
 
-	& #startmenu-window {
-		position: fixed;
-		display: block;  //does this get overriden?
-		bottom: 39px;  // ztodo make var (taskbar height)
-		left: 4px;
+	& #startmenu-btns {
+		grid-column: 2 / 3;
+		// padding: 4px;
+		// width: 64px;
+		display: initial;
+		margin: 4px 0px;
 
-		display: grid;
-		grid-auto-flow: column;
-		// gap: 4px;
-		gap: 0;
-
-		& #startmenu-logo {
+		& .startmenu-sep {
+			height: 4px;
+			margin-top: 0px;
+			margin-bottom: 4px;
 			display: block;
-			width: 32px;
-			height: calc(100% - 8px);  // 2 * vertical padding
 
-			grid-column: 1 / 2;
-
-			background-color: var(--d-blu);
-			color: var(--bgd-2);
-			// content: "ⱿeusOfTheCrows";
-			font-weight: 700;
-			font-size: 18pt;
-			padding: 4px 2px;
-
-			writing-mode: vertical-rl;
-			transform: rotate(180deg);
-		}
-
-		& #startmenu-btns {
-			grid-column: 2 / 3;
-			// padding: 4px;
-			// width: 64px;
-			display: initial;
-			margin: 4px 0px;
-
-			& .startmenu-sep {
-				height: 4px;
-				margin-top: 0px;
-				margin-bottom: 4px;
+			& .btn-sep {
 				display: block;
-
-				& .btn-sep {
-					display: block;
-					width: 100%;
-				}
-			}
-
-			& .startmenu-btn {
-				display: block;
-				padding: 0px 8px;
+				width: 100%;
 			}
 		}
-	}
 
-	& #dismiss-startmenu {
-		position: fixed;
-		display: block;
-		top:    0;
-		left:   0;
-		width:  100vw;
-		height: 100vh;
-		cursor: default;
-		// background-color: red;
+		& .startmenu-btn {
+			display: block;
+			padding: 0px 8px;
+		}
 	}
 }
 
 #taskbar-balloon {
 	position: fixed;
 	z-index: 88;
-	bottom: 44px;
-	right: 80px;
+	bottom: calc(var(--tb-hite) + 5px);
+	right: 88px;
 
 	background-color: var(--bgd-0);
 	width: 256px;
