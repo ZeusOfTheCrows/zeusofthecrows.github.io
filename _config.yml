@@ -121,7 +121,7 @@ exclude:
   - /stadt/assets/images/buttons/*.gif
   - /stadt/assets/images/towers/*.gif
   - /stadt/assets/images/towers/structure/*.gif
-  - /*.ase
+  # - /*.ase
   - /stadt/assets/images/gifs/
   - /stadt/assets/images/*/*.url
   - /stadt/assets/js/*.*

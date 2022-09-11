@@ -38,6 +38,7 @@
 		{% if page.window_icon != nil %}
 		<link rel="shortcut icon" type="image/png" href="/stadt/assets/images/window-icons/{{ page.window_icon }}" />
 		{% else %}
+		<!-- https://stackoverflow.com/questions/1444975/if-i-serve-favicon-ico-as-image-vnd-microsoft-icon-instead-of-image-x-icon-wi -->
 		<link rel="shortcut icon" type="image/x-icon" href="/stadt/favicon.ico" />
 		{% endif %}
 
