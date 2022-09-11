@@ -426,6 +426,7 @@ code {
 .tower,
 .pixel-art,
 .desktop-icon img,
+.window-icon,
 .window-title:before {
 	/* render pixel art pixelly when zoomed in */
 	image-rendering: pixelated;   /* fallback, pixellated */

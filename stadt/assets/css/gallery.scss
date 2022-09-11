@@ -1,0 +1,137 @@
+---
+---
+/* -------------------------------- windows -------------------------------- */
+:root {
+	scroll-behavior: smooth;
+	scroll-padding-top: 10vh;
+	// can't get it to revert for the windows
+	// scrollbar-color: var(--d-blu) var(--d-ppl) !important;
+}
+
+#desktop-area {
+
+	background-image:
+		linear-gradient(to bottom right, var(--d-blu), var(--d-ppl)); //, var(--d-red), var(--d-org), var(--d-ylw));
+
+	/*
+	background-image:
+		url("/stadt/assets/images/backgrounds/palmtreesblack.png");
+
+		// i don't really like duplicated media queries, but i don't see another way
+		@media (prefers-color-scheme: light) {
+			background-image:
+			url("/stadt/assets/images/backgrounds/palmtreespink.png");
+		}
+	*/
+
+		//!\ remember to do this with background images
+		// & .desktop-icons-flex-container {
+			// margin: 32px;
+			// padding: 16px;
+			// background-color: var(--bgd-0);
+			// border-radius: 8px;
+		// }
+
+}
+
+.window-content {
+		font-family: var(--fnt-sans);
+		// initial-letter: 2;  // soon
+		//may be nice for larger screens, but not quite yet
+		// font-family: garamond, sans-serif;
+		// font-size: 1.2em;
+		display: revert;  // otherwise blockquotes are hidden - bug?
+
+		padding: 16px;
+		height: 90%;
+		overflow-y: scroll;  // add dummy scrollbar for notepad æsthetic
+		// i thought this was a good idea, but actually it's annoying
+		// overscroll-behavior: contain;
+
+		& p {
+			line-height: 1.5em;
+			text-indent: 2ch;
+		}
+
+		& ol {
+			list-style: lower-alpha;
+
+			& ::marker {
+				color: var(--s-blu);
+			}
+	}
+}
+
+#window-area {
+	// height: 100vh;
+	// position: absolute;
+	padding-top:         	32px;
+	padding-right:       	32px;
+	padding-left: calc(  	32px + var(--dt-padd));
+	padding-bottom: calc(	32px + var(--tb-hite));
+	// margin-top: 20vh;
+	// margin-bottom:   50vh;  // allow overscrolling - doesn't work with grid
+	display: grid;
+	// grid-template-columns: repeat(auto-fill, 720px);
+	grid-template-columns: repeat(auto-fill, 48em);
+	justify-content: center;
+	gap: 4vw;
+}
+
+.window-9x {
+	z-index: 10; // means i can have manually lower
+	position: static;
+	grid-row-end: span 2;
+	display: flex;
+	flex-direction: column;
+
+	// width: 704px;
+	max-height: 640px;
+}
+
+p {
+	margin-block: 1.5em;
+}
+
+/* ---------------------------- specific tweaks ---------------------------- */
+
+#page-intro {
+	grid-row-end: span 1;
+}
+
+#pirated-music {
+	margin: 1em;
+	padding: 1em;
+}
+
+.window-9x:last-child {
+	margin-bottom: 24vw;
+}
+
+/* ------------------------------ decorations ------------------------------ */
+
+dl {
+	& dd {
+		line-height: initial;  // i'm not sure this is best practice - maybe just 1
+	}
+}
+
+// blockquote::before {
+		// top: 0.3em;  // why is this so different?
+// }
+
+hr {
+	background: none;
+	border: 0;
+	margin: 0.5em 0;
+	padding: 0;
+
+	&::after {
+		content: "☙ ⁂ ❧";
+		// content: "🙡 ⁂ 🙣";  // alt
+		color: var(--s-grn);
+		display: block;
+		line-height: 1;
+		text-align: center;
+	}
+}
