@@ -125,5 +125,4 @@ exclude:
   - /stadt/assets/images/gifs/
   - /stadt/assets/images/*/*.url
   - /stadt/assets/js/*.*
-  - /stadt/assets/images/buttons/page-info/js-warning.png
   - /stadt/assets/images/window-icons/png/*
