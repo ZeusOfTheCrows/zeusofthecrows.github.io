@@ -454,12 +454,8 @@ code {
 	& img {
 		display: inline;
 		margin: 0px 1px;
-		// margin: 0px;
+		vertical-align: middle;
 	}
-
-	// & ::marker {
-		// content: "";
-	// }
 }
 .btn-88x31 {
 	width:  88px;
@@ -891,7 +887,6 @@ textarea {
 
 #startmenu-9x {
 	position: fixed;
-	// display: block;  //does this get overriden?
 	bottom: var(--tb-hite);
 	left: 4px;
 
