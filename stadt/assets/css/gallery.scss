@@ -8,6 +8,56 @@
 	// scrollbar-color: var(--d-blu) var(--d-ppl) !important;
 }
 
+
+.img-grid {  // ztodo comments
+	& .img-caption {
+		opacity: 0;
+	}
+	& li:hover .img-caption {
+		opacity: 1;
+	}
+	& a:any-link {
+		text-decoration: underline dotted currentColor 2px;
+	}
+	& a.v:any-link {  // verified original source
+		color: var(--s-grn);
+	}
+	& a.z {  // verified original source
+		color: var(--s-org);
+		position: relative;
+
+		&::after {
+			content: "Ɀ";
+			transition: opacity 0.3s ease-in-out;
+			opacity: 0;
+			position: absolute;
+			left: 0;
+			background-color: var(--d-org);
+			background-image: linear-gradient(var(--s-org), var(--d-org));
+			color: var(--bgd-0);
+			border-radius: 2px;
+			padding-inline: 1ch;
+		}
+		&:hover::after {
+			opacity: 1;
+		}
+	}
+	& a.i {  // design inspiration
+		color: var(--s-aqa);
+	}
+	& a.u {  // unknown source (legacy)
+		color: var(--s-red);
+	}
+	& img {
+		display: block;
+	}
+}
+
+// .img-grid li {
+	// display: inline-block;
+// }
+
+
 #desktop-area {
 
 	background-image:

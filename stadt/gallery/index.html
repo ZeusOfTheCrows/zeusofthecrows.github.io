@@ -5,6 +5,10 @@ title: Image Gallery
 edit_date: 2022-09-11
 programme:
 window_icon: gallery.png
+sep: " | "
+src: src
+insp: insp
+ase: ase
 ---
 
 <div id="page-intro" class="window-9x">
@@ -29,20 +33,23 @@ window_icon: gallery.png
 		</ul>
 	</div>
 	<div class="window-content indent-9x">
-		<h2>Images i have collected, or created myself</h2>
+		<h2>Image Collection</h2>
 
 		<p>
 			a collection of images i have made, or scoured from the internet: ones i
 			agree with, like the æsthetic of, or any other reason
 		</p>
 		<p>
-			the place i found the image is in <code>data-image-src</code>. this may
-			not be the original creator, but i hope if i can start this as a trend
-			then it'll be easier to find the original creator
+			hover over each image for more source: green means original creator,
+			blue/purple means where i found the image.
+			orange means made by me (underlined are links to aseprite <samp>.ase</samp>
+			files), red means unknown source. "insp" means the inspiration for the
+			design (direct or indirect).
 		</p>
-		<p> if i've made it the inspiration might be
-			in <code>data-image-insp</code>. the aseprite file may also be at the
-			same path; change <samp>.png</samp> to <samp>.ase</samp>.
+		<p>
+			i hope if i can start this as a trend then it'll be easier to find the
+			original creator
+		</p>
 		<p>
 			none of these are lazy loading, so if you're on a data/metered plan you
 			should probably click away now
@@ -55,7 +62,7 @@ window_icon: gallery.png
 		<a class="window-title ms-bold">
 			<img class="window-icon"
 				src="/stadt/assets/images/window-icons/buttons.png" alt="" />
-			buttons
+			Buttons
 		</a>
 		<ul class="window-decs">
 			<li class="window-min"></li>
@@ -76,11 +83,22 @@ window_icon: gallery.png
 		<h3>Æsthetic</h3>
 		<ul class="img-grid">
 			<li>
+				<a>
+					<img src="/stadt/assets/images/buttons/page-info/1080.png" class="btn-88x31"
+						alt="best viewed 1920×1080 fullHD button"
+						data-img-src="unknown" />
+				</a>
+				<span class="img-caption">
+					<a class="src z" href="/stadt/assets/images/buttons/page-info/1080.ase">{{ page.src }}</a>
+				</span>
+			</li>
+			<li>
 				<a href="https://en.wikipedia.org/wiki/Year_2038_problem">
 					<img src="/stadt/assets/images/buttons/taskbar/2038.png" class="btn-88x31"
 						alt="are you ready? year 2038 button" title="the epochalypse is coming"
 						data-img-src="unknown" />
 				</a>
+				<span class="img-caption"><a class="src u">{{ page.src }}</a></span>
 			</li>
 			<li>
 				<a href="http://www.libpng.org/pub/png/">
@@ -88,6 +106,12 @@ window_icon: gallery.png
 						alt="[animated] png now button"
 						data-img-insp="http://www.libpng.org/pub/png/" data-img-src="~zeus" />
 				</a>
+				<span class="img-caption">
+					<a class="src z"
+						href="//zeusofthecrows.github.io/stadt/assets/images/buttons/brands/apng.ase">{{ page.src }}</a>
+					{{ page.sep }}
+					<a class="i" href="http://www.libpng.org/pub/png/">{{ page.insp }}</a>
+				</span>
 			</li>
 			<li>
 				<a href="http://blog.archive.org/2015/02/11/locking-the-web-open-a-call-for-a-distributed-web/">
@@ -95,30 +119,54 @@ window_icon: gallery.png
 						alt="archive.org - preserve history button"
 						data-img-insp="unknown" data-img-src="~zeus" />
 				</a>
+				<span class="img-caption">
+					<a class="src z" href="/stadt/assets/images/buttons/brands/archive.ase">{{ page.src }}</a>
+				</span>
 			</li>
 			<li>
 				<a>
 					<img src="/stadt/assets/images/buttons/music/cassette.png" class="btn-88x31"
 						alt="sounds better on cassette[r] button" data-img-src="~zeus" />
 				</a>
+				<span class="img-caption">
+					<a class="src z">{{ page.src }}</a>
+				</span>
 			</li>
 			<li>
 				<a>
 					<img src="/stadt/assets/images/buttons/other/cnstr-14seg.png" class="btn-88x31"
 						alt="under construction button - 14 segment font" data-img-src="~zeus" />
 				</a>
+				<span class="img-caption">
+					<a class="src z">{{ page.src }}</a>
+				</span>
 			</li>
 			<li>
 				<a>
 					<img src="/stadt/assets/images/buttons/other/cnstr-dotmatrix.png" class="btn-88x31"
 						alt="under construction button - dot matrix font" data-img-src="~zeus" />
 				</a>
+				<span class="img-caption">
+					<a class="src z">{{ page.src }}</a>
+				</span>
 			</li>
 			<li>
 				<a href="https://colemak.org/">
 					<img src="/stadt/assets/images/buttons/taskbar/colemak.png" class="btn-88x31"
 						alt="i use colemak (wide) button" data-img-src="~zeus" />
 				</a>
+				<span class="img-caption">
+					<a class="src z">{{ page.src }}</a>
+				</span>
+			</li>
+			<li>
+				<a>
+					<img src="/stadt/assets/images/buttons/page-info/cookies.png" class="btn-88x31"
+						alt="absolutely no cookies button (and very few biscuits)" data-img-src="~zeus" />
+				</a>
+				<span class="img-caption">
+					<a class="src z" href="/stadt/assets/images/buttons/page-info/cookies.ase">{{ page.src }}</a>
+				</span>
 			</li>
 			<li>
 				<a href="https://www.w3.org/Style/CSS/">
@@ -126,6 +174,9 @@ window_icon: gallery.png
 						data-img-src="~zeus" data-img-insp="https://www.w3.org/Style/CSS/Buttons/Menu"
 						alt="css is difficult button" />
 				</a>
+				<span class="img-caption">
+					<a class="src z" href="/stadt/assets/images/buttons/taskbar/css.ase">{{ page.src }}</a>
+				</span>
 			</li>
 			<li>
 				<a>
@@ -133,6 +184,9 @@ window_icon: gallery.png
 						alt="animated email button"
 						data-img-source="~zeus" />
 				</a>
+				<span class="img-caption">
+					<a class="src z" href="/stadt/assets/images/buttons/brands/email.ase">{{ page.src }}</a>
+				</span>
 			</li>
 			<li>
 				<a>
@@ -140,12 +194,18 @@ window_icon: gallery.png
 						alt="email button"
 						data-img-source="https://bytemoth.neocities.org/88s/" />
 				</a>
+				<span class="img-caption">
+					<a class="src" href="https://bytemoth.neocities.org/88s/">{{ page.src }}</a>
+				</span>
 			</li>
 			<li>
 				<a>
 					<img src="/stadt/assets/images/buttons/other/jack.png" class="btn-88x31"
-						alt="best heard through a 3.5mm jack button" data-img-src="~zeus" />
+						alt="best heard through a 3.5mm jack button" data-img-src="unknown" />
 				</a>
+				<span class="img-caption">
+					<a class="src u">{{ page.src }}</a>
+				</span>
 			</li>
 			<li>
 				<a>
@@ -153,6 +213,9 @@ window_icon: gallery.png
 						alt="proudly no javascript button"
 						data-img-src="~zeus" />
 				</a>
+				<span class="img-caption">
+					<a class="src z" href="/stadt/assets/images/buttons/brands/email.ase">{{ page.src }}</a>
+				</span>
 			</li>
 			<li>
 				<a>
@@ -160,36 +223,56 @@ window_icon: gallery.png
 						alt="warning: page contains javascript button"
 						data-img-src="~zeus" />
 				</a>
+				<span class="img-caption">
+					<a class="src z">{{ page.src }}</a>
+				</span>
 			</li>
 			<li>
 				<a>
 					<img src="/stadt/assets/images/buttons/music/licence.png" class="btn-88x31"
 						alt="ppl/prs licensed to play recorded music button" />
 				</a>
+				<span class="img-caption">
+					<a class="src z" href="/stadt/assets/images/buttons/music/licence.ase">{{ page.src }}</a>
+				</span>
 			</li>
 			<li>
 				<a>
 					<img src="/stadt/assets/images/buttons/music/licence-red.png" class="btn-88x31"
 						alt="ppl/prs licensed to play recorded music button, but red" />
 				</a>
+				<span class="img-caption">
+					<a class="src z"
+						href="//zeusofthecrows.github.io/stadt/assets/images/buttons/music/licence.ase">{{ page.src }}</a>
+				</span>
 			</li>
 			<li>
 				<a>
 					<img src="/stadt/assets/images/buttons/other/macintosh.png" class="btn-88x31"
 						alt="macintosh >128k is extravagant button" />
 				</a>
+				<span class="img-caption">
+					<a class="src z"
+						href="//zeusofthecrows.github.io/stadt/assets/images/buttons/other/macintosh.ase">{{ page.src }}</a>
+				</span>
 			</li>
 			<li>
 				<a>
 				<img class="btn-88x31" src="/stadt/assets/images/buttons/other/mars.png"
 					alt="mars art deco button" />
 				</a>
+				<span class="img-caption">
+					<a class="src z">{{ page.src }}</a>
+				</span>
 			</li>
 			<li>
 				<a>
 				<img class="btn-88x31" src="/stadt/assets/images/buttons/other/mobiles.png"
-					alt="not mobile friendly button" />
+					alt="not mobile friendly button" data-img-src="unk" />
 				</a>
+				<span class="img-caption">
+					<a class="src u">{{ page.src }}</a>
+				</span>
 			</li>
 			<li>
 				<a>
@@ -197,27 +280,38 @@ window_icon: gallery.png
 						data-img-src="~zeus"
 						alt="this site has no button" />
 				</a>
+				<span class="img-caption">
+					<a class="src z"
+						href="//zeusofthecrows.github.io/stadt/assets/images/buttons/taskbar/web3.ase">{{ page.src }}</a>
+				</span>
 			</li>
 			<li>
 				<a href="https://wiki.mozilla.org/APNG_Specification">
 					<img src="/stadt/assets/images/buttons/brands/nowebp.png" class="btn-88x31"
-						data-img-src="unknown"
-						alt="no webp, just use png button" />
+						data-img-src="unknown" alt="no webp, just use png button" />
 				</a>
+				<span class="img-caption">
+					<a class="src a">{{ page.src }}</a>
+				</span>
 			</li>
 			<li>
 				<a href="https://web.archive.org/web/20080509082311/http://www.goldshell.com/pedit/pindex.htm">
 					<img src="/stadt/assets/images/buttons/other/pedit.png" class="btn-88x31"
-						data-img-src="unknown"
-						alt="pedit: program editor button" />
+						data-img-src="unknown" alt="pedit: program editor button" />
 				</a>
+				<span class="img-caption">
+					<a class="src u">{{ page.src }}</a>
+				</span>
 			</li>
 			<li>
 				<a href="/stadt/thoughts#piracy">
 					<img src="/stadt/assets/images/buttons/other/piracy.png" class="btn-88x31"
-						data-img-src="https://kangworlds.neocities.org/"
+						data-img-src=""
 						alt="piracy now - free button" />
 				</a>
+				<span class="img-caption">
+					<a class="src" href="https://kangworlds.neocities.org/">{{ page.src }}</a>
+				</span>
 			</li>
 			<li>
 				<a>
@@ -225,6 +319,9 @@ window_icon: gallery.png
 						data-img-src="~zeus"
 						alt="lgbt rainbow button" />
 				</a>
+				<span class="img-caption">
+					<a class="src z">{{ page.src }}</a>
+				</span>
 			</li>
 			<li>
 				<a>
@@ -233,6 +330,12 @@ window_icon: gallery.png
 						data-img-insp="https://www.deviantart.com/levelinfinitum/art/BBFC-18-Certification-card-163679609"
 						alt="18 rating button" />
 				</a>
+				<span class="img-caption">
+					<a class="src z"
+						href="//zeusofthecrows.github.io/stadt/assets/images/buttons/taskbar/web3.ase">{{ page.src }}</a>
+					{{ page.sep }}
+					<a class="i" href="https://www.deviantart.com/levelinfinitum/art/BBFC-18-Certification-card-163679609">{{ page.insp }}</a>
+				</span>
 			</li>
 			<li>
 				<a>
@@ -240,13 +343,19 @@ window_icon: gallery.png
 						alt="от бизнеса с любов button"
 						title="this was going on when i was in bulgaria, and the sign design was so cool" />
 				</a>
+				<span class="img-caption">
+					<a class="src z">{{ page.src }}</a>
+				</span>
 			</li>
 			<li>
 				<a>
 					<img src="/stadt/assets/images/buttons/other/rewind.png" class="btn-88x31"
 						data-img-src="~zeus"
-						alt="windows xp vhs rewind button" title="coming soon in stamp form" />
+						alt="windows xp vhs rewind button" title="also available in stamp form" />
 				</a>
+				<span class="img-caption">
+					<a class="src z">{{ page.src }}</a>
+				</span>
 			</li>
 			<li>
 				<a href="https://www.fontstruct.com/fontstructions/show/1779988/zhowfrakt-eye-fs">
@@ -254,6 +363,9 @@ window_icon: gallery.png
 						alt="red button with blackletter pixel font saying 'Scheißkopf'"
 						title="not sponsored, i just liked the font" />
 				</a>
+				<span class="img-caption">
+					<a class="src z">{{ page.src }}</a>
+				</span>
 			</li>
 			<li>
 				<a>
@@ -261,6 +373,9 @@ window_icon: gallery.png
 						data-img-src="unknown, possibly anlucas?"
 						alt="sharing is caring, seed your torrents button" />
 				</a>
+				<span class="img-caption">
+					<a class="src u">{{ page.src }}</a>
+				</span>
 			</li>
 			<li>
 				<a>
@@ -268,6 +383,10 @@ window_icon: gallery.png
 						data-img-src="~zeus"
 						alt="despite everything, it's still you (undertale) button" />
 				</a>
+				<span class="img-caption">
+					<a class="src z"
+						href="//zeusofthecrows.github.io/stadt/assets/images/buttons/other/still-you.ase">{{ page.src }}</a>
+					</span>
 			</li>
 			<li>
 				<a href="http://svencoop.com/">
@@ -275,6 +394,9 @@ window_icon: gallery.png
 						data-img-src="http://svencoop.com/"
 						alt="sven coop button" />
 				</a>
+				<span class="img-caption">
+					<a class="src v" href="http://svencoop.com/">{{ page.src }}</a>
+				</span>
 			</li>
 			<li>
 				<a href="http://flagofearth.org/original.html">
@@ -282,12 +404,24 @@ window_icon: gallery.png
 						data-img-src="~zeus" data-img-insp="http://flagofearth.org/original.html"
 						alt="citizen of terra (james cadle earth flag) button" />
 				</a>
+				<span class="img-caption">
+					<a class="src z"
+						href="//zeusofthecrows.github.io/stadt/assets/images/buttons/brands/email.ase">{{ page.src }}</a>
+					{{ page.sep }}
+					<a class="i" href="http://flagofearth.org/original.html">{{ page.insp }}</a>
+				</span>
 			</li>
 			<li>
 				<a>
 					<img src="/stadt/assets/images/buttons/taskbar/truecolour.png" class="btn-88x31"
 						data-img-src="~zeus" alt="best: 24-bit truecolour" />
 				</a>
+				<span class="img-caption">
+					<a class="src z"
+						href="//zeusofthecrows.github.io/stadt/assets/images/buttons/taskbar/truecolour.ase">{{ page.src }}</a>
+					{{ page.sep }}
+					<a class="i" href="https://kangworlds.neocities.org/img/hicolor.gif">{{ page.insp }}</a>
+				</span>
 			</li>
 			<li>
 				<a href="https://www.axiomverge.com/blog/axiom-verge-comes-to-ps-vita-april-19">
@@ -295,6 +429,9 @@ window_icon: gallery.png
 						data-img-src="~zeus"
 						alt="axiom verge on ps vita button" title=":-( – still a good game though" />
 				</a>
+				<span class="img-caption">
+					<a class="src z" href="//zeusofthecrows.github.io/stadt/assets/images/buttons/taskbar/truecolour.ase">{{ page.src }}</a>
+				</span>
 			</li>
 			<li>
 				<a href="https://yesterweb.org/no-to-web3/">
@@ -302,13 +439,23 @@ window_icon: gallery.png
 						data-img-insp="https://yesterweb.org/no-to-web3/"
 						alt="say no to web3 button" />
 				</a>
+				<span class="img-caption">
+					<a class="src z"
+						href="//zeusofthecrows.github.io/stadt/assets/images/buttons/taskbar/web3.ase">{{ page.src }}</a>
+					{{ page.sep }}
+					<a class="i" href="https://yesterweb.org/no-to-web3/">{{ page.insp }}</a>
+				</span>
 			</li>
 			<li>
 				<a href="http://web3.14159.annwfn.net/">
 					<img src="/stadt/assets/images/buttons/taskbar/web-pi.png" class="btn-88x31"
-						data-img-insp="http://web3.14159.annwfn.net/"
+						data-img-src="http://web3.14159.annwfn.net/"
 						alt="web π certified" />
 				</a>
+				<span class="img-caption">
+					<a class="src v"
+						href="http://web3.14159.annwfn.net/">{{ page.src }}</a>
+				</span>
 			</li>
 		</ul>
 		<h3>Brands</h3>
@@ -319,6 +466,12 @@ window_icon: gallery.png
 						alt="optimised with apng assembler button"
 						data-img-src="~zeus" />
 				</a>
+				<span class="img-caption">
+					<a class="src z"
+						href="//zeusofthecrows.github.io/stadt/assets/images/buttons/brands/apngasm.ase">{{ page.src }}</a>
+					{{ page.sep }}
+					<a class="i" href="https://yesterweb.org/no-to-web3/">{{ page.insp }}</a>
+				</span>
 			</li>
 			<li>
 				<a href="https://www.aseprite.org/">
@@ -326,6 +479,9 @@ window_icon: gallery.png
 						alt="aseprite film logo button"
 						data-img-src="~zeus" />
 				</a>
+				<span class="img-caption">
+					<a class="src z">{{ page.src }}</a>
+				</span>
 			</li>
 			<li>
 				<a href="https://www.aseprite.org/">
@@ -333,6 +489,9 @@ window_icon: gallery.png
 						alt="aseprite old logo button"
 						data-img-src="~zeus" />
 				</a>
+				<span class="img-caption">
+					<a class="src z">{{ page.src }}</a>
+				</span>
 			</li>
 			<li>
 				<a href="https://www.mozilla.org/en-GB/firefox/">
@@ -340,6 +499,9 @@ window_icon: gallery.png
 						alt="ie/chrome/brave logos captioned 'same shit, different arsehole'"
 						data-img-src="~zeus" />
 				</a>
+				<span class="img-caption">
+					<a class="src z">{{ page.src }}</a>
+				</span>
 			</li>
 			<li>
 				<a href="https://ddg.gg">
@@ -347,13 +509,19 @@ window_icon: gallery.png
 						alt="duckduckgo: always use protection"
 						data-img-src="~zeus" />
 				</a>
+				<span class="img-caption">
+					<a class="src z">{{ page.src }}</a>
+				</span>
 			</li>
 			<li>
-				<a href="https://ddg.gg">
+				<a href="https://www.mozilla.org/en-GB/firefox/new/">
 					<img src="/stadt/assets/images/buttons/brands/firefox.png" class="btn-88x31"
 						alt="mozilla now button"
 						data-img-src="unknown" />
 				</a>
+				<span class="img-caption">
+					<a class="src z">{{ page.src }}</a>
+				</span>
 			</li>
 			<li>
 				<a href="https://pages.github.com/">
@@ -361,6 +529,12 @@ window_icon: gallery.png
 						alt="microsoft frontpage style button, saying 'GithubPages'"
 						data-img-src="unknown" />
 				</a>
+				<span class="img-caption">
+					<a class="src z"
+						href="//zeusofthecrows.github.io/stadt/assets/images/buttons/brands/gh-pages.ase">{{ page.src }}</a>
+					{{ page.sep }}
+					<a class="i" href="https://64.media.tumblr.com/7973fa2f2d10f25506d1f2d099c2385b/eb9f8ba2603e4564-f7/s100x200/b387c1108800d03f91b375cb78063d31d713ee87.gifv">{{ page.insp }}</a>
+				</span>
 			</li>
 			<li>
 				<a href="https://www.gimp.org/">
@@ -368,6 +542,9 @@ window_icon: gallery.png
 						alt="graphics by gimp button"
 						data-img-src="unknown" />
 				</a>
+				<span class="img-caption">
+					<a class="src u">{{ page.src }}</a>
+				</span>
 			</li>
 			<li>
 				<a href="https://www.irfanview.com/">
@@ -375,6 +552,9 @@ window_icon: gallery.png
 						alt="irfanview image viewer button"
 						data-img-src="unknown" />
 				</a>
+				<span class="img-caption">
+					<a class="src u">{{ page.src }}</a>
+				</span>
 			</li>
 			<li>
 				<a href="https://www.abc.net.au/triplej/">
@@ -382,6 +562,9 @@ window_icon: gallery.png
 						alt="triple j now button"
 						data-img-src="unknown" />
 				</a>
+				<span class="img-caption">
+					<a class="src u">{{ page.src }}</a>
+				</span>
 			</li>
 			<li>
 				<a href="https://libresprite.github.io/">
@@ -389,6 +572,9 @@ window_icon: gallery.png
 						alt="libresprite: it's aseprite, but free button"
 						data-img-src="unknown" />
 				</a>
+				<span class="img-caption">
+					<a class="src z">{{ page.src }}</a>
+				</span>
 			</li>
 			<li>
 				<a href="https://neocities.org/">
@@ -396,6 +582,12 @@ window_icon: gallery.png
 						alt="various neocities buttons, rotating"
 						data-img-src="~zeus" data-img-insp="https://purplehello98.neocities.org/buttons/" />
 				</a>
+				<span class="img-caption">
+					<a class="src z"
+						href="//zeusofthecrows.github.io/stadt/assets/images/buttons/brands/neocities.ase">{{ page.src }}</a>
+					{{ page.sep }}
+					<a class="i" href="https://purplehello98.neocities.org/buttons/">{{ page.insp }}</a>
+				</span>
 			</li>
 			<li>
 				<a href="https://steampowered.com">
@@ -403,14 +595,22 @@ window_icon: gallery.png
 						alt="play with steam button"
 						data-img-src="unknown" />
 				</a>
+				<span class="img-caption">
+					<a class="src u">{{ page.src }}</a>
+				</span>
 			</li>
 			<li>
 				<a href="https://zeusofthecrows.tumblr.com">
 					<img src="/stadt/assets/images/buttons/brands/tumblr.png" class="btn-88x31"
 						alt="tumblr button"
 						data-img-src="~zeus"
-						data-img-insp="https://www.tumblr.com/blog/view/azuremist/685627448990351360" />
+						data-img-insp="https://www.tumblr.com/blog/view/azuremist/685627448990351360/" />
 				</a>
+				<span class="img-caption">
+					<a class="src z">{{ page.src }}</a>
+					{{ page.sep }}
+					<a class="i" href="https://www.tumblr.com/blog/view/azuremist/685627448990351360/">{{ page.insp }}</a>
+				</span>
 			</li>
 			<li>
 				<a href="https://dosbox-x.com/wiki/Guide%3AInstalling-Windows-98">
@@ -418,6 +618,9 @@ window_icon: gallery.png
 						alt="made with windows 98 button"
 						data-img-src="unknown" />
 				</a>
+				<span class="img-caption">
+					<a class="src u">{{ page.src }}</a>
+				</span>
 			</li>
 		</ul>
 		<h2>Other</h2>
@@ -428,6 +631,12 @@ window_icon: gallery.png
 						alt="[animated] png now button - 99px wide"
 						data-img-insp="http://www.libpng.org/pub/png/" data-img-source="~zeus" />
 				</a>
+				<span class="img-caption">
+					<a class="src z"
+						href="//zeusofthecrows.github.io/stadt/assets/images/buttons/brands/apng-wide.ase">{{ page.src }}</a>
+					{{ page.sep }}
+					<a class="i" href="http://www.libpng.org/pub/png/">{{ page.insp }}</a>
+				</span>
 			</li>
 			<li>
 				<a href="http://info.cern.ch/hypertext/WWW/TheProject.html">
@@ -435,6 +644,10 @@ window_icon: gallery.png
 						data-img-src="https://anlucas.neocities.org/GifFiles.html"
 						alt="w3 - connecting people since 1991 button" />
 				</a>
+				<span class="img-caption">
+					<a class="src v"
+						href="https://anlucas.neocities.org/GifFiles.html">{{ page.src }}</a>
+				</span>
 			</li>
 		</ul>
 	</div>
@@ -479,77 +692,142 @@ window_icon: gallery.png
 				<img src="/stadt/assets/images/stamps/beastshrug.png" class="img-stamp"
 					alt="shrugging eldritch beast"
 					data-img-src="https://mikaorangeart.neocities.org/" />
+				<span class="img-caption">
+					<a class="src"
+						href="https://mikaorangeart.neocities.org/">{{ page.src }}</a>
+				</span>
 			</li>
 			<li>
 				<img src="/stadt/assets/images/stamps/bliss.png" class="img-stamp"
 					alt="xp bliss stamp w/ vhs effect and text 'rew'"
 					data-img-src="~zeus" />
+				<span class="img-caption">
+					<a class="src z"
+						href="//zeusofthecrows.github.io/stadt/assets/images/stamps/bliss.ase">{{ page.src }}</a>
+				</span>
 			</li>
 			<li>
 				<img src="/stadt/assets/images/stamps/cadle.png" class="img-stamp"
 					alt="james cadle's flag of earth"
 					data-img-insp="http://flagofearth.org/" />
+				<span class="img-caption">
+					<a class="src z"
+						href="//zeusofthecrows.github.io/stadt/assets/images/stamps/cadle.ase">{{ page.src }}</a>
+					{{ page.sep }}
+					<a class="i" href="http://flagofearth.org/">{{ page.insp }}</a>
+				</span>
 			</li>
 			<li>
 				<img src="/stadt/assets/images/stamps/cassettes.png" class="img-stamp"
 					alt="flashing various colours of cassette tapes"
 					data-img-src="https://scifirenegade.neocities.org/about/graphs2.html" />
+				<span class="img-caption">
+					<a class="src"
+						href="https://scifirenegade.neocities.org/about/graphs2.html">{{ page.src }}</a>
+				</span>
 			</li>
 			<li>
 				<img src="/stadt/assets/images/stamps/cat-bw.png" class="img-stamp"
 					alt="line drawing of a cat"
 					data-img-src="https://scifirenegade.neocities.org/about/graphs2.html" />
+				<span class="img-caption">
+					<a class="src"
+						href="https://scifirenegade.neocities.org/about/graphs2.html">{{ page.src }}</a>
+				</span>
 			</li>
 			<li>
 				<img src="/stadt/assets/images/stamps/crts.png" class="img-stamp"
 					alt="photo of two crt monitors"
 					data-img-src="https://scifirenegade.neocities.org/about/graphs2.html" />
+				<span class="img-caption">
+					<a class="src"
+						href="https://scifirenegade.neocities.org/about/graphs2.html">{{ page.src }}</a>
+				</span>
 			</li>
 			<li>
 				<img src="/stadt/assets/images/stamps/dvd.png" class="img-stamp"
-					alt="moving dvd logo"
-					data-img-src="~zeus" />
+					alt="moving dvd logo" data-img-src="~zeus" />
+				<span class="img-caption">
+					<a class="src z"
+						href="//zeusofthecrows.github.io/stadt/assets/images/stamps/dvd.ase">{{ page.src }}</a>
+				</span>
 			</li>
 			<li>
 				<img src="/stadt/assets/images/stamps/gameboy.png" class="img-stamp"
 					alt="gameboy advance intro"
 					data-img-src="https://scifirenegade.neocities.org/about/graphs2.html" />
+				<span class="img-caption">
+					<a class="src"
+						href="https://scifirenegade.neocities.org/about/graphs2.html">{{ page.src }}</a>
+				</span>
 			</li>
 			<li>
 				<img src="/stadt/assets/images/stamps/html.png" class="img-stamp"
 					alt="photo of html markup"
 					data-img-src="https://scifirenegade.neocities.org/about/graphs2.html" />
+				<span class="img-caption">
+					<a class="src"
+						href="https://scifirenegade.neocities.org/about/graphs2.html">{{ page.src }}</a>
+				</span>
 			</li>
 			<li>
 				<img src="/stadt/assets/images/stamps/mars-u.png" class="img-stamp"
 					alt="mars united [art deco]"
 					data-img-insp="https://blog.signalnoise.com/marsunited-prints-by-andy-rohr/" />
+				<span class="img-caption">
+					<a class="src z"
+						href="//zeusofthecrows.github.io/stadt/assets/images/stamps/mars.ase">{{ page.src }}</a>
+					{{ page.sep }}
+					<a class="i" href="https://blog.signalnoise.com/marsunited-prints-by-andy-rohr/">{{ page.insp }}</a>
+				</span>
 			</li>
 			<li>
 				<img src="/stadt/assets/images/stamps/rad.png" class="img-stamp"
 					alt="totally rad"
 					data-img-src="https://scifirenegade.neocities.org/about/graphs2.html" />
+				<span class="img-caption">
+					<a class="src"
+						href="https://scifirenegade.neocities.org/about/graphs2.html">{{ page.src }}</a>
+				</span>
 			</li>
 			<li>
 				<img src="/stadt/assets/images/stamps/scp.png" class="img-stamp"
 					alt="SCP. secure. contain. protect."
 					data-img-src="https://mikaorangeart.neocities.org/" />
+				<span class="img-caption">
+					<a class="src"
+						href="https://mikaorangeart.neocities.org/">{{ page.src }}</a>
+				</span>
 			</li>
 			<li>
 				<img src="/stadt/assets/images/stamps/steampunk.png" class="img-stamp"
 					alt="i love steampunk"
 					data-img-src="https://mikaorangeart.neocities.org/" />
+				<span class="img-caption">
+					<a class="src"
+						href="https://mikaorangeart.neocities.org/">{{ page.src }}</a>
+				</span>
 			</li>
 			<li>
 				<img src="/stadt/assets/images/stamps/upgrade.png" class="img-stamp"
 					alt="various iterations of windows, crashing after win11"
 					data-img-src="~zeus" />
+				<span class="img-caption">
+					<a class="src z"
+						href="//zeusofthecrows.github.io/stadt/assets/images/stamps/upgrade.ase">{{ page.src }}</a>
+				</span>
 			</li>
 			<li>
 				<img src="/stadt/assets/images/stamps/vortex.png" class="img-stamp"
 					alt="ipod game 'vortex'"
 					data-img-insp="https://en.wikipedia.org/wiki/Vortex_(iPod_game)"
 					data-img-src="~zeus" />
+				<span class="img-caption">
+					<a class="src z"
+						href="//zeusofthecrows.github.io/stadt/assets/images/stamps/cadle.ase">{{ page.src }}</a>
+					{{ page.sep }}
+					<a class="i" href="https://en.wikipedia.org/wiki/Vortex_(iPod_game)">{{ page.insp }}</a>
+				</span>
 			</li>
 		</ul>
 		<h3>Other</h3>
@@ -558,11 +836,19 @@ window_icon: gallery.png
 				<img src="/stadt/assets/images/stamps/hermit-purple.png" class="img-stamp"
 					alt="jojo's bizarre adventure"
 					data-img-src="https://www.deviantart.com/king-lulu-deer/gallery/63911215/tv-and-gameboy-stamps" />
+				<span class="img-caption">
+					<a class="src v"
+						href="https://www.deviantart.com/king-lulu-deer/gallery/63911215/tv-and-gameboy-stamps">{{ page.src }}</a>
+				</span>
 			</li>
 			<li>
 				<img src="/stadt/assets/images/stamps/little-nightmares.png" class="img-stamp"
 					alt="little nightmares"
 					data-img-src="https://www.deviantart.com/king-lulu-deer/gallery/63911215/tv-and-gameboy-stamps" />
+				<span class="img-caption">
+					<a class="src v"
+						href="https://www.deviantart.com/king-lulu-deer/gallery/63911215/tv-and-gameboy-stamps">{{ page.src }}</a>
+				</span>
 			</li>
 	</div>
 </div>

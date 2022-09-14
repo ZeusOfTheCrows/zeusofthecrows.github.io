@@ -445,7 +445,7 @@ code {
 	text-align: center;
 
 	& li {
-		display: inline;
+		display: inline-block;
 		& a {
 			text-decoration: none;
 		}
