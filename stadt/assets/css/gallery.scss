@@ -4,84 +4,11 @@
 :root {
 	scroll-behavior: smooth;
 	scroll-padding-top: 10vh;
-	// can't get it to revert for the windows
-	// scrollbar-color: var(--d-blu) var(--d-ppl) !important;
 }
-
-
-.img-grid {  // ztodo comments
-	& .img-caption {
-		opacity: 0;
-	}
-	& li:hover .img-caption {
-		opacity: 1;
-	}
-	& a:any-link {
-		text-decoration: underline dotted currentColor 2px;
-	}
-	& a.v:any-link {  // verified original source
-		color: var(--s-grn);
-	}
-	& a.z {  // verified original source
-		color: var(--s-org);
-		position: relative;
-
-		&::after {
-			content: "Ɀ";
-			transition: opacity 0.3s ease-in-out;
-			opacity: 0;
-			position: absolute;
-			left: 0;
-			background-color: var(--d-org);
-			background-image: linear-gradient(var(--s-org), var(--d-org));
-			color: var(--bgd-0);
-			border-radius: 2px;
-			padding-inline: 1ch;
-		}
-		&:hover::after {
-			opacity: 1;
-		}
-	}
-	& a.i {  // design inspiration
-		color: var(--s-aqa);
-	}
-	& a.u {  // unknown source (legacy)
-		color: var(--s-red);
-	}
-	& img {
-		display: block;
-	}
-}
-
-// .img-grid li {
-	// display: inline-block;
-// }
-
 
 #desktop-area {
-
 	background-image:
-		linear-gradient(to bottom right, var(--d-blu), var(--d-ppl)); //, var(--d-red), var(--d-org), var(--d-ylw));
-
-	/*
-	background-image:
-		url("/stadt/assets/images/backgrounds/palmtreesblack.png");
-
-		// i don't really like duplicated media queries, but i don't see another way
-		@media (prefers-color-scheme: light) {
-			background-image:
-			url("/stadt/assets/images/backgrounds/palmtreespink.png");
-		}
-	*/
-
-		//!\ remember to do this with background images
-		// & .desktop-icons-flex-container {
-			// margin: 32px;
-			// padding: 16px;
-			// background-color: var(--bgd-0);
-			// border-radius: 8px;
-		// }
-
+		linear-gradient(to bottom right, var(--d-blu), var(--d-grn)); //, var(--d-red), var(--d-org), var(--d-ylw));
 }
 
 .window-content {
@@ -95,8 +22,59 @@
 		padding: 16px;
 		height: 90%;
 		overflow-y: scroll;  // add dummy scrollbar for notepad æsthetic
-		// i thought this was a good idea, but actually it's annoying
-		// overscroll-behavior: contain;
+
+		& .img-grid {  // caption is centred due to img-grid being centred
+			& li {
+			 	padding-inline: 2px;
+			}
+			& img {
+				display: block;  // force caption to display on next line
+			}
+			& .img-caption {  // hide caption by default
+				transition: opacity 0.1s ease-in-out;
+				opacity: 0;
+			}
+			& li:hover .img-caption {  // but show it on hover
+				opacity: 1;
+			}
+
+			& a:any-link {
+				text-decoration: underline dotted currentColor 2px;
+			}
+			& a.src {  // unverified source
+				color: var(--s-ylw);
+			}
+			& a.v:any-link {  // verified original source
+				color: var(--s-grn);
+			}
+			& a.i {  // design inspiration
+				color: var(--s-aqa);
+			}
+			& a.u {  // unknown source (legacy)
+				color: var(--s-red);
+			}
+			& a.z {  // ~zeus (made by me)
+				color: var(--s-org);
+
+				// this is all for the "Ɀ" on hover (maybe bin):
+				position: relative;
+				&::after {
+					content: "Ɀ";
+					transition: opacity 0.3s ease-in-out;
+					opacity: 0;
+					position: absolute;
+					left: 0;
+					background-color: var(--d-org);
+					background-image: linear-gradient(var(--s-org), var(--d-org));
+					color: var(--bgd-0);
+					border-radius: 2px;
+					padding-inline: 1ch;
+				}
+				&:hover::after {
+					opacity: 1;
+				}
+			}
+		}
 
 		& p {
 			line-height: 1.5em;
@@ -137,6 +115,9 @@
 
 	// width: 704px;
 	max-height: 640px;
+	& .window-titlebar {
+		background: linear-gradient(90deg, var(--d-org), var(--d-red));
+	}
 }
 
 p {
@@ -160,28 +141,18 @@ p {
 
 /* ------------------------------ decorations ------------------------------ */
 
-dl {
-	& dd {
-		line-height: initial;  // i'm not sure this is best practice - maybe just 1
-	}
-}
+// :where(ul, ol, dl, p) + :where(h2, h3) {
+	// background: none;
+	// border: 0;
+	// margin: 0.5em 0;
+	// padding: 0;
 
-// blockquote::before {
-		// top: 0.3em;  // why is this so different?
+//	 &::before {
+//		 content: "🙡 ✠ ✠ ✠ 🙣";
+//		 color: var(--s-grn);
+//		font-size: 1rem;
+//		display: block;
+//		line-height: 1;
+//		text-align: center;
+//	}
 // }
-
-hr {
-	background: none;
-	border: 0;
-	margin: 0.5em 0;
-	padding: 0;
-
-	&::after {
-		content: "☙ ⁂ ❧";
-		// content: "🙡 ⁂ 🙣";  // alt
-		color: var(--s-grn);
-		display: block;
-		line-height: 1;
-		text-align: center;
-	}
-}
