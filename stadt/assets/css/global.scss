@@ -453,7 +453,7 @@ code {
 
 	& img {
 		display: inline;
-		margin: 0px 1px;
+		margin: 2px 1px;
 		vertical-align: middle;
 	}
 }
@@ -492,7 +492,7 @@ code {
 .indent-9x,
 textarea {
 	margin: 0;
-	background-color: var(--bgd-1);
+	background-color: var(--indent-col, var(--bgd-1));
 	border-width: 2px;
 	border-style: solid;
 	border-top-color:    var(--btn-lolite);

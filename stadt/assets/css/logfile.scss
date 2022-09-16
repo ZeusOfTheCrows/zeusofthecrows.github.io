@@ -1,6 +1,11 @@
 ---
 ---
 
+:root {
+	scroll-behavior: smooth;
+	scroll-padding-top: 10vh;
+}
+
 #main-content {
 	padding: 24px;
 	overflow-y: scroll;
