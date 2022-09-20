@@ -2,8 +2,66 @@
 ---
 
 :root {
-	scroll-behavior: smooth;
-	scroll-padding-top: 10vh;
+	/* colour scheme: sun solaris 8 */
+	/* http://toastytech.com/guis/sol.html */
+
+	/* universal colours */
+	--d-red: #840000;
+	--d-grn: #2d9029;
+	--d-ylw: #848400;
+	--d-blu: #5252ff;
+	--d-ppl: #901090;
+	--d-aqa: #008484;
+	--d-org: #844200;
+
+	/* dark mode colours */
+	--bgd-0: #29294a;
+	--bgd-1: #522139;
+	--bgd-2: #524a8c;
+	--bgd-3: #b54a7b;
+	--bgd-4: #b5b5d6;
+	--bgd-5: #deadc6;
+	--txt-4: #000000;
+	--txt-3: #5a636b;
+	--txt-2: #adb5c6;
+	--txt-1: #dedee7;
+	--txt-0: #ffffff;
+	--s-red: #ff1042;
+	--s-grn: #39ff31;
+	--s-ylw: #ffff00;
+	--s-blu: #9898ee;
+	--s-ppl: #ff00ff;
+	--s-aqa: #00ffff;
+	--s-org: #ff8721;
+	--btn-hilite: var(--bgd-4);
+	--btn-lolite: var(--bgd-0);
+	--indent-col: var(--bgd-0);
+}
+
+/* light mode colours */
+@media (prefers-color-scheme: light) {
+	:root {
+		--bgd-0: #21222c;
+		--bgd-1: #282a36;
+		--bgd-2: #383a59;
+		--bgd-3: #44475a;
+		--bgd-4: #6272a4;
+		--bgd-5: #6272a4;
+		--txt-4: #6272a4;
+		--txt-3: #6272a4;
+		--txt-2: #f8f8f2;
+		--txt-1: #f8f8f2;
+		--txt-0: #ffffff;
+		--s-red: #ff6e6e;
+		--s-grn: #69ff94;
+		--s-ylw: #ffffa5;
+		--s-blu: #d6acff;
+		--s-ppl: #ff92df;
+		--s-aqa: #a4ffff;
+		--s-org: #d8d890;
+		--btn-hilite: var(--bgd-4);
+		--btn-lolite: var(--bgd-0);
+	}
 }
 
 #main-content {

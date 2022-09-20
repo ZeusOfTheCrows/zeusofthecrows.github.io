@@ -43,6 +43,9 @@
 
 /* variables */
 :root {
+	scroll-behavior: smooth;
+	scroll-padding-top: 10vh;
+
 	--fnt-serif:	"Garamond", "Times New Roman", serif;
 	--fnt-sans: 	"Fira Sans", Helvetica, Arial, sans-serif;
 	--fnt-mono: 	"Fira Mono", monospace;

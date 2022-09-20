@@ -1,10 +1,6 @@
 ---
 ---
 /* -------------------------------- windows -------------------------------- */
-:root {
-	scroll-behavior: smooth;
-	scroll-padding-top: 10vh;
-}
 
 #desktop-area {
 	background-image:
@@ -12,20 +8,13 @@
 }
 
 .window-content {
-		font-family: var(--fnt-sans);
-		// initial-letter: 2;  // soon
-		//may be nice for larger screens, but not quite yet
-		// font-family: garamond, sans-serif;
-		// font-size: 1.2em;
-		display: revert;  // otherwise blockquotes are hidden - bug?
-
 		padding: 16px;
 		height: 90%;
 		overflow-y: scroll;  // add dummy scrollbar for notepad æsthetic
 
 		& .img-grid {  // caption is centred due to img-grid being centred
 			& li {
-			 	padding-inline: 2px;
+				padding-inline: 2px;
 			}
 			& img {
 				display: block;  // force caption to display on next line
@@ -52,6 +41,9 @@
 			}
 			& a.u {  // unknown source (legacy)
 				color: var(--s-red);
+				&::after {
+					content: " [?]";
+				}
 			}
 			& a.z {  // ~zeus (made by me)
 				color: var(--s-org);
