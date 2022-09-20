@@ -12,7 +12,11 @@
 		height: 90%;
 		overflow-y: scroll;  // add dummy scrollbar for notepad æsthetic
 
-		& .img-grid {  // caption is centred due to img-grid being centred
+		& .img-grid.hover-zoom {
+			padding-inline: 16px;
+		}
+
+		& .img-grid.img-capts {  // caption is centred due to img-grid being centred
 			& li {
 				padding-inline: 2px;
 			}
@@ -49,22 +53,23 @@
 				color: var(--s-org);
 
 				// this is all for the "Ɀ" on hover (maybe bin):
-				position: relative;
-				&::after {
-					content: "Ɀ";
-					transition: opacity 0.3s ease-in-out;
-					opacity: 0;
-					position: absolute;
-					left: 0;
-					background-color: var(--d-org);
-					background-image: linear-gradient(var(--s-org), var(--d-org));
-					color: var(--bgd-0);
-					border-radius: 2px;
-					padding-inline: 1ch;
-				}
-				&:hover::after {
-					opacity: 1;
-				}
+				// update: relative breaks zindex, and it doesn't work without
+				// position: relative;
+				// &::after {
+					// content: "Ɀ";
+					// transition: opacity 0.3s ease-in-out;
+					// opacity: 0;
+					// position: absolute;
+					// left: 0;
+					// background-color: var(--d-org);
+					// background-image: linear-gradient(var(--s-org), var(--d-org));
+					// color: var(--bgd-0);
+					// border-radius: 2px;
+					// padding-inline: 1ch;
+				// }
+				// &:hover::after {
+					// opacity: 1;
+				// }
 			}
 		}
 

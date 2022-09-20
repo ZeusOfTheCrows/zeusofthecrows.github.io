@@ -2,7 +2,7 @@
 layout: gc-default
 css-file: gallery
 title: Image Gallery
-edit_date: 2022-09-11
+edit_date: 2022-09-20
 programme:
 window_icon: gallery.png
 sep: " | "
@@ -50,6 +50,15 @@ ase: ase
 			i hope if i can start this as a trend then it'll be easier to find the
 			original creator
 		</p>
+		<hr />
+		<p>
+			useful tool: a javascript bookmarklet for toggling pixelated and bilinear
+			("smooth") image rendering when viewing a single image in a browser:
+		</p>
+		<strong id="bookmarklet" style="text-align: center; font-size: 3em;">
+			<a href="javascript:(function(){img=document.getElementsByTagName('img')[0];img.style.setProperty('transform','scale(2)','important');if(getComputedStyle(img).getPropertyValue('image-rendering')=='pixelated'){img.style.setProperty('image-rendering','auto');}else{img.style.setProperty('image-rendering','pixelated');};})();">Pix</a>
+		</strong>
+		<hr />
 		<p>
 			none of these are lazy loading, so if you're on a data/metered plan you
 			should probably click away now
@@ -88,7 +97,7 @@ ase: ase
 			<li>
 				<a href="https://realsast.ga/buttons/">
 					<img src="/stadt/assets/images/buttons/bookmarks/buttons/realgast.png"
-						alt="simon's buttons"
+						alt="simon's buttons" class="btn-88x31 smooth-zoom"
 						title="original 90s style buttons"/>
 				</a>
 				<span class="img-caption">simon</span>
@@ -96,7 +105,7 @@ ase: ase
 			<li>
 				<a href="https://exo.pet#buttonzone">
 					<img src="/stadt/assets/images/buttons/bookmarks/buttons/exo.png"
-						alt="exo.pet"
+						alt="exo.pet" class="btn-88x31"
 						title="quite large compiled collection of nice buttons" />
 				</a>
 				<span class="img-caption">exo.pet</span>
@@ -104,7 +113,7 @@ ase: ase
 			<li>
 				<a href="https://88by31.neocities.org/">
 					<img src="/stadt/assets/images/buttons/bookmarks/buttons/88by31.png"
-						alt="88by31"
+						alt="88by31" class="btn-88x31"
 						title="separated by category (i like the games section)" />
 				</a>
 				<span class="img-caption">88by31</span>
@@ -112,7 +121,7 @@ ase: ase
 			<li>
 				<a href="https://roly.neocities.org/v8/88x31s/index.html">
 					<img src="/stadt/assets/images/buttons/bookmarks/buttons/roly.png"
-						alt="roly"
+						alt="roly" class="btn-88x31"
 						title="dead (not archived?), but kitecreature has fewer buttons" />
 				</a>
 				<span class="img-caption">roly (dead)</span>
@@ -120,7 +129,7 @@ ase: ase
 			<li>
 				<a href="https://kitecreature.net/buttons/">
 					<img src="/stadt/assets/images/buttons/bookmarks/buttons/kitecreature.png"
-						alt="kitecreature.net"
+						alt="kitecreature.net" class="btn-88x31"
 						title="assorted, in a tiny box" />
 				</a>
 				<span class="img-caption">kitecreature</span>
@@ -129,7 +138,7 @@ ase: ase
 			<li>
 				<a href="https://cyber.dabamos.de/88x31/">
 					<img src="/stadt/assets/images/buttons/bookmarks/missingno.png"
-						alt="cyber.dabamos.de"
+						alt="cyber.dabamos.de" class="btn-88x31"
 						title="biggest collection on this list, i think" />
 				</a>
 				<span class="img-caption">cyber</span>
@@ -137,7 +146,7 @@ ase: ase
 			<li>
 				<a href="https://anlucas.neocities.org/88x31Buttons.html">
 					<img src="/stadt/assets/images/buttons/bookmarks/missingno.png"
-					alt="anlucas"
+					alt="anlucas" class="btn-88x31"
 					title="and the second biggest collection" />
 				</a>
 				<span class="img-caption">a.n. lucas</span>
@@ -145,7 +154,7 @@ ase: ase
 			<li>
 				<a href="https://web.archive.org/web/19990129040545/http://www.geocities.com/NapaValley/2022/88x31.html">
 					<img src="/stadt/assets/images/buttons/bookmarks/buttons/chaz8831.png"
-						alt="chaz 'hazel'"
+						alt="chaz 'hazel'" class="btn-88x31 smooth-zoom"
 						title="categorised collection from 1997" />
 				</a>
 				<span class="img-caption">chaz "hazel"</span>
@@ -153,7 +162,7 @@ ase: ase
 			<li>
 				<a href="https://neonaut.neocities.org/cyber/88x31.html">
 					<img src="/stadt/assets/images/buttons/bookmarks/neonaut.png"
-						alt="neonaut"
+						alt="neonaut" class="btn-88x31"
 						title="personal sites" />
 				</a>
 				<span class="img-caption">neonaut</span>
@@ -161,7 +170,7 @@ ase: ase
 			<li>
 				<a href="https://web.archive.org/web/20010223235826/http://www.elnet.com/~drealbob/rw/antibutton/">
 					<img src="/stadt/assets/images/buttons/bookmarks/buttons/nobut.png"
-						alt="the anti-button campaign"
+						alt="the anti-button campaign" class="btn-88x31 smooth-zoom"
 						title="oddly named, but sizeable collection" />
 				</a>
 				<span class="img-caption">anti-button</span>
@@ -169,6 +178,7 @@ ase: ase
 			<li>
 				<a href="http://www.hoary.org/now/index.html">
 					<img src="/stadt/assets/images/buttons/bookmarks/buttons/hoaryape.png"
+						alt="hoary ape"  class="btn-88x31 smooth-zoom"
 						title="mainly netscape and parodies, 4th page is other brands" />
 				</a>
 				<span class="img-caption">hoary ape</span>
@@ -183,7 +193,8 @@ ase: ase
 		<ul class="img-grid hover-zoom img-capts">
 			<li>
 				<a>
-					<img src="/stadt/assets/images/buttons/page-info/1080.png" class="btn-88x31"
+					<img src="/stadt/assets/images/buttons/page-info/1080.png"
+						class="btn-88x31 smooth-zoom"
 						alt="best viewed 1920×1080 fullHD button"
 						data-img-src="unknown" />
 				</a>
@@ -193,7 +204,8 @@ ase: ase
 			</li>
 			<li>
 				<a href="https://en.wikipedia.org/wiki/Year_2038_problem">
-					<img src="/stadt/assets/images/buttons/taskbar/2038.png" class="btn-88x31"
+					<img src="/stadt/assets/images/buttons/taskbar/2038.png"
+						class="btn-88x31 smooth-zoom"
 						alt="are you ready? year 2038 button" title="the epochalypse is coming"
 						data-img-src="unknown" />
 				</a>
@@ -201,7 +213,8 @@ ase: ase
 			</li>
 			<li>
 				<a href="http://www.libpng.org/pub/png/">
-					<img src="/stadt/assets/images/buttons/brands/apng.png" class="btn-88x31"
+					<img src="/stadt/assets/images/buttons/brands/apng.png"
+						class="btn-88x31"
 						alt="[animated] png now button"
 						data-img-insp="http://www.libpng.org/pub/png/" data-img-src="~zeus" />
 				</a>
@@ -252,6 +265,18 @@ ase: ase
 				</span>
 			</li>
 			<li>
+				<a>
+					<img src="/stadt/assets/images/buttons/taskbar/code-run.png" class="btn-88x31"
+						alt="pro- code & run" title="just try to stop me"
+						data-img-src="https://anlucas.neocities.org/" />
+				</a>
+				<span class="img-caption">
+					<a class="src v" href="https://anlucas.neocities.org/">{{ page.src }}</a>
+					{{ page.sep }}
+					<a class="i" href="hthttps://ikewise.neocities.org/2018-05-19_-_return.htm">{{ page.insp }}</a>
+				</span>
+			</li>
+			<li>
 				<a href="https://colemak.org/">
 					<img src="/stadt/assets/images/buttons/taskbar/colemak.png" class="btn-88x31"
 						alt="i use colemak (wide) button" data-img-src="~zeus" />
@@ -281,7 +306,8 @@ ase: ase
 			</li>
 			<li>
 				<a>
-					<img src="/stadt/assets/images/buttons/brands/email.png" class="btn-88x31"
+					<img src="/stadt/assets/images/buttons/brands/email.png"
+						class="btn-88x31 smooth-zoom"
 						alt="animated email button"
 						data-img-source="~zeus" />
 				</a>
@@ -291,7 +317,8 @@ ase: ase
 			</li>
 			<li>
 				<a>
-					<img src="/stadt/assets/images/buttons/brands/email-bm.png" class="btn-88x31"
+					<img src="/stadt/assets/images/buttons/brands/email-bm.png"
+						class="btn-88x31 smooth-zoom"
 						alt="email button"
 						data-img-source="https://bytemoth.neocities.org/88s/" />
 				</a>
@@ -301,7 +328,8 @@ ase: ase
 			</li>
 			<li>
 				<a>
-					<img src="/stadt/assets/images/buttons/other/jack.png" class="btn-88x31"
+					<img src="/stadt/assets/images/buttons/other/jack.png"
+						class="btn-88x31 smooth-zoom"
 						alt="best heard through a 3.5mm jack button" data-img-src="unknown" />
 				</a>
 				<span class="img-caption">
@@ -315,7 +343,7 @@ ase: ase
 						data-img-src="~zeus" />
 				</a>
 				<span class="img-caption">
-					<a class="src z" href="/stadt/assets/images/buttons/brands/email.ase">{{ page.src }}</a>
+					<a class="src z" href="/stadt/assets/images/buttons/brands/javascript.ase">{{ page.src }}</a>
 				</span>
 			</li>
 			<li>
@@ -349,7 +377,8 @@ ase: ase
 			</li>
 			<li>
 				<a>
-					<img src="/stadt/assets/images/buttons/other/macintosh.png" class="btn-88x31"
+					<img src="/stadt/assets/images/buttons/other/macintosh.png"
+						class="btn-88x31 smooth-zoom"
 						alt="macintosh >128k is extravagant button"
 						title="it only says 'zeus' as i couldn't think of anything else,
 						feel free to remove it" />
@@ -399,7 +428,7 @@ ase: ase
 			</li>
 			<li>
 				<a href="https://web.archive.org/web/20080509082311/http://www.goldshell.com/pedit/pindex.htm">
-					<img src="/stadt/assets/images/buttons/other/pedit.png" class="btn-88x31"
+					<img src="/stadt/assets/images/buttons/other/pedit.png" class="btn-88x31 smooth-zoom"
 						data-img-src="unknown" alt="pedit: program editor button" />
 				</a>
 				<span class="img-caption">
@@ -408,8 +437,9 @@ ase: ase
 			</li>
 			<li>
 				<a href="/stadt/thoughts#piracy">
-					<img src="/stadt/assets/images/buttons/other/piracy.png" class="btn-88x31"
-						data-img-src=""
+					<img src="/stadt/assets/images/buttons/other/piracy.png"
+						class="btn-88x31 smooth-zoom"
+						data-img-src="https://kangworlds.neocities.org/"
 						alt="piracy now - free button" />
 				</a>
 				<span class="img-caption">
@@ -452,7 +482,8 @@ ase: ase
 			</li>
 			<li>
 				<a>
-					<img src="/stadt/assets/images/buttons/other/rewind.png" class="btn-88x31"
+					<img src="/stadt/assets/images/buttons/other/rewind.png"
+						class="btn-88x31 smooth-zoom"
 						data-img-src="~zeus"
 						alt="windows xp vhs rewind button" title="also available in stamp form" />
 				</a>
@@ -493,7 +524,8 @@ ase: ase
 			</li>
 			<li>
 				<a href="http://svencoop.com/">
-					<img src="/stadt/assets/images/buttons/taskbar/sven-coop.png" class="btn-88x31"
+					<img src="/stadt/assets/images/buttons/taskbar/sven-coop.png"
+						class="btn-88x31 smooth-zoom"
 						data-img-src="http://svencoop.com/"
 						alt="sven coop button" />
 				</a>
@@ -563,7 +595,8 @@ ase: ase
 			</li>
 			<li>
 				<a href="http://web3.14159.annwfn.net/">
-					<img src="/stadt/assets/images/buttons/taskbar/web-pi.png" class="btn-88x31"
+					<img src="/stadt/assets/images/buttons/taskbar/web-pi.png"
+						class="btn-88x31 smooth-zoom"
 						data-img-src="http://web3.14159.annwfn.net/"
 						alt="web π certified" />
 				</a>
@@ -574,7 +607,7 @@ ase: ase
 			</li>
 		</ul>
 		<h3>Brands</h3>
-		<ul class="img-grid">
+		<ul class="img-grid hover-zoom img-capts">
 			<li>
 				<a href="http://apngasm.sourceforge.net/">
 					<img src="/stadt/assets/images/buttons/brands/apngasm.png" class="btn-88x31"
@@ -610,7 +643,8 @@ ase: ase
 			</li>
 			<li>
 				<a href="https://www.mozilla.org/en-GB/firefox/">
-					<img src="/stadt/assets/images/buttons/brands/chromium.png" class="btn-88x31"
+					<img src="/stadt/assets/images/buttons/brands/chromium.png"
+						class="btn-88x31 smooth-zoom"
 						alt="ie/chrome/brave logos captioned 'same shit, different arsehole'"
 						data-img-src="~zeus" />
 				</a>
@@ -630,7 +664,8 @@ ase: ase
 			</li>
 			<li>
 				<a href="https://www.mozilla.org/en-GB/firefox/new/">
-					<img src="/stadt/assets/images/buttons/brands/firefox.png" class="btn-88x31"
+					<img src="/stadt/assets/images/buttons/brands/firefox.png"
+						class="btn-88x31 smooth-zoom"
 						alt="mozilla now button"
 						data-img-src="unknown" />
 				</a>
@@ -640,7 +675,8 @@ ase: ase
 			</li>
 			<li>
 				<a href="https://pages.github.com/">
-					<img src="/stadt/assets/images/buttons/brands/gh-pages.png" class="btn-88x31"
+					<img src="/stadt/assets/images/buttons/brands/gh-pages.png"
+						class="btn-88x31 smooth-zoom"
 						alt="microsoft frontpage style button, saying 'GithubPages'"
 						data-img-src="unknown" />
 				</a>
@@ -653,7 +689,8 @@ ase: ase
 			</li>
 			<li>
 				<a href="https://www.gimp.org/">
-					<img src="/stadt/assets/images/buttons/brands/gimp.png" class="btn-88x31"
+					<img src="/stadt/assets/images/buttons/brands/gimp.png"
+						class="btn-88x31 smooth-zoom"
 						alt="graphics by gimp button"
 						data-img-src="unknown" />
 				</a>
@@ -663,7 +700,8 @@ ase: ase
 			</li>
 			<li>
 				<a href="https://www.irfanview.com/">
-					<img src="/stadt/assets/images/buttons/brands/irfanview.png" class="btn-88x31"
+					<img src="/stadt/assets/images/buttons/brands/irfanview.png"
+						class="btn-88x31 smooth-zoom"
 						alt="irfanview image viewer button"
 						data-img-src="unknown" />
 				</a>
@@ -706,12 +744,15 @@ ase: ase
 			</li>
 			<li>
 				<a href="https://store.steampowered.com/uiupdate/">
-					<img src="/stadt/assets/images/buttons/brands/steam.png" class="btn-88x31"
+					<img src="/stadt/assets/images/buttons/brands/steam.png"
+						class="btn-88x31 smooth-zoom"
 						alt="play with steam button"
-						data-img-src="unknown" />
+						data-img-insp="unknown" />
 				</a>
 				<span class="img-caption">
-					<a class="src u">{{ page.src }}</a>
+					<a class="src z" href="/stadt/assets/images/buttons/taskbar/zeus-steam.ase">{{ page.src }}</a>
+					{{ page.sep }}
+					<a class="i" href="/stadt/assets/images/buttons/brands/steam-old.png">{{ page.insp }}</a>
 				</span>
 			</li>
 			<li>
@@ -729,7 +770,8 @@ ase: ase
 			</li>
 			<li>
 				<a href="https://dosbox-x.com/wiki/Guide%3AInstalling-Windows-98">
-					<img src="/stadt/assets/images/buttons/brands/win98.png" class="btn-88x31"
+					<img src="/stadt/assets/images/buttons/brands/win98.png"
+						class="btn-88x31 smooth-zoom"
 						alt="made with windows 98 button"
 						data-img-src="unknown" />
 				</a>
@@ -739,7 +781,7 @@ ase: ase
 			</li>
 		</ul>
 		<h2>Other</h2>
-		<ul class="img-grid">
+		<ul class="img-grid hover-zoom img-capts">
 			<li>
 				<a href="http://www.libpng.org/pub/png/">
 					<img src="/stadt/assets/images/buttons/brands/apng-wide.png"
@@ -802,9 +844,9 @@ ase: ase
 			standard, i think
 		</p>
 		<h3>99×56</h3>
-		<ul class="img-grid">
+		<ul class="img-grid hover-zoom img-capts">
 			<li>
-				<img src="/stadt/assets/images/stamps/beastshrug.png" class="img-stamp"
+				<img src="/stadt/assets/images/stamps/beastshrug.png" class="stamp-99x56 smooth-zoom"
 					alt="shrugging eldritch beast"
 					data-img-src="https://mikaorangeart.neocities.org/" />
 				<span class="img-caption">
@@ -813,7 +855,7 @@ ase: ase
 				</span>
 			</li>
 			<li>
-				<img src="/stadt/assets/images/stamps/bliss.png" class="img-stamp"
+				<img src="/stadt/assets/images/stamps/bliss.png" class="stamp-99x56 smooth-zoom"
 					alt="xp bliss stamp w/ vhs effect and text 'rew'"
 					data-img-src="~zeus" />
 				<span class="img-caption">
@@ -822,7 +864,7 @@ ase: ase
 				</span>
 			</li>
 			<li>
-				<img src="/stadt/assets/images/stamps/cadle.png" class="img-stamp"
+				<img src="/stadt/assets/images/stamps/cadle.png" class="stamp-99x56"
 					alt="james cadle's flag of earth"
 					data-img-insp="http://flagofearth.org/" />
 				<span class="img-caption">
@@ -833,7 +875,7 @@ ase: ase
 				</span>
 			</li>
 			<li>
-				<img src="/stadt/assets/images/stamps/cassettes.png" class="img-stamp"
+				<img src="/stadt/assets/images/stamps/cassettes.png" class="stamp-99x56 smooth-zoom"
 					alt="flashing various colours of cassette tapes"
 					data-img-src="https://scifirenegade.neocities.org/about/graphs2.html" />
 				<span class="img-caption">
@@ -842,7 +884,7 @@ ase: ase
 				</span>
 			</li>
 			<li>
-				<img src="/stadt/assets/images/stamps/cat-bw.png" class="img-stamp"
+				<img src="/stadt/assets/images/stamps/cat-bw.png" class="stamp-99x56 smooth-zoom"
 					alt="line drawing of a cat"
 					data-img-src="https://scifirenegade.neocities.org/about/graphs2.html" />
 				<span class="img-caption">
@@ -851,7 +893,7 @@ ase: ase
 				</span>
 			</li>
 			<li>
-				<img src="/stadt/assets/images/stamps/crts.png" class="img-stamp"
+				<img src="/stadt/assets/images/stamps/crts.png" class="stamp-99x56 smooth-zoom"
 					alt="photo of two crt monitors"
 					data-img-src="https://scifirenegade.neocities.org/about/graphs2.html" />
 				<span class="img-caption">
@@ -860,7 +902,7 @@ ase: ase
 				</span>
 			</li>
 			<li>
-				<img src="/stadt/assets/images/stamps/dvd.png" class="img-stamp"
+				<img src="/stadt/assets/images/stamps/dvd.png" class="stamp-99x56"
 					alt="moving dvd logo" data-img-src="~zeus" />
 				<span class="img-caption">
 					<a class="src z"
@@ -868,7 +910,7 @@ ase: ase
 				</span>
 			</li>
 			<li>
-				<img src="/stadt/assets/images/stamps/gameboy.png" class="img-stamp"
+				<img src="/stadt/assets/images/stamps/gameboy.png" class="stamp-99x56"
 					alt="gameboy advance intro"
 					data-img-src="https://scifirenegade.neocities.org/about/graphs2.html" />
 				<span class="img-caption">
@@ -877,7 +919,7 @@ ase: ase
 				</span>
 			</li>
 			<li>
-				<img src="/stadt/assets/images/stamps/html.png" class="img-stamp"
+				<img src="/stadt/assets/images/stamps/html.png" class="stamp-99x56 smooth-zoom"
 					alt="photo of html markup"
 					data-img-src="https://scifirenegade.neocities.org/about/graphs2.html" />
 				<span class="img-caption">
@@ -886,7 +928,7 @@ ase: ase
 				</span>
 			</li>
 			<li>
-				<img src="/stadt/assets/images/stamps/mars-u.png" class="img-stamp"
+				<img src="/stadt/assets/images/stamps/mars-u.png" class="stamp-99x56"
 					alt="mars united [art deco]"
 					data-img-insp="https://blog.signalnoise.com/marsunited-prints-by-andy-rohr/" />
 				<span class="img-caption">
@@ -897,7 +939,7 @@ ase: ase
 				</span>
 			</li>
 			<li>
-				<img src="/stadt/assets/images/stamps/rad.png" class="img-stamp"
+				<img src="/stadt/assets/images/stamps/rad.png" class="stamp-99x56 smooth-zoom"
 					alt="totally rad"
 					data-img-src="https://scifirenegade.neocities.org/about/graphs2.html" />
 				<span class="img-caption">
@@ -906,7 +948,7 @@ ase: ase
 				</span>
 			</li>
 			<li>
-				<img src="/stadt/assets/images/stamps/scp.png" class="img-stamp"
+				<img src="/stadt/assets/images/stamps/scp.png" class="stamp-99x56 smooth-zoom"
 					alt="SCP. secure. contain. protect."
 					data-img-src="https://mikaorangeart.neocities.org/" />
 				<span class="img-caption">
@@ -915,7 +957,7 @@ ase: ase
 				</span>
 			</li>
 			<li>
-				<img src="/stadt/assets/images/stamps/steampunk.png" class="img-stamp"
+				<img src="/stadt/assets/images/stamps/steampunk.png" class="stamp-99x56"
 					alt="i love steampunk"
 					data-img-src="https://mikaorangeart.neocities.org/" />
 				<span class="img-caption">
@@ -924,7 +966,7 @@ ase: ase
 				</span>
 			</li>
 			<li>
-				<img src="/stadt/assets/images/stamps/upgrade.png" class="img-stamp"
+				<img src="/stadt/assets/images/stamps/upgrade.png" class="stamp-99x56"
 					alt="various iterations of windows, crashing after win11"
 					data-img-src="~zeus" />
 				<span class="img-caption">
@@ -933,7 +975,7 @@ ase: ase
 				</span>
 			</li>
 			<li>
-				<img src="/stadt/assets/images/stamps/vortex.png" class="img-stamp"
+				<img src="/stadt/assets/images/stamps/vortex.png" class="stamp-99x56 smooth-zoom"
 					alt="ipod game 'vortex'"
 					data-img-insp="https://en.wikipedia.org/wiki/Vortex_(iPod_game)"
 					data-img-src="~zeus" />
@@ -946,9 +988,9 @@ ase: ase
 			</li>
 		</ul>
 		<h3>Other</h3>
-		<ul class="img-grid">
+		<ul class="img-grid hover-zoom img-capts">
 			<li>
-				<img src="/stadt/assets/images/stamps/hermit-purple.png" class="img-stamp"
+				<img src="/stadt/assets/images/stamps/hermit-purple.png" class="stamp-99x56"
 					alt="jojo's bizarre adventure"
 					data-img-src="https://www.deviantart.com/king-lulu-deer/gallery/63911215/tv-and-gameboy-stamps" />
 				<span class="img-caption">
@@ -957,7 +999,7 @@ ase: ase
 				</span>
 			</li>
 			<li>
-				<img src="/stadt/assets/images/stamps/little-nightmares.png" class="img-stamp"
+				<img src="/stadt/assets/images/stamps/little-nightmares.png" class="stamp-99x56"
 					alt="little nightmares"
 					data-img-src="https://www.deviantart.com/king-lulu-deer/gallery/63911215/tv-and-gameboy-stamps" />
 				<span class="img-caption">

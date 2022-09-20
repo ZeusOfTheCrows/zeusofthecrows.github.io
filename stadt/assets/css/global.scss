@@ -56,6 +56,10 @@
 	--tb-hite:  37px;  // taskbar height
 	--dt-padd: 128px;  //?\ desktop padding
 
+	/* colour scheme: gruvbox */
+	/* https://github.com/gruvbox-community/gruvbox */
+	/* https://www.reddit.com/r/gruvbox/ */
+
 	/* universal colours */
 	// --d-red: hsl(2,  	75.1%,	45.7%);
 	// --d-grn: hsl(60, 	70.8%,	34.9%);
@@ -427,6 +431,7 @@ code {
 .btn-176x31,
 .btn-80x15,
 .btn-150x15,
+.stamp-99x56,
 .tower,
 .pixel-art,
 .desktop-icon img,
@@ -437,6 +442,10 @@ code {
 	image-rendering: crisp-edges; /* unsure, filter e.g. hq2x */
 	/* so that button alt text can still be scrolled, but doesn't break layout */
 	overflow: auto;
+}
+
+img.smooth-zoom {
+	image-rendering: auto;
 }
 
 .img-grid {
@@ -460,6 +469,19 @@ code {
 		vertical-align: middle;
 	}
 }
+
+.img-grid.hover-zoom {
+	/* zoom/scale/grow on hover */
+	transition: 0.2s ease-in-out 0s;
+
+	& img:hover,
+	& img:focus,
+	& img:focus-within {
+		transform: scale(2);
+		transition: 0.2s ease-in-out 0.5s;
+	}
+}
+
 .btn-88x31 {
 	width:  88px;
 	height: 31px;

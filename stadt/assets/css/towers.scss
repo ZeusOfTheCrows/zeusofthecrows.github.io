@@ -3,6 +3,9 @@
 
 /* variables */
 :root {
+	/* colour scheme: dracula */
+	/* https://draculatheme.com/ */
+
 	/* universal colours */
 	--d-red: #ff5555;
 	--d-grn: #50fa7b;
@@ -211,6 +214,7 @@
 
 .tower {
 	/* grow rooms on hover */
+	// ztodo this is now in global.css
 	transition: 0.2s ease-in-out 0s;
 	&.room:hover,
 	&.room:focus,
