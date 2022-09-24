@@ -14,6 +14,7 @@
 
 		& .img-grid.hover-zoom {
 			padding-inline: 16px;
+			box-sizing: border-box;
 		}
 
 		& .img-grid.img-capts {  // caption is centred due to img-grid being centred
@@ -111,7 +112,7 @@
 	flex-direction: column;
 
 	// width: 704px;
-	max-height: 640px;
+	max-height: 960px;
 	& .window-titlebar {
 		background: linear-gradient(90deg, var(--d-org), var(--d-red));
 	}
