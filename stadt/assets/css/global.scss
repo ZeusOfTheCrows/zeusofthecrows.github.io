@@ -470,15 +470,15 @@ img.smooth-zoom {
 	}
 }
 
-.img-grid.hover-zoom {
+.img-grid.hover-zoom img {
 	/* zoom/scale/grow on hover */
 	transition: 0.2s ease-in-out 0s;
 
-	& img:hover,
-	& img:focus,
-	& img:focus-within {
+	&:hover,
+	&:focus,
+	&:focus-within {
 		transform: scale(2);
-		transition: 0.2s ease-in-out 0.5s;
+		transition-delay: 0.5s;  // delay to avoid over-eager images
 	}
 }
 
