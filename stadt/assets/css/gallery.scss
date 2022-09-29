@@ -11,6 +11,7 @@
 		padding: 16px;
 		height: 90%;
 		overflow-y: scroll;  // add dummy scrollbar for notepad æsthetic
+		overflow-x: hidden;  // hide horisontal scroll on hover scale
 
 		& .img-grid.hover-zoom {
 			padding-inline: 16px;
@@ -53,6 +54,9 @@
 			}
 			& a.z {  // ~zeus (made by me)
 				color: var(--s-org);
+				&::after {
+					content: " [ɀ]";
+				}
 
 				// this is all for the "Ɀ" on hover (maybe bin):
 				// update: relative breaks zindex, and it doesn't work without
@@ -76,7 +80,8 @@
 		}
 
 		& p {
-			line-height: 1.5em;
+			font-size: 0.9em;
+			line-height: 1.2em;
 			text-indent: 2ch;
 		}
 

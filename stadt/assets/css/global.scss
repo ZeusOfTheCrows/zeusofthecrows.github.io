@@ -430,7 +430,7 @@ code {
 .btn-88x31,
 .btn-176x31,
 .btn-80x15,
-.btn-150x15,
+.btn-150x20,
 .stamp-99x56,
 .tower,
 .pixel-art,
@@ -494,9 +494,14 @@ img.smooth-zoom {
 	width:  80px;
 	height: 15px;
 }
-.btn-150x15 {
+.btn-150x20 {
 	width: 150px;
-	height: 15px;
+	height: 20px;
+}
+
+.stamp-99x56 {
+	width:  99px;
+	height: 56px;
 }
 
 // .swash-z::first-letter {
