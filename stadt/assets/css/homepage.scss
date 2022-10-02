@@ -6,6 +6,11 @@
 	src: url("/stadt/assets/fonts/04B03.ttf") format("truetype");
 }
 
+@font-face {
+	font-family: "Yesterweb Nova Square";
+	src: url("https://cloudflare-ipfs.com/ipfs/QmaKT1nHC9JM5xmz7cRuRcB8jrkRjxdPsLaLnyzEta3e8R/NovaSquare.woff") format("woff");
+}
+
 /* -------------------------------- windows -------------------------------- */
 #welcome {
 	z-index: 49;  // halfway
@@ -54,9 +59,16 @@
 		& #welcome-footer {
 			grid-area: footer;
 
-			// & input[type="checkbox"] {
-				// visibility: hidden;
-			// }
+			& input:not(:checked) + label {
+				visibility: hidden;
+				position: relative;
+				&::after {
+					visibility: visible;
+					position: absolute;
+					left: 0;
+					content: "You… you know this is just for show, right?";
+				}
+			}
 		}
 		// & pre {
 			// margin: 0;

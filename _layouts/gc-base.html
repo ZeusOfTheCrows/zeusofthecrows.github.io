@@ -35,8 +35,8 @@
 		<!-- this doesn't work properly - always uses 32px -->
 		<!-- <link rel="shortcut icon" type="image/x-icon" href="/stadt/favicon-16.png"  sizes="16x16" /> -->
 		<!-- <link rel="shortcut icon" type="image/x-icon" href="/stadt/favicon-32.png"  sizes="32x32" /> -->
-		{% if page.window_icon != nil %}
-		<link rel="shortcut icon" type="image/png" href="/stadt/assets/images/window-icons/{{ page.window_icon }}" />
+		{% if page.window-icon != nil %}
+		<link rel="shortcut icon" type="image/png" href="/stadt/assets/images/window-icons/{{ page.window-icon }}" />
 		{% else %}
 		<!-- https://stackoverflow.com/questions/1444975/if-i-serve-favicon-ico-as-image-vnd-microsoft-icon-instead-of-image-x-icon-wi -->
 		<link rel="shortcut icon" type="image/x-icon" href="/stadt/favicon.ico" />
@@ -45,14 +45,31 @@
 		<!-- turns out cross-domain canonicals are acceptable -->
 		<link rel="canonical" href="https://zeusofthecrows.github.io{{ page.url | replace:'index.html','' | relative_url }}" />
 
-		<!-- for google fonts (hmmmm) -->
+		<!-- lets use font library instead of gfonts? -->
+		<!-- uncial -->
+		<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/eadui" type="text/css"/>
+		<!-- blackletter -->
+		<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/chomsky" type="text/css"/>
+		<!-- alternative blackletter -->
+		<!-- <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/kjv-1611" type="text/css"/> -->
+		<!-- per page -->
+		<link rel="stylesheet" media="screen" href="{{ page.custom-font }}" type="text/css"/>
+		{% if page.has-loc-cyr == true %}
+		<!-- only the gfonts version supports local forms - why‽ -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+		<!-- <link rel="stylesheet" media="screen" href="https://overpass-30e2.kxcdn.com/overpass.css" type="text/css"/> -->
+		{% endif %}
+
+		<!-- for google fonts (replaced with fontlibrary) -->
+		<!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
+		<!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
 		<!-- fira -->
-		<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Fira+Mono&family=Fira+Sans:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
-		{{ page.custom-font }}
-		<!-- for cyrillic localised forms (ff only right now) -->
-		<link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@700&display=swap" rel="stylesheet">
+		<!-- <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Fira+Mono&family=Fira+Sans:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet"> -->
+		<!-- {{ page.custom-font }} -->
+		<!-- <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@700&display=swap" rel="stylesheet"> -->
+
 	</head>
 
 	<body>

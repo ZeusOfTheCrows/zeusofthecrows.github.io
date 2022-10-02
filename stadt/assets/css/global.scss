@@ -9,7 +9,6 @@
 // maybe use grid? probably not
 // https://win98icons.alexmeub.com/
 // ztodo lots of things have mar 0 pad 0 - maybe consolidate?
-// https://news-cdn.softpedia.com/images/news2/windows-95-is-now-available-on-linux-mac-and-windows-as-an-electron-app-522375-8.jpg
 
 /* =============================== variables =============================== */
 
@@ -27,31 +26,18 @@
 	font-style: normal;
 }
 
-@font-face {
-	font-family: "Yesterweb Nova Square";
-	src: url("https://cloudflare-ipfs.com/ipfs/QmaKT1nHC9JM5xmz7cRuRcB8jrkRjxdPsLaLnyzEta3e8R/NovaSquare.woff") format("woff");
-}
-
-// move to html <head>
-// @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap");
-// @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600;1,700;1,900&display=swap');
-// @import url('https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap');
-// @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap');
-
-// for cyrillic localised forms (ff only for now)
-// @import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,300;0,400;1,300;1,400&display=swap');
-
 /* variables */
 :root {
 	scroll-behavior: smooth;
 	scroll-padding-top: 10vh;
 
-	--fnt-serif:	"Garamond", "Times New Roman", serif;
-	--fnt-sans: 	"Fira Sans", Helvetica, Arial, sans-serif;
-	--fnt-mono: 	"Fira Mono", monospace;
-	--fnt-code: 	"Fira Code", "Fira Mono", monospace;
-	--fnt-ipa:  	"Fira Sans", Arial, Sans-Serif;  // don't fallback to helvetica
-	--fnt-zswa: 	"Arial", sans-serif;  // font for "Ɀ" - unused
+	--fnt-serif:"EaduiMedium", "Garamond", "Times New Roman", serif;
+	--fnt-bltr: "chomskyRegular", "KJV1611Regular", serif;
+	--fnt-sans:	"Fira Sans", Helvetica, Arial, sans-serif;
+	--fnt-mono:	"Fira Mono", monospace;
+	--fnt-code:	"Fira Code", "Fira Mono", monospace;
+	--fnt-ipa: 	"Fira Sans", Arial, Sans-Serif;  // don't fallback to helvetica
+	--fnt-zswa:	"Arial", sans-serif;  // font for "Ɀ" - unused
 
 	--tb-hite:  37px;  // taskbar height
 	--dt-padd: 128px;  //?\ desktop padding
@@ -228,9 +214,8 @@ h1 { font-size: 2.2em; }
 h2 { font-size:   2em; }
 h3 { font-size: 1.8em; }
 h4 { font-size: 1.6em; }
-h4 { font-size: 1.4em; }
-h5 { font-size: 1.2em; }
-h5 { font-size:   1em; }
+h5 { font-size: 1.4em; }
+h6 { font-size: 1.2em; }
 
 h1,
 h2 {
@@ -395,7 +380,7 @@ code {  // code formating below
 	font-family: var(--fnt-ipa);
 }
 .glyph-showcase[lang="sr"] {
-	font-family: "Overpass";
+	font-family: "Overpass", "OverpassRegular";
 }
 
 code {
