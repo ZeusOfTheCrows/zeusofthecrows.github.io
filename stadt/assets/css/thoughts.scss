@@ -85,6 +85,25 @@
 
 	// width: 704px;
 	max-height: 640px;
+
+	& footer {
+		display: flex;
+		& > span {
+			flex: 1 1 100%;
+			text-align: right;
+			padding-right: 1ch;
+
+			&.write-date::before {
+				content: "file created: ";
+			}
+			&.edit-date::before {
+				content: "last edited: ";
+			}
+			& > time {
+				color: var(--s-blu);
+			}
+		}
+	}
 }
 
 p {
