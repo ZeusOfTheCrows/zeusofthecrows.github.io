@@ -2,7 +2,7 @@
 title: PS Vita
 collection: leaf
 permalink: /:path/ps-vita/
-edit_date: 2022-01-24
+edit-date: 2022-01-24
 typora-root-url: ../../
 notes: ^ is only so typora correctly renders images
 ---

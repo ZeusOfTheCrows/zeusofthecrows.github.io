@@ -2,7 +2,7 @@
 layout: gc-default
 css-file: gallery
 title: Image Gallery
-edit_date: 2022-10-01
+edit-date: 2022-10-01
 programme:
 window_icon: gallery.png
 sep: " | "
@@ -177,7 +177,7 @@ ase: ase
 			useful tool: a javascript bookmarklet for toggling pixelated and bilinear
 			("smooth") image rendering when viewing a single image in a browser:
 		</p>
-		<strong id="bookmarklet" style="text-align: center; font-size: 3em;">
+		<strong id="bookmarklet" style="text-align: center; font-size: 2em;">
 			<a href="javascript:(function(){img=document.getElementsByTagName('img')[0];img.style.setProperty('transform','scale(2)','important');if(getComputedStyle(img).getPropertyValue('image-rendering')=='pixelated'){img.style.setProperty('image-rendering','auto');}else{img.style.setProperty('image-rendering','pixelated');};})();">Pix</a>
 		</strong>
 		<hr />
@@ -334,7 +334,7 @@ ase: ase
 			something and thinks "ah, i can do better"; but i've tried to
 			link to the original inspiration
 		</p>
-		<h2>88×31</h2>
+		<h2>88x31</h2>
 		<h3>Æsthetic</h3>
 		<ul class="img-grid hover-zoom img-capts">
 			<li>
@@ -1179,7 +1179,7 @@ ase: ase
 			the corners are slightly unorthodox, but they look a little better than
 			standard, i think
 		</p>
-		<h2>99×56</h2>
+		<h2>99x56</h2>
 		<ul class="img-grid hover-zoom img-capts">
 			<li>
 				<img src="/stadt/assets/images/stamps/beastshrug.png" class="stamp-99x56 smooth-zoom"
@@ -1287,7 +1287,18 @@ ase: ase
 				</span>
 			</li>
 			<li>
-				<img src="/stadt/assets/images/stamps/gameboy.png" class="stamp-99x56"
+				<img src="/stadt/assets/images/stamps/portal-left.png"
+					class="stamp-99x56 smooth-zoom"
+					alt="left half of portal logo, protruding through a portal"
+					data-img-src="https://newlambda.neocities.org/stuff/graphics/devstamp.html" />
+				<span class="img-caption">
+					<a class="src"
+						href="https://newlambda.neocities.org/stuff/graphics/devstamp.html">{{ page.src }}</a>
+				</span>
+			</li>
+			<li>
+				<img src="/stadt/assets/images/stamps/gameboy.png"
+					class="stamp-99x56"
 					alt="gameboy advance intro"
 					data-img-src="https://scifirenegade.neocities.org/about/graphs2.html" />
 				<span class="img-caption">
@@ -1305,13 +1316,13 @@ ase: ase
 				</span>
 			</li>
 			<li>
-				<img src="/stadt/assets/images/stamps/left-portal.png"
+				<img src="/stadt/assets/images/stamps/manson.png"
 					class="stamp-99x56 smooth-zoom"
-					alt="left half of portal logo, protruding through a portal"
-					data-img-src="https://newlambda.neocities.org/stuff/graphics/devstamp.html" />
+					alt="various marilyn manson logos"
+					data-img-src="https://www.deviantart.com/6v4mp1r36/art/MM-Era-1by1-45943319" />
 				<span class="img-caption">
 					<a class="src"
-						href="https://newlambda.neocities.org/stuff/graphics/devstamp.html">{{ page.src }}</a>
+						href="https://www.deviantart.com/6v4mp1r36/art/MM-Era-1by1-45943319">{{ page.src }}</a>
 				</span>
 			</li>
 			<li>
@@ -1323,6 +1334,16 @@ ase: ase
 						href="//zeusofthecrows.github.io/stadt/assets/images/stamps/mars.ase">{{ page.src }}</a>
 					{{ page.sep }}
 					<a class="i" href="https://blog.signalnoise.com/marsunited-prints-by-andy-rohr/">{{ page.insp }}</a>
+				</span>
+			</li>
+			<li>
+				<img src="/stadt/assets/images/stamps/portal-right.png"
+					class="stamp-99x56 smooth-zoom"
+					alt="right half of portal logo, protruding through a portal"
+					data-img-src="https://newlambda.neocities.org/stuff/graphics/devstamp.html" />
+				<span class="img-caption">
+					<a class="src"
+						href="https://newlambda.neocities.org/stuff/graphics/devstamp.html">{{ page.src }}</a>
 				</span>
 			</li>
 			<li>
@@ -1342,22 +1363,22 @@ ase: ase
 				</span>
 			</li>
 			<li>
-				<img src="/stadt/assets/images/stamps/right-portal.png"
-					class="stamp-99x56 smooth-zoom"
-					alt="right half of portal logo, protruding through a portal"
-					data-img-src="https://newlambda.neocities.org/stuff/graphics/devstamp.html" />
-				<span class="img-caption">
-					<a class="src"
-						href="https://newlambda.neocities.org/stuff/graphics/devstamp.html">{{ page.src }}</a>
-				</span>
-			</li>
-			<li>
 				<img src="/stadt/assets/images/stamps/reality-off.png" class="stamp-99x56 smooth-zoom"
 					alt="80s-esque grid stamp"
 					data-img-src="https://mesoscale.neocities.org/" />
 				<span class="img-caption">
 					<a class="src"
 						href="https://mesoscale.neocities.org/">{{ page.src }}</a>
+				</span>
+			</li>
+			<li>
+				<img src="/stadt/assets/images/stamps/stuart-ashen.png"
+					class="stamp-99x56 smooth-zoom"
+					alt="ashens.com intro"
+					data-img-src="https://www.deviantart.com/phlum/art/Ashens-com-Stamp-197257952" />
+				<span class="img-caption">
+					<a class="src"
+						href="https://www.deviantart.com/phlum/art/Ashens-com-Stamp-197257952">{{ page.src }}</a>
 				</span>
 			</li>
 			<li>
@@ -1457,7 +1478,7 @@ ase: ase
 		</ul>
 	</div>
 	<div class="window-content indent-9x">
-		<h2>150×20</h2>
+		<h2>150x20</h2>
 		<ul class="img-grid hover-zoom img-capts">
 			<li>
 				<img src="/stadt/assets/images/blinkies/coffee.png"
@@ -1546,7 +1567,7 @@ ase: ase
 		</ul>
 	</div>
 	<div class="window-content indent-9x">
-		<h2>80×15</h2>
+		<h2>80x15</h2>
 		<ul class="img-grid hover-zoom img-capts">
 			<li>
 				<img src="/stadt/assets/images/antipix/gb.png"

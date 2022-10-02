@@ -1,7 +1,7 @@
 ---
 title: Cities
 collection: leaf
-edit_date: 2021-11-01
+edit-date: 2021-11-01
 permalink: /:path/cities/
 typora-root-url: ../
 notes: ^ is only so typora correctly renders images

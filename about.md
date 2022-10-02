@@ -2,7 +2,7 @@
 title: About
 collection: leaf
 permalink: /:path/about/
-edit_date: 2021-11-01
+edit-date: 2021-11-01
 typora-root-url: ./
 notes: ^ is only so typora correctly renders images
 ---

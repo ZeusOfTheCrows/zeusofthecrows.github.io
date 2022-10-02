@@ -1,18 +1,18 @@
 <br />
 <hr />
-{%- if page.edit_date -%}
-	<p>page last modified at <time datetime="{{ page.edit_date | date: '%Y-%m-%d' }}">
-		{{ page.edit_date | date: "%Y-%m-%d" }}</time></p>
+{%- if page.edit-date -%}
+	<p>page last modified at <time datetime="{{ page.edit-date | date: '%Y-%m-%d' }}">
+		{{ page.edit-date | date: "%Y-%m-%d" }}</time></p>
 	<p>
 		<span title="all wrongs reserved">(ɔ)</span>
-		{{ page.edit_date | date: "%Y" }} ZeusOfTheCrows
+		{{ page.edit-date | date: "%Y" }} ZeusOfTheCrows
 	</p>
 {%- else -%}
-	<p>site last modified at <time datetime="{{ site.edit_date | date: '%Y-%m-%d' }}">
-		{{ site.edit_date | date: "%Y-%m-%d"  }}</time></p>
+	<p>site last modified at <time datetime="{{ site.edit-date | date: '%Y-%m-%d' }}">
+		{{ site.edit-date | date: "%Y-%m-%d"  }}</time></p>
 	<p>
 		<span title="all wrongs reserved">(ɔ)</span>
-		{{ site.edit_date | date: "%Y" }} ZeusOfTheCrows
+		{{ site.edit-date | date: "%Y" }} ZeusOfTheCrows
 	</p>
 {%- endif -%}
 <p><a href="#">^ back to top ^</a></p>

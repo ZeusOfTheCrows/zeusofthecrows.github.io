@@ -2,7 +2,7 @@
 title: NSX Buttons
 collection: leaf
 permalink: /:path/nsx-buttons/
-edit_date: 2022-08-15
+edit-date: 2022-08-15
 typora-root-url: ../../
 notes: ^ is only so typora correctly renders images
 ---

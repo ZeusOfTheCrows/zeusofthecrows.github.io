@@ -2,7 +2,7 @@
 title: Kustom
 collection: leaf
 permalink: /:path/kustom/
-edit_date: 2021-10-19
+edit-date: 2021-10-19
 typora-root-url: ../
 notes: ^ is only so typora correctly renders images. carousels and videos need html
 ---

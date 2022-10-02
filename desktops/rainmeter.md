@@ -2,7 +2,7 @@
 title: Rainmeter
 collection: leaf
 permalink: /:path/rainmeter/
-edit_date: 2021-10-19
+edit-date: 2021-10-19
 typora-root-url: ../
 notes: ^ is only so typora correctly renders images
 ---
