@@ -33,10 +33,10 @@
 
 	--fnt-serif:"EaduiMedium", "Garamond", "Times New Roman", serif;
 	--fnt-bltr: "chomskyRegular", "KJV1611Regular", serif;
-	--fnt-sans:	"Fira Sans", Helvetica, Arial, sans-serif;
-	--fnt-mono:	"Fira Mono", monospace;
-	--fnt-code:	"Fira Code", "Fira Mono", monospace;
-	--fnt-ipa: 	"Fira Sans", Arial, Sans-Serif;  // don't fallback to helvetica
+	--fnt-sans:	"FiraSansRegular", "Fira Sans", Helvetica, Arial, sans-serif;
+	--fnt-mono:	"FiraMonoRegular", "Fira Mono", monospace;
+	--fnt-code:	"FiraCodeRegular", "Fira Code", "FiraMonoRegular", "Fira Mono", monospace;
+	--fnt-ipa: 	"FiraSansRegular", "Fira Sans", Arial, Sans-Serif;  // don't fallback to helvetica
 	--fnt-zswa:	"Arial", sans-serif;  // font for "Ɀ" - unused
 
 	--tb-hite:  37px;  // taskbar height
