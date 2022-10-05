@@ -463,6 +463,8 @@ img.smooth-zoom {
 	&:focus,
 	&:focus-within {
 		transform: scale(2);
+		// box-shadow: 0 0 8px var(--d-grn);  } nice idea, doesn't work for
+		// background-color:   var(--d-grn);  } non-square buttons
 		transition-delay: 0.5s;  // delay to avoid over-eager images
 	}
 }
