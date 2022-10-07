@@ -29,7 +29,6 @@
 			// background-color: var(--bgd-0);
 			// border-radius: 8px;
 		// }
-
 }
 
 .window-content {
@@ -138,6 +137,18 @@ td {
 	border-radius: 8px;
 	border: ridge var(--d-ppl);
 	padding: 0.4em;
+}
+
+#svg summary {  // bit too reliant on the current design of header, but eh
+	margin-inline: auto;
+	width: fit-content;
+	// color: var(--d-org);
+	color: transparent;  // hack to hide confusing duplicate markers?
+
+	& h3 {
+		width: fit-content;
+		display: inherit;
+	}
 }
 
 td {
