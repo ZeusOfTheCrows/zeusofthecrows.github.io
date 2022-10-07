@@ -84,7 +84,7 @@
 	flex-direction: column;
 
 	// width: 704px;
-	max-height: 640px;
+	max-height: 960px;
 
 	& footer {
 		display: flex;
@@ -131,6 +131,17 @@ dl {
 	& dd {
 		line-height: initial;  // i'm not sure this is best practice - maybe just 1
 	}
+}
+
+table,
+td {
+	border-radius: 8px;
+	border: ridge var(--d-ppl);
+	padding: 0.4em;
+}
+
+td {
+	width: 50%;  // ztodo this is not stable
 }
 
 // blockquote::before {

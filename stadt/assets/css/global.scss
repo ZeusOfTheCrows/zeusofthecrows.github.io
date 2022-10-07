@@ -343,6 +343,11 @@ a {
 
 /* ========================= class generic styles ========================== */
 
+.faux-inf::after {  // fake infinity symbol as eadui doesn't have one
+	content: "00\00a0\00a0";
+	letter-spacing: -4px;
+}
+
 pre,
 samp,
 .ascii-art {

@@ -43,6 +43,351 @@ word-proc: " - Wordpad"
 	</div>
 </article>
 
+<article id="svg" class="window-9x">
+	<div class="window-titlebar">
+		<a class="window-title ms-bold">
+			<img class="window-icon"
+				src="/stadt/assets/images/window-icons/svg.png" alt="" />
+			resolutionless buttons {{ page.word-proc }}
+		</a>
+		<ul class="window-decs">
+			<li class="window-min"></li>
+			<li class="window-max"></li>
+			<li class="window-cls"></li>
+		</ul>
+	</div>
+	<div class="window-menu">
+		<ul>
+			<li><u>F</u>ile</li>
+			<li><u>E</u>dit</li>
+			<li><u>V</u>iew</li>
+			<li><u>I</u>nsert</li>
+			<li>F<u>o</u>rmat</li>
+			<li><u>H</u>elp</li>
+		</ul>
+	</div>
+	<div class="window-content indent-9x">
+		<h2>Want Your Own <span class="faux-inf"></span> Resolution Button?</h2>
+
+		<ul class="img-grid hover-zoom">
+			<li><a href="https://www.w3.org/Graphics/SVG/">
+				<img src="/stadt/assets/images/buttons/taskbar/svg.svg"
+					class="btn-88x31"
+					alt="animated svg button" />
+			</a></li>
+		</ul>
+
+		<details id="preamble" open="">
+			<summary><h3>Preamble</h3></summary>
+			<p>
+				okay so i've always been a fan of vector graphics - <small>why in this
+				world of rapidly increasing resolutions are we tying our images to pixel
+				sizes? most of the time one can't see the pixels anyways, and it always
+				seems to break</small> - but i've only just had the idea of applying it
+				to a "Now!" button
+			</p>
+			<p>
+				however, when trying to create one i found a sore lack of information on
+				animating them, so i'll write this as a sort of guide. there are three
+				ways to create an animated svg (herein ASVG), but i'll only be looking at
+				<abbr title="Synchronized Multimedia Integration Language">smil</abbr>,
+				as i don't like javascript and css animations are …just css animations
+			</p>
+			<p>
+				first thing to do is decide if asvg is right for you, so consider this
+				before making one:
+			</p>
+
+			<table style="font-size: 0.8em">
+				<thead>
+					<tr>
+						<th>benefits</th>
+						<th>malefits</th>
+					</tr>
+				</thead>
+				<tr>
+					<td>
+						the big one: infinite scalability. your button is future-proof, and
+						can be displayed at any size as sharp as the day you made it
+					</td>
+					<td>
+						the support is just not great. it's not even as good as
+						apng. i think all modern browsers support asvg, but i don't think any
+						image viewers do (certainly gwenview does not).
+					</td>
+				</tr>
+				<tr>
+					<td>
+						there are no "proprietary" source files (.ase, .xcf), as svg's have
+						layers baked in, and are viewable in a text editor
+					</td>
+					<td>
+						i can't find any programmes that properly support asvg, so
+						you'll have to write the xml manually
+					</td>
+				</tr>
+				<tr>
+					<td>
+						you'll be the coolest kid on the block, with your button in a
+						unique(ish) format
+					</td>
+					<td>
+						depending on the number of elements, they tend to be slightly
+						bigger (~56kb for animated, ~32kb for static; compared to ~16kb for
+						apng, ~22kb for gif) than the tiny 88x31 size of ordinary buttons
+					</td>
+				</tr>
+			</table>
+		</details>
+
+		<hr />
+
+		<details id="drawing">
+			<summary><h3>Drawing</h3></summary>
+
+			<p>
+				still want to make one? well here's some info:
+			</p>
+			<p>
+				the first thing to do is make your normal svg. there are
+				<a href="https://en.m.wikipedia.org/wiki/Comparison_of_vector_graphics_editors">
+				many programmes</a>
+				to do this: i use <a href="https://inkscape.org/">inkscape</a> usually,
+				as i started using it when boxysvg didn't support linux, but i think
+				<a href="https://boxy-svg.com/">boxysvg</a> is better. there are plenty
+				of tutorials for vector editing, so i won't bother to say much about
+				that here
+			</p>
+			<p>
+				a couple things of note though:
+			</p>
+			<p>
+				i made mine in 88x31, as it was an easy way to get the ratio right, but
+				there's no reason not to make yours in 176x62, or 44x15½, or whatever
+			</p>
+			<p>
+				when you've finished editing, duplicate
+				your text layers, hide one, and <strong>bake the other to paths</strong>
+				(inkscape: <samp>path</samp> → <samp>object to path</samp>). this means
+				if your svg is being viewed on a device without your fonts installed, the
+				text still shows up correctly
+			</p>
+			<p>
+				you'll probably be fine if using something like times new roman, but it's
+				very little effort and makes it more portable
+			</p>
+		</details>
+
+		<hr />
+
+		<details id="animating" open="">
+			<summary><h3>Animating</h3></summary>
+
+			<p>
+				now, you're ready to animate. surprisingly, the best visual editor, i've
+				found, is a browser. <small>i used firefox, but i imagine safari or
+				vivaldi would work just as well.</small>
+				the devtools work for svg as well as html (they're just types of xml), so
+				just open your svg, press <kbd>F12</kbd>, and your changes will be
+				reflected in real time
+			</p>
+			<p>
+				you have three basic tag options:
+			</p>
+			<dl>
+				<dt>
+					<code>&lt;animate&gt;</code>
+				</dt>
+				<dd>
+					animate an svg property (e.g. rx {radius x-axis}):
+					<a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/animate">mdn</a>
+				</dd>
+				<dt>
+					<code>&lt;animateTransform&gt;</code>
+				</dt>
+				<dd>
+					animate size, rotation, & position (anything that comes under css'
+					<code>transform</code> property). this is the one i used in the above
+					button
+				</dd>
+				<dt>
+					<code>&lt;animateMotion&gt;</code>
+				</dt>
+				<dd>
+					move an object along a path. i have never used this
+				</dd>
+			</dl>
+			<ol>
+				<li>
+					decide what type of motion you want, then right click on the element
+					you wish to animate. for the example button, i chose the
+					<code>&lt;g id="text935&gt;</code> as it is the <u>g</u>roup that
+					contains all of the "Now!" letters that i baked to paths.
+				</li>
+				<li>
+					add your <code>&lt;animate[Transform]&gt;</code> tag as an immediate
+					child of your chosen element<sup>†</sup>
+					<ul>
+						<li>
+							i believe it can be any child, but i tend to add it as a final
+							child by duplicating the last element, right-clicking, selecting
+							"edit as svg", and then deleting the whole thing and typing in my
+							code
+						</li>
+					</ul>
+				</li>
+				<li>
+					if using <code>&lt;animateTransform type="scale"&gt;</code>, you will
+					probably need a
+					<code>transform-origin</code> css property - i just use trial and
+					error to find it
+				</li>
+				<li>
+					unlike css, no values need units, all are in pixels
+					<br />
+					you can either use <code>from="x [y] [z]"</code> &
+					<code>to="x [y] [z]"</code> properties, or a
+					<code>values="x [y] [z]; x [y] [z]; [x [y] [z]]"</code> property.
+					<br />
+					scale can take either one or two values space separated.
+				</li>
+				<li>
+					for easing, you can either use the keySplines property (the proper
+					way) or the hacky way i did (<code>values="1;0.9;0.6;0.5;0.6;0.9;1</code>)
+					which i think looks fine at small sizes
+				</li>
+			</ol>
+			<p>
+				that is what i have found with my experimentation. i will
+				update with more if/when i find it, or you can message me a question,
+				or check the few
+				<a href="https://webdesign.tutsplus.com/tutorials/how-to-use-animatetransform-for-inline-svg-animation--cms-22296">decent</a>
+				<a href="https://edutechwiki.unige.ch/en/SVG-SMIL_animation_tutorial">tutorials</a>
+				i have found
+			</p>
+			<p>
+				<sup>†</sup> if using <code>animateTransform</code>, it will override
+				any <code>transform="whatever(x)"</code> property. either apply this to
+				all children manually, or move/scale the object without using
+				<code>transform=""</code>
+			</p>
+		</details>
+
+		<img src="/stadt/assets/images/buttons/taskbar/svg.svg"
+			style="width: 400px; height: auto; display: block; margin-inline: auto;"
+			alt="animated svg button, but massive" />
+	</div>
+	<footer>
+		<span class="indent-9x write-date"><time>2022-10-07</time></span>
+		<span class="indent-9x  edit-date"><time>2022-10-07</time></span>
+	</footer>
+</article>
+
+<article id="abxy" class="window-9x">
+	<div class="window-titlebar">
+		<a class="window-title ms-bold">
+			<img class="window-icon"
+				src="/stadt/assets/images/window-icons/ctrlr.png" alt="" />
+			ABXY/ΟΧΔΠ {{ page.word-proc }}
+		</a>
+		<ul class="window-decs">
+			<li class="window-min"></li>
+			<li class="window-max"></li>
+			<li class="window-cls"></li>
+		</ul>
+	</div>
+	<div class="window-menu">
+		<ul>
+			<li><u>F</u>ile</li>
+			<li><u>E</u>dit</li>
+			<li><u>V</u>iew</li>
+			<li><u>I</u>nsert</li>
+			<li>F<u>o</u>rmat</li>
+			<li><u>H</u>elp</li>
+		</ul>
+	</div>
+	<div class="window-content indent-9x">
+		<style type="text/css">
+			#abxy kbd {
+				border-radius: 99vmax;
+			}
+		</style>
+		<h2>I Dislike the Sega/XBox Controller Layout</h2>
+
+		<p>
+			in light of sony changing their enter button to
+			<kbd style="color:var(--s-blu);">X</kbd> in japan to mirror the
+			western layout, i thought i'd write down why i think they made the wrong
+			choice
+		</p>
+		<p>
+			i don't feel very strongly about this, and i agree that sony had to fix
+			the east/west dichotomy, nevertheless when weighing up an almost
+		</p>
+		<p>
+			now, as much as i loathe sony, when talking about button placements it's
+			easier to use the unambiguous ones; so from here on out:
+			<kbd style="color:var(--s-red);">Ο</kbd> = ntdo
+			<kbd style="color:var(--s-red);">A</kbd>, xinput
+			<kbd style="color:var(--s-red);">B</kbd>;&nbsp;&nbsp;
+			<kbd style="color:var(--s-blu);">Χ</kbd> = ntdo
+			<kbd style="color:var(--s-ylw);">B</kbd>, xinput
+			<kbd style="color:var(--s-grn);">A</kbd>;&nbsp;&nbsp;
+			<kbd style="color:var(--s-ppl);">Π</kbd> = ntdo
+			<kbd style="color:var(--s-grn);">Y</kbd>, xinput
+			<kbd style="color:var(--s-blu);">X</kbd>;&nbsp;&nbsp;
+			<kbd style="color:var(--s-grn);">Δ</kbd> = ntdo
+			<kbd style="color:var(--s-blu);">X</kbd>, xinput
+			<kbd style="color:var(--s-ylw);">Y</kbd>
+		</p>
+		<ul>
+			<li>
+				it just makes sense. most of us live in a left→right society, so the
+				"forward" (accept) action should be to the right of "backward". also,
+				having ✘ to accept is just wrong
+			</li>
+			<li>
+				it allows <kbd style="color:var(--s-blu);">X</kbd> to be "primary
+				action" (i.e. jump, dodge) and <kbd style="color:var(--s-red);">O</kbd>
+				to be "interact", allowing one to pick up an item and dismiss the
+				prompt with ease (e.g. dark souls)
+				<ul>
+					<li>
+						i hoped breath of the wild would make this mainstream, especially
+						with jump on <kbd style="color:var(--s-grn);">Δ</kbd>
+					</li>
+				</ul>
+			</li>
+			<li>
+				it spreads wear evenly. on my xbox controllers
+				<kbd style="color:var(--s-blu);">X</kbd> is worn out and mushy, whereas
+				on my switch controller <kbd style="color:var(--s-blu);">X</kbd
+				>/<kbd style="color:var(--s-red);">O</kbd> are roughly even
+			</li>
+			<li>
+				the nintendo layout came first (sort of)
+			</li>
+			<li>
+				sony specific: from a business perspective, too. sony would be in the
+				majority whichever way, but as i'd say their greater competitor is
+				microsoft, making it easier to transition to xbox seems odd. forming a
+				group with nintendo, thereby locking xinput out, seemed like the better
+				choice to me
+			</li>
+		</ul>
+		<p>
+			of course, none of this realy matters to me, as i play through steam
+			input, and can (and do) therefore map the enter/cancel buttons however i
+			choose. that being said, it is a bit annoying how "accept" & "jump" are
+			often tied to the same button
+		</p>
+	</div>
+	<footer>
+		<span class="indent-9x write-date"><time>2022-07-17</time></span>
+		<span class="indent-9x  edit-date"><time>2022-07-17</time></span>
+	</footer>
+</article>
+
 <article id="tabs-and-spaces" class="window-9x">
 	<div class="window-titlebar">
 		<a class="window-title ms-bold">
