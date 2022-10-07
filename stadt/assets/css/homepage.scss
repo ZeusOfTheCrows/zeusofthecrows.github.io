@@ -11,6 +11,21 @@
 	src: url("https://cloudflare-ipfs.com/ipfs/QmaKT1nHC9JM5xmz7cRuRcB8jrkRjxdPsLaLnyzEta3e8R/NovaSquare.woff") format("woff");
 }
 
+/* -------------------------------- layout --------------------------------- */
+@media (max-width: 1600px) {
+
+	.window-9x {
+		position: revert;
+	}
+
+	#window-area {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 20px;
+	}
+}
+
 /* -------------------------------- windows -------------------------------- */
 #welcome {
 	z-index: 49;  // halfway
@@ -201,10 +216,10 @@
 				text-align: center;
 				grid-column: 1 / 4;
 				grid-row:    1 / 2;
-				font-family: var(--fnt-sans);
-				// font-size: 1.2em;
+				font-family: "Arial", sans-serif;
+				font-size: 1.3em;
 				font-weight: bold;
-				-webkit-text-stroke: 0.8px var(--txt-2);
+				-webkit-text-stroke: 1px var(--txt-2);
 				-webkit-text-fill-color: var(--bgd-0);
 
 				& span {
@@ -379,6 +394,13 @@
 		font-family: var(--fnt-serif);
 		font-size: 1.3em;
 		padding: 1em;
+
+		&::first-letter {
+			float: left;
+			font-size: 4em;
+			color: var(--s-ylw);
+			padding-right: 0.04em;
+		}
 	}
 	& footer {
 		// display: flex;
