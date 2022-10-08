@@ -4,11 +4,11 @@ css-file: gallery
 title: Image Gallery
 edit-date: 2022-10-06
 programme:
-window_icon: gallery.png
+window-icon: gallery.png
 sep: " | "
 src: src
 insp: insp
-ase: ase
+znotes: maybe abstract all these out to layout + grid-windows.css?
 ---
 
 <div id="page-intro" class="window-9x">
@@ -42,18 +42,48 @@ ase: ase
 		<p>
 			this will serve as both a gallery, and a credits page:
 		</p>
-		<p>
-			hover over each image for more source: green means original creator,
-			yellow means where i found the image.
-			orange means made by me (underlined are links to aseprite <samp>.ase</samp>
-			files), red means unknown source. "insp" means the inspiration for the
-			design (direct or indirect).
-		</p>
-		<p>
-			i hope if i can start this as a trend then it'll be easier to find the
-			original creator
-		</p>
-		<hr />
+		<details class="indent-9x" style="padding-inline: 2ch;">
+			<summary class="h-summ">More Info, & Contents</summary>
+			<ol id="contents" style="margin-inline: auto;">
+				<li style="--img: url('/stadt/assets/images/window-icons/buttons.png');">
+					<a href="#buttons">buttons [88x31]</a>
+				</li>
+				<li style="--img: url('/stadt/assets/images/window-icons/stamps.png');">
+					<a href="#stamps" >stamps [99x65] </a>
+				</li>
+				<li style="--img: url('/stadt/assets/images/window-icons/blinkies.png');">
+					<a href="#blinkies">blinkies [150x20]</a>
+				</li>
+				<li style="--img: url('/stadt/assets/images/window-icons/cassette.png');">
+					<a href="#antipix">antipixels [80x15]</a>
+				</li>
+				<li style="--img: url('/stadt/assets/images/window-icons/art.png');">
+					<a href="#other" class="captioned" title="i may move these to another page">
+						other art
+					</a>
+				</li>
+			</ol>
+			<hr />
+			<p>
+				hover over each image for more source: green means original creator,
+				yellow means where i found the image.
+				orange means made by me (underlined are links to aseprite <samp>.ase</samp>
+				files), red means unknown source. "insp" means the inspiration for the
+				design (direct or indirect).
+			</p>
+			<p>
+				i hope if i can start this as a trend then it'll be easier to find the
+				original creator
+			</p>
+			<hr />
+			<p>
+				all window icons that i didn't make <del>(you can tell which ones are
+				mine by the quality drop)</del> come from
+				<a href="https://win98icons.alexmeub.com/">alexmeub.com</a>, although
+				there are more custom designed ones that i haven't used at
+				<a href="https://www.raebear.net/computers/windows-98-icons/">raebear.net</a>.
+			</p>
+		</details>
 		<p>
 			useful tool: a javascript bookmarklet for toggling pixelated and bilinear
 			("smooth") image rendering when viewing a single image in a browser:
@@ -498,13 +528,14 @@ ase: ase
 				</span>
 			</li>
 			<li>
-				<a>
-					<img src="/stadt/assets/images/buttons/other/rainbow.png" class="btn-88x31"
-						data-img-src="~zeus"
-						alt="lgbt rainbow button" />
+				<a href="https://planetphotoshop.com/the-88x31-button-resolution-trick.html">
+					<img src="/stadt/assets/images/buttons/other/alward54.png"
+						class="btn-88x31 smooth-zoom"
+						alt="action fx for photoshop button" />
 				</a>
 				<span class="img-caption">
-					<a class="src z">{{ page.src }}</a>
+					<a class="src v"
+						href="https://planetphotoshop.com/the-88x31-button-resolution-trick.html">{{ page.src }}</a>
 				</span>
 			</li>
 			<li>
@@ -692,6 +723,16 @@ ase: ase
 			</li>
 			<li>
 				<a>
+					<img src="/stadt/assets/images/buttons/other/rainbow.png" class="btn-88x31"
+						data-img-src="~zeus"
+						alt="lgbt rainbow button" />
+				</a>
+				<span class="img-caption">
+					<a class="src z">{{ page.src }}</a>
+				</span>
+			</li>
+			<li>
+				<a>
 					<img src="/stadt/assets/images/buttons/music/licence-red.png" class="btn-88x31"
 						alt="ppl/prs licensed to play recorded music button, but red" />
 				</a>
@@ -766,17 +807,6 @@ ase: ase
 				<span class="img-caption">
 					<a class="src v"
 						href="https://sevenzip.sourceforge.io/logos.html">{{ page.src }}</a>
-				</span>
-			</li>
-			<li>
-				<a href="https://planetphotoshop.com/the-88x31-button-resolution-trick.html">
-					<img src="/stadt/assets/images/buttons/brands/7z.png"
-						class="btn-88x31 smooth-zoom"
-						alt="action fx for photoshop button" />
-				</a>
-				<span class="img-caption">
-					<a class="src v"
-						href="https://planetphotoshop.com/the-88x31-button-resolution-trick.html">{{ page.src }}</a>
 				</span>
 			</li>
 			<li>
@@ -1086,6 +1116,29 @@ ase: ase
 				</a>
 				<span class="img-caption">
 					<a class="src u">{{ page.src }}</a>
+				</span>
+			</li>
+		</ul>
+		<h3 title="unfinished ideas i had, but haven't done anything with yet">Ideas</h3>
+		<ul class="img-grid hover-zoom img-capts">
+			<li>
+				<a>
+					<img src="/stadt/assets/images/buttons/other/camo.png"
+						class="btn-88x31 smooth-zoom"
+						alt="transparent (camouflaged) button" />
+				</a>
+				<span class="img-caption">
+					<a class="src z">{{ page.src }}</a>
+				</span>
+			</li>
+			<li>
+				<a>
+					<img src="/stadt/assets/images/buttons/other/folder.png"
+						class="btn-88x31 smooth-zoom"
+						alt="windows98 folder icon styled button" />
+				</a>
+				<span class="img-caption">
+					<a class="src z">{{ page.src }}</a>
 				</span>
 			</li>
 		</ul>
@@ -1699,6 +1752,8 @@ ase: ase
 					<a href="/stadt/assets/images/gallery/atari-firefox.png">png ver.</a>
 					{{ page.sep }}
 					<a href="https://www.gametronik.com/site/fiche/daphne/Firefox/">info</a>
+					{{ page.sep }}
+					<a href="https://70sscifiart.tumblr.com/post/686812708288512000/">more info</a>
 				</figcaption>
 			</figure></li>
 		</ul>

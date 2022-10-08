@@ -9,7 +9,8 @@
 
 .window-content {
 		padding: 16px;
-		height: 90%;
+		// height: 90%;
+		flex-grow: 1;
 		overflow-y: scroll;  // add dummy scrollbar for notepad æsthetic
 		overflow-x: hidden;  // hide horisontal scroll on hover scale
 
@@ -88,7 +89,7 @@
 	// margin-bottom:   50vh
 	display: grid;
 	// grid-template-columns: repeat(auto-fill, 720px);
-	grid-template-columns: repeat(auto-fill, 48em);
+	grid-template-columns: repeat(auto-fill, minmax(auto, 48em));
 	justify-content: center;
 	gap: 4vw;
 }
@@ -115,6 +116,19 @@ p {
 
 #page-intro {
 	grid-row-end: span 1;
+}
+
+#contents {  // ztodo abstract
+	width: fit-content;
+	margin-inline: auto;
+
+	& li {
+		width: fit-content;
+
+		&::marker {
+			content: var(--img) " ";
+		}
+	}
 }
 
 #other-art .window-content {

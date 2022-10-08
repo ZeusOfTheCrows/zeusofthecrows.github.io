@@ -212,7 +212,7 @@ body {
 
 h1 { font-size: 2.2em; }
 h2 { font-size:   2em; }
-h3 { font-size: 1.8em; }
+h3, .h-summ { font-size: 1.8em; }
 h4 { font-size: 1.6em; }
 h5 { font-size: 1.4em; }
 h6 { font-size: 1.2em; }
@@ -220,6 +220,7 @@ h6 { font-size: 1.2em; }
 h1,
 h2 {
 	border-bottom: 0.1em solid var(--d-org);
+	border-inline: 0.1em solid transparent;  // for mitred corners
 	& mark {
 		border-bottom-left-radius:  0;
 		border-bottom-right-radius: 0;
@@ -230,9 +231,9 @@ h2,
 h3,
 h4,
 h5,
-h6 {
-	margin-top: 0.5em;
-	margin-bottom: 0.5em;
+h6,
+.h-summ {
+	margin-inline: 0.5em;
 	font-family: var(--fnt-serif);
 	text-align: center;
 	color: var(--s-org);

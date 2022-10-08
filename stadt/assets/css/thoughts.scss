@@ -40,7 +40,8 @@
 		display: revert;  // otherwise blockquotes are hidden - bug?
 
 		padding: 16px;
-		height: 90%;
+		// height: 90%;
+		flex-grow: 1;
 		overflow-y: scroll;  // add dummy scrollbar for notepad æsthetic
 		// i thought this was a good idea, but actually it's annoying
 		// overscroll-behavior: contain;
@@ -70,7 +71,7 @@
 	// margin-bottom:   50vh;  // allow overscrolling - doesn't work with grid
 	display: grid;
 	// grid-template-columns: repeat(auto-fill, 720px);
-	grid-template-columns: repeat(auto-fill, 48em);
+	grid-template-columns: repeat(auto-fill, minmax(auto, 48em));
 	justify-content: center;
 	gap: 4vw;
 }
@@ -113,6 +114,19 @@ p {
 
 #page-intro {
 	grid-row-end: span 1;
+}
+
+#contents {
+	width: fit-content;
+	margin-inline: auto;
+
+	& li {
+		width: fit-content;
+
+		&::marker {
+			content: var(--img) " ";
+		}
+	}
 }
 
 #pirated-music {
