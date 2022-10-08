@@ -820,8 +820,9 @@ textarea {
 		& #start-orb {
 			background-size: 16px 16px;
 			color: var(--s-org);
-			padding-top: 0.4em;  // hacky
-			height: 0.8em;
+			// padding-top: 0.4em;  // hacky
+			height: 1em;
+			vertical-align: middle;
 			width: auto;
 		}
 
@@ -862,7 +863,16 @@ textarea {
 		// for mask
 		flex-shrink: 1;
 		flex-grow: 1;
-		overflow: hidden;
+
+		overflow: auto;
+		scrollbar-width: none;   	// standard
+		-ms-overflow-style: none;	// ie?
+		&::-webkit-scrollbar {   	// thanks, chrome
+
+			width: 0;
+			display: none;
+		}
+
 		width: 100%;
 		-webkit-mask-image: linear-gradient(to left, transparent 0px 8px, black 32px 64px);
 		mask-image: linear-gradient(to left, transparent 0px 8px, black 32px 64px);

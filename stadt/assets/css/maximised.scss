@@ -18,6 +18,25 @@
 	gap: 20px;
 }
 
+@media (max-width: 800px) {
+	.window-content {
+		margin: 4px 24px;
+		grid-template-columns: 160px auto;
+		grid-template-areas:
+			"navigation  content"
+			"description content";
+	}
+	#main-content {
+		grid-area: content;
+	}
+	#sidebar-left {
+		grid-area: navigation;
+	}
+	#sidebar-right {
+		grid-area: description;
+	}
+}
+
 #main-content {
 	padding: 24px;
 	// height: 100%;
