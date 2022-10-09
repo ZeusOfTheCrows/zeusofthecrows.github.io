@@ -331,6 +331,9 @@ kbd {  // keyboard (ctrl+f)
 }
 
 a {
+	&[href^="http"] {
+		cursor: alias;
+	}
 	&:link {
 		color: var(--s-blu);
 	}
@@ -379,7 +382,9 @@ code {  // code formating below
 		// font-size: 1.2em;
 		font-weight: 600;
 }
-.captioned {
+.captioned,
+abbr {
+	cursor: help;
 	color: var(--s-aqa);
 }
 .ipa {
@@ -559,12 +564,12 @@ textarea {
 	background: var(--bgd-2);
 	user-select: none;
 
-	&:active {
+	&:active,
+	&:active::before {  // this needs testing - should only apply to window buttons?
 		border-top-color:    var(--btn-lolite);
 		border-left-color:   var(--btn-lolite);
 		border-bottom-color: var(--btn-hilite);
 		border-right-color:  var(--btn-hilite);
-
 	}
 }
 .btn-dropdown {
@@ -644,15 +649,14 @@ textarea {
 		& li {
 			visibility: hidden;  // hide to replace with before pseudo
 			font-family: "Material Design Icons";
-			margin-right: 0.8em;  // because the actual element is hidden
 
 			&:before {  // attributes for all buttons
 				visibility: visible;
 				display: inline-block;
-				position: absolute;
+				position: relative;
 				margin: 0;
 				padding: 0;
-				top: 2px;  // the tip says this has no effect but it really does
+				vertical-align: text-bottom;  // ?
 				width: 1.2em;
 				font-size: 0.6em;
 				line-height: 1.2em;  // for vert cenre in chrome
@@ -808,8 +812,7 @@ textarea {
 	}
 
 	& #btn-start {
-		// display: inline-flex;  // ztodo maybe try this
-		// flex-direction: space-around;
+		cursor: not-allowed;
 		box-sizing: border-box;
 		width: 88px;
 		height: 31px;
@@ -864,6 +867,7 @@ textarea {
 		flex-shrink: 1;
 		flex-grow: 1;
 
+		cursor: ew-resize;
 		overflow: auto;
 		scrollbar-width: none;   	// standard
 		-ms-overflow-style: none;	// ie?
