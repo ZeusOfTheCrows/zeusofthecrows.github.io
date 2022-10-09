@@ -18,6 +18,7 @@
 
 #nav-btns {
 	text-align: left;
+	user-select: none;
 
 	& li {
 		margin: 0;
@@ -27,6 +28,12 @@
 		padding: 8px;
 		width: 16px;
 		height: 16px;
+		filter: grayscale(100%);
+		&:hover {
+			border-radius: 2px;
+			background-color: var(--bgd-3);
+			filter: none;
+		}
 	}
 }
 
@@ -107,7 +114,7 @@
 		//         	x-ofs,	y-offset,	blur,	spread,	colour
 		box-shadow:	0     	0.2em    	0.5em	-0.1em 	black;
 
-		& h6,
+		& strong,
 		& p {
 			font-size: 1em;
 			display: inline-block;
@@ -116,7 +123,7 @@
 			padding: 0.4em;
 		}
 
-		& h6 {
+		& strong {
 			height: 100%;
 			padding-right: 1em;
 
@@ -196,38 +203,21 @@
 }
 
 .link-list {
-	& tr {
-		display: inline-block;
-
-		& td:nth-child(1) {
-			line-height: 0;
-		}
+	figure {
+		margin: 0;
 	}
-	& td + td {
+	h6 {
+		margin-block: 2px;
+	}
+	& p {
 		display: none;
 	}
-	td:hover,
-	td:focus-within {
-		outline: none;
-		background: var(--d-blu);
-		box-shadow: 2px 2px 2px var(--d-blu);
-		box-shadow: 0 0 8px 4px var(--d-blu);
-	}
-	td:hover + td,
-	td:focus-within + td {
-		display: block;
-		position: absolute;
-		margin-top: 1em;
-		width: 10em;
-		background: var(--bgd-0);
-		padding: 1em;
-		border-radius: 0.2em;
-		box-shadow: 0 0 8px 4px var(--d-blu);
-	}
-	td {
-		margin: 0;
-		padding: 0;
-	}
+}
+
+.mockvert {
+	display: block;
+	width: fit-content;
+	margin-inline: auto;
 }
 
 #johnvert {
