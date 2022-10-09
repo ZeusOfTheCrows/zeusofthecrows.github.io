@@ -202,15 +202,37 @@
 	}
 }
 
+p {
+	max-width: 70ch;
+	margin-inline: auto;
+}
+
 .link-list {
-	figure {
+	& figure {
+		transition: width 2s ease-in-out;
 		margin: 0;
 	}
-	h6 {
+	& h6 {
 		margin-block: 2px;
 	}
 	& p {
 		display: none;
+	}
+}
+.link-list figure:hover {
+	position: relative;
+	isolation: isolate;
+	background-color: var(--bgd-4);
+	width: 88px;
+	border-radius: 2px;
+	padding-inline: 1px;  // why?
+	// box-sizing: content-box;
+	& p {
+		display: block;
+		position: absolute;
+		width: 100%;
+		background-color: var(--bgd-4);
+		// width: min-content;
 	}
 }
 
@@ -224,7 +246,7 @@
 	margin-inline: auto;
 	margin-block: 2em;
 	display: block;
-	max-width: 732px;
+	max-width: 90%;
 	width: 732px;
 	height: 94px;
 	border:none;
