@@ -65,6 +65,7 @@
 	overflow-x: hidden;
 	position: relative;  // for warning banners
 	grid-auto-flow: column;
+	color: var(--txt-1);  // otherwise it inherits wrong?
 
 	& .page-content,
 	& #sidebar-right {
@@ -72,16 +73,16 @@
 		padding-top: max(64px, 5%);
 	}
 
-	/* -- lovely idea, needs work for light mode -- *\
+	// https://htmlcolorcodes.com/color-names/
 	--bgd-0: Black;
-	--bgd-1: #111;  //?
-	--bgd-2: #222;
-	--bgd-3: DarkSlateGrey;
+	--bgd-1: DarkSlateGrey;  //?
+	--bgd-2: SlateGrey;
+	--bgd-3: LightSlateGrey;
 	--bgd-4: DimGrey;
 	--bgd-5: Grey;  //!
-	--txt-4: Wheat;
-	--txt-3: Tan;
-	--txt-2: BurlyWood;
+	--txt-4: Tan;
+	--txt-3: BurlyWood;
+	--txt-2: Wheat;
 	--txt-1: PaleGoldenRod;
 	--txt-0: OldLace;
 
@@ -100,9 +101,39 @@
 	--s-ppl: Plum;
 	--s-aqa: MediumAquamarine;
 	--s-org: Orange;  // ?
-	\* ------------------------------------------- */
 }
 
+@media (prefers-color-scheme: light) {
+	.window-content {
+	--txt-0: Black;
+	--txt-1: DarkSlateGrey;  //?
+	--txt-2: SlateGrey;
+	--txt-3: LightSlateGrey;
+	--txt-4: DimGrey;
+	--bgd-5: Grey;  //!
+	--bgd-4: Tan;
+	--bgd-3: BurlyWood;
+	--bgd-2: Wheat;
+	--bgd-1: PaleGoldenRod;
+	--bgd-0: OldLace;
+
+	--d-red: FireBrick;
+	--d-grn: OliveDrab;
+	--d-ylw: GoldenRod;
+	--d-blu: DodgerBlue;
+	--d-ppl: Orchid;
+	--d-aqa: SeaGreen;
+	--d-org: Chocolate;
+
+	--s-red: DarkRed;
+	--s-grn: DarkGreen;
+	--s-ylw: DarkGoldenrod;
+	--s-blu: MidnightBlue;
+	--s-ppl: RebeccaPurple;
+	--s-aqa: DarkCyan;
+	--s-org: Brown;
+	}
+}
 /* -------------------------------- content -------------------------------- */
 
 #desktop-area {
@@ -208,8 +239,9 @@
 
 .btn-code {
 	display: none;
-	width: 80%;
-	max-width: 32em;
+	box-sizing: border-box;
+	width: 100%;
+	max-width: 34em;
 	min-height: 6em;
 	// font-family: var(--fnt-code);  // not global
 	margin-inline: auto;
@@ -297,8 +329,9 @@ p {
 }
 
 #yoohoovert {
-	width: 746px;
-	height: 110px;
+	box-sizing: border-box;
+	width: 736px;
+	height: 96px;
 }
 
 /*======== removed =======*/
