@@ -520,7 +520,7 @@ img.smooth-zoom {
 .indent-9x,
 textarea {
 	margin: 0;
-	background-color: var(--indent-col, var(--bgd-1));
+	background: var(--indent-col, var(--bgd-1));
 	border-width: 2px;
 	border-style: solid;
 	border-top-color:    var(--btn-lolite);
@@ -723,6 +723,17 @@ textarea {
 			text-align: center;
 			color: var(--bgd-0);
 			display: block;
+
+			&.desktop-shortcut {
+				position: relative;
+				&::after {
+					content: url("/stadt/assets/images/desktop-icons/overlay-shortcut.png");
+					position: absolute;
+					left: 0;
+					right: 0;
+					top: 0;
+				}
+			}
 
 			& + .desktop-icon {
 				margin-top: 24px;

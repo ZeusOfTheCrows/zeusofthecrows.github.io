@@ -14,6 +14,10 @@
 	position: relative;
 	display: flex;
 	flex-direction: column;
+
+	& .window-titlebar {
+		background: linear-gradient(90deg, var(--s-org), var(--d-red), var(--bgd-0));
+	}
 }
 
 #nav-btns {
@@ -60,8 +64,10 @@
 	inset: 0;
 	overflow-x: hidden;
 	position: relative;  // for warning banners
+	grid-auto-flow: column;
 
-	& .page-content {
+	& .page-content,
+	& #sidebar-right {
 		padding: max(32px, 5%);
 		padding-top: max(64px, 5%);
 	}
@@ -115,7 +121,7 @@
 		box-shadow:	0     	0.2em    	0.5em	-0.1em 	black;
 
 		& strong,
-		& p {
+		& span {
 			font-size: 1em;
 			display: inline-block;
 			position: relative;
@@ -150,7 +156,7 @@
 		}
 		&.success h6 { background-color: var(--s-grn) !important; }
 
-		& p.banner-close {
+		& span.banner-close {
 			visibility: hidden;
 			position: absolute;
 			background-color: var(--d-blu);
@@ -179,13 +185,30 @@
 	}
 }
 
+#sidebar-right {
+	background-color: var(--bgd-0);
+	--border-style: 4px ridge var(--d-ppl);
+	border-left: var(--border-style);
+}
+
+@media (max-width: 1000px) {
+	.window-content {
+		grid-auto-flow: row;
+	}
+	#sidebar-right {
+		border: none;
+		border-top: var(--border-style);
+	}
+}
+
 .btn-code {
 	display: none;
-	width: 30em;
-	height: 6em;
-	font-family: var(--fnt-code);  // not global
+	width: 80%;
+	max-width: 32em;
+	min-height: 6em;
+	// font-family: var(--fnt-code);  // not global
 	margin-inline: auto;
-	background-color: var(--bgd-2);
+	--indent-col: linear-gradient(var(--bgd-1), var(--bgd-2));
 
 	// &:target {
 	//	display: block;
@@ -197,7 +220,10 @@
 		display: none;
 	}
 
-	& input:checked + textarea {
+	& input:checked + textarea,
+	& input:checked + [contenteditable] {  // nice idea, didn't work
+		// font-family: var(--fnt-code);
+		// white-space: pre-wrap;
 		display: block;
 	}
 }
@@ -213,9 +239,11 @@ p {
 		margin: 0;
 	}
 	& h6 {
-		margin-block: 2px;
+		margin-top: 2px;
+		margin-bottom: 0;
 	}
 	& p {
+		margin-top: 0;
 		display: none;
 	}
 }
@@ -225,7 +253,7 @@ p {
 	background-color: var(--bgd-4);
 	width: 88px;
 	border-radius: 2px;
-	padding-inline: 1px;  // why?
+	padding-right: 2px;  // why?
 	// box-sizing: content-box;
 	& p {
 		display: block;
