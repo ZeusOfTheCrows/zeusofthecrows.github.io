@@ -105,6 +105,11 @@
 
 /* -------------------------------- content -------------------------------- */
 
+#desktop-area {
+	background-color: var(--d-blu);
+	background-image: url("/stadt/assets/images/backgrounds/herringbone.png");
+}
+
 .banner-container {
 
 	position: absolute;
@@ -251,9 +256,9 @@ p {
 	position: relative;
 	isolation: isolate;
 	background-color: var(--bgd-4);
-	width: 88px;
+	// width: 88px;
 	border-radius: 2px;
-	padding-right: 2px;  // why?
+	// padding-right: 2px;  // why?
 	// box-sizing: content-box;
 	& p {
 		display: block;
@@ -268,16 +273,32 @@ p {
 	display: block;
 	width: fit-content;
 	margin-inline: auto;
+	text-align: center;
+
+	// &::before,
+	// &::after {  // ztodo doesn't work for iframes!
+		// margin-block: 1em;
+		// content: "🙬 🙬 🙬 — 🙮 🙮 🙮";
+		// display: block;
+	// }
 }
 
-#johnvert {
-	margin-inline: auto;
+#johnvert,
+#yoohoovert {
 	margin-block: 2em;
 	display: block;
 	max-width: 90%;
+	border:none;
+}
+
+#johnvert {
 	width: 732px;
 	height: 94px;
-	border:none;
+}
+
+#yoohoovert {
+	width: 746px;
+	height: 110px;
 }
 
 /*======== removed =======*/
