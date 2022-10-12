@@ -484,6 +484,10 @@ img.smooth-zoom {
 	width:  88px;
 	height: 31px;
 }
+.btn-88x31.btn-svg {
+	// this shouldn't make a difference, but seems to reduce shimmering on scale
+	image-rendering: auto;
+}
 .btn-176x31 {
 	width:  176px;
 	height: 31px;
@@ -496,7 +500,6 @@ img.smooth-zoom {
 	width: 150px;
 	height: 20px;
 }
-
 .stamp-99x56 {
 	width:  99px;
 	height: 56px;
@@ -718,6 +721,7 @@ textarea {
 
 		max-height: 80vh;
 		overflow-y: auto;
+		scrollbar-width: thin;
 
 		& .desktop-icon {
 			text-align: center;

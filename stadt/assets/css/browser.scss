@@ -239,13 +239,14 @@
 
 .btn-code {
 	display: none;
+	scrollbar-width: thin;
 	box-sizing: border-box;
 	width: 100%;
 	max-width: 34em;
-	min-height: 6em;
+	height: 8em;
 	// font-family: var(--fnt-code);  // not global
 	margin-inline: auto;
-	--indent-col: linear-gradient(var(--bgd-1), var(--bgd-2));
+	--indent-col: linear-gradient(var(--bgd-0), var(--bgd-2));
 
 	// &:target {
 	//	display: block;
@@ -332,6 +333,10 @@ p {
 	box-sizing: border-box;
 	width: 736px;
 	height: 96px;
+}
+
+.img-grid.hover-zoom .btn-svg:hover {
+		transform: scale(3);
 }
 
 /*======== removed =======*/

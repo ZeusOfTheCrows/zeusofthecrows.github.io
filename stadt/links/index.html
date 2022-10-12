@@ -2,7 +2,7 @@
 layout: gc-default
 css-file: browser
 title: outbound links
-programme: " - Gojira Fireraven"
+programme: " - Mojira Fireraven"
 window-icon: globe.png
 edit-date: 2022-10-10
 ---
@@ -12,7 +12,7 @@ edit-date: 2022-10-10
 		<a class="window-title ms-bold">
 			<img class="window-icon pixel-art"
 				src="/stadt/assets/images/window-icons/globe.png" alt="" />
-			outbound links - Gojira Fireraven
+			outbound links - Mojira Fireraven
 		</a>
 		<ul class="window-decs">
 			<li class="window-min"></li>
@@ -655,6 +655,41 @@ edit-date: 2022-10-10
 &lt;a href="https://zeusofthecrows.github.io/"&gt;
 	&lt;img src="/buttons/zeus-term-green.png"
 		alt="ZeusOfTheCrows" /&gt;
+&lt;/a&gt;</textarea>
+
+				<hr />
+
+				<p>
+					this is an svg button - read more on my thoughts about them
+					<a href="/stadt/thoughts#svg">here</a>. i do recommend using it, but
+					it requires a little more setup than a normal .png:
+				</p>
+				<p>
+					declaring the dimensions is necessary (either css or html will do);
+					i recommend not using <code>image-rendering: pixelated;</code> (this
+					shouldn't make a difference, but seems to reduce shimmering);
+					and it will only really render correctly in a browser (i.e. not in
+					gwenview or inkscape)
+				</p>
+
+				<ul class="img-grid hover-zoom img-capts link-list">
+					<li><figure>
+						<label for="retro-btn">
+							<img src="/stadt/assets/images/buttons/my-links/zeus-train.svg"
+								class="btn-88x31 btn-svg"
+								alt="Zeus125 button (svg ver.)" />
+						</label>
+						<figcaption class="img-caption">
+							<h6>125 (svg)</h6>
+						</figcaption>
+					</figure></li>
+
+					<!-- placeholder (and easier css): -->
+					<input type="radio" checked="" />
+					<textarea id="svg-btn-code" class="btn-code">
+&lt;a href="https://zeusofthecrows.github.io/stadt/"&gt;
+	&lt;img src="/buttons/zeus-train"
+		alt="ɀeus' stadt" /&gt;
 &lt;/a&gt;</textarea>
 			</article>
 

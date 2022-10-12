@@ -97,6 +97,11 @@ word-proc: " - Wordpad"
 					class="btn-88x31"
 					alt="animated svg button" />
 			</a></li>
+			<li><a>
+				<img src="/stadt/assets/images/buttons/my-links/zeus-train.svg"
+					class="btn-88x31"
+					alt="animated svg zeus 125 button" />
+			</a></li>
 		</ul>
 
 		<details open="">
@@ -140,8 +145,11 @@ word-proc: " - Wordpad"
 				</tr>
 				<tr>
 					<td>
-						there are no "proprietary" source files (.ase, .xcf), as svg's have
-						layers baked in, and are viewable in a text editor
+						infinite framerate. svg uses timescale animations, which scale to
+						the refresh rate of your monitor, rather than raster's discrete
+						frame aproach (and gif's max fps of
+						<abbr title="or 100hz, but most browsers don't support that">50hz</abbr>
+						which does not fit with most monitor's 60hz)
 					</td>
 					<td>
 						i can't find any programmes that properly support asvg, so
@@ -155,8 +163,16 @@ word-proc: " - Wordpad"
 					</td>
 					<td>
 						depending on the number of elements, they tend to be slightly
-						bigger (~56kb for animated, ~32kb for static; compared to ~16kb for
-						apng, ~22kb for gif) than the tiny 88x31 size of ordinary buttons
+						bigger (now button is ~56kb for animated, ~32kb for static;
+						compared to ~16kb for apng, ~22kb for gif || train button is ~172kb
+						for animated, ~181kb for static; compared to ~35kb for
+						apng, ~57kb for gif) than the tiny 88x31 size of ordinary buttons
+					</td>
+				</tr>
+				<tr>
+					<td>
+						there are no "proprietary" source files (.ase, .xcf), as svg's have
+						layers baked in, and are viewable in a text editor
 					</td>
 				</tr>
 			</table>
@@ -274,7 +290,8 @@ word-proc: " - Wordpad"
 					scale can take either one or two values space separated.
 				</li>
 				<li>
-					for easing, you can either use the keySplines property (the proper
+					for easing, you can either use the
+					<a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/keySplines">keySplines property</a> (the proper
 					way) or the hacky way i did (<code>values="1;0.9;0.6;0.5;0.6;0.9;1</code>)
 					which i think looks fine at small sizes
 				</li>
