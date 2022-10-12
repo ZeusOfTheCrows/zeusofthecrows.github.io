@@ -94,12 +94,12 @@ word-proc: " - Wordpad"
 		<ul class="img-grid hover-zoom">
 			<li><a href="https://www.w3.org/Graphics/SVG/">
 				<img src="/stadt/assets/images/buttons/taskbar/svg.svg"
-					class="btn-88x31"
+					class="btn-88x31 btn-svg"
 					alt="animated svg button" />
 			</a></li>
-			<li><a>
+			<li><a href="/stadt/links#my-links">
 				<img src="/stadt/assets/images/buttons/my-links/zeus-train.svg"
-					class="btn-88x31"
+					class="btn-88x31 btn-svg"
 					alt="animated svg zeus 125 button" />
 			</a></li>
 		</ul>
@@ -136,6 +136,8 @@ word-proc: " - Wordpad"
 					<td>
 						the big one: infinite scalability. your button is future-proof, and
 						can be displayed at any size as sharp as the day you made it
+						(including at non-integer ratios, for thos who have their screen
+						scale at 150%)
 					</td>
 					<td>
 						the support is just not great. it's not even as good as
@@ -191,28 +193,30 @@ word-proc: " - Wordpad"
 				<a href="https://en.m.wikipedia.org/wiki/Comparison_of_vector_graphics_editors">
 				many programmes</a>
 				to do this: i use <a href="https://inkscape.org/">inkscape</a> usually,
-				as i started using it when boxysvg didn't support linux, but i think
-				<a href="https://boxy-svg.com/">boxysvg</a> is better. there are plenty
-				of tutorials for vector editing, so i won't bother to say much about
-				that here
+				as i started using it when boxysvg didn't support linux, but i
+				think <a href="https://boxy-svg.com/">boxysvg</a> is better.
+				there are plenty of tutorials for vector editing, so i won't bother to
+				say much about that here
 			</p>
 			<p>
 				a couple things of note though:
 			</p>
 			<p>
-				i made mine in 88x31, as it was an easy way to get the ratio right, but
-				there's no reason not to make yours in 176x62, or 44x15½, or whatever
+				i made mine in 88x31, as it was an easy way to get the ratio
+				right, but
+				there's no reason not to make yours in 176x62, or 44x15½, or
+				whatever (even non-88:31 ratios, if you don't care about precedent)
 			</p>
 			<p>
 				when you've finished editing, duplicate
-				your text layers, hide one, and <strong>bake the other to paths</strong>
-				(inkscape: <samp>path</samp> → <samp>object to path</samp>). this means
-				if your svg is being viewed on a device without your fonts installed, the
-				text still shows up correctly
+				your text layers, hide one, and <strong>bake the other to
+				paths</strong> (inkscape: <samp>path</samp> → <samp>object to
+				path</samp>). this means if your svg is being viewed on a device
+				without your fonts installed, the text still shows up correctly
 			</p>
 			<p>
-				you'll probably be fine if using something like times new roman, but it's
-				very little effort and makes it more portable
+				you'll probably be fine if using something like times new roman, but
+				it's very little effort and makes it more portable
 			</p>
 		</details>
 
@@ -222,34 +226,34 @@ word-proc: " - Wordpad"
 			<summary><h3>Animating</h3></summary>
 
 			<p>
-				now, you're ready to animate. surprisingly, the best visual editor, i've
-				found, is a browser. <small>i used firefox, but i imagine safari or
-				vivaldi would work just as well.</small>
-				the devtools work for svg as well as html (they're just types of xml), so
-				just open your svg, press <kbd>F12</kbd>, and your changes will be
-				reflected in real time
+				now, you're ready to animate. surprisingly, the best visual editor,
+				i've found, is a browser. <small>i used firefox, but i imagine safari
+				or vivaldi would work just as well.</small> the devtools work for svg
+				as well as html (they're just types of xml), so just open your svg,
+				press <kbd>F12</kbd>, and your changes will be reflected in real time
 			</p>
 			<p>
 				you have three basic tag options:
 			</p>
 			<dl>
 				<dt>
-					<code>&lt;animate&gt;</code>
+					<code>&lt;<span class="obj">animate</span>&gt;</code>
 				</dt>
 				<dd>
 					animate an svg property (e.g. rx {radius x-axis}):
 					<a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/animate">mdn</a>
 				</dd>
 				<dt>
-					<code>&lt;animateTransform&gt;</code>
+					<code>&lt;<span class="obj">animateTransform</span>&gt;</code>
 				</dt>
 				<dd>
 					animate size, rotation, & position (anything that comes under css'
-					<code>transform</code> property). this is the one i used in the above
+					<code><span class="opr">transform</span></code> property). this is
+					the one i used in the above
 					button
 				</dd>
 				<dt>
-					<code>&lt;animateMotion&gt;</code>
+					<code>&lt;<span class="obj">animateMotion</span>&gt;</code>
 				</dt>
 				<dd>
 					move an object along a path. i have never used this
@@ -259,12 +263,14 @@ word-proc: " - Wordpad"
 				<li>
 					decide what type of motion you want, then right click on the element
 					you wish to animate. for the example button, i chose the
-					<code>&lt;g id="text935&gt;</code> as it is the <u>g</u>roup that
+					<code>&lt;<span class="obj">g</span>
+					<span class="opr">id</span>="<span class="val">text935</span>"&gt;</code>
+					as it is the <u>g</u>roup that
 					contains all of the "Now!" letters that i baked to paths.
 				</li>
 				<li>
-					add your <code>&lt;animate[Transform]&gt;</code> tag as an immediate
-					child of your chosen element<sup>†</sup>
+					add your <code>&lt;<span class="obj">animate[Transform]</span>&gt;</code>
+					tag as an immediate child of your chosen element<sup>†</sup>
 					<ul>
 						<li>
 							i believe it can be any child, but i tend to add it as a final
@@ -275,25 +281,35 @@ word-proc: " - Wordpad"
 					</ul>
 				</li>
 				<li>
-					if using <code>&lt;animateTransform type="scale"&gt;</code>, you will
-					probably need a
-					<code>transform-origin</code> css property - i just use trial and
+					if using <code>&lt;<span class="obj">animateTransform</span>
+					<span class="opr">type</span>="<span class="val">scale</span>"&gt;</code>,
+					you will probably need a
+					<code><span class="opr">transform-origin</span></code> css property - i just use trial and
 					error to find it
 				</li>
 				<li>
 					unlike css, no values need units, all are in pixels
 					<br />
-					you can either use <code>from="x [y] [z]"</code> &
-					<code>to="x [y] [z]"</code> properties, or a
-					<code>values="x [y] [z]; x [y] [z]; [x [y] [z]]"</code> property.
+					you can either use <code><span class="opr">from</span>="<span class="val">x [y] [z]</span>"</code>
+					& <code><span class="opr">to</span>="<span class="val">x [y] [z]</span>"</code>
+					properties, or a
+					<code><span class="opr">values</span>="<span class="val">x [y] [z]; x [y] [z]; [x [y] [z]]</span>"</code>
+					property.
 					<br />
 					scale can take either one or two values space separated.
 				</li>
 				<li>
 					for easing, you can either use the
 					<a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/keySplines">keySplines property</a> (the proper
-					way) or the hacky way i did (<code>values="1;0.9;0.6;0.5;0.6;0.9;1</code>)
-					which i think looks fine at small sizes
+					way) or the hacky way i did
+					(<code><span class="opr">values</span>="<span class="val">1;0.9;0.6;0.5;0.6;0.9;1</span>"</code>)
+					which i think looks fine with small, fast-moving objects
+				</li>
+				<li>
+					for a flashing effect, use <code>&lt;<span class="obj">animate</span>
+					<span class="opr">attributeName</span>="<span class="val">opacity</span>"&gt;</code>,
+					with the property
+					<code><span class="opr">calcMode</span>="<span class="val">discrete</span>"</code>
 				</li>
 			</ol>
 			<p>

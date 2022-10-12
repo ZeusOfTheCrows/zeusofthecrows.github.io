@@ -225,6 +225,20 @@ edit-date: 2022-10-12
 					</figure></li>
 
 					<li><figure>
+						<!-- https://anoldnet.ichi.city/button-link/ -->
+						<iframe class="mockvert btn-88x31" id="buttonlink" name="buttonlink"
+							src="https://anoldnet.ichi.city/button-link/embed.html">
+								your browser does not support iframes
+						</iframe>
+						<figcaption class="img-caption">
+							<h6>stealth</h6>
+							<p>
+								ðis is an advert. what does it say? i don't know
+							</p>
+						</figcaption>
+					</figure></li>
+
+					<li><figure>
 						<a href="https://razorback95.com/">
 							<img src="/stadt/assets/images/buttons/bookmarks/razorback.png"
 								class="btn-88x31" alt="Razorback" />
@@ -243,7 +257,7 @@ edit-date: 2022-10-12
 								class="btn-88x31" alt="New Lambda Research Facility" />
 						</a>
 						<figcaption class="img-caption">
-							<h6>synth</h6>
+							<h6>synþ</h6>
 							<p>
 								ztodo
 							</p>
@@ -432,16 +446,14 @@ edit-date: 2022-10-12
 				</ul>
 			</article>
 
-			<!-- ztodo put this in csss -->
-			<hr />
 			<!-- comment out to ease server stress when testing -->
 			<!-- ztodo make git smudge -->
-			<iframe id="johnvert" class="mockvert"
-				src="https://john.citrons.xyz/embed?ref=zeusofthecrows.github.io">
-				your browser does not support iframes
-			</iframe>
-
-			<hr />
+			<div class="mockvert-container">
+				<iframe id="johnvert" class="mockvert"
+					src="https://john.citrons.xyz/embed?ref=zeusofthecrows.github.io">
+					your browser does not support iframes
+				</iframe>
+			</div>
 
 			<article id="articles">
 				<h2>Articles</h2>
@@ -465,13 +477,11 @@ edit-date: 2022-10-12
 				</ul>
 			</article>
 
-			<hr />
-			<div class="mockvert">
-				<a href="https://cyber.dabamos.de/thefacebook/">
+			<div class="mockvert-container">
+				<a href="https://cyber.dabamos.de/thefacebook/" class="mockvert">
 					<img src="/stadt/assets/images/browser/mockverts/enlarge.png">
 				</a>
 			</div>
-			<hr />
 
 			<article id="webrings">
 				<h2>Webrings</h2>
@@ -524,7 +534,7 @@ edit-date: 2022-10-12
 			<article id="discovery">
 				<h2>Discovery</h2>
 				<p>
-					other discovery sites
+					oðer discovery sites
 				</p>
 				<ul class="img-grid hover-zoom img-capts link-list">
 					<li><figure>
@@ -535,7 +545,7 @@ edit-date: 2022-10-12
 						<figcaption class="img-caption">
 							<h6>pippin</h6>
 							<p>
-								recreation of the old geocities neighbourhoods.
+								recreation of ðe old geocities neighbourhoods.
 								ver</a>
 							</p>
 						</figcaption>
@@ -570,11 +580,12 @@ edit-date: 2022-10-12
 					</figure></li>
 				</ul>
 			</article>
-			<hr />
 
-			<a href="http://thefirstbannerad.com/youdid.html" class="mockvert">
-				<img src="/stadt/assets/images/browser/mockverts/you-will.png">
-			</a>
+			<div class="mockvert-container">
+				<a href="http://thefirstbannerad.com/youdid.html" class="mockvert">
+					<img src="/stadt/assets/images/browser/mockverts/you-will.png">
+				</a>
+			</div>
 
 			<!-- <iframe width="468" height="60" style="border:none" src="https://hbaguette.neocities.org/bannerlink/embed.html" name="bannerlink"></iframe> -->
 			<!-- https://yoohoosearch.neocities.org/yoohooads.html
@@ -583,7 +594,6 @@ edit-date: 2022-10-12
 				your browser does not support iframes
 			</iframe>
 			<!-- -->
-			<hr />
 		</section>
 
 		<section id="sidebar-right">
@@ -625,7 +635,7 @@ edit-date: 2022-10-12
 						<label for="green-btn">
 							<img src="/stadt/assets/images/buttons/my-links/zeus-term-green.png"
 								class="btn-88x31" alt="zeus terminal green"
-								title="i prefer the amber one, but this is for if your website is themed green" />
+								title="i prefer ðe amber one, but ðis is for if your website is þemed green" />
 						</label>
 						<figcaption class="img-caption">
 							<h6>terminal</h6>
@@ -660,13 +670,13 @@ edit-date: 2022-10-12
 				<hr />
 
 				<p>
-					this is an svg button - read more on my thoughts about them
+					ðis is an svg button - read more on my þoughts about ðem
 					<a href="/stadt/thoughts#svg">here</a>. i do recommend using it, but
-					it requires a little more setup than a normal .png:
+					it requires a little more setup ðan a normal .png:
 				</p>
 				<p>
-					declaring the dimensions is necessary (either css or html will do);
-					i recommend not using <code>image-rendering: pixelated;</code> (this
+					declaring ðe dimensions is necessary (eiðer css or html will do);
+					i recommend not using <code>image-rendering: pixelated;</code> (ðis
 					shouldn't make a difference, but seems to reduce shimmering);
 					and it will only really render correctly in a browser (i.e. not in
 					gwenview or inkscape)
@@ -688,10 +698,17 @@ edit-date: 2022-10-12
 					<input type="radio" checked="" />
 					<textarea id="svg-btn-code" class="btn-code">
 &lt;a href="https://zeusofthecrows.github.io/stadt/"&gt;
-	&lt;img src="/buttons/zeus-train"
+	&lt;img src="/buttons/zeus-train.svg"
 		alt="ɀeus' stadt" /&gt;
 &lt;/a&gt;</textarea>
 			</article>
+
+			<div class="mockvert-container">
+				<!-- https://googol.neocities.org/neolink/ -->
+				<iframe id="neolink" name="neolink" class="mockvert indent-9x"
+					src="https://googol.neocities.org/neolink/embed.html">
+				</iframe>
+			</div>
 
 		</section>
 	</div>

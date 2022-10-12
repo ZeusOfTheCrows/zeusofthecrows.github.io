@@ -331,7 +331,8 @@ kbd {  // keyboard (ctrl+f)
 }
 
 a {
-	&[href^="http"] {
+	&[href^="http"],
+	&[href^="mailto"] {
 		cursor: alias;
 	}
 	&:link {
@@ -478,13 +479,19 @@ img.smooth-zoom {
 		// background-color:   var(--d-grn);  } non-square buttons
 		transition-delay: 0.5s;  // delay to avoid over-eager images
 	}
+	&[src$=".svg"]:hover,
+	&[src$=".svg"]:focus,
+	&[src$=".svg"]:focus-within {
+		transform: scale(3);
+		image-rendering: auto;
+	}
 }
 
 .btn-88x31 {
 	width:  88px;
 	height: 31px;
 }
-.btn-88x31.btn-svg {
+.btn-88x31[src$=".svg"] {
 	// this shouldn't make a difference, but seems to reduce shimmering on scale
 	image-rendering: auto;
 }

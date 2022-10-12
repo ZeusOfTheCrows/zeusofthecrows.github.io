@@ -302,6 +302,21 @@ p {
 	}
 }
 
+hr {
+	background: none;
+	border: none;
+}
+
+.mockvert-container::before,
+.mockvert-container::after,
+hr::before {
+	content: "⌫⌧⌧⌧⌦";  // 🙮, ⍀⌿⍀⌿⍀⌿⍀⌿⍀,
+	margin-block: 1em;
+	display: block;
+	color: var(--s-grn);
+	text-align: center;
+}
+
 .mockvert {
 	display: block;
 	width: fit-content;
@@ -316,12 +331,20 @@ p {
 	// }
 }
 
-#johnvert,
-#yoohoovert {
+iframe.mockvert {
 	margin-block: 2em;
 	display: block;
 	max-width: 90%;
-	border:none;
+	// border:none;
+}
+
+#buttonlink {
+	width:  88px;
+	height: 31px;
+	margin: 2px 1px;       	//}
+	display: inline;       	//} ztodo these need to match img-grid img
+	vertical-align: middle;	//}
+	border: none;
 }
 
 #johnvert {
@@ -335,9 +358,14 @@ p {
 	height: 96px;
 }
 
-.img-grid.hover-zoom .btn-svg:hover {
-		transform: scale(3);
+#neolink {
+	width:  300px;
+	height: 250px;
 }
+
+// .img-grid.hover-zoom .btn-svg:hover {
+		// transform: scale(3);
+// }
 
 /*======== removed =======*/
 #extensions {
