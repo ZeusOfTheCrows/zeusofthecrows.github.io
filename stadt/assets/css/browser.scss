@@ -284,6 +284,7 @@ p {
 	& h6 {
 		margin-top: 2px;
 		margin-bottom: 0;
+		font-style: italic;
 	}
 	& p {
 		margin-top: 0;
@@ -345,16 +346,21 @@ iframe.mockvert {
 
 #buttonlink {
 	width:  88px;
+	max-width: 100%;
 	height: 31px;
 	margin: 2px 1px;       	//}
 	display: inline;       	//} ztodo these need to match img-grid img
 	vertical-align: middle;	//}
 	border: none;
+	&:hover {
+		transform: scale(2);
+	}
 }
 
 #johnvert {
-	width: 732px;
-	height: 94px;
+	border: none;
+	width: 728px;
+	height: 90px;
 }
 
 #yoohoovert {

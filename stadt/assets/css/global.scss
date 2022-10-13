@@ -467,7 +467,8 @@ img.smooth-zoom {
 	}
 }
 
-.img-grid.hover-zoom img {
+.img-grid.hover-zoom img,
+.img-grid.hover-zoom iframe {  // for buttonlink
 	/* zoom/scale/grow on hover */
 	transition: 0.2s ease-in-out 0s;
 
