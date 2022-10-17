@@ -2153,7 +2153,7 @@
 					 d="M 14.549545,0.74801117 H 38.3613 A 0.41510299,0.41510299 45 0 1 38.776403,1.1631142 V 1.801199 H 14.897413 A 0.347868,0.347868 45 0 1 14.549545,1.453331 Z" />
 			</g>
 		</g>
-		<animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" attributeType="XML" dur="10s" repeatCount="indefinite" type="translate" calcMode="spline" style="animation-timing-function: cubic-bezier;" values="196 0; 0 0; 0 0; -196 0;" keySplines="0.5 0 0.75 1; 0.5 0 0.75 1; 0.5 0 0.75 1;" keyTimes="0; 0.4; 0.6; 1;"/>
+		<animateTransform xmlns="http://www.w3.org/2000/svg" attributeName="transform" attributeType="XML" dur="10s" repeatCount="indefinite" type="translate" calcMode="spline" style="animation-timing-function: cubic-bezier;" values="196 0; 0 0; 0 0; -196 0" keySplines="0.5 0 0.75 1; 0.5 0 0.75 1; 0.5 0 0.75 1" keyTimes="0; 0.4; 0.6; 1" />
 	</g>
 	<g
 		 id="g849"

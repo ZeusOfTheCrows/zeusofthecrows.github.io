@@ -304,6 +304,13 @@ word-proc: " - Wordpad"
 					way) or the hacky way i did
 					(<code><span class="opr">values</span>="<span class="val">1;0.9;0.6;0.5;0.6;0.9;1</span>"</code>)
 					which i think looks fine with small, fast-moving objects
+					<ul>
+						<li>
+							webkit/chromium for some reason throws a hissy fit if anything
+							has a trailing semicolon, so make sure to remove those.
+							(firefox/opera12 is fine with it)
+						</li>
+					</ul>
 				</li>
 				<li>
 					for a flashing effect, use <code>&lt;<span class="obj">animate</span>
@@ -334,7 +341,7 @@ word-proc: " - Wordpad"
 	</div>
 	<footer>
 		<span class="indent-9x write-date"><time>2022-10-07</time></span>
-		<span class="indent-9x  edit-date"><time>2022-10-12</time></span>
+		<span class="indent-9x  edit-date"><time>2022-10-17</time></span>
 	</footer>
 </article>
 
