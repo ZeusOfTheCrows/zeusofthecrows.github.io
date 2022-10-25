@@ -271,6 +271,13 @@
 	}
 }
 
+@media (prefers-color-scheme: light) {
+	#viatrix-award {
+		content: url("/stadt/assets/images/awards/8601-dark.png");
+	}
+
+}
+
 p {
 	max-width: 70ch;
 	margin-inline: auto;
@@ -373,32 +380,3 @@ iframe.mockvert {
 	width:  300px;
 	height: 250px;
 }
-
-// .img-grid.hover-zoom .btn-svg:hover {
-		// transform: scale(3);
-// }
-
-/*======== removed =======*/
-#extensions {
-	max-width: 768px;
-	margin: auto;
-	// text-align: center;
-}
-
-#extensions,
-#extensions td {
-	// padding-left:  2px;
-	// padding-right: 2px;
-	padding: 4px;
-	border: 1px solid var(--d-ppl);
-	border-radius: 4px;
-}
-
-#extensions td:nth-child(1) {
-	text-align: right;
-	// white-space: nowrap;
-}
-#extensions td:nth-child(2) {
-	text-align: center;
-}
-/*======== /removed =======*/
