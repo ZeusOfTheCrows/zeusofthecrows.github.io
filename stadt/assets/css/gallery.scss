@@ -24,6 +24,9 @@
 			& li {
 				padding-inline: 2px;
 			}
+			& figure {
+				margin: 0;
+			}
 			& img {
 				display: block;  // force caption to display on next line
 			}

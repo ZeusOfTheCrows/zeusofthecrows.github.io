@@ -220,7 +220,15 @@ h6 { font-size: 1.2em; }
 h1,
 h2 {
 	border-bottom: 0.1em solid var(--d-org);
-	border-inline: 0.1em solid transparent;  // for mitred corners
+	border-image-source:
+		radial-gradient(
+			circle at bottom,
+			var(--s-org),
+			var(--d-org),
+			transparent
+		);
+	border-image-slice: 1;
+	// border-inline: 0.1em solid transparent;  // for mitred corners
 	& mark {
 		border-bottom-left-radius:  0;
 		border-bottom-right-radius: 0;
@@ -331,8 +339,10 @@ kbd {  // keyboard (ctrl+f)
 }
 
 a {
-	&[href^="http"],
 	&[href^="mailto"] {
+		cursor: progress;
+	}
+	&[href^="http"] {
 		cursor: alias;
 	}
 	&:link {
@@ -387,7 +397,29 @@ code {  // code formating below
 abbr {
 	cursor: help;
 	color: var(--s-aqa);
+	position: relative;
+
+	&:active::after,
+	&:focus::after {
+		position: absolute;
+		content: attr(title);
+
+		font-family: var(--fnt-sans);
+		font-size: 0.8rem;
+		font-weight: normal;
+		font-style: normal;
+
+		width: max-content;
+		left: 0;
+		bottom: -1em;
+		padding: 2px;
+		border-radius: 2px;
+		background-color: var(--s-blu);
+		color: var(--bgd-0);
+	}
 }
+// @media (hover: none)
+
 .ipa {
 	font-family: var(--fnt-ipa);
 }
