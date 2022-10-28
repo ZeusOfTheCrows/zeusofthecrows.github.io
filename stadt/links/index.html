@@ -171,14 +171,7 @@ edit-date: 2022-10-17
 							</p>
 						</figcaption>
 					</figure></li>
-				</ul>
-			</article>
 
-			<article id="interesting">
-				<h2>Interesting</h2>
-				<!-- pages with interesting content that i enjoy browsing -->
-
-				<ul class="img-grid hover-zoom img-capts link-list">
 					<li><figure>
 						<a href="https://capstasher.neocities.org/">
 							<img src="/stadt/assets/images/buttons/bookmarks/cap-stasher.png"
@@ -192,6 +185,26 @@ edit-date: 2022-10-17
 						</figcaption>
 					</figure></li>
 
+					<li><figure>
+						<a href="https://satyrs.eu/">
+							<img src="/stadt/assets/images/buttons/bookmarks/satyrs.png"
+								class="btn-88x31 smooth-zoom" alt="Þe Satyrs' Foreﬅ" />
+						</a>
+						<figcaption class="img-caption">
+							<h6>chære</h6>
+							<p>
+								assume no malice
+							</p>
+						</figcaption>
+					</figure></li>
+				</ul>
+			</article>
+
+			<article id="interesting">
+				<h2>Interesting</h2>
+				<!-- pages with interesting content that i enjoy browsing -->
+
+				<ul class="img-grid hover-zoom img-capts link-list">
 					<li><figure>
 						<a href="https://lataccola.neocities.org/">
 							<img src="/stadt/assets/images/buttons/bookmarks/lataccola.png"
@@ -254,19 +267,6 @@ edit-date: 2022-10-17
 							<h6>datapool</h6>
 							<p>
 								retro computers + more
-							</p>
-						</figcaption>
-					</figure></li>
-
-					<li><figure>
-						<a href="https://satyrs.eu/">
-							<img src="/stadt/assets/images/buttons/bookmarks/satyrs.png"
-								class="btn-88x31 smooth-zoom" alt="Þe Satyrs' Foreﬅ" />
-						</a>
-						<figcaption class="img-caption">
-							<h6>chære</h6>
-							<p>
-								assume no malice
 							</p>
 						</figcaption>
 					</figure></li>
@@ -406,10 +406,10 @@ edit-date: 2022-10-17
 								class="btn-88x31" alt="Mesoscale" />
 						</a>
 						<figcaption class="img-caption">
-							<h6>ztodo</h6>
+							<h6>Garb</h6>
 							<p>
 								whole bunch of cool stuff, nice music (top middle was my
-								favourite)
+								favourite - 新しい日の誕生)
 							</p>
 						</figcaption>
 					</figure></li>
@@ -446,7 +446,7 @@ edit-date: 2022-10-17
 								class="btn-88x31" alt="spiritcellar" />
 						</a>
 						<figcaption class="img-caption">
-							<h6>ztodo</h6>
+							<h6>bookshelf</h6>
 							<p>
 								ztodo
 							</p>
@@ -459,9 +459,10 @@ edit-date: 2022-10-17
 								class="btn-88x31 smooth-zoom" alt="Quartz OSC Hangout" />
 						</a>
 						<figcaption class="img-caption">
-							<h6>quartz</h6>
+							<h6>deprecated</h6>
 							<p>
-								ztodo
+								moved to <a href="https://digitalspace.neocities.org/">digital
+								space+</a>, but not much there yet
 							</p>
 						</figcaption>
 					</figure></li>
@@ -745,6 +746,57 @@ edit-date: 2022-10-17
 				<h2>My Buttons</h2>
 				<ul class="img-grid hover-zoom img-capts link-list">
 					<li><figure>
+						<label for="retro-svg-btn">
+							<img src="/stadt/assets/images/buttons/my-links/zeus-retro.svg"
+								class="btn-88x31 btn-svg"
+								alt="retro button (svg ver.)" />
+						</label>
+						<figcaption class="img-caption">
+							<h6>retro (svg)</h6>
+						</figcaption>
+					</figure></li>
+					<li><figure>
+						<label for="train-svg-btn">
+							<img src="/stadt/assets/images/buttons/my-links/zeus-train.svg"
+								class="btn-88x31 btn-svg"
+								alt="Zeus125 button (svg ver.)" />
+						</label>
+						<figcaption class="img-caption">
+							<h6>125 (svg)</h6>
+						</figcaption>
+					</figure></li>
+				</ul>
+
+				<input type="radio" name="svg-btn-tabs" id="retro-svg-btn" checked="" />
+				<textarea id="retro-svg-btn-code" class="btn-code">
+&lt;a href="https://zeusofthecrows.github.io/stadt/"&gt;
+	&lt;img src="/buttons/zeus-retro.svg"
+		width="88" height="31" alt="ɀeus' stadt" /&gt;
+&lt;/a&gt;</textarea>
+				<input type="radio" name="svg-btn-tabs" id="train-svg-btn" />
+				<textarea id="hst-svg-btn-code" class="btn-code">
+&lt;a href="https://zeusofthecrows.github.io/stadt/"&gt;
+	&lt;img src="/buttons/zeus-train.svg"
+		width="88" height="31" alt="ɀeus' stadt" /&gt;
+&lt;/a&gt;</textarea>
+
+				<p>
+					ðese are svg buttons - <a href="/stadt/thoughts#svg">read more on my
+					þoughts about ðem here</a>. i do recommend using ðem, but
+					ðey requires a little more setup ðan a normal .png - if you find ðem
+					too inconvenient, ðere are normal raster buttons below for your
+					delectation
+				</p>
+				<p>
+					declaring ðe dimensions is necessary (eiðer css or html will do);
+					i recommend not using <code>image-rendering: pixelated;</code> (ðis
+					shouldn't make a difference, but seems to reduce shimmering);
+					and it will only really render correctly in a browser (i.e. not in
+					gwenview or inkscape)
+				</p>
+
+				<ul class="img-grid hover-zoom img-capts link-list">
+					<li><figure>
 						<label for="retro-btn">
 							<img src="/stadt/assets/images/buttons/my-links/zeus-retro.png"
 								class="btn-88x31" alt="Ɀeus retro flowing" />
@@ -808,57 +860,6 @@ edit-date: 2022-10-17
 &lt;a href="https://zeusofthecrows.github.io/"&gt;
 	&lt;img src="/buttons/zeus-term-green.png"
 		alt="ZeusOfTheCrows" /&gt;
-&lt;/a&gt;</textarea>
-
-				<hr />
-
-				<p>
-					ðis is an svg button - read more on my þoughts about ðem
-					<a href="/stadt/thoughts#svg">here</a>. i do recommend using it, but
-					it requires a little more setup ðan a normal .png:
-				</p>
-				<p>
-					declaring ðe dimensions is necessary (eiðer css or html will do);
-					i recommend not using <code>image-rendering: pixelated;</code> (ðis
-					shouldn't make a difference, but seems to reduce shimmering);
-					and it will only really render correctly in a browser (i.e. not in
-					gwenview or inkscape)
-				</p>
-
-				<ul class="img-grid hover-zoom img-capts link-list">
-					<li><figure>
-						<label for="retro-svg-btn">
-							<img src="/stadt/assets/images/buttons/my-links/zeus-retro.svg"
-								class="btn-88x31 btn-svg"
-								alt="retro button (svg ver.)" />
-						</label>
-						<figcaption class="img-caption">
-							<h6>retro (svg)</h6>
-						</figcaption>
-					</figure></li>
-					<li><figure>
-						<label for="train-svg-btn">
-							<img src="/stadt/assets/images/buttons/my-links/zeus-train.svg"
-								class="btn-88x31 btn-svg"
-								alt="Zeus125 button (svg ver.)" />
-						</label>
-						<figcaption class="img-caption">
-							<h6>125 (svg)</h6>
-						</figcaption>
-					</figure></li>
-				</ul>
-
-				<input type="radio" name="svg-btn-tabs" id="retro-svg-btn" checked="" />
-				<textarea id="retro-svg-btn-code" class="btn-code">
-&lt;a href="https://zeusofthecrows.github.io/stadt/"&gt;
-	&lt;img src="/buttons/zeus-retro.svg"
-		alt="ɀeus' stadt" /&gt;
-&lt;/a&gt;</textarea>
-				<input type="radio" name="svg-btn-tabs" id="train-svg-btn" />
-				<textarea id="hst-svg-btn-code" class="btn-code">
-&lt;a href="https://zeusofthecrows.github.io/stadt/"&gt;
-	&lt;img src="/buttons/zeus-train.svg"
-		alt="ɀeus' stadt" /&gt;
 &lt;/a&gt;</textarea>
 			</article>
 
