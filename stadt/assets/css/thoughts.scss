@@ -129,6 +129,78 @@ p {
 	}
 }
 
+#abxy {
+	& kbd {
+		border-radius: 99vmax;
+		padding-top: 0.1em;
+
+		&.s-o::after {
+			color: var(--s-red);
+			content: "Ο";
+		}
+		&.s-x::after {
+			color: var(--s-blu);
+			content: "Χ";
+		}
+		&.s-t::after {
+			color: var(--s-grn);
+			content: "Δ";
+		}
+		&.s-s::after {
+			color: var(--s-ppl);
+			content: "Π";
+		}
+		&.n-a::after {
+			color: var(--s-red);
+			content: "A";
+		}
+		&.n-b::after {
+			color: var(--s-ylw);
+			content: "B";
+		}
+		&.n-x::after {
+			color: var(--s-blu);
+			content: "X";
+		}
+		&.n-y::after {
+			color: var(--s-grn);
+			content: "Y";
+		}
+		&.x-a::after {
+			color: var(--s-grn);
+			content: "A";
+		}
+		&.x-b::after {
+			color: var(--s-red);
+			content: "B";
+		}
+		&.x-x::after {
+			color: var(--s-blu);
+			content: "X";
+		}
+		&.x-y::after {
+			color: var(--s-ylw);
+			content: "Y";
+		}
+		&.d-a::after {
+			color: var(--s-red);
+			content: "A";
+		}
+		&.d-b::after {
+			color: var(--s-blu);
+			content: "B";
+		}
+		&.d-x::after {
+			color: var(--s-ylw);
+			content: "X";
+		}
+		&.d-y::after {
+			color: var(--s-grn);
+			content: "Y";
+		}
+	}
+}
+
 #pirated-music {
 	margin: 1em;
 	padding: 1em;
@@ -163,10 +235,6 @@ td {
 		width: fit-content;
 		display: inherit;
 	}
-}
-
-td {
-	width: 50%;  // ztodo this is not stable
 }
 
 // blockquote::before {

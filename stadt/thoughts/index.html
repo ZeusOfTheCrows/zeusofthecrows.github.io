@@ -159,7 +159,8 @@ word-proc:
 						infinite framerate. svg uses timescale animations, which scale to
 						the refresh rate of your monitor, rather than raster's discrete
 						frame aproach (and gif's max fps of
-						<abbr title="or 100hz, but most browsers don't support that">50hz</abbr>
+						<a href="https://wunkolo.github.io/post/2020/02/buttery-smooth-10fps/"
+							title="or 100hz, but most browsers don't support that">50hz</a>
 						which does not fit with most monitor's 60hz). just look at that
 						silky smooth animation
 					</td>
@@ -347,12 +348,12 @@ word-proc:
 				<a href="https://edutechwiki.unige.ch/en/SVG-SMIL_animation_tutorial">tutorials</a>
 				i have found
 			</p>
-			<p>
+			<footer><small>
 				<sup>†</sup> if using <code>animateTransform</code>, it will override
 				any <code>transform="whatever(x)"</code> property. either apply this to
 				all children manually, or move/scale the object without using
 				<code>transform=""</code>
-			</p>
+			</small></footer>
 		</details>
 
 		<img src="/stadt/assets/images/buttons/taskbar/svg.svg"
@@ -389,16 +390,10 @@ word-proc:
 		</ul>
 	</div>
 	<div class="window-content indent-9x">
-		<style type="text/css">
-			#abxy kbd {
-				border-radius: 99vmax;
-			}
-		</style>
 		<h2>I Prefer the Nintendo/PS-Japan Controller Layout</h2>
-
 		<p>
 			in light of sony changing their enter button to
-			<kbd style="color:var(--s-blu);">X</kbd> in japan to mirror the
+			<kbd class="s-x"></kbd> in japan to mirror the
 			western layout, i thought i'd write down why i think they made the wrong
 			choice
 		</p>
@@ -409,19 +404,19 @@ word-proc:
 		<p>
 			now, as much as i loathe sony, when talking about button placements it's
 			easier to use the unambiguous ones; so from here on out:
-			<kbd style="color:var(--s-red);">Ο</kbd> = ntdo
-			<kbd style="color:var(--s-red);">A</kbd>, xinput
-			<kbd style="color:var(--s-red);">B</kbd>;&nbsp;&nbsp;
-			<kbd style="color:var(--s-blu);">Χ</kbd> = ntdo
-			<kbd style="color:var(--s-ylw);">B</kbd>, xinput
-			<kbd style="color:var(--s-grn);">A</kbd>;&nbsp;&nbsp;
-			<kbd style="color:var(--s-ppl);">Π</kbd> = ntdo
-			<kbd style="color:var(--s-grn);">Y</kbd>, xinput
-			<kbd style="color:var(--s-blu);">X</kbd>;&nbsp;&nbsp;
-			<kbd style="color:var(--s-grn);">Δ</kbd> = ntdo
-			<kbd style="color:var(--s-blu);">X</kbd>, xinput
-			<kbd style="color:var(--s-ylw);">Y</kbd>
-		</p>
+			<kbd class="s-o"></kbd> = ntdo
+			<kbd class="n-a"></kbd>, xinput
+			<kbd class="x-b"></kbd>;&nbsp;&nbsp;
+			<kbd class="s-x"></kbd> = ntdo
+			<kbd class="n-b"></kbd>, xinput
+			<kbd class="x-a"></kbd>;&nbsp;&nbsp;
+			<kbd class="s-s"></kbd> = ntdo
+			<kbd class="n-y"></kbd>, xinput
+			<kbd class="x-x"></kbd>;&nbsp;&nbsp;
+			<kbd class="s-t"></kbd> = ntdo
+			<kbd class="n-x"></kbd>, xinput
+			<kbd class="x-y"></kbd>
+		</px>
 		<ul>
 			<li>
 				it just makes sense. most of us live in a left→right society, so the
@@ -429,25 +424,50 @@ word-proc:
 				having ✘ to accept is just wrong
 			</li>
 			<li>
-				it allows <kbd style="color:var(--s-blu);">X</kbd> to be "primary
-				action" (i.e. jump, dodge) and <kbd style="color:var(--s-red);">O</kbd>
+				it allows <kbd class="s-x"></kbd> to be "primary
+				action" (i.e. jump, dodge) and <kbd class="s-o"></kbd>
 				to be "interact", allowing one to pick up an item and dismiss the
 				prompt with ease (e.g. dark souls)
 				<ul>
 					<li>
 						i hoped breath of the wild would make this mainstream, especially
-						with jump on <kbd style="color:var(--s-grn);">Δ</kbd>
+						with jump on <kbd class="s-t"></kbd>
 					</li>
 				</ul>
 			</li>
 			<li>
 				it spreads wear evenly. on my xbox controllers
-				<kbd style="color:var(--s-blu);">X</kbd> is worn out and mushy, whereas
-				on my switch controller <kbd style="color:var(--s-blu);">X</kbd
-				>/<kbd style="color:var(--s-red);">O</kbd> are roughly even
+				<kbd class="s-x"></kbd> is worn out and mushy, whereas
+				on my switch controller <kbd class="s-x"></kbd>/<kbd class="s-o"></kbd>
+				are roughly even
 			</li>
 			<li>
-				the nintendo layout came first (sort of)
+				the nintendo layout came first<sup>†</sup>
+			</li>
+			<li>
+				ordinally, sony's buttons match nintendo's layout:
+				<table>
+					<tr>
+						<td><kbd class="n-a"></kbd></td>
+						<td><kbd class="s-o"></kbd></td>
+						<td>1st letter in sequence, takes 1 stroke to draw</td>
+					</tr>
+					<tr>
+						<td><kbd class="n-b"></kbd></td>
+						<td><kbd class="s-x"></kbd></td>
+						<td>2nd letter in sequence, takes 2 strokes to draw</td>
+					</tr>
+					<tr>
+						<td><kbd class="n-x"></kbd></td>
+						<td><kbd class="s-t"></kbd></td>
+						<td>3rd letter in sequence, takes 3 strokes to draw</td>
+					</tr>
+					<tr>
+						<td><kbd class="n-y"></kbd></td>
+						<td><kbd class="s-s"></kbd></td>
+						<td>4th letter in sequence, takes 4 strokes to draw</td>
+					</tr>
+				</table>
 			</li>
 			<li>
 				sony specific: from a business perspective, too. sony would be in the
@@ -468,10 +488,46 @@ word-proc:
 			<a href="https://zeusofthecrows.github.io/games/mods/nsx-buttons">this page</a>
 			might be up your street
 		</p>
+		<footer><small>
+			<sup>†</sup>okay so, for further clarification:
+			<ol>
+				<li>
+					the super famicom controller was released in 1990, and the sega
+					megadrive <strong>6 button</strong> controller was only released in
+					1993, but that's almost irrelevant because:
+				</li>
+				<li>
+					<kbd class="s-o"></kbd> for enter wasn't standardised at that point
+					(in fact, first-party games such as super mario all-stars used
+					<kbd class="s-x"></kbd> for accept)
+				</li>
+				<li>
+					as to when that layout was standardised, i don't know but possibly
+					not until the release of the sony playstation in japan; but even
+					then the most common western layout was <kbd class="s-x"></kbd> for
+					accept and <kbd class="s-t"></kbd> for back
+				</li>
+				<li>
+					xinput inherited its layout from the dreamcast layout,
+					(<kbd class="d-a"></kbd>/<kbd class="d-b"></kbd>/<kbd class="d-x"></kbd>/<kbd class="d-y"></kbd>
+					- the only one not to have a blue X button), but i don't
+					know whether A for accept was set by sega or microsoft
+				</li>
+				<li>
+					also, despite pioneering the modern four button layout with the
+					snes, nintendo relinquished that with first the n64 controller for
+					3-armed aliens, and then the gamecube; not coming back to that
+					layout until i believe the wii pro controller (2006), when they did
+					re-standardise their own layout, but far later than everyone else
+				</li>
+			</ol>
+			so whether you believe the nintendo layout actually came first, is a
+			little subjective i think
+		</small></footer>
 	</div>
 	<footer>
 		<span class="indent-9x write-date"><time>2022-07-17</time></span>
-		<span class="indent-9x  edit-date"><time>2022-07-17</time></span>
+		<span class="indent-9x  edit-date"><time>2022-10-28</time></span>
 	</footer>
 </article>
 
@@ -732,11 +788,11 @@ word-proc:
 			</blockquote>
 			piracy is like this. somebody else is putting stuff up for free,
 			that you can duplicate by
-			<span class="captioned"
+			<abbr
 				title="any sufficiently advanced technology is indistinguishable from magic
 								- arthur c. clarke">
 				magic.
-			</span>why would you pass on this‽
+			</abbr>why would you pass on this‽
 		</p>
 		<hr />
 		<p>
@@ -806,11 +862,11 @@ word-proc:
 				take the word of several internet schmucks
 			</a>
 		</p>
-		<footer>
+		<footer><small>
 			<sup>†</sup>however, even if i've persuaded you with this piece, i
 			encourage you to form your own conclusions on what you consider
 			acceptable piracy
-		</footer>
+		</small></footer>
 	</div>
 	<footer>
 		<span class="indent-9x write-date"><time>2022-06-28</time></span>
@@ -932,7 +988,7 @@ word-proc:
 			|  (__ \____\_)_)
 			 \____)
 		</pre>
-		<footer><sup>†</sup>or demon's souls, elden ring, etc.</footer>
+		<footer><small><sup>†</sup>or demon's souls, elden ring, etc.</small></footer>
 	</div>
 	<footer>
 		<span class="indent-9x write-date"><time>2022-06-26</time></span>

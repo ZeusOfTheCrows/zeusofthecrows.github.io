@@ -48,8 +48,8 @@ znotes: maybe abstract all these out to layout + grid-windows.css?
 		<p>
 			this will serve as both a gallery, and a credits page:
 		</p>
-		<details class="indent-9x" style="padding-inline: 2ch;">
-			<summary class="h-summ">More Info, & Contents</summary>
+		<details class="indent-9x" open="">
+			<summary class="h-summ">Contents</summary>
 			<ol id="contents" style="margin-inline: auto;">
 				<li style="--img: url('/stadt/assets/images/window-icons/buttons.png');">
 					<a href="#buttons">buttons [88x31]</a>
@@ -69,7 +69,10 @@ znotes: maybe abstract all these out to layout + grid-windows.css?
 					</a>
 				</li>
 			</ol>
-			<hr />
+		</details>
+		<hr />
+		<details class="indent-9x"  style="padding-inline: 2ch;">
+			<summary class="h-summ">More Info</summary>
 			<p>
 				hover over each image for more source: green means original creator,
 				yellow means where i found the image.
@@ -1047,9 +1050,19 @@ znotes: maybe abstract all these out to layout + grid-windows.css?
 			</figure></li>
 			<li><figure>
 				<a href="https://libresprite.github.io/">
-					<img src="/stadt/assets/images/buttons/brands/libresprite.png" class="btn-88x31"
-						alt="libresprite: it's aseprite, but free button"
-						data-img-src="unknown" />
+					<img src="/stadt/assets/images/buttons/brands/libresprite.png"
+						class="btn-88x31"
+						alt="libresprite: it's aseprite, but free button"/>
+				</a>
+				<figcaption class="img-caption">
+					<a class="src z">{{ page.src }}</a>
+				</figcaption>
+			</figure></li>
+			<li><figure>
+				<a href="https://libresprite.github.io/">
+					<img src="/stadt/assets/images/buttons/brands/matrix.png"
+						class="btn-88x31"
+						alt="matrix messenger button" />
 				</a>
 				<figcaption class="img-caption">
 					<a class="src z">{{ page.src }}</a>
