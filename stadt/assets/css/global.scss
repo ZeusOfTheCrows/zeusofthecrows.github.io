@@ -502,15 +502,21 @@ img.smooth-zoom {
 .img-grid.hover-zoom img,
 .img-grid.hover-zoom iframe {  // for buttonlink
 	/* zoom/scale/grow on hover */
-	transition: 0.2s ease-in-out 0s;
+	transition:
+		transform 0.2s ease-in-out 0s;
+		// filter    0.7s linear 0s;  // for rainbow hover
 
 	&:hover,
 	&:focus,
 	&:focus-within {
 		transform: scale(2);
+		filter: hue-rotate(360deg);
 		// box-shadow: 0 0 8px var(--d-grn);  } nice idea, doesn't work for
 		// background-color:   var(--d-grn);  } non-square buttons
 		transition-delay: 0.5s;  // delay to avoid over-eager images
+		// transition:  // for rainbow hover
+			// transform 0.2s ease-in-out 0.5s,
+			// filter    0.7s linear 0s;
 	}
 	&[src$=".svg"]:hover,
 	&[src$=".svg"]:focus,
