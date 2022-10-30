@@ -13,6 +13,8 @@ Proudly no Javascript, trackers, or analytics
 
 if you notice casing is inconsistent, i've recently given up on majuscule letters, but don't want to update all my old pages
 
+also, if you're reading an about page, you might be more interested in a site [of this calibre](/stadt/) (/!\ warning: some flashing images)
+
 ---
 
 ## About Me:
@@ -51,24 +53,22 @@ all content on this site, unless otherwise specified, is free for personal and c
 
 ---
 
-
-	   __________
-	   \MWMWMWMWM\             
-	    \MWMWMWMWM         
-	     `\MWMWMWM\            
-	       \MWMWMWM\           
-	        `\WMWMWM ._    
-	        _./MWMWM\\W'v>.
-	   _,sA \WMWMWMW'          
-	.<AVAVA\ \MWMW'            
-	          `\WM             
-	            \W\            
-	             `\\           
-	             .>`\Y-.
+       __________
+       \MWMWMWMWM\
+        \MWMWMWMWM
+         `\MWMWMWM\
+           \MWMWMWM\
+            `\WMWMWM ._
+            _./MWMWM\\W'v>.
+       _,sA \WMWMWMW'
+    .<AVAVA\ \MWMW'
+              `\WM
+                \W\
+                 `\\
+                 .>`\Y-.
 
 ---
 
-![rainbow 88×31 banner](/stadt/assets/images/buttons/rainbow.png){: .gc-button}: this site is lgbt+ friendly
+![rainbow 88×31 banner](/stadt/assets/images/buttons/other/rainbow.png){: .gc-button}: this site is lgbt+ friendly
 
-![zeus 88×31 banner](/stadt/assets/images/buttons/my-links/zeus-term.gif){: .gc-button}: have a geocities button
-
+![zeus 88×31 banner](/stadt/assets/images/buttons/my-links/zeus-term.png){: .gc-button}: have a geocities button
