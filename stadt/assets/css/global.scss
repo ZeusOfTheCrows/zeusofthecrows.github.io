@@ -810,13 +810,28 @@ textarea {
 		position: fixed;
 
 		& #curiosity {
-			top: 5vh;
+			top:   5vh;
 			right: 10vw;
 		}
-		& #leptaniform {
+		& #sprockets {
 			bottom: 5vh;
-			left: 20vw;
-			filter: sepia(1);
+			left:   10vw;
+		}
+		& #polarbear {
+			top:  5vh;
+			left: 10vw;
+		}
+		& #waddle {
+			bottom: 5vh;
+			left:   45vw;
+		}
+		& #skellington {
+			bottom: 4vh;
+			right:  1vw;
+		}
+		& #eye {
+			top:  25vh;
+			left: 40vw;
 		}
 
 		& .wall-img {
