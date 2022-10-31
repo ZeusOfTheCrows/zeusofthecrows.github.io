@@ -171,7 +171,7 @@ html {
 		content: "";
 		display: block;
 		height: 2em;
-		margin: -2em 0 0;
+		margin: -1.4em 0 0;  // why this magic number??
 	}
 
 	& ::selection {
