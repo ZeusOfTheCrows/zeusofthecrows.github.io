@@ -12,7 +12,7 @@ welcome to a miscellany of things i've made for my own benefit, things i've foun
 
 **/!\ data warning: most showcase pages have large images, be wary if using a metered network**
 
-new here? check the stuff i think is least crap:
+new here? [visit my personal subdirectory](/stadt/), or check the stuff i think is least crap:
 
 * [Dsegstended font](/other/fonts#dsegstended)
 * [Amber Terminal Wallpaper Engine](/desktops/wpengine#amber-dec-terminal)

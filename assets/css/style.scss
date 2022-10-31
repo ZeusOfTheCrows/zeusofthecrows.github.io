@@ -167,7 +167,7 @@ a {
 	&:active {
 		text-shadow: 0 0 $text-glow * 1.5;
 	}
-	&:focus {
+	&:focus-visible {
 		outline: none;
 		background: $background-emph;
 		color: $text-12;
@@ -365,6 +365,18 @@ without downcasing the <DIR> text*/
 		&.sc-btm {
 			object-position: bottom;
 	}
+	}
+}
+
+.reshade-container {
+	position: relative;
+	& .sc-rs-before {
+		display: none;
+	}
+	&:hover .sc-rs-before {
+		position: absolute;
+		top: 0;
+		display: block;
 	}
 }
 
