@@ -167,12 +167,13 @@ html {
 	// scroll-behavior: smooth;  // overflow-anchor: none below
 		/* this is here because i think it's semantically easier to read */
 		/* offset anchor link down from the top of the page */
-	& :target:before {
-		content: "";
-		display: block;
-		height: 2em;
-		margin: -1.4em 0 0;  // why this magic number??
-	}
+		// i'm so confused
+	// & :target:before {
+		// content: "";
+		// display: block;
+		// height: 2em;
+		// margin: -1.4em 0 0;  // why this magic number??
+	// }
 
 	& ::selection {
 		border-radius: 0.1em; // this doesn't work but it would be nice if it did
