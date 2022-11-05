@@ -227,6 +227,10 @@ li {
 	}
 }
 
+dd {
+	margin-left: 4ch;
+}
+
 tr td:nth-child(n+2) {
 	/* add padding before all columns of table except first */
 	padding-left: 1ch;

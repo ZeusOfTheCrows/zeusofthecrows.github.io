@@ -9,43 +9,58 @@ notes: ^ is only so typora correctly renders images
 
 # Welcome to my little corner of the internet
 
-Proudly no Javascript, trackers, or analytics
+**proudly no javascript, trackers, or analytics**
 
-if you notice casing is inconsistent, i've recently given up on majuscule letters, but don't want to update all my old pages
+this site is a repository of random shit i've made, that i thought others might enjoy so i've uploaded it to the internet
 
-also, if you're reading an about page, you might be more interested in a site [of this calibre](/stadt/) (/!\ warning: some flashing images)
-
----
-
-## About Me:
-
-miscellany: 
-
-* i prefer #hexa colours to #ahex
-* i own a crt monitor
-* i plan to read the wh40k horus heresy books, but haven't got around to it
-
-Current: Mid-20s, living in UK.
-
-Interests: Everything useless (font design, Greco-roman mythology, the oxford comma, etc.)
-
-Likes: tea, reading, video games, travelling
-
-Dislikes: electron-based programmes, voids, finishing things
-
-Keyboard layout: as close to [this](http://www.keyboard-layout-editor.com/#/gists/706d745d94785947cd75d64f6cd978f9) as I can get on an ISO 105 key
-
-OS: Windows. Not because I like it, but because Linux just isn't very good. (I know I'm going to get hatemail about that)
+if you were looking for an "about me" page, i thing you'll enjoy [this page](/stadt/about/) a lot more
 
 ---
 
-Music: [Spotify](https://open.spotify.com/playlist/5q8crqSxKiqtpIKnAgkYRU?si=UEucTXZZRP2mZ2PBVUpY1A): most genres apart from hiphop/rnb. mostly rock/metal, but a plenty of synthwave (mostly sovietwave), new wave, 1st/2nd wave country, and others.
+### Contact:
 
----
+listed in order of preference:
 
-Other social tedia: [Steam](https://steamcommunity.com/id/zeusofthecrows/) {{ site.sep_char }} [Tumblr](https://zeusofthecrows.tumblr.com/) {{ site.sep_char }} [Reddit](https://www.reddit.com/user/ZeusOfTheCrows/overview) {{ site.sep_char }} [Discord](https://discord.app/ZeusOfTheCrows#0492 "ZeusOfTheCrows#0492") 
-
-Please feel free to contact me about anything. I inevitably won't respond, but don't take that personally, it's just how I am. 
+<dl>
+	<dt>
+		<a href="mailto:zeusofthecrows+site(a)gmail.com?body=remember%20to%20replace%20the%20%40!">email</a>
+	</dt>
+	<dd>
+		preferred method and least likely to be accidentally missed
+	</dd>
+	<dt>
+		<a href="https://matrix.to/#/@zeusofthecrows:matrix.org">matrix</a>
+	</dt>
+	<dd>
+		i haven't really used this, but it seems like a good idea as i'd like to move away from telegram
+	</dd>
+	<dt>discord</dt>
+	<dd>
+		Ɀeus#0492 - discord has no spam settings, so i will ask you if you're a spambot; please don't be offended
+	</dd>
+	<dt>telegram</dt>
+	<dd>
+		i also have a telegram, but it is actually my personal telegram so i'm unwilling to give it out unless necessary
+	</dd>
+	<dt>
+		<a href="https://steamcommunity.com/id/zeusofthecrows/">steam</a>
+	</dt>
+	<dd>
+		games and steam workshop shit
+	</dd>
+	<dt>
+		<a href="https://www.reddit.com/u/zeusofthecrows">reddit</a>
+	</dt>
+	<dd>
+		<del>i only really use reddit because it's the only social media with a scrutable interface, but i do mod a subreddit so i guess i am a redditor™</del>
+	</dd>
+	<dt>
+		<a href="https://zeusofthecrows.tumblr.com/">tumblr</a>
+	</dt>
+	<dd>
+		<del>i quite like tumblr, but the interface is so awful that i hardly use it</del>
+	</dd>
+</dl>
 
 ---
 

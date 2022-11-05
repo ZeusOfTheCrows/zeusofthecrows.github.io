@@ -15,13 +15,13 @@
 	}
 }
 
-#about-site {
-	& table,
-	& td {
-		min-height: 3em;
-		border: 1px solid var(--txt-4);
-	}
+table,
+td {
+	min-height: 3em;
+	border: 1px solid var(--txt-4);
+}
 
+#about-site {
 	& table {
 		& td {
 			padding: 0.4em;
@@ -79,7 +79,8 @@
 	}
 }
 
-.favs-list {
+.favs-list,
+.unfavs-list {
 	list-style: none;
 
 	& .fav-item {
