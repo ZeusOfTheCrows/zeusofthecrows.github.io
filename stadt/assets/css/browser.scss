@@ -1,6 +1,14 @@
 ---
 ---
 
+:root {
+	--titlebar-col: linear-gradient(
+			90deg,
+			var(--s-org),
+			var(--d-red),
+			var(--bgd-0));
+}
+
 /* -------------------------------- layout --------------------------------- */
 
 #window-area {
@@ -14,10 +22,6 @@
 	position: relative;
 	display: flex;
 	flex-direction: column;
-
-	& .window-titlebar {
-		background: linear-gradient(90deg, var(--s-org), var(--d-red), var(--bgd-0));
-	}
 }
 
 #nav-btns {

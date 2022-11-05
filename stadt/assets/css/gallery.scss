@@ -2,6 +2,10 @@
 ---
 /* ---------------------------- windows ----------------------------- */
 
+:root {
+	--titlebar-col: linear-gradient(90deg, var(--d-org), var(--d-red));
+}
+
 #desktop-area {
 	background-image:
 		linear-gradient(to bottom right, var(--d-blu), var(--d-grn));
@@ -47,6 +51,9 @@
 			}
 			& a.v:any-link {  // verified original source
 				color: var(--s-grn);
+				&::after {
+					content: " [🗸]";
+				}
 			}
 			& a.i {  // design inspiration
 				color: var(--s-aqa);
@@ -106,9 +113,6 @@
 
 	// width: 704px;
 	max-height: 960px;
-	& .window-titlebar {
-		background: linear-gradient(90deg, var(--d-org), var(--d-red));
-	}
 }
 
 p {

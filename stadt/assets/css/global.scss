@@ -604,7 +604,7 @@ textarea {
 }
 .btn-9x,
 .btn-dropdown,
-.window-decs li {  // ztodo window buttons don't click
+.window-decs li {
 	display: inline-block;
 	text-align: center;
 	margin: 1px;
@@ -615,7 +615,7 @@ textarea {
 	user-select: none;
 
 	&:active,
-	&:active::before {  // this needs testing - should only apply to window buttons?
+	&:active::before {
 		border-top-color:    var(--btn-lolite);
 		border-left-color:   var(--btn-lolite);
 		border-bottom-color: var(--btn-hilite);
@@ -639,11 +639,18 @@ textarea {
 }
 
 .window-titlebar {
-	background: linear-gradient(90deg, var(--s-blu), var(--d-blu));
+	background: var(
+		--titlebar-col,
+		linear-gradient(
+			90deg,
+			var(--s-blu),
+			var(--d-blu)));
 	/* hmmnn not sure about this yet - it looks kind of 3d */
 	// background: linear-gradient(to bottom right, var(--s-blu), var(--d-blu));
 	// background-color: var(--s-blu);
-	color: var(--bgd-1);
+	color: var(
+		--title-col,
+		var(--bgd-1));
 
 	position: relative;
 	margin: 0px 0px 2px 0px;
@@ -775,15 +782,21 @@ textarea {
 			color: var(--bgd-0);
 			display: block;
 
+			&.desktop-update,
 			&.desktop-shortcut {
 				position: relative;
 				&::after {
-					content: url("/stadt/assets/images/desktop-icons/overlay-shortcut.png");
 					position: absolute;
 					left: 0;
 					right: 0;
 					top: 0;
 				}
+			}
+			&.desktop-update::after {
+				content: url("/stadt/assets/images/desktop-icons/overlay-update.png");
+			}
+			&.desktop-shortcut::after {
+				content: url("/stadt/assets/images/desktop-icons/overlay-shortcut.png");
 			}
 
 			& + .desktop-icon {
