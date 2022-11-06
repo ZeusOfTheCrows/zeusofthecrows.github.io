@@ -73,11 +73,18 @@
 		max-width: 720px;
 	}
 
-	div.log-file {
+	.log-file {
 		border-bottom: 2px solid var(--d-org);
+		border-image-source:
+			radial-gradient(
+				circle at bottom,
+				var(--s-ppl),
+				var(--d-ppl),
+				transparent);
+		border-image-slice: 1;
 		margin-bottom: 2em;
 		&.site-update {
-			color: var(--s-blu);
+			color: var(--s-red);
 			&::before {
 				content: "<site update />";
 				display: block;

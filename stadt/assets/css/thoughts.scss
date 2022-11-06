@@ -8,8 +8,11 @@
 
 #desktop-area {
 
-	background-image:
-		linear-gradient(to bottom right, var(--d-blu), var(--d-ppl)); //, var(--d-red), var(--d-org), var(--d-ylw));
+	background-image: url(/stadt/assets/images/backgrounds/stars.png);
+
+	@media (prefers-color-scheme: light) {
+		background-image: url(/stadt/assets/images/backgrounds/swirl.png);
+	}
 
 	/*
 	background-image:
@@ -22,13 +25,9 @@
 		}
 	*/
 
-		//!\ remember to do this with background images
-		// & .desktop-icons-flex-container {
-			// margin: 32px;
-			// padding: 16px;
-			// background-color: var(--bgd-0);
-			// border-radius: 8px;
-		// }
+	//!\ remember to do this with background images
+	--bg-col: var(--txt-2);
+	--bg-bdr: 2px dotted var(--bgd-0);
 }
 
 .window-content {

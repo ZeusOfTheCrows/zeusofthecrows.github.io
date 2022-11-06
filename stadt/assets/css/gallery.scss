@@ -3,12 +3,20 @@
 /* ---------------------------- windows ----------------------------- */
 
 :root {
-	--titlebar-col: linear-gradient(90deg, var(--d-org), var(--d-red));
+	--titlebar-col: linear-gradient(90deg, var(--d-ppl), var(--d-ppl));
 }
 
 #desktop-area {
 	background-image:
-		linear-gradient(to bottom right, var(--d-blu), var(--d-grn));
+		linear-gradient(
+			to bottom right,
+			var(--d-red),
+			var(--d-org),
+			var(--d-ylw),
+			var(--d-grn),
+			var(--d-blu),
+			var(--d-ppl),
+			var(--d-ppl));
 }
 
 .window-content {

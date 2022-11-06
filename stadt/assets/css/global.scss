@@ -770,8 +770,11 @@ textarea {
 
 	& .desktop-icons-flex-container {
 		width: min-content;
-		margin: 24px;  // in case i add a background
-		padding: 24px;
+		margin: 32px;
+		padding: 16px;
+		// border-radius: 4px;
+		background: var(--bg-col, transparent);
+		border: var(--bg-bdr, none);
 
 		max-height: 80vh;
 		overflow-y: auto;
