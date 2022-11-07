@@ -826,29 +826,49 @@ textarea {
 		display: block;
 		position: fixed;
 
+		& #alucard {
+			bottom: 4vh;
+			right:  1vw;
+		}
+		& #bluescreen {
+			bottom: 6vh;
+			left:   5vw;
+		}
+		& #comp-spin {
+			top:  50vh;
+			left: 50vw;
+		}
 		& #curiosity {
 			top:   5vh;
 			right: 10vw;
 		}
-		& #sprockets {
-			bottom: 5vh;
-			left:   10vw;
+		& #eye {
+			top:  25vh;
+			left: 40vw;
+		}
+		& #lava {
+			bottom: 25vh;
+			right:  35vw;
 		}
 		& #polarbear {
 			top:  5vh;
 			left: 10vw;
 		}
+		& #skellington {
+			bottom: 5vh;
+			right:  22vw;
+		}
+		& #sprockets {
+			bottom: 5vh;
+			left:   10vw;
+		}
 		& #waddle {
 			bottom: 5vh;
 			left:   45vw;
 		}
-		& #skellington {
-			bottom: 4vh;
-			right:  1vw;
-		}
-		& #eye {
-			top:  25vh;
-			left: 40vw;
+		& #www {
+			top:  5vh;
+			left: 50vw;
 		}
 
 		& .wall-img {
@@ -905,7 +925,7 @@ textarea {
 	}
 
 	& #btn-start {
-		cursor: not-allowed;
+		cursor: cell;
 		box-sizing: border-box;
 		width: 88px;
 		height: 31px;

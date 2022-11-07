@@ -1,0 +1,65 @@
+---
+---
+/* ---------------------------- windows ----------------------------- */
+
+:root {
+	--titlebar-col:
+		linear-gradient(
+			to right,
+			var(--s-ylw),
+			var(--bgd-0),
+			var(--s-ylw),
+			var(--bgd-0),
+			var(--s-ylw),
+			var(--bgd-0),
+			var(--s-ylw),
+			var(--bgd-0),
+			var(--s-ylw));
+	--bg-col: var(--txt-2);
+	--bg-bdr: 2px dotted var(--bgd-0);
+}
+
+#desktop-area {
+	background-image: url("/stadt/assets/images/backgrounds/chainlink.png");
+}
+
+.window-content {
+		padding: 16px;
+		flex-grow: 1;
+		overflow-y: scroll;  // add dummy scrollbar for notepad æsthetic
+
+}
+
+#window-area {
+	padding-top:         	32px;
+	padding-right:       	32px;
+	padding-left: calc(  	32px + var(--dt-padd));
+	padding-bottom: calc(	32px + var(--tb-hite));
+	display: grid;
+	place-items: center;
+	// justify-content: center;
+	// grid-template-columns: repeat(auto-fill, minmax(auto, 48em));
+	gap: 4vw;
+}
+
+.window-9x {
+	z-index: 10;  // why does removing this break everything?
+	position: static;
+	display: flex;
+	flex-direction: column;
+
+	max-height: 960px;
+}
+
+p {
+	margin-block: 1.5em;
+}
+
+/* ------------------------ specific tweaks ------------------------- */
+
+
+.window-9x:last-child {
+	margin-bottom: 24vw;
+}
+
+/* -------------------------- decorations --------------------------- */
