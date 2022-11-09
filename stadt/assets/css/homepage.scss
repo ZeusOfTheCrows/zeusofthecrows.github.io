@@ -3,7 +3,8 @@
 /* for nojs */
 @font-face {
 	font-family: "04b03";
-	src: url("/stadt/assets/fonts/04B03.ttf") format("truetype");
+	src: url("/stadt/assets/fonts/04B03.woff")  format("woff");
+	src: url("/stadt/assets/fonts/04B03.woff2") format("woff2");
 }
 
 @font-face {
