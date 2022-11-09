@@ -293,13 +293,24 @@ znotes: maybe abstract all these out to layout + grid-windows.css?
 			<li><figure>
 				<a href="/stadt/thoughts#svg">
 					<img src="/stadt/assets/images/buttons/taskbar/svg.svg"
+						class="btn-88x31 btn-svg" alt="scalable vector graphics now button"
+						alt="alternative svg button based on viatrix' one" />
+				</a>
+				<figcaption class="img-caption">
+					<a class="src z">{{ page.src }}</a>
+				</figcaption>
+			</figure></li>
+			<li><figure>
+				<a href="/stadt/thoughts#svg">
+					<img src="/stadt/assets/images/buttons/taskbar/svg-ns.svg"
 						class="btn-88x31 btn-svg" alt="svg now button"
-						title="this is an experimental idea
-						- please tell me if it's broken for you"
 						alt="animated svg button" />
 				</a>
 				<figcaption class="img-caption">
 					<a class="src z">{{ page.src }}</a>
+					{{ page.sep }}
+					<a class="i"
+						href="https://mincerafter42.github.io/">{{ page.insp }}</a>
 				</figcaption>
 			</figure></li>
 			<li><figure>
@@ -727,7 +738,7 @@ znotes: maybe abstract all these out to layout + grid-windows.css?
 			</figure></li>
 			<li><figure>
 				<a>
-					<img src="/stadt/assets/images/buttons/taskbar/svg-static.svg"
+					<img src="/stadt/assets/images/buttons/taskbar/svg-ns-static.svg"
 						class="btn-88x31"
 						alt="non-animated svg button" />
 				</a>
