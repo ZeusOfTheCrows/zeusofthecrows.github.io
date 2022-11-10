@@ -29,23 +29,25 @@
 	<path d="m 0,29 v 3 h 88 v -3" fill="url(#bv)" id="path22" style="display:inline" inkscape:label="btm"/>
 	<path d="M 0,0 H 3 V 31 H 0" fill="url(#w)" id="path24" style="display:inline" inkscape:label="left"/>
 	<path d="M 0,0 V 3 H 88 V 0" fill="url(#wv)" id="path26" style="display:inline" inkscape:label="top"/>
-	<g id="g965" inkscape:label="logo" style="display:inline" transform="matrix(0.08007307,0,0,0.08007307,4.0614915,3.4858457)">
+	<g xmlns="http://www.w3.org/2000/svg" id="g965" inkscape:label="logo" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" style="display:inline" transform="matrix(0.08007307,0,0,0.08007307,4.0614915,3.4858457)">
 		<path id="base-9" fill="#000000" d="m 8.5,150 h 283 v 100 c 0,23.5 -18,41.5 -41.5,41.5 H 50 C 26.5,291.5 8.5,273.5 8.5,250 Z"/>
-		<g stroke-width="38.0086" stroke="#000000" id="g939">
-			<g id="g805">
-				<path id="path797" fill="#ffb13b" d="m 65.857541,134.11306 a 22.4171,22.4171 0 1 0 0,31.7026 H 234.15494 a 22.4171,22.4171 0 1 0 0,-31.7026 z"/>
-				<path id="path799" fill="#ffb13b" d="M 101.71269,79.253674 A 22.4171,22.4171 0 1 0 79.295563,101.67079 L 198.29979,220.67504 a 22.4171,22.4171 0 1 0 22.41713,-22.41713 z"/>
-				<path id="path801" fill="#ffb13b" d="m 165.85754,65.815652 a 22.4171,22.4171 0 1 0 -31.7026,0 V 234.11306 a 22.4171,22.4171 0 1 0 31.7026,0 z"/>
-				<path id="path803" fill="#ffb13b" d="M 220.71692,101.67079 A 22.4171,22.4171 0 1 0 198.29979,79.253674 L 79.295563,198.25791 a 22.4171,22.4171 0 1 0 22.417127,22.41713 z"/>
+		<g id="star-container">
+			<g stroke-width="38.0086" stroke="#000000" id="g939">
+				<g id="g805">
+					<path id="path797" fill="#ffb13b" d="m 65.857541,134.11306 a 22.4171,22.4171 0 1 0 0,31.7026 H 234.15494 a 22.4171,22.4171 0 1 0 0,-31.7026 z"/>
+					<path id="path799" fill="#ffb13b" d="M 101.71269,79.253674 A 22.4171,22.4171 0 1 0 79.295563,101.67079 L 198.29979,220.67504 a 22.4171,22.4171 0 1 0 22.41713,-22.41713 z"/>
+					<path id="path801" fill="#ffb13b" d="m 165.85754,65.815652 a 22.4171,22.4171 0 1 0 -31.7026,0 V 234.11306 a 22.4171,22.4171 0 1 0 31.7026,0 z"/>
+					<path id="path803" fill="#ffb13b" d="M 220.71692,101.67079 A 22.4171,22.4171 0 1 0 198.29979,79.253674 L 79.295563,198.25791 a 22.4171,22.4171 0 1 0 22.417127,22.41713 z"/>
+				</g>
+				
 			</g>
-			<animateTransform attributeType="XML" repeatCount="indefinite" attributeName="transform" type="rotate" values="0 150 150; 0 150 150; 360 150 150" calcMode="spline" keySplines="0.5 0 0.75 1; 0.5 0 0.75 1" keyTimes="0; 0.8; 1" dur="6s"/>
-		</g>
-		<g id="g815" style="display:inline">
-			<path fill="#ffb13b" d="m 65.8513,134.1487 a 22.4171,22.4171 0 1 0 0,31.7026 h 168.2974 a 22.4171,22.4171 0 1 0 0,-31.7026 z" id="path807"/>
-			<path fill="#ffb13b" d="M 101.70645,79.289322 A 22.4171,22.4171 0 1 0 79.289322,101.70645 L 198.29355,220.71068 a 22.4171,22.4171 0 1 0 22.41713,-22.41713 z" id="path809"/>
-			<path fill="#ffb13b" d="m 165.8513,65.8513 a 22.4171,22.4171 0 1 0 -31.7026,0 v 168.2974 a 22.4171,22.4171 0 1 0 31.7026,0 z" id="path811"/>
-			<path fill="#ffb13b" d="M 220.71068,101.70645 A 22.4171,22.4171 0 1 0 198.29355,79.289322 L 79.289322,198.29355 a 22.4171,22.4171 0 1 0 22.417128,22.41713 z" id="path813"/>
-			<animateTransform attributeType="XML" repeatCount="indefinite" attributeName="transform" type="rotate" values="0 150 150; 0 150 150; 360 150 150" calcMode="spline" keySplines="0.5 0 0.75 1; 0.5 0 0.75 1" keyTimes="0; 0.8; 1" dur="6s"/>
+			<g id="g815" style="display:inline;">
+				<path fill="#ffb13b" d="m 65.8513,134.1487 a 22.4171,22.4171 0 1 0 0,31.7026 h 168.2974 a 22.4171,22.4171 0 1 0 0,-31.7026 z" id="path807"/>
+				<path fill="#ffb13b" d="M 101.70645,79.289322 A 22.4171,22.4171 0 1 0 79.289322,101.70645 L 198.29355,220.71068 a 22.4171,22.4171 0 1 0 22.41713,-22.41713 z" id="path809"/>
+				<path fill="#ffb13b" d="m 165.8513,65.8513 a 22.4171,22.4171 0 1 0 -31.7026,0 v 168.2974 a 22.4171,22.4171 0 1 0 31.7026,0 z" id="path811"/>
+				<path fill="#ffb13b" d="M 220.71068,101.70645 A 22.4171,22.4171 0 1 0 198.29355,79.289322 L 79.289322,198.29355 a 22.4171,22.4171 0 1 0 22.417128,22.41713 z" id="path813"/>
+				
+			</g><animateTransform xmlns="http://www.w3.org/2000/svg" attributeType="XML" repeatCount="indefinite" attributeName="transform" type="rotate" calcMode="spline" keyTimes="0; 0.8; 1" dur="6s" keySplines="0 0 1 1; 0.6 0 0.5 1" values="0 150 150; 0 150 150; 405 150 150"/>
 		</g>
 		<path id="use943" fill="#000000" d="m 8.5,150 h 283 v 100 c 0,23.5 -18,41.5 -41.5,41.5 H 50 C 26.5,291.5 8.5,273.5 8.5,250 Z" opacity="0.85"/>
 		<g id="use945" fill="#ffffff" transform="matrix(2,0,0,2,40,158)" style="display:inline">
@@ -53,7 +55,7 @@
 			<path d="M 73.452,0.024 60.482,62.625 H 49.742 L 36.782,0.024 h 10.74 l 7.6,36.663 7.59,-36.663 z" id="path33"/>
 			<path d="m 91.792,25.952 h 18.334 v 18.334 h 0.005 c 0,10.127 -8.213,18.34 -18.339,18.34 -10.127,0 -18.334,-8.213 -18.334,-18.34 v 0 -25.927 h -0.005 c 0,-10.126 8.212,-18.334 18.339,-18.334 10.121,0 18.334,8.208 18.334,18.334 H 99.385 c 0,-4.19 -3.404,-7.594 -7.593,-7.594 -4.195,0 -7.594,3.404 -7.594,7.594 v 25.927 0 c 0,4.195 3.399,7.594 7.594,7.594 4.189,0 7.588,-3.399 7.593,-7.589 v -0.005 -7.588 h -7.593 z" id="path35"/>
 		</g>
-		<image width="1223.8821" height="387.14639" preserveAspectRatio="none" style="display:none;image-rendering:optimizeQuality" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGIAAAAfCAMAAAArx+gjAAAC/VBMVEUEAgRMhlScAgQcRiQEAvxE CgR0QhQMJgRMUnw0NjxcZgwkCgQsKgSUkhQMEhRUYmQ0NgwMYgxcanyMcixMRkRkbkRkhoxMMhQM LgTMzswUFjwsJiw8Rlx0ftxMVlwcIgzsjiQUEgR0doQUAgTMAgREQgwsFgQcIiR8ghSUonxkdnwU GgRMclRcWmRkFhQ0Ojw0CgTcTlQ8QkwEChRcamxsclQsLiRkZuR8dgwsLgQ0Niw8ZkxkLhRUXlwc KiRUsmSsHhxUYnxcYmy8WhRkYmyEjvwUEhR8hmSUnqxESjRMIgRMUgw8PgRsanx8hpRUVl/EHiRk foQ8OkBkanRkajQkDgzEhiwMegxMUkQ0JiwkIgwkIiYUGhw8EhAMCgw0MhxcPiRMVjwMAgQUshSE FhRMFhQsLmyMnnSEZmwUDgR8gjyMlqRsdnx0Ghw0MjQ0LgxcYpxcZm8cFhRESk5scoCEkqRUWmPs JiQkJioMChwEBgQMWgwsLoxMDgxMUqw8NjxsahT8/vz8mpxMnky0amz8ZmQ0Muz8zszUokT8MmSU eoRERpycqrTMMjQcMhxEdkw8HhT8ZpxEPgycFhRkNjxcWgzMAjRcIiQEGgSUmtS8IiSUbnRUOhwc HiQMbhQ8Qix0gox0anR8inRUWoxUemRsciS8cnxMUmR8foyEihi0JiScmhQkHgRsemQ8PixsNhR8 gnw0JhQcGiyUmpQkLixMplRMXjxERmwkKi1sfpQUKgwsBgRcYmQ8Ogw8CgxcYoQUXhQMHgxkbnwc FgQcBgQcHgRERkwsLjQcGhyMGhSEhpBkPhx8GhRkZgxsFhQ8PhQsDgxMUlRUZlxMSkwsKi8cJgR0 eoxcXmg0PkR8egxkZmQUFhk8PkQkJggMDg5seoRETlREelQsCgxcZnyUlhQMZgxMWlwUFgQUBgQ8 RkxsbnxkbnQMfgw0Kiw0MgxcXgw8DgwsMjQcHhxECgw0NkQsKgw0NhREQhRkdoQ0OkRcanR8dhQs LgxUXmRcYnQao6B3AAAANXRFWHRDb21tZW50AENvcHlyaWdodCAxOTk3IEdyZWcgUm9lbG9mcyAo bmV3dEBwb2JveC5jb20pLodNFyEAAAT7SURBVHiczVZ9bBRFFH85DxGqvYIxdRRPG1aXlISrabNH 0cFUoX5Qoyj41bOV+nFoE0gp224W0+QOe7WaQhqwUiNCjvrVYNI4jbnAYGJiW2LAhLPQuk0vxZAj Bzam/CcR45vZ+45ISWjiu9m52Xe789vfe7/39iAw1wYw9wgIQW68KRmbKwiHojh6pKUgwpTSir71 WZ++xZf7+lw0ZWFxX5u3zTtbFt2BLkRRMhAcrmEucZ/XSUKhWUJ0YBa6laAjDUHtjepuL05uufHm XAiehMChUiNMVMMwyEsGGJQQIGQA0IkesaDUDpTS3xkUVHJZFL//wtZ1+16fXzP52H1P/RF78ffY R0kIakN4nY1cbmpxnBgeYUJHpYdblrgIvSKoSo8iRpeSz+KVT1+bXHjkszvX1RQ//MDJe3csOr0w m0WbEyduiX1ovdYoNyRkVMzA6xvFL7iQl+LWuK/yL7kY3jYUAQ8Y5+t+AU9sQoNxM4cFTpZ85jWW ptkQTOOanmJBhYfaEEQJBhw9+SygZZs6bMbN4f3Hx8Ctqu6GljozwyLk1HHGLRnRRghi6MBIBE/q GaBTq+cgFuJaTHNXsL+7U8lm4Sp1NW1+z/155eYvXO9s/f5B7t80r7U57G+qil9MsrgOk4FCy8lF IT21f3rv1OM1L1stA08WfDy+4a+CD6LfHPDNPB81JQvdiYoN6bOF6OlUgjg7GtIs1MQUTHjoE3Xl Xx3XFxtbjHEfHGwqVAF8TYU2CycGyks4R1lSyqnOw2IVJwwPIhxYwjodC1+NxXhiylO1vjk6qvaB 2111YfXff86cfcjjxisGU3URwsLAvQgnmsXrRY6jhDP/3YQNIrJfKItEGbFz0R10dHfk5CLRnPhw bZtWBDt2QuWqQ/ccOjC5a+cjUGNWRV0VCVtRvc5QG7G1FEVQLoqDiy+pKIZ+WONPBUohXUquouJT g4XvvjX59ZFFu/ctu3/JLVUbls0/u3vTbUWrh6cqJuy6QNmGcEfG7PJgmqWxNISG8iKgTSchHCJO WYqyzJjLPQh3lZuV5k3f+W6NlS+ZWjVk7iqN36GCh8brbBZCt6KwI3Z5oH6ZrAzCRtHNQNSHZqQU pWBhZJo5reXxuGv8GdPXsqDxYCNfXv2lO0HB4x4/o18udbuqpaK8EoZa4rGpKGWkI35g1HYw7h9j SNLORXugQ2lvd+RWd7W75NIVeG4Grnxbfqp8sgU8M/CoGktXN1nb5u2drWh7kEMgm4WEmLcClg/B ilehsq7hxFKzEsp+hh8OZ1W3qIvZvTEwUA7FEXAoeT1qz56lK1f+2P9GybljZc++eezc4ROfHD35 a7pH6bJ/9OpAAaWPtSBXemqQCPZxFqFqKheBQHtHfqfdeBQm8dF/M4vON5Q1lBSZBWUNpyvTLGQX JFI9eBoBW6qyz6acnGPqk3XR1ZETKJuFYYJqQgTEMOSw10kWAkI0Eex0eAfDF4dofqJ9pyFQaRBO sugMdjk68nMxsMD8KfL2mdHY9trC7Zd8F1Tj6drai7XpXDi98sB2it2VW5p8XWRYoMbCjDDIBCrQ k58LoxAi5YJLxLSJmHKkFaWHvKFQrx+YaNm4F8dCwC889duoWIgaN5KBaiXdgUC/kv++uKrxWeko V7SdrUpWdWPB/KdZ4euHkG/vTI+64Sb+qslhB+paQfpfmjYyPaNtkfMIfv4BpyIHXWVHKKoAAAAA SUVORK5CYII= " id="image1057" x="-193.09229" y="-43.53331"/>
+		
 	</g>
 	<g id="g1248" transform="translate(0.46966994,-0.9956713)" inkscape:label="text" style="font-family: &quot;Times New Roman&quot;, serif;">
 		<text xml:space="preserve" style="font-size:7.33333px;line-height:1.1;/*! font-family:&quot;Times New Roman&quot;, serif; */-inkscape-font-specification:'Century Gothic';letter-spacing:0px;word-spacing:0px" x="36.389492" y="10.912677" id="text1833" inkscape:label="cer">
@@ -68,7 +70,7 @@
 			<tspan sodipodi:role="line" x="29.774187" y="27.241314" style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:9.33333px;/*! font-family:'Times New Roman'; */-inkscape-font-specification:'Times New Roman,  Bold';fill:#0402fc;fill-opacity:1" id="tspan1265">G</tspan>
 		</text>
 	</g>
-	<text xml:space="preserve" style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.6667px;line-height:1.25;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.5px;word-spacing:0px;display:inline" x="-26.873222" y="84.234131" id="text1825" transform="rotate(-90)" inkscape:label="now">
-		<tspan sodipodi:role="line" id="tspan1823" x="-26.873222" y="84.234131" style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.6667px;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:1">now!</tspan>
+	<text xmlns="http://www.w3.org/2000/svg" xml:space="preserve" x="-26.873222" y="84.234131" id="text1825" transform="rotate(-90)" inkscape:label="now" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.6667px;font-family:'Times New Roman', serif;-inkscape-font-specification:'Times New Roman, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;letter-spacing:0.5px;word-spacing:0px;">
+		<tspan xmlns="http://www.w3.org/2000/svg" sodipodi:role="line" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" id="tspan1823" x="-26.873222" y="84.234131" style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.6667px;-inkscape-font-specification:'Times New Roman, Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:1">now!</tspan>
 	</text>
 </svg>
