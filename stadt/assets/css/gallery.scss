@@ -3,11 +3,9 @@
 /* ---------------------------- windows ----------------------------- */
 
 :root {
-	--titlebar-col: linear-gradient(90deg, var(--d-ppl), var(--d-ppl));
-}
+	--titlebar-col: linear-gradient(90deg, var(--s-ppl), var(--d-ppl));
 
-#desktop-area {
-	background-image:
+	--dsk-bg-img:
 		linear-gradient(
 			to bottom right,
 			var(--d-red),
@@ -18,6 +16,7 @@
 			var(--d-ppl),
 			var(--d-ppl));
 }
+
 
 .window-content {
 		padding: 16px;

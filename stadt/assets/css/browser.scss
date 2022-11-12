@@ -7,6 +7,9 @@
 			var(--s-org),
 			var(--d-red),
 			var(--bgd-0));
+
+	--dsk-bg-col: var(--d-blu);
+	--dsk-bg-img: url(/stadt/assets/images/backgrounds/herringbone.png);
 }
 
 /* -------------------------------- layout --------------------------------- */
@@ -144,11 +147,6 @@
 	}
 }
 /* -------------------------------- content -------------------------------- */
-
-#desktop-area {
-	background-color: var(--d-blu);
-	background-image: url("/stadt/assets/images/backgrounds/herringbone.png");
-}
 
 .banner-container {
 

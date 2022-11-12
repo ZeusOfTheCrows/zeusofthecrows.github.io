@@ -1,33 +1,29 @@
 ---
 ---
 /* -------------------------------- windows -------------------------------- */
-// :root {
+:root {
 	// can't get it to revert for the windows
 	// scrollbar-color: var(--d-blu) var(--d-ppl) !important;
-// }
 
-#desktop-area {
-
-	background-image: url(/stadt/assets/images/backgrounds/stars.png);
+	--dsk-bg-img: url(/stadt/assets/images/backgrounds/stars.png);
 
 	@media (prefers-color-scheme: light) {
-		background-image: url(/stadt/assets/images/backgrounds/swirl.png);
+		--dsk-bg-img: url(/stadt/assets/images/backgrounds/sky.png);
 	}
 
-	/*
-	background-image:
-		url("/stadt/assets/images/backgrounds/palmtreesblack.png");
-
-		// i don't really like duplicated media queries, but i don't see another way
-		@media (prefers-color-scheme: light) {
-			background-image:
-			url("/stadt/assets/images/backgrounds/palmtreespink.png");
-		}
-	*/
-
 	//!\ remember to do this with background images
-	--bg-col: var(--txt-2);
-	--bg-bdr: 2px dotted var(--bgd-0);
+	--icn-bg-col: var(--txt-2);
+	--icn-bg-bdr: 2px dotted var(--bgd-0);
+}
+@media (prefers-color-scheme: light) {
+	#desktop-area {
+		animation: scroll-bg 8s linear infinite;
+	}
+}
+
+@keyframes scroll-bg {
+	0%  	{ background-position: 128px 128px; }
+	100%	{ background-position: 0px   0px;   }
 }
 
 .window-content {
@@ -128,7 +124,19 @@ p {
 	}
 }
 
+#svg {
+	--titlebar-col: linear-gradient(90deg, var(--s-ylw), var(--d-ylw));
+}
+
 #abxy {
+	--titlebar-col:
+		linear-gradient(
+			90deg,
+			var(--s-grn),
+			var(--s-blu),
+			var(--s-ylw),
+			var(--s-red));
+
 	& kbd {
 		border-radius: 99vmax;
 		padding-top: 0.1em;
@@ -200,9 +208,25 @@ p {
 	}
 }
 
-#pirated-music {
-	margin: 1em;
-	padding: 1em;
+#tabs-and-spaces {
+	--titlebar-col: linear-gradient(90deg, var(--btn-hilite), var(--btn-lolite));
+}
+
+#piracy {
+	--titlebar-col: linear-gradient(90deg, var(--s-ylw), var(--d-ylw));
+	--titlebar-col: linear-gradient(90deg, var(--btn-hilite), var(--btn-lolite));
+	& #pirated-music {
+		margin: 1em;
+		padding: 1em;
+	}
+}
+
+#dark-souls {
+	--titlebar-col: linear-gradient(90deg, var(--s-org), var(--d-org));
+}
+
+#css-puzzle {
+	--titlebar-col: linear-gradient(90deg, var(--s-aqa), var(--d-aqa));
 }
 
 .window-9x:last-child {
@@ -222,18 +246,6 @@ td {
 	border-radius: 8px;
 	border: ridge var(--d-ppl);
 	padding: 0.4em;
-}
-
-#svg summary {  // bit too reliant on the current design of header, but eh
-	margin-inline: auto;
-	width: fit-content;
-	// color: var(--d-org);
-	color: transparent;  // hack to hide confusing duplicate markers?
-
-	& h3 {
-		width: fit-content;
-		display: inherit;
-	}
 }
 
 // blockquote::before {

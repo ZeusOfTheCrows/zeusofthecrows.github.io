@@ -763,18 +763,17 @@ textarea {
 	position: fixed;
 	width:  100%;
 	height: 100%;
-	background-color: var(--d-aqa);
-	background-image: url("/stadt/assets/images/backgrounds/texture.png");
-	// dithered dimming - not sure
-	// background-image: url("/stadt/assets/images/backgrounds/midtone.png");
+	background-color: var(--dsk-bg-col, var(--d-aqa));
+	background-image:
+		var(--dsk-bg-img, url("/stadt/assets/images/backgrounds/texture.png"));
 
 	& .desktop-icons-flex-container {
 		width: min-content;
 		margin: 32px;
 		padding: 16px;
 		// border-radius: 4px;
-		background: var(--bg-col, transparent);
-		border: var(--bg-bdr, none);
+		background: var(--icn-bg-col, transparent);
+		border: var(--icn-bg-bdr, none);
 
 		max-height: 80vh;
 		overflow-y: auto;
@@ -836,7 +835,7 @@ textarea {
 		}
 		& #comp-spin {
 			top:  50vh;
-			left: 50vw;
+			right: 1vw;
 		}
 		& #curiosity {
 			top:   5vh;
@@ -1136,6 +1135,9 @@ textarea {
 	height: 15px;
 	object-fit: none;
 	background-color: black;
+	box-sizing: border-box;
+	border: 1px solid #6cfe0c;
+	vertical-align: top;
 }
 
 /* ============================== animations =============================== */
