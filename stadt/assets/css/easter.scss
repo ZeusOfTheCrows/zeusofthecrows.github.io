@@ -17,10 +17,8 @@
 			var(--s-ylw));
 	--bg-col: var(--txt-2);
 	--bg-bdr: 2px dotted var(--bgd-0);
-}
 
-#desktop-area {
-	background-image: url("/stadt/assets/images/backgrounds/chainlink.png");
+	--dsk-bg-img: url(/stadt/assets/images/backgrounds/chainlink.png);
 }
 
 .window-content {

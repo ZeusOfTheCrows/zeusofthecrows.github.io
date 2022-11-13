@@ -766,6 +766,14 @@ textarea {
 	background-color: var(--dsk-bg-col, var(--d-aqa));
 	background-image:
 		var(--dsk-bg-img, url("/stadt/assets/images/backgrounds/texture.png"));
+	// winter colours:
+	// background-color: var(--dsk-bg-col, var(--d-blu));
+
+	// https://web.archive.org/web/20091027151405/http://www.geocities.com/coondogk9/animsnow.gif
+	// background-image: url("/stadt/assets/images/backgrounds/snow-small.png");
+
+	// https://web.archive.org/web/20040414012444fw_/http://www.geocities.com/joannewww/jwbgs/snow.htm
+	// background-image: url("/stadt/assets/images/backgrounds/snow-large.png");
 
 	& .desktop-icons-flex-container {
 		width: min-content;
@@ -984,7 +992,6 @@ textarea {
 		scrollbar-width: none;   	// standard
 		-ms-overflow-style: none;	// ie?
 		&::-webkit-scrollbar {   	// thanks, chrome
-
 			width: 0;
 			display: none;
 		}

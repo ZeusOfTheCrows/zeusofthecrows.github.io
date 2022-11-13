@@ -1,0 +1,106 @@
+html {
+	background: var(--bgd-5);
+}
+
+body,
+#logoff:target {
+	background-color: black;
+	background-image:
+		linear-gradient(
+			to bottom right,
+			var(--d-red),
+			var(--d-org),
+			var(--d-ylw),
+			var(--d-grn),
+			var(--d-blu),
+			var(--d-ppl),
+			var(--d-ppl));
+	position: fixed;
+	inset: 0;
+	width: auto;
+	height: auto;
+
+	margin: 8px;
+	border-radius: 8px;
+	border: 4px solid var(--btn-hilite);
+	border-top-color: var(--btn-lolite);
+	border-left-color: var(--btn-lolite);
+
+	display: flex !important;  /* important to override inline "none" */
+	justify-content: center;
+	align-items: center;
+}
+#logoff:target {
+	background-image: url(/stadt/assets/images/backgrounds/stars.png);
+}
+
+#logon .window-content {
+	min-width: 32ch;
+	padding: 16px;
+	gap: 8px;
+	grid-auto-flow: column;
+}
+#logon #icon-container {
+	grid-row:    1 / span 2;
+	grid-column: 1 / span 1;
+	width:  8ch;
+	height: 8ch;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#logon #window-intro {
+	grid-row:    1 / span 1;
+	grid-column: 2 / span 1;
+	max-width: 48ch;
+}
+#logon #window-intro p {
+	/* this only matters for the first one, as margin collapse is on */
+	margin-top: 0;
+}
+#logon #fields {
+	grid-row: 3 / span 1;
+	grid-column: 2 / span 1;
+}
+
+#logon #fields td.indent-9x {
+	width: 20ch;
+}
+
+#logon #webrings {
+	grid-row: 4 / span 1;
+	grid-column: 1 / span 3;
+	margin-top: 8px;
+	display: grid;
+	grid-auto-flow: column;
+	place-items: center;
+}
+
+#webrings section,
+#webrings section a {
+	display: inline-block;
+}
+#webrings section + section{
+/*	margin-left: 4px;*/
+}
+
+#logon .btn-9x {
+	margin-top: 0;
+	width: 8ch;
+	grid-row:    1 / span 1;
+	grid-column: 3 / span 1;
+	outline: 2px solid var(--txt-3);
+}
+
+#logoff:target {
+	width:  100%;
+	height: 100%;
+}
+
+#logoff:target p {
+	text-align: center;
+	padding: 8ch;
+	color: var(--s-org);
+	font-size: 3rem;
+	font-weight: bold;
+}
