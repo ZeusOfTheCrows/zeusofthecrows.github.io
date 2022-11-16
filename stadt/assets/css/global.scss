@@ -220,6 +220,42 @@ h6 { font-size: 1.2em; }
 
 h1,
 h2 {
+
+	// doesn't work with in-header spans
+	// https://csspoo.com/line-through-headings
+	// display: flex;
+	// width: 100%;
+	// align-items: center;
+	// // grid-template-columns: minmax(1rem, 1fr) auto minmax(1rem, 1fr);
+	// // grid-auto-flow: column;
+	// gap: 1em;
+
+	// &::before,
+	// &::after {
+	//	content: "";
+	//	height: 0.1em;
+	//	border-radius: 99vmax;
+	// }
+
+	// &::before {
+	//	background-image:
+	//		linear-gradient(
+	//			to left,
+	//			var(--s-org),
+	//			var(--d-org),
+	//			transparent);
+	// }
+
+	// &::after {
+	//	background-image:
+	//		linear-gradient(
+	//			to right,
+	//			var(--s-org),
+	//			var(--d-org),
+	//			transparent);
+	// }
+
+	margin-block: 0.5em;
 	border-bottom: 0.1em solid var(--d-org);
 	border-image-source:
 		radial-gradient(

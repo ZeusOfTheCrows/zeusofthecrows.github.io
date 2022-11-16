@@ -119,8 +119,15 @@
 		}
 		& img {
 			// padding-left: 4ch;  // for tags, superceded by global padding
-			max-width:  min(400px, 100% - 4ch);  // margin size - variable?
+			// max-width:  min(400px, 100% - 4ch);  // margin size - variable?
+			width: calc(100% - 4ch);
+			height: auto;
+			max-width: 400px;
 			max-height: 200px;
+
+			&[src$=svg] {
+				max-height: unset;
+			}
 		}
 	}
 
