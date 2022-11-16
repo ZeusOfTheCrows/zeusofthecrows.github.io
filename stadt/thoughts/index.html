@@ -44,6 +44,9 @@ word-proc:
 			<summary class="h-summ">Contents</summary>
 			<ol id="contents" style="margin-inline: auto;">
 				<li style="--img: url('/stadt/assets/images/window-icons/svg.png');">
+					<a href="#insigniae">historical insigniæ</a>
+				</li>
+				<li style="--img: url('/stadt/assets/images/window-icons/svg.png');">
 					<a href="#svg">resolutionless buttons</a>
 				</li>
 				<li style="--img: url('/stadt/assets/images/window-icons/ctrlr.png');">
@@ -63,6 +66,284 @@ word-proc:
 				</li>
 			</ol>
 	</div>
+</article>
+
+
+<article id="insigniae" class="window-9x">
+	<div class="window-titlebar">
+		<a class="window-title ms-bold">
+			<img class="window-icon"
+				src="/stadt/assets/images/window-icons/svg.png" alt="" />
+			insigniae {{ page.word-proc }}
+		</a>
+		<ul class="window-decs">
+			<li class="window-min"></li>
+			<li class="window-max"></li>
+			<li class="window-cls"></li>
+		</ul>
+	</div>
+	<div class="window-menu">
+		<ul>
+			<li><u>F</u>ile</li>
+			<li><u>E</u>dit</li>
+			<li><u>V</u>iew</li>
+			<li><u>I</u>nsert</li>
+			<li>F<u>o</u>rmat</li>
+			<li><u>H</u>elp</li>
+		</ul>
+	</div>
+	<div class="window-content indent-9x">
+		<h2>The Coolness of Insigniæ Scales with the "Evilness" of the Bearer</h2>
+
+		<p>
+			i cannot explain why this is, but it seems to hold mostly true: one can
+		</p>
+
+		<details>
+			<summary>content warning: nazi symbolism, and similar</summary>
+
+			<table style="font-size: 0.8em">
+				<thead>
+					<tr>
+						<th>benefits</th>
+						<th>malefits</th>
+					</tr>
+				</thead>
+				<tr>
+					<td>
+						the big one: infinite scalability. your button is future-proof, and
+						can be displayed at any size as sharp as the day you made it
+						(including at non-integer ratios, for those who have their screen
+						scale at 150%)
+					</td>
+					<td>
+						the support is just not great. it's not even as good as
+						webp. i think all modern browsers support asvg, but i don't think any
+						image viewers do (certainly gwenview does not).
+					</td>
+				</tr>
+				<tr>
+					<td>
+						infinite framerate. svg uses timescale animations, which scale to
+						the refresh rate of your monitor, rather than raster's discrete
+						frame aproach (and gif's max fps of
+						<a href="https://wunkolo.github.io/post/2020/02/buttery-smooth-10fps/"
+							title="or 100hz, but most browsers don't support that">50hz</a>
+						which does not fit with most monitor's 60hz). just look at that
+						silky smooth animation
+					</td>
+					<td>
+						i can't find any programmes that properly support asvg, so
+						you'll have to write the xml manually
+					</td>
+				</tr>
+				<tr>
+					<td>
+						you'll be the coolest kid on the block, with your button in a
+						unique(ish) format
+					</td>
+					<td>
+						depending on the number of elements, they tend to be slightly
+						bigger (now button is ~56kb for animated, ~32kb for static;
+						compared to ~16kb for apng, ~22kb for gif || train button is ~112kb
+						for animated, ~104kb for static; compared to ~35kb for
+						apng, ~57kb for gif) than the tiny 88x31 size of ordinary buttons
+					</td>
+				</tr>
+				<tr>
+					<td>
+						there are no "proprietary" source files (.ase, .xcf), as svg's have
+						layers baked in, and are viewable in a text editor
+					</td>
+				</tr>
+			</table>
+
+			<p>
+				<strong>update as of <time>2022-10-23</time>:</strong> turns out i'm
+				not original, <a href="https://viatrix.is-hella.gay/">viatrix</a> had
+				already had the idea of svg buttons, though i maintain that animated
+				ones are original. i think hers is cooler than mine though, being
+				modelled after the libpng button:
+				<img src="/stadt/assets/images/buttons/other/svg-viatrix.svg" alt=""
+					style="vertical-align: middle;" class="btn-88x31 btn-svg" />;
+				so i made a new animated one modelled on hers
+			</p>
+		</details>
+
+		<hr />
+
+		<details id="drawing">
+			<summary class="h-summ">Drawing</summary>
+
+			<p>
+				still want to make one? well here's some info:
+			</p>
+			<p>
+				the first thing to do is make your normal svg. there are
+				<a href="https://en.m.wikipedia.org/wiki/Comparison_of_vector_graphics_editors">
+				many programmes</a>
+				to do this: i use <a href="https://inkscape.org/">inkscape</a> usually,
+				as i started using it when boxysvg didn't support linux, but i
+				think <a href="https://boxy-svg.com/">boxysvg</a> is better.
+				there are plenty of tutorials for vector editing, so i won't bother to
+				say much about that here
+			</p>
+			<p>
+				a couple things of note though:
+			</p>
+			<p>
+				i made mine in 88x31, as it was an easy way to get the ratio
+				right, but
+				there's no reason not to make yours in 176x62, or 44x15½, or
+				whatever (even non-88:31 ratios, if you don't care about precedent)
+			</p>
+			<p>
+				when you've finished editing, duplicate
+				your text layers, hide one, and <strong>bake the other to
+				paths</strong> (inkscape: <samp>path</samp> → <samp>object to
+				path</samp>). this means if your svg is being viewed on a device
+				without your fonts installed, the text still shows up correctly
+			</p>
+			<p>
+				you'll probably be fine if using something like times new roman, but
+				it's very little effort and makes it more portable
+			</p>
+		</details>
+
+		<hr />
+
+		<details id="animating" open="">
+			<summary class="h-summ">Animating</summary>
+
+			<p>
+				now, you're ready to animate. surprisingly, the best visual editor,
+				i've found, is a browser. <small>i used firefox, but i imagine safari
+				or vivaldi would work just as well.</small> the devtools work for svg
+				as well as html (they're just types of xml), so just open your svg,
+				press <kbd>F12</kbd>, and your changes will be reflected in real time
+			</p>
+			<p>
+				you have three basic tag options:
+			</p>
+			<dl>
+				<dt>
+					<code>&lt;<span class="obj">animate</span>&gt;</code>
+				</dt>
+				<dd>
+					animate an svg property (e.g. rx {radius x-axis}):
+					<a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/animate">mdn</a>
+				</dd>
+				<dt>
+					<code>&lt;<span class="obj">animateTransform</span>&gt;</code>
+				</dt>
+				<dd>
+					animate size, rotation, & position (anything that comes under css'
+					<code><span class="opr">transform</span></code> property). this is
+					the one i used in the above
+					button
+				</dd>
+				<dt>
+					<code>&lt;<span class="obj">animateMotion</span>&gt;</code>
+				</dt>
+				<dd>
+					move an object along a path. i have never used this
+				</dd>
+			</dl>
+			<ol>
+				<li>
+					decide what type of motion you want, then right click on the element
+					you wish to animate. for the example button (svg-ns.svg kind of
+					modelled after the netscape one), i chose the
+					<code>&lt;<span class="obj">g</span>
+					<span class="opr">id</span>="<span class="val">text935</span>"&gt;</code>
+					as it is the <u>g</u>roup that
+					contains all of the "Now!" letters that i baked to paths.
+				</li>
+				<li>
+					add your <code>&lt;<span class="obj">animate[Transform]</span>&gt;</code>
+					tag as an immediate child of your chosen element<sup>†</sup>
+					<ul>
+						<li>
+							i believe it can be any child, but i tend to add it as a final
+							child by duplicating the last element, right-clicking, selecting
+							"edit as svg", and then deleting the whole thing and typing in my
+							code
+						</li>
+					</ul>
+				</li>
+				<li>
+					if using <code>&lt;<span class="obj">animateTransform</span>
+					<span class="opr">type</span>="<span class="val">scale</span>"&gt;</code>,
+					you will probably need a
+					<code><span class="opr">transform-origin</span></code> css property - i just use trial and
+					error to find it
+				</li>
+				<li>
+					unlike css, no values need units, all are in pixels
+					<br />
+					you can either use <code><span class="opr">from</span>="<span class="val">x [y] [z]</span>"</code>
+					& <code><span class="opr">to</span>="<span class="val">x [y] [z]</span>"</code>
+					properties, or a
+					<code><span class="opr">values</span>="<span class="val">x [y] [z]; x [y] [z]; [x [y] [z]]</span>"</code>
+					property.
+					<br />
+					scale can take either one or two values space separated.
+				</li>
+				<li>
+					for easing, you can either use the
+					<a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/keySplines">keySplines property</a> (the proper
+					way) or the hacky way i did
+					(<code><span class="opr">values</span>="<span class="val">1;0.9;0.6;0.5;0.6;0.9;1</span>"</code>)
+					which i think looks fine with small, fast-moving objects
+					<ul>
+						<li>
+							webkit/chromium for some reason throws a hissy fit if anything
+							has a trailing semicolon, so make sure to remove those.
+							(firefox/opera12 is fine with it)
+						</li>
+					</ul>
+				</li>
+				<li>
+					for a flashing effect, use <code>&lt;<span class="obj">animate</span>
+					<span class="opr">attributeName</span>="<span class="val">opacity</span>"&gt;</code>,
+					with the property
+					<code><span class="opr">calcMode</span>="<span class="val">discrete</span>"</code>
+				</li>
+			</ol>
+			<p>
+				that is what i have found with my experimentation. i will
+				update with more if/when i find it, or you can message me a question,
+				or check the few
+				<a href="https://webdesign.tutsplus.com/tutorials/how-to-use-animatetransform-for-inline-svg-animation--cms-22296">decent</a>
+				<a href="https://edutechwiki.unige.ch/en/SVG-SMIL_animation_tutorial">tutorials</a>
+				i have found
+			</p>
+			<footer><small>
+				<sup>†</sup> if using <code>animateTransform</code>, it will override
+				any <code>transform="whatever(x)"</code> property. either apply this to
+				all children manually, or move/scale the object without using
+				<code>transform=""</code>
+			</small></footer>
+		</details>
+
+
+		<ul class="img-grid" style="margin-inline: auto;">
+			<li>
+				<img src="/stadt/assets/images/buttons/taskbar/svg.svg"
+					style="width: 300px; height: auto;"
+					alt="animated svg button, but massive" />
+			</li>
+			<li>
+				<img src="/stadt/assets/images/buttons/taskbar/svg-ns.svg"
+					style="width: 300px; height: auto;"
+					alt="animated svg button, but massive" />
+			</li>
+		</ul>
+	</div>
+	<footer>
+		<span class="indent-9x write-date"><time>2022-10-07</time></span>
+		<span class="indent-9x  edit-date"><time>2022-10-26</time></span>
+	</footer>
 </article>
 
 <article id="svg" class="window-9x">
