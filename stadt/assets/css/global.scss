@@ -391,6 +391,9 @@ a {
 	&:active, &:focus {
 		color: var(--s-red);
 	}
+	&:hover {
+		outline: 1px dotted;
+	}
 }
 
 /* ========================= class generic styles ========================== */
