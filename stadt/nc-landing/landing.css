@@ -1,7 +1,3 @@
-html {
-	background: var(--bgd-5);
-}
-
 body,
 #logoff:target {
 	background-color: black;
@@ -17,16 +13,18 @@ body,
 			var(--d-ppl));
 	position: fixed;
 	inset: 0;
-	width: auto;
-	height: auto;
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
 
-	margin: 8px;
-	border-radius: 8px;
-	border: 4px solid var(--btn-hilite);
+	/* border-radius: 8px; /* not working due to inset */
+	border: 12px solid var(--btn-hilite);
 	border-top-color: var(--btn-lolite);
 	border-left-color: var(--btn-lolite);
+	outline: 16px solid var(--bgd-3);
+	outline-offset: -8px;
 
-	display: flex !important;  /* important to override inline "none" */
+	display: flex;
 	justify-content: center;
 	align-items: center;
 }
@@ -71,14 +69,15 @@ body,
 	grid-row: 4 / span 1;
 	grid-column: 1 / span 3;
 	margin-top: 8px;
-	display: grid;
-	grid-auto-flow: column;
-	place-items: center;
+	display: flex;
+	flex-wrap: wrap;
 }
 
 #webrings section,
 #webrings section a {
 	display: inline-block;
+	flex-grow: 1;
+	text-align: center;
 }
 #webrings section + section{
 /*	margin-left: 4px;*/
@@ -90,11 +89,6 @@ body,
 	grid-row:    1 / span 1;
 	grid-column: 3 / span 1;
 	outline: 2px solid var(--txt-3);
-}
-
-#logoff:target {
-	width:  100%;
-	height: 100%;
 }
 
 #logoff:target p {

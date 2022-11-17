@@ -55,26 +55,32 @@
 			}
 			& a.src {  // unverified source
 				color: var(--s-ylw);
+				&::after {
+					content: "src [~]";
+				}
 			}
 			& a.v:any-link {  // verified original source
 				color: var(--s-grn);
 				&::after {
-					content: " [🗸]";
+					content: "src [🗸]";
 				}
 			}
 			& a.i {  // design inspiration
 				color: var(--s-aqa);
+				&::after {
+					content: "insp";
+				}
 			}
 			& a.u {  // unknown source (legacy)
 				color: var(--s-red);
 				&::after {
-					content: " [?]";
+					content: "src [?]";
 				}
 			}
 			& a.z {  // ~zeus (made by me)
 				color: var(--s-org);
 				&::after {
-					content: " [ɀ]";
+					content: "src [ɀ]";
 				}
 			}
 		}
