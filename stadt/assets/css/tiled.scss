@@ -1,0 +1,182 @@
+---
+---
+/* ---------------------------- windows ----------------------------- */
+
+:root {
+	--titlebar-col: linear-gradient(90deg, var(--s-ppl), var(--d-ppl));
+
+	--dsk-bg-img:
+		linear-gradient(
+			to bottom right,
+			var(--d-red),
+			var(--d-org),
+			var(--d-ylw),
+			var(--d-grn),
+			var(--d-blu),
+			var(--d-ppl),
+			var(--d-ppl));
+}
+
+
+.window-content {
+		padding: 16px;
+		// height: 90%;
+		flex-grow: 1;
+		overflow-y: scroll;  // add dummy scrollbar for notepad æsthetic
+		overflow-x: hidden;  // hide horisontal scroll on hover scale
+
+		& .img-grid.hover-zoom {
+			padding-inline: 16px;
+			box-sizing: border-box;
+		}
+
+		& .img-grid.img-capts {
+			// caption is centred due to img-grid being centred
+			& li {
+				padding-inline: 2px;
+			}
+			& figure {
+				margin: 0;
+			}
+			& img {
+				display: block;  // force caption to display on next line
+			}
+			& .img-caption {  // hide caption by default
+				transition: opacity 0.1s ease-in-out;
+				opacity: 0;
+			}
+			& li:hover .img-caption,
+			& li:focus-within .img-caption {  // but show it on hover/focus
+				opacity: 1;
+			}
+
+			& a:any-link {
+				text-decoration: underline dotted currentColor 2px;
+			}
+			& a.src {  // unverified source
+				color: var(--s-ylw);
+			}
+			& a.v:any-link {  // verified original source
+				color: var(--s-grn);
+				&::after {
+					content: " [🗸]";
+				}
+			}
+			& a.i {  // design inspiration
+				color: var(--s-aqa);
+			}
+			& a.u {  // unknown source (legacy)
+				color: var(--s-red);
+				&::after {
+					content: " [?]";
+				}
+			}
+			& a.z {  // ~zeus (made by me)
+				color: var(--s-org);
+				&::after {
+					content: " [ɀ]";
+				}
+			}
+		}
+
+		& p {
+			font-size: 0.9em;
+			line-height: 1.2em;
+			text-indent: 2ch;
+		}
+
+		& ol {
+			list-style: lower-alpha;
+
+			& ::marker {
+				color: var(--s-blu);
+			}
+	}
+}
+
+#window-area {
+	// height: 100vh;
+	// position: absolute;
+	padding-top:         	32px;
+	padding-right:       	32px;
+	padding-left: calc(  	32px + var(--dt-padd));
+	padding-bottom: calc(	32px + var(--tb-hite));
+	// margin-top: 20vh;
+	// allow overscrolling - doesn't work with grid:
+	// margin-bottom:   50vh
+	display: grid;
+	// grid-template-columns: repeat(auto-fill, 720px);
+	grid-template-columns: repeat(auto-fill, minmax(auto, 48em));
+	justify-content: center;
+	gap: 4vw;
+}
+
+.window-9x {
+	z-index: 10; // means i can have manually lower
+	position: static;
+	grid-row-end: span 2;
+	display: flex;
+	flex-direction: column;
+
+	// width: 704px;
+	max-height: 960px;
+}
+
+p {
+	margin-block: 1.5em;
+}
+
+/* ------------------------ specific tweaks ------------------------- */
+
+#page-intro {
+	grid-row-end: span 1;
+}
+
+#contents {  // ztodo abstract
+	width: fit-content;
+	margin-inline: auto;
+
+	& li {
+		width: fit-content;
+
+		&::marker {
+			content: var(--img) " ";
+		}
+	}
+}
+
+#other-art .window-content {
+	& figure {
+		width: min-content;
+	}
+
+	& img {
+		max-width:  400px;
+		max-height: 400px;
+		width:  auto;
+		height: auto;
+	}
+}
+
+.window-9x:last-child {
+	margin-bottom: 24vw;
+}
+
+/* -------------------------- decorations --------------------------- */
+
+// :where(ul, ol, dl, p) + :where(h2, h3) {
+hr {
+	background: none;
+	border: 0;
+	margin: 0.5em 0;
+	padding: 0;
+
+	 &::before {
+		 content: "🙡 ✠ ✠ ✠ 🙣";
+		 color: var(--s-grn);
+		font-size: 1rem;
+		display: block;
+		line-height: 1;
+		text-align: center;
+	}
+}
