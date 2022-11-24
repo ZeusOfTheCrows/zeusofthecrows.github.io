@@ -391,7 +391,7 @@ a {
 	&:active, &:focus {
 		color: var(--s-red);
 	}
-	&:hover {
+	&:any-link:hover {
 		outline: 1px dotted;
 	}
 }
@@ -501,6 +501,7 @@ code {
 .btn-80x15,
 .btn-150x20,
 .stamp-99x56,
+.stamp-100x50,
 .tower,
 .pixel-art,
 .desktop-icon img,
@@ -589,6 +590,11 @@ img.smooth-zoom {
 .stamp-99x56 {
 	width:  99px;
 	height: 56px;
+}
+
+.stamp-100x50 {
+	width: 100px;
+	height: 50px;
 }
 
 // .swash-z::first-letter {
@@ -1026,7 +1032,6 @@ textarea {
 		flex-shrink: 1;
 		flex-grow: 1;
 
-		cursor: ew-resize;
 		overflow: auto;
 		scrollbar-width: none;   	// standard
 		-ms-overflow-style: none;	// ie?

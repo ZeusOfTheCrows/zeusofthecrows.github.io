@@ -17,7 +17,7 @@ body,
 	height: 100%;
 	box-sizing: border-box;
 
-	/* border-radius: 8px; /* not working due to inset */
+	border-radius: 16px; /* double-size due to inset */
 	border: 12px solid var(--btn-hilite);
 	border-top-color: var(--btn-lolite);
 	border-left-color: var(--btn-lolite);

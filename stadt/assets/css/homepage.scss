@@ -443,34 +443,9 @@
 
 #welcome-sans {
 	// rainbow text
-	animation: colour-cycle 5s linear infinite;
-	// glitch text (needs work)
-	/* color: var(--txt-0) !important;
-
-	position: relative;
-		// &::before,
-		&::after {
-		position: absolute;
-		left: 0;
-		top: 0;
-		content: "Ɀeus' Stadt";
-		// https://discourse.wicg.io/t/text-content-css-value-akin-to-attr/629/15
-		// https://lists.w3.org/Archives/Public/www-style/2013Oct/0617.html
-		// content: text()
-		text-shadow:
-			0.065em 	0       	0	var(--d-red),
-			-0.045em	-0.065em	0	var(--d-grn),
-			0.045em 	0.065em 	0	var(--d-blu);
-			opacity: 0.8;
-
-		}
-
-		&::after {
-			// color: red !important;
-			animation: glitch-text 5s linear infinite;
-			// clip-path: polygon(0 0, 100% 0, 100% 35%, 0 65%);
-			transform: translate(-0.075em, -0.05em);
-		}*/
+	animation: colour-cycle 2s linear infinite;
+	--shad-size-s: 2px;
+	--shad-size-l: 24px;
 }
 
 @media (prefers-reduced-motion) {
@@ -479,54 +454,53 @@
 	}
 }
 
-@keyframes glitch-text {
-	/* needs work */
-	0% {
-		clip-path: polygon(0% 20%, 100% 0%, 100% 15%, 0% 85%);
-	}
-	19% {
-		clip-path: polygon(0% 20%, 100% 0%, 100% 15%, 0% 85%);
-	}
-	20% {
-		clip-path: polygon(0% 0%, 100% 0%, 100% 35%, 0% 65%);
-	}
-	39% {
-		clip-path: polygon(0% 0%, 100% 0%, 100% 35%, 0% 65%);
-	}
-	40% {
-		clip-path: polygon(0% 0%, 100% 30%, 100% 30%, 0% 20%);
-	}
-	69% {
-		clip-path: polygon(0% 0%, 100% 30%, 100% 30%, 0% 20%);
-	}
-	// 100% {
-		// clip-path: polygon(0% 85%, 100% 90%, 100% 20%, 0% 100%);
-	// }
-}
-
 @keyframes colour-cycle {
 	0% {
 		color: var(--s-org);
+		text-shadow:
+			0 0 var(--shad-size-s, 0) var(--s-org),
+			0 0 var(--shad-size-l, 0) var(--d-org);
 	}
 	14% {
 		color: var(--s-ylw);
+		text-shadow:
+			0 0 var(--shad-size-s, 0) var(--s-ylw),
+			0 0 var(--shad-size-l, 0) var(--d-ylw);
 	}
 	29% {
 		color: var(--s-grn);
+		text-shadow:
+			0 0 var(--shad-size-s, 0) var(--s-grn),
+			0 0 var(--shad-size-l, 0) var(--d-grn);
 	}
 	43% {
 		color: var(--s-aqa);
+		text-shadow:
+			0 0 var(--shad-size-s, 0) var(--s-aqa),
+			0 0 var(--shad-size-l, 0) var(--d-aqa);
 	}
 	57% {
 		color: var(--s-blu);
+		text-shadow:
+			0 0 var(--shad-size-s, 0) var(--s-blu),
+			0 0 var(--shad-size-l, 0) var(--d-blu);
 	}
 	71% {
 		color: var(--s-ppl);
+		text-shadow:
+			0 0 var(--shad-size-s, 0) var(--s-ppl),
+			0 0 var(--shad-size-l, 0) var(--d-ppl);
 	}
 	86% {
 		color: var(--s-red);
+		text-shadow:
+			0 0 var(--shad-size-s, 0) var(--s-red),
+			0 0 var(--shad-size-l, 0) var(--d-red);
 	}
 	100% {
 		color: var(--s-org);
+		text-shadow:
+			0 0 var(--shad-size-s, 0) var(--s-org),
+			0 0 var(--shad-size-l, 0) var(--d-org);
 	}
 }
