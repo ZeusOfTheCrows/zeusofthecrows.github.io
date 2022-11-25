@@ -348,6 +348,12 @@ mark {
 	background-color: var(--s-ylw);
 	color: var(--bgd-0);
 }
+del {
+	text-decoration-color: var(--s-red);
+}
+ins {
+	text-decoration-color: var(--s-grn);
+}
 
 kbd {  // keyboard (ctrl+f)
 	background-color: var(--bgd-3);
