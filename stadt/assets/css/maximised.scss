@@ -14,6 +14,7 @@
 	// max-height: calc(100% - 128px); // i'm not sure this is that great either
 	max-height: 90vh; // i'm not sure this is that great either
 	margin: 8px 24px;
+	display: grid;
 	grid-template-columns: 192px minmax(50%, 1fr) minmax(20%, 384px);
 	gap: 20px;
 }

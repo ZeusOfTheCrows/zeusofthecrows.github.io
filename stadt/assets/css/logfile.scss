@@ -106,6 +106,9 @@
 
 	& a.attachment {
 		text-decoration: none !important;  //overrides link styling
+		&:hover {
+			outline: none;  //overrides link styling
+		}
 
 		&::before,
 		&::after {
@@ -124,9 +127,10 @@
 			height: auto;
 			max-width: 400px;
 			max-height: 200px;
+			object-fit: cover;
 
 			&[src$=svg] {
-				max-height: unset;
+				object-fit: contain;
 			}
 		}
 	}

@@ -794,7 +794,6 @@ textarea {
 .window-content {
 	line-height: 1.3;
 	margin: 2px;
-	display: grid;
 }
 
 /* ============================ specific styles ============================ */
@@ -813,17 +812,18 @@ textarea {
 	position: fixed;
 	width:  100%;
 	height: 100%;
-	background-color: var(--dsk-bg-col, var(--d-aqa));
+	/*background-color: var(--dsk-bg-col, var(--d-aqa));
 	background-image:
-		var(--dsk-bg-img, url("/stadt/assets/images/backgrounds/texture.png"));
+		var(--dsk-bg-img, url("/stadt/assets/images/backgrounds/texture.png"));*/
 	// winter colours:
-	// background-color: var(--dsk-bg-col, var(--d-blu));
+	background-color: var(--dsk-bg-col, var(--d-blu));
 
-	// https://web.archive.org/web/20091027151405/http://www.geocities.com/coondogk9/animsnow.gif
+	/*https://web.archive.org/web/20091027151405/http://www.geocities.com/coondogk9/animsnow.gif*/
 	// background-image: url("/stadt/assets/images/backgrounds/snow-small.png");
 
 	// https://web.archive.org/web/20040414012444fw_/http://www.geocities.com/joannewww/jwbgs/snow.htm
-	// background-image: url("/stadt/assets/images/backgrounds/snow-large.png");
+	background-image: url("/stadt/assets/images/backgrounds/snow-large.png");
+	animation: none !important;
 
 	& .desktop-icons-flex-container {
 		width: min-content;

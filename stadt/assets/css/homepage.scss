@@ -13,6 +13,10 @@
 }
 
 /* -------------------------------- layout --------------------------------- */
+.window-content {
+	display: grid;
+}
+
 @media (max-width: 1600px) {
 
 	.window-9x {
@@ -359,6 +363,7 @@
 		}
 		& .current-label {
 			text-align: right;
+			vertical-align: top;
 			// width: 64px;
 			margin: 0;
 			padding: 2px 2px;  // for border size
