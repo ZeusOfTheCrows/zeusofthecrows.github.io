@@ -107,7 +107,8 @@ znotes: maybe abstract all these out to layout + grid-windows.css?
 			useful tool: a javascript bookmarklet for toggling pixelated and bilinear
 			("smooth") image rendering when viewing a single image in a browser:
 		</p>
-		<strong id="bookmarklet" style="text-align: center; font-size: 2em;">
+		<strong id="bookmarklet"
+			style="display: block; text-align: center; font-size: 2em;">
 			<a href="javascript:(function(){img=document.getElementsByTagName('img')[0];img.style.setProperty('transform','scale(2)','important');if(getComputedStyle(img).getPropertyValue('image-rendering')=='pixelated'){img.style.setProperty('image-rendering','auto');}else{img.style.setProperty('image-rendering','pixelated');};})();">Pix</a>
 		</strong>
 		<p>
