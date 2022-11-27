@@ -6,9 +6,11 @@
 	// scrollbar-color: var(--d-blu) var(--d-ppl) !important;
 
 	--dsk-bg-img: url(/stadt/assets/images/backgrounds/stars.png);
+	--dsk-bg-col: black;
 
 	@media (prefers-color-scheme: light) {
 		--dsk-bg-img: url(/stadt/assets/images/backgrounds/sky.png);
+		--dsk-bg-col: #899bff;
 	}
 
 	//!\ remember to do this with background images
@@ -27,102 +29,25 @@
 }
 
 .window-content {
-		font-family: var(--fnt-sans);
-		// initial-letter: 2;  // soon
-		//may be nice for larger screens, but not quite yet
-		// font-family: garamond, sans-serif;
-		// font-size: 1.2em;
-		display: revert;  // otherwise blockquotes are hidden - bug?
+	font-family: var(--fnt-sans);
+	// initial-letter: 2;  // soon
+	//may be nice for larger screens, but not quite yet
+	// font-family: garamond, sans-serif;
+	// font-size: 1.2em;
+	display: revert;  // otherwise blockquotes are hidden - bug? ztodo fixme
 
-		padding: 16px;
-		// height: 90%;
-		flex-grow: 1;
-		overflow-y: scroll;  // add dummy scrollbar for notepad æsthetic
-		// i thought this was a good idea, but actually it's annoying
-		// overscroll-behavior: contain;
+	padding: 16px;
 
-		& p {
-			line-height: 1.5em;
-			text-indent: 2ch;
-		}
+	& ol {
+		list-style: lower-alpha;
 
-		& ol {
-			list-style: lower-alpha;
-
-			& ::marker {
-				color: var(--s-blu);
-			}
-	}
-}
-
-#window-area {
-	// height: 100vh;
-	// position: absolute;
-	padding-top:         	32px;
-	padding-right:       	32px;
-	padding-left: calc(  	32px + var(--dt-padd));
-	padding-bottom: calc(	32px + var(--tb-hite));
-	// margin-top: 20vh;
-	// margin-bottom:   50vh;  // allow overscrolling - doesn't work with grid
-	display: grid;
-	// grid-template-columns: repeat(auto-fill, 720px);
-	grid-template-columns: repeat(auto-fill, minmax(auto, 48em));
-	justify-content: center;
-	gap: 4vw;
-}
-
-.window-9x {
-	z-index: 10; // means i can have manually lower
-	position: static;
-	grid-row-end: span 2;
-	display: flex;
-	flex-direction: column;
-
-	// width: 704px;
-	max-height: 960px;
-
-	& footer {
-		display: flex;
-		& > span {
-			flex: 1 1 100%;
-			text-align: right;
-			padding-right: 1ch;
-
-			&.write-date::before {
-				content: "file created: ";
-			}
-			&.edit-date::before {
-				content: "last edited: ";
-			}
-			& > time {
-				color: var(--s-blu);
-			}
+		& ::marker {
+			color: var(--s-blu);
 		}
 	}
-}
-
-p {
-	margin-block: 1.5em;
 }
 
 /* ---------------------------- specific tweaks ---------------------------- */
-
-#page-intro {
-	grid-row-end: span 1;
-}
-
-#contents {
-	width: fit-content;
-	margin-inline: auto;
-
-	& li {
-		width: fit-content;
-
-		&::marker {
-			content: var(--img) " ";
-		}
-	}
-}
 
 #svg {
 	--titlebar-col: linear-gradient(90deg, var(--s-ylw), var(--d-ylw));
@@ -227,10 +152,6 @@ p {
 
 #css-puzzle {
 	--titlebar-col: linear-gradient(90deg, var(--s-aqa), var(--d-aqa));
-}
-
-.window-9x:last-child {
-	margin-bottom: 24vw;
 }
 
 /* ------------------------------ decorations ------------------------------ */

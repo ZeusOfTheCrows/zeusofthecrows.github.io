@@ -19,11 +19,13 @@
 		<link rel="stylesheet" href="/stadt/assets/css/maximised.css" />
 		<!-- matches titlebar colour in maximised view -->
 		<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#83a598" />
-		<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#076678" />
+		<meta name="theme-color" media="(prefers-color-scheme: light)" content="#076678" />
 		<!-- <meta name="theme-color" content="#458588" /> -->
 		{% endif %}
 		<!-- load page css file last for priority if equal specificity -->
+		{% if page.css-layout %}
 		<link rel="stylesheet" href="/stadt/assets/css/{{ page.css-layout }}.css" />
+		{% endif %}
 		<link rel="stylesheet" href="/stadt/assets/css/{{ page.css-file }}.css" />
 
 		<!-- dulled colour to match textured background -->

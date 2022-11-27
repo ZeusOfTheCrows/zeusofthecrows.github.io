@@ -19,12 +19,6 @@
 
 
 .window-content {
-		padding: 16px;
-		// height: 90%;
-		flex-grow: 1;
-		overflow-y: scroll;  // add dummy scrollbar for notepad æsthetic
-		overflow-x: hidden;  // hide horisontal scroll on hover scale
-
 		& .img-grid.hover-zoom {
 			padding-inline: 16px;
 			box-sizing: border-box;
@@ -87,8 +81,6 @@
 
 		& p {
 			font-size: 0.9em;
-			line-height: 1.2em;
-			text-indent: 2ch;
 		}
 
 		& ol {
@@ -100,56 +92,7 @@
 	}
 }
 
-#window-area {
-	// height: 100vh;
-	// position: absolute;
-	padding-top:         	32px;
-	padding-right:       	32px;
-	padding-left: calc(  	32px + var(--dt-padd));
-	padding-bottom: calc(	32px + var(--tb-hite));
-	// margin-top: 20vh;
-	// allow overscrolling - doesn't work with grid:
-	// margin-bottom:   50vh
-	display: grid;
-	// grid-template-columns: repeat(auto-fill, 720px);
-	grid-template-columns: repeat(auto-fill, minmax(auto, 48em));
-	justify-content: center;
-	gap: 4vw;
-}
-
-.window-9x {
-	z-index: 10; // means i can have manually lower
-	position: static;
-	grid-row-end: span 2;
-	display: flex;
-	flex-direction: column;
-
-	// width: 704px;
-	max-height: 960px;
-}
-
-p {
-	margin-block: 1.5em;
-}
-
 /* ------------------------ specific tweaks ------------------------- */
-
-#page-intro {
-	grid-row-end: span 1;
-}
-
-#contents {  // ztodo abstract
-	width: fit-content;
-	margin-inline: auto;
-
-	& li {
-		width: fit-content;
-
-		&::marker {
-			content: var(--img) " ";
-		}
-	}
-}
 
 #other-art .window-content {
 	& figure {
@@ -162,10 +105,6 @@ p {
 		width:  auto;
 		height: auto;
 	}
-}
-
-.window-9x:last-child {
-	margin-bottom: 24vw;
 }
 
 /* -------------------------- decorations --------------------------- */
