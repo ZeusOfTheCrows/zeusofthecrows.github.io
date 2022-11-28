@@ -1,0 +1,80 @@
+---
+---
+
+/* -------------------------------- layout --------------------------------- */
+
+:root {
+	display: grid;
+	place-items: center;
+}
+
+h1 {
+	font-size: 1.5em;
+}
+
+* {
+	// box-sizing: border-box !important;
+}
+
+body {
+	width: 250px;
+	height: 250px;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+main.window-9x {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	box-sizing: border-box;
+}
+
+#taskbar-9x,
+#taskbar-balloon {
+	display: none;
+}
+
+.window-content {
+	display: block;
+	overflow-x: hidden;
+	overflow-y: auto;
+	scroll-behavior: smooth;
+
+	/*https://web.archive.org/web/20091027151405/http://www.geocities.com/coondogk9/animsnow.gif*/
+	--indent-col: url(/stadt/assets/images/backgrounds/snow-small.png) var(--bgd-1);
+}
+
+p {
+	margin-inline: 8px;
+}
+
+ul, p, h1 {
+	margin-block: 4px;
+}
+
+.window-9x footer {
+	display: flex;
+	& > span,
+	& > a {
+		// flex: 1 1 100%;
+		flex-grow: 1;
+		// text-align: right;
+	padding-inline: 1ch;
+	}
+}
+
+// footer.indent-9x {
+	// position: absolute;
+	// bottom: 0;
+	// width: 100%;
+	// box-sizing: border-box;
+	// display: flex;
+// }
+
+nav a img {
+	display: inline-block;
+	vertical-align: middle;
+}

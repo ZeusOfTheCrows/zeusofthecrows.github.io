@@ -1198,42 +1198,114 @@ textarea {
 
 /* ============================== animations =============================== */
 
+@keyframes colour-cycle {
+	0% {
+		color: var(--s-org);
+		text-shadow:
+			0 0 var(--shad-size-s, 0) var(--s-org),
+			0 0 var(--shad-size-l, 0) var(--d-org);
+	}
+	14% {
+		color: var(--s-ylw);
+		text-shadow:
+			0 0 var(--shad-size-s, 0) var(--s-ylw),
+			0 0 var(--shad-size-l, 0) var(--d-ylw);
+	}
+	29% {
+		color: var(--s-grn);
+		text-shadow:
+			0 0 var(--shad-size-s, 0) var(--s-grn),
+			0 0 var(--shad-size-l, 0) var(--d-grn);
+	}
+	43% {
+		color: var(--s-aqa);
+		text-shadow:
+			0 0 var(--shad-size-s, 0) var(--s-aqa),
+			0 0 var(--shad-size-l, 0) var(--d-aqa);
+	}
+	57% {
+		color: var(--s-blu);
+		text-shadow:
+			0 0 var(--shad-size-s, 0) var(--s-blu),
+			0 0 var(--shad-size-l, 0) var(--d-blu);
+	}
+	71% {
+		color: var(--s-ppl);
+		text-shadow:
+			0 0 var(--shad-size-s, 0) var(--s-ppl),
+			0 0 var(--shad-size-l, 0) var(--d-ppl);
+	}
+	86% {
+		color: var(--s-red);
+		text-shadow:
+			0 0 var(--shad-size-s, 0) var(--s-red),
+			0 0 var(--shad-size-l, 0) var(--d-red);
+	}
+	100% {
+		color: var(--s-org);
+		text-shadow:
+			0 0 var(--shad-size-s, 0) var(--s-org),
+			0 0 var(--shad-size-l, 0) var(--d-org);
+	}
+}
+
 // marquee animation copied from: https://hotlinecafe.com/
 .marquee-container {
 	overflow: hidden;
 	/* don't optimise by not animating gifs */
 	will-change: contents;
+	// position: relative;
+	width: max-content;
 }
 
 .marquee-rtl, .marquee-ltr {
 	width: max-content;
 	/* don't optimise - hotline used this, but i think above works better? */
 	will-change: scroll-position;
-
-	// start onscreen (not 100%) ((never mind))
-	padding-left: 100%;
+	// display: flex;
+	// gap: 1ch;
+	// // position: absolute;
+	// left: 0;
 
 	&:hover {
 		animation-play-state: paused;
+	}/*
+	& ul {
+		width: max-content;
+		display: inline-block;
 	}
 
 	& li {
 		display: inline-block;
 		will-change: transform;
+		list-style-type: none;
+	}*/
+}
 
-		&::marker {
-		content: "";
-		}
-	}
+.marquee-track {
+	display: inline;
 }
 
 .marquee-rtl {
 	// change timer when adding more images - was 50s in hlcafe
-	animation: marquee-rtl 35s linear infinite;
+	animation: marquee-rtl var(--el-speed, 35s) linear infinite;
+	// .marquee-track:nth-of-type(1) {
+		// animation: rtl-track 10s steps(2, jump-none) infinite;
+	// }
 }
 
 .marquee-ltr {
 	animation: marquee-ltr 35s linear infinite;
+}
+
+@keyframes rtl-track {
+	0% {
+		order: -1;
+	}
+
+	100% {
+		order: 99;
+	}
 }
 
 @keyframes marquee-rtl {
@@ -1242,7 +1314,7 @@ textarea {
 	}
 
 	100% {
-		transform: translate(-100%, 0);
+		transform: translate(-50%, 0);
 	}
 }
 
