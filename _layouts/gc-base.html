@@ -82,7 +82,7 @@
 
 		{{ content }}
 
-		{% include gc-footer.html %}
+		{% if page.title != "garten" %} {% include gc-footer.html %} {% endif %}
 
 	</body>
 

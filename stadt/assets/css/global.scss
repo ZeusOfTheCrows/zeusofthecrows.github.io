@@ -636,8 +636,15 @@ textarea {
 	color: var(--txt-2);
 	padding: 1em 1ch;
 }
+/* https://codersblock.com/blog/the-surprising-things-that-css-can-animate/#text-selection-trick */
 .copy-all {
 	user-select: all;
+	&:focus {
+		animation: select 100ms step-end forwards;
+	}
+}
+@keyframes select {
+	to { user-select: text; }
 }
 
 .outdent-9x,
