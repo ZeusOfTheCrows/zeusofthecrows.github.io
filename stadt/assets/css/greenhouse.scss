@@ -1,0 +1,36 @@
+---
+---
+
+#greenhouse {
+	#intro {
+		display: flex;
+		gap: 2ch;
+		align-items: end;
+		& div {
+			flex-grow: 1;
+		}
+		& textarea {
+			width: 100%;
+			box-sizing: border-box;
+		}
+		& iframe {
+			flex-shrink: 0;
+		}
+	}
+	& iframe {
+		width:  250px;
+		height: 250px;
+		overflow: hidden;
+		// border: none;
+	}
+
+	#pots {
+		display: flex;
+		gap: 0.2ch;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+		& iframe {
+			flex-shrink: 0;
+		}
+	}
+}

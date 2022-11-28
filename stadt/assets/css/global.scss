@@ -398,6 +398,9 @@ a {
 	}
 	&:any-link:hover {
 		outline: 1px dotted;
+		&:has(*) {
+			outline: none;
+		}
 	}
 }
 
@@ -618,6 +621,7 @@ img.smooth-zoom {
 	}
 }
 .indent-9x,
+.copy-all,
 textarea {
 	margin: 0;
 	background: var(--indent-col, var(--bgd-1));
@@ -632,6 +636,10 @@ textarea {
 	color: var(--txt-2);
 	padding: 1em 1ch;
 }
+.copy-all {
+	user-select: all;
+}
+
 .outdent-9x,
 .window-9x/* :not(.window-maximised), */,
 .btn-9x,
@@ -777,11 +785,11 @@ textarea {
 	margin: 0;
 	padding: 0;
 	cursor: default;
+	user-select: none;
 
 	& li {
 		display: inline-block;
 		padding: 0px 4px;
-		user-select: none;
 
 		&:hover {
 			background-color: var(--bgd-3);
@@ -1320,7 +1328,7 @@ textarea {
 
 @keyframes marquee-ltr {
 	0% {
-		transform: translate(-100%, 0);
+		transform: translate(-50%, 0);
 	}
 	100% {
 		transform: translate(0, 0);
