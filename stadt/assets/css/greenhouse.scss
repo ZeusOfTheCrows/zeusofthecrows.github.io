@@ -1,9 +1,20 @@
 ---
 ---
 
-#greenhouse {
+#greenhouse,
+#towers {
+	max-height: none;
+}
 
-	// /* dark mode colours */
+#greenhouse {
+	--d-red: #d11c24;
+	--d-grn: #6cbe6c;
+	--d-ylw: #a57706;
+	--d-blu: #2176c7;
+	--d-ppl: #c61c6f;
+	--d-aqa: #259286;
+	--d-org: #cb4b16;
+
 	--bgd-0: #002b36;
 	--bgd-1: #073642;
 	--bgd-2: #586e75;
@@ -15,17 +26,51 @@
 	--txt-2: #fdf6e3;
 	--txt-1: #fdf6e3;
 	--txt-0: #fdf6e3;
-	--s-red: #dc322f;
-	--s-grn: #859900;
-	--s-ylw: #b58900;
-	--s-blu: #268bd2;
-	--s-ppl: #d33682;
-	--s-ppl: #6c71c4;
-	--s-aqa: #2aa198;
+	--s-red: #f5163b;
+	--s-grn: #51ef84;
+	--s-ylw: #b27e28;
+	--s-blu: #178ec8;
+	--s-ppl: #e24d8e;
+	--s-aqa: #00b39e;
 	--s-org: #cb4b16;
 	--btn-hilite: var(--bgd-4);
 	--btn-lolite: var(--bgd-0);
+}
 
+@media (prefers-color-scheme: light) {
+	#greenhouse {
+	--d-red: #dc322f;
+	--d-grn: #859900;
+	--d-ylw: #b58900;
+	--d-blu: #268bd2;
+	--d-ppl: #d33682;
+	--d-aqa: #2aa198;
+	--d-org: #cb4b16;
+
+	--bgd-0: #fdf6e3;
+	--bgd-1: #eee8d5;
+	--bgd-2: #93a1a1;
+	--bgd-3: #839496;
+	--bgd-4: #657b83;
+	--bgd-5: #586e75;
+	--txt-4: #839496;
+	--txt-3: #657b83;
+	--txt-2: #586e75;
+	--txt-1: #073642;
+	--txt-0: #002b36;
+	--s-red: #cb4b16;
+	--s-grn: #586e75;
+	--s-ylw: #657b83;
+	--s-blu: #839496;
+	--s-ppl: #6c71c4;
+	--s-aqa: #93a1a1;
+	--s-org: #cb4b16;
+	--btn-hilite: var(--bgd-0);
+	--btn-lolite: var(--bgd-4);
+	}
+}
+
+#greenhouse {
 	#intro {
 		display: flex;
 		gap: 2ch;
@@ -40,6 +85,7 @@
 		}
 		& iframe {
 			flex-shrink: 0;
+			padding: 0;
 		}
 	}
 	& iframe {
@@ -56,6 +102,7 @@
 		justify-content: space-evenly;
 		& iframe {
 			flex-shrink: 0;
+			margin-bottom: 2em;
 		}
 	}
 }
@@ -213,7 +260,7 @@
 		position: absolute;
 		margin: calc(var(--padd) * -1);  // so below
 		background: var(--bgd-3);
-		border-radius: 32px;
+		// border-radius: 32px;
 		opacity: 0.7;
 		z-index: -1;
 	}
@@ -247,12 +294,12 @@
 			text-shadow: -0.08em 0.08em var(--d-ppl);
 			paint-order: stroke fill;  // only in firefox/safari
 
-			@media (prefers-color-scheme: light) {
-				text-stroke: 0.04em var(--bgd-0);  // for future maybe
-				-webkit-text-stroke: 0.04em var(--bgd-0);
-				-webkit-text-fill-color: var(--d-ppl);
-				text-shadow: -0.08em 0.08em var(--s-ppl);
-			}
+			// @media (prefers-color-scheme: light) {
+			//	text-stroke: 0.04em var(--bgd-0);  // for future maybe
+			//	-webkit-text-stroke: 0.04em var(--bgd-0);
+			//	-webkit-text-fill-color: var(--d-ppl);
+			//	text-shadow: -0.08em 0.08em var(--s-ppl);
+			// }
 		}
 		// pure css-spec ver. - kind of ugly, and probably unnecessary:
 		// --pos-offs: 0.02em

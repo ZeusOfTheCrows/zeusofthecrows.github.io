@@ -12,10 +12,6 @@ h1 {
 	font-size: 1.5em;
 }
 
-* {
-	// box-sizing: border-box !important;
-}
-
 body {
 	width: 250px;
 	height: 250px;
@@ -63,7 +59,10 @@ ul, p, h1 {
 		// flex: 1 1 100%;
 		flex-grow: 1;
 		// text-align: right;
-	padding-inline: 1ch;
+		padding-inline: 1ch;
+		& img {
+			vertical-align: bottom;
+		}
 	}
 }
 

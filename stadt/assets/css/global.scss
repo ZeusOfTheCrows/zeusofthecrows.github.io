@@ -200,6 +200,10 @@ html {
 	}
 }
 
+.window-content {  // for inheritance "bug"
+	color: var(--txt-1);
+}
+
 body {
 	color: var(--txt-1);
 	font-family: var(--fnt-sans);
