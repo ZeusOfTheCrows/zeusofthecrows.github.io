@@ -2,6 +2,30 @@
 ---
 
 #greenhouse {
+
+	// /* dark mode colours */
+	--bgd-0: #002b36;
+	--bgd-1: #073642;
+	--bgd-2: #586e75;
+	--bgd-3: #657b83;
+	--bgd-4: #839496;
+	--bgd-5: #93a1a1;
+	--txt-4: #eee8d5;
+	--txt-3: #fdf6e3;
+	--txt-2: #fdf6e3;
+	--txt-1: #fdf6e3;
+	--txt-0: #fdf6e3;
+	--s-red: #dc322f;
+	--s-grn: #859900;
+	--s-ylw: #b58900;
+	--s-blu: #268bd2;
+	--s-ppl: #d33682;
+	--s-ppl: #6c71c4;
+	--s-aqa: #2aa198;
+	--s-org: #cb4b16;
+	--btn-hilite: var(--bgd-4);
+	--btn-lolite: var(--bgd-0);
+
 	#intro {
 		display: flex;
 		gap: 2ch;
