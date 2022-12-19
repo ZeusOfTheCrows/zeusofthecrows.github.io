@@ -35,6 +35,7 @@ body,
 #logon .window-content {
 	min-width: 32ch;
 	padding: 16px;
+	display: grid;
 	gap: 8px;
 	grid-auto-flow: column;
 }
