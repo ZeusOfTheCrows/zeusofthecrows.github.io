@@ -724,31 +724,34 @@ textarea {
 }
 
 .window-titlebar {
-	background: var(
+	border-image-source: var(
 		--titlebar-col,
 		linear-gradient(
 			90deg,
 			var(--s-blu),
 			var(--d-blu)));
+	border-image-slice: 1;
+	border-bottom: 2px solid;
 	/* hmmnn not sure about this yet - it looks kind of 3d */
 	// background: linear-gradient(to bottom right, var(--s-blu), var(--d-blu));
 	// background-color: var(--s-blu);
-	color: var(
-		--title-col,
-		var(--bgd-1));
+	// color: var(
+		// --title-col,
+		// var(--bgd-1));
 
 	position: relative;
-	margin: 0px 0px 2px 0px;
+	margin: -2px -2px 2px -2px;
 	padding: 1px 2px;
-	height: 20px;
+	height: 24px;
+	font-size: 1.3em;
+
+	overflow: clip;
 
 	user-select: none;
 
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
-
+	// display: flex;
+	text-align: center;
+	position: relative;
 
 	& a.window-title {
 		/* remove link styling for titles */
@@ -757,7 +760,11 @@ textarea {
 		cursor: default;
 
 		& .window-icon {
-			vertical-align: middle;
+			position: absolute;
+			top: -4px;
+			left: 16px;
+			width: 64px;
+			filter: blur(3.2px);
 		}
 	}
 
@@ -771,7 +778,7 @@ textarea {
 		font-size: 1.2em;
 		margin-right: 2px;
 		padding: 0px;
-
+		/*
 		& .window-min:before {
 			content: "󰖰";
 		}
@@ -787,13 +794,13 @@ textarea {
 		& .window-cls:before {
 			content: "󰖭";
 		}
-
+		*/
 		& li {
 			visibility: hidden;  // hide to replace with before pseudo
 			font-family: "Material Design Icons";
 
 			&:before {  // attributes for all buttons
-				visibility: visible;
+				// visibility: visible;
 				display: inline-block;
 				position: relative;
 				margin: 0;
