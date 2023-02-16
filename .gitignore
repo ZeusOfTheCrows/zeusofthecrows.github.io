@@ -14,9 +14,6 @@ references/
 # quick manual copy backup files
 *.zbk
 
-# aseprite files
-*.ase
-
 # local yesterweb mirror
 /stadt/assets/js/yw-ring-local.js
 
