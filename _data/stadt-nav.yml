@@ -1,0 +1,42 @@
+- name: Thoughts
+  link: /stadt/thoughts/
+  updt: no
+  icon: /stadt/assets/images/window-icons/thoughts.png
+  bicn: /stadt/assets/images/desktop-icons/thoughts.svg
+
+- name: Logfile
+  link: /stadt/logfile/
+  updt: no
+  icon: /stadt/assets/images/window-icons/logfile.png
+  bicn: /stadt/assets/images/desktop-icons/logfile.svg
+
+- name: Opinions
+  link: /stadt/opinions/
+  updt: no
+  icon: /stadt/assets/images/window-icons/opinions.png
+  bicn: /stadt/assets/images/desktop-icons/opinions.svg
+
+- name: Gallery
+  link: /stadt/gallery/
+  updt: yes
+  icon: /stadt/assets/images/window-icons/gallery.png
+  bicn: /stadt/assets/images/desktop-icons/gallery.svg
+
+- name: Outbound Links
+  link: /stadt/links/
+  updt: no
+  icon: /stadt/assets/images/window-icons/links.png
+  bicn: /stadt/assets/images/desktop-icons/links.svg
+
+- name: Webgarden
+  link: /stadt/garten/
+  updt: no
+  icon: /stadt/assets/images/window-icons/garten.png
+  bicn: /stadt/assets/images/desktop-icons/garten.svg
+
+- name: About
+  link: /stadt/about/
+  updt: no
+  icon: /stadt/assets/images/window-icons/about.png
+  bicn: /stadt/assets/images/desktop-icons/about.svg
+

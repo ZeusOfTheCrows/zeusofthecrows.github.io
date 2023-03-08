@@ -1,57 +1,33 @@
-<nav class="desktop-icons-flex-container" aria-label="site pages">
+<nav class="desktop-icons-container" aria-label="site pages">
+	{% assign current = page.url | downcase | split: '.' %}
+	{% for item in site.data.stadt-nav %}
+	<a
+	{% if current[0] contains item.link %}class="desktop-icon current"
+	{% elsif item.updt %}class="desktop-icon update"{% else %}
+	class="desktop-icon"{% endif %}
+		href="{{ item.link }}">
+		<img src="{{ item.bicn }}">
+		<span>{{ item.name }}</span>
+	</a>
+	{% endfor %}
 	<a class="desktop-icon" href="/stadt/thoughts">
-		<img src="/stadt/assets/images/desktop-icons/thoughts.png">
+		<img src="/stadt/assets/images/desktop-icons/thoughts.svg">
 		<span>Thoughts</span>
 	</a>
-	<a class="desktop-icon" href="/stadt/logfile/">
-		<img src="/stadt/assets/images/desktop-icons/logfile.png">
-		<span>Logfile</span>
-	</a>
-	<a class="desktop-icon desktop-update" href="/stadt/opinions/">
-		<img src="/stadt/assets/images/desktop-icons/opinions.png">
-		<abbr title="name to be decided">Opinions</abbr>
-	</a>
-	<!-- Graphics Collection -->
-	<a class="desktop-icon desktop-update" href="/stadt/gallery/">
-		<img src="/stadt/assets/images/desktop-icons/gallery.png">
-		<span>Image Gallery</span>
-	</a>
-	<a class="desktop-icon" href="/stadt/links/">
-		<img src="/stadt/assets/images/desktop-icons/links.png">
-		<span>Surf the web</span>
-	</a>
-	<a class="desktop-icon desktop-update" href="/stadt/garten/">
-		<img src="/stadt/assets/images/desktop-icons/garten.png">
-		<span>Gardens & Towers</span>
-	</a>
-	<!-- <a class="desktop-icon">
-		<img src="/stadt/assets/images/desktop-icons/images.png">
-		<span><s class="captioned" title="coming soon">Software Recc's</s></span>
-	</a> -->
-	<a class="desktop-icon" href="/stadt/about/">
-		<img src="/stadt/assets/images/desktop-icons/about.png">
-		<span>About</span>
-	</a>
-	<!--
-	<a class="desktop-icon" href="/stadt/towers/">
-		<img src="/stadt/assets/images/desktop-icons/teeny-towers.png">
-		<s><abbr title="down for much needed maintenance">Teeny Towers</abbr></s>
-	</a> -->
 	{% if page.title %}
 	<a class="desktop-icon" href="/stadt/">
-		<img src="/stadt/assets/images/desktop-icons/home.png">
+		<img src="/stadt/assets/images/desktop-icons/home.svg">
 		<span>Return Home</span>
 	</a>
 	{% else %}
 	<a class="desktop-icon" href="../#logoff" title=":(">
-		<img src="/stadt/assets/images/desktop-icons/exit-stadt.png">
+		<img src="/stadt/assets/images/desktop-icons/exit-stadt.svg">
 		<span>Exit Stadt</span>
 	</a>
 	{% endif %}
-	<!-- ztodo make a link to about page, have contact links on about page -->
 	<a class="desktop-icon desktop-shortcut" href="/stadt/about#contact-me"
 		title="see about page for more contact methods">
-		<img src="/stadt/assets/images/desktop-icons/message-me.png">
+		<img src="/stadt/assets/images/desktop-icons/message-me.svg">
 		<span>Message Me</span>
 	</a>
 </nav>

@@ -845,16 +845,22 @@ textarea {
 	// background-image: url("/stadt/assets/images/backgrounds/snow-large.png");
 	// animation: none !important;
 
-	& .desktop-icons-flex-container {
+	& .desktop-icons-container {
 		width: min-content;
-		margin: 32px;
-		padding: 16px;
+		margin: 0;
+		padding: 8px;
 		// border-radius: 4px;
-		background: var(--icn-bg-col, transparent);
-		border: var(--icn-bg-bdr, none);
+		background: #00000040;  // ztodo var
+		backdrop-filter: blur(3px);
+		// border: var(--icn-bg-bdr, none);
 
-		max-height: 80vh;
-		overflow-y: auto;
+		// box-shadow: rgb(0, 0, 0) 0px 10px 10px -5px inset;
+		box-shadow: inset -4px 0px 8px -4px #000;
+		border-right: 2px solid #ffffff60;
+
+		height: 100%;
+		overflow-x: visible;
+		// overflow-y: auto;  // this can't be here, https://stackoverflow.com/questions/6421966/css-overflow-x-visible-and-overflow-y-hidden-causing-scrollbar-issue
 		scrollbar-width: thin;
 
 		& .desktop-icon {
@@ -862,37 +868,69 @@ textarea {
 			color: var(--bgd-0);
 			display: block;
 
-			&.desktop-update,
-			&.desktop-shortcut {
-				position: relative;
-				&::after {
-					position: absolute;
-					left: 0;
-					right: 0;
-					top: 0;
-				}
+			--icon-size: 48px;
+
+			position: relative;
+			box-sizing: border-box;
+			padding: 2px;
+			border-radius: 8px;
+			border: 1px solid #ffffff40;
+
+			// background-color: #ffffff20;
+			background-image: linear-gradient(#ffffff10 25%, #ffffff60);
+
+			&.update {
+				background-color: #E9542090;  // ubuntu terminal palette
 			}
-			&.desktop-update::after {
-				content: url("/stadt/assets/images/desktop-icons/overlay-update.png");
+			&.current {
+				background-color: #3465A490;  // ubuntu brand colour
 			}
-			&.desktop-shortcut::after {
-				content: url("/stadt/assets/images/desktop-icons/overlay-shortcut.png");
+
+			&::after {
+				content: "";
+				position: absolute;
+				inset: 0;
+				border-radius: 8px;
+				background-image:
+					radial-gradient(
+						circle at top,
+						#ffffffc0,
+						transparent 50%);
+			}
+
+			& span {
+				display: none;
+			}
+			&:hover span,
+			&:focus span {
+				display: inline-block;
+				position: absolute;
+				top: 0; bottom: 0;
+				left: calc(var(--icon-size) + 4px);
+				height: min-content; width: max-content;
+				margin-block: auto;
+
+				background-color: #121212;
+				background-image:
+					radial-gradient(
+						ellipse at top,
+						#ffffff60,
+						transparent
+						);
+				color: white;
+
+				padding-block: 8px;
+				padding-inline: 16px;
+				border-radius: 4px;
+				border: 1px solid #FFFFFF80;
 			}
 
 			& + .desktop-icon {
-				margin-top: 24px;
-			}
-
-			&:visited {
-				color: var(--bgd-2);
-			}
-			&:hover,
-			&:focus {
-				color: var(--bgd-0);
+				margin-top: 8px;
 			}
 
 			& img {
-				width: 32px;
+				width: var(--icon-size);
 				display: block;
 				margin-inline: auto;
 			}
