@@ -33,14 +33,15 @@
 
 	--fnt-serif:"EaduiMedium", "Garamond", "Times New Roman", serif;
 	--fnt-bltr: "chomskyRegular", "KJV1611Regular", serif;
-	--fnt-sans:	"FiraSansRegular", "Fira Sans", Helvetica, Arial, sans-serif;
+	--fnt-sans:	Ubuntu, sans-serif;
+	// --fnt-sans:	"FiraSansRegular", "Fira Sans", Helvetica, Arial, sans-serif;
 	--fnt-mono:	"FiraMonoRegular", "Fira Mono", monospace;
 	--fnt-code:	"FiraCodeRegular", "Fira Code", "FiraMonoRegular", "Fira Mono", monospace;
 	--fnt-ipa: 	"FiraSansRegular", "Fira Sans", Arial, Sans-Serif;  // don't fallback to helvetica
 	--fnt-zswa:	"Arial", sans-serif;  // font for "Ɀ" - unused
 
-	--tb-hite:  37px;  // taskbar height
-	--dt-padd: 128px;  //?\ desktop padding
+	--tb-hite:  28px;  // taskbar height
+	--dt-padd: 72px;  //?\ desktop padding
 
 	/* colour scheme: gruvbox */
 	/* https://github.com/gruvbox-community/gruvbox */
@@ -223,8 +224,7 @@ h5 { font-size: 1.4em; }
 h6 { font-size: 1.2em; }
 
 h1,
-h2,
-header {
+h2 {
 	// doesn't work with in-header spans
 	// https://csspoo.com/line-through-headings
 	// display: flex;
@@ -832,9 +832,9 @@ textarea {
 	position: fixed;
 	width:  100%;
 	height: 100%;
-	background-color: var(--dsk-bg-col, var(--d-aqa));
+	background-color: var(--dsk-bg-col, #22091E);
 	background-image:
-		var(--dsk-bg-img, url("/stadt/assets/images/backgrounds/texture.png"));
+		var(--dsk-bg-img, url("/stadt/assets/images/backgrounds/gradient.jpg"));
 	// winter colours:
 	// background-color: var(--dsk-bg-col, var(--d-blu));
 
@@ -847,7 +847,7 @@ textarea {
 
 	& .desktop-icons-container {
 		width: min-content;
-		margin: 0;
+		margin-top: var(--tb-hite);
 		padding: 8px;
 		// border-radius: 4px;
 		background: #00000040;  // ztodo var
@@ -872,6 +872,7 @@ textarea {
 
 			position: relative;
 			box-sizing: border-box;
+			aspect-ratio: 1/1;
 			padding: 2px;
 			border-radius: 8px;
 			border: 1px solid #ffffff40;
@@ -880,10 +881,14 @@ textarea {
 			background-image: linear-gradient(#ffffff10 25%, #ffffff60);
 
 			&.update {
-				background-color: #E9542090;  // ubuntu terminal palette
+				background-color: #3465A490;  // ubuntu terminal palette
 			}
 			&.current {
-				background-color: #3465A490;  // ubuntu brand colour
+				background-color: #E9542090;  // ubuntu brand colour
+			}
+			&:hover,
+			&:focus-visible {
+				background-color: #AD7FA890;  // ubuntu terminal palette
 			}
 
 			&::after {
@@ -1004,6 +1009,45 @@ textarea {
 	}
 }
 /* -------------------------------- taskbar -------------------------------- */
+#ubuntu-header {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: var(--tb-hite);
+	box-sizing: border-box;
+	background-image:
+		linear-gradient(
+			#616254 5%,
+			#5b594d 10%,
+			#4F4F47 48%,
+			#4D4C47 52%,
+			#3F403B 100%
+		);
+	padding: 4px;
+	box-shadow: 0px 0px 8px 4px black;
+
+	color: #DFD8D5;
+	font-size: 16px;
+	font-weight: bold;
+	text-shadow: 0px -1px 0px #00000080, 0px 1px 0px #FFFFFF80;
+
+	display: flex;
+	justify-content: space-between;
+
+	& section {  // ztodo tidyup
+		display: inline-block;
+		& .img-grid {
+			width: max-content;
+		}
+		& img {
+			vertical-align: middle;
+		}
+		& a {
+			display: inline-block;  // to hide stray underlines
+		}
+	}
+}
+
 #taskbar-9x {
 	--h-gap: 4px;
 
