@@ -19,7 +19,7 @@ body {
 	max-height: 100%;
 }
 
-main.window-9x {
+main.x-window {
 	border: none;  // experimental
 	width: 100%;
 	height: 100%;
@@ -52,7 +52,7 @@ ul, p, h1 {
 	margin-block: 4px;
 }
 
-.window-9x footer {
+.x-window footer {
 	display: flex;
 	& > span,
 	& > a {

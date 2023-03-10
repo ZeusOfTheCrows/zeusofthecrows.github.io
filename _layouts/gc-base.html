@@ -82,6 +82,8 @@
 
 		{{ content }}
 
+		{% if page.title != "garten" %} {% include gc-sidebar.html %} {% endif %}
+
 		{% if page.title != "garten" %} {% include gc-header.html %} {% endif %}
 
 	</body>

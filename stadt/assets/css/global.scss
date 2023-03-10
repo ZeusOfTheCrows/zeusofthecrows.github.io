@@ -43,18 +43,6 @@
 	--tb-hite:  28px;  // taskbar height
 	--dt-padd: 72px;  //?\ desktop padding
 
-	/* colour scheme: gruvbox */
-	/* https://github.com/gruvbox-community/gruvbox */
-	/* https://www.reddit.com/r/gruvbox/ */
-
-	/* universal colours */
-	// --d-red: hsl(2,  	75.1%,	45.7%);
-	// --d-grn: hsl(60, 	70.8%,	34.9%);
-	// --d-ylw: hsl(40, 	73.4%,	48.6%);
-	// --d-blu: hsl(183,	32.7%,	40.2%);
-	// --d-ppl: hsl(333,	33.6%,	53.9%);
-	// --d-aqa: hsl(122,	21.3%,	51.2%);
-	// --d-org: hsl(24, 	87.7%,	44.7%);
 	--d-red: #CC0000;
 	--d-grn: #4E9A06;
 	--d-ylw: #C4A000;
@@ -62,29 +50,6 @@
 	--d-ppl: #75507B;
 	--d-aqa: #06989A;
 	--d-org: #DD4814;
-
-	/* dark mode colours */
-	// --bgd-0: hsl(0,  	0%,   	15.7%);
-	// --bgd-1: hsl(20, 	5.3%, 	22.4%);
-	// --bgd-2: hsl(22, 	7.4%, 	29.2%);
-	// --bgd-3: hsl(27, 	9.7%, 	36.5%);
-	// --bgd-4: hsl(28, 	10.7%,	43.9%);
-	// --bgd-5: hsl(30, 	12.1%,	51.4%);
-	// --txt-4: hsl(35, 	17.1%,	58.8%);
-	// --txt-3: hsl(39, 	24.1%,	65.9%);
-	// --txt-2: hsl(40, 	38.2%,	73.3%);
-	// --txt-1: hsl(43, 	58.8%,	81%)	;
-	// --txt-0: hsl(48, 	86.7%,	88.2%);
-	// --s-red: hsl(2,  	95.8%,	62.4%);
-	// --s-grn: hsl(61, 	66.2%,	44.1%);
-	// --s-ylw: hsl(42, 	95.3%,	58.2%);
-	// --s-blu: hsl(157,	15.9%,	58%)	;
-	// --s-ppl: hsl(344,	46.7%,	67.6%);
-	// --s-aqa: hsl(104,	35.1%,	62%)	;
-	// --s-org: hsl(27, 	99.1%,	54.7%);
-
-
-
 
 	--bgd-0: #3F403B;
 	--bgd-1: #4D4C47;
@@ -94,7 +59,7 @@
 	--bgd-5: #928374;
 	--txt-4: #A89984;
 	--txt-3: #BDAE93;
-	--txt-2: #D9D7D3;
+	--txt-2: #DFDBD2;
 	--txt-1: #EBEBEB;
 	--txt-0: #FFFFFF;
 	--s-red: #EF2929;
@@ -108,6 +73,17 @@
 	--btn-lolite: var(--bgd-0);
 	--ins-txt-top: #000000C0;  // inset text
 	--ins-txt-btm: #FFFFFF40;  // colours
+	--ubuntu-inset-text:
+		0px -1px 0px var(--ins-txt-top),
+		0px  1px 0px var(--ins-txt-btm);  // ztodo .inset-text, window > text, header > text
+	--ubuntu-grad:
+		linear-gradient(
+			var(--bgd-3) 5%,
+			var(--bgd-2) 10%,
+			var(--bgd-1) 48%,
+			var(--bgd-1) 52%,
+			var(--bgd-0) 100%
+		);
 }
 
 /* light mode colours */
@@ -170,18 +146,6 @@ body {
 }
 
 html {
-	/* smoothly scroll to anchor link */
-	// scroll-behavior: smooth;  // overflow-anchor: none below
-		/* this is here because i think it's semantically easier to read */
-		/* offset anchor link down from the top of the page */
-		// i'm so confused
-	// & :target:before {
-		// content: "";
-		// display: block;
-		// height: 2em;
-		// margin: -1.4em 0 0;  // why this magic number??
-	// }
-
 	& ::selection {
 		border-radius: 0.1em; // this doesn't work but it would be nice if it did
 		background: var(--d-org);
@@ -191,19 +155,19 @@ html {
 	}
 
 	/* colour scrollbars with css */
-	scrollbar-color: var(--bgd-2) var(--bgd-1);
+	scrollbar-color: var(--s-org) transparent;
 	/* colour scrollbars, but this time for webkit being dumb */
 	&::-webkit-scrollbar,
 	&::-webkit-scrollbar-thumb,
 	&::-webkit-scrollbar-button,
 	&::-webkit-scrollbar-corner {
-		border-radius: 0;
-	}
-	&::-webkit-scrollbar{
-		background-color: var(--bgd-1);
+		// border-radius: 0;
 	}
 	&::-webkit-scrollbar-thumb{
-		background-color: var(--bgd-2);
+		background-color: var(--s-org);
+	}
+	&::-webkit-scrollbar{
+		background-color: transparent;
 	}
 }
 
@@ -620,9 +584,15 @@ img.smooth-zoom {
 	// placeholder in case i need to format the special glyph
 // }
 
-.window-9x {
+.x-window {
 	position: absolute;
-	box-shadow: 8px 8px 8px -8px black;
+	box-shadow: 4px 4px 8px -4px black;
+	--window-radius: 8px;  // use for titlebar too
+	border-top-left-radius:  var(--window-radius);
+	border-top-right-radius: var(--window-radius);
+	border-bottom-left-radius:  2px;
+	border-bottom-right-radius: 2px;
+	background-color: brown;
 	&.window-fixed {
 		position: fixed;
 	}
@@ -631,6 +601,100 @@ img.smooth-zoom {
 		z-index: 90 !important;  // makes page scroll sometimes - is this acceptable?
 	}
 }
+
+.window-titlebar {
+	background: var(--ubuntu-grad);
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+	/* hmmnn not sure about this yet - it looks kind of 3d */
+	// background: linear-gradient(to bottom right, var(--s-blu), var(--d-blu));
+	// background-color: var(--s-blu);
+	color: var(
+		--title-col,
+		var(--txt-2)
+	);
+	text-shadow: var(--ubuntu-inset-text);
+
+	position: relative;
+	margin: 0px 0px 2px 0px;
+	padding: 4px 8px;
+	height: 20px;
+
+	user-select: none;
+	/*
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	*/
+
+	& .window-title {
+		/* remove link styling for titles */
+		color: inherit;
+		text-decoration: none;
+		cursor: default;
+		padding: 4px;
+
+		& .window-icon {
+			vertical-align: middle;
+		}
+	}
+
+	/* ======================================================================	*\
+	||         all window decoration svgs from material design icons:        	||
+	||                    https://materialdesignicons.com/                   	||
+	||             ztodo https://www.compart.com/en/unicode/U+1F5D7          	||
+	\* ======================================================================	*/
+	& .window-decs {
+		margin: 0;
+		// font-size: 1.2em;
+		margin-right: 2px;
+		padding: 0px;
+		float: right;
+
+
+		& .window-min:before {
+			content: "󰖰";
+		}
+		& .window-max:before {
+			content: "󰖯";
+		}
+		& .window-rst:before {
+			content: "󰖲";
+		}
+		& .window-hlp:before {
+			content: "󰋖";
+		}
+		& .window-cls:before {
+			content: "󰖭";
+			background-image: linear-gradient(#F19478, #DA4D1C);
+		}
+
+		& li {
+			visibility: hidden;  // hide to replace with before pseudo
+			font-family: "Material Design Icons";
+
+			&:before {  // attributes for all buttons
+				visibility: visible;
+				display: inline-block;
+				position: relative;
+				top: -2px;
+				margin: 0;
+				padding: 2px;
+				width: 1.1em;
+				font-size: 11px;
+				// line-height: 1.2em;  // for vert cenre in chrome ?depped
+				background-image: linear-gradient(#969590, #5C5B57);
+				color: #423630;
+				border: 1px solid #423630;
+				// box-shadow: var(--ubuntu-inset-text);
+				text-shadow: 0 1px 0 var(--ins-txt-btm);
+				border-radius: 99vw;
+			}
+		}
+	}
+}
+
 .indent-9x,
 .copy-all,
 textarea {
@@ -659,10 +723,9 @@ textarea {
 }
 
 .outdent-9x,
-.window-9x/* :not(.window-maximised), */,
+// .x-window/* :not(.window-maximised), */,
 .btn-9x,
-.btn-dropdown:before,
-.window-decs li:before {
+.btn-dropdown:before, {
 	background-color: var(--bgd-2);
 	// padding: 4px;
 	padding: 2px;
@@ -714,92 +777,8 @@ textarea {
 	}
 }
 
-.window-titlebar {
-	background: var(
-		--titlebar-col,
-		linear-gradient(
-			90deg,
-			var(--s-blu),
-			var(--d-blu)));
-	/* hmmnn not sure about this yet - it looks kind of 3d */
-	// background: linear-gradient(to bottom right, var(--s-blu), var(--d-blu));
-	// background-color: var(--s-blu);
-	color: var(
-		--title-col,
-		var(--bgd-1));
-
-	position: relative;
-	margin: 0px 0px 2px 0px;
-	padding: 1px 2px;
-	height: 20px;
-
-	user-select: none;
-
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
-
-
-	& a.window-title {
-		/* remove link styling for titles */
-		color: inherit;
-		text-decoration: none;
-		cursor: default;
-
-		& .window-icon {
-			vertical-align: middle;
-		}
-	}
-
-	/* ======================================================================	*\
-	||         all window decoration svgs from material design icons:        	||
-	||                    https://materialdesignicons.com/                   	||
-	||             ztodo https://www.compart.com/en/unicode/U+1F5D7          	||
-	\* ======================================================================	*/
-	& .window-decs {
-		margin: 0;
-		font-size: 1.2em;
-		margin-right: 2px;
-		padding: 0px;
-
-		& .window-min:before {
-			content: "󰖰";
-		}
-		& .window-max:before {
-			content: "󰖯";
-		}
-		& .window-rst:before {
-			content: "󰖲";
-		}
-		& .window-hlp:before {
-			content: "󰋖";
-		}
-		& .window-cls:before {
-			content: "󰖭";
-		}
-
-		& li {
-			visibility: hidden;  // hide to replace with before pseudo
-			font-family: "Material Design Icons";
-
-			&:before {  // attributes for all buttons
-				visibility: visible;
-				display: inline-block;
-				position: relative;
-				margin: 0;
-				padding: 0;
-				vertical-align: text-bottom;  // ?
-				width: 1.2em;
-				font-size: 0.6em;
-				line-height: 1.2em;  // for vert cenre in chrome
-				color: var(--txt-0);
-				aspect-ratio: 1 / 1;
-			}
-		}
-	}
-}
 .window-menu ul {
+	display: none;
 	margin: 0;
 	padding: 0;
 	cursor: default;
@@ -854,103 +833,6 @@ textarea {
 	/*https://web.archive.org/web/20040414012444fw_/http://www.geocities.com/joannewww/jwbgs/snow.htm*/
 	// background-image: url("/stadt/assets/images/backgrounds/snow-large.png");
 	// animation: none !important;
-
-	& .desktop-icons-container {
-		width: min-content;
-		margin-top: var(--tb-hite);
-		padding: 8px;
-		// border-radius: 4px;
-		background: #00000040;  // ztodo var
-		backdrop-filter: blur(2px);
-		// border: var(--icn-bg-bdr, none);
-
-		// box-shadow: rgb(0, 0, 0) 0px 10px 10px -5px inset;
-		box-shadow: inset -4px 0px 8px -4px #000;
-		border-right: 2px solid #ffffff60;
-
-		height: 100%;
-		overflow-x: visible;
-		// overflow-y: auto;  // this can't be here, https://stackoverflow.com/questions/6421966/css-overflow-x-visible-and-overflow-y-hidden-causing-scrollbar-issue
-		scrollbar-width: thin;
-
-		& .desktop-icon {
-			text-align: center;
-			color: var(--bgd-0);
-			display: block;
-
-			--icon-size: 48px;
-
-			position: relative;
-			box-sizing: border-box;
-			aspect-ratio: 1/1;
-			padding: 2px;
-			border-radius: 8px;
-			border: 1px solid #ffffff40;
-
-			// background-color: #ffffff20;
-			background-image: linear-gradient(#ffffff10 25%, #ffffff60);
-
-			&.update {
-				background-color: #3465A490;  // ubuntu terminal palette
-			}
-			&.current {
-				background-color: #E9542090;  // ubuntu brand colour
-			}
-			&:hover,
-			&:focus-visible {
-				background-color: #AD7FA890;  // ubuntu terminal palette
-			}
-
-			&::after {
-				content: "";
-				position: absolute;
-				inset: 0;
-				border-radius: 8px;
-				background-image:
-					radial-gradient(
-						circle at top,
-						#ffffffc0,
-						transparent 50%);
-			}
-
-			& span {
-				display: none;
-			}
-			&:hover span,
-			&:focus span {
-				display: inline-block;
-				position: absolute;
-				top: 0; bottom: 0;
-				left: calc(var(--icon-size) + 4px);
-				height: min-content; width: max-content;
-				margin-block: auto;
-
-				background-color: #121212;
-				background-image:
-					radial-gradient(
-						ellipse at top,
-						#ffffff60,
-						transparent
-						);
-				color: white;
-
-				padding-block: 8px;
-				padding-inline: 16px;
-				border-radius: 4px;
-				border: 1px solid #FFFFFF80;
-			}
-
-			& + .desktop-icon {
-				margin-top: 8px;
-			}
-
-			& img {
-				width: var(--icon-size);
-				display: block;
-				margin-inline: auto;
-			}
-		}
-	}
 
 	& #wall-imgs {
 		display: block;
@@ -1018,21 +900,117 @@ textarea {
 		}
 	}
 }
+
 /* -------------------------------- taskbar -------------------------------- */
+
+#ubuntu-sidebar {
+	width: min-content;
+	position: fixed;
+	top: var(--tb-hite);
+	padding: 8px;
+	// border-radius: 4px;
+	background: #00000040;  // ztodo var
+	backdrop-filter: blur(2px);
+	// border: var(--icn-bg-bdr, none);
+
+	// box-shadow: rgb(0, 0, 0) 0px 10px 10px -5px inset;
+	box-shadow: inset -4px 0px 8px -4px #000;
+	border-right: 2px solid #ffffff60;
+
+	height: 100%;
+	overflow-x: visible;
+	// overflow-y: auto;  // this can't be here, https://stackoverflow.com/questions/6421966/css-overflow-x-visible-and-overflow-y-hidden-causing-scrollbar-issue
+	scrollbar-width: thin;
+
+	& .desktop-icon {
+		text-align: center;
+		color: var(--bgd-0);
+		display: block;
+
+		--icon-size: 48px;
+
+		position: relative;
+		box-sizing: border-box;
+		aspect-ratio: 1/1;
+		padding: 2px;
+		border-radius: 8px;
+		border: 1px solid #ffffff40;
+
+		// background-color: #ffffff20;
+		background-image: linear-gradient(#ffffff10 25%, #ffffff60);
+
+		&.update {
+			background-color: #3465A490;  // ubuntu terminal palette
+		}
+		&.current {
+			background-color: #E9542090;  // ubuntu brand colour
+		}
+		&:hover,
+		&:focus-visible {
+			background-color: #AD7FA890;  // ubuntu terminal palette
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			inset: 0;
+			border-radius: 8px;
+			background-image:
+				radial-gradient(
+					circle at top,
+					#ffffffc0,
+					transparent 50%);
+		}
+
+		& span {
+			display: none;
+		}
+		&:hover span,
+		&:focus span {
+			display: inline-block;
+			position: absolute;
+			top: 0; bottom: 0;
+			left: calc(var(--icon-size) + 8px);
+			height: min-content; width: max-content;
+			margin-block: auto;
+
+			background-color: #121212;
+			background-image:
+				radial-gradient(
+					ellipse at top,
+					#ffffff60,
+					transparent
+					);
+			color: white;
+
+			padding-block: 8px;
+			padding-inline: 16px;
+			border-top-right-radius:    8px;
+			border-bottom-right-radius: 8px;
+			border-top-left-radius:    99vw;
+			border-bottom-left-radius: 99vw;
+			border: 1px solid #FFFFFF80;
+		}
+
+		& + .desktop-icon {
+			margin-top: 8px;
+		}
+
+		& img {
+			width: var(--icon-size);
+			display: block;
+			margin-inline: auto;
+		}
+	}
+}
+
 #ubuntu-header {
 	position: fixed;
 	top: 0;
 	width: 100%;
 	height: var(--tb-hite);
 	box-sizing: border-box;
-	background-image:
-		linear-gradient(
-			var(--bgd-3) 5%,
-			var(--bgd-2) 10%,
-			var(--bgd-1) 48%,
-			var(--bgd-1) 52%,
-			var(--bgd-0) 100%
-		);
+	background-image: var(--ubuntu-grad);
 	padding: 4px;
 	box-shadow: 0px 0px 8px 4px black;
 
