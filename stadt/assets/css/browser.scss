@@ -15,10 +15,11 @@
 /* -------------------------------- layout --------------------------------- */
 
 #window-area {
-	padding-top:         	32px;
-	padding-right:       	32px;
-	padding-left: calc(  	32px + var(--dt-padd));
-	padding-bottom: calc(	32px + var(--tb-hite));
+	padding: 32px;
+// 	padding-top:         	32px;
+// 	padding-right:       	32px;
+// 	padding-left: calc(  	32px + var(--dt-padd));
+// 	padding-bottom: calc(	32px + var(--tb-hite));
 }
 
 #browser {
