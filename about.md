@@ -48,18 +48,6 @@ listed in order of preference:
 	<dd>
 		games and steam workshop shit
 	</dd>
-	<dt>
-		<a href="https://www.reddit.com/u/zeusofthecrows">reddit</a>
-	</dt>
-	<dd>
-		<del>i only really use reddit because it's the only social media with a scrutable interface, but i do mod a subreddit so i guess i am a redditor™</del>
-	</dd>
-	<dt>
-		<a href="https://zeusofthecrows.tumblr.com/">tumblr</a>
-	</dt>
-	<dd>
-		<del>i quite like tumblr, but the interface is so awful that i hardly use it</del>
-	</dd>
 </dl>
 
 ---
@@ -87,3 +75,5 @@ all content on this site, unless otherwise specified, is free for personal and c
 ![rainbow 88×31 banner](/stadt/assets/images/buttons/other/rainbow.png){: .gc-button}: this site is lgbt+ friendly
 
 ![zeus 88×31 banner](/stadt/assets/images/buttons/my-links/zeus-term.png){: .gc-button}: have a geocities button
+
+![zeus 88×31 green banner](/stadt/assets/images/buttons/my-links/zeus-term-green.png){: .gc-button}: the same, but in green

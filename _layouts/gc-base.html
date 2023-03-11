@@ -82,7 +82,9 @@
 
 		{{ content }}
 
-		{% if page.title != "garten" %} {% include gc-footer.html %} {% endif %}
+		{% if page.url != "/stadt/webgarden/" %} {% include gc-sidebar.html %} {% endif %}
+
+		{% if page.url != "/stadt/webgarden/" %} {% include gc-header.html %} {% endif %}
 
 	</body>
 
