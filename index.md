@@ -12,11 +12,54 @@ welcome to a miscellany of things i've made for my own benefit, things i've foun
 
 **/!\ data warning: most showcase pages have large images, be wary if using a metered network**
 
-new here? [visit my personal subdirectory](/stadt/), or check the stuff i think is least crap:
+new here? check the stuff i think is least crap:
 
 * [Dsegstended font](/other/fonts#dsegstended)
 * [Amber Terminal Wallpaper Engine](/desktops/wpengine#amber-dec-terminal)
 * [VPad Tester & Configurator](/utilities/ps-vita#vpad-tester--configurator)
+
+---
+
+<div id="stadt-logo">
+	<style>
+		#stadt-logo {
+			width: min-content;
+			margin-inline: auto;
+		}
+		#stadt-logo > a {
+			text-decoration: none;
+		}
+		#stadt-logo span {
+			text-decoration: underline wavy;
+			margin-inline: auto;
+		}
+		#stadt-logo pre {
+			width: min-content;
+			/* because otherwise it inherits, but the after element doesn't - what the fuck? */
+			font-family: inherit;
+		}
+
+		#stadt-logo pre::after {
+			content: "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~";
+			display: block;
+		}
+		#stadt-logo:hover pre::after,
+		#stadt-logo:focus-within pre::after {
+			content: '"""""""""""""""""""""""""""""""""""""""""""""""';
+		}
+		#stadt-logo:hover span,
+		#stadt-logo:focus-within span {
+			text-decoration-style: dotted;
+		}
+	</style>
+	<a href="/stadt/">
+		<span>Come Visit</span>
+		<pre><code> _______,             ___               _,
+'  || '|| _   ___    (( `' ,|_  ___   __|| ,|_
+   ||  ||'|| //_\)    `\\\'||~ '_)|| // ||'||~
+  _||__||_||_\\__,   \\_// `l, ((_||_\\_||_`l, </code></pre>
+	</a>
+</div>
 
 ---
 
