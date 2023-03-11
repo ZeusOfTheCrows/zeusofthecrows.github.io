@@ -1,4 +1,4 @@
-- name: Thoughts
+- name: Thoughts & Opinions
   link: /stadt/thoughts/
   updt: no
   icon: /stadt/assets/images/window-icons/thoughts.png
@@ -10,11 +10,11 @@
   icon: /stadt/assets/images/window-icons/logfile.png
   bicn: /stadt/assets/images/desktop-icons/logfile.svg
 
-- name: Opinions
-  link: /stadt/opinions/
+- name: Favourites
+  link: /stadt/favourites
   updt: no
-  icon: /stadt/assets/images/window-icons/opinions.png
-  bicn: /stadt/assets/images/desktop-icons/opinions.svg
+  icon: /stadt/assets/images/window-icons/favourites.png
+  bicn: /stadt/assets/images/desktop-icons/favourites.svg
 
 - name: Gallery
   link: /stadt/gallery/

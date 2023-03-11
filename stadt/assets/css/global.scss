@@ -605,10 +605,8 @@ img.smooth-zoom {
 	background: var(--ubuntu-grad);
 	border-top-left-radius: 8px;
 	border-top-right-radius: 8px;
-	color: var(
-		--title-col,
-		var(--txt-2)
-	);
+	color: var(--title-col, var(--txt-2));
+	text-align: center;
 	text-shadow: var(--ubuntu-inset-text);
 
 	position: relative;
@@ -621,12 +619,14 @@ img.smooth-zoom {
 	& .window-title {
 		/* remove link styling for titles */
 		color: inherit;
+		font-style: italic;
 		text-decoration: none;
 		cursor: default;
 		padding: 4px;
 
 		& .window-icon {
 			vertical-align: middle;
+			float: left;
 		}
 	}
 
@@ -1013,16 +1013,14 @@ textarea {
 		display: inline-block;
 		& .img-grid {
 			width: max-content;
-			& .btn-80x15 {
-				border: 1px solid;
-				border-radius: 2px;
-				border-top-color:    var(--ins-txt-top);
-				border-left-color:   var(--ins-txt-top);
-				border-bottom-color: var(--ins-txt-btm);
-				border-right-color:  var(--ins-txt-btm);
-			}
 		}
 		& img {
+			border: 1px solid;
+			border-radius: 4px;
+			border-top-color:    var(--ins-txt-top);
+			border-left-color:   var(--ins-txt-top);
+			border-bottom-color: var(--ins-txt-btm);
+			border-right-color:  var(--ins-txt-btm);
 			vertical-align: middle;
 		}
 		& a {

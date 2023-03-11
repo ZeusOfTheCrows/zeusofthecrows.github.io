@@ -14,14 +14,27 @@
 
 /* -------------------------------- layout --------------------------------- */
 .window-content {
-	display: grid;
+	// display: grid;
 }
 
-@media (max-width: 1600px) {
+.x-window {
+	position: relative;
+	inset: 0;
+	margin: auto;
+}
 
-	.x-window {
-		position: revert;
-	}
+#window-area {
+	box-sizing: border-box;
+	padding: 1em;
+	gap: 1em;
+	display: grid;
+	grid-template-columns: 1fr 2fr 1fr;
+	grid-template-areas:
+		"wnew main musc"
+		"qote main ring";
+}
+
+@media (max-width: 1200px) {
 
 	#window-area {
 		display: flex;
@@ -34,26 +47,36 @@
 }
 
 /* -------------------------------- windows -------------------------------- */
-#welcome {
-	z-index: 49;  // halfway
-	top: 30vh;
-	left: calc(50vw - 256px);
-	width: 512px;
+#whats-new {
+	grid-area: wnew;
+	margin-top: 10%;
+	// left: calc(50vw - 256px);
+	max-width: 512px;
 
 	& .window-content {
-		// padding: 4px 8px;
-		padding: 8px;
-		gap: 8px;
+		padding: 4px 8px;
+		// padding: 8px;
 		grid-template-areas:
 			"title title"
 			"body btns"
 			"footer footer";
-		// overflow-y: scroll;  // add dummy scrollbar for notepad æsthetic
+	}
+}
+
+#intro-text {
+	grid-area: main;
+	max-width: 80ch;
+
+	& .window-content {
+		padding: 8px;
+		overflow-y: scroll;  // add dummy scrollbar for notepad æsthetic
+		max-height: 75vh; // ztodo: hacky fix
 
 		& #welcome-title {
-			grid-area: title;
 			font-size: 2rem;
 			font-weight: 700;
+			width: max-content;
+			margin-inline: auto;
 
 			& #welcome-serif {
 				font-family: var(--fnt-serif);
@@ -61,64 +84,20 @@
 				color: var(--txt-2);
 			}
 			& #welcome-sans {
+				font-family: var(--fnt-sans);
 				color: var(--s-org);
 			}
 		}
-		& #welcome-body {
-			grid-area: body;
-			padding: 12px 16px;
-			// background-image: linear-gradient(var(--s-ylw), var(--s-ylw));
-			// background-blend-mode: overlay;  // mixing colours
-
-			& p {
-				padding-top: 0;
-			}
-		}
-		& #page-info-buttons {
-			grid-area: btns;
-			width: 96px;
-		}
-		& #welcome-footer {
-			grid-area: footer;
-
-			& input:not(:checked) + label {
-				visibility: hidden;
-				position: relative;
-				&::after {
-					visibility: visible;
-					position: absolute;
-					left: 0;
-					content: "You… you know this is just for show, right?";
-				}
-			}
-		}
-		// & pre {
-			// margin: 0;
-		// }
-	}
-}
-
-#intro-text {
-	z-index: 40;
-	top: 10vh;
-	left: 10vw;
-	width: 512px;
-
-	& .window-content {
-		padding: 8px;
-		overflow-y: scroll;  // add dummy scrollbar for notepad æsthetic
-		max-height: 75vh; // ztodo: hacky fix
 	}
 }
 
 #webrings {
-	z-index: 46;
-	top: 25vh;
-	left: 65vw;
+	grid-area: ring;
 
 	& .window-content {
 		width: 440px;
 		padding: 4px;
+		display: grid;
 		gap: 8px;
 		grid-template-areas:
 			"intro intro"
@@ -297,21 +276,18 @@
 	}
 }
 
-#radio-player {
-	z-index: 40;
-	top: 10vh;
-	left: 80vw;
-}
-
 #music-player {
-	z-index: 45;
-	top: 65vh;
-	left: 35vw;
+	grid-area: musc;
+	margin-top: 16%;
+	margin-left: 8%;
+	height: min-content;
+	max-width: min-content;
 
 	& .window-content {
 		// padding: 1px;
 		// width: 100%;
 		padding: 8px;
+		display: grid;
 		gap: 4px 8px;
 		grid-template-rows:    min-content;
 		grid-template-columns: max-content;
@@ -394,10 +370,10 @@
 }
 
 #quote {
-	z-index: 35;
-	top:   3vh;
-	left: 60vw;
-	width: 50ch;
+	grid-area: qote;
+	max-width: 50ch;
+	height: min-content;
+	top: 2%;
 
 	& blockquote {
 		font-family: var(--fnt-serif);
