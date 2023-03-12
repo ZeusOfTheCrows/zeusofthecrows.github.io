@@ -9,7 +9,7 @@ title:
 
 <article id="whats-new" class="x-window">
 	<div id="welcome-titlebar" class="window-titlebar">
-		<a href="#welcome" class="window-title ms-bold">Welcome</a>
+		<span class="window-title">Welcome</span>
 		<ul class="window-decs" aria-hidden="true" role="presentation">
 			<li class="window-hlp"></li>
 			<li class="window-cls"></li>
@@ -19,7 +19,7 @@ title:
 		<h1 style="animation: colour-cycle 5s linear infinite;">What's New</h1>
 		<ul>
 			<li>
-				<mark>we're ubuntu themed now!</mark>
+				<mark>we're ubuntu themed now!</mark> (although less rigourously faithful than before)
 			</li>
 			<li>
 				winter theme is gone
@@ -31,6 +31,15 @@ title:
 			<li>
 				new images have been added to <a href="/stadt/gallery/">the gallery</a>
 				<ul class="img-grid">
+					<li>
+						<img src="/stadt/assets/images/buttons/page-info/dark-mode.png"
+							class="btn-88x31" alt="optimised for dark mode" />
+					</li>
+					<li><a href="https://xenia-linux-site.glitch.me/">
+						<img class="btn-88x31" src="/stadt/assets/images/buttons/brands/xenia.png"
+							data-img-src="https://voltbun.neocities.org/"
+							alt="xenia the fox linux button" />
+					</a></li>
 					<li>
 						<img src="/stadt/assets/images/stamps/pope.png"
 							class="stamp-99x56"
@@ -79,11 +88,11 @@ title:
 
 <article id="intro-text" class="x-window">
 	<div class="window-titlebar">
-		<a href="#intro-text" class="window-title ms-bold">
-			<img class="window-icon pixel-art"
-				src="/stadt/assets/images/window-icons/notepad.png" alt="" />
+		<img class="window-icon"
+			src="/stadt/assets/images/window-icons/notepad.png" alt="" />
+		<span class="window-title">
 			Short Intro
-		</a>
+		</span>
 		<ul class="window-decs" aria-hidden="true" role="presentation">
 			<li class="window-min"></li>
 			<li class="window-max"></li>
@@ -135,6 +144,9 @@ title:
 			</a></li>
 		</ul>
 		<p>
+			before you click a link, observe your cursor! <code>cursor: pointer;</code> implies an internal link, whereas <code>cursor: alias;</code> (a little arrow, usually) indicates an external one
+		</p>
+		<p>
 			this site is for my own benefit - i'll make stuff that i think looks
 			nice, and now i have somewhere to put it. nevertheless, i do hope you
 			enjoy what you find here
@@ -153,16 +165,187 @@ title:
 			highlighted text)
 		</p>
 		<p>want a proper giggle? open this page in ie11</p>
+
+		<hr />
+
+		<ul class="img-grid">
+			<li><a href="https://yesterweb.org/no-to-web3/">
+				<img class="btn-88x31" src="/stadt/assets/images/buttons/taskbar/web3.png"
+					data-img-source="https://yesterweb.org/no-to-web3/"
+					alt="say no to web3" />
+			</a></li>
+			<li><a href="http://web3.14159.annwfn.net/">
+				<img class="btn-88x31" src="/stadt/assets/images/buttons/taskbar/web-pi.png"
+					data-img-source="http://web3.14159.annwfn.net/"
+					alt="web π compliant" />
+			</a></li>
+			<li><a href="/stadt/about#site-rating">
+				<img class="btn-88x31" src="/stadt/assets/images/buttons/taskbar/rating.png"
+					alt="site rating: 18" />
+			</a></li>
+			<li><a href="/stadt/thoughts#svg">
+				<img class="btn-88x31" src="/stadt/assets/images/buttons/taskbar/svg.svg"
+					alt="animated svg button" />
+				</a></li>
+			<li><a href="https://zeusofthecrows.github.io/mobile/kustom#wood-panelling">
+				<img class="btn-88x31" src="/stadt/assets/images/buttons/taskbar/skeuo.png"
+					alt="skeuomorphism now button" />
+				</a></li>
+			<li><a>
+				<img class="btn-88x31" src="/stadt/easter/"
+					style="content: url(/stadt/assets/images/buttons/taskbar/new-tab.png);"
+					title="it is happy here with its friends
+					please don't force it into a cold, empty tab" />
+			</a></li>
+			<li><a href="/stadt/about#site-licence">
+				<img class="btn-88x31" src="/stadt/assets/images/buttons/taskbar/cc-by-sa.png"
+					data-img-source="https://creativecommons.org/licenses/"
+					alt="cc-by-sa licence" />
+			</a></li>
+			<li><a href="http://svencoop.com/">
+				<img class="btn-88x31" src="/stadt/assets/images/buttons/taskbar/sven-coop.png"
+					data-img-source="http://svencoop.com/"
+					alt="sven coop" />
+			</a></li>
+			<li><a href="#">
+				<img class="btn-88x31" src="/stadt/assets/images/buttons/taskbar/target-blank.png"
+					data-img-source="~zeus"
+					title="if i wanted a new tab, i'd middle-click!
+					if you want to escape an iframe, use target='_top'"
+					alt="anti 'target=&quot;_blank&quot;' button" />
+			</a></li>
+			<li><a href="https://colemak.org/">
+				<img class="btn-88x31" src="/stadt/assets/images/buttons/taskbar/colemak.png"
+					data-img-source="~zeus"
+					alt="i use colemak (wide)" />
+			</a></li>
+			<li><a>
+				<img class="btn-88x31" src="/stadt/assets/images/buttons/taskbar/seed.png"
+					data-img-source="https://melodicake.neocities.org/main.html"
+					alt="seed your torrents button" />
+			</a></li>
+			<li><a href="https://en.wikipedia.org/wiki/Year_2038_problem">
+				<img class="btn-88x31" src="/stadt/assets/images/buttons/taskbar/2038.png"
+					data-img-source="unknown"
+					alt="are you ready? year 2038" title="the epochalypse is coming" />
+			</a></li>
+			<li><a href="/stadt/gallery#buttons">
+				<img class="btn-88x31" src="/stadt/assets/images/buttons/taskbar/button.png"
+					alt="say no to missing img links, get a button Today!" />
+			</a></li>
+			<li><a href="/stadt/thoughts#css-puzzle">
+				<img class="btn-88x31"
+					src="/stadt/assets/images/buttons/taskbar/css.png"
+					alt="css is difficult" />
+			</a></li>
+			<li><a href="https://ikewise.neocities.org/2018-05-19_-_return.htm">
+				<img class="btn-88x31" src="/stadt/assets/images/buttons/taskbar/code-run.png"
+					data-img-source="https://anlucas.neocities.org/"
+					alt="PRO code and run" title="just try to stop me" />
+			</a></li>
+		</ul>
+
+		<hr />
+
+		<ul class="img-grid">
+			<li>
+				<img src="/stadt/assets/images/stamps/bliss.png" class="stamp-99x56 smooth-zoom"
+					alt="xp bliss stamp w/ vhs effect and text 'rew'"
+					data-img-src="~zeus" />
+			</li>
+			<li>
+				<img src="/stadt/assets/images/stamps/blueheart.png"
+					class="stamp-99x56"
+					alt="celeste rotating blue heart stamp" />
+			</li>
+			<li>
+				<img src="/stadt/assets/images/stamps/dapperblook.png"
+					class="stamp-99x56"
+					alt="napstablook quote 'really not feelin up to it right now. sorry.'"/>
+			</li>
+			<li>
+				<img src="/stadt/assets/images/stamps/darksoul.png"
+					class="stamp-99x56 smooth-zoom"
+					alt="majula stamp 'you died'"/>
+			</li>
+			<li>
+				<img src="/stadt/assets/images/stamps/dos.png"
+					class="stamp-99x56 smooth-zoom"
+					alt="dos c: prompt"/>
+			</li>
+			<li>
+				<img src="/stadt/assets/images/stamps/dvd.png"
+					class="stamp-99x56 smooth-zoom"
+					alt="moving dvd logo" data-img-src="~zeus" />
+			</li>
+			<li>
+				<img src="/stadt/assets/images/stamps/fire.png"
+					class="stamp-99x56"
+					alt="celeste dream fire stamp" />
+			</li>
+			<li>
+				<a href="https://rabidrodent.neocities.org/zelda/">
+					<img src="/stadt/assets/images/stamps/link-b.png"
+						title="available in frame-blended (crap lcd) ver, or normal"
+						class="stamp-99x56 smooth-zoom"
+						alt="link's awakening - sword get (frame-blended ver.)" />
+				</a>
+			</li>
+			<li>
+				<img src="/stadt/assets/images/stamps/prie-dieu.png"
+					class="stamp-99x56"
+					alt="lighting a prie-dieu stamp (blasphemous)" />
+			</li>
+			<li>
+				<img src="/stadt/assets/images/stamps/upgrade.png"
+					class="stamp-99x56 smooth-zoom"
+					alt="various iterations of windows, crashing after win11" />
+			</li>
+		</ul>
+
+		<hr />
+
+		<ul class="img-grid">
+
+			<li>
+				<img src="/stadt/assets/images/blinkies/control.png"
+					class="btn-150x20 smooth-zoom"
+					alt="losing control blinkie" />
+			</li>
+			<li>
+				<img src="/stadt/assets/images/blinkies/eyes.png"
+					class="btn-150x20 smooth-zoom"
+					alt=" "
+					data-img-src="https://newlambda.neocities.org/stuff/graphics/blinkie.html" />
+			</li>
+			<li>
+				<img src="/stadt/assets/images/blinkies/italic.png"
+					class="btn-150x20"
+					alt="fortune favours the bold, but i favour the italic"
+					data-img-src="~zeus" />
+			</li>
+			<li>
+				<img src="/stadt/assets/images/blinkies/marquee.png"
+					class="btn-150x20 smooth-zoom"
+					alt="windows xp style loading marquee blinkie"/>
+			</li>
+			<li>
+				<img src="/stadt/assets/images/blinkies/todo.png"
+					class="btn-150x20 smooth-zoom"
+					alt="//TODO: Create Blinkie"
+					data-img-src="~zeus" />
+				</li>
+		</ul>
 	</div>
 </article>
 
 <article id="music-player" class="x-window">
 	<div class="window-titlebar">
-		<a href="#music-player" class="window-title ms-bold">
-			<img class="window-icon pixel-art"
-				src="/stadt/assets/images/window-icons/cd-audio.png" alt="" />
-			CD Audio
-		</a>
+		<img class="window-icon"
+			src="/stadt/assets/images/window-icons/cd-audio.png" alt="" />
+		<span class="window-title">
+			Music du Jour
+		</span>
 		<ul class="window-decs" aria-hidden="true" role="presentation">
 			<li class="window-min"></li>
 			<li class="window-max"></li>
@@ -242,13 +425,107 @@ title:
 	</div>
 </article>
 
+<article id="quote" class="x-window">
+	<div class="window-titlebar">
+		<img class="window-icon pixel-art"
+			src="/stadt/assets/images/window-icons/quotes.png" alt="" />
+		<span class="window-title">
+			Quote of the day
+		</span>
+		<ul class="window-decs" aria-hidden="true" role="presentation">
+			<li class="window-min"></li>
+			<li class="window-max"></li>
+			<li class="window-cls"></li>
+		</ul>
+	</div>
+	<div class="window-menu" aria-hidden="true" role="presentation">
+		<ul>
+			<li><u>F</u>ile</li>
+			<li><u>E</u>dit</li>
+			<li><u>O</u>ptions</li>
+			<li><u>H</u>elp</li>
+		</ul>
+	</div>
+	<div class="window-content">
+		<blockquote
+			cite="https://github.com/xoreaxeaxeax/movfuscator/tree/master/validation/doom">
+			The mov-only [version of] DOOM renders approximately one frame every 7
+			hours, so playing this version requires somewhat increased patience.
+		</blockquote>
+		<footer class="indent-9x">
+			<a href="https://github.com/xoreaxeaxeax/movfuscator/tree/master/validation/doom/"
+				>xoreaxeaxeax</a>
+			<time>2018</time>
+		</footer>
+	</div>
+</article>
+
+<article id="brands" class="x-window">
+	<div class="window-titlebar">
+		<img class="window-icon"
+			src="/stadt/assets/images/window-icons/buttons.png" alt="" />
+		<span class="window-title">
+			Used Software
+		</span>
+		<ul class="window-decs" aria-hidden="true" role="presentation">
+			<li class="window-min"></li>
+			<li class="window-max"></li>
+			<li class="window-cls"></li>
+		</ul>
+	</div>
+	<div class="window-content">
+		<ul class="img-grid">
+			<li><a href="https://github.com/ZeusOfTheCrows/zeusofthecrows.github.io/">
+					<img class="btn-88x31" src="/stadt/assets/images/buttons/brands/gh-pages.png"
+					alt="powered by github pages" />
+			</a></li>
+			<li><a href="https://neocities.org/site/zeusofthecrows/">
+					<img class="btn-88x31" src="/stadt/assets/images/buttons/brands/neocities.png"
+					data-img-insp="https://web.archive.org/web/19961020015116/http://www3.netscape.com/"
+					alt="hosted on neocities" />
+			</a></li>
+			<li><a href="https://xenia-linux-site.glitch.me/">
+					<img class="btn-88x31" src="/stadt/assets/images/buttons/brands/xenia.png"
+					data-img-src="https://voltbun.neocities.org/"
+					alt="xenia the fox linux button" />
+			</a></li>
+			<li><a href="https://inkscape.org/">
+				<img class="btn-88x31" src="/stadt/assets/images/buttons/brands/inkscape.svg"
+					alt="inkscape 'draw freely.' logo" />
+			</a></li>
+			<li><a href="https://www.aseprite.org/">
+				<img class="btn-88x31" src="/stadt/assets/images/buttons/brands/aseprite.png"
+					alt="aseprite old logo animated" />
+			</a></li>
+			<li><a href="http://apngasm.sourceforge.net/">
+				<img class="btn-88x31" src="/stadt/assets/images/buttons/brands/apngasm.png"
+					alt="apng assembler" />
+			</a></li>
+			<li>
+				<a href="http://www.libpng.org/pub/png/">
+				<img class="btn-88x31" src="/stadt/assets/images/buttons/brands/apng.png"
+					data-img-source="~zeus"
+					alt="[animated] png now" />
+			</a></li>
+			<li><a href="https://contrachrome.com/">
+				<img class="btn-88x31" src="/stadt/assets/images/buttons/brands/chromium.png"
+					alt="ie/chrome/brave logos 'same shit, different arsehole'" />
+			</a></li>
+			<li><a href="https://www.mozilla.org/en-GB/firefox/New">
+				<img class="btn-88x31" src="/stadt/assets/images/buttons/brands/firefox.png"
+					alt="mozilla now" />
+			</a></li>
+		</ul>
+	</div>
+</article>
+
 <article id="webrings" class="x-window">
 	<div id="webrings-titlebar" class="window-titlebar">
-		<a href="#webrings" class="window-title ms-bold">
-			<img class="window-icon pixel-art"
-				src="/stadt/assets/images/window-icons/webring.png" alt="" />
+		<img class="window-icon pixel-art"
+			src="/stadt/assets/images/window-icons/webring.png" alt="" />
+		<span class="window-title">
 			Webring Navigator
-		</a>
+		</span>
 		<ul class="window-decs" aria-hidden="true" role="presentation">
 			<li class="window-min"></li>
 			<li class="window-cls"></li>
@@ -325,51 +602,3 @@ title:
 		</section>
 	</div>
 </article>
-
-<article id="quote" class="x-window">
-	<div class="window-titlebar">
-		<a href="#quote" class="window-title ms-bold">
-			<img class="window-icon pixel-art"
-				src="/stadt/assets/images/window-icons/quotes.png" alt="" />
-			Quote of the day
-		</a>
-		<ul class="window-decs" aria-hidden="true" role="presentation">
-			<li class="window-min"></li>
-			<li class="window-max"></li>
-			<li class="window-cls"></li>
-		</ul>
-	</div>
-	<div class="window-menu" aria-hidden="true" role="presentation">
-		<ul>
-			<li><u>F</u>ile</li>
-			<li><u>E</u>dit</li>
-			<li><u>O</u>ptions</li>
-			<li><u>H</u>elp</li>
-		</ul>
-	</div>
-	<div class="window-content">
-		<blockquote
-			cite="https://github.com/xoreaxeaxeax/movfuscator/tree/master/validation/doom">
-			The mov-only [version of] DOOM renders approximately one frame every 7
-			hours, so playing this version requires somewhat increased patience.
-		</blockquote>
-		<footer class="indent-9x">
-			<a href="https://github.com/xoreaxeaxeax/movfuscator/tree/master/validation/doom/"
-				>xoreaxeaxeax</a>
-			<time>2018</time>
-		</footer>
-	</div>
-</article>
-
-
-<!-- <div class="move-wrapper"
-	style="width: min-content; position: absolute; bottom: 0; right: 0; transform: rotateZ(180deg);">
-	<div class="move-sizer"
-		style="resize: both; width: 45vw; height: 30vh; overflow: hidden;">
-		<article class="x-window"
-			style="position: absolute; bottom: 0; right: 0; top: revert; left: revert; transform: rotateZ(180deg);">
-			this works, but i don't really like the effect
-			https://css-tricks.com/books/greatest-css-tricks/draggable-elements/
-		</article>
-	</div>
-</div> -->

@@ -260,6 +260,12 @@ h6,
 	}
 }
 
+hr {
+	border: 1px solid transparent;
+	border-top-color: var(--ins-txt-top);
+	border-bottom-color: var(--ins-txt-btm);
+}
+
 strong {
 	color: var(--s-ylw);
 }
@@ -620,14 +626,15 @@ img.smooth-zoom {
 		/* remove link styling for titles */
 		color: inherit;
 		font-style: italic;
+		font-weight: bold;
 		text-decoration: none;
 		cursor: default;
 		padding: 4px;
-
-		& .window-icon {
-			vertical-align: middle;
-			float: left;
-		}
+	}
+	& .window-icon {
+		display: none;  // removing for now as svg's are large, may replace later
+		vertical-align: middle;
+		float: left;
 	}
 
 	/* ======================================================================	*\

@@ -31,7 +31,8 @@
 	grid-template-columns: 1fr 2fr 1fr;
 	grid-template-areas:
 		"wnew main musc"
-		"qote main ring";
+		"qote main ring"
+		"btns main ring";
 }
 
 @media (max-width: 1200px) {
