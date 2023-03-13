@@ -38,12 +38,14 @@
 @media (max-width: 1200px) {
 
 	#window-area {
-		display: flex;
-		padding-top:   	2em;
-		padding-bottom:	8em;
-		flex-direction: column;
 		align-items: center;
-		gap: 20px;
+		grid-template-areas:
+		". main ." ". wnew ." ". musc ." ". qote ." ". ring ." ". btns .";
+		// dots must be there as grid always has 3 columns for some reason?
+	}
+
+	.x-window {
+		margin: auto !important;
 	}
 }
 
@@ -419,6 +421,10 @@
 			// text-align: right;
 		// }
 	}
+}
+
+#brands {
+	grid-area: btns;
 }
 
 /* ============================== animations =============================== */
