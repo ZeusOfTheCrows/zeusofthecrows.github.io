@@ -659,25 +659,34 @@ img.smooth-zoom {
 	& .window-decs {
 		margin: 0;
 		// font-size: 1.2em;
-		margin-right: -2px;
-		padding: 0px;
-		float: right;
+		// margin-right: -2px;
+		// margin-top: -2px;
+		max-height: 100%;
+		// padding: 0px;
+		// float: right;
+		position: absolute;
+		top: 2px;
+		right: 4px;
 
 
 		& .window-min:before {
-			content: "󰖰";
+			content: "－";
+			padding-inline: 2.4px;
 		}
 		& .window-max:before {
-			content: "󰖯";
+			content: "𑨠";
+			padding-inline: 3.2px;
 		}
 		& .window-rst:before {
 			content: "󰖲";
 		}
 		& .window-hlp:before {
-			content: "󰋖";
+			content: "★";
+			padding-inline: 3.4px;
 		}
 		& .window-cls:before {
-			content: "󰖭";
+			content: "✕";
+			padding-inline: 3.6px;
 			background-image: linear-gradient(#F19478, #DA4D1C);
 		}
 
@@ -697,7 +706,6 @@ img.smooth-zoom {
 				margin: 0;
 				margin-right: -2px;
 				padding: 2px;
-				width: 1.1em;
 				font-size: 11px;
 				// line-height: 1.2em;  // for vert cenre in chrome ?depped
 				background-image: linear-gradient(#969590, #5C5B57);
@@ -1017,7 +1025,7 @@ textarea {
 	height: var(--tb-hite);
 	box-sizing: border-box;
 	background-image: var(--ubuntu-grad);
-	padding: 4px;
+	padding-inline: 4px;
 	box-shadow: 0px 0px 8px 4px black;
 
 	color: var(--txt-2);
@@ -1029,15 +1037,18 @@ textarea {
 
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 
 	& section {  // ztodo tidyup
 		display: inline-block;
+		height: min-content;
 		& .img-grid {
 			width: max-content;
+			display: inline-block;
 		}
 		& img {
 			border: 1px solid;
-			border-radius: 4px;
+			border-radius: 3px;
 			border-top-color:    var(--ins-txt-top);
 			border-left-color:   var(--ins-txt-top);
 			border-bottom-color: var(--ins-txt-btm);
@@ -1051,12 +1062,52 @@ textarea {
 }
 
 #start-orb {
-height: 1em;
-vertical-align: bottom;
-text-shadow: var(--ubuntu-inset-text);
-width: calc(var(--dt-padd) - 8px);
-padding-right: 2px;
-border-right: 1px solid #ffffff30;
+	height: 1em;
+	vertical-align: bottom;
+	text-shadow: var(--ubuntu-inset-text);
+	width: calc(var(--dt-padd) - 8px);
+	padding-right: 2px;
+	border-right: 1px solid #ffffff30;
+}
+
+#edit-date {
+	all: unset;
+	padding-inline: 2px;
+	border-radius: 3px;
+	border: 1px solid transparent;
+
+	&:hover {
+		border-color: #282828;
+		border-bottom: none;
+	}
+}
+#edit-date:focus + div { display: block; }
+#edit-date-popup:focus-within { display: block; }
+#edit-date-popup { display: none; }
+#edit-date-popup {
+	position: absolute;
+	right: 0;
+	padding: 4px;
+	& p {
+		margin: 0;
+		padding-block: 4px;
+		padding-inline: 16px;
+
+		&:hover {
+			background-image: linear-gradient(var(--s-org), var(--d-org));
+			border: var(--d-org);
+		}
+	}
+	background-color: #41403B;
+	color: #DCD8D0;
+	outline: 1px solid #2F2F2C;
+	border: 1px solid #474640;
+	border-top: none;
+	box-shadow: 4px 4px 8px -4px black;
+
+	font-weight: normal;
+	width: 24ch;
+	text-shadow: none;
 }
 
 /* ============================== animations =============================== */
