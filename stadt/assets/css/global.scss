@@ -407,20 +407,34 @@ samp,
 code {  // code formating below
 	font-family: var(--fnt-code);
 }
-.ms-bold {
-	// ms sans serif style bold by doubling text width
-	// text-shadow:
-		// 0.5px 0px var(--txt-1),
-		// 1.0px 0px var(--txt-1)/*,
-		// 1.5px 0px var(--txt-1)*/;
 
-		// font-family: "Fira Sans";
-		// font-size: 12pt;
-		// letter-spacing: 1px;
-		font-family: var(--fnt-sans);
-		// font-size: 1.2em;
-		font-weight: 600;
+.spoiler:not(img) {
+	background-color: var(--s-aqa);
+	color: var(--s-aqa);
+
+	&:hover,
+	&:active {
+		background-color: revert-layer;
+		color: revert-layer;
+	}
 }
+img.spoiler {
+	// from https://codepen.io/sosuke/pen/Pjoqqp:
+	filter:
+		brightness(0)
+		invert(85%)
+		sepia(20%)
+		saturate(1479%)
+		hue-rotate(124deg)
+		brightness(92%)
+		contrast(93%);
+
+	&:hover,
+	&:active {
+		filter: revert;
+	}
+}
+
 .captioned,
 abbr {
 	cursor: help;

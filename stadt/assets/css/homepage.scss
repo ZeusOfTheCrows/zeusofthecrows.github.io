@@ -72,8 +72,6 @@
 
 	& .window-content {
 		padding: 8px;
-		overflow-y: scroll;  // add dummy scrollbar for notepad æsthetic
-		max-height: 75vh; // ztodo: hacky fix
 
 		& #welcome-title {
 			font-size: 2rem;
