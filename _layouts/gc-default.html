@@ -70,3 +70,5 @@ layout: gc-base
 <section id="window-area" aria-label="Content">
 	{{ content }}
 </section>
+
+{% if page.url != "/stadt/webgarden/" %} {% include gc-sidebar.html %} {% endif %}

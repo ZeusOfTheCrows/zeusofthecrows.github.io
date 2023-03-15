@@ -4,6 +4,9 @@
 			viewBox="0 0 118.74818 118.74818" fill="currentColor">
 			<path d="M 2.2007507e-6,82.667355 54.543617,82.665325 38.746738,63.707245 Z M 72.833185,79.087305 90.831294,64.770155 72.073964,0.7521447 19.415661,0.7419447 59.448487,53.901585 41.434072,62.245865 86.468579,118.00112 Z m 15.474848,-31.06788 15.899807,1.3401 -1.08839,10.59137 -10.435455,3.20605 z m 18.268167,3.18261 -0.74292,6.80037 12.9149,-1.46545 z m -18.122438,66.773625 -1.296279,-3.64835 13.433617,3.6565 z m -4.314818,0.0265 -2.67918,-3.08375 -4.511502,3.08783 z" />
 		</svg>
+		{% if page.layout == "gc-maximised" %}
+		<span class="page-title">{{ page.title }}</span>
+		{% endif %}
 	</section>
 	<section>
 	<ul class="img-grid">
@@ -36,21 +39,48 @@
 			<img class="btn-80x15" src="/stadt/assets/images/antipix/hand-coded.png"
 				alt="hand-coded" title="hand coded with sublime text" />
 		</a></li>
+	</ul>
 		<a href="https://cd5k.net/tau/">
 			<img alt="τ" class="pixel-art"
 				src="/stadt/assets/images/window-icons/tau.png" />
 		</a>
-		{%- if page.edit-date -%}
-		<time datetime="{{ page.edit-date | date: '%Y-%m-%d' }}"
-			title="page last edited on the {{ page.edit-date | date_to_long_string: 'ordinal' }};
-			site last edited on the {{ site.edit-date | date_to_long_string: 'ordinal' }}">
-			{{ page.edit-date | date: "%Y-%m-%d" }}
-		</time>
-		{%- else -%}
-		<time datetime="{{ site.edit-date | date: '%Y-%m-%d' }}"
-			title="site last edited on the {{ site.edit-date | date_to_long_string: 'ordinal' }}">
-			{{ site.edit-date | date: "%Y-%m-%d" }}
-		</time>
-		{%- endif -%}
+		<button id="edit-date" class="click-popup">
+			{%- if page.edit-date -%}
+			<time datetime="{{ page.edit-date | date: '%Y-%m-%d' }}">
+				{{ page.edit-date | date: "%Y-%m-%d" }}
+			</time>
+			{%- else -%}
+			<time datetime="{{ site.edit-date | date: '%Y-%m-%d' }}">
+				{{ site.edit-date | date: "%Y-%m-%d" }}
+			</time>
+			{%- endif -%}
+		</button>
+
+		<div id="edit-date-popup">
+			{%- if page.edit-date -%}
+			<p>
+				Page Last Edited:
+			</p>
+			<p>
+				The {{ page.edit-date | date_to_long_string: 'ordinal' }}
+			</p>
+
+			<hr />
+
+			<p>
+				Site Last Edited:
+			</p>
+			<p>
+				The {{ site.edit-date | date_to_long_string: 'ordinal' }}
+			</p>
+			{%- else -%}
+			<p>
+				Site Last Edited:
+			</p>
+			<p>
+				The {{ site.edit-date | date_to_long_string: 'ordinal' }}
+			</p>
+			{%- endif -%}
+		</div>
 	</section>
 </header>

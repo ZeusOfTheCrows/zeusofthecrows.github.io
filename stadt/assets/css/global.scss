@@ -13,18 +13,6 @@
 
 // https://fontlibrary.org/en/catalogue?order=&page=18
 
-@font-face {
-	font-family: "Material Design Icons";
-	src: /* subset with used chars for download size */
-		url("/stadt/assets/fonts/mdi-subset.woff2") format("woff2"),
-		url("https://cdn.jsdelivr.net/npm/@mdi/font@6.5.95/fonts/materialdesignicons-webfont.eot?#iefix&v=6.5.95") format("embedded-opentype"),
-		url("https://cdn.jsdelivr.net/npm/@mdi/font@6.5.95/fonts/materialdesignicons-webfont.woff2?v=6.5.95")      format("woff2"),
-		url("https://cdn.jsdelivr.net/npm/@mdi/font@6.5.95/fonts/materialdesignicons-webfont.woff?v=6.5.95")       format("woff"),
-		url("https://cdn.jsdelivr.net/npm/@mdi/font@6.5.95/fonts/materialdesignicons-webfont.ttf?v=6.5.95")        format("truetype");
-	font-weight: normal;
-	font-style: normal;
-}
-
 /* variables */
 :root {
 	scroll-behavior: smooth;
@@ -658,37 +646,10 @@ img.smooth-zoom {
 	\* ======================================================================	*/
 	& .window-decs {
 		margin: 0;
-		// font-size: 1.2em;
-		// margin-right: -2px;
-		// margin-top: -2px;
 		max-height: 100%;
-		// padding: 0px;
-		// float: right;
 		position: absolute;
-		top: 2px;
+		top: 0;
 		right: 4px;
-
-
-		& .window-min:before {
-			content: "－";
-			padding-inline: 2.4px;
-		}
-		& .window-max:before {
-			content: "𑨠";
-			padding-inline: 3.2px;
-		}
-		& .window-rst:before {
-			content: "󰖲";
-		}
-		& .window-hlp:before {
-			content: "★";
-			padding-inline: 3.4px;
-		}
-		& .window-cls:before {
-			content: "✕";
-			padding-inline: 3.6px;
-			background-image: linear-gradient(#F19478, #DA4D1C);
-		}
 
 		& li {
 			visibility: hidden;  // hide to replace with before pseudo
@@ -702,10 +663,8 @@ img.smooth-zoom {
 				visibility: visible;
 				// display: inline-block;
 				position: relative;
-				top: -2px;
 				margin: 0;
 				margin-right: -2px;
-				padding: 2px;
 				font-size: 11px;
 				// line-height: 1.2em;  // for vert cenre in chrome ?depped
 				background-image: linear-gradient(#969590, #5C5B57);
@@ -715,6 +674,27 @@ img.smooth-zoom {
 				text-shadow: 0 1px 0 var(--ins-txt-btm);
 				border-radius: 99vw;
 			}
+		}
+
+		& .window-min:before {
+			content: "－";
+			padding-inline: 2.4px;
+		}
+		& .window-max:before {
+			content: "𑨠";
+			padding-inline: 3.2px;
+		}
+		& .window-rst:before {
+			content: "▭";
+		}
+		& .window-hlp:before {
+			content: "★";
+			padding-inline: 3.4px;
+		}
+		& .window-cls:before {
+			content: "✕";
+			padding-inline: 3.6px;
+			background-image: linear-gradient(#F19478, #DA4D1C);
 		}
 	}
 }
@@ -1042,6 +1022,11 @@ textarea {
 	& section {  // ztodo tidyup
 		display: inline-block;
 		height: min-content;
+
+		& .page-title {
+			margin-inline: 4px;
+		}
+
 		& .img-grid {
 			width: max-content;
 			display: inline-block;

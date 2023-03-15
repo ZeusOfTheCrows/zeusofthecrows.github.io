@@ -55,6 +55,12 @@
 			list-style: none;
 			border-radius: 4px;
 
+			& img {
+				width: 16px;
+				height: auto;
+				vertical-align: middle;
+			}
+
 			&:hover {
 				background: var(--bgd-3);
 			}
@@ -63,6 +69,9 @@
 				// padding: 0 15px;
 				padding-right: 1ch;
 				content: "▹";
+			}
+			&.current::before {
+				content: "▸";
 			}
 		}
 	}

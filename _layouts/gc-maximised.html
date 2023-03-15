@@ -3,84 +3,28 @@ layout: gc-base
 ---
 
 <main id="page-window" class="window-9x window-fixed window-maximised">
-	<div class="window-titlebar">
-		<a class="window-title ms-bold">
-			<img class="window-icon pixel-art"
-				src="/stadt/assets/images/window-icons/{{ page.window_icon }}" alt="" />
-			{{ page.title }}{{ page.programme }}
-		</a>
-		<ul class="window-decs">
-			<li class="window-min"></li>
-			<li class="window-rst"></li>
-			<li class="window-cls"></li>
-		</ul>
-	</div>
-	<div class="window-menu">
-		<ul>
-			<li><u>F</u>ile</li>
-			<li><u>A</u>ction</li>
-			<li><u>V</u>iew</li>
-			<li><u>H</u>elp</li>
-		</ul>
-	</div>
 	<div class="window-content">
 		<nav id="sidebar-left" aria-label="site pages">
 			<ul>
 				<li>
 					<a href="/stadt/">
-						<img src="/stadt/assets/images/window-icons/home.png" />
+						<img src="/stadt/assets/images/desktop-icons/home.svg" />
 						Return Home
 					</a>
 				</li>
+
 				<hr />
-				<li>
-					<a href="/stadt/thoughts/">
-						<img src="/stadt/assets/images/window-icons/thoughts.png" />
-						Thoughts
+
+				{% assign current = page.url | downcase | split: '.' %}
+				{% for item in site.data.stadt-nav %}
+				<li {% if current[0] contains item.link %}class="current"
+					{% elsif item.updt %}class="update"{% endif %}>
+					<a href="{{ item.link }}">
+						<img src="{{ item.bicn }}" />
+						{{ item.name }}
 					</a>
 				</li>
-				<li>
-					<a href="/stadt/logfile/">
-						<img src="/stadt/assets/images/window-icons/logfile.png" />
-						Logfile
-					</a>
-				</li>
-				<li>
-					<a href="/stadt/opinions/">
-						<img src="/stadt/assets/images/window-icons/opinions.png" />
-						Opinions
-					</a>
-				</li>
-				<li>
-					<a href="/stadt/gallery/">
-						<img src="/stadt/assets/images/window-icons/gallery.png" />
-						Image Gallery
-					</a>
-				</li>
-				<li>
-					<a href="/stadt/links/">
-						<img src="/stadt/assets/images/window-icons/links.png" />
-						Outbound Links
-					</a>
-				</li>
-				<li>
-					<a href="/stadt/garten/">
-						<img src="/stadt/assets/images/window-icons/garten.png" />
-						WebGarden
-					</a>
-				</li>
-				<li>
-					<a href="/stadt/about/">
-						<img src="/stadt/assets/images/window-icons/about.png" />
-						About
-					</a>
-				</li><!--
-				<li>
-					<s><abbr title="down for much needed maintenance">
-						<img src="/stadt/assets/images/window-icons/home.png" />
-						Teeny Towers
-					</abbr></s>
-				</li> -->
+				{% endfor %}
 			</ul>
 		</nav>
 		{{ content }}

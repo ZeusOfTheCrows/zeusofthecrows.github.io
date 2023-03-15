@@ -398,8 +398,7 @@
 
 </section>
 
-
-		 <nav id="ubuntu-sidebar" aria-label="site pages">
+ <nav id="ubuntu-sidebar" aria-label="site pages">
 	
 	
 	<a
@@ -407,7 +406,7 @@
 	class="desktop-icon"
 		href="/stadt/thoughts/">
 		<img src="/stadt/assets/images/desktop-icons/thoughts.svg">
-		<span>Thoughts & Opinions</span>
+		<span>Opinions</span>
 	</a>
 	
 	<a
@@ -458,7 +457,7 @@
 	</a>
 	
 	
-	<a class="desktop-icon" href="/stadt/">
+	<a class="desktop-icon update" href="/stadt/">
 		<img src="/stadt/assets/images/desktop-icons/home.svg">
 		<span>Return Home</span>
 	</a>
@@ -471,12 +470,14 @@
 </nav>
  
 
+
 		 <header id="ubuntu-header">
 	<section>
 		<svg id="start-orb" xmlns="http://www.w3.org/2000/svg"
 			viewBox="0 0 118.74818 118.74818" fill="currentColor">
 			<path d="M 2.2007507e-6,82.667355 54.543617,82.665325 38.746738,63.707245 Z M 72.833185,79.087305 90.831294,64.770155 72.073964,0.7521447 19.415661,0.7419447 59.448487,53.901585 41.434072,62.245865 86.468579,118.00112 Z m 15.474848,-31.06788 15.899807,1.3401 -1.08839,10.59137 -10.435455,3.20605 z m 18.268167,3.18261 -0.74292,6.80037 12.9149,-1.46545 z m -18.122438,66.773625 -1.296279,-3.64835 13.433617,3.6565 z m -4.314818,0.0265 -2.67918,-3.08375 -4.511502,3.08783 z" />
 		</svg>
+		
 	</section>
 	<section>
 	<ul class="img-grid">
@@ -509,14 +510,31 @@
 			<img class="btn-80x15" src="/stadt/assets/images/antipix/hand-coded.png"
 				alt="hand-coded" title="hand coded with sublime text" />
 		</a></li>
+	</ul>
 		<a href="https://cd5k.net/tau/">
 			<img alt="τ" class="pixel-art"
 				src="/stadt/assets/images/window-icons/tau.png" />
-		</a><time datetime="2022-11-26"
-			title="page last edited on the 26th November 2022;
-			site last edited on the 13th March 2023">
-			2022-11-26
-		</time></section>
+		</a>
+		<button id="edit-date" class="click-popup"><time datetime="2022-11-26">
+				2022-11-26
+			</time></button>
+
+		<div id="edit-date-popup"><p>
+				Page Last Edited:
+			</p>
+			<p>
+				The 26th November 2022
+			</p>
+
+			<hr />
+
+			<p>
+				Site Last Edited:
+			</p>
+			<p>
+				The 15th March 2023
+			</p></div>
+	</section>
 </header>
  
 
