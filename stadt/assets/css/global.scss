@@ -664,13 +664,13 @@ img.smooth-zoom {
 				// display: inline-block;
 				position: relative;
 				margin: 0;
-				margin-right: -2px;
 				font-size: 11px;
 				// line-height: 1.2em;  // for vert cenre in chrome ?depped
 				background-image: linear-gradient(#969590, #5C5B57);
 				color: #423630;
-				border: 1px solid #423630;
-				// box-shadow: var(--ubuntu-inset-text);
+				// border: 1px solid #423630;
+				box-shadow: 0 0 0 1px #423630;
+				box-sizing: border-box;
 				text-shadow: 0 1px 0 var(--ins-txt-btm);
 				border-radius: 99vw;
 			}
@@ -678,11 +678,11 @@ img.smooth-zoom {
 
 		& .window-min:before {
 			content: "－";
-			padding-inline: 2.4px;
+			padding-inline: 2.6px;
 		}
 		& .window-max:before {
 			content: "𑨠";
-			padding-inline: 3.2px;
+			padding-inline: 3.6px;
 		}
 		& .window-rst:before {
 			content: "▭";
