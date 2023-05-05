@@ -18,12 +18,7 @@
 }
 
 #window-area {
-	// height: 100vh;
-	// position: absolute;
-	padding-top:         	32px;
-	padding-right:       	32px;
-	padding-left:   calc(	32px + var(--dt-padd));
-	padding-bottom: calc(	32px + var(--tb-hite));
+	padding: 32px;
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(auto, 48em));
 	justify-content: center;
@@ -31,7 +26,7 @@
 }
 
 .x-window {
-	z-index: 10; // means i can have manually lower
+	z-index: 0; // if i remove this they disappear - ztodo fix
 	position: static;
 	grid-row-end: span 2;
 	display: flex;

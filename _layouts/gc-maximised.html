@@ -2,31 +2,6 @@
 layout: gc-base
 ---
 
-<main id="page-window" class="window-9x window-fixed window-maximised">
-	<div class="window-content">
-		<nav id="sidebar-left" aria-label="site pages">
-			<ul>
-				<li>
-					<a href="/stadt/">
-						<img src="/stadt/assets/images/desktop-icons/home.svg" />
-						Return Home
-					</a>
-				</li>
-
-				<hr />
-
-				{% assign current = page.url | downcase | split: '.' %}
-				{% for item in site.data.stadt-nav %}
-				<li {% if current[0] contains item.link %}class="current"
-					{% elsif item.updt %}class="update"{% endif %}>
-					<a href="{{ item.link }}">
-						<img src="{{ item.bicn }}" />
-						{{ item.name }}
-					</a>
-				</li>
-				{% endfor %}
-			</ul>
-		</nav>
-		{{ content }}
-	</div>
+<main id="page-window" >
+	{{ content }}
 </main>

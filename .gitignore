@@ -11,6 +11,9 @@ references/
 *.sublime-project
 *.sublime-workspace
 
+# dolphin folder layout
+*.directory
+
 # quick manual copy backup files
 *.zbk
 

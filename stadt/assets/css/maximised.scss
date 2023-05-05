@@ -2,30 +2,25 @@
 ---
 #page-window {
 	border: none;
-	// width:  calc(100% - 4px);  // ztodo this is hacky
-	// height: calc(100% - 37px); // i'm not sure this is that great either
-	// display: table;
-	inset: 0;
+	position: absolute;
+	top: var(--tb-hite);
+	left: var(--dt-padd);
+	right: 0;
+	bottom: 0;
 	box-sizing: border-box;
-}
 
-.window-content {
-	box-sizing: border-box;
-	// max-height: calc(100% - 128px); // i'm not sure this is that great either
-	max-height: 90vh; // i'm not sure this is that great either
 	margin: 8px 24px;
 	display: grid;
-	grid-template-columns: 192px minmax(50%, 1fr) minmax(20%, 384px);
+	// grid-template-columns: 192px minmax(50%, 1fr) minmax(20%, 384px);
+	grid-template-columns: minmax(80%, 1fr) minmax(20%, 384px);
 	gap: 20px;
 }
 
 @media (max-width: 800px) {
-	.window-content {
+	#page-window {
 		margin: 4px 24px;
-		grid-template-columns: 160px auto;
-		grid-template-areas:
-			"navigation  content"
-			"description content";
+		grid-template-columns: auto;
+		grid-template-areas: "description" "content";
 	}
 	#main-content {
 		grid-area: content;
@@ -40,8 +35,6 @@
 
 #main-content {
 	padding: 24px;
-	// height: 100%;
-	height: calc(100vh - 192px); // i'm not sure this is that great either
 	// overflow-y: scroll;
 	// overflow-x: clip;
 	overflow: auto;
@@ -79,4 +72,8 @@
 
 #sidebar-right {  // in html file, not layout
 	// padding: 30px;
+}
+
+#ubuntu-header {
+	box-shadow: none;
 }

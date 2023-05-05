@@ -170,7 +170,11 @@ body {
 	padding:0;
 	border:0;
 
-	overflow-anchor: none;
+	// ztodo this is a weird fix for a weird scrolling bug
+	position: absolute;
+	inset: 0;
+
+	// overflow-anchor: none;  // why was this here??
 }
 
 h1 { font-size: 2.2em; }
@@ -664,6 +668,7 @@ img.smooth-zoom {
 				// display: inline-block;
 				position: relative;
 				margin: 0;
+				margin-right: -2px;
 				font-size: 11px;
 				// line-height: 1.2em;  // for vert cenre in chrome ?depped
 				background-image: linear-gradient(#969590, #5C5B57);
@@ -1022,6 +1027,7 @@ textarea {
 	& section {  // ztodo tidyup
 		display: inline-block;
 		height: min-content;
+		white-space: nowrap;
 
 		& .page-title {
 			margin-inline: 4px;
