@@ -1,0 +1,170 @@
+- content: <mark>we're ubuntu themed now!</mark> (although less rigourously faithful than before)
+
+- content: winter theme is gone
+
+- content: added link to <a href="https://simone.computer/#/webdesktops">syxanash's web desktops listing</a>
+
+- content: new images have been added to <a href="/stadt/">the homepage</a>
+  subcontent:
+    - image:
+      source: buttons/page-info/dark-mode.png
+      type: button-88x31
+      alt: optimised for dark mode
+
+    - image:
+      source: buttons/brands/cinnamon.png
+      type: button-88x31
+      alt: linux mint cinnamon button
+
+    - image:
+      source: buttons/brands/debian.png
+      type: button-88x31
+      smooth: true
+      alt: debian gnu/linux button
+
+    - image:
+      source: buttons/brands/konqi.png
+      type: button-88x31
+      smooth: true
+      alt: konqi (kde mascot) button
+
+    - image:
+      source: buttons/brands/mint.png
+      type: button-88x31
+      smooth: true
+      alt: linux mint button
+
+    - image:
+      source: buttons/brands/kool-de.png
+      type: button-88x31
+      smooth: true
+      alt: kool desktop environment button
+
+    - image:
+      source: buttons/brands/xenia.png
+      type: button-88x31
+      alt: xenia the fox linux button
+
+    - image:
+      source: buttons/games/am2r.png
+      type: button-88x31
+      alt: another metroid 2 remake button
+
+    - image:
+      source: stamps/prie-dieu.png
+      type: stamp-99x56
+      alt: lighting a prie-dieu stamp (blasphemous)
+
+    - image:
+      source: stamps/fire.png
+      type: stamp-99x56
+      alt: celeste dream fire stamp
+
+- content: new images have been added to <a href="/stadt/gallery/">the gallery</a>
+  subcontent:
+    - image:
+      source: buttons/brands/gog.png
+      type: button-88x31
+      smooth: true
+      alt: gog.com (good old games) button
+
+    - image:
+      source: buttons/games/half-life.png
+      type: button-88x31
+      smooth: true
+      alt: half-life button
+
+    - image:
+      source: buttons/games/hominid.png
+      type: button-88x31
+      smooth: true
+      alt: alien hominid button
+
+    - image:
+      source: buttons/games/met-const.png
+      type: button-88x31
+      smooth: true
+      alt: metroid construction button
+
+    - image:
+      source: buttons/games/newgrounds.png
+      type: button-88x31
+      smooth: true
+      alt: newgrounds.com button
+
+    - image:
+      source: buttons/brands/kde-now.png
+      type: button-88x31
+      alt: kde now button
+
+    - image:
+      source: buttons/brands/notepadpp.png
+      type: button-88x31
+      alt: made with notepad++ button
+
+    - image:
+      source: buttons/brands/paint.png
+      type: button-88x31
+      alt: get paint.net button
+
+    - image:
+      source: buttons/brands/ublock.png
+      type: button-88x31
+      alt: ublock origin now! button
+
+    - image:
+      source: buttons/brands/xkcd.png
+      type: button-88x31
+      alt: xkcd button
+
+    - image:
+      source: stamps/pope.png
+      type: stamp-99x56
+      spoiler: true
+      alt: His Holiness Escribar stamp (blasphemous)
+
+    - image:
+      source: stamps/diosdado.png
+      type: stamp-99x56
+      alt: blasphemous diosdado stamp
+
+    - image:
+      source: stamps/damned.png
+      type: stamp-99x56
+      alt: blasphemous 'damned' enemy stamp
+
+    - image:
+      source: stamps/blueheart.png
+      type: stamp-99x56
+      alt: celeste rotating blue heart stamp
+
+    - image:
+      source: stamps/hd-blueheart.png
+      type: stamp-99x56
+      alt: celeste rotating high resolution blue heart stamp
+
+    - image:
+      source: stamps/spin.png
+      type: stamp-99x56
+      spoiler: true
+      alt: celest madeline & badeline spinning stamp
+
+    - image:
+      source: stamps/ambiance.png
+      type: stamp-99x56
+      alt: tux in an ubuntu ambiance window 'linux&#58; an os for masochists' stamp
+
+    - image:
+      source: stamps/epa.png
+      type: stamp-99x56
+      alt: epa pollution preventer stamp
+
+    - image:
+      source: stamps/mgs.png
+      type: stamp-99x56
+      alt: metal gear solid radio stamp
+
+    - image:
+      source: stamps/linux.png
+      type: stamp-99x56
+      alt: ubuntu logo 'linux&#58; an os for masochists' stamp

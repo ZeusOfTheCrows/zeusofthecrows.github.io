@@ -41,7 +41,7 @@ main.x-window {
 	scroll-behavior: smooth;
 
 	/*https://web.archive.org/web/20091027151405/http://www.geocities.com/coondogk9/animsnow.gif*/
-	--indent-col: url(/stadt/assets/images/backgrounds/snow-small.png) var(--bgd-1);
+	// --indent-col: url(/stadt/assets/images/backgrounds/snow-small.png) var(--bgd-1);
 }
 
 p {
@@ -54,6 +54,9 @@ ul, p, h1 {
 
 .x-window footer {
 	display: flex;
+	gap: 0.2em;
+	padding: 0.2em;
+
 	& > span,
 	& > a {
 		// flex: 1 1 100%;

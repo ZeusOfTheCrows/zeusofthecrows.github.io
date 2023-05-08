@@ -8,7 +8,7 @@
 	gap: 2ch;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1200px) {
 	#main-content {
 		grid-template-columns: 1fr;
 		grid-auto-flow: row;
@@ -24,6 +24,21 @@ table,
 td {
 	min-height: 3em;
 	border: 1px solid var(--txt-4);
+}
+
+#contact-list {
+	display: grid;
+	grid-template-columns: min-content() 1fr;
+	gap: 8px;
+
+	& dd {
+		margin-left: 0;
+	}
+
+	& hr {
+		grid-column: span 2;
+		width: 100%;
+	}
 }
 
 #about-site {
@@ -87,6 +102,7 @@ td {
 .favs-list,
 .unfavs-list {
 	list-style: none;
+	padding-inline: 8px;
 
 	& .fav-item {
 		color: var(--d-grn);
@@ -94,6 +110,18 @@ td {
 	& .unfav-item {
 		color: var(--d-red);
 	}
+}
+
+.favs-list li,
+.unfavs-list li {
+	background: #4F4D47;
+	background-image: linear-gradient(#55534C, #4A4943);
+	padding: 6px;
+	margin-block: 6px;
+	border-radius: 4px;
+	border: 1px solid #636159;
+	outline: 1px solid #363632;
+	// box-shadow: 0px 2px 4px 0px black;
 }
 
 img#standard {

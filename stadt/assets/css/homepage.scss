@@ -39,9 +39,17 @@
 
 	#window-area {
 		align-items: center;
+		grid-template-columns: 1fr;
 		grid-template-areas:
-		". main ." ". wnew ." ". musc ." ". qote ." ". ring ." ". btns .";
+		"main"
+		"wnew"
+		"musc"
+		"qote"
+		"ring"
+		"btns";
 		// dots must be there as grid always has 3 columns for some reason?
+
+		padding-inline: 0.1em;
 	}
 
 	.x-window {

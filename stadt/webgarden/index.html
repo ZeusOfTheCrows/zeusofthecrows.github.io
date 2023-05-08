@@ -3,7 +3,7 @@ layout: gc-base
 css-file: garden
 title: Garten
 window-icon: globe.png
-edit-date: 2022-11-02
+edit-date: 2022-05-08
 ---
 
 <main class="x-window">
@@ -19,7 +19,7 @@ edit-date: 2022-11-02
 			<li class="window-cls"></li>
 		</ul>
 	</div>
-	<div class="window-content indent-9x">
+	<div class="window-content">
 		<section id="intro">
 			<p>
 				we have <a href="/stadt/gallery/" target="_parent">buttons & stamps</a>;
@@ -113,26 +113,7 @@ edit-date: 2022-11-02
 		</section>
 		<section id="site-updates">
 			<h1 style="animation: colour-cycle 5s linear infinite;">What's New</h1>
-			<ul>
-				<li>
-					added a long overdue <a href="/stadt/garten/" target="_parent">web
-					garden</a> page
-				</li>
-				<li>
-					added a sort of <a href="/stadt/opinions/" target="_parent">fanpage
-					thing</a>, very much a volatile wip for now
-				</li>
-				<li>
-					removed webpage counter, as i didn't like its existence
-				</li>
-				<li>
-					the teeny towers page has been deprecated, to be merged into the
-					webgarden page
-				</li>
-				<li>
-					new images have been added to <a href="/stadt/gallery/">the gallery</a>
-				</li>
-			</ul>
+				{% include whats-new.html %}
 		</section>
 		<section class="marquee-container" style="--el-speed: 35s;">
 			<div class="marquee-ltr">
@@ -212,8 +193,8 @@ edit-date: 2022-11-02
 		</section>
 	</div>
 	<footer>
-		<a href="/stadt/" target="_parent" class="indent-9x">
-			<img src="/stadt/assets/images/window-icons/stadt-gp.png" />
+		<a href="https://zeusofthecrows.github.io/stadt/" target="_top" class="indent-9x">
+			<img src="/stadt/assets/images/window-icons/stadt-gp.png"/>
 			Visit
 		</a>
 		<a class="indent-9x" href="#site-updates">
