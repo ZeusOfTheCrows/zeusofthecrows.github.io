@@ -652,8 +652,10 @@ img.smooth-zoom {
 		margin: 0;
 		max-height: 100%;
 		position: absolute;
-		top: 0;
+		top: 4px;
 		right: 4px;
+		bottom: 4px;
+		margin-block: auto;
 
 		& li {
 			visibility: hidden;  // hide to replace with before pseudo
@@ -662,43 +664,48 @@ img.smooth-zoom {
 			// margin: auto;
 			user-select: none;
 
+			visibility: visible;
+			// display: inline-block;
+			position: relative;
+			margin: 0;
 
-			&:before {  // attributes for all buttons
-				visibility: visible;
-				// display: inline-block;
-				position: relative;
-				margin: 0;
-				margin-right: -2px;
-				font-size: 11px;
-				// line-height: 1.2em;  // for vert cenre in chrome ?depped
-				background-image: linear-gradient(#969590, #5C5B57);
-				color: #423630;
-				// border: 1px solid #423630;
-				box-shadow: 0 0 0 1px #423630;
-				box-sizing: border-box;
-				text-shadow: 0 1px 0 var(--ins-txt-btm);
-				border-radius: 99vw;
-			}
+			height: 16px;
+			aspect-ratio: 1;
+
+			font-size: 11px;
+			// line-height: 1.2em;  // for vert cenre in chrome ?depped
+			background-image: linear-gradient(#969590, #5C5B57);
+			color: #423630;
+			// border: 1px solid #423630;
+			box-shadow: 0 0 0 1px #423630;
+			box-sizing: border-box;
+			text-shadow: 0 1px 0 var(--ins-txt-btm);
+			border-radius: 99vw;
 		}
 
 		& .window-min:before {
-			content: "－";
-			padding-inline: 2.6px;
+			content: "🗕";
+			content: url(/stadt/assets/images/window-icons/window-minimise.svg);
 		}
 		& .window-max:before {
-			content: "𑨠";
-			padding-inline: 3.6px;
+			content: "🗖";
+			content: url(/stadt/assets/images/window-icons/window-maximise.svg);
 		}
 		& .window-rst:before {
-			content: "▭";
-		}
-		& .window-hlp:before {
-			content: "★";
-			padding-inline: 3.4px;
+			content: "🗗";
+			content: url(/stadt/assets/images/window-icons/window-restore.svg);
 		}
 		& .window-cls:before {
-			content: "✕";
-			padding-inline: 3.6px;
+			content: "🗙";
+			content: url(/stadt/assets/images/window-icons/window-close.svg);
+		}
+
+
+		& .window-hlp {
+			display: none;
+		}
+		& .window-cls {
+			color: #32312e;
 			background-image: linear-gradient(#F19478, #DA4D1C);
 		}
 	}
