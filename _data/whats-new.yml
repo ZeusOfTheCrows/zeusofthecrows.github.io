@@ -1,6 +1,7 @@
 - content: <mark>we're ubuntu themed now!</mark> (although less rigourously faithful than before)
+  subtype: text
   subcontent:
-    - content: it's not that finished yet (light mode isn't finished, etc.)
+    - content: it's not that finished yet (light mode is a bit wank, etc.)
 
 - content: winter theme is gone
 
@@ -9,6 +10,7 @@
 - content: added link to <a href="https://simone.computer/#/webdesktops">syxanash's web desktops listing</a>
 
 - content: new images have been added to <a href="/stadt/">the homepage</a>
+  subtype: images
   subcontent:
     - image:
       source: buttons/page-info/dark-mode.png
@@ -65,6 +67,7 @@
       alt: celeste dream fire stamp
 
 - content: new images have been added to <a href="/stadt/gallery/">the gallery</a>
+  subtype: images
   subcontent:
     - image:
       source: buttons/brands/gog.png

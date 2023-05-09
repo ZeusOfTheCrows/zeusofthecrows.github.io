@@ -7,7 +7,7 @@
 				<summary>
 					{{ item.content }}
 				</summary>
-				{% if item.subcontent.image %}
+				{% if item.subtype == "images" %}
 					<ul class="img-grid">
 					{% for image in item.subcontent %}
 						<li>
@@ -30,6 +30,7 @@
 		{% endif %}
 	</li>
 	{% endfor %}
+
 
 <!--
 {% comment %}
