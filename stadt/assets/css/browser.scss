@@ -196,7 +196,7 @@
 			&::before {
 				font-family: "Material Design Icons";
 				margin-left: 1em;
-				content: "󰀩 ";
+				content: "/!\\ ";
 			}
 		}
 		&.success h6 { background-color: var(--s-grn) !important; }
@@ -220,7 +220,7 @@
 				float: right;
 				visibility: visible;
 				font-family: "Material Design Icons";
-				content: "󰖭";
+				content: "🗙";
 
 				background-color: var(--bgd-2);
 				padding: 0.1em;

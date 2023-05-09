@@ -1,5 +1,28 @@
 ---
 ---
+
+/* light mode colours */
+@media (prefers-color-scheme: light) {
+	:root {
+		// --is-light-mode: true;  // placeholder idea
+
+		--bgd-0: #474640;
+		--bgd-1: #4E4C46;
+		--bgd-2: #5A5850;
+		--bgd-3: #4F4D47;
+		--bgd-4: #595854;
+		--bgd-5: #616254;
+		--txt-4: #969693;
+		--txt-3: #BAB8B2;
+		--txt-2: #DFDBD2;
+		--txt-1: #EBEBEB;
+		--txt-0: #FFFFFF;
+
+		--btn-hilite: var(--bgd-0);
+		--btn-lolite: var(--bgd-4);
+	}
+}
+
 #page-window {
 	border: none;
 	position: absolute;
