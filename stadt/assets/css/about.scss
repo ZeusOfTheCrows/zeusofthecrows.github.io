@@ -114,13 +114,13 @@ td {
 
 .favs-list li,
 .unfavs-list li {
-	background: #4F4D47;
-	background-image: linear-gradient(#55534C, #4A4943);
+	background: var(--bgd-1);
+	background-image: linear-gradient(var(--bgd-2), var(--bgd-3));
 	padding: 6px;
 	margin-block: 6px;
 	border-radius: 4px;
-	border: 1px solid #636159;
-	outline: 1px solid #363632;
+	border: 1px solid var(--bgd-5);
+	outline: 1px solid var(--brdr-dark);
 	// box-shadow: 0px 2px 4px 0px black;
 }
 
