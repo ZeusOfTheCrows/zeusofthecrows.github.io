@@ -70,6 +70,12 @@
   subtype: images
   subcontent:
     - image:
+      source: buttons/games/b-side.png
+      type: button-88x31
+      alt: time to play B-SIDES button
+
+  subcontent:
+    - image:
       source: buttons/brands/gog.png
       type: button-88x31
       smooth: true
@@ -125,6 +131,17 @@
       alt: xkcd button
 
     - image:
+      source: buttons/other/aero.png
+      type: button-88x31
+      smooth: true
+      alt: frutiger areo button
+
+    - image:
+      source: stamps/phonebooth.png
+      type: stamp-99x56
+      alt: headbanging phonebooth monster stamp (celeste)
+
+    - image:
       source: stamps/pope.png
       type: stamp-99x56
       spoiler: true
@@ -175,3 +192,13 @@
       source: stamps/linux.png
       type: stamp-99x56
       alt: ubuntu logo 'linux&#58; an os for masochists' stamp
+
+    - image:
+      source: blinkies/green-fire.png
+      type: btn-150x20
+      alt: celeste 'breathe. you can do this.' blinkie (green fire)
+
+    - image:
+      source: blinkies/red-fire.png
+      type: btn-150x20
+      alt: celeste 'breathe. you can do this.' blinkie (red fire)
