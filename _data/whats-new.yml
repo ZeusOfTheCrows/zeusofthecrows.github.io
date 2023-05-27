@@ -9,6 +9,8 @@
 
 - content: added link to <a href="https://simone.computer/#/webdesktops">syxanash's web desktops listing</a>
 
+- content: added "image of the day" to the homepage
+
 - content: new images have been added to <a href="/stadt/">the homepage</a>
   subtype: images
   subcontent:
@@ -27,6 +29,12 @@
       type: button-88x31
       smooth: true
       alt: debian gnu/linux button
+
+    - image:
+      source: buttons/brands/siduction.png
+      type: button-88x31
+      smooth: true
+      alt: siduction (debian) gnu/linux button
 
     - image:
       source: buttons/brands/konqi.png

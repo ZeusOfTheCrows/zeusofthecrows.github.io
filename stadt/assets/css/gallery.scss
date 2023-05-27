@@ -107,6 +107,12 @@
 	}
 }
 
+#free-internet:hover,
+#free-internet:focus,
+#free-internet:active {
+	content: var(---hover-src);
+}
+
 /* -------------------------- decorations --------------------------- */
 
 // :where(ul, ol, dl, p) + :where(h2, h3) {

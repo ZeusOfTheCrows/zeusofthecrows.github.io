@@ -13,10 +13,6 @@
 }
 
 /* -------------------------------- layout --------------------------------- */
-.window-content {
-	// display: grid;
-}
-
 .x-window {
 	position: relative;
 	inset: 0;
@@ -32,7 +28,8 @@
 	grid-template-areas:
 		"wnew main musc"
 		"qote main ring"
-		"btns main ring";
+		"dimg main ring"
+		"btns btns btns";
 }
 
 @media (max-width: 1200px) {
@@ -45,6 +42,7 @@
 		"wnew"
 		"musc"
 		"qote"
+		"dimg"
 		"ring"
 		"btns";
 		// dots must be there as grid always has 3 columns for some reason?
@@ -426,6 +424,27 @@
 		// & time {
 			// text-align: right;
 		// }
+	}
+}
+
+#daily-img {
+	grid-area: dimg;
+	max-width: 512px;
+
+	& img {
+		max-width: 100%;
+
+		&:hover,
+		&:focus,
+		&:active {
+			content: var(---hover-src);
+		}
+	}
+
+	& footer {
+		padding: 2px 1ch;
+		text-align: right;
+		color: var(--txt-3);
 	}
 }
 
