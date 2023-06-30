@@ -293,12 +293,18 @@ p, details {
 .link-list {
 	& li {
 		transition: width 2s ease-in-out;
-		margin: 0;
+		margin-inline: 0;
+		margin-block: 4px;
+
+		& img {
+			margin-block: 0;
+		}
 
 		& .btn-9x {
 			width: 88px;
 			height: 31px;
 			box-sizing: border-box;
+			outline-offset: -5px;
 		}
 	}
 }
