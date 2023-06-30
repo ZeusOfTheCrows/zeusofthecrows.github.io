@@ -291,33 +291,15 @@ p, details {
 }
 
 .link-list {
-	& figure {
+	& li {
 		transition: width 2s ease-in-out;
 		margin: 0;
-	}
-	& h6 {
-		margin: 0;
-		font-style: italic;
-	}
-	& p {
-		margin-top: 0;
-		display: none;
-	}
-}
-.link-list figure:hover {
-	position: relative;
-	isolation: isolate;
-	background-color: var(--bgd-4);
-	// width: 88px;
-	border-radius: 2px;
-	// padding-right: 2px;  // why?
-	// box-sizing: content-box;
-	& p {
-		display: block;
-		position: absolute;
-		width: 100%;
-		background-color: var(--bgd-4);
-		// width: min-content;
+
+		& .btn-9x {
+			width: 88px;
+			height: 31px;
+			box-sizing: border-box;
+		}
 	}
 }
 
