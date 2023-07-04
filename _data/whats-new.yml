@@ -15,9 +15,14 @@
   subtype: images
   subcontent:
     - image:
+      source: buttons/brands/sublime.png
+      type: button-88x31
+      alt: sublime text editor button
+
+    - image:
       source: buttons/page-info/dark-mode.png
       type: button-88x31
-      alt: optimised for dark mode
+      alt: optimised for dark mode button
 
     - image:
       source: buttons/brands/cinnamon.png
@@ -78,11 +83,22 @@
   subtype: images
   subcontent:
     - image:
+      source: buttons/brands/steam-input.png
+      type: button-88x31
+      smooth: true
+      alt: /c/steaminput button
+
+    - image:
+      source: buttons/other/start.png
+      type: button-88x31
+      smooth: true
+      alt: windows 98 start button, waving like a flag
+
+    - image:
       source: buttons/games/b-side.png
       type: button-88x31
       alt: time to play B-SIDES button
 
-  subcontent:
     - image:
       source: buttons/brands/gog.png
       type: button-88x31
