@@ -83,6 +83,22 @@
   subtype: images
   subcontent:
     - image:
+      source: buttons/brands/lemmy-old.png
+      type: button-88x31
+      alt: join-lemmy.org button
+
+    - image:
+      source: buttons/brands/lemmy.png
+      type: button-88x31
+      alt: join-lemmy.org button
+
+    - image:
+      source: buttons/brands/rocket.png
+      type: button-88x31
+      smooth: true
+      alt: /c/steaminput button
+
+    - image:
       source: buttons/brands/steam-input.png
       type: button-88x31
       smooth: true

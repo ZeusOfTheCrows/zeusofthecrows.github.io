@@ -296,6 +296,15 @@ p, details {
 		margin-inline: 0;
 		margin-block: 4px;
 
+		& figure {
+			width: min-content;
+			margin: 0;
+
+			& figcaption {
+				width: 100%;
+			}
+		}
+
 		& img {
 			margin-block: 0;
 		}
