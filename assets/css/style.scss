@@ -126,8 +126,8 @@ h6 {
 
 em, i, strong, b {
 	/* add background to emphasised elements */
-	margin: -0em -1ch;
-	padding: 0em  1ch;
+	// margin: -0em -1ch;  // breaks layout
+	// padding: 0em  1ch;  // in tables
 	background-color: $background-emph;
 	/* i know this doesn't make sense, but i think it looks better */
 	border-radius: $crnr-radius;

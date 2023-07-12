@@ -7,7 +7,7 @@ typora-root-url: ../../
 notes: ^ is only so typora correctly renders images
 ---
 
-# PlayStation Vita
+# Steam Deck
 
 {: .no_toc}
 
@@ -16,7 +16,7 @@ notes: ^ is only so typora correctly renders images
 {: .table-of-contents}
 
 * Will be replaced with the ToC
-  {:toc}
+{:toc}
 
 {: .page-intro}
 
