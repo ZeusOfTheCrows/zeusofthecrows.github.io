@@ -77,5 +77,3 @@ all content on this site, unless otherwise specified, is free for personal and c
 ![rainbow 88×31 banner](/stadt/assets/images/buttons/other/rainbow.png){: .gc-button}: this site is lgbt+ friendly
 
 ![zeus 88×31 banner](/stadt/assets/images/buttons/my-links/zeus-term.png){: .gc-button}: have a geocities button
-
-![zeus 88×31 green banner](/stadt/assets/images/buttons/my-links/zeus-term-green.png){: .gc-button}: the same, but in green

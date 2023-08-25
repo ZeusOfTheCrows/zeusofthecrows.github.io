@@ -93,18 +93,6 @@
       alt: join-lemmy.org button
 
     - image:
-      source: buttons/brands/rocket.png
-      type: button-88x31
-      smooth: true
-      alt: /c/steaminput button
-
-    - image:
-      source: buttons/brands/steam-input.png
-      type: button-88x31
-      smooth: true
-      alt: /c/steaminput button
-
-    - image:
       source: buttons/other/start.png
       type: button-88x31
       smooth: true
