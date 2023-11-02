@@ -97,12 +97,12 @@
 
 	#pots {
 		display: flex;
-		gap: 0.2ch;
+		gap: 2ch;
 		flex-wrap: wrap;
 		justify-content: space-evenly;
 		& iframe {
 			flex-shrink: 0;
-			margin-bottom: 2em;
+			gap: 2em;
 		}
 	}
 }
