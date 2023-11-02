@@ -1,13 +1,4 @@
-- content: <mark>we're ubuntu themed now!</mark> (although less rigourously faithful than before)
-  subtype: text
-  subcontent:
-    - content: it's not that finished yet (light mode is a bit wank, etc.)
-
-- content: winter theme is gone
-
-- content: significant homepage layout changes
-
-- content: added link to <a href="https://simone.computer/#/webdesktops">syxanash's web desktops listing</a>
+- content: added neighbours window to homepage
 
 - content: added "image of the day" to the homepage
 

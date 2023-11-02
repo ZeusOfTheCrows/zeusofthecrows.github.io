@@ -68,6 +68,8 @@
 	& .window-content {
 		padding: 4px 8px;
 		// padding: 8px;
+		height: 512px;
+		overflow-y: auto;
 		grid-template-areas:
 			"title title"
 			"body btns"

@@ -420,32 +420,46 @@ code {  // code formating below
 	font-family: var(--fnt-code);
 }
 
-.spoiler:not(img) {
-	background-color: var(--s-aqa);
+.spoiler {
 	color: var(--s-aqa);
+	filter: blur(4px);
+	transition:
+		color 0.25s ease,
+		filter 0.25s ease;
 
 	&:hover,
 	&:active {
-		background-color: revert-layer;
 		color: revert-layer;
+		filter: none;
 	}
 }
-img.spoiler {
-	// from https://codepen.io/sosuke/pen/Pjoqqp:
-	filter:
-		brightness(0)
-		invert(85%)
-		sepia(20%)
-		saturate(1479%)
-		hue-rotate(124deg)
-		brightness(92%)
-		contrast(93%);
 
-	&:hover,
-	&:active {
-		filter: revert;
-	}
-}
+// .spoiler:not(img) {
+// 	background-color: var(--s-aqa);
+// 	color: var(--s-aqa);
+
+// 	&:hover,
+// 	&:active {
+// 		background-color: revert-layer;
+// 		color: revert-layer;
+// 	}
+// }
+// img.spoiler {
+// 	// from https://codepen.io/sosuke/pen/Pjoqqp:
+// 	filter:
+// 		brightness(0)
+// 		invert(85%)
+// 		sepia(20%)
+// 		saturate(1479%)
+// 		hue-rotate(124deg)
+// 		brightness(92%)
+// 		contrast(93%);
+
+// 	&:hover,
+// 	&:active {
+// 		filter: revert;
+// 	}
+// }
 
 .captioned,
 abbr {
