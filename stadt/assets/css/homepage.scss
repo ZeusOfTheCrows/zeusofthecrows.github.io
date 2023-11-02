@@ -27,6 +27,8 @@
 	grid-template-columns: 1fr 2fr 1fr;
 	grid-template-areas:
 		"wnew main musc"
+		"wnew main nbrs"
+		"qote main nbrs"
 		"qote main ring"
 		"dimg main ring"
 		"btns btns btns";
@@ -43,6 +45,7 @@
 		"musc"
 		"qote"
 		"dimg"
+		"nbrs"
 		"ring"
 		"btns";
 		// dots must be there as grid always has 3 columns for some reason?
@@ -376,9 +379,15 @@
 	// }
 }
 
+#neighbours {
+	grid-area: nbrs;
+	max-width: 64ch;
+}
+
 #quote {
 	grid-area: qote;
 	max-width: 50ch;
+	min-width: 256px;
 	height: min-content;
 	top: 2%;
 
@@ -430,6 +439,7 @@
 #daily-img {
 	grid-area: dimg;
 	max-width: 512px;
+	min-width: 256px;
 
 	& img {
 		max-width: 100%;
