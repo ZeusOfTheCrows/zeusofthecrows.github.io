@@ -118,6 +118,18 @@
 	}
 }
 
+/* ========================== accessibility styles ========================== */
+
+@media (prefers-reduced-motion) {
+	img.anim {
+		transition: filter 500ms, background-color 500ms;
+		&:not(:hover) {
+			background-color: white;
+			filter: contrast(0) sepia(100);
+		}
+	}
+}
+
 /* ======================== element generic styles ========================= */
 html,
 body {
