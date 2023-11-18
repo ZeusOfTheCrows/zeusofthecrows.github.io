@@ -107,15 +107,24 @@
 	grid-area: ring;
 
 	& .window-content {
-		width: 440px;
+		max-width: 440px;
 		padding: 4px;
 		display: grid;
 		gap: 8px;
 		grid-template-areas:
 			"intro intro"
-			"nojs yester"
 			"geek  geek "
-			"hotln hotln";
+			"hotln hotln"
+			"nojs yester";
+
+		@media (max-width: 530px) {
+			grid-template-areas:
+				"intro"
+				"geek"
+				"hotln"
+				"nojs"
+				"yester"
+		}
 
 		& #wr-intro {
 			grid-area: intro;
