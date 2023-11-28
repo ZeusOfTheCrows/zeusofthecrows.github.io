@@ -247,9 +247,10 @@
 }
 
 .btn-code {
-	display: none;
+	// display: none;  // deprecated
 	scrollbar-width: thin;
 	box-sizing: border-box;
+	display: block;
 	width: 100%;
 	max-width: 34em;
 	height: 8em;
@@ -262,18 +263,18 @@
 	// }
 }
 
-#my-links {
-	& input[type="radio"] {
-		display: none;
-	}
+// #my-links {
+	// & input[type="radio"] {  // deprecated
+		// display: none;
+	// }
 
-	& input:checked + textarea,
-	& input:checked + [contenteditable] {  // nice idea, didn't work
+	// & input:checked + textarea,
+	// & input:checked + [contenteditable] {  // nice idea, didn't work
 		// font-family: var(--fnt-code);
 		// white-space: pre-wrap;
-		display: block;
-	}
-}
+		// display: block;
+	// }
+// }
 
 @media (prefers-color-scheme: light) {
 	#viatrix-award {

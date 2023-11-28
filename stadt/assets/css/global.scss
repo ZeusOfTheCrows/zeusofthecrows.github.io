@@ -568,7 +568,8 @@ img.smooth-zoom {
 
 	& li {
 		display: inline-block;
-		// ~~i don't know why, but inline-block aligns to bottom~~ fixed somehow
+		// ~~i don't know why, but inline-block aligns to bottom~~ fixed:
+		vertical-align: top;
 		& a {
 			text-decoration: none;
 		}
