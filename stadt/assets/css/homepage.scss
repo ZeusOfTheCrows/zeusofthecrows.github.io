@@ -83,6 +83,7 @@
 
 	& .window-content {
 		padding: 8px;
+		text-align: justify;
 
 		& #welcome-title {
 			font-size: 2rem;
@@ -250,7 +251,8 @@
 
 			text-align: center;
 			font-family: var(--fnt-sans);
-			font-size: 2em;
+			// font-size: 2em;
+			font-size: min(2em, 175%);
 			font-weight: 900;
 			font-style: oblique;
 			text-transform: uppercase;

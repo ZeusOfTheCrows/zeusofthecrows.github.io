@@ -565,6 +565,7 @@ img.smooth-zoom {
 
 	list-style-type: none;
 	text-align: center;
+	text-wrap: balance;
 
 	& li {
 		display: inline-block;
@@ -633,10 +634,22 @@ img.smooth-zoom {
 	width:  99px;
 	height: 56px;
 }
-
 .stamp-100x50 {
 	width: 100px;
 	height: 50px;
+}
+
+.img-aside {
+	width: min-content;
+	transform: rotate(var(--rot));
+	shape-outside: var(--shape-outside);
+
+	&.left {
+		float: left;
+	}
+	&.right {
+		float: right;
+	}
 }
 
 // .swash-z::first-letter {
@@ -796,6 +809,7 @@ textarea {
 	border-left-color:   var(--btn-hilite);
 	border-bottom-color: var(--btn-lolite);
 	border-right-color:  var(--btn-lolite);
+	outline-offset: -5px;
 }
 .window-maximised {
 	// background-color: var(--bgd-2);
@@ -929,6 +943,7 @@ textarea {
 
 			color: var(--bgd-0);
 			opacity: 0;
+			transition: opacity 250ms;
 
 			&:hover {
 				// visibility: visible;

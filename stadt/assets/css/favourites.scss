@@ -2,15 +2,17 @@
 ---
 
 figure.img-aside {
-	width: min-content;
-	transform: rotate(var(--rot));
+	// width: min-content;
+	// transform: rotate(var(--rot));
 	margin: 0.5em;
-	&.left {
-		float: left;
-	}
-	&.right {
-		float: right;
-	}
+	// &.left {
+		// float: left;
+	// }
+	// &.right {
+		// float: right;
+	// }
+
+	// ↑ moved to global.scss
 
 	& figcaption {
 		font-size: 0.7em;
