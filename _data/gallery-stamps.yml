@@ -25,9 +25,15 @@
   src: z
   ins-url: "https://abneypark.com/"
 
+- image: agency
+  smooth: y
+  alt: "agent of chaos (just cause 1/2) stamp"
+  src: z
+  src-url: "/stadt/assets/images/stamps/agency.xcf"
+
 - image: ambiance
   smooth: y
-  alt: "&quot;linux: an os for masochists&quot; stamp"
+  alt: "there's no place like ~/ stamp"
   src: z
 
 - image: autopilot
@@ -149,6 +155,17 @@
   alt: "celeste dream fire stamp"
   src: s
 
+- image: gameboy
+  anim: y
+  alt: "gameboy advance startup animation stamp"
+  src-url: "https://scifirenegade.neocities.org/about/graphs2.html"
+
+- image: ghost-in-the-shell
+  smooth: y
+  alt: "ghost in the shell stamp"
+  src: z
+  ins-url: "https://aestheticsmut.tumblr.com/post/186778973059/"
+
 - image: going
   smooth: y
   alt: "wireframe lamborghini countach synthwave stamp"
@@ -182,11 +199,6 @@
   smooth: y
   alt: "danger high voltage sign from half life"
   src: z
-
-- image: gameboy
-  anim: y
-  alt: "gameboy advance startup animation stamp"
-  src-url: "https://scifirenegade.neocities.org/about/graphs2.html"
 
 - image: html
   smooth: y
@@ -283,15 +295,16 @@
   src: s
 
 - image: piracy
+  smooth: y
   anim: y
-  alt: "home taping is killing music industry profits stamp"
+  alt: "&quot;home taping is killing music industry profits - and you can help&quot; stamp"
   src: s
 
-- image: portal-left
+- image: piracy-reel
   smooth: y
-  alt: "left half of portal logo, protruding through a portal"
-  src: v
-  src-url: "https://www.deviantart.com/sparklum/art/Portal-Stamp-Blue-209870753"
+  anim: y
+  alt: "&quot;home taping is killing record industry profits - and you can help&quot; stamp"
+  src: z
 
 - image: planet-b
   smooth: y
@@ -310,18 +323,18 @@
   alt: "lighting a prie-dieu stamp (blasphemous)"
   src: s
 
+- image: portal-left
+  smooth: y
+  alt: "left half of portal logo, protruding through a portal"
+  src: v
+  src-url: "https://www.deviantart.com/sparklum/art/Portal-Stamp-Blue-209870753"
+
 - image: psp
   smooth: y
   anim: y
   alt: "psp startup animation stamp"
   src: v
   src-url: "https://www.deviantart.com/byte-byte/art/Stamp-PSP-460345147"
-
-- image: portal-right
-  smooth: y
-  alt: "right half of portal logo, protruding through a portal"
-  src: v
-  src-url: "https://www.deviantart.com/sparklum/art/Portal-Stamp-Orange-209870758"
 
 - image: rad
   smooth: y
@@ -342,6 +355,12 @@
   alt: "various 90s radios stamp"
   src: v
   src-url: "https://www.deviantart.com/babykttn/art/married-to-the-music-672434816"
+
+- image: portal-right
+  smooth: y
+  alt: "right half of portal logo, protruding through a portal"
+  src: v
+  src-url: "https://www.deviantart.com/sparklum/art/Portal-Stamp-Orange-209870758"
 
 - image: reality-off
   smooth: y
