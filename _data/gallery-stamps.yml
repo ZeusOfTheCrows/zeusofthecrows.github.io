@@ -1,0 +1,525 @@
+# possible attributes:
+#  image: filename without extension
+#  ext: [nyi] possible file extension override
+#  smooth: bool; "smooth-zoom" class
+#  anim: whether or not the image is animated (accessibility)
+#  spoiler: blur image on !hover
+#  alt: alt text
+#  title: hover text
+#  src: z/u/v/s - zeus/unknown/verified/zeus; standard source link
+#  src-url: link to source
+#  ins-url: link to inspiration url
+#  lnk-url: url for stamp click to link to
+#  res: 100x50/other - defaults to 99x56 (size is a builtin for № of elements)
+
+- image: 125
+  smooth: y
+  alt: "gameboy camera photo of intercity 125"
+  src: z
+  ins-url: "https://www.flickr.com/photos/unnamedculprit/17118405265/in/album-72157644163994901"
+
+- image: abney
+  smooth: y
+  anim: y
+  alt: "abney park stamp"
+  src: z
+  ins-url: "https://abneypark.com/"
+
+- image: ambiance
+  smooth: y
+  alt: "&quot;linux: an os for masochists&quot; stamp"
+  src: z
+
+- image: autopilot
+  smooth: y
+  anim: y
+  alt: "glitching animation of synthwave sunset"
+  src: v
+  src-url: "https://www.deviantart.com/thecandycoating/art/Youre-on-autopilot-stamp-622774935"
+
+- image: beastshrug
+  smooth: y
+  anim: y
+  alt: "shrugging beast (otgw) stamp"
+  src: v
+  src-url: "https://www.deviantart.com/prince-deer/art/otgw-stamp-532402924/"
+
+- image: bliss
+  smooth: y
+  anim: y
+  alt: "xp bliss stamp w/ vhs effect and text &quot;rew&quot;"
+  src: z
+  src-lnk: y
+
+- image: blueheart
+  anim: y
+  alt: "celeste rotating blue heart stamp"
+  src: s
+  ins-url: "https://www.deviantart.com/apparate/art/Stamp-Template-2-364387158"
+  ins-ttl: "frame from apparate"
+
+- image: cadle
+  alt: "james cadle's flag of earth"
+  src: s
+  ins-url: "http://flagofearth.org/"
+
+- image: cassettes
+  smooth: y
+  anim: y
+  alt: "flashing various colours of cassette tapes"
+  src-url: "https://scifirenegade.neocities.org/about/graphs2.html"
+
+- image: cat-bw
+  smooth: y
+  alt: "line drawing of a cat"
+  src-url: "https://scifirenegade.neocities.org/about/graphs2.html"
+
+- image: city
+  smooth: y
+  alt: "outrun city stamp"
+  src-url: "https://webpage1990colourised.neocities.org#graphics"
+
+- image: continue
+  alt: "windows 98 style dialogue &quot;Continue anyway?&quot;"
+  src-url: "https://mesoscale.neocities.org/"
+
+- image: crts
+  smooth: y
+  alt: "photo of two crt monitors"
+  src-url: "https://scifirenegade.neocities.org/about/graphs2.html"
+
+- image: css
+  alt: "stamp { background: #300; color: #fc0; outline: #fcc; }"
+  src: z
+  ins-url: "https://webpage1990colourised.neocities.org#graphics"
+
+- image: damned
+  anim: y
+  alt: "blasphemous &quot;damned&quot; enemy stamp"
+  src: s
+
+- image: dapperblook
+  anim: y
+  alt: "napstablook quote &quot;really not feelin up to it right now. sorry.&quot;"
+  src: s
+  ins-url: "https://maxxywaxxy.neocities.org/about.html"
+
+- image: darksoul
+  smooth: y
+  anim: y
+  alt: "majula stamp &quot;you died&quot;"
+  src: s
+  ins-url: "https://www.reddit.com/r/DarkSouls2/comments/9a70wo/deleted_by_user/e4u3v1k/"
+
+- image: diosdado
+  anim: y
+  alt: "blasphemous diosdado stamp"
+  src: s
+
+- image: domes
+  smooth: y
+  alt: "Swedish cover of James White’s Hospital Station"
+  src: z
+  ins-url: "https://70sscifiart.tumblr.com/post/696804823402725376/"
+
+- image: dos
+  smooth: y
+  anim: y
+  alt: "dos c: prompt"
+  src: s
+
+- image: dvd
+  smooth: y
+  anim: y
+  alt: "moving dvd logo"
+  src: s
+
+- image: epa
+  smooth: y
+  alt: "energy: epa pollution preventer stamp"
+  src: z
+
+- image: error
+  smooth: y
+  alt: "source engine missing texture stamp"
+  src-url: "https://astrowildcat.neocities.org/graphics/"
+
+- image: fire
+  anim: y
+  alt: "celeste dream fire stamp"
+  src: s
+
+- image: going
+  smooth: y
+  alt: "wireframe lamborghini countach synthwave stamp"
+  src: v
+  src-url: "https://www.deviantart.com/babykttn/art/who-knows-where-we-re-going-672436401"
+
+- image: hd-blueheart
+  smooth: y
+  anim: y
+  alt: "celeste rotating high resolution blue heart stamp"
+  src: s
+  ins-url: "https://www.deviantart.com/apparate/art/Stamp-Template-2-364387158"
+  ins-ttl: "frame from apparate"
+
+- image: heart-throb
+  smooth: y
+  alt: "neon pink heart with blue arrow stamp"
+  src-url: "https://bisuko.neocities.org/webmaterial.html"
+
+- image: hl-crt
+  smooth: y
+  alt: "crt texture from half life"
+  src: z
+
+- image: hl-hev
+  smooth: y
+  alt: "hev suit charger from half life"
+  src: z
+
+- image: hl-high-voltage
+  smooth: y
+  alt: "danger high voltage sign from half life"
+  src: z
+
+- image: gameboy
+  anim: y
+  alt: "gameboy advance startup animation stamp"
+  src-url: "https://scifirenegade.neocities.org/about/graphs2.html"
+
+- image: html
+  smooth: y
+  alt: "photo of html markup"
+  src-url: "https://scifirenegade.neocities.org/about/graphs2.html"
+
+- image: lava-lamp
+  smooth: y
+  alt: "photo of lava lamp stamp"
+  src: z
+
+- image: link-b
+  smooth: y
+  anim: y
+  alt: "link's awakening - sword get (frame-blended ver.)"
+  title: "available in frame-blended (crap lcd) ver, or normal"
+  lnk-url: "https://rabidrodent.neocities.org/zelda/"
+  src: z
+  src-url: /stadt/assets/images/stamps/link.ase
+
+- image: link-d
+  anim: y
+  alt: "link's awakening - sword get (frame-discrete ver.)"
+  title: "the best zelda game. fight me."
+  lnk-url: "https://rabidrodent.neocities.org/zelda/"
+  src: z
+  src-url: /stadt/assets/images/stamps/link.ase
+
+- image: mac
+  smooth: y
+  anim: y
+  alt: "synthwave apple 2 stamp"
+  src-url: "https://leonidas.neocities.org/"
+
+- image: linux
+  smooth: y
+  alt: "linux: an os for masochists stamp"
+  src-url: "https://leonidas.neocities.org/"
+
+- image: manson
+  smooth: y
+  anim: y
+  alt: "https://www.deviantart.com/6v4mp1r36/art/MM-Era-1by1-45943319"
+  src: v
+  src-url: "https://www.deviantart.com/6v4mp1r36/art/MM-Era-1by1-45943319"
+
+- image: mars-u
+  alt: "mars united [art deco]"
+  src: s
+  ins-url: "https://blog.signalnoise.com/marsunited-prints-by-andy-rohr/"
+
+- image: mgs
+  anim: y
+  alt: "metal gear solid radio stamp"
+  src: s
+
+- image: metroidvania
+  smooth: y
+  alt: "metroidvania [combined logo] enthusiast stamp stamp"
+  src: s
+
+- image: murkwood
+  smooth: y
+  alt: "vhs footage of copse stamp"
+  src: v
+  src-url: "https://www.deviantart.com/crypticgoth/art/0158-700841818"
+
+- image: nightwish
+  smooth: y
+  anim: y
+  alt: "nightwish stamp"
+  src: v
+  src-url: "https://www.deviantart.com/seiorai/art/Nightwish-Support-Stamp-145883724"
+
+- image: outrun
+  smooth: y
+  anim: y
+  alt: "vaporwave sega outrun stamp"
+  src-url: "https://leonidas.neocities.org/"
+
+- image: palmtrees
+  alt: "vaporwave palm trees stamp"
+  src-url: "https://webpage1990colourised.neocities.org#graphics"
+
+- image: pantone
+  alt: "pantone photoshop black stamp"
+  lnk-url: "https://arstechnica.com/gadgets/2022/11/pantone-wants-15-month-for-the-privilege-of-using-its-colors-in-photoshop"
+  src: z
+  ins-url: "https://www.deviantart.com/king-lulu-deer/art/PANTONE-13-1125-Peach-Quartz-736555028"
+
+- image: phonebooth
+  anim: y
+  alt: "headbanging phonebooth monster stamp (celeste)"
+  src: s
+
+- image: piracy
+  anim: y
+  alt: "home taping is killing music industry profits stamp"
+  src: s
+
+- image: portal-left
+  smooth: y
+  alt: "left half of portal logo, protruding through a portal"
+  src: v
+  src-url: "https://www.deviantart.com/sparklum/art/Portal-Stamp-Blue-209870753"
+
+- image: planet-b
+  smooth: y
+  alt: "there is no planet b stamp"
+  src: z
+
+- image: pope
+  smooth: y
+  anim: y
+  spoiler: y
+  alt: "His Holiness Escribar stamp (blasphemous)"
+  src: s
+
+- image: prie-dieu
+  anim: y
+  alt: "lighting a prie-dieu stamp (blasphemous)"
+  src: s
+
+- image: psp
+  smooth: y
+  anim: y
+  alt: "psp startup animation stamp"
+  src: v
+  src-url: "https://www.deviantart.com/byte-byte/art/Stamp-PSP-460345147"
+
+- image: portal-right
+  smooth: y
+  alt: "right half of portal logo, protruding through a portal"
+  src: v
+  src-url: "https://www.deviantart.com/sparklum/art/Portal-Stamp-Orange-209870758"
+
+- image: rad
+  smooth: y
+  anim: y
+  alt: "totally rad"
+  src: v
+  src-url: "https://www.deviantart.com/thecandycoating/art/TOTALLY-RAD-stamp-648713812"
+  ins-url: "https://www.mobygames.com/game/22106/totally-rad/screenshots/nes/160026/"
+
+- image: radiohead
+  smooth: y
+  alt: "OK Computer"
+  src: z
+
+- image: radios
+  smooth: y
+  anim: y
+  alt: "various 90s radios stamp"
+  src: v
+  src-url: "https://www.deviantart.com/babykttn/art/married-to-the-music-672434816"
+
+- image: reality-off
+  smooth: y
+  anim: y
+  alt: "80s-esque grid stamp"
+  src: v
+  src-url: "https://www.deviantart.com/babykttn/art/switching-off-672436199"
+
+- image: still-you
+  anim: y
+  alt: "&quot;despite everything, it's still you&quot; stamp"
+  src: z
+
+- image: stuart-ashen
+  smooth: y
+  anim: y
+  alt: "ashens.com intro"
+  src: v
+  src-url: "https://www.deviantart.com/phlum/art/Ashens-com-Stamp-197257952"
+
+- image: tvs
+  smooth: y
+  anim: y
+  alt: "photos of flickering crts in a windows vista style window"
+  src-url: "https://kingposs.com/"
+
+- image: scp
+  smooth: y
+  alt: "SCP: secure. contain. protect."
+  src-url: "https://mikaorangeart.neocities.org/"
+
+- image: shanties
+  smooth: y
+  alt: "abney park 'æther shanties' album stamp"
+  src: z
+  ins-url: "https://www.youtube.com/playlist?list=OLAK5uy_kvCZZ3eg-tfoqj3z0T83uDSr78wRr25k0"
+
+- image: shutdown
+  smooth: y
+  alt: "win98 style stamp, saying &quot;shut down your pc and go outside&quot;"
+  src: v
+  src-url: "https://web.archive.org/web/20230527015954/https://outgoinglink.tumblr.com/post/717900201971630080/windows95-pixelart-boarders-ive-made"
+
+- image: signal
+  alt: "[signal lost] signal test screen stamp"
+  src: z
+
+- image: source
+  smooth: y
+  alt: "source filmmaker"
+  src: v
+  src-url: "https://www.deviantart.com/byte-byte/art/Stamp-Source-Filmmaker-460416657"
+
+- image: spin
+  anim: y
+  spoiler: y
+  alt: "celest madeline & badeline spinning stamp"
+  src: s
+
+- image: stars
+  smooth: y
+  anim: y
+  alt: "scrolling star field stamp"
+  src: v
+  src-url: "https://www.deviantart.com/seiorai/art/FieldOfStars-Stamp-146731539"
+
+- image: steampunk
+  smooth: y
+  alt: "steampunk stamp"
+  src: v
+  src-url: "https://www.deviantart.com/seiorai/art/Steampunk-Stamp-173051979/"
+
+- image: thinger
+  smooth: y
+  anim: y
+  alt: "thinger strangs stamp"
+  src: s
+
+- image: turret
+  alt: "portal turret 'i don't hate you' stamp"
+  src: v
+  src-url: "https://www.deviantart.com/airenu-ish/art/Turret-Love-Stamp-167135190"
+
+- image: upgrade
+  smooth: y
+  anim: y
+  alt: "various iterations of windows, crashing after win11"
+  src: s
+
+- image: vaporwave
+  anim: y
+  alt: "vaporwave stamp"
+  src: v
+  src-url: "https://www.deviantart.com/gunsweat/art/stamp-600352984"
+
+- image: vapor-wave
+  smooth: y
+  anim: y
+  alt: "vapor wave stamp"
+  src-url: "https://exephile.neocities.org/music.html"
+
+- image: vortex
+  smooth: y
+  anim: y
+  alt: "ipod game &quot;vortex&quot;"
+  src: z
+  ins-url: "https://en.wikipedia.org/wiki/Vortex_(iPod_game)"
+
+- image: wheelslip
+  smooth: y
+  anim: y
+  alt: "wheelslip on the LMS black 5 №5407 stamp"
+  src: s
+
+- image: wolfglitch
+  smooth: y
+  anim: y
+  alt: "glitching wolf stamp"
+  src: v
+  src-url: "https://omfg.neocities.org/graphics.html"
+
+- image: x360
+  smooth: y
+  anim: y
+  alt: "xbox 360 startup animation stamp"
+  src: v
+  src-url: "https://www.deviantart.com/byte-byte/art/Stamp-Xbox-360-460378137"
+
+- image: abandoned-01
+  smooth: y
+  alt: "abandoned sites"
+  src: v
+  src-url: "https://moudoku.com/abandoned/codes.php"
+  lnk-url: "https://moudoku.com/abandoned/"
+  res: "100x50"
+
+- image: abandoned-02
+  smooth: y
+  alt: "abandoned sites"
+  src: v
+  src-url: "https://moudoku.com/abandoned/codes.php"
+  lnk-url: "https://moudoku.com/abandoned/"
+  res: "100x50"
+
+
+- image: mozilla
+  smooth: y
+  alt: "firefox"
+  src: v
+  src-url: "https://fans.thislove.nu/mozilla#linkback"
+  lnk-url: "https://fans.thislove.nu/mozilla"
+  res: "100x50"
+
+- image: clippy
+  smooth: y
+  anim: y
+  alt: "clippy &quot;Looks like you're commiting suicide&quot;"
+  src-url: "https://finallyhappy000.tumblr.com/post/632539598817509376"
+  res: other
+
+- image: flipsign
+  smooth: y
+  anim: y
+  alt: "half life sector c lobby flipsigns"
+  src: s
+  res: other
+
+- image: hermit-purple
+  smooth: y
+  anim: y
+  alt: "jojo's bizarre adventure"
+  src: v
+  src-url: "https://www.deviantart.com/king-lulu-deer/gallery/63911215/tv-and-gameboy-stamps"
+  res: other
+
+- image: little-nightmares
+  anim: y
+  alt: "little nightmares"
+  src: v
+  src-url: "https://www.deviantart.com/king-lulu-deer/gallery/63911215/tv-and-gameboy-stamps"
+  res: other

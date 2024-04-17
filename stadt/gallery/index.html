@@ -410,7 +410,7 @@ znotes: maybe abstract all these out to layout + grid-windows.css?
 			</figure></li>
 			<li><figure>
 				<a href="https://planetphotoshop.com/the-88x31-button-resolution-trick.html">
-					<img src="/stadt/assets/images/buttons/other/alward54.png"
+					<img src="/stadt/assets/images/buttons/other/action-fx.png"
 						class="btn-88x31 smooth-zoom anim"
 						alt="action fx for photoshop button" />
 				</a>
@@ -2132,814 +2132,120 @@ znotes: maybe abstract all these out to layout + grid-windows.css?
 		</p>
 		<h2>99x56</h2>
 		<ul class="img-grid hover-zoom img-capts">
+			{% for item in site.data.gallery-stamps %}
+			{% if item.image and item.res == nil %}
 			<li><figure>
-				<img src="/stadt/assets/images/stamps/125.png"
-					class="stamp-99x56 smooth-zoom"
-					alt="gameboy camera photo of intercity 125" />
-				<figcaption class="img-caption">
-					<a class="src z"></a>
-					{{ page.sep }}
-					<a class="i"
-						href="https://www.flickr.com/photos/unnamedculprit/17118405265/in/album-72157644163994901"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/stadt/assets/images/stamps/abney.png"
-					class="stamp-99x56 smooth-zoom anim"
-					alt="abney park stamp" />
-				<figcaption class="img-caption">
-					<a class="src z"></a>
-					{{ page.sep }}
-					<a class="i" href="https://abneypark.com/"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/stadt/assets/images/stamps/ambiance.png"
-					class="stamp-99x56 smooth-zoom"
-					alt="linux: an os for masochists stamp" />
-				<figcaption class="img-caption">
-					<a class="src z"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/stadt/assets/images/stamps/autopilot.png"
-					class="stamp-99x56 smooth-zoom anim"
-					alt="glitching animation of synthwave sunset" />
-				<figcaption class="img-caption">
-					<a class="src v"
-						href="https://www.deviantart.com/thecandycoating/art/Youre-on-autopilot-stamp-622774935"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/stadt/assets/images/stamps/beastshrug.png"
-					class="stamp-99x56 smooth-zoom anim"
-					alt="shrugging beast (otgw) stamp" />
-				<figcaption class="img-caption">
-					<a class="src v"
-						href="https://www.deviantart.com/prince-deer/art/otgw-stamp-532402924/"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/stadt/assets/images/stamps/bliss.png"
-					class="stamp-99x56 smooth-zoom anim"
-					alt="xp bliss stamp w/ vhs effect and text 'rew'"
-					data-img-src="~zeus" />
-				<figcaption class="img-caption">
-					<a class="src z"
-						href="//zeusofthecrows.github.io/stadt/assets/images/stamps/bliss.ase"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/stadt/assets/images/stamps/blueheart.png"
-					class="stamp-99x56 anim"
-					alt="celeste rotating blue heart stamp" />
-				<figcaption class="img-caption">
-					<a class="src z"
-						href="//zeusofthecrows.github.io/stadt/assets/images/stamps/blueheart.ase"></a>
-					{{ page.sep }}
-					<a class="i"  title="frame from apparate"
-						href="https://www.deviantart.com/apparate/art/Stamp-Template-2-364387158"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/stadt/assets/images/stamps/cadle.png" class="stamp-99x56"
-					alt="james cadle's flag of earth"
-					data-img-insp="http://flagofearth.org/" />
-				<figcaption class="img-caption">
-					<a class="src z"
-						href="//zeusofthecrows.github.io/stadt/assets/images/stamps/cadle.ase"></a>
-					{{ page.sep }}
-					<a class="i" href="http://flagofearth.org/"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/stadt/assets/images/stamps/cassettes.png"
-					class="stamp-99x56 smooth-zoom anim"
-					alt="flashing various colours of cassette tapes" />
-				<figcaption class="img-caption">
-					<a class="src"
-						href="https://scifirenegade.neocities.org/about/graphs2.html"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/stadt/assets/images/stamps/cat-bw.png"
-					class="stamp-99x56 smooth-zoom"
-					alt="line drawing of a cat" />
-				<figcaption class="img-caption">
-					<a class="src"
-						href="https://scifirenegade.neocities.org/about/graphs2.html"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/stadt/assets/images/stamps/city.png"
-					class="stamp-99x56 smooth-zoom"
-					alt="outrun city stamp" />
-				<figcaption class="img-caption">
-					<a class="src"
-						href="https://webpage1990colourised.neocities.org#graphics"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/stadt/assets/images/stamps/continue.png" class="stamp-99x56"
-					alt="windows 98 style dialogue 'Continue anyway?'"
-					data-img-src="https://mesoscale.neocities.org/" />
-				<figcaption class="img-caption">
-					<a class="src"
-						href="https://mesoscale.neocities.org/"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/stadt/assets/images/stamps/crts.png" class="stamp-99x56 smooth-zoom"
-					alt="photo of two crt monitors"
-					data-img-src="https://scifirenegade.neocities.org/about/graphs2.html" />
-				<figcaption class="img-caption">
-					<a class="src"
-						href="https://scifirenegade.neocities.org/about/graphs2.html"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/stadt/assets/images/stamps/css.png" class="stamp-99x56"
-					alt="stamp { background: #300; color: #fc0; outline: #fcc; }" />
-				<figcaption class="img-caption">
-					<a class="src z"></a>
-					{{ page.sep }}
-					<a class="insp"
-						href="https://webpage1990colourised.neocities.org#graphics"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/stadt/assets/images/stamps/damned.png"
-					class="stamp-99x56 anim"
-					alt="blasphemous 'damned' enemy stamp" />
-				<figcaption class="img-caption">
-					<a class="src z"
-						href="//zeusofthecrows.github.io/stadt/assets/images/stamps/damned.ase"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/stadt/assets/images/stamps/dapperblook.png"
-					class="stamp-99x56 anim"
-					alt="napstablook quote 'really not feelin up to it right now. sorry.'"/>
-				<figcaption class="img-caption">
-					<a class="src z"
-						href="//zeusofthecrows.github.io/stadt/assets/images/stamps/dapperblook.ase"></a>
-						{{ page.sep }}
-						<a href="https://maxxywaxxy.neocities.org/about.html"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/stadt/assets/images/stamps/darksoul.png"
-					class="stamp-99x56 smooth-zoom anim"
-					alt="majula stamp 'you died'"/>
-				<figcaption class="img-caption">
-					<a class="src z"
-						href="//zeusofthecrows.github.io/stadt/assets/images/stamps/darksoul.ase"></a>
-					{{ page.sep }}
-					<a class="i"
-						href="https://www.reddit.com/r/DarkSouls2/comments/9a70wo/deleted_by_user/e4u3v1k/"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/stadt/assets/images/stamps/diosdado.png"
-					class="stamp-99x56 anims"
-					alt="blasphemous diosdado stamp" />
-				<figcaption class="img-caption">
-					<a class="src z"
-						href="//zeusofthecrows.github.io/stadt/assets/images/stamps/diosdado.ase"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/stadt/assets/images/stamps/domes.png"
-					class="stamp-99x56 smooth-zoom"
-					alt="Swedish cover of James White’s Hospital Station" />
-				<figcaption class="img-caption">
-					<a class="src z"></a>
-					{{ page.sep }}
-					<a class="i"
-						href="https://70sscifiart.tumblr.com/post/696804823402725376/"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/stadt/assets/images/stamps/dos.png"
-					class="stamp-99x56 smooth-zoom anim"
-					alt="dos c: prompt"/>
-				<figcaption class="img-caption">
-					<a class="src z"
-						href="//zeusofthecrows.github.io/stadt/assets/images/stamps/dos.ase"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/stadt/assets/images/stamps/dvd.png"
-					class="stamp-99x56 smooth-zoom anim"
-					alt="moving dvd logo" />
-				<figcaption class="img-caption">
-					<a class="src z"
-						href="//zeusofthecrows.github.io/stadt/assets/images/stamps/dvd.ase"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/stadt/assets/images/stamps/epa.png"
-					class="stamp-99x56 smooth-zoom"
-					alt="energy: epa pollution preventer stamp" />
-				<figcaption class="img-caption">
-					<a class="src z"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/stadt/assets/images/stamps/error.png"
-					class="stamp-99x56 smooth-zoom"
-					alt="source missing texture stamp" />
-				<figcaption class="img-caption">
-					<a class="src"
-						href="https://astrowildcat.neocities.org/graphics/"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/stadt/assets/images/stamps/fire.png"
-					class="stamp-99x56 anim"
-					alt="celeste dream fire stamp" />
-				<figcaption class="img-caption">
-					<a class="src z"
-						href="//zeusofthecrows.github.io/stadt/assets/images/stamps/fire.ase"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/stadt/assets/images/stamps/going.png"
-					class="stamp-99x56 smooth-zoom"
-					alt="wireframe lamborghini countach synthwave stamp" />
-				<figcaption class="img-caption">
-					<a class="src v"
-						href="https://www.deviantart.com/babykttn/art/who-knows-where-we-re-going-672436401/"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/stadt/assets/images/stamps/hd-blueheart.png"
-					class="stamp-99x56 smooth-zoom anim"
-					alt="celeste rotating high resolution blue heart stamp" />
-				<figcaption class="img-caption">
-					<a class="src z"
-						href="//zeusofthecrows.github.io/stadt/assets/images/stamps/hd-blueheart.ase"></a>
-					{{ page.sep }}
-					<a class="i"  title="frame from apparate"
-						href="https://www.deviantart.com/apparate/art/Stamp-Template-2-364387158"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/stadt/assets/images/stamps/heart-throb.png"
-					class="stamp-99x56 smooth-zoom"
-					alt="neon pink heart with blue arrow stamp" />
-				<figcaption class="img-caption">
-					<a class="src"
-						href="https://bisuko.neocities.org/webmaterial.html"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/stadt/assets/images/stamps/hl-crt.png"
-					class="stamp-99x56 smooth-zoom"
-					alt="crt texture from half life" />
-				<figcaption class="img-caption">
-					<a class="src z"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/stadt/assets/images/stamps/hl-hev.png"
-					class="stamp-99x56 smooth-zoom"
-					alt="hev suit charger from half life" />
-				<figcaption class="img-caption">
-					<a class="src z"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/stadt/assets/images/stamps/hl-high-voltage.png"
-					class="stamp-99x56 smooth-zoom"
-					alt="danger high voltage sign from half life" />
-				<figcaption class="img-caption">
-					<a class="src z"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/stadt/assets/images/stamps/gameboy.png"
-					class="stamp-99x56 anim"
-					alt="gameboy advance intro"
-					data-img-src="https://scifirenegade.neocities.org/about/graphs2.html" />
-				<figcaption class="img-caption">
-					<a class="src"
-						href="https://scifirenegade.neocities.org/about/graphs2.html"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/stadt/assets/images/stamps/html.png"
-					class="stamp-99x56 smooth-zoom"
-					alt="photo of html markup"
-					data-img-src="https://scifirenegade.neocities.org/about/graphs2.html" />
-				<figcaption class="img-caption">
-					<a class="src"
-						href="https://scifirenegade.neocities.org/about/graphs2.html"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/stadt/assets/images/stamps/lava-lamp.png"
-					class="stamp-99x56 smooth-zoom"
-					alt="photo of lava lamp stamp" />
-				<figcaption class="img-caption">
-					<a class="src z"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://rabidrodent.neocities.org/zelda/">
-					<img src="/stadt/assets/images/stamps/link-b.png"
-						title="available in frame-blended (crap lcd) ver, or normal"
-						class="stamp-99x56 smooth-zoom anim"
-						alt="link's awakening - sword get (frame-blended ver.)" />
+				{% if item.lnk-url != nil %}
+				<a href="{{ item.lnk-url }}">
+				{% endif %}
+				<img src="/stadt/assets/images/stamps/{{ item.image }}.png"
+					{% if item.title != nil %}
+					title="{{ item.title }}"
+					{% endif %}
+					class="stamp-99x56 {% if item.smooth %}smooth-zoom{% endif %}
+						{% if item.anim %}anim{% endif %}"
+					alt="{{ item.alt }}" />
+				{% if item.lnk-url != nil %}
 				</a>
+				{% endif %}
 				<figcaption class="img-caption">
+					{% if item.src-url != nil %}
+					<a class="src {{ item.src }}"
+						href="{{ item.src-url }}"></a>
+					{% elsif item.src == "s" %}
 					<a class="src z"
-						href="//zeusofthecrows.github.io/stadt/assets/images/stamps/link.ase"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://rabidrodent.neocities.org/zelda/">
-					<img src="/stadt/assets/images/stamps/link-d.png"
-						class="stamp-99x56 anim"
-						title="the best zelda game. fight me."
-						alt="link's awakening - sword get (frame-discrete ver.)" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"
-						href="//zeusofthecrows.github.io/stadt/assets/images/stamps/link.ase"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/stadt/assets/images/stamps/mac.png"
-					class="stamp-99x56 smooth-zoom anim"
-					alt="synthwave apple 2 stamp" />
-				<figcaption class="img-caption">
-					<a class="src"
-						href="https://leonidas.neocities.org/"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/stadt/assets/images/stamps/linux.png"
-					class="stamp-99x56 smooth-zoom"
-					alt="linux: an os for masochists stamp" />
-				<figcaption class="img-caption">
-					<a class="src"
-						href="https://leonidas.neocities.org/"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/stadt/assets/images/stamps/manson.png"
-					class="stamp-99x56 smooth-zoom anim"
-					alt="various marilyn manson logos"
-					data-img-src="https://www.deviantart.com/6v4mp1r36/art/MM-Era-1by1-45943319" />
-				<figcaption class="img-caption">
-					<a class="src v"
-						href="https://www.deviantart.com/6v4mp1r36/art/MM-Era-1by1-45943319"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/stadt/assets/images/stamps/mars-u.png" class="stamp-99x56"
-					alt="mars united [art deco]"
-					data-img-insp="https://blog.signalnoise.com/marsunited-prints-by-andy-rohr/" />
-				<figcaption class="img-caption">
-					<a class="src z"
-						href="//zeusofthecrows.github.io/stadt/assets/images/stamps/mars.ase"></a>
-					{{ page.sep }}
-					<a class="i" href="https://blog.signalnoise.com/marsunited-prints-by-andy-rohr/"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/stadt/assets/images/stamps/mgs.png"
-					class="stamp-99x56 anim"
-					alt="metal gear solid radio stamp" />
-				<figcaption class="img-caption">
-					<a class="src z"
-						href="//zeusofthecrows.github.io/stadt/assets/images/stamps/mgs.ase"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/stadt/assets/images/stamps/metroidvania.png"
-					class="stamp-99x56 smooth-zoom"
-					alt="metroidvania [combined logo] enthusiast stamp stamp" />
-				<figcaption class="img-caption">
-					<a class="src z"
-						href="//zeusofthecrows.github.io/stadt/assets/images/stamps/metroidvania.ase"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/stadt/assets/images/stamps/murkwood.png"
-					class="stamp-99x56 smooth-zoom"
-					alt="vhs footage of copse stamp" />
-				<figcaption class="img-caption">
-					<a class="src v"
-						href="https://www.deviantart.com/crypticgoth/art/0158-700841818"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/stadt/assets/images/stamps/nightwish.png"
-					class="stamp-99x56 smooth-zoom"
-					alt="nightwish stamp" />
-				<figcaption class="img-caption">
-					<a class="src v"
-						href="https://www.deviantart.com/seiorai/art/Nightwish-Support-Stamp-145883724"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/stadt/assets/images/stamps/outrun.png"
-					class="stamp-99x56 smooth-zoom anim"
-					alt="vaporwave sega outrun stamp" />
-				<figcaption class="img-caption">
-					<a class="src"
-						href="https://leonidas.neocities.org/"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/stadt/assets/images/stamps/palmtrees.png"
-					class="stamp-99x56"
-					alt="vaporwave palm trees stamp" />
-				<figcaption class="img-caption">
-					<a class="src"
-						href="https://webpage1990colourised.neocities.org#graphics"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://arstechnica.com/gadgets/2022/11/pantone-wants-15-month-for-the-privilege-of-using-its-colors-in-photoshop/">
-					<img src="/stadt/assets/images/stamps/pantone.png"
-						class="stamp-99x56"
-						alt="pantone photoshop black stamp" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"></a>
-					{{ page.sep }}
-					<a href="https://www.deviantart.com/king-lulu-deer/art/PANTONE-13-1125-Peach-Quartz-736555028"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/stadt/assets/images/stamps/phonebooth.png"
-					class="stamp-99x56 anim"
-					alt="headbanging phonebooth monster stamp (celeste)" />
-				<figcaption class="img-caption">
-					<a class="src z"
-						href="//zeusofthecrows.github.io/stadt/assets/images/stamps/phonebooth.ase"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/stadt/assets/images/stamps/piracy.png"
-					class="stamp-99x56 anim"
-					alt="home taping is killing music industry profits stamp" />
-				<figcaption class="img-caption">
-					<a class="src z"
-						href="//zeusofthecrows.github.io/stadt/assets/images/stamps/piracy.ase"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/stadt/assets/images/stamps/portal-left.png"
-					class="stamp-99x56 smooth-zoom"
-					alt="left half of portal logo, protruding through a portal"
-					data-img-src="https://newlambda.neocities.org/stuff/graphics/devstamp.html" />
-				<figcaption class="img-caption">
-					<a class="src v"
-						href="https://www.deviantart.com/sparklum/art/Portal-Stamp-Blue-209870753"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/stadt/assets/images/stamps/planet-b.png"
-					class="stamp-99x56 smooth-zoom"
-					alt="there is no planet b stamp" />
-				<figcaption class="img-caption">
-					<a class="src z"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/stadt/assets/images/stamps/pope.png"
-					class="stamp-99x56 spoiler anim"
-					alt="His Holiness Escribar stamp (blasphemous)" />
-				<figcaption class="img-caption">
-					<a class="src z"
-						href="//zeusofthecrows.github.io/stadt/assets/images/stamps/pope.ase"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/stadt/assets/images/stamps/prie-dieu.png"
-					class="stamp-99x56 anim"
-					alt="lighting a prie-dieu stamp (blasphemous)" />
-				<figcaption class="img-caption">
-					<a class="src z"
-						href="//zeusofthecrows.github.io/stadt/assets/images/stamps/prie-dieu.ase"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/stadt/assets/images/stamps/psp.png"
-					class="stamp-99x56 smooth-zoom anim"
-					alt="psp startup animation stamp" />
-				<figcaption class="img-caption">
-					<a class="src v"
-						href="https://www.deviantart.com/byte-byte/art/Stamp-PSP-460345147"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/stadt/assets/images/stamps/portal-right.png"
-					class="stamp-99x56 smooth-zoom"
-					alt="right half of portal logo, protruding through a portal"
-					data-img-src="https://newlambda.neocities.org/stuff/graphics/devstamp.html" />
-				<figcaption class="img-caption">
-					<a class="src v"
-						href="https://www.deviantart.com/sparklum/art/Portal-Stamp-Orange-209870758"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/stadt/assets/images/stamps/rad.png"
-					class="stamp-99x56 smooth-zoom anim"
-					alt="totally rad" />
-				<figcaption class="img-caption">
-					<a class="src v"
-						href="https://www.deviantart.com/thecandycoating/art/TOTALLY-RAD-stamp-648713812"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/stadt/assets/images/stamps/radiohead.png"
-					class="stamp-99x56 smooth-zoom"
-					alt="OK Computer" />
-				<figcaption class="img-caption">
-					<a class="src z"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/stadt/assets/images/stamps/radios.png"
-					class="stamp-99x56 smooth-zoom anim"
-					alt="various 90s radios stamp" />
-				<figcaption class="img-caption">
-					<a class="src"
-						href="https://jlehr.neocities.org/"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/stadt/assets/images/stamps/reality-off.png"
-					class="stamp-99x56 smooth-zoom anim"
-					alt="80s-esque grid stamp" />
-				<figcaption class="img-caption">
-					<a class="src"
-						href="https://www.deviantart.com/babykttn/art/switching-off-672436199/"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/stadt/assets/images/stamps/still-you.png"
-					class="stamp-99x56 anim"
-					alt="despite everything, it's still you stamp" />
-				<figcaption class="img-caption">
-					<a class="src z"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/stadt/assets/images/stamps/stuart-ashen.png"
-					class="stamp-99x56 smooth-zoom anim"
-					alt="ashens.com intro"
-					data-img-src="https://www.deviantart.com/phlum/art/Ashens-com-Stamp-197257952" />
-				<figcaption class="img-caption">
-					<a class="src v"
-						href="https://www.deviantart.com/phlum/art/Ashens-com-Stamp-197257952"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/stadt/assets/images/stamps/tvs.png"
-					class="stamp-99x56 smooth-zoom anim"
-					alt="photos of flickering crts in a windows vista style window" />
-				<figcaption class="img-caption">
-					<a class="src"
-						href="https://kingposs.com/"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/stadt/assets/images/stamps/scp.png"
-					class="stamp-99x56 smooth-zoom"
-					alt="SCP. secure. contain. protect."
-					data-img-src="https://mikaorangeart.neocities.org/" />
-				<figcaption class="img-caption">
-					<a class="src"
-						href="https://mikaorangeart.neocities.org/"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/stadt/assets/images/stamps/shanties.png"
-					class="stamp-99x56 smooth-zoom"
-					alt="abney park 'æther shanties' album stamp" />
-				<figcaption class="img-caption">
-					<a class="src z"></a>
+						href="/stadt/assets/images/stamps/{{ item.image }}.ase"></a>
+					{% else %}
+					<a class="src {{ item.src }}"></a>
+					{% endif %}
+					{% if item.ins-url != nil %}
 					{{ page.sep }}
 					<a class="i"
-						href="https://www.youtube.com/playlist?list=OLAK5uy_kvCZZ3eg-tfoqj3z0T83uDSr78wRr25k0"></a>
+					{% if item.ins-ttl != nil %}
+						title="{{ item.ins-ttl }}"
+					{% endif %}
+						href="{{ item.ins-url }}"></a>
+					{% endif %}
 				</figcaption>
 			</figure></li>
-			<li><figure>
-				<img src="/stadt/assets/images/stamps/shutdown.png"
-					class="stamp-99x56 smooth-zoom"
-					alt="win98 style stamp, saying 'shut down your pc and go outside'" />
-				<figcaption class="img-caption">
-					<a class="src v"
-						href="https://web.archive.org/web/20230527015954/https://outgoinglink.tumblr.com/post/717900201971630080/windows95-pixelart-boarders-ive-made"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/stadt/assets/images/stamps/signal.png"
-					class="stamp-99x56"
-					alt="[signal lost] signal test screen stamp" />
-				<figcaption class="img-caption">
-					<a class="src z"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/stadt/assets/images/stamps/source.png"
-					class="stamp-99x56 smooth-zoom" alt="source filmmaker"/>
-				<figcaption class="img-caption">
-					<a class="src v"
-						href="https://www.deviantart.com/byte-byte/art/Stamp-Source-Filmmaker-460416657/"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/stadt/assets/images/stamps/spin.png"
-					class="stamp-99x56 spoiler anim"
-					alt="celest madeline & badeline spinning stamp" />
-				<figcaption class="img-caption">
-					<a class="src z"
-						href="//zeusofthecrows.github.io/stadt/assets/images/stamps/spin.ase"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/stadt/assets/images/stamps/stars.png"
-					class="stamp-99x56 smooth-zoom anim"
-					alt="scrolling star field stamp" />
-				<figcaption class="img-caption">
-					<a class="src v"
-						href="https://www.deviantart.com/seiorai/art/FieldOfStars-Stamp-146731539"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/stadt/assets/images/stamps/steampunk.png"
-					class="stamp-99x56 smooth-zoom"
-					alt="steampunk stamp" />
-				<figcaption class="img-caption">
-					<a class="src v"
-						href="https://www.deviantart.com/seiorai/art/Steampunk-Stamp-173051979/"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/stadt/assets/images/stamps/thinger.png"
-					class="stamp-99x56 anim" alt="thinger strangs stamp" />
-				<figcaption class="img-caption">
-					<a class="src z"
-						href="//zeusofthecrows.github.io/stadt/assets/images/stamps/thinger.ase"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/stadt/assets/images/stamps/turret.png"
-					class="stamp-99x56" alt="portal turret 'i don't hate you' stamp" />
-				<figcaption class="img-caption">
-					<a class="src v"
-						href="https://www.deviantart.com/airenu-ish/art/Turret-Love-Stamp-167135190"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/stadt/assets/images/stamps/upgrade.png"
-					class="stamp-99x56 smooth-zoom anim"
-					alt="various iterations of windows, crashing after win11" />
-				<figcaption class="img-caption">
-					<a class="src z"
-						href="//zeusofthecrows.github.io/stadt/assets/images/stamps/upgrade.ase"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/stadt/assets/images/stamps/vaporwave.png"
-					class="stamp-99x56 anim" alt="vaporwave stamp" />
-				<figcaption class="img-caption">
-					<a class="src v"
-						href="https://www.deviantart.com/gunsweat/art/stamp-600352984"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/stadt/assets/images/stamps/vapor-wave.png"
-					class="stamp-99x56 smooth-zoom anim" alt="vapor wave stamp" />
-				<figcaption class="img-caption">
-					<a class="src"
-						href="https://exephile.neocities.org/music.html"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/stadt/assets/images/stamps/vortex.png"
-					class="stamp-99x56 smooth-zoom anim"
-					alt="ipod game 'vortex'" />
-				<figcaption class="img-caption">
-					<a class="src z"
-						href="//zeusofthecrows.github.io/stadt/assets/images/stamps/cadle.ase"></a>
-					{{ page.sep }}
-					<a class="i" href="https://en.wikipedia.org/wiki/Vortex_(iPod_game)"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/stadt/assets/images/stamps/wheelslip.png"
-					class="stamp-99x56 smooth-zoom anim"
-					alt="wheelslip on the LMS black 5 №5407 stamp" />
-				<figcaption class="img-caption">
-					<a class="src z"
-						href="//zeusofthecrows.github.io/stadt/assets/images/stamps/wheelslip.ase"></a>
-					{{ page.sep }}
-					<a class="i" href="https://www.youtube.com/watch?v=JxNMh0PFwfo"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/stadt/assets/images/stamps/wolfglitch.png"
-					class="stamp-99x56 smooth-zoom anim" alt="glitching wolf stamp" />
-				<figcaption class="img-caption">
-					<a class="src v"
-						href="https://omfg.neocities.org/graphics.html"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/stadt/assets/images/stamps/x360.png"
-					class="stamp-99x56 smooth-zoom anim" alt="xbox 360 intro stamp" />
-				<figcaption class="img-caption">
-					<a class="src v"
-						href="https://www.deviantart.com/byte-byte/art/Stamp-Xbox-360-460378137"></a>
-				</figcaption>
-			</figure></li>
+			{% endif %}
+			{% endfor %}
 		</ul>
 
 		<h2><abbr title="fanlisting 'codes'">100x50</abbr></h2>
 		<ul class="img-grid hover-zoom img-capts">
+			{% for item in site.data.gallery-stamps %}
+			{% if item.image != nil and item.res == "100x50" %}
 			<li><figure>
-				<a href="https://moudoku.com/abandoned/">
-					<img src="/stadt/assets/images/stamps/fanlistings/abandoned-01.png"
-						class="stamp-100x50 smooth-zoom"
-						alt="abandoned sites fl code"/>
+				{% if item.lnk-url != nil %}
+				<a href="{{ item.lnk-url }}">
+				{% endif %}
+				<img src="/stadt/assets/images/stamps/fanlistings/{{ item.image }}.png"
+					{% if item.title != nil %}
+					title="{{ item.title }}"
+					{% endif %}
+					{% if item.smooth %}
+					class="stamp-100x50 smooth-zoom"
+					{% else %}
+					class="stamp-100x50"
+					{% endif %}
+					alt="{{ item.alt }} fanlisting code" />
+				{% if item.lnk-url != nil %}
 				</a>
+				{% endif %}
 				<figcaption class="img-caption">
-					<a class="src v"
-						href="https://moudoku.com/abandoned/codes.php"></a>
+					{% if item.src-url != nil %}
+					<a class="src {{ item.src }}"
+						href="{{ item.src-url }}"></a>
+					{% else %}
+					<a class="src {{ item.src }}"></a>
+					{% endif %}
 				</figcaption>
 			</figure></li>
-			<li><figure>
-				<a href="https://moudoku.com/abandoned/">
-					<img src="/stadt/assets/images/stamps/fanlistings/abandoned-02.png"
-						class="stamp-100x50 smooth-zoom"
-						alt="abandoned sites fl code"/>
-				</a>
-				<figcaption class="img-caption">
-					<a class="src v"
-						href="https://moudoku.com/abandoned/codes.php"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://fans.thislove.nu/mozilla">
-					<img src="/stadt/assets/images/stamps/fanlistings/mozilla.png"
-						class="stamp-100x50 smooth-zoom"
-						alt="firefox fl code"/>
-				</a>
-				<figcaption class="img-caption">
-					<a class="src v"
-						href="https://fans.thislove.nu/mozilla#linkback"></a>
-				</figcaption>
-			</figure></li>
+			{% endif %}
+			{% endfor %}
 		</ul>
 
 		<h2>Other</h2>
 		<ul class="img-grid hover-zoom img-capts">
+			{% for item in site.data.gallery-stamps %}
+			{% if item.image and item.res == "other" %}
 			<li><figure>
-				<img src="/stadt/assets/images/stamps/clippy.png"
-					class="pixel-art smooth-zoom anim"
-					alt="clippy 'Looks like you're commiting suicide'" />
+				{% if item.lnk-url != nil %}
+				<a href="{{ item.lnk-url }}">
+				{% endif %}
+				<img src="/stadt/assets/images/stamps/{{ item.image }}.png"
+					{% if item.title != nil %}
+					title="{{ item.title }}"
+					{% endif %}
+					class="{% if item.smooth %}smooth-zoom{% else %}pixel-art{% endif %}
+						{% if item.anim %}anim{% endif %}"
+					alt="{{ item.alt }}" />
+				{% if item.lnk-url != nil %}
+				</a>
+				{% endif %}
 				<figcaption class="img-caption">
-					<a class="src"
-						href="https://finallyhappy000.tumblr.com/post/632539598817509376"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/stadt/assets/images/stamps/flipsign.png"
-					class="pixel-art smooth-zoom anim"
-					alt="half life sector c lobby flipsigns" />
-				<figcaption class="img-caption">
+					{% if item.src-url != nil %}
+					<a class="src {{ item.src }}"
+						href="{{ item.src-url }}"></a>
+					{% elsif item.src == "s" %}
 					<a class="src z"
-						href="//zeusofthecrows.github.io/stadt/assets/images/stamps/flipsign.ase"></a>
+						href="/stadt/assets/images/stamps/{{ item.image }}.ase"></a>
+					{% else %}
+					<a class="src {{ item.src }}"></a>
+					{% endif %}
+					{% if item.ins-url != nil %}
+					{{ page.sep }}
+					<a class="i"
+					{% if item.ins-ttl != nil %}
+						title="{{ item.ins-ttl }}"
+					{% endif %}
+						href="{{ item.ins-url }}"></a>
+					{% endif %}
 				</figcaption>
 			</figure></li>
-			<li><figure>
-				<img src="/stadt/assets/images/stamps/hermit-purple.png"
-					class="pixel-art anim"
-					alt="jojo's bizarre adventure"
-					data-img-src="https://www.deviantart.com/king-lulu-deer/gallery/63911215/tv-and-gameboy-stamps" />
-				<figcaption class="img-caption">
-					<a class="src v"
-						href="https://www.deviantart.com/king-lulu-deer/gallery/63911215/tv-and-gameboy-stamps"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/stadt/assets/images/stamps/little-nightmares.png"
-					class="pixel-art anim"
-					alt="little nightmares"
-					data-img-src="https://www.deviantart.com/king-lulu-deer/gallery/63911215/tv-and-gameboy-stamps" />
-				<figcaption class="img-caption">
-					<a class="src v"
-						href="https://www.deviantart.com/king-lulu-deer/gallery/63911215/tv-and-gameboy-stamps"></a>
-				</figcaption>
-			</figure></li>
+			{% endif %}
+			{% endfor %}
 		</ul>
 	</div>
 </div>
