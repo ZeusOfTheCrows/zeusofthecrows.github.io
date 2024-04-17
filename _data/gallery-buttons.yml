@@ -1,0 +1,101 @@
+# possible attributes:
+#  image: filename without extension
+#  ext: [nyi] optional file extension override
+#  smooth: bool; "smooth-zoom" class
+#  anim: whether or not the image is animated (accessibility)
+#  spoiler: blur image on !hover
+#  alt: alt text
+#  title: hover text
+#  src: z/u/v/s - zeus/unknown/verified/zeus; standard source link
+#  src-url: link to source
+#  ins-url: link to inspiration url
+#  lnk-url: url for stamp click to link to
+#  res: 100x50/other - defaults to 99x56 (size is a builtin for № of elements)
+#  cat: [a/m/g/b/l/e/i] - æsthetic/message/games/brands/lemmy/external/ideas
+
+# /!\ ztodo: the dimensions aren't applying on svg buttons - maybe raster too?
+
+- image: "taskbar/svg"
+  smooth: y
+  anim: y
+  alt: "scalable vector graphics now button"
+  title: "alternative svg button based on viatrix' one"
+  lnk-url: "/stadt/thoughts#svg"
+  src: z
+  ins-url: "https://mincerafter42.github.io/"
+  res: inf
+
+- image: "taskbar/svg-ns"
+  smooth: y
+  anim: y
+  alt: "svg now button"
+  lnk-url: "/stadt/thoughts#svg"
+  src: z
+  ins-url: "https://mincerafter42.github.io/"
+  res: inf
+
+- image: "other/svg-viatrix"
+  smooth: y
+  alt: "viatrix' svg button"
+  lnk-url: "/stadt/thoughts#svg"
+  src: v
+  src-url: "https://viatrix.is-hella.gay/"
+  res: inf
+
+- image: "my-links/zeus-retro"
+  smooth: y
+  anim: y
+  alt: "animated svg zeus retro button"
+  lnk-url: "/stadt/links#my-links"
+  src: z
+  ins-url: "https://medialoot.com/blog/make-a-70s-text-effect-in-illustrator/"
+  res: inf
+
+- image: "my-links/zeus-train"
+  smooth: y
+  anim: y
+  alt: "animated svg zeus zeus125 button"
+  lnk-url: "/stadt/links#my-links"
+  src: z
+  res: inf
+
+- image: "my-links/zeus-t17"
+  smooth: y
+  alt: "animated svg zeus button"
+  lnk-url: "/stadt/links#my-links"
+  src: z
+  res: inf
+
+- image: "my-links/zeus-t17-old"
+  smooth: y
+  alt: "animated svg zeus button"
+  lnk-url: "/stadt/links#my-links"
+  src: z
+  res: inf
+
+# ==============================================================================
+
+- image: "page-info/1080"
+  smooth: y
+  alt: "best viewed 1920×1080 fullHD button"
+  title: "alternative svg button based on viatrix' one"
+  src: s
+  cat: a
+
+- image: "taskbar/2038"
+  smooth: y
+  anim: y
+  alt: "are you ready? year 2038 button"
+  title: "the epochalypse is coming"
+  lnk-url: "https://en.wikipedia.org/wiki/Year_2038_problem"
+  src-url: "https://viatrix.is-hella.gay/"
+  cat: a
+
+- image:
+  smooth:
+  anim:
+  alt:
+  title:
+  lnk-url:
+  src:
+  cat:

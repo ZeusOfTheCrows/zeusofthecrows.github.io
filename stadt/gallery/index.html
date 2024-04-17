@@ -305,88 +305,86 @@ znotes: maybe abstract all these out to layout + grid-windows.css?
 		<h2><span class="faux-inf"></span>x<span class="faux-inf"></span></h2>
 		<!-- <h2 style="letter-spacing: -4px">00&nbsp;&nbsp;x&nbsp;&nbsp;00</h2> -->
 		<ul class="img-grid hover-zoom img-capts">
+			{% for item in site.data.gallery-buttons %}
+			{% if item.image and item.res == "inf" %}
 			<li><figure>
-				<a href="/stadt/thoughts#svg">
-					<img src="/stadt/assets/images/buttons/taskbar/svg.svg"
-						class="btn-88x31 btn-svg anim"
-						alt="scalable vector graphics now button"
-						title="alternative svg button based on viatrix' one" />
-				</a>
+				{% if item.lnk-url != nil %}
+				<a href="{{ item.lnk-url }}">
+				{% else %}
+				<a>
+				{% endif %}
+				<img src="/stadt/assets/images/buttons/{{ item.image }}.svg"
+					{% if item.title != nil %}
+					title="{{ item.title }}"
+					{% endif %}
+					class="button-88x31 btn-svg
+						{% if item.anim %}anim{% endif %}"
+					alt="{{ item.alt }}" />
 				<figcaption class="img-caption">
-					<a class="src z"></a>
+					{% if item.src-url != nil %}
+					<a class="src {{ item.src }}"
+						href="{{ item.src-url }}"></a>
+					{% elsif item.src == "s" %}
+					<a class="src z"
+						href="/stadt/assets/images/buttons/{{ item.image }}.ase"></a>
+					{% else %}
+					<a class="src {{ item.src }}"></a>
+					{% endif %}
+					{% if item.ins-url != nil %}
 					{{ page.sep }}
 					<a class="i"
-						href="https://mincerafter42.github.io/"></a>
+					{% if item.ins-ttl != nil %}
+						title="{{ item.ins-ttl }}"
+					{% endif %}
+						href="{{ item.ins-url }}"></a>
+					{% endif %}
 				</figcaption>
 			</figure></li>
-			<li><figure>
-				<a href="/stadt/thoughts#svg">
-					<img src="/stadt/assets/images/buttons/taskbar/svg-ns.svg"
-						class="btn-88x31 btn-svg anim" alt="svg now button"
-						alt="animated svg button" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="/stadt/thoughts#svg">
-					<img src="/stadt/assets/images/buttons/other/svg-viatrix.svg"
-						class="btn-88x31 btn-svg" alt="viatrix' svg button" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src v"
-						href="https://viatrix.is-hella.gay/"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="/stadt/links#my-links">
-					<img src="/stadt/assets/images/buttons/my-links/zeus-retro.svg"
-						class="btn-88x31 btn-svg anim"
-						alt="animated svg zeus retro button" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"></a>
-					{{ page.sep }}
-					<a href="https://medialoot.com/blog/make-a-70s-text-effect-in-illustrator/"
-						class="i" title="sort of - more just this general style"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="/stadt/links#my-links">
-					<img src="/stadt/assets/images/buttons/my-links/zeus-train.svg"
-						class="btn-88x31 btn-svg anim"
-						alt="animated svg zeus125 button" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="/stadt/links#my-links">
-					<img src="/stadt/assets/images/buttons/my-links/zeus-t17.svg"
-						class="btn-88x31 btn-svg"
-						alt="animated svg zeus button" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="/stadt/links#my-links">
-					<img src="/stadt/assets/images/buttons/my-links/zeus-t17-old.svg"
-						class="btn-88x31 btn-svg"
-						alt="animated svg zeus button" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"></a>
-				</figcaption>
-			</figure></li>
+			{% endif %}
+			{% endfor %}
 		</ul>
 		<h2>88x31</h2>
 		<section id="aesthetic">
 		<h3>Æsthetic</h3>
 		<ul class="img-grid hover-zoom img-capts">
+			{% for item in site.data.gallery-buttons %}
+			{% if item.image and item.res == nil and item.cat == "a" %}
+			<li><figure>
+				{% if item.lnk-url != nil %}
+				<a href="{{ item.lnk-url }}">
+				{% else %}
+				<a>
+				{% endif %}
+				<img src="/stadt/assets/images/buttons/{{ item.image }}.png"
+					{% if item.title != nil %}
+					title="{{ item.title }}"
+					{% endif %}
+					class="button-88x31 {% if item.smooth %}smooth-zoom{% endif %}
+						{% if item.anim %}anim{% endif %}"
+					alt="{{ item.alt }}" />
+				<figcaption class="img-caption">
+					{% if item.src-url != nil %}
+					<a class="src {{ item.src }}"
+						href="{{ item.src-url }}"></a>
+					{% elsif item.src == "s" %}
+					<a class="src z"
+						href="/stadt/assets/images/buttons/{{ item.image }}.ase"></a>
+					{% else %}
+					<a class="src {{ item.src }}"></a>
+					{% endif %}
+					{% if item.ins-url != nil %}
+					{{ page.sep }}
+					<a class="i"
+					{% if item.ins-ttl != nil %}
+						title="{{ item.ins-ttl }}"
+					{% endif %}
+						href="{{ item.ins-url }}"></a>
+					{% endif %}
+				</figcaption>
+			</figure></li>
+			{% endif %}
+			{% endfor %}
+
 			<li><figure>
 				<a>
 					<img src="/stadt/assets/images/buttons/page-info/1080.png"
