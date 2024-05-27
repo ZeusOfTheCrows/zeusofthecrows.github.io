@@ -12,9 +12,33 @@ title: Zeus' Stadt
 <!-- https://www.fontspace.com/bright-font-f57034 -->
 <!-- https://www.fontspace.com/brighton-vintage-font-f95375 -->
 
-
-
 <style>
+
+	@font-face {
+		font-family: 'stadtFont';
+		src:
+			url('/assets/fonts/retro/gaston-opti.woff2') format('woff2'),
+			url('/assets/fonts/retro/gaston-opti.woff') format('woff');
+		font-weight: normal;
+		font-style: normal;
+	}
+	@font-face {
+		font-family: 'zeusFont';
+		src:
+			url('/assets/fonts/retro/motter-ombra.woff2') format('woff2'),
+			url('/assets/fonts/retro/motter-ombra.woff') format('woff');
+		font-weight: normal;
+		font-style: normal;
+	}
+	@font-face {
+		font-family: 'goFont';
+		src:
+			url('/assets/fonts/retro/kabel-black.woff2') format('woff2'),
+			url('/assets/fonts/retro/kabel-black.woff') format('woff');
+		font-weight: normal;
+		font-style: normal;
+	}
+
 	html, body {
 		width: 100%;
 		height: 100%;
@@ -145,7 +169,7 @@ title: Zeus' Stadt
 		mix-blend-mode: multiply;
 		font-size: inherit;
 		font-weight: 500;  /*chrome defaults to 700?*/
-		font-family: "Motter Ombra";
+		font-family: "zeusFont";
 		text-shadow: 0 0 24px white;
 		/*i have no idea why this has to be halved*/
 		padding-left: calc(var(--padding) / 2);  /* text weight is off-centre */
@@ -172,7 +196,7 @@ title: Zeus' Stadt
 	}
 	body h1 #stadt {
 		position: absolute;
-		font-family: "GastonOpti";
+		font-family: "stadtFont";
 		font-size: 1em;  /* this is moot for now */
 		margin-left: calc(1.65em + 64px);
 		margin-top:  calc(0.75em - 36px);
@@ -183,11 +207,6 @@ title: Zeus' Stadt
 		color: transparent;
 		text-shadow: 0px 0px 20px #d0d6;
 	}
-
-	@font-face {
-  font-family: goFont;
-  src: url("/fonts-test/Newon.woff");
-}
 
 	#go-link {
 		display: block;
@@ -202,7 +221,6 @@ title: Zeus' Stadt
 
 		/* color: pink; */
 		/* text-shadow: 0 0 4px red, 0 0 8px red, 0 0 16px red; */
-		font-family: "kabel-black";
 		color: #EAC33A;
 		/* looks like a liquorice allsort */
 		text-shadow:
@@ -232,12 +250,13 @@ title: Zeus' Stadt
 	#go-link::after {
 		content: "🢚";
 		position: absolute;
-		padding-top:  0.2em;
+		padding-top: 0.45em;
 		margin-left: -0.4em;
 
 		transition: margin 0.25s cubic-bezier(.68,-0.55,.33,1.31);
 	}
 	#go-link:hover::after {
+	#go-link:focus::after {
 		margin-left: -0.2em;
 	}
 
