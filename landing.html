@@ -1,0 +1,276 @@
+---
+layout: landing
+edit-date: now
+title: Zeus' Stadt
+---
+
+<!-- https://fontsinuse.com/typefaces/7247/carousel -->
+<!-- https://fontsinuse.com/tags/299/1970s -->
+
+<!-- https://www.1001fonts.com/airstream-font.html -->
+<!-- https://www.1001fonts.com/monoton-font.html -->
+<!-- https://www.fontspace.com/bright-font-f57034 -->
+<!-- https://www.fontspace.com/brighton-vintage-font-f95375 -->
+
+
+
+<style>
+	html, body {
+		width: 100%;
+		height: 100%;
+		margin: 0;
+	}
+
+	body {
+		background-color: black;
+	}
+
+	body > h1 {
+		margin: 0;
+		padding: 0;
+		display: grid;
+		width: 100%;
+		font-size: min(18vw, 256px);
+
+		place-items: center;
+		grid-auto-flow: column;
+		grid-auto-columns: 1fr auto 1fr;
+
+		--padding: clamp(2px, 0.1em, 48px);
+		--blind-height: min(0.24em, 48px);
+
+		border: var(--padding) solid black;
+		box-sizing: border-box;
+		/*background-image:
+			linear-gradient(to top left,
+				transparent,
+				red,
+				transparent,
+				red,
+				transparent),
+			linear-gradient(to top right,
+				red,
+				orange,
+				gold,
+				orange,
+				red,
+				orange,
+				gold,
+				orange,
+				red);*/
+		/*background-image:
+			linear-gradient(to top left,
+				transparent,
+				#ED5C1D,
+				transparent,
+				#ED5C1D,
+				transparent),
+			linear-gradient(to top right,
+				#ED5C1D,
+				#D4781C,
+				#E39D43,
+				#D4781C,
+				#ED5C1D,
+				#D4781C,
+				#E39D43,
+				#D4781C,
+				#ED5C1D);*/
+		background-image:
+			linear-gradient(to top left,
+				transparent,
+				#ED5C1D,
+				transparent,
+				#ED5C1D,
+				transparent),
+			linear-gradient(to top right,
+				#FF9421,
+				#F83D14,
+				#F21D23,
+				#F83D14,
+				#FF9421,
+				#F83D14,
+				#E39D43,
+				#F83D14,
+				#FF9421);
+		/*background-image:
+			linear-gradient(to top left,
+				transparent,
+				#E82428,
+				transparent,
+				#E82428,
+				transparent),
+			linear-gradient(to top right,
+				#E82428,
+				#EB5D2B,
+				#D3782C,
+				#EB5D2B,
+				#E82428,
+				#EB5D2B,
+				#D3782C,
+				#EB5D2B,
+				#E82428);*/
+	background-size: 200% 200%;
+	/*slight performance issues in ffx*/
+	animation: gradient 20s linear infinite;
+	}
+
+	body > h1::before,
+	body > h1::after {
+		content: "";
+		width: 100%;
+		height: 100%;
+
+		--offset: 0.11em;
+		--height: 0.4em;
+		mix-blend-mode: multiply;
+		background-image:
+			linear-gradient(
+				black       0% calc(50% - var(--height) - var(--offset)),
+				transparent calc(50% - var(--height) - var(--offset)) calc(50% + var(--height) - var(--offset)),
+				black       calc(50% + var(--height) - var(--offset))),
+			repeating-linear-gradient(
+				black calc(var(--blind-height) / 2),
+				white calc(var(--blind-height) / 1.2) var(--blind-height));
+	}
+
+	body h1 #zeus {
+		/*"background-clip: text" causes massive cpu usage
+			in firefox and doesn't work in chrome?*/
+/* 		content: "ZEUS´"; */
+		position: relative;
+		white-space: nowrap;  /* ztodo fixme clamp text */
+		text-transform: uppercase;
+		background: black;
+		color: white;
+		mix-blend-mode: multiply;
+		font-size: inherit;
+		font-weight: 500;  /*chrome defaults to 700?*/
+		font-family: "Motter Ombra";
+		text-shadow: 0 0 24px white;
+		/*i have no idea why this has to be halved*/
+		padding-left: calc(var(--padding) / 2);  /* text weight is off-centre */
+		padding-right: calc(var(--padding) / 2 + 8px);  /* instead of gap */
+		padding-block: var(--blind-height);
+	}
+	body h1 #zeus::selection {
+		color: black;
+		background: white;
+	}
+
+	body h1 #zeus::after {
+		content: "'";
+		position: absolute;
+		font-size: 0.6em;
+		top: calc(0.4em + 4px);
+		right: calc(0.12em + 10px);
+		text-shadow: 0px 0px 24px black, 0px 0px 24px white, 0px 0px 0px black;
+		color: transparent;
+	}
+
+	body h1 #stadt::selection {
+	  background: #d0d6;
+	}
+	body h1 #stadt {
+		position: absolute;
+		font-family: "GastonOpti";
+		font-size: 1em;  /* this is moot for now */
+		margin-left: calc(1.65em + 64px);
+		margin-top:  calc(0.75em - 36px);
+		transform: rotate(336deg);
+		padding-right: 80px;
+		background-image: linear-gradient(red, blue);  /* ztodo better colours */
+		background-clip: text;
+		color: transparent;
+		text-shadow: 0px 0px 20px #d0d6;
+	}
+
+	@font-face {
+  font-family: goFont;
+  src: url("/fonts-test/Newon.woff");
+}
+
+	#go-link {
+		display: block;
+		width: min-content;
+		margin: auto;
+		isolation: isolate;
+
+		font-size: min(16vw, 240px);
+		font-family: "goFont";
+		text-decoration: none;
+		text-transform: lowercase;
+
+		/* color: pink; */
+		/* text-shadow: 0 0 4px red, 0 0 8px red, 0 0 16px red; */
+		font-family: "kabel-black";
+		color: #EAC33A;
+		/* looks like a liquorice allsort */
+		text-shadow:
+			-0.02em 0em #E09B40,
+			-0.04em 0em black,
+			-0.06em 0em #D07919,
+			-0.08em 0em black,
+			-0.10em 0em #EB5A22,
+			-0.12em 0em black,
+			-0.14em 0em #E91E1E
+		;
+		text-shadow:
+			-0.03em 0em #E09B40,
+			-0.06em 0em #D07919,
+			-0.09em 0em #EB5A22,
+			-0.12em 0em #E91E1E
+		;
+		color: #FF9421;
+		text-shadow:
+			-0.03em 0em #FF9421,
+			-0.06em 0em #F83D14,
+			-0.09em 0em #F21D23,
+			-0.12em 0em #D31A28
+		;
+	}
+
+	#go-link::after {
+		content: "🢚";
+		position: absolute;
+		padding-top:  0.2em;
+		margin-left: -0.4em;
+
+		transition: margin 0.25s cubic-bezier(.68,-0.55,.33,1.31);
+	}
+	#go-link:hover::after {
+		margin-left: -0.2em;
+	}
+
+	/* 50s-style ufo sign */
+	/*#go-link {
+		font-size: min(24vw, 256px);
+		font-family: annual;
+		text-decoration: none;
+		transform: perspective(600px) rotateX(45deg);
+		display: block;
+		transform: perspective(700px) rotateX(-45deg);
+		text-shadow:
+			0 0.02em red,
+			0 0.04em orange,
+			0 0.06em goldenrod,
+			0 0.08em gold,
+			0 0.10em yellow;
+		background: orange;
+		width: min-content;
+		margin-inline: auto;
+		padding-inline: 0.5ch;
+		border-radius: 0.1em;
+		border: 0.05em solid firebrick;
+		padding-bottom: 0.2em;
+	}*/
+
+	@keyframes gradient {
+		0%   { background-position: 0% -100%, 0% -100%; }
+		100% { background-position: 0% 100%,  0% 100%;  }
+	}
+</style>
+<h1><span id="zeus">Zeus</span><span id="stadt">Stadt</span></h1>
+
+<main style="text-align:center;">
+	<a href="/stadt/" data-text="Enter" id="go-link">Enter</a>
+</main>
