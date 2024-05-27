@@ -38,6 +38,15 @@ title: Zeus' Stadt
 		font-weight: normal;
 		font-style: normal;
 	}
+		/* fucking android doesn't have google's own noto symbol font */
+	@font-face {
+		font-family: 'rightArrow';
+		src:
+			url('/assets/fonts/retro/notosanssymbols2.woff2') format('woff2'),
+			url('/assets/fonts/retro/notosanssymbols2.woff') format('woff');
+		font-weight: normal;
+		font-style: normal;
+	}
 
 	html, body {
 		width: 100%;
@@ -250,8 +259,10 @@ title: Zeus' Stadt
 	#go-link::after {
 		content: "🢚";
 		position: absolute;
-		padding-top: 0.45em;
+		/* padding-top: 0.45em; */ /* position for default noto symbol 2 */
+		padding-top: 0.64em;
 		margin-left: -0.4em;
+		font-family: "rightArrow";
 
 		transition: margin 0.25s cubic-bezier(.68,-0.55,.33,1.31);
 	}
