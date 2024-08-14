@@ -8,7 +8,6 @@ notes: ^ is only so typora correctly renders images
 ---
 
 # Fonts
-
 {: .no_toc}
 
 <div class="contents-intro-container" markdown="1">
@@ -16,7 +15,7 @@ notes: ^ is only so typora correctly renders images
 {: .table-of-contents}
 
 * Will be replaced with the ToC
-  {:toc}
+{:toc}
 
 {: .page-intro}
 
@@ -26,9 +25,7 @@ as the anbernic logo is _clearly_ inspired by the gameboy advance logo, i was su
 
 the .svg file [is available here](/assets/images/anbernic/bootlogo.svg), for anyone who wants to make a version with their own colours, or make any other edits
 
-#### Install Instructions
-
-##### MuOS
+**Install Instructions - MuOS**
 
 i'm too lazy to write any, so:
 
@@ -37,6 +34,8 @@ i'm too lazy to write any, so:
 > &mdash; [EconomistMedical6019](https://nm.reddit.com/r/RG35XX/comments/1dh98vr/boot_logo_set_for_rg35xx_spplush/l8w0mkz/?context=10000)
 
 there's probably an easier way to do this, but i don't know of it
+
+more boot images are available at [RG35XX.com](https://www.rg35xx.com/en/customization/boot-logos/), [plus.RG35XX.com](https://plus.rg35xx.com/en/customization/boot-logos/), and [plus.RG35XX.com/28xx](https://plus.rg35xx.com/en/customization/boot-logos/)
 
 ---
 
