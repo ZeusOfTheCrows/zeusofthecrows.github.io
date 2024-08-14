@@ -261,6 +261,13 @@ abbr {
 	text-decoration: none;
 }
 
+blockquote {
+	border-left: 2px dotted $text-09;
+	padding-left: calc(2ch - 2px);
+	text-indent: 1em;
+	max-width: 80ch;
+}
+
 /*=========================== specific styles ===============================*/
 
 #ascii-header, #ascii-logo {
