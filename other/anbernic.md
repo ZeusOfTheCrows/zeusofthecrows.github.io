@@ -43,7 +43,7 @@ more boot images are available at [RG35XX.com](https://www.rg35xx.com/en/customi
 
 <a href="/assets/images/anbernic/gba-purple/bootlogo.bmp" download>Download</a>
 
-before making this, i thought i knew what the gba logo looked like - turns out i have no idea. it's either blue and sharp ([exhibit a.](https://static.wikia.nocookie.net/logopedia/images/a/a1/Gameboy_advance_logo_stacked.svg/revision/latest?cb=20220620020941)), or purple and rounded ([exhibit b.](https://static.wikia.nocookie.net/castlevania/images/8/8e/Game-boy-advance-logo.jpg/revision/latest?cb=20211001195618)). i decided to go with purple and sharp because i think that's what looks better, and i swear that's what i remember it looking like
+before making this, i thought i knew what the gba logo looked like - turns out i have no idea. it's either blue and sharp ([exhibit a.](https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Game_Boy_Advance_logo.svg/512px-Game_Boy_Advance_logo.svg.png)), or purple and rounded ([exhibit b.]https://upload.wikimedia.org/wikipedia/commons/e/e7/GAMEBOY_ADVANCE_LOGO.jpg)). i decided to go with purple and sharp because i think that's what looks better, and i swear that's what i remember it looking like
 
 ![](/assets/images/anbernic/gba-purple/bootlogo.bmp){: .showcase .sc-mid}
 
