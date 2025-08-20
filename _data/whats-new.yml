@@ -1,42 +1,77 @@
-- content: added neighbours window to homepage
+- content: added two new neighbours
 
-- content: added "image of the day" to the homepage
+- content: added lakes the guy's webgarden
 
 - content: new images have been added to <a href="/stadt/gallery/">the gallery</a>
   subtype: images
   subcontent:
     - image:
-      source: stamps/agency.png
+      source: stamps/3ds.png
       type: stamp-99x56
       smooth: y
-      alt: "agent of chaos (just cause 1/2) stamp"
+      alt: "3ds game loading screen stamp"
 
     - image:
-      source: stamps/ambiance.png
+      source: stamps/biota.png
       type: stamp-99x56
-      smooth: y
-      alt: "there's no place like ~/ stamp"
+      alt: "biota intro screen stamp"
 
     - image:
-      source: stamps/ghost-in-the-shell.png
+      source: stamps/kirbs.png
       type: stamp-99x56
-      smooth: y
-      alt: "ghost in the shell stamp"
+      alt: "kirby's adventure intro &quot;first you draw a circle&quot; stamp"
 
     - image:
-      source: stamps/metroidvania.png
+      source: stamps/boot.png
       type: stamp-99x56
-      smooth: y
-      alt: "metroidvania enthusiast stamp"
+      alt: "nokia 3310 boot logo stamp"
 
     - image:
-      source: stamps/piracy.png
+      source: stamps/menu.png
       type: stamp-99x56
-      smooth: y
-      alt: "&quot;home taping is killing music industry profits - and you can help&quot; stamp"
+      alt: "nokia 3310 home menu stamp"
 
     - image:
-      source: stamps/piracy-reel.png
+      source: stamps/snake.png
       type: stamp-99x56
-      smooth: y
-      alt: "&quot;home taping is killing record industry profits - and you can help&quot; stamp"
+      alt: "nokia 3310 snake xenzia game stamp"
+
+    - image:
+      source: stamps/invaders.png
+      type: stamp-99x56
+      alt: "space invaders stamp"
+
+    - image:
+      source: stamps/waste.png
+      type: stamp-99x56
+      alt: "&quot;This stamp is a waste of 587 bytes&quot; stamp"
+
+    - image:
+      source: stamps/sun.png
+      type: stamp-99x56
+      alt: "&quot;the sun is a deadly laser&quot; stamp"
+
+    - image:
+      source: stamps/waste.png
+      type: btn-88x31
+      alt: "vhs button"
+
+- content: new fanlisting codes have been added
+  subtype: images
+  subcontent:
+    - image:
+      source: stamps/fanlistings/3ds.png
+      type: stamp-100x50
+      alt: "nintendo 3ds fanlisting code"
+
+    - image:
+      source: stamps/fanlistings/snow.png
+      type: stamp-100x50
+      alt: "snow fanlisting code"
+
+    - image:
+      source: stamps/fanlistings/mint.png
+      type: stamp-100x50
+      alt: "linux mint fanlisting code"
+
+- content: new image of the day

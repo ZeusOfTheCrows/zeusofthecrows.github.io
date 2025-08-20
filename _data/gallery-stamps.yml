@@ -36,6 +36,11 @@
   alt: "there's no place like ~/ stamp"
   src: z
 
+- image: american-megatrends
+  smooth: y
+  alt: "american megatrends bios stamp"
+  src: z
+
 - image: autopilot
   smooth: y
   anim: y
@@ -57,12 +62,22 @@
   src: z
   src-lnk: y
 
+- image: biota
+  anim: y
+  alt: "biota intro screen stamp"
+  src: s
+
 - image: blueheart
   anim: y
   alt: "celeste rotating blue heart stamp"
   src: s
   ins-url: "https://www.deviantart.com/apparate/art/Stamp-Template-2-364387158"
   ins-ttl: "frame from apparate"
+
+- image: boot
+  alt: "nokia 3310 boot logo stamp"
+  src: z
+  src-url: "/stadt/assets/images/stamps/nokia.ase"
 
 - image: cadle
   alt: "james cadle's flag of earth"
@@ -205,6 +220,16 @@
   alt: "photo of html markup"
   src-url: "https://scifirenegade.neocities.org/about/graphs2.html"
 
+- image: invaders
+  anim: y
+  alt: "space invaders stamp"
+  src: s
+
+- image: kirbs
+  anim: y
+  alt: "kirby's adventure intro &quot;first you draw a circle&quot; stamp"
+  src: z
+
 - image: lava-lamp
   smooth: y
   alt: "photo of lava lamp stamp"
@@ -254,6 +279,11 @@
   anim: y
   alt: "metal gear solid radio stamp"
   src: s
+
+- image: menu
+  alt: "nokia 3310 home menu stamp"
+  src: z
+  src-url: "/stadt/assets/images/stamps/nokia.ase"
 
 - image: metroidvania
   smooth: y
@@ -374,12 +404,24 @@
   alt: "&quot;despite everything, it's still you&quot; stamp"
   src: z
 
+- image: snake
+  anim: y
+  alt: "nokia 3310 snake xenzia game stamp"
+  src: z
+  src-url: "/stadt/assets/images/stamps/nokia.ase"
+
 - image: stuart-ashen
   smooth: y
   anim: y
   alt: "ashens.com intro"
   src: v
   src-url: "https://www.deviantart.com/phlum/art/Ashens-com-Stamp-197257952"
+
+- image: sun
+  smooth: y
+  anim: y
+  alt: "&quot;the sun is a deadly laser&quot; stamp"
+  src-url: "https://corvidae.digital/graphics/"
 
 - image: tvs
   smooth: y
@@ -469,6 +511,10 @@
   src: z
   ins-url: "https://en.wikipedia.org/wiki/Vortex_(iPod_game)"
 
+- image: waste
+  alt: "&quot;This stamp is a waste of 587 bytes&quot;"
+  src: s
+
 - image: wheelslip
   smooth: y
   anim: y
@@ -505,6 +551,13 @@
   lnk-url: "https://moudoku.com/abandoned/"
   res: "100x50"
 
+- image: mint
+  smooth: y
+  alt: "linux mint"
+  src: v
+  src-url: "https://planets.corvidae.digital/linux-mint"
+  lnk-url: "https://planets.corvidae.digital/linux-mint"
+  res: "100x50"
 
 - image: mozilla
   smooth: y
@@ -512,6 +565,14 @@
   src: v
   src-url: "https://fans.thislove.nu/mozilla#linkback"
   lnk-url: "https://fans.thislove.nu/mozilla"
+  res: "100x50"
+
+- image: snow
+  smooth: y
+  alt: "snow"
+  src: v
+  src-url: "https://prettylies.net/snow/buttons.php"
+  lnk-url: "https://prettylies.net/snow/"
   res: "100x50"
 
 - image: clippy
