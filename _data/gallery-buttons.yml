@@ -642,6 +642,14 @@
   src: s
   cat: g
 
+- image: "castleofdracula.png"
+  alt: "castleofdracula button"
+  anim: y
+  lnk-url: "http://castleofdracula.com.ru/"
+  src-url: "http://castleofdracula.com.ru/"
+  src: v
+  cat: g
+
 - image: "../brands/gog"
   alt: "gog.com (good old games) button"
   smooth: y
@@ -685,6 +693,13 @@
   alt: "newgrounds.com button"
   lnk-url: "https://www.newgrounds.com/"
   src-url: "https://drakul78.neocities.org/links"
+  src:
+  cat: g
+
+- image: "romhack-plaza"
+  alt: "romhack plaza button"
+  lnk-url: "https://romhackplaza.org/"
+  src-url: "https://www.smbarena.com/"
   src:
   cat: g
 
@@ -901,6 +916,12 @@
   alt: "matrix messenger button"
   lnk-url: "https://matrix.org/"
   src: z
+  cat: b
+
+- image: "mint"
+  alt: "linux mint button"
+  lnk-url: "https://www.linuxmint.com/"
+  src: s
   cat: b
 
 - image: "neocities"
