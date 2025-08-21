@@ -545,111 +545,45 @@ znotes: maybe abstract all these out to layout + grid-windows.css?
 		<section id="lemmy">
 		<h3>
 			<abbr title="i made these when after the reddit APIcalypse.
-			i now realise lemmy a pile of shit, but unfortunately i'm really pleased with these buttons so i'm keeping them'">Lemmy</abbr>
+			i now realise lemmy a pile of shit, but unfortunately i'm really pleased with these buttons so i'm keeping them">Lemmy</abbr>
 		</h3>
 		<ul class="img-grid hover-zoom img-capts">
-			<li><figure>
-				<a href="https://lemm.ee/u/Zeus@lemmy.world">
-					<img src="/stadt/assets/images/buttons/brands/lemmy.png"
-						alt="lemmy button (join-lemmy.org)" class="btn-88x31"/>
-				</a>
+			{% for item in site.data.gallery-buttons %}
+			{% if item.image and item.cat == "l"  %}
+			<li id="{{ item.image | slugify: "ascii" }}"><figure>
+				<a{% if item.lnk-url != nil %}
+						href="{{ item.lnk-url }}"{% endif %}
+					{% if item.astyle != nil %}
+						style="{{ item.astyle }}"{% endif %}>
+				<img src="/stadt/assets/images/buttons/external/{{ item.image }}.{{ item.ext | default: 'png' }}"
+					{% if item.title != nil %}
+					title="{{ item.title }}"
+					{% endif %}
+					class="btn-88x31 {% if item.smooth == 'y' %}smooth-zoom{% endif %}
+						{% if item.anim == 'y' %}anim{% endif %}"
+					alt="{{ item.alt }}" />
 				<figcaption class="img-caption">
+					{% if item.src == "s" %}
 					<a class="src z"
-						href="//zeusofthecrows.github.io/stadt/assets/images/buttons/brands/lemmy.ase"></a>
+						href="/stadt/assets/images/buttons/external/{{ item.image }}.ase"></a>
+					{% elsif item.src-url != nil %}
+					<a class="src {{ item.src }}"
+						href="{{ item.src-url }}"></a>
+					{% else %}
+					<a class="src {{ item.src }}"></a>
+					{% endif %}
+					{% if item.ins-url != nil %}
+					{{ page.sep }}
+					<a class="i"
+					{% if item.ins-ttl != nil %}
+						title="{{ item.ins-ttl }}"
+					{% endif %}
+						href="{{ item.ins-url }}"></a>
+					{% endif %}
 				</figcaption>
 			</figure></li>
-			<!-- ----------------------------------------------------------------- -->
-			<li><figure>
-				<a href="https://lemm.ee/c/imaginarycathedrals/">
-				<img src="/stadt/assets/images/buttons/external/cathedrals.png"
-					class="btn-88x31" alt="lemm.ee imaginary cathedrals community button" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"
-						href="//zeusofthecrows.github.io/stadt/assets/images/buttons/external/cathedrals.ase"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://lemm.ee/c/imaginarydegradation/">
-				<img src="/stadt/assets/images/buttons/external/degradation.png"
-					class="btn-88x31" alt="lemm.ee imaginary degradation community button" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"
-						href="//zeusofthecrows.github.io/stadt/assets/images/buttons/external/degradation.ase"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://lemm.ee/c/imaginarydieselpunk/">
-				<img src="/stadt/assets/images/buttons/external/dieselpunk.png"
-					class="btn-88x31" alt="lemm.ee imaginary dieselpunk community button" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"
-						href="//zeusofthecrows.github.io/stadt/assets/images/buttons/external/dieselpunk.ase"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://lemm.ee/c/imaginaryportals/">
-				<img src="/stadt/assets/images/buttons/external/portals.png"
-					class="btn-88x31" alt="lemm.ee imaginary portals community button" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"
-						href="//zeusofthecrows.github.io/stadt/assets/images/buttons/external/portals.ase"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://lemm.ee/c/imaginarysteampunk/">
-				<img src="/stadt/assets/images/buttons/external/steampunk.png"
-					class="btn-88x31" alt="lemm.ee imaginary steampunk community button" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"
-						href="//zeusofthecrows.github.io/stadt/assets/images/buttons/external/steampunk.ase"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://lemm.ee/c/imaginarytrains/">
-				<img src="/stadt/assets/images/buttons/external/trains.png"
-					class="btn-88x31" alt="lemm.ee imaginary trains community button" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"
-						href="//zeusofthecrows.github.io/stadt/assets/images/buttons/external/trains.ase"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://lemm.ee/c/imaginarywarhammer@lemmy.world/">
-				<img src="/stadt/assets/images/buttons/external/warhammer.png"
-					class="btn-88x31" alt="lemm.ee imaginary warhammer community button" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"
-						href="//zeusofthecrows.github.io/stadt/assets/images/buttons/external/warhammer.ase"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://lemm.ee/c/imaginarywastelands/">
-				<img src="/stadt/assets/images/buttons/external/wastelands.png"
-					class="btn-88x31" alt="lemm.ee imaginary wastelands community button" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"
-						href="//zeusofthecrows.github.io/stadt/assets/images/buttons/external/wastelands.ase"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://lemmy.world/c/steaminput">
-					<img src="/stadt/assets/images/buttons/brands/steam-input.png"
-						class="btn-88x31 smooth-zoom"
-						alt="/c/steaminput button" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"
-						href="//zeusofthecrows.github.io/stadt/assets/images/buttons/brands/steam-input.xcf"></a>
-				</figcaption>
-			</figure></li>
+			{% endif %}
+			{% endfor %}
 		</ul>
 		</section>
 		<section id="external">

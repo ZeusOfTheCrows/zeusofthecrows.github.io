@@ -696,6 +696,14 @@
   src: z
   cat: g
 
+- image: "../brands/steam-input"
+  alt: "steam input button"
+  smooth: y
+  lnk-url: "https://partner.steamgames.com/doc/features/steam_controller"
+  src-url: "/stadt/assets/images/buttons/brands/steam-input.xcf"
+  src: z
+  cat: g
+
 - image: "../other/still-you"
   alt: "despite everything, it's still you (undertale) button"
   anim: y
@@ -1080,17 +1088,65 @@
 
   #============================= LEMMY =========================================
 
-- image: "lemmy-old"
+- image: "../brands/lemmy-old"
   alt: "lemmy button (join-lemmy.org)"
+  smooth: y
+  src-url: "/stadt/assets/images/buttons/lemmy.ase"
   src: z
-  href: "//zeusofthecrows.github.io/stadt/assets/images/buttons/lemmy.ase"
   cat: l
 
-- image: "lemmy"
+- image: "../brands/lemmy"
   alt: "lemmy button (join-lemmy.org)"
+  smooth: y
   title: "i couldn't really decide which style i prefered of these two"
   lnk-url: "https://lemm.ee/u/Zeus@lemmy.world"
   src: s
+  cat: l
+
+- image: "cathedrals"
+  alt: "lemm.ee imaginary cathedrals community button"
+  lnk-url: "https://lemm.ee/c/imaginarycathedrals/"
+  cat: l
+
+- image: "degradation"
+  alt: "lemm.ee imaginary degradation community button"
+  lnk-url: "https://lemm.ee/c/imaginarydegradation/"
+  cat: l
+
+- image: "dieselpunk"
+  alt: "lemm.ee imaginary dieselpunk community button"
+  lnk-url: "https://lemm.ee/c/imaginarydieselpunk/"
+  cat: l
+
+- image: "portals"
+  alt: "lemm.ee imaginary portals community button"
+  smooth: y
+  lnk-url: "https://lemm.ee/c/imaginaryportals/"
+  cat: l
+
+- image: "steampunk"
+  alt: "lemm.ee imaginary steampunk community button"
+  smooth: y
+  lnk-url: "https://lemm.ee/c/imaginarysteampunk/"
+  cat: l
+
+- image: "trains"
+  alt: "lemm.ee imaginary trains community button"
+  smooth: y
+  lnk-url: "https://lemm.ee/c/imaginarytrains/"
+  cat: l
+
+- image: "warhammer"
+  alt: "lemm.ee imaginary warhammer community button"
+  smooth: y
+  lnk-url: "https://lemm.ee/c/imaginarywarhammer@lemmy.world/"
+  cat: l
+
+- image: "wastelands"
+  alt: "lemm.ee imaginary wastelands community button"
+  smooth: y
+  lnk-url: "https://lemm.ee/c/imaginarywastelands/"
+  cat: l
 
 - image: "other/macintosh"
   alt: "macintosh >128k is extravagant button"
