@@ -1,0 +1,98 @@
+# possible attributes:
+#  image: filename without extension
+#  ext: optional file extension override
+#  smooth: bool; "smooth-zoom" class
+#  anim: whether or not the image is animated (accessibility)
+#  spoiler: blur image on !hover
+#  alt:   alt text
+#  title: hover text
+#  src-url: link to source
+#  ins-url: link to inspiration url
+#  lnk-url: url for stamp click to link to
+
+# /!\ ztodo: the dimensions aren't applying on svg buttons - maybe raster too?
+
+# just neighbours for now, will migrate all later
+
+- image: "bulltown-22"
+  lnk-url: "https://bulltown.2022.joejenett.com/"
+  smooth: y
+  alt: "bulltown.2022"
+  cat: n
+
+- image: "bytemoth"
+  lnk-url: "https://bytemoth.neocities.org/index.html"
+  smooth: y
+  alt: "Bytemoth's Brook"
+  cat: n
+
+- image: "cap-stasher"
+  lnk-url: "https://capstasher.neocities.org/"
+  smooth: y
+  alt: "Cap Stasher's Corner"
+  cat: n
+
+- image: "cyborg"
+  lnk-url: "https://cyborgcatboys.neocities.org/"
+  anim: y
+  alt: "cyborgcatboys"
+  cat: n
+
+- image: "colrana"
+  lnk-url: "https://colrana.neocities.org/"
+  smooth: y
+  anim: y
+  alt: "colrana"
+  cat: n
+
+- image: "drakul78"
+  lnk-url: "https://drakul78.neocities.org/"
+  smooth: y
+  alt: "Drakul78"
+  cat: n
+
+- image: "lakestheguy"
+  lnk-url: "https://lakestheguy.neocities.org/"
+  smooth: y
+  alt: "lakes the guy"
+  cat: n
+
+- image: "meyyebs"
+  lnk-url: "https://meyyebs.neocities.org/"
+  smooth: y
+  anim: y
+  alt: "meyyebs"
+  cat: n
+
+- image: "onion"
+  lnk-url: "https://channelonion.neocities.org/"
+  smooth: y
+  alt: "channel onion"
+  cat: n
+
+- image: "solinus"
+  lnk-url: "https://solinus.neocities.org/"
+  smooth: y
+  alt: "solinux"
+  cat: n
+
+- image: "space-bar"
+  lnk-url: "https://space-bar.neocities.org/"
+  smooth: y
+  anim: y
+  alt: "🆂🅿🅰🅲🅴👽🅱🅰🆁"
+  cat: n
+
+- image: "space-bar"
+  lnk-url: "https://space-bar.neocities.org/"
+  smooth: y
+  anim: y
+  alt: "🆂🅿🅰🅲🅴👽🅱🅰🆁"
+  cat: b
+
+- image: "xavierhmsitebutton"
+  ext-url: "https://xavierhm.com/graphics/buttons/sitebutton/xavierhmsitebutton.gif"
+  lnk-url: "https://xavierhm.com/"
+  anim: y
+  alt: "Xavier H.M."
+  cat: n

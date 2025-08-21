@@ -1,6 +1,6 @@
 # possible attributes:
 #  image: filename without extension
-#  ext: [nyi] optional file extension override
+#  ext: optional file extension override
 #  smooth: bool; "smooth-zoom" class
 #  anim: whether or not the image is animated (accessibility)
 #  spoiler: blur image on !hover
@@ -23,6 +23,7 @@
   lnk-url: "/stadt/thoughts#svg"
   src: z
   ins-url: "https://mincerafter42.github.io/"
+  ext: svg
   res: inf
 
 - image: "taskbar/svg-ns"
@@ -32,6 +33,7 @@
   lnk-url: "/stadt/thoughts#svg"
   src: z
   ins-url: "https://mincerafter42.github.io/"
+  ext: svg
   res: inf
 
 - image: "other/svg-viatrix"
@@ -41,6 +43,7 @@
   src: v
   src-url: "https://viatrix.is-hella.gay/"
   res: inf
+  ext: svg
 
 - image: "my-links/zeus-retro"
   smooth: y
@@ -50,6 +53,7 @@
   src: z
   ins-url: "https://medialoot.com/blog/make-a-70s-text-effect-in-illustrator/"
   res: inf
+  ext: svg
 
 - image: "my-links/zeus-train"
   smooth: y
@@ -58,6 +62,7 @@
   lnk-url: "/stadt/links#my-links"
   src: z
   res: inf
+  ext: svg
 
 - image: "my-links/zeus-t17"
   smooth: y
@@ -65,6 +70,7 @@
   lnk-url: "/stadt/links#my-links"
   src: z
   res: inf
+  ext: svg
 
 - image: "my-links/zeus-t17-old"
   smooth: y
@@ -72,15 +78,21 @@
   lnk-url: "/stadt/links#my-links"
   src: z
   res: inf
+  ext: svg
 
-# ==============================================================================
+# ============================== AESTHETIC =====================================
 
 - image: "page-info/1080"
-  smooth: y
   alt: "best viewed 1920×1080 fullHD button"
-  title: "alternative svg button based on viatrix' one"
   src: s
   cat: a
+
+- image: "18-carat-affair"
+  alt: "18 carat affair"
+  lnk-url: "https://18carataffair.bandcamp.com/"
+  src-url: "https://loa2k.neocities.org/"
+  src:
+  cat: u
 
 - image: "taskbar/2038"
   smooth: y
@@ -91,11 +103,999 @@
   src-url: "https://viatrix.is-hella.gay/"
   cat: a
 
-- image:
-  smooth:
-  anim:
-  alt:
-  title:
-  lnk-url:
+- image: "other/action-fx"
+  smooth: y
+  anim: y
+  alt: "action fx for photoshop button"
+  lnk-url: "https://planetphotoshop.com/the-88x31-button-resolution-trick.html"
+  src-url: "https://planetphotoshop.com/the-88x31-button-resolution-trick.html"
+  src: v
+  cat: a
+
+- image: "brands/apng"
+  anim: y
+  alt: "[animated] png now button"
+  lnk-url: "http://www.libpng.org/pub/png/"
+  ins-url: "http://www.libpng.org/pub/png/"
+  src: s
+  cat: a
+
+- image: "other/bellringer"
+  smooth: y
+  anim: y
+  alt: "bellringer.neocities.org button"
+  lnk-url: ""
+  src-url: "https://bellringer.neocities.org/"
+  src: v
+  cat: a
+
+- image: "taskbar/button"
+  anim: y
+  alt: "say no to missing img links, get a button Today!"
+  src: s
+  cat: a
+
+- image: "taskbar/button-old"
+  anim: y
+  alt: "say no to broken img links"
+  src-url: "/stadt/assets/images/buttons/taskbar/button.ase"
+  src: z
+  cat: a
+
+- image: "music/cassette"
+  anim: y
+  alt: "sounds better on cassette[r] button"
+  src: z
+  cat: a
+
+- image: "other/chapel"
+  anim: y
+  alt: "chapel of the beast"
+  lnk-url: "https://chapelofthebeast.neocities.org/"
+  src-url: "https://chapelofthebeast.neocities.org/"
+  src: v
+  cat: a
+
+- image: "other/cnstr-14seg"
+  smooth: y
+  anim: y
+  alt: "under construction button - 14 segment font"
+  src: z
+  cat: a
+
+- image: "other/cnstr-dotmatrix"
+  smooth: y
+  anim: y
+  alt: "under construction button - dot matrix font"
+  src: z
+  cat: a
+
+- image: "taskbar/code-run"
+  alt: "pro- code & run"
+  title: "just try to stop me"
+  lnk-url: "https://ikewise.neocities.org/2018-05-19_-_return.htm"
+  src-url: "https://anlucas.neocities.org"
+  src: v
+  cat: a
+
+- image: "taskbar/colemak"
+  anim: y
+  alt: "i use colemak (wide) button"
+  title: ""
+  lnk-url: "https://colemak.org/"
+  ins-url: "https://win98icons.alexmeub.com/icons/png/keyboard-4"
+  src: z
+  cat: a
+
+- image: "page-info/cookies"
+  alt: "absolutely no cookies button (and very few biscuits)"
+  src: s
+  cat: a
+
+- image: "taskbar/css"
+  smooth: y
+  anim: y
+  alt: "css is difficult button"
+  lnk-url: "https://www.w3.org/Style/CSS/"
+  ins-url: "https://www.w3.org/Style/CSS/Buttons/Menu"
+  src: s
+  cat: a
+
+- image: "darksleep"
+  alt: "darksleep"
+  src-url: "https://loa2k.neocities.org/"
   src:
-  cat:
+  cat: u
+
+- image: "other/deskmod"
+  smooth: y
+  alt: "deskmod button"
+  lnk-url: "https://web.archive.org/web/20000815063745/http://old.deskmod.com/"
+  src-url: "https://web.archive.org/web/20001009050236/http://www.deviantart.com/"
+  src: u
+  cat: a
+
+- image: "other/deskmod"
+  smooth: y
+  alt: "deskmod button"
+  lnk-url: "https://web.archive.org/web/20000815063745/http://old.deskmod.com/"
+  src-url: "https://web.archive.org/web/20000815063745/http://old.deskmod.com/"
+  src: v
+  ext: jpg
+  cat: a
+
+- image: "other/feeling-machine"
+  smooth: y
+  anim: y
+  alt: "feelingmachine.moe button"
+  lnk-url: "https://feelingmachine.moe/"
+  src-url: "https://feelingmachine.moe/"
+  src: v
+  cat: a
+
+- image: "brands/email"
+  smooth: y
+  anim: y
+  alt: "animated email button"
+  src: s
+  cat: a
+
+- image: "brands/email-bm"
+  smooth: y
+  alt: "email button"
+  src-url: "https://bytemoth.neocities.org/88s/"
+  src:
+  cat: a
+
+- image: "equip"
+  alt: "equip"
+  lnk-url: "https://equip100p.bandcamp.com/"
+  src-url: "https://loa2k.neocities.org/"
+  src:
+  cat: u
+
+- image: "other/guestbook"
+  smooth: y
+  anim: y
+  alt: "windows xp style guestbook button"
+  lnk-url: "https://zeusofthecrows.ishoutbox.com/"
+  src-url: "https://cristianerasmus.neocities.org/"
+  src:
+  cat: a
+
+- image: "page-info/javascript"
+  alt: "proudly no javascript button"
+  lnk-url: ""
+  src-url: ""
+  src: s
+  cat: a
+
+- image: "page-info/js-warning"
+  alt: "warning: page contains javascript button"
+  src: z
+  cat: a
+
+- image: "music/licence"
+  alt: "ppl/prs licensed to play recorded music button"
+  src: s
+  cat: a
+
+- image: "lost-angles"
+  alt: "lost angles"
+  lnk-url: "https://lostangles.bandcamp.com/"
+  src-url: "https://loa2k.neocities.org/"
+  src:
+  cat: u
+
+- image: "other/mars"
+  alt: "mars art deco button"
+  src: z
+  cat: a
+
+- image: "bookmarks/missingno"
+  alt: "this site has no button"
+  anim: y
+  src: s
+  cat: a
+
+- image: "other/mspaint"
+  alt: "Long Live MSPaint button"
+  ins-url: "https://feelingmachine.moe/"
+  src: z
+  cat: a
+
+- image: "my-pet-flamingo"
+  alt: "my pet flamingo"
+  smooth: y
+  lnk-url: "https://mypetflamingo.bandcamp.com/album/flamingo-funk-vol-3"
+  src-url: "https://loa2k.neocities.org/"
+  src:
+  cat: u
+
+- image: "bookmarks/new-lambda"
+  alt: "new lambda research facility"
+  smooth: y
+  anim: y
+  lnk-url: "https://newlambda.neocities.org/"
+  src-url: "https://newlambda.neocities.org/"
+  src: v
+  cat: a
+
+- image: "taskbar/new-tab"
+  alt: "please do not force this button to be lonely"
+  smooth: y
+  src: z
+  cat: a
+
+- image: "other/nokia64"
+  alt: "nokia64"
+  lnk-url: "https://nokia64.neocities.org/"
+  src-url: "https://nokia64.neocities.org/"
+  src: v
+  cat: a
+
+- image: "other/pedit"
+  alt: "pedit: program editor button"
+  smooth: y
+  anim: y
+  lnk-url: "https://web.archive.org/web/20080509082311/http://www.goldshell.com/pedit/pindex.htm"
+  src: u
+  cat: a
+
+- image: "other/rainy"
+  alt: "- cinnabar rain -"
+  smooth: y
+  title: ""
+  lnk-url: "https://rainy.gay/"
+  src-url: "https://rainy.gay/"
+  src: v
+  cat: a
+
+- image: "taskbar/rating"
+  alt: "suitable only for persons over 18 years"
+  ins-url: "https://www.deviantart.com/levelinfinitum/art/BBFC-18-Certification-card-163679609"
+  src: z
+  cat: a
+
+- image: "other/planet-b"
+  alt: "there is no planet b button"
+  smooth: y
+  anim: y
+  title: "also available in stamp form"
+  src: s
+  cat: a
+
+- image: "other/protest"
+  alt: "от бизнеса с любов button"
+  title: "this was going on when i was in bulgaria, and i found the sign design cool"
+  src: z
+  cat: a
+
+- image: "other/rewind"
+  alt: "windows xp vhs rewind button"
+  smooth: y
+  anim: y
+  title: "also available in stamp form"
+  src: z
+  cat: a
+
+- image: "other/scheisskopf"
+  alt: "red button with blackletter pixel font saying 'Scheißkopf'"
+  title: "not affiliated, i just liked the font"
+  lnk-url: "https://www.fontstruct.com/fontstructions/show/1779988/zhowfrakt-eye-fs"
+  src: z
+  cat: a
+
+- image: "other/like-this-page"
+  alt: "like this page? share it! button"
+  smooth: y
+  anim: y
+  lnk-url: "mailto:zeusofthecrows+stadt(a)gmail.com?body=look%20at%20this%20cool%20site%20i%20found%3A%0D%0A%0D%0Ahttps%3A%2F%2Fzeusofthecrows.github.io%2Fstadt%2F"
+  src-url: "https://cristianerasmus.neocities.org/"
+  src: v
+  cat: a
+
+- image: "taskbar/skeuo"
+  alt: "skeuomorphism now button"
+  smooth: y
+  anim: y
+  src: s
+  cat: a
+
+- image: "other/soggy"
+  alt: "soggy button"
+  smooth: y
+  src-url: "https://circa-1997.neocities.org/#buttonstuff"
+  src: v
+  cat: a
+
+- image: "other/sdf"
+  alt: "sdf pubnix button"
+  smooth: y
+  src-url: "http://jgarza.sdf.org/"
+  src:
+  cat: a
+
+- image: "taskbar/svg-ns-static"
+  smooth: y
+  anim: y
+  alt: "non-animated svg button"
+  lnk-url: "/stadt/thoughts#svg"
+  src: z
+  cat: a
+  ext: svg
+  res: inf
+
+- image: "other/terra"
+  alt: "citizen of terra (james cadle earth flag) button"
+  anim: y
+  title: ""
+  lnk-url: "http://flagofearth.org/original.html"
+  ins-url: "http://flagofearth.org/original.html"
+  src: z
+  cat: a
+
+- image: "other/teeth"
+  alt: "teeth in vitro button"
+  smooth: y
+  anim: y
+  title: ""
+  lnk-url: "https://teethinvitro.neocities.org/"
+  src-url: "https://teethinvitro.neocities.org/"
+  src: v
+  cat: a
+
+- image: "other/train"
+  alt: "london underground carriage button"
+  anim: y
+  src: u
+  cat: a
+
+- image: "page-info/truecolour"
+  alt: "best: 24-bit truecolour"
+  anim: y
+  src-url: "/stadt/assets/images/buttons/page-info/truecolour.ase"
+  ins-url: "https://kangworlds.neocities.org/img/hicolor.gif"
+  src: s
+  cat: a
+
+- image: "page-info/truecolour-solaris"
+  alt: "best: 24-bit truecolour (solaris colourscheme)"
+  anim: y
+  src-url: "/stadt/assets/images/buttons/page-info/truecolour.ase"
+  ins-url: "https://kangworlds.neocities.org/img/hicolor.gif"
+  src: z
+  cat: a
+
+- image: "other/teapot"
+  alt: "utah teapot now button"
+  smooth: y
+  src-url: "https://warpzone.site/extras.htm"
+  src: v
+  cat: a
+
+- image: "other/vhs"
+  alt: "vhs button"
+  smooth: y
+  anim: y
+  src-url: "https://corvidae.digital/graphics"
+  src:
+  cat: a
+
+- image: "other/vita"
+  alt: "axiom verge on ps vita button"
+  smooth: y
+  anim: y
+  title: ":-( – still a good game though"
+  lnk-url: "https://www.axiomverge.com/blog/axiom-verge-comes-to-ps-vita-april-19"
+  src: z
+  cat: a
+
+- image: "other/voskhodscroll"
+  alt: "восход button"
+  smooth: y
+  anim: y
+  lnk-url: "https://voskhod.neocities.org/"
+  src-url: "https://voskhod.neocities.org/about.html"
+  src: v
+  cat: a
+
+- image: "other/voskhodskelly"
+  alt: "восход button"
+  smooth: y
+  anim: y
+  lnk-url: "https://voskhod.neocities.org/"
+  src-url: "https://voskhod.neocities.org/about.html"
+  src: v
+  cat: a
+
+- image: "other/website"
+  alt: "Website"
+  smooth: y
+  lnk-url: "http://info.cern.ch/hypertext/WWW/TheProject.html"
+  src-url: "https://myblace.one/"
+  src:
+  cat: a
+
+- image: "other/xp"
+  alt: "xp window decorations button"
+  smooth: y
+  anim: y
+  astyle: "cursor: not-allowed;"
+  lnk-url: "https://%25%33%30%33%30/"
+  src: z
+  cat: a
+
+- image: "brands/yandex"
+  alt: "Yandex / Яндекс / Яndex button"
+  smooth: y
+  title: "actually genuinely really good reverse images search - much better than google, often better than tineye"
+  lnk-url: "https://yandex.com/images/"
+  src-url: "https://capstasher.neocities.org/88x31collection-page14"
+  src:
+  cat: a
+
+#===============================================================================
+
+- image: "brands/archive"
+  alt: "archive.org - preserve history button"
+  anim: y
+  title: ""
+  lnk-url: "http://blog.archive.org/2015/02/11/locking-the-web-open-a-call-for-a-distributed-web/"
+  ins-url: "https://bytemoth.neocities.org/88s/e-ia"
+  src: s
+  cat: m
+
+- image: "taskbar/emulation"
+  alt: "emulation now! button"
+  smooth: y
+  src: s
+  cat: m
+
+- image: "other/jack"
+  alt: "best heard through a 3.5mm jack button"
+  smooth: y
+  anim: y
+  src: u
+  cat: mf
+
+- image: "other/rainbow"
+  alt: "lgbt rainbow button"
+  src: z
+  cat: m
+
+- image: "music/licence-red"
+  alt: "ppl/prs licensed to play recorded music button, but red"
+  smooth: y
+  anim: y
+  src-url: "/stadt/assets/images/buttons/music/licence.ase"
+  src: z
+  cat: m
+
+- image: "other/mobiles"
+  alt: "not mobile friendly button"
+  src: u
+  cat: m
+
+- image: "brands/nowebp"
+  alt: "no webp, just use png button"
+  anim: y
+  lnk-url: "https://neon-tactical-waffle.tumblr.com/post/694565411253010432/"
+  src: u
+  cat: m
+
+- image: "other/piracy"
+  alt: "piracy now button"
+  smooth: y
+  lnk-url: "/stadt/thoughts#piracy"
+  src: s
+  cat: m
+
+- image: "taskbar/seed"
+  alt: "sharing is caring; seed your torrents button"
+  anim: y
+  title: ""
+  lnk-url: ""
+  src-url: ""
+  src: s
+  cat: m
+
+- image: "taskbar/target-blank"
+  alt: "anti 'target=&quot;_blank&quot;' button"
+  anim: y
+  title: "if i wanted a new tab, i'd middle-click!
+          (if you want to escape an iframe, use target='_top')"
+  src: z
+  cat: m
+
+- image: "taskbar/web3"
+  alt: "say no to web3 button"
+  anim: y
+  lnk-url: "https://yesterweb.org/no-to-web3/"
+  ins-url: "https://yesterweb.org/no-to-web3/"
+  src: s
+  cat: m
+
+- image: "taskbar/web-pi"
+  alt: "web π certified"
+  smooth: y
+  lnk-url: "http://web3.14159.annwfn.net/"
+  src-url: "http://web3.14159.annwfn.net/"
+  src: v
+  cat: m
+
+#=============================== GAMES =========================================
+
+- image: "am2r"
+  alt: "another metroid 2 remake button"
+  smooth:
+  anim: y
+  lnk-url: "https://metroid2remake.blogspot.com/"
+  src-url: "https://drakul78.neocities.org/links"
+  src:
+  cat: g
+
+- image: "b-side"
+  alt: "time to play B-SIDES (celeste) button"
+  anim: y
+  lnk-url: "https://www.celestegame.com/"
+  src: s
+  cat: g
+
+- image: "../brands/gog"
+  alt: "gog.com (good old games) button"
+  smooth: y
+  lnk-url: "https://www.gog.com/"
+  src-url: "https://drakul78.neocities.org/links"
+  src:
+  cat: g
+
+- image: "../brands/gog2"
+  alt: "drm-free pc games gog.com button"
+  lnk-url: "https://www.gog.com/"
+  src-url: "https://bytemoth.neocities.org/88s/"
+  src:
+  cat: g
+
+- image: "half-life"
+  alt: "half-life button"
+  smooth: y
+  lnk-url: "https://www.half-life.com/en/halflife/"
+  src-url: "https://drakul78.neocities.org/links"
+  src:
+  cat: g
+
+- image: "hominid"
+  alt: "alien hominid button"
+  smooth: y
+  anim: y
+  lnk-url: "https://www.alienhominid.com/"
+  src-url: "https://drakul78.neocities.org/links"
+  src:
+  cat: g
+
+- image: "met-const"
+  alt: "metroid construction button"
+  lnk-url: "https://metroidconstruction.com/"
+  src-url: "https://drakul78.neocities.org/links"
+  src:
+  cat: g
+
+- image: "newgrounds"
+  alt: "newgrounds.com button"
+  lnk-url: "https://www.newgrounds.com/"
+  src-url: "https://drakul78.neocities.org/links"
+  src:
+  cat: g
+
+- image: "../brands/steam"
+  alt: "play with steam button"
+  lnk-url: "https://store.steampowered.com/uiupdate/"
+  src-url: "stadt/assets/images/buttons/taskbar/zeus-steam.ase"
+  ins-url: "stadt/assets/images/buttons/taskbar/steam-old"
+  src: z
+  cat: g
+
+- image: "../other/still-you"
+  alt: "despite everything, it's still you (undertale) button"
+  anim: y
+  lnk-url: "https://undertale.com/"
+  src: s
+  cat: g
+
+- image: "sven-coop"
+  alt: "sven coop button"
+  smooth: y
+  anim: y
+  lnk-url: "http://svencoop.com/"
+  src-url: "http://svencoop.com/"
+  src: v
+  cat: g
+
+#=============================== BRANDS ========================================
+
+- image: "7z"
+  alt: "get free 7-Zip button"
+  smooth: y
+  anim: y
+  lnk-url: "https://sevenzip.sourceforge.io/logos.html"
+  src-url: "https://sevenzip.sourceforge.io/logos.html"
+  src: v
+  cat: b
+
+- image: "apngasm"
+  alt: "optimised with apng assembler button"
+  lnk-url: "http://apngasm.sourceforge.net/"
+  src: s
+  cat: b
+
+- image: "aseprite"
+  alt: "aseprite film logo button"
+  anim: y
+  lnk-url: "https://www.aseprite.org/"
+  src: z
+  cat: b
+
+- image: "ase-old-logo"
+  alt: "aseprite old logo button"
+  anim: y
+  lnk-url: "https://www.aseprite.org/"
+  src: z
+  cat: b
+
+- image: "cinnamon"
+  alt: "linux mint cinnamon button"
+  lnk-url: "https://projects.linuxmint.com/cinnamon/"
+  src: s
+  cat: b
+
+- image: "chromium"
+  alt: "ie/chrome/brave logos captioned 'same shit, different arsehole'"
+  smooth: y
+  lnk-url: "https://www.mozilla.org/en-GB/firefox/"
+  ins-url: "https://capstasher.neocities.org/88x31Buttons/chrome%20(copy%201).gif"
+  src: s
+  cat: b
+
+- image: "ddg"
+  alt: "duckduckgo: always use protection"
+  anim: y
+  lnk-url: "https://ddg.gg"
+  src: z
+  cat: b
+
+- image: "debian"
+  alt: "debian gnu/linux button"
+  smooth: y
+  lnk-url: "https://www.debian.org/"
+  src-url: "https://www.debian.org/logos/"
+  src: v
+  cat: b
+
+- image: "discord"
+  alt: "discord button"
+  smooth: y
+  lnk-url: "https://discord.com/"
+  src: z
+  cat: b
+
+- image: "firefox"
+  alt: "mozilla now button"
+  smooth: y
+  anim: y
+  lnk-url: "http://toastytech.com/good/ffbuttons.html"
+  src-url: "https://capstasher.neocities.org/88x31collection-page8.html"
+  src:
+  cat: b
+
+- image: "fedora"
+  alt: "powered by fedora button"
+  smooth: y
+  lnk-url: "https://fedoraproject.org"
+  src-url: "https://capstasher.neocities.org/88x31collection-page4"
+  src:
+  cat: b
+
+  lnk-url: "https://github.com/"
+  alt: "github button"
+  smooth: y
+- image: "github"
+  src: z
+  cat: b
+
+- image: "gh-pages"
+  alt: "microsoft frontpage style button, saying 'GithubPages'"
+  smooth: y
+  anim: y
+  lnk-url: "https://pages.github.com/"
+  ins-url: "https://64.media.tumblr.com/7973fa2f2d10f25506d1f2d099c2385b/eb9f8ba2603e4564-f7/s100x200/b387c1108800d03f91b375cb78063d31d713ee87.gifv"
+  src: s
+  cat: b
+
+- image: "gh-pages-bo"
+  alt: "microsoft backoffice style button, saying 'GithubPages'"
+  smooth: y
+  lnk-url: "https://pages.github.com/"
+  src: z
+  cat: b
+
+- image: "gh-pages-old"
+  alt: "old and kind of crappy github pages button"
+  lnk-url: "https://pages.github.com/"
+  src: z
+  cat: b
+
+- image: "gimp"
+  alt: "gimp - free! button"
+  smooth: y
+  lnk-url: "https://www.gimp.org/"
+  src-url: "https://web.archive.org/web/20060705113723/http://www.gimp.org/about/linking.html"
+  src: v
+  cat: b
+
+- image: "inkscape"
+  alt: "inkscape 'Draw Freely.' button"
+  smooth: y
+  lnk-url: "https://inkscape.org/"
+  ins-url: "https://inkscape.org/about/branding/"
+  src: z
+  ext: svg
+  res: inf
+  cat: b
+
+- image: "irfanview"
+  alt: "irfanview image viewer button"
+  smooth: y
+  lnk-url: "https://www.irfanview.com/"
+  src: u
+  cat: b
+
+- image: "jjj-now"
+  alt: "triple j now button"
+  anim: y
+  lnk-url: "https://www.abc.net.au/triplej/"
+  src: u
+  cat: b
+
+- image: "kde-now"
+  alt: "kde now button"
+  smooth: y
+  anim: y
+  lnk-url: "ttps://web.archive.org/web/19991006230258im_/http://www.kde.org/img/logos/knlogo1.gif"
+  ins-url: "https://web.archive.org/web/19991012194141/http://www.kde.org/"
+  src: z
+  cat: b
+
+- image: "konqi"
+  alt: "konqi (kde mascot) button"
+  smooth: y
+  lnk-url: "https://kde.org/"
+  src: s
+  cat: b
+
+- image: "kool-de"
+  alt: "kool desktop environment button"
+  smooth: y
+  anim: y
+  lnk-url: "https://kde.org/"
+  src: s
+  cat: b
+
+- image: "libresprite"
+  alt: "libresprite: it's aseprite, but free button"
+  anim: y
+  lnk-url: "https://libresprite.github.io/"
+  src: z
+  cat: b
+
+- image: "matrix"
+  anim: y
+  alt: "matrix messenger button"
+  lnk-url: "https://matrix.org/"
+  src: z
+  cat: b
+
+- image: "neocities"
+  alt: "meteors netscape button, saying neocities.org with paws"
+  smooth: y
+  anim: y
+  lnk-url: "https://neocities.org/"
+  ins-url: "https://web.archive.org/web/19961020015116/http://www3.netscape.com/"
+  src: s
+  cat: b
+
+- image: "neocities-cat"
+  alt: "netscape button saying neocities.org with cat logo and paws"
+  smooth: y
+  anim: y
+  lnk-url: "https://neocities.org/"
+  ins-url: "https://web.archive.org/web/19961020015116/http://www3.netscape.com/"
+  src-url: "/stadt/assets/images/buttons/neocities.ase"
+  src: z
+  cat: b
+
+- image: "neocities-spin"
+  lnk-url: "https://neocities.org/"
+  anim: y
+  alt: "various colours of neocities buttons, rotating"
+  ins-url: "https://purplehello98.neocities.org/buttons/"
+  src: s
+  cat: b
+
+- image: "nexus-mods"
+  alt: "nexus mods button"
+  smooth: y
+  lnk-url: "https://nexusmods.com/"
+  src: z
+  cat: b
+
+- image: "notepadpp"
+  lnk-url: "https://notepad-plus-plus.org/"
+  alt: "notepad++ button"
+  src-url: "https://drakul78.neocities.org/links"
+  src:
+  cat: b
+
+- image: "paint"
+  alt: "paint.net button"
+  smooth: y
+  lnk-url: "https://getpaint.net/"
+  src:
+  src-url: "https://drakul78.neocities.org/links"
+  cat: b
+
+- image: "palemoon"
+  alt: "pale moon browser button"
+  smooth: y
+  lnk-url: "https://www.palemoon.org/"
+  src:
+  src-url: "https://lakestheguy.neocities.org/aboutme"
+  cat: b
+
+- image: "pixelorama"
+  alt: "drawn with pixelorama button"
+  anim: y
+  lnk-url: "https://orama-interactive.itch.io/pixelorama"
+  src: s
+  cat: b
+
+- image: "pixelorama-old"
+  alt: "pixelorama free & open source sprite editor button"
+  anim: y
+  lnk-url: "https://orama-interactive.itch.io/pixelorama"
+  src-url: "/stadt/assets/images/buttons/pixelorama.ase"
+  src: z
+  cat: b
+
+- image: "reddit"
+  lnk-url: "https://reddit.com"
+  alt: "reddit button"
+  src: z
+  cat: b
+
+- image: "scp"
+  alt: "secure. contain. protect. button"
+  smooth: y
+  lnk-url: "https://scp-wiki.wikidot.com/"
+  src-url: "https://bytemoth.neocities.org/88s/"
+  src:
+  cat: b
+
+- image: "siduction"
+  alt: "siduction (debian) gnu/linux button"
+  smooth: y
+  lnk-url: "https://www.siduction.org/"
+  src: z
+  cat: b
+
+- image: "sublime"
+  alt: "sublime text editor button"
+  lnk-url: "https://www.sublimetext.com/"
+  ins-url: "http://www.notepad.org/logo.htm"
+  src: z
+  cat: b
+
+- image: "sun"
+  alt: "sun microsystems button"
+  smooth: y
+  lnk-url: "http://toastytech.com/guis/sol.html"
+  src-url: "https://bytemoth.neocities.org/88s/"
+  src:
+  cat: b
+
+- image: "telegram"
+  alt: "telegram button"
+  smooth: y
+  lnk-url: "https://web.archive.org/web/20250820160553/https://old.reddit.com/r/Telegram/comments/wuw996/pavel_durov_updates_on_telegram_imagine_how/ilc0lwh/"
+  src: s
+  cat: b
+
+- image: "telegram-alt"
+  alt: "telegram button"
+  smooth: y
+  lnk-url: "https://web.archive.org/web/20250820160553/https://old.reddit.com/r/Telegram/comments/wuw996/pavel_durov_updates_on_telegram_imagine_how/ilc0lwh/"
+  src-url: "/stadt/assets/images/buttons/taskbar/telegram.ase"
+  src: z
+  cat: b
+
+- image: "telegram-old"
+  alt: "old telegram button with slogan"
+  smooth: y
+  lnk-url: "https://web.archive.org/web/20250820160553/https://old.reddit.com/r/Telegram/comments/wuw996/pavel_durov_updates_on_telegram_imagine_how/ilc0lwh/"
+  src-url: "/stadt/assets/images/buttons/taskbar/telegram.ase"
+  src: z
+  cat: b
+
+- image: "tumblr"
+  alt: "tumblr button"
+  lnk-url: "https://zeusofthecrows.tumblr.com"
+  ins-url: "https://www.tumblr.com/blog/view/azuremist/685627448990351360/"
+  src: z
+  cat: b
+
+- image: "ublock"
+  alt: "µblock origin button"
+  smooth: y
+  lnk-url: "https://github.com/gorhill/uBlock"
+  src-url: "https://drakul78.neocities.org/links"
+  src:
+  cat: b
+
+- image: "wikipedia"
+  alt: "википедия button"
+  smooth: y
+  lnk-url: "https://nostalgia.wikipedia.org/"
+  src: u
+  cat: b
+
+- image: "winamp"
+  smooth: y
+  alt: "winamp button"
+  lnk-url: "https://winamp.com/"
+  src-url: "https://loa2k.neocities.org/"
+  src:
+  cat: b
+
+- image: "win98"
+  alt: "made with windows 98 button"
+  smooth: y
+  lnk-url: "https://dosbox-x.com/wiki/Guide%3AInstalling-Windows-98"
+  src: u
+  cat: b
+
+- image: "xenia"
+  alt: "xenia the fox linux button"
+  lnk-url: "https://xenia-linux-site.glitch.me/"
+  src-url: "https://voltbun.neocities.org/"
+  src: v
+  cat: b
+
+- image: "xkcd"
+  alt: "xkcd button"
+  smooth: y
+  lnk-url: "https://xkcd.com/"
+  src-url: "https://drakul78.neocities.org/links"
+  src:
+  cat: b
+
+  #============================= LEMMY =========================================
+
+- image: "lemmy-old"
+  alt: "lemmy button (join-lemmy.org)"
+  src: z
+  href: "//zeusofthecrows.github.io/stadt/assets/images/buttons/lemmy.ase"
+  cat: l
+
+- image: "lemmy"
+  alt: "lemmy button (join-lemmy.org)"
+  title: "i couldn't really decide which style i prefered of these two"
+  lnk-url: "https://lemm.ee/u/Zeus@lemmy.world"
+  src: s
+
+- image: "other/macintosh"
+  alt: "macintosh >128k is extravagant button"
+  smooth: y
+  anim: y
+  title: "it only says 'zeus' as i couldn't think of anything else, feel free to remove it"
+  src: s
+  cat: i

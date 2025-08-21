@@ -181,6 +181,12 @@
   src: z
   ins-url: "https://aestheticsmut.tumblr.com/post/186778973059/"
 
+- image: glass
+  smooth: y
+  alt: "i support glass effects stamp"
+  src-url: "https://lakestheguy.neocities.org/aboutme"
+  src:
+
 - image: going
   smooth: y
   alt: "wireframe lamborghini countach synthwave stamp"
@@ -374,11 +380,6 @@
   src-url: "https://www.deviantart.com/thecandycoating/art/TOTALLY-RAD-stamp-648713812"
   ins-url: "https://www.mobygames.com/game/22106/totally-rad/screenshots/nes/160026/"
 
-- image: radiohead
-  smooth: y
-  alt: "OK Computer"
-  src: z
-
 - image: radios
   smooth: y
   anim: y
@@ -386,18 +387,18 @@
   src: v
   src-url: "https://www.deviantart.com/babykttn/art/married-to-the-music-672434816"
 
-- image: portal-right
-  smooth: y
-  alt: "right half of portal logo, protruding through a portal"
-  src: v
-  src-url: "https://www.deviantart.com/sparklum/art/Portal-Stamp-Orange-209870758"
-
 - image: reality-off
   smooth: y
   anim: y
   alt: "80s-esque grid stamp"
   src: v
   src-url: "https://www.deviantart.com/babykttn/art/switching-off-672436199"
+
+- image: portal-right
+  smooth: y
+  alt: "right half of portal logo, protruding through a portal"
+  src: v
+  src-url: "https://www.deviantart.com/sparklum/art/Portal-Stamp-Orange-209870758"
 
 - image: still-you
   anim: y

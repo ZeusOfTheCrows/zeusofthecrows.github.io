@@ -52,9 +52,74 @@
       alt: "&quot;the sun is a deadly laser&quot; stamp"
 
     - image:
-      source: stamps/waste.png
+      source: stamps/glass.png
+      type: stamp-99x56
+      alt: "i support glass effects stamp"
+
+    - image:
+      source: buttons/other/vhs.png
       type: btn-88x31
       alt: "vhs button"
+
+    - image:
+      source: buttons/brands/gog2.png
+      type: btn-88x31
+      alt: "gog button"
+
+    - image:
+      source: buttons/brands/palemoon.png
+      type: btn-88x31
+      alt: "pale moon button"
+
+    - image:
+      source: buttons/brands/scp.png
+      type: btn-88x31
+      alt: "scp button"
+
+    - image:
+      source: buttons/brands/sun.png
+      type: btn-88x31
+      alt: "sun microsystems button"
+
+    - image:
+      source: buttons/brands/winamp.png
+      type: btn-88x31
+      alt: "winamp button"
+
+    - image:
+      source: buttons/games/castleofdracula.png
+      type: btn-88x31
+      alt: "castle of dracula button"
+
+    - image:
+      source: buttons/games/romhack-plaza.png
+      type: btn-88x31
+      alt: "romhack plaza button"
+
+    - image:
+      source: buttons/music/18-carat-affair.png
+      type: btn-88x31
+      alt: "18 carat affair button"
+
+    - image:
+      source: buttons/music/darksleep.png
+      type: btn-88x31
+      alt: "darksleep button"
+
+    - image:
+      source: buttons/music/equip.png
+      type: btn-88x31
+      alt: "equip button"
+
+    - image:
+      source: buttons/music/lost-angles.png
+      type: btn-88x31
+      alt: "lost angles button"
+
+    - image:
+      source: buttons/music/my-pet-flamingo.png
+      type: btn-88x31
+      alt: "my pet flamingo button"
 
 - content: new fanlisting codes have been added
   subtype: images

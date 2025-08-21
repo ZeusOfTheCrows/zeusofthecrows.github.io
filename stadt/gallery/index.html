@@ -173,6 +173,14 @@ znotes: maybe abstract all these out to layout + grid-windows.css?
 			</summary>
 			<ul class="img-grid hover-zoom img-capts">
 				<li><figure>
+					<a href="https://loa2k.neocities.org/">
+						<img src="/stadt/assets/images/buttons/bookmarks/buttons/loa2k.png"
+							alt="loa2k" class="btn-88x31"
+							title="some /really/ nice synthwave/electronica buttons" />
+					</a>
+					<figcaption class="img-caption">88by31</figcaption>
+				</figure></li>
+				<li><figure>
 					<a href="https://88by31.neocities.org/">
 						<img src="/stadt/assets/images/buttons/bookmarks/buttons/88by31.png"
 							alt="88by31" class="btn-88x31"
@@ -222,7 +230,7 @@ znotes: maybe abstract all these out to layout + grid-windows.css?
 				</figure></li>
 				<li><figure>
 					<a href="https://cyber.dabamos.de/88x31/">
-						<img src="/stadt/assets/images/buttons/bookmarks/buttons/cyber.png"
+						<img src="/stadt/assets/images/buttons/bookmarks/buttons/dabamos.png"
 							alt="the cyber vanguard" class="btn-88x31"
 							title="more than 3'500 classic buttons" />
 					</a>
@@ -306,9 +314,9 @@ znotes: maybe abstract all these out to layout + grid-windows.css?
 		<!-- <h2 style="letter-spacing: -4px">00&nbsp;&nbsp;x&nbsp;&nbsp;00</h2> -->
 		<ul class="img-grid hover-zoom img-capts">
 			{% for item in site.data.gallery-buttons %}
-			{% if item.image and item.res == "inf" %}
+			{% if item.image and item.res == "inf" and item.cat == nil %}
 			<li><figure>
-				{% if item.lnk-url != nil %}
+				{% if item.lnk-url != nil%}
 				<a href="{{ item.lnk-url }}">
 				{% else %}
 				<a>
@@ -348,27 +356,28 @@ znotes: maybe abstract all these out to layout + grid-windows.css?
 		<h3>Æsthetic</h3>
 		<ul class="img-grid hover-zoom img-capts">
 			{% for item in site.data.gallery-buttons %}
-			{% if item.image and item.res == nil and item.cat == "a" %}
+			<!-- i have NO idea why this has to be "!=" rather than "=="‽ maybe a bug‽ -->
+			{% if item.image and item.cat == "a" or item.cat == "u"  %}
 			<li><figure>
-				{% if item.lnk-url != nil %}
-				<a href="{{ item.lnk-url }}">
-				{% else %}
-				<a>
-				{% endif %}
-				<img src="/stadt/assets/images/buttons/{{ item.image }}.png"
+				<a{% if item.lnk-url != nil %}
+						href="{{ item.lnk-url }}"{% endif %}
+					{% if item.astyle != nil %}
+						style="{{ item.astyle }}"{% endif %}>
+				<img
+						src="/stadt/assets/images/buttons/{% if item.cat == "u"  %}music/{% endif %}{{ item.image }}.{{ item.ext | default: 'png' }}"
 					{% if item.title != nil %}
 					title="{{ item.title }}"
 					{% endif %}
-					class="button-88x31 {% if item.smooth %}smooth-zoom{% endif %}
-						{% if item.anim %}anim{% endif %}"
+					class="btn-88x31 {% if item.smooth == 'y' %}smooth-zoom{% endif %}
+						{% if item.anim == 'y' %}anim{% endif %}"
 					alt="{{ item.alt }}" />
 				<figcaption class="img-caption">
-					{% if item.src-url != nil %}
-					<a class="src {{ item.src }}"
-						href="{{ item.src-url }}"></a>
-					{% elsif item.src == "s" %}
+					{% if item.src == "s" %}
 					<a class="src z"
 						href="/stadt/assets/images/buttons/{{ item.image }}.ase"></a>
+					{% elsif item.src-url != nil %}
+					<a class="src {{ item.src }}"
+						href="{{ item.src-url }}"></a>
 					{% else %}
 					<a class="src {{ item.src }}"></a>
 					{% endif %}
@@ -385,151 +394,6 @@ znotes: maybe abstract all these out to layout + grid-windows.css?
 			{% endif %}
 			{% endfor %}
 
-			<li><figure>
-				<a>
-					<img src="/stadt/assets/images/buttons/page-info/1080.png"
-						class="btn-88x31 smooth-zoom"
-						alt="best viewed 1920×1080 fullHD button"
-						data-img-src="unknown" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"
-						href="//zeusofthecrows.github.io/stadt/assets/images/buttons/page-info/1080.ase"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://en.wikipedia.org/wiki/Year_2038_problem">
-					<img src="/stadt/assets/images/buttons/taskbar/2038.png"
-						class="btn-88x31 smooth-zoom anim"
-						alt="are you ready? year 2038 button" title="the epochalypse is coming"
-						data-img-src="unknown" />
-				</a>
-				<figcaption class="img-caption"><a class="src u"></a></figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://planetphotoshop.com/the-88x31-button-resolution-trick.html">
-					<img src="/stadt/assets/images/buttons/other/action-fx.png"
-						class="btn-88x31 smooth-zoom anim"
-						alt="action fx for photoshop button" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src v"
-						href="https://planetphotoshop.com/the-88x31-button-resolution-trick.html"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="http://www.libpng.org/pub/png/">
-					<img src="/stadt/assets/images/buttons/brands/apng.png"
-						class="btn-88x31 anim"
-						alt="[animated] png now button"
-						data-img-insp="http://www.libpng.org/pub/png/" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"
-						href="//zeusofthecrows.github.io/stadt/assets/images/buttons/brands/apng.ase"></a>
-					{{ page.sep }}
-					<a class="i" href="http://www.libpng.org/pub/png/"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://bellringer.neocities.org/">
-					<img src="/stadt/assets/images/buttons/other/bellringer.png"
-						class="btn-88x31 smooth-zoom anim"
-						alt="bellringer.neocities.org button" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src v"
-						href="https://bellringer.neocities.org/"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a>
-					<img src="/stadt/assets/images/buttons/taskbar/button.png"
-						class="btn-88x31 anim"
-						alt="say no to missing img links, get a button Today!"
-						data-img-src="~zeus" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"
-						href="//zeusofthecrows.github.io/stadt/assets/images/buttons/taskbar/button.ase"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a>
-					<img src="/stadt/assets/images/buttons/taskbar/button-old.png"
-					class="btn-88x31 anim"
-						alt="say no to broken img links"
-						data-img-src="~zeus" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"
-						href="//zeusofthecrows.github.io/stadt/assets/images/buttons/taskbar/button.ase"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a>
-					<img src="/stadt/assets/images/buttons/music/cassette.png"
-						class="btn-88x31 anim"
-						alt="sounds better on cassette[r] button" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://chapelofthebeast.neocities.org/">
-					<img src="/stadt/assets/images/buttons/other/chapel.png"
-						class="btn-88x31 anim"
-						alt="chapel of the beast" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src v" href="https://chapelofthebeast.neocities.org/"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a>
-					<img src="/stadt/assets/images/buttons/other/cnstr-14seg.png"
-						class="btn-88x31 smooth-zoom anim"
-						alt="under construction button - 14 segment font" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a>
-					<img src="/stadt/assets/images/buttons/other/cnstr-dotmatrix.png"
-						class="btn-88x31 anim"
-						alt="under construction button - dot matrix font" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://ikewise.neocities.org/2018-05-19_-_return.htm">
-					<img src="/stadt/assets/images/buttons/taskbar/code-run.png"
-						class="btn-88x31"
-						alt="pro- code & run" title="just try to stop me"
-						data-img-src="https://anlucas.neocities.org/" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src v" href="https://anlucas.neocities.org/"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://colemak.org/">
-					<img src="/stadt/assets/images/buttons/taskbar/colemak.png"
-						class="btn-88x31 anim"
-						alt="i use colemak (wide) button" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"></a>
-					{{ page.sep }}
-					<a class="i"
-						href="https://win98icons.alexmeub.com/icons/png/keyboard-4.png"></a>
-				</figcaption>
-			</figure></li>
 			<!--<li><figure> <!-- ZTODO: FIXME
 				<iframe alt="conway's game of life button" class="btn-88x31 anim"
 					src="https://lavender-but-bread.neocities.org/buttons/conways-button.html"
@@ -552,1221 +416,136 @@ znotes: maybe abstract all these out to layout + grid-windows.css?
 						href="https://win98icons.alexmeub.com/icons/png/keyboard-4.png"></a>
 				</figcaption>
 			</figure></li>-->
-			<li><figure>
-				<a>
-					<img src="/stadt/assets/images/buttons/page-info/cookies.png" class="btn-88x31"
-						alt="absolutely no cookies button (and very few biscuits)" data-img-src="~zeus" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"
-						href="//zeusofthecrows.github.io/stadt/assets/images/buttons/page-info/cookies.ase"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://www.w3.org/Style/CSS/">
-					<img src="/stadt/assets/images/buttons/taskbar/css.png" class="btn-88x31"
-						data-img-src="~zeus" data-img-insp="https://www.w3.org/Style/CSS/Buttons/Menu"
-						alt="css is difficult button" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"
-						href="//zeusofthecrows.github.io/stadt/assets/images/buttons/taskbar/css.ase"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://web.archive.org/web/20000815063745/http://old.deskmod.com/">
-					<img src="/stadt/assets/images/buttons/other/deskmod.png"
-						class="btn-88x31 smooth-zoom"
-						alt="deskmod button" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src"
-						href="https://web.archive.org/web/20001009050236/http://www.deviantart.com/"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://web.archive.org/web/20000511010625/http://deskmod.com/">
-					<img src="/stadt/assets/images/buttons/other/deskmod.jpg"
-						class="btn-88x31 smooth-zoom"
-						alt="deskmod button" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src v"
-						href="https://web.archive.org/web/20000815063745/http://old.deskmod.com/"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://feelingmachine.moe/">
-					<img src="/stadt/assets/images/buttons/other/feeling-machine.png"
-						class="btn-88x31 smooth-zoom"
-						alt="feelingmachine.moe button" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src v"
-						href="https://feelingmachine.moe/"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a>
-					<img src="/stadt/assets/images/buttons/brands/email.png"
-						class="btn-88x31 smooth-zoom anim"
-						alt="animated email button"
-						data-img-source="~zeus" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"
-						href="//zeusofthecrows.github.io/stadt/assets/images/buttons/brands/email.ase"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a>
-					<img src="/stadt/assets/images/buttons/brands/email-bm.png"
-						class="btn-88x31 smooth-zoom"
-						alt="email button"
-						data-img-source="https://bytemoth.neocities.org/88s/" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src" href="https://bytemoth.neocities.org/88s/"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://zeusofthecrows.ishoutbox.com/">
-					<img src="/stadt/assets/images/buttons/other/guestbook.png"
-						class="btn-88x31 smooth-zoom anim"
-						alt="windows xp style guestbook button" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src" href="https://cristianerasmus.neocities.org/"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a>
-					<img src="/stadt/assets/images/buttons/page-info/javascript.png" class="btn-88x31"
-						alt="proudly no javascript button"
-						data-img-src="~zeus" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"
-						href="//zeusofthecrows.github.io/stadt/assets/images/buttons/brands/javascript.ase"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a>
-					<img src="/stadt/assets/images/buttons/page-info/js-warning.png" class="btn-88x31"
-						alt="warning: page contains javascript button"
-						data-img-src="~zeus" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a>
-					<img src="/stadt/assets/images/buttons/music/licence.png" class="btn-88x31"
-						alt="ppl/prs licensed to play recorded music button" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"
-						href="//zeusofthecrows.github.io/stadt/assets/images/buttons/music/licence.ase"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a>
-					<img src="/stadt/assets/images/buttons/other/macintosh.png"
-						class="btn-88x31 smooth-zoom anim"
-						alt="macintosh >128k is extravagant button"
-						title="it only says 'zeus' as i couldn't think of anything else,
-						feel free to remove it" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"
-						href="//zeusofthecrows.github.io/stadt/assets/images/buttons/other/macintosh.ase"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a>
-				<img class="btn-88x31" src="/stadt/assets/images/buttons/other/mars.png"
-					alt="mars art deco button" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a>
-					<img src="/stadt/assets/images/buttons/bookmarks/missingno.png"
-						class="btn-88x31 anim"
-						alt="this site has no button" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"
-						href="//zeusofthecrows.github.io/stadt/assets/images/buttons/bookmarks/missingno.ase"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://newlambda.neocities.org/">
-					<img src="/stadt/assets/images/buttons/bookmarks/new-lambda.png"
-						class="btn-88x31 smooth-zoom anim"
-						alt="new lambda research facility" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src v"
-						href="https://newlambda.neocities.org/"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a>
-					<img src="/stadt/assets/images/buttons/taskbar/new-tab.png"
-						class="btn-88x31 smooth-zoom"
-						alt="please do not force this button to be lonely" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a>
-					<img src="/stadt/assets/images/buttons/other/mspaint.png"
-						class="btn-88x31"
-						alt="Long Live MSPaint button" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"></a>
-					{{ page.sep }}
-					<a class="i" href="https://feelingmachine.moe/"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://nokia64.neocities.org/">
-					<img src="/stadt/assets/images/buttons/other/nokia64.png"
-					class="btn-88x31 smooth-zoom"
-						data-img-src="https://newlambda.neocities.org/"
-						alt="nokia64" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src"
-						href="https://capstasher.neocities.org/88x31collection-page9.html"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://web.archive.org/web/20080509082311/http://www.goldshell.com/pedit/pindex.htm">
-					<img src="/stadt/assets/images/buttons/other/pedit.png"
-						class="btn-88x31 smooth-zoom anim"
-						data-img-src="unknown" alt="pedit: program editor button" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src u"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://rainy.gay/">
-					<img src="/stadt/assets/images/buttons/other/rainy.png"
-						class="btn-88x31 smooth-zoom"
-						alt="- cinnabar rain -" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src v" href="https://rainy.gay"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a>
-					<img src="/stadt/assets/images/buttons/taskbar/rating.png"
-						class="btn-88x31"
-						alt="suitable only for persons over 18 years" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"
-						href="//zeusofthecrows.github.io/stadt/assets/images/buttons/taskbar/web3.ase"></a>
-					{{ page.sep }}
-					<a class="i" href="https://www.deviantart.com/levelinfinitum/art/BBFC-18-Certification-card-163679609"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a>
-					<img src="/stadt/assets/images/buttons/other/planet-b.png"
-						class="btn-88x31 smooth-zoom anim"
-						alt="there is no planet b button"
-						title="also available in stamp form" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"
-						href="//zeusofthecrows.github.io/stadt/assets/images/buttons/other/planet-b.ase "></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a>
-					<img class="btn-88x31" src="/stadt/assets/images/buttons/other/protest.png"
-						alt="от бизнеса с любов button"
-						title="this was going on when i was in bulgaria, and the sign design was so cool" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a>
-					<img src="/stadt/assets/images/buttons/other/rewind.png"
-						class="btn-88x31 smooth-zoom anim"
-						alt="windows xp vhs rewind button"
-						title="also available in stamp form" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://www.fontstruct.com/fontstructions/show/1779988/zhowfrakt-eye-fs">
-					<img class="btn-88x31" src="/stadt/assets/images/buttons/other/scheisskopf.png"
-						alt="red button with blackletter pixel font saying 'Scheißkopf'"
-						title="not sponsored, i just liked the font" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="mailto:zeusofthecrows+stadt(a)gmail.com?body=look%20at%20this%20cool%20site%20i%20found%3A%0D%0A%0D%0Ahttps%3A%2F%2Fzeusofthecrows.github.io%2Fstadt%2F">
-					<img src="/stadt/assets/images/buttons/other/like-this-page.png"
-						class="btn-88x31 smooth-zoom anim"
-						alt="like this page? share it! button" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src v" href="https://cristianerasmus.neocities.org/"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a>
-					<img src="/stadt/assets/images/buttons/taskbar/skeuo.png"
-						class="btn-88x31 anim"
-						alt="skeuomorphism now button" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"
-						href="//zeusofthecrows.github.io/stadt/assets/images/buttons/other/skeuo.ase"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a>
-					<img src="/stadt/assets/images/buttons/other/soggy.png"
-						class="btn-88x31" alt="soggy button" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src v"
-						href="https://circa-1997.neocities.org/#buttonstuff"></a>
-					</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="http://sdf.org/">
-					<img src="/stadt/assets/images/buttons/other/sdf.png"
-						class="btn-88x31 smooth-zoom"
-						alt="sdf pubnix button" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src"
-						href="http://jgarza.sdf.org/"></a>
-					</figcaption>
-			</figure></li>
-			<li><figure>
-				<a>
-					<img src="/stadt/assets/images/buttons/other/still-you.png"
-						class="btn-88x31 anim"
-						alt="despite everything, it's still you (undertale) button" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"
-						href="//zeusofthecrows.github.io/stadt/assets/images/buttons/other/still-you.ase"></a>
-					</figcaption>
-			</figure></li>
-			<li><figure>
-				<a>
-					<img src="/stadt/assets/images/buttons/taskbar/svg-ns-static.svg"
-						class="btn-88x31"
-						alt="non-animated svg button" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="http://flagofearth.org/original.html">
-					<img src="/stadt/assets/images/buttons/other/terra.png"
-						class="btn-88x31 anim"
-						alt="citizen of terra (james cadle earth flag) button" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"
-						href="//zeusofthecrows.github.io/stadt/assets/images/buttons/brands/email.ase"></a>
-					{{ page.sep }}
-					<a class="i" href="http://flagofearth.org/original.html"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://teethinvitro.neocities.org/">
-					<img src="/stadt/assets/images/buttons/other/teeth.png"
-						class="btn-88x31 smooth-zoom anim"
-						alt="teeth in vitro button" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src v"
-						href="https://teethinvitro.neocities.org/"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a>
-					<img src="/stadt/assets/images/buttons/other/train.png"
-						class="btn-88x31 anim" alt="london underground carriage button" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src u"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a>
-					<img src="/stadt/assets/images/buttons/page-info/truecolour.png"
-						class="btn-88x31 anim"
-						alt="best: 24-bit truecolour" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"
-						href="//zeusofthecrows.github.io/stadt/assets/images/buttons/page-info/truecolour.ase"></a>
-					{{ page.sep }}
-					<a class="i" href="https://kangworlds.neocities.org/img/hicolor.gif"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a>
-					<img src="/stadt/assets/images/buttons/page-info/truecolour-solaris.png"
-						class="btn-88x31 smooth-zoom anim"
-						alt="best: 24-bit truecolour (solaris colourscheme)" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"
-						href="//zeusofthecrows.github.io/stadt/assets/images/buttons/page-info/truecolour.ase"></a>
-					{{ page.sep }}
-					<a class="i" href="https://kangworlds.neocities.org/img/hicolor.gif"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="/418/">
-					<img src="/stadt/assets/images/buttons/other/teapot.png"
-							class="btn-88x31 smooth-zoom"
-							alt="utah teapot now button" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src v"
-						href="https://warpzone.site/extras.htm"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="/418/">
-					<img src="/stadt/assets/images/buttons/other/vhs.png"
-							class="btn-88x31 smooth-zoom"
-							alt="vhs button" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src"
-						href="https://corvidae.digital/graphics/"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://www.axiomverge.com/blog/axiom-verge-comes-to-ps-vita-april-19">
-					<img src="/stadt/assets/images/buttons/other/vita.png"
-						class="btn-88x31" alt="axiom verge on ps vita button"
-						title=":-( – still a good game though" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z" href="//zeusofthecrows.github.io/stadt/assets/images/buttons/taskbar/truecolour.ase"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://voskhod.neocities.org/about.html">
-					<img src="/stadt/assets/images/buttons/other/voskhodscroll.png"
-						class="btn-88x31 smooth-zoom anim" alt="восход" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src v"
-						href="https://voskhod.neocities.org/about.html"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://voskhod.neocities.org/about.html">
-					<img src="/stadt/assets/images/buttons/other/voskhodskelly.png"
-						class="btn-88x31 smooth-zoom anim" alt="восход" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src v"
-						href="https://voskhod.neocities.org/about.html"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="http://info.cern.ch/hypertext/WWW/TheProject.html">
-					<img src="/stadt/assets/images/buttons/other/website.png"
-						class="btn-88x31 smooth-zoom"
-						alt="Website" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src"
-						href="https://myblace.one/"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://%25%33%30%33%30/" style="cursor: not-allowed;">
-					<img src="/stadt/assets/images/buttons/other/xp.png"
-						class="btn-88x31 smooth-zoom" alt="xp window decorations button" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"></a>
-				</figcaption>
-			</figure></li>
 		</ul>
 		</section>
 		<section id="message">
 		<h3>Message</h3>
 		<ul class="img-grid hover-zoom img-capts">
-			<li><figure>
-				<a href="http://blog.archive.org/2015/02/11/locking-the-web-open-a-call-for-a-distributed-web/">
-					<img src="/stadt/assets/images/buttons/brands/archive.png"
-						class="btn-88x31 anim"
-						alt="archive.org - preserve history button" />
-				</a>
+			{% for item in site.data.gallery-buttons %}
+			{% if item.image and item.cat == "m" and item.res == nil %}
+			<li id="{{ item.image | slugify: "ascii" }}"><figure>
+				<a{% if item.lnk-url != nil %}
+						href="{{ item.lnk-url }}"{% endif %}
+					{% if item.astyle != nil %}
+						style="{{ item.astyle }}"{% endif %}>
+				<img src="/stadt/assets/images/buttons/{{ item.image }}.{{ item.ext | default: 'png' }}"
+					{% if item.title != nil %}
+					title="{{ item.title }}"
+					{% endif %}
+					class="btn-88x31 {% if item.smooth == 'y' %}smooth-zoom{% endif %}
+						{% if item.anim == 'y' %}anim{% endif %}"
+					alt="{{ item.alt }}" />
 				<figcaption class="img-caption">
+					{% if item.src == "s" %}
 					<a class="src z"
-						href="//zeusofthecrows.github.io/stadt/assets/images/buttons/brands/archive.ase"></a>
+						href="/stadt/assets/images/buttons/{{ item.image }}.ase"></a>
+					{% elsif item.src-url != nil %}
+					<a class="src {{ item.src }}"
+						href="{{ item.src-url }}"></a>
+					{% else %}
+					<a class="src {{ item.src }}"></a>
+					{% endif %}
+					{% if item.ins-url != nil %}
 					{{ page.sep }}
-					<a class="i" href="https://bytemoth.neocities.org/getlinks/"></a>
+					<a class="i"
+					{% if item.ins-ttl != nil %}
+						title="{{ item.ins-ttl }}"
+					{% endif %}
+						href="{{ item.ins-url }}"></a>
+					{% endif %}
 				</figcaption>
 			</figure></li>
-			<li><figure>
-				<a>
-					<img src="/stadt/assets/images/buttons/taskbar/emulation.png"
-						class="btn-88x31 smooth-zoom"
-						alt="emulation now! button"/>
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"
-					href="//zeusofthecrows.github.io/stadt/assets/images/buttons/taskbar/emulation.ase"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a>
-					<img src="/stadt/assets/images/buttons/other/jack.png"
-						class="btn-88x31 smooth-zoom anim"
-						alt="best heard through a 3.5mm jack button" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src u"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a>
-					<img src="/stadt/assets/images/buttons/other/rainbow.png"
-						class="btn-88x31"
-						alt="lgbt rainbow button" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a>
-					<img src="/stadt/assets/images/buttons/music/licence-red.png"
-						class="btn-88x31"
-						alt="ppl/prs licensed to play recorded music button, but red" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"
-						href="//zeusofthecrows.github.io/stadt/assets/images/buttons/music/licence.ase"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a>
-				<img class="btn-88x31" src="/stadt/assets/images/buttons/other/mobiles.png"
-					alt="not mobile friendly button" data-img-src="unk" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src u"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://neon-tactical-waffle.tumblr.com/post/694565411253010432/">
-					<img src="/stadt/assets/images/buttons/brands/nowebp.png"
-						class="btn-88x31 anim"
-						alt="no webp, just use png button" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src u"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="/stadt/thoughts#piracy">
-					<img src="/stadt/assets/images/buttons/other/piracy.png"
-						class="btn-88x31 smooth-zoom"
-						alt="piracy now button" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"
-						href="//zeusofthecrows.github.io/stadt/assets/images/buttons/other/piracy.ase"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a>
-					<img src="/stadt/assets/images/buttons/taskbar/seed.png"
-						class="btn-88x31 anim"
-						data-img-src="unknown, possibly anlucas?"
-						alt="sharing is caring; seed your torrents button" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src u"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="#">
-					<img src="/stadt/assets/images/buttons/taskbar/target-blank.png"
-						class="btn-88x31 anim"
-						title="if i wanted a new tab, i'd middle-click!
-						(if you want to escape an iframe, use target='_top')"
-						data-img-insp="https://yesterweb.org/no-to-web3/"
-						alt="anti 'target=&quot;_blank&quot;' button" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"
-						href="//zeusofthecrows.github.io/stadt/assets/images/buttons/taskbar/target-blank.ase"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://yesterweb.org/no-to-web3/">
-					<img src="/stadt/assets/images/buttons/taskbar/web3.png"
-						class="btn-88x31 anim"
-						alt="say no to web3 button" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"
-						href="//zeusofthecrows.github.io/stadt/assets/images/buttons/taskbar/web3.ase"></a>
-					{{ page.sep }}
-					<a class="i" href="https://yesterweb.org/no-to-web3/"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="http://web3.14159.annwfn.net/">
-					<img src="/stadt/assets/images/buttons/taskbar/web-pi.png"
-						class="btn-88x31 smooth-zoom"
-						data-img-src="http://web3.14159.annwfn.net/"
-						alt="web π certified" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src v"
-						href="http://web3.14159.annwfn.net/"></a>
-				</figcaption>
-			</figure></li>
+			{% endif %}
+			{% endfor %}
 		</ul>
 		</section>
 		<section id="games">
 		<h3>Games</h3>
 		<ul class="img-grid hover-zoom img-capts">
-			<li><figure>
-				<a href="https://metroid2remake.blogspot.com/">
-					<img src="/stadt/assets/images/buttons/games/am2r.png"
-						class="btn-88x31"
-						alt="another metroid 2 remake button" />
-				</a>
+			{% for item in site.data.gallery-buttons %}
+			{% if item.image and item.cat == "g" and item.res == nil %}
+			<li id="{{ item.image | slugify: "ascii" }}"><figure>
+				<a{% if item.lnk-url != nil %}
+						href="{{ item.lnk-url }}"{% endif %}
+					{% if item.astyle != nil %}
+						style="{{ item.astyle }}"{% endif %}>
+				<img src="/stadt/assets/images/buttons/games/{{ item.image }}.{{ item.ext | default: 'png' }}"
+					{% if item.title != nil %}
+					title="{{ item.title }}"
+					{% endif %}
+					class="btn-88x31 {% if item.smooth == 'y' %}smooth-zoom{% endif %}
+						{% if item.anim == 'y' %}anim{% endif %}"
+					alt="{{ item.alt }}" />
 				<figcaption class="img-caption">
-					<a class="src" href="https://drakul78.neocities.org/links"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="celeste">
-					<img src="/stadt/assets/images/buttons/games/b-side.png"
-						class="btn-88x31 anim"
-						alt="time to play B-SIDES (celeste) button" />
-				</a>
-				<figcaption class="img-caption">
+					{% if item.src == "s" %}
 					<a class="src z"
-						href="//zeusofthecrows.github.io//stadt/assets/images/buttons/games/b-side.ase"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://www.gog.com/">
-					<img src="/stadt/assets/images/buttons/brands/gog.png"
-						class="btn-88x31 smooth-zoom"
-						alt="gog.com (goodoldgames) button" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src" href="https://drakul78.neocities.org/links"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://www.half-life.com/en/halflife">
-					<img src="/stadt/assets/images/buttons/games/half-life.png"
-						class="btn-88x31 smooth-zoom"
-						alt="half life button" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src" href="https://drakul78.neocities.org/links"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://www.alienhominid.com/">
-					<img src="/stadt/assets/images/buttons/games/hominid.png"
-						class="btn-88x31 smooth-zoom anim"
-						alt="alien hominid button" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src" href="https://drakul78.neocities.org/links"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://metroidconstruction.com/">
-					<img src="/stadt/assets/images/buttons/games/met-const.png"
-						class="btn-88x31"
-						alt="metroid construction button" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src" href="https://drakul78.neocities.org/links"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://www.newgrounds.com/">
-					<img src="/stadt/assets/images/buttons/games/newgrounds.png"
-						class="btn-88x31 anim"
-						alt="newgrounds.com button" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src" href="https://drakul78.neocities.org/links"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://store.steampowered.com/uiupdate/">
-					<img src="/stadt/assets/images/buttons/brands/steam.png"
-						class="btn-88x31 smooth-zoom"
-						alt="play with steam button" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"
-						href="//zeusofthecrows.github.io/stadt/assets/images/buttons/taskbar/zeus-steam.ase"></a>
+						href="/stadt/assets/images/buttons/games{{ item.image }}.ase"></a>
+					{% elsif item.src-url != nil %}
+					<a class="src {{ item.src }}"
+						href="{{ item.src-url }}"></a>
+					{% else %}
+					<a class="src {{ item.src }}"></a>
+					{% endif %}
+					{% if item.ins-url != nil %}
 					{{ page.sep }}
-					<a class="i" href="/stadt/assets/images/buttons/brands/steam-old.png"></a>
+					<a class="i"
+					{% if item.ins-ttl != nil %}
+						title="{{ item.ins-ttl }}"
+					{% endif %}
+						href="{{ item.ins-url }}"></a>
+					{% endif %}
 				</figcaption>
 			</figure></li>
-			<li><figure>
-				<a href="http://svencoop.com/">
-					<img src="/stadt/assets/images/buttons/games/sven-coop.png"
-						class="btn-88x31 smooth-zoom anim"
-						alt="sven coop button" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src v" href="http://svencoop.com/"></a>
-				</figcaption>
-			</figure></li>
+			{% endif %}
+			{% endfor %}
 		</ul>
 		</section>
 		<section id="brands">
 		<h3>Brands</h3>
 		<ul class="img-grid hover-zoom img-capts">
-			<li><figure>
-				<a href="https://sevenzip.sourceforge.io/logos.html">
-					<img src="/stadt/assets/images/buttons/brands/7z.png"
-						class="btn-88x31 smooth-zoom"
-						alt="get free 7-Zip button" />
-				</a>
+			{% for item in site.data.gallery-buttons %}
+			<!-- i have NO idea why this has to be "!=" rather than "=="‽ maybe a bug‽ -->
+			{% if item.image and item.cat == "b" and item.res == nil or item.res != inf %}
+			<li id="{{ item.image | slugify: "ascii" }}"><figure>
+				<a{% if item.lnk-url != nil %}
+						href="{{ item.lnk-url }}"{% endif %}
+					{% if item.astyle != nil %}
+						style="{{ item.astyle }}"{% endif %}>
+				<img src="/stadt/assets/images/buttons/brands/{{ item.image }}.{{ item.ext | default: 'png' }}"
+					{% if item.title != nil %}
+					title="{{ item.title }}"
+					{% endif %}
+					class="btn-88x31 {% if item.smooth == 'y' %}smooth-zoom{% endif %}
+						{% if item.anim == 'y' %}anim{% endif %}"
+					alt="{{ item.alt }}" />
 				<figcaption class="img-caption">
-					<a class="src v"
-						href="https://sevenzip.sourceforge.io/logos.html"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="http://apngasm.sourceforge.net/">
-					<img src="/stadt/assets/images/buttons/brands/apngasm.png"
-						class="btn-88x31"
-						alt="optimised with apng assembler button"
-						data-img-src="~zeus" />
-				</a>
-				<figcaption class="img-caption">
+					{% if item.src == "s" %}
 					<a class="src z"
-						href="//zeusofthecrows.github.io/stadt/assets/images/buttons/brands/apngasm.ase"></a>
+						href="/stadt/assets/images/buttons/brands{{ item.image }}.ase"></a>
+					{% elsif item.src-url != nil %}
+					<a class="src {{ item.src }}"
+						href="{{ item.src-url }}"></a>
+					{% else %}
+					<a class="src {{ item.src }}"></a>
+					{% endif %}
+					{% if item.ins-url != nil %}
 					{{ page.sep }}
-					<a class="i" href="https://yesterweb.org/no-to-web3/"></a>
+					<a class="i"
+					{% if item.ins-ttl != nil %}
+						title="{{ item.ins-ttl }}"
+					{% endif %}
+						href="{{ item.ins-url }}"></a>
+					{% endif %}
 				</figcaption>
 			</figure></li>
-			<li><figure>
-				<a href="https://www.aseprite.org/">
-					<img src="/stadt/assets/images/buttons/brands/aseprite.png"
-						class="btn-88x31 anim"
-						alt="aseprite film logo button"
-						data-img-src="~zeus" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://www.aseprite.org/">
-					<img src="/stadt/assets/images/buttons/brands/ase-old-logo.png"
-						class="btn-88x31 anim"
-						alt="aseprite old logo button"
-						data-img-src="~zeus" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://projects.linuxmint.com/cinnamon/">
-				<img src="/stadt/assets/images/buttons/brands/cinnamon.png"
-					class="btn-88x31"
-					alt="linux mint cinnamon button" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"
-						href="//zeusofthecrows.github.io/stadt/assets/images/buttons/brands/cinnamon.ase"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://www.mozilla.org/en-GB/firefox/">
-					<img src="/stadt/assets/images/buttons/brands/chromium.png"
-						class="btn-88x31 smooth-zoom"
-						alt="ie/chrome/brave logos captioned 'same shit, different arsehole'"
-						data-img-src="~zeus" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"
-						href="//zeusofthecrows.github.io/stadt/assets/images/buttons/brands/chromium.ase"></a>
-					{{ page.sep }}
-					<a class="i" href="https://capstasher.neocities.org/88x31Buttons/chrome%20(copy%201).gif"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://ddg.gg">
-					<img src="/stadt/assets/images/buttons/brands/ddg.png"
-						class="btn-88x31 anim"
-						alt="duckduckgo: always use protection" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://www.debian.org/">
-				<img src="/stadt/assets/images/buttons/brands/debian.png"
-					class="btn-88x31 smooth-zoom"
-					alt="debian gnu/linux button" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src v"
-						href="https://www.debian.org/logos/"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://discord.com/">
-					<img src="/stadt/assets/images/buttons/brands/discord.png"
-						class="btn-88x31 smooth-zoom"
-						alt="discord button" data-img-src="~zeus" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="http://toastytech.com/good/ffbuttons.html">
-					<img src="/stadt/assets/images/buttons/brands/firefox.png"
-						class="btn-88x31 smooth-zoom anim"
-						alt="mozilla now button"
-						data-img-src="unknown" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src"
-						href="https://capstasher.neocities.org/88x31collection-page8.html"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://github.com/">
-					<img src="/stadt/assets/images/buttons/brands/github.png"
-						class="btn-88x31 smooth-zoom"
-						alt="github button" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://pages.github.com/">
-					<img src="/stadt/assets/images/buttons/brands/gh-pages.png"
-						class="btn-88x31 smooth-zoom anim"
-						alt="microsoft frontpage style button, saying 'GithubPages'" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"
-						href="//zeusofthecrows.github.io/stadt/assets/images/buttons/brands/gh-pages.ase"></a>
-					{{ page.sep }}
-					<a class="i" href="https://64.media.tumblr.com/7973fa2f2d10f25506d1f2d099c2385b/eb9f8ba2603e4564-f7/s100x200/b387c1108800d03f91b375cb78063d31d713ee87.gifv"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://pages.github.com/">
-					<img src="/stadt/assets/images/buttons/brands/gh-pages-bo.png"
-						class="btn-88x31 smooth-zoom"
-						alt="microsoft backoffice style button, saying 'GithubPages'"
-						data-img-src="unknown" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"></a>
-				</figcaption>
-			</figure></li>
-			<!-- <li><figure>
-				<a href="https://pages.github.com/">
-					<img src="/stadt/assets/images/buttons/brands/gh-pages-old.png"
-						class="btn-88x31"
-						alt="github pages button" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"></a>
-				</figcaption>
-			</figure></li> -->
-			<li><figure>
-				<a href="https://www.gimp.org/">
-					<img src="/stadt/assets/images/buttons/brands/gimp.png"
-						class="btn-88x31 smooth-zoom"
-						alt="gimp - free! button" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src v"
-						href="https://web.archive.org/web/20060705113723/http://www.gimp.org/about/linking.html"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://inkscape.org/">
-					<img src="/stadt/assets/images/buttons/brands/inkscape.svg"
-						class="btn-88x31 smooth-zoom"
-						alt="inkscape 'draw freely.' button"/>
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"></a>
-					{{ page.sep }}
-					<a href="https://inkscape.org/about/branding/"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://www.irfanview.com/">
-					<img src="/stadt/assets/images/buttons/brands/irfanview.png"
-						class="btn-88x31 smooth-zoom"
-						alt="irfanview image viewer button"
-						data-img-src="unknown" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src u"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://www.abc.net.au/triplej/">
-					<img src="/stadt/assets/images/buttons/brands/jjj-now.png"
-						class="btn-88x31 anim"
-						alt="triple j now button"
-						data-img-src="unknown" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src u"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="ttps://web.archive.org/web/19991006230258im_/http://www.kde.org/img/logos/knlogo1.gif">
-					<img src="/stadt/assets/images/buttons/brands/kde-now.png"
-						class="btn-88x31 smooth-zoom anim"
-						alt="kde now button" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"></a>
-					{{ page.sep }}
-					<a class="i" href="https://web.archive.org/web/19991012194141/http://www.kde.org/"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://kde.org/">
-					<img src="/stadt/assets/images/buttons/brands/konqi.png"
-						class="btn-88x31 smooth-zoom"
-						alt="konqi (kde mascot) button" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"
-						href="//zeusofthecrows.github.io/stadt/assets/images/buttons/brands/konqi.ase"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://kde.org/">
-					<img src="/stadt/assets/images/buttons/brands/kool-de.png"
-						class="btn-88x31 smooth-zoom anim"
-						alt="kool desktop environment button" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"
-						href="//zeusofthecrows.github.io/stadt/assets/images/buttons/brands/kool-de.ase"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://lemm.ee/u/Zeus">
-					<img src="/stadt/assets/images/buttons/brands/lemmy-old.png"
-					alt="lemmy button (join-lemmy.org)" class="btn-88x31"/>
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"
-						href="//zeusofthecrows.github.io/stadt/assets/images/buttons/brands/lemmy.ase"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://lemm.ee/u/Zeus@lemmy.world">
-					<img src="/stadt/assets/images/buttons/brands/lemmy.png"
-						title="i couldn't really decide which style i prefered of these two"
-						alt="lemmy button (join-lemmy.org)" class="btn-88x31"/>
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"
-						href="//zeusofthecrows.github.io/stadt/assets/images/buttons/brands/lemmy.ase"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://libresprite.github.io/">
-					<img src="/stadt/assets/images/buttons/brands/libresprite.png"
-						class="btn-88x31 anim"
-						alt="libresprite: it's aseprite, but free button"/>
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://libresprite.github.io/">
-					<img src="/stadt/assets/images/buttons/brands/matrix.png"
-						class="btn-88x31 anim"
-						alt="matrix messenger button" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://neocities.org/">
-					<img src="/stadt/assets/images/buttons/brands/neocities.png"
-						class="btn-88x31 smooth-zoom anim"
-						alt="meteors netscape button, saying neocities.org with paws"
-						data-img-src="~zeus" data-img-insp="https://web.archive.org/web/19961020015116/http://www3.netscape.com/" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"
-						href="//zeusofthecrows.github.io/stadt/assets/images/buttons/brands/neocities.ase"></a>
-					{{ page.sep }}
-					<a class="i" href="https://web.archive.org/web/19961020015116/http://www3.netscape.com/"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://neocities.org/">
-					<img src="/stadt/assets/images/buttons/brands/neocities-cat.png"
-						class="btn-88x31 smooth-zoom anim"
-						alt="netscape button saying neocities.org with cat logo and paws"
-						data-img-src="~zeus" data-img-insp="https://web.archive.org/web/19961020015116/http://www3.netscape.com/" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"
-						href="//zeusofthecrows.github.io/stadt/assets/images/buttons/brands/neocities.ase"></a>
-					{{ page.sep }}
-					<a class="i" href="https://web.archive.org/web/19961020015116/http://www3.netscape.com/"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://neocities.org/">
-					<img src="/stadt/assets/images/buttons/brands/neocities-spin.png"
-						class="btn-88x31 anim"
-						alt="various neocities buttons, rotating" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"
-						href="//zeusofthecrows.github.io/stadt/assets/images/buttons/brands/neocities-spin.ase"></a>
-					{{ page.sep }}
-					<a class="i" href="https://purplehello98.neocities.org/buttons/"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://nexusmods.com/">
-					<img src="/stadt/assets/images/buttons/brands/nexus-mods.png"
-						class="btn-88x31 smooth-zoom"
-						alt="nexus mods button" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://notepad-plus-plus.org/">
-					<img  class="btn-88x31"
-						src="/stadt/assets/images/buttons/brands/notepadpp.png"
-						alt="notepad++ button" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src" href="https://drakul78.neocities.org/links"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://getpaint.net/">
-					<img  class="btn-88x31 smooth-zoom"
-						src="/stadt/assets/images/buttons/brands/paint.png"
-						alt="paint.net button" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src" href="https://drakul78.neocities.org/links"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://orama-interactive.itch.io/pixelorama">
-					<img src="/stadt/assets/images/buttons/brands/pixelorama.png"
-						class="btn-88x31 anim"
-						alt="drawn with pixelorama button" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"
-						href="//zeusofthecrows.github.io/stadt/assets/images/buttons/brands/pixelorama.ase"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://orama-interactive.itch.io/pixelorama">
-					<img src="/stadt/assets/images/buttons/brands/pixelorama-old.png"
-						class="btn-88x31 anim"
-						alt="pixelorama free & open source sprite editor button" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"
-						href="//zeusofthecrows.github.io/stadt/assets/images/buttons/brands/pixelorama.ase"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://reddit.com">
-					<img src="/stadt/assets/images/buttons/brands/reddit.png" class="btn-88x31"
-						alt="reddit button" data-img-src="~zeus" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://www.siduction.org/">
-				<img src="/stadt/assets/images/buttons/brands/siduction.png"
-					class="btn-88x31 smooth-zoom"
-					alt="siduction (debian) gnu/linux button" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://www.sublimetext.com/">
-					<img src="/stadt/assets/images/buttons/brands/sublime.png"
-						class="btn-88x31"
-						alt="sublime text editor button" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"></a>
-					{{ page.sep }}
-					<a class="i" href="http://www.notepad.org/logo.htm"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://ww.reddit.com/r/Telegram/comments/wuw996/pavel_durov_updates_on_telegram_imagine_how/ilc0lwh/">
-					<img src="/stadt/assets/images/buttons/brands/telegram.png"
-						class="btn-88x31 smooth-zoom"
-						alt="telegram button" data-img-src="~zeus" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"
-						href="//zeusofthecrows.github.io//stadt/assets/images/buttons/taskbar/telegram.ase"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://ww.reddit.com/r/Telegram/comments/wuw996/pavel_durov_updates_on_telegram_imagine_how/ilc0lwh/">
-					<img src="/stadt/assets/images/buttons/brands/telegram-alt.png"
-						class="btn-88x31 smooth-zoom"
-						alt="telegram button" data-img-src="~zeus" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"
-						href="//zeusofthecrows.github.io//stadt/assets/images/buttons/taskbar/telegram.ase"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://ww.reddit.com/r/Telegram/comments/wuw996/pavel_durov_updates_on_telegram_imagine_how/ilc0lwh/">
-					<img src="/stadt/assets/images/buttons/brands/telegram-old.png"
-						class="btn-88x31"
-						alt="telegram button" data-img-src="~zeus" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://zeusofthecrows.tumblr.com">
-					<img src="/stadt/assets/images/buttons/brands/tumblr.png" class="btn-88x31"
-						alt="tumblr button"
-						data-img-src="~zeus"
-						data-img-insp="https://www.tumblr.com/blog/view/azuremist/685627448990351360/" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"></a>
-					{{ page.sep }}
-					<a class="i" href="https://www.tumblr.com/blog/view/azuremist/685627448990351360/"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://github.com/gorhill/uBlock">
-					<img  class="btn-88x31 smooth-zoom"
-						src="/stadt/assets/images/buttons/brands/ublock.png"
-						alt="µblock origin button" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src" href="https://drakul78.neocities.org/links"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://wikipedia.org/">
-					<img src="/stadt/assets/images/buttons/brands/wikipedia.png"
-						class="btn-88x31 smooth-zoom"
-						alt="википедия button"
-						data-img-src="unknown" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src u"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://dosbox-x.com/wiki/Guide%3AInstalling-Windows-98">
-					<img src="/stadt/assets/images/buttons/brands/win98.png"
-						class="btn-88x31 smooth-zoom"
-						alt="made with windows 98 button"
-						data-img-src="unknown" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src u"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://xenia-linux-site.glitch.me/">
-					<img class="btn-88x31" src="/stadt/assets/images/buttons/brands/xenia.png"
-					data-img-src=""
-					alt="xenia the fox linux button" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src v" href="https://voltbun.neocities.org/"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://xkcd.com/">
-					<img  class="btn-88x31 smooth-zoom"
-						src="/stadt/assets/images/buttons/brands/xkcd.png"
-						alt="xkcd button" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src" href="https://drakul78.neocities.org/links"></a>
-				</figcaption>
-			</figure></li>
+			{% endif %}
+			{% endfor %}
 		</ul>
 		</section>
 		<section id="lemmy">
 		<h3>
-			<abbr title="let's bring the button idea to lemmy!">Lemmy</abbr>
+			<abbr title="i made these when after the reddit APIcalypse.
+			i now realise lemmy a pile of shit, but unfortunately i'm really pleased with these buttons so i'm keeping them'">Lemmy</abbr>
 		</h3>
 		<ul class="img-grid hover-zoom img-capts">
 			<li><figure>
@@ -2504,6 +1283,16 @@ znotes: maybe abstract all these out to layout + grid-windows.css?
 	<div class="window-content">
 		<h2>80x15</h2>
 		<ul class="img-grid hover-zoom img-capts">
+			<li><figure>
+				<img src="/stadt/assets/images/antipix/cc-by-sa.png"
+					class="btn-80x15"
+					title="nominally"
+					alt="cc-by-sa antipixel icon"/>
+				<figcaption class="img-caption">
+					<a href="https://creativecommons.org/mission/downloads/"
+					class="src v"></a>
+				</figcaption>
+			</figure></li>
 			<li><figure>
 				<img src="/stadt/assets/images/antipix/gb.png"
 					class="btn-80x15"

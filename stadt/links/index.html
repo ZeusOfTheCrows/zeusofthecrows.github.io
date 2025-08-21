@@ -94,7 +94,7 @@ edit-date: 2023-02-17
 	<div class="window-content">
 		<section class="banner-container">
 			<!-- "adverts class so adblockers hide it" -->
-			<div id="adblocker-warning" class="adverts banner alert">
+			<div id="adblocker-warning" class="adverts advert ad sponsored adContent adBanner ad-choices banner alert">
 				<strong>No Adblock Detected!</strong>
 				<span>
 					it looks like you are not using an adblocker. this slows your browser,
@@ -138,91 +138,34 @@ edit-date: 2023-02-17
 					there are a few lesser known extensions that i recommend, i'll list
 					these on my recommended software page
 				</p>
-				<p>
-					why is the site description so useless? because i wrote "slanty" as a
-					placeholder for auzzie-jay's site, and it made me giggle so i kept it
-				</p>
 			</article>
 
-			<article id="neighbour">
+			<article id="neighbours">
 				<h2>Neighbours</h2>
 				<ul class="img-grid hover-zoom img-capts link-list">
-					<li>
-						<a href="https://bulltown.2022.joejenett.com/">
-							<img src="/stadt/assets/images/buttons/bookmarks/bulltown-22.png"
-								class="btn-88x31 smooth-zoom" alt="bulltown.2022" />
-						</a>
-					</li>
-
-					<li>
-						<a href="https://bytemoth.neocities.org/index.html">
-							<img src="/stadt/assets/images/buttons/bookmarks/bytemoth.png"
-								class="btn-88x31 smooth-zoom" alt="Bytemoth's Brook" />
-						</a>
-					</li>
-
-					<li>
-						<a href="https://capstasher.neocities.org/">
-							<img src="/stadt/assets/images/buttons/bookmarks/cap-stasher.png"
-								class="btn-88x31 smooth-zoom" alt="Cap Stasher's Corner" />
-						</a>
-					</li>
-
-					<li>
-						<a href="https://cyborgcatboys.neocities.org/">
-							<img src="/stadt/assets/images/buttons/bookmarks/cyborg.png"
-								class="btn-88x31" alt="cyborgcatboys" />
-						</a>
-					</li>
-
-					<li>
-						<a href="https://colrana.neocities.org/">
-							<img src="/stadt/assets/images/buttons/bookmarks/colrana.png"
-								class="btn-88x31 smooth-zoom" alt="colrana" />
-						</a>
-					</li>
-
-					<li>
-						<a href="https://drakul78.neocities.org/">
-							<img src="/stadt/assets/images/buttons/bookmarks/drakul78.png"
-								class="btn-88x31 smooth-zoom" alt="Drakul78" />
-						</a>
-					</li>
-
-					<li>
-						<a href="https://meyyebs.neocities.org/">
-							<img src="/stadt/assets/images/buttons/bookmarks/meyyebs.png"
-								class="btn-88x31 smooth-zoom" alt="meyyebs" />
-						</a>
-					</li>
-
-					<li>
-						<a href="https://channelonion.neocities.org/">
-							<img src="/stadt/assets/images/buttons/bookmarks/onion.png"
-								class="btn-88x31 smooth-zoom" alt="channel onion" />
-						</a>
-					</li>
-
-					<li>
-						<a href="https://solinus.neocities.org/">
-							<img src="/stadt/assets/images/buttons/bookmarks/solinus.png"
-								class="btn-88x31 smooth-zoom" alt="solinux" />
-						</a>
-					</li>
-
-					<li>
-						<a href="https://space-bar.neocities.org/">
-							<img src="/stadt/assets/images/buttons/bookmarks/space-bar.png"
-								class="btn-88x31 smooth-zoom" alt="🆂🅿🅰🅲🅴👽🅱🅰🆁" />
-						</a>
-					</li>
-
-					<li>
-						<a href="https://volk.neocities.org/">
-							<img src="/stadt/assets/images/buttons/bookmarks/volk.png"
-								class="btn-88x31 smooth-zoom" alt="волк" />
-						</a>
-					</li>
+			{% for item in site.data.links %}
+			{% if item.image and item.cat == "n" and item.res == nil or item.res != inf %}
+			<li id="{{ item.image | slugify: "ascii" }}">
+				<a{% if item.lnk-url != nil %}
+						href="{{ item.lnk-url }}"{% endif %}
+					{% if item.astyle != nil %}
+						style="{{ item.astyle }}"{% endif %}>
+				<img
+					{% if item.ext-url != nil %}
+					src="{{ item.ext-url }}"
+					{% else %}
+					src="/stadt/assets/images/buttons/bookmarks/{{ item.image }}.{{ item.ext | default: 'png' }}"
+					{% endif %}
+					{% if item.title != nil %}
+					title="{{ item.title }}"
+					{% endif %}
+					class="btn-88x31 {% if item.smooth == 'y' %}smooth-zoom{% endif %}
+						{% if item.anim == 'y' %}anim{% endif %}"
+					alt="{{ item.alt }}" />
+					</a>
+			</li>
+			{% endif %}
+			{% endfor %}
 				</ul>
 			</article>
 
@@ -272,7 +215,7 @@ edit-date: 2023-02-17
 
 					<li>
 						<figure>
-							<a href="https://reggie.re/blog/20230625-actually-good-distro-recomendations-for-beginners.html/"
+							<a href="https://web.archive.org/web/20230925172643/https://reggie.re/blog/20230625-actually-good-distro-recomendations-for-beginners.html"
 								class="btn-9x">
 								reggie
 							</a>
@@ -793,31 +736,28 @@ edit-date: 2023-02-17
 				<!-- https://codersblock.com/blog/the-surprising-things-that-css-can-animate/#text-selection-trick -->
 				<h2>My Buttons</h2>
 				<p>
-					if you use one of these, message me! and i'll link back. also, it's
-					probably better to link to the
-					<a href="https://zeusofthecrows.github.io/stadt/">github pages</a>
-					version of this site, as that's the "master" version, i guess
+					if you use one of these, message me! and i'll link back
 				</p>
 				<ul class="img-grid hover-zoom img-capts link-list">
 					<li>
-						<a href="/stadt/assets/images/buttons/my-links/zeus-t17.png"
-								download="zeusofthecrows.svg" >
-							<img src="/stadt/assets/images/buttons/my-links/zeus-retro.svg"
-								class="btn-88x31 btn-svg"
-								alt="retro button" />
-						</a>
-					</li>
-					<li>
-						<a href="/stadt/assets/images/buttons/my-links/zeus-t17.png"
-								download="zeusofthecrows.svg" >
+						<a href="/stadt/assets/images/buttons/my-links/zeus-train.svg"
+								download="zeusofthecrows" >
 							<img src="/stadt/assets/images/buttons/my-links/zeus-train.svg"
 								class="btn-88x31 btn-svg"
 								alt="Zeus125 button" />
 						</a>
 					</li>
 					<li>
-						<a href="/stadt/assets/images/buttons/my-links/zeus-t17.png"
-								download="zeusofthecrows.svg" >
+						<a href="/stadt/assets/images/buttons/my-links/zeus-retro.svg"
+								download="zeusofthecrows" >
+							<img src="/stadt/assets/images/buttons/my-links/zeus-retro.svg"
+								class="btn-88x31 btn-svg"
+								alt="retro button" />
+						</a>
+					</li>
+					<li>
+						<a href="/stadt/assets/images/buttons/my-links/zeus-t17.svg"
+								download="zeusofthecrows" >
 							<img src="/stadt/assets/images/buttons/my-links/zeus-t17.svg"
 								class="btn-88x31 btn-svg"
 								alt="tertiary button" />
@@ -834,58 +774,62 @@ edit-date: 2023-02-17
 				<p>
 					these are svg buttons - <a href="/stadt/thoughts#svg">read more about
 					them here</a>. i do recommend using them, and
-					they require little more setup than a normal .png - however,
-					if you find them
-					too inconvenient, there are normal raster buttons below for your
-					delectation
+					they require little more setup than a normal .png.
 				</p>
 				<p>
 					declaring the dimensions may be necessary (either css or html will
 					do);
-					i recommend not using <code>image-rendering: pixelated;</code> (this
+					i recommend <strong>not</strong> using <code>image-rendering:
+					pixelated;</code> (this
 					shouldn't make a difference, but seems to reduce shimmering);
 					and it will only really render correctly in a browser (e.g. not in
 					gwenview or inkscape)
 				</p>
+				<details>
+					<summary>
+						however,
+						if you find them
+						too inconvenient, there are normal raster buttons inside for your
+						delectation
+					</summary>
+					<ul class="img-grid hover-zoom img-capts link-list">
+						<li>
+							<a href="/stadt/assets/images/buttons/my-links/zeus-train.png"
+									download="zeusofthecrows" >
+								<img src="/stadt/assets/images/buttons/my-links/zeus-train.png"
+									class="btn-88x31 smooth-zoom" alt="zeus british rail (png ver.)" />
+							</a>
+						</li>
+						<li>
+							<a href="/stadt/assets/images/buttons/my-links/zeus-retro.png"
+									download="zeusofthecrows" >
+								<img src="/stadt/assets/images/buttons/my-links/zeus-retro.png"
+									class="btn-88x31" alt="Ɀeus retro flowing (png ver.)" />
+							</a>
+						</li>
+						<li>
+							<a href="/stadt/assets/images/buttons/my-links/zeus-t17.png"
+									download="zeusofthecrows" >
+								<img src="/stadt/assets/images/buttons/my-links/zeus-t17.png"
+									class="btn-88x31 smooth-zoom" alt="tertiary button (png ver.)" />
+							</a>
+						</li>
+					</ul>
 
-				<ul class="img-grid hover-zoom img-capts link-list">
-					<li>
-						<a href="/stadt/assets/images/buttons/my-links/zeus-t17.png"
-								download="zeusofthecrows.png" >
-							<img src="/stadt/assets/images/buttons/my-links/zeus-retro.png"
-								class="btn-88x31" alt="Ɀeus retro flowing (png ver.)" />
-						</a>
-					</li>
-
-					<li>
-						<a href="/stadt/assets/images/buttons/my-links/zeus-t17.png"
-								download="zeusofthecrows.png" >
-							<img src="/stadt/assets/images/buttons/my-links/zeus-train.png"
-								class="btn-88x31 smooth-zoom" alt="zeus british rail (png ver.)" />
-						</a>
-					</li>
-
-					<li>
-						<a href="/stadt/assets/images/buttons/my-links/zeus-t17.png"
-								download="zeusofthecrows.png" >
-							<img src="/stadt/assets/images/buttons/my-links/zeus-t17.png"
-								class="btn-88x31 smooth-zoom" alt="tertiary button (png ver.)" />
-						</a>
-					</li>
-				</ul>
-
-				<textarea class="btn-code copy-all">
+					<textarea class="btn-code copy-all">
 &lt;a href="https://zeusofthecrows.github.io/stadt/"&gt;
 	&lt;img src="/buttons/zeusofthecrows.png"
 		alt="ɀeus' stadt" /&gt;
 &lt;/a&gt;</textarea>
-
+				</details>
 				<p>
-					there's also this which i use for my <a href="/">super-site</a> - i've
+					there's also this which i use for my
+					<a href="/classic">classic site</a> - i've
 					updated it a few times, it used to look like the green version (but
-					orange), but i've improved it since then (although it's no longer
-					using a completely web-safe palette). the green ver. is only there for
-					posterity
+					orange), but i've improved it since then – now it has reflections and
+					glow and such (although it's no longer
+					using a completely web-safe palette). the green ver. is a bit crap, so
+					is only there for posterity
 				</p>
 
 				<ul class="img-grid hover-zoom img-capts link-list">
@@ -896,6 +840,7 @@ edit-date: 2023-02-17
 								alt="zeusofthecrows terminal button" />
 						</label>
 					</li>
+					<br />
 					<li>
 						<label for="retro-btn">
 							<img src="/stadt/assets/images/buttons/my-links/zeus-term-green.png"
