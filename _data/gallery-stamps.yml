@@ -41,6 +41,12 @@
   alt: "american megatrends bios stamp"
   src: z
 
+- image: amnesia
+  smooth: y
+  alt: "3. Amnesia was her name"
+  src-url: "https://lonelycoconut.net/My%20graphics"
+  src: v
+
 - image: autopilot
   smooth: y
   anim: y
@@ -89,6 +95,12 @@
   anim: y
   alt: "flashing various colours of cassette tapes"
   src-url: "https://scifirenegade.neocities.org/about/graphs2.html"
+
+- image: cat
+  smooth: y
+  alt: "nyan cat stamp"
+  ins-url: "https://www.deviantart.com/zephyris/art/Nyan-Cat-Pixel-Perfect-215622890"
+  src: s
 
 - image: cat-bw
   smooth: y
@@ -142,6 +154,12 @@
   alt: "Swedish cover of James White’s Hospital Station"
   src: z
   ins-url: "https://70sscifiart.tumblr.com/post/696804823402725376/"
+
+- image: dont-touch-me
+  smooth: y
+  alt: "DON'T TOUCH ME stamp"
+  src-url: "https://www.deviantart.com/virus-xenon/art/Don-t-Touch-Me-790983954/"
+  src: v
 
 - image: dos
   smooth: y
@@ -206,6 +224,12 @@
   alt: "neon pink heart with blue arrow stamp"
   src-url: "https://bisuko.neocities.org/webmaterial.html"
 
+- image: hilo
+  smooth: y
+  alt: "Jack Stauber Hilo stamp"
+  src-url: "https://lonelycoconut.net/My%20graphics"
+  src: v
+
 - image: hl-crt
   smooth: y
   alt: "crt texture from half life"
@@ -258,16 +282,22 @@
   src: z
   src-url: /stadt/assets/images/stamps/link.ase
 
+- image: linux
+  smooth: y
+  alt: "linux: an os for masochists stamp"
+  src-url: "https://leonidas.neocities.org/"
+
 - image: mac
   smooth: y
   anim: y
   alt: "synthwave apple 2 stamp"
   src-url: "https://leonidas.neocities.org/"
 
-- image: linux
+- image: machine
   smooth: y
-  alt: "linux: an os for masochists stamp"
-  src-url: "https://leonidas.neocities.org/"
+  alt: "27. The Machine"
+  src-url: "https://lonelycoconut.net/My%20graphics"
+  src: v
 
 - image: manson
   smooth: y
@@ -308,6 +338,12 @@
   alt: "nightwish stamp"
   src: v
   src-url: "https://www.deviantart.com/seiorai/art/Nightwish-Support-Stamp-145883724"
+
+- image: nya.gif
+  smooth: y
+  alt: "windows 98 paint themed nyan cat stamp"
+  ins-url: "https://www.tumblr.com/resource-fm/781980836802281472"
+  src: s
 
 - image: outrun
   smooth: y
@@ -354,16 +390,16 @@
   alt: "His Holiness Escribar stamp (blasphemous)"
   src: s
 
-- image: prie-dieu
-  anim: y
-  alt: "lighting a prie-dieu stamp (blasphemous)"
-  src: s
-
 - image: portal-left
   smooth: y
   alt: "left half of portal logo, protruding through a portal"
   src: v
   src-url: "https://www.deviantart.com/sparklum/art/Portal-Stamp-Blue-209870753"
+
+- image: prie-dieu
+  anim: y
+  alt: "lighting a prie-dieu stamp (blasphemous)"
+  src: s
 
 - image: psp
   smooth: y
@@ -371,6 +407,24 @@
   alt: "psp startup animation stamp"
   src: v
   src-url: "https://www.deviantart.com/byte-byte/art/Stamp-PSP-460345147"
+
+- image: purple-sun
+  smooth: y
+  alt: "purple vaporwave sunset stamp"
+  src-url: "https://www.deviantart.com/virus-xenon/art/Neon-Purple-Aesthetic-14-826986841"
+  src: v
+
+- image: purple-trees
+  smooth: y
+  alt: "purple vaporwave forest stamp"
+  src-url: "https://www.deviantart.com/virus-xenon/art/Neon-Purple-Aesthetic-10-826973602"
+  src: v
+
+- image: portal-right
+  smooth: y
+  alt: "right half of portal logo, protruding through a portal"
+  src: v
+  src-url: "https://www.deviantart.com/sparklum/art/Portal-Stamp-Orange-209870758"
 
 - image: rad
   smooth: y
@@ -394,11 +448,10 @@
   src: v
   src-url: "https://www.deviantart.com/babykttn/art/switching-off-672436199"
 
-- image: portal-right
+- image: run-cmd
   smooth: y
-  alt: "right half of portal logo, protruding through a portal"
-  src: v
-  src-url: "https://www.deviantart.com/sparklum/art/Portal-Stamp-Orange-209870758"
+  alt: "'RUN CMD' (RUN DMC parody) stamp"
+  src: z
 
 - image: still-you
   anim: y
@@ -512,6 +565,20 @@
   src: z
   ins-url: "https://en.wikipedia.org/wiki/Vortex_(iPod_game)"
 
+- image: water
+  smooth: y
+  anim: y
+  alt: "rippling water stamp"
+  src-url: "https://svnhrtz.neocities.org/graphics"
+  src: v
+
+- image: water2
+  smooth: y
+  anim: y
+  alt: "rippling water stamp"
+  src-url: "https://svnhrtz.neocities.org/graphics"
+  src: v
+
 - image: waste
   alt: "&quot;This stamp is a waste of 587 bytes&quot;"
   src: s
@@ -536,6 +603,8 @@
   src: v
   src-url: "https://www.deviantart.com/byte-byte/art/Stamp-Xbox-360-460378137"
 
+  # ============================== CODES =======================================
+
 - image: abandoned-01
   smooth: y
   alt: "abandoned sites"
@@ -558,6 +627,14 @@
   src: v
   src-url: "https://planets.corvidae.digital/linux-mint"
   lnk-url: "https://planets.corvidae.digital/linux-mint"
+  res: "100x50"
+
+- image: moon
+  smooth: y
+  alt: "moon"
+  src: v
+  lnk-url: "https://web.archive.org/web/20240310013358/http://fanique.altervista.org/moon/buttons.php"
+  src-url: "https://web.archive.org/web/20240310013358/http://fanique.altervista.org/moon/buttons.php"
   res: "100x50"
 
 - image: mozilla

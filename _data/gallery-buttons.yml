@@ -386,6 +386,13 @@
   src: z
   cat: a
 
+- image: "other/sdf"
+  alt: "sdf pubnix button"
+  smooth: y
+  src-url: "http://jgarza.sdf.org/"
+  src:
+  cat: a
+
 - image: "other/like-this-page"
   alt: "like this page? share it! button"
   smooth: y
@@ -409,10 +416,11 @@
   src: v
   cat: a
 
-- image: "other/sdf"
-  alt: "sdf pubnix button"
+- image: "other/sprunk"
+  alt: "sprunk button"
   smooth: y
-  src-url: "http://jgarza.sdf.org/"
+  anim: y
+  src-url: "https://exo.pet/#buttonzone"
   src:
   cat: a
 
@@ -471,6 +479,14 @@
   alt: "utah teapot now button"
   smooth: y
   src-url: "https://warpzone.site/extras.htm"
+  src: v
+  cat: a
+
+- image: "other/vertpush"
+  alt: "obby.dog/vertpush button"
+  anim: y
+  lnk-url: "https://obby.dog/"
+  src-url: "https://obby.dog/"
   src: v
   cat: a
 
@@ -642,7 +658,7 @@
   src: s
   cat: g
 
-- image: "castleofdracula.png"
+- image: "castleofdracula"
   alt: "castleofdracula button"
   anim: y
   lnk-url: "http://castleofdracula.com.ru/"
@@ -887,6 +903,23 @@
   lnk-url: "ttps://web.archive.org/web/19991006230258im_/http://www.kde.org/img/logos/knlogo1.gif"
   ins-url: "https://web.archive.org/web/19991012194141/http://www.kde.org/"
   src: z
+  cat: b
+
+- image: "kde"
+  alt: "kde: be free! button"
+  anim: y
+  lnk-url: "https://kde.org/"
+  src-url: "https://notaventura.art/"
+  src: v
+  cat: b
+
+- image: "krita"
+  alt: "krita button"
+  smooth: y
+  anim: y
+  lnk-url: "https://krita.org/"
+  src-url: "https://notaventura.art/"
+  src: v
   cat: b
 
 - image: "konqi"

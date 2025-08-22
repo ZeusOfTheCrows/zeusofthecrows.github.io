@@ -6,15 +6,65 @@
   subtype: images
   subcontent:
     - image:
-      source: stamps/3ds.png
+      source: stamps/water.png
       type: stamp-99x56
       smooth: y
-      alt: "3ds game loading screen stamp"
+      alt: "water stamp"
 
     - image:
-      source: stamps/biota.png
+      source: stamps/water2.png
       type: stamp-99x56
-      alt: "biota intro screen stamp"
+      smooth: y
+      alt: "water stamp"
+
+    - image:
+      source: stamps/machine.png
+      type: stamp-99x56
+      smooth: y
+      alt: "machine stamp"
+
+    - image:
+      source: stamps/cat.png
+      type: stamp-99x56
+      smooth: y
+      alt: "nyan cat stamp"
+
+    - image:
+      source: stamps/nya.gif.png
+      type: stamp-99x56
+      smooth: y
+      alt: "nyan cat ms paint stamp"
+
+    - image:
+      source: stamps/machine.png
+      type: stamp-99x56
+      smooth: y
+      alt: "machine stamp"
+
+    - image:
+      source: stamps/amnesia.png
+      type: stamp-99x56
+      alt: "amnesia stamp"
+
+    - image:
+      source: stamps/purple-trees.png
+      type: stamp-99x56
+      alt: "amnesia stamp"
+
+    - image:
+      source: stamps/purple-sun.png
+      type: stamp-99x56
+      alt: "amnesia stamp"
+
+    - image:
+      source: stamps/hilo.png
+      type: stamp-99x56
+      alt: "amnesia stamp"
+
+    - image:
+      source: stamps/dont-touch-me.png
+      type: stamp-99x56
+      alt: "amnesia stamp"
 
     - image:
       source: stamps/kirbs.png
