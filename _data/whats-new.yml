@@ -171,6 +171,11 @@
       type: btn-88x31
       alt: "my pet flamingo button"
 
+    - image:
+      source: buttons/other/poke.png
+      type: btn-88x31
+      alt: "msx poke button"
+
 - content: new fanlisting codes have been added
   subtype: images
   subcontent:
