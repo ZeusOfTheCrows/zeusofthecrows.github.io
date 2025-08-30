@@ -120,6 +120,15 @@
   src: s
   cat: a
 
+- image: "other/bad-apple"
+  smooth: y
+  anim: y
+  alt: "bad apple button"
+  lnk-url: "https://www.youtube.com/watch?v=FtutLA63Cp8"
+  src-url: "https://tanukicomputing.neocities.org/"
+  src:
+  cat: a
+
 - image: "other/bellringer"
   smooth: y
   anim: y
@@ -437,10 +446,16 @@
 - image: "other/terra"
   alt: "citizen of terra (james cadle earth flag) button"
   anim: y
-  title: ""
   lnk-url: "http://flagofearth.org/original.html"
   ins-url: "http://flagofearth.org/original.html"
   src: z
+  cat: a
+
+- image: "bookmarks/tanuki"
+  alt: "tanuki computing - cde button"
+  lnk-url: "https://tanukicomputing.neocities.org/"
+  src-url: "https://tanukicomputing.neocities.org/"
+  src: v
   cat: a
 
 - image: "other/teeth"
@@ -816,6 +831,12 @@
   smooth: y
   lnk-url: "https://discord.com/"
   src: z
+  cat: b
+
+- image: "dr-who"
+  alt: "doctor who button"
+  smooth: y
+  src-url: "https://twitch.cymru/graphics"
   cat: b
 
 - image: "firefox"

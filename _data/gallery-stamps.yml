@@ -18,6 +18,12 @@
   src: z
   ins-url: "https://www.flickr.com/photos/unnamedculprit/17118405265/in/album-72157644163994901"
 
+- image: 682
+  smooth: y
+  alt: "scp-682 stamp"
+  src-url: "https://www.deviantart.com/tradt-production/art/SCP-682-Stamp-415918432"
+  src: v
+
 - image: abney
   smooth: y
   anim: y
@@ -144,6 +150,12 @@
   src: s
   ins-url: "https://www.reddit.com/r/DarkSouls2/comments/9a70wo/deleted_by_user/e4u3v1k/"
 
+- image: deer
+  smooth: y
+  alt: "deer with glowing eyes (scp-084) stamp"
+  ins-url: "https://scp-wiki.wikidot.com/log-084-a4"
+  src: z
+
 - image: diosdado
   anim: y
   alt: "blasphemous diosdado stamp"
@@ -250,6 +262,11 @@
   alt: "photo of html markup"
   src-url: "https://scifirenegade.neocities.org/about/graphs2.html"
 
+- image: ice-kirbs
+  smooth: n
+  alt: "ice kirby skating stamp"
+  src-url: "https://www.deviantart.com/blueeyedrat/art/Stamp-Ice-Kirby-145008655"
+
 - image: invaders
   anim: y
   alt: "space invaders stamp"
@@ -259,6 +276,13 @@
   anim: y
   alt: "kirby's adventure intro &quot;first you draw a circle&quot; stamp"
   src: z
+
+- image: laptop-scp
+  anim: y
+  smooth: y
+  alt: "scp logo on a laptop"
+  src-url: "https://www.deviantart.com/inomiiart/art/SCP-Stamp-685651017"
+  src: v
 
 - image: lava-lamp
   smooth: y
@@ -287,6 +311,11 @@
   alt: "linux: an os for masochists stamp"
   src-url: "https://leonidas.neocities.org/"
 
+- image: lttp
+  smooth: n
+  alt: "running link from zelda:alttp stamp"
+  src-url: "https://www.deviantart.com/gurinn/art/Zelda-Link-to-the-past-Stamp-75782250"
+
 - image: mac
   smooth: y
   anim: y
@@ -308,8 +337,8 @@
 
 - image: mars-u
   alt: "mars united [art deco]"
-  src: s
   ins-url: "https://blog.signalnoise.com/marsunited-prints-by-andy-rohr/"
+  src: s
 
 - image: mgs
   anim: y
@@ -324,6 +353,13 @@
 - image: metroidvania
   smooth: y
   alt: "metroidvania [combined logo] enthusiast stamp stamp"
+  src: s
+
+- image: multi-kirbs
+  anim: y
+  alt: "many kirbys stamp"
+  lnk-url: "https://www.spriters-resource.com/custom_edited/kirbycustoms/asset/61557/"
+  ins-url: "https://www.deviantart.com/phantomballoonboy64/art/Too-Much-Kirby-Stamp-618533440"
   src: s
 
 - image: murkwood
@@ -360,6 +396,12 @@
   lnk-url: "https://arstechnica.com/gadgets/2022/11/pantone-wants-15-month-for-the-privilege-of-using-its-colors-in-photoshop"
   src: z
   ins-url: "https://www.deviantart.com/king-lulu-deer/art/PANTONE-13-1125-Peach-Quartz-736555028"
+
+- image: pentacle
+  alt: "ave satanas stamp"
+  title: "edited, resized, and cleaned by me"
+  src-url: "https://www.deviantart.com/cheeto-goblin/art/ave-satanas-version-1-750405089"
+  src: v
 
 - image: phonebooth
   anim: y
@@ -477,6 +519,10 @@
   alt: "&quot;the sun is a deadly laser&quot; stamp"
   src-url: "https://corvidae.digital/graphics/"
 
+- image: thomas
+  alt: "thomas was alone stamp"
+  src-url: "https://www.deviantart.com/blueeyedrat/art/Stamp-Thomas-Was-Alone-388145599"
+
 - image: tvs
   smooth: y
   anim: y
@@ -528,6 +574,11 @@
   alt: "steampunk stamp"
   src: v
   src-url: "https://www.deviantart.com/seiorai/art/Steampunk-Stamp-173051979/"
+
+- image: sword-kirbs
+  anim: y
+  alt: "sword kirby stamp"
+  src-url: "https://www.deviantart.com/elidyss/art/Sword-Kirby-Stamp-562796558"
 
 - image: thinger
   smooth: y
@@ -658,6 +709,13 @@
   anim: y
   alt: "clippy &quot;Looks like you're commiting suicide&quot;"
   src-url: "https://finallyhappy000.tumblr.com/post/632539598817509376"
+  res: other
+  res: "100x50"
+
+- image: defender
+  smooth: y
+  alt: "williams defender title screen"
+  src: s
   res: other
 
 - image: flipsign

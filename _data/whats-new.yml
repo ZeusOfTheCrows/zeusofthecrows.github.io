@@ -102,9 +102,54 @@
       alt: "&quot;the sun is a deadly laser&quot; stamp"
 
     - image:
-      source: stamps/glass.png
+      source: stamps/682.png
       type: stamp-99x56
-      alt: "i support glass effects stamp"
+      alt: "scp-682 stamp"
+
+    - image:
+      source: stamps/deer.png
+      type: stamp-99x56
+      alt: "deer with glowing eyes stamp"
+
+    - image:
+      source: stamps/laptop-scp.png
+      type: stamp-99x56
+      alt: "laptop with scp logo stamp"
+
+    - image:
+      source: stamps/ice-kirbs.png
+      type: stamp-99x56
+      alt: "ice kirby skating stamp"
+
+    - image:
+      source: stamps/lttp.png
+      type: stamp-99x56
+      alt: "lttp link running stamp"
+
+    - image:
+      source: stamps/multi-kirbs.png
+      type: stamp-99x56
+      alt: "multiple kirbys stamp"
+
+    - image:
+      source: stamps/pentacle.png
+      type: stamp-99x56
+      alt: "satanic pentacle stamp"
+
+    - image:
+      source: stamps/sword-kirbs.png
+      type: stamp-99x56
+      alt: "sword kirby slashing stamp"
+
+    - image:
+      source: stamps/thomas.png
+      type: stamp-99x56
+      alt: "thomas was alone stamp"
+
+    - image:
+      source: stamps/defender.png
+      type: stamp
+      alt: "williams defender stamp"
 
     - image:
       source: buttons/other/vhs.png
@@ -172,7 +217,17 @@
       alt: "my pet flamingo button"
 
     - image:
-      source: buttons/other/poke.png
+      source: buttons/brands/dr-who.png
+      type: btn-88x31
+      alt: "doctor who button"
+
+    - image:
+      source: buttons/other/bad-apple.png
+      type: btn-88x31
+      alt: "bad apple button"
+
+    - image:
+      source: buttons/taskbar/best-viewed-with.png
       type: btn-88x31
       alt: "msx poke button"
 
