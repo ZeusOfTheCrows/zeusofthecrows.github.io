@@ -12,6 +12,12 @@
       alt: "water stamp"
 
     - image:
+      source: stamps/kirbs.png
+      type: stamp-99x56
+      anim: y
+      alt: "redrawn kirby's adventure stamp"
+
+    - image:
       source: stamps/water2.png
       type: stamp-99x56
       smooth: y
@@ -229,7 +235,7 @@
     - image:
       source: buttons/taskbar/best-viewed-with.png
       type: btn-88x31
-      alt: "msx poke button"
+      alt: "page best viewed with button"
 
 - content: new fanlisting codes have been added
   subtype: images

@@ -425,18 +425,18 @@
   alt: "there is no planet b stamp"
   src: z
 
+- image: portal-left
+  smooth: y
+  alt: "left half of portal logo, protruding through a portal"
+  src: v
+  src-url: "https://www.deviantart.com/sparklum/art/Portal-Stamp-Blue-209870753"
+
 - image: pope
   smooth: y
   anim: y
   spoiler: y
   alt: "His Holiness Escribar stamp (blasphemous)"
   src: s
-
-- image: portal-left
-  smooth: y
-  alt: "left half of portal logo, protruding through a portal"
-  src: v
-  src-url: "https://www.deviantart.com/sparklum/art/Portal-Stamp-Blue-209870753"
 
 - image: prie-dieu
   anim: y
@@ -456,17 +456,17 @@
   src-url: "https://www.deviantart.com/virus-xenon/art/Neon-Purple-Aesthetic-14-826986841"
   src: v
 
-- image: purple-trees
-  smooth: y
-  alt: "purple vaporwave forest stamp"
-  src-url: "https://www.deviantart.com/virus-xenon/art/Neon-Purple-Aesthetic-10-826973602"
-  src: v
-
 - image: portal-right
   smooth: y
   alt: "right half of portal logo, protruding through a portal"
   src: v
   src-url: "https://www.deviantart.com/sparklum/art/Portal-Stamp-Orange-209870758"
+
+- image: purple-trees
+  smooth: y
+  alt: "purple vaporwave forest stamp"
+  src-url: "https://www.deviantart.com/virus-xenon/art/Neon-Purple-Aesthetic-10-826973602"
+  src: v
 
 - image: rad
   smooth: y
@@ -522,6 +522,7 @@
 - image: thomas
   alt: "thomas was alone stamp"
   src-url: "https://www.deviantart.com/blueeyedrat/art/Stamp-Thomas-Was-Alone-388145599"
+  src: v
 
 - image: tvs
   smooth: y
@@ -710,7 +711,6 @@
   alt: "clippy &quot;Looks like you're commiting suicide&quot;"
   src-url: "https://finallyhappy000.tumblr.com/post/632539598817509376"
   res: other
-  res: "100x50"
 
 - image: defender
   smooth: y

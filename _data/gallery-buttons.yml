@@ -138,6 +138,14 @@
   src: v
   cat: a
 
+- image: "taskbar/best-viewed-with"
+  smooth: y
+  anim: y
+  alt: "page best viewed with a computer and monitor and a cup of tea button"
+  ins-url: "https://anlucas.neocities.org/browser7.gif"
+  src: s
+  cat: a
+
 - image: "taskbar/button"
   anim: y
   alt: "say no to missing img links, get a button Today!"
