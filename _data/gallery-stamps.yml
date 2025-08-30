@@ -18,6 +18,12 @@
   src: z
   ins-url: "https://www.flickr.com/photos/unnamedculprit/17118405265/in/album-72157644163994901"
 
+- image: 3ds
+  smooth: y
+  anim: y
+  alt: "3ds game launch splash screen stamp"
+  src: z
+
 - image: 682
   smooth: y
   alt: "scp-682 stamp"
