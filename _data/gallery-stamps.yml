@@ -426,16 +426,16 @@
   alt: "&quot;home taping is killing record industry profits - and you can help&quot; stamp"
   src: z
 
-- image: planet-b
-  smooth: y
-  alt: "there is no planet b stamp"
-  src: z
-
 - image: portal-left
   smooth: y
   alt: "left half of portal logo, protruding through a portal"
   src: v
   src-url: "https://www.deviantart.com/sparklum/art/Portal-Stamp-Blue-209870753"
+
+- image: planet-b
+  smooth: y
+  alt: "there is no planet b stamp"
+  src: z
 
 - image: pope
   smooth: y
@@ -456,17 +456,17 @@
   src: v
   src-url: "https://www.deviantart.com/byte-byte/art/Stamp-PSP-460345147"
 
-- image: purple-sun
-  smooth: y
-  alt: "purple vaporwave sunset stamp"
-  src-url: "https://www.deviantart.com/virus-xenon/art/Neon-Purple-Aesthetic-14-826986841"
-  src: v
-
 - image: portal-right
   smooth: y
   alt: "right half of portal logo, protruding through a portal"
   src: v
   src-url: "https://www.deviantart.com/sparklum/art/Portal-Stamp-Orange-209870758"
+
+- image: purple-sun
+  smooth: y
+  alt: "purple vaporwave sunset stamp"
+  src-url: "https://www.deviantart.com/virus-xenon/art/Neon-Purple-Aesthetic-14-826986841"
+  src: v
 
 - image: purple-trees
   smooth: y

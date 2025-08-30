@@ -9,7 +9,15 @@
       source: stamps/water.png
       type: stamp-99x56
       smooth: y
+      anim: y
       alt: "water stamp"
+
+    - image:
+      source: stamps/3ds.png
+      type: stamp-99x56
+      smooth: y
+      anim: y
+      alt: "3ds game launch splash screen stamp"
 
     - image:
       source: stamps/kirbs.png
@@ -40,12 +48,6 @@
       type: stamp-99x56
       smooth: y
       alt: "nyan cat ms paint stamp"
-
-    - image:
-      source: stamps/machine.png
-      type: stamp-99x56
-      smooth: y
-      alt: "machine stamp"
 
     - image:
       source: stamps/amnesia.png
