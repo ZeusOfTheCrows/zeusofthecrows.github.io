@@ -7,42 +7,43 @@ title:
 
 <!-- https://zeusofthecrows.ishoutbox.com/ -->
 
-<article id="whats-new" class="x-window">
-	<div id="welcome-titlebar" class="window-titlebar">
-		<span class="window-title">Changelog</span>
-		<ul class="window-decs" aria-hidden="true" role="presentation">
-			<li class="window-hlp"></li>
-			<li class="window-cls"></li>
-		</ul>
-	</div>
-	<div class="window-content">
-		<h1 style="animation: colour-cycle 5s linear infinite;">What's New</h1>
-		{% include whats-new.html %}
-	</div>
+<article id="whats-new">
+	<h1 style="animation: colour-cycle 5s linear infinite;">What's New</h1>
+	<ul>
+		{% for item in site.data.whats-new %}
+		<li>
+			{% if item.subcontent %}
+				<details>
+					<summary>
+						{{ item.content }}
+					</summary>
+					{% if item.subtype == "images" %}
+						<ul class="img-grid">
+						{% for image in item.subcontent %}
+							<li>
+								<img src="/stadt/assets/images/{{ image.source }}"
+									class="{{ image.type }}{% if image.smooth %} smooth-zoom{% endif %}{% if image.spoiler %} spoiler{% endif %}"
+									alt="{{ image.alt }}" />
+							</li>
+						{% endfor %}
+					</ul>
+					{% else %}
+						<ul>
+						{% for item in item.subcontent %}
+							<li>{{ item.content }}</li>
+						{% endfor %}
+						</ul>
+					{% endif %}
+				</details>
+			{% else %}
+			{{ item.content }}
+			{% endif %}
+		</li>
+		{% endfor %}
+	</ul>
 </article>
 
-<article id="intro-text" class="x-window">
-	<div class="window-titlebar">
-		<img class="window-icon"
-			src="/stadt/assets/images/window-icons/notepad.png" alt="" />
-		<span class="window-title">
-			Short Intro
-		</span>
-		<ul class="window-decs" aria-hidden="true" role="presentation">
-			<li class="window-min"></li>
-			<li class="window-max"></li>
-			<li class="window-cls"></li>
-		</ul>
-	</div>
-	<div class="window-menu" aria-hidden="true" role="presentation">
-		<ul>
-			<li><u>F</u>ile</li>
-			<li><u>E</u>dit</li>
-			<li><u>S</u>earch</li>
-			<li><u>H</u>elp</li>
-		</ul>
-	</div>
-	<div class="window-content">
+<article id="intro-text">
 		<h1 id="welcome-title">
 			<span id="welcome-serif">Welcome to</span>
 			<span id="welcome-sans">The Stadt</span>
@@ -245,398 +246,260 @@ title:
 	</div>
 </article>
 
-<article id="music-player" class="x-window">
-	<div class="window-titlebar">
-		<img class="window-icon"
-			src="/stadt/assets/images/window-icons/cd-audio.png" alt="" />
-		<span class="window-title">
-			Currently Playing
-		</span>
-		<ul class="window-decs" aria-hidden="true" role="presentation">
-			<li class="window-min"></li>
-			<li class="window-max"></li>
-			<li class="window-cls"></li>
-		</ul>
+<article id="music-player">
+	<div id="current-song"
+		style="--bg: url('https://i1.sndcdn.com/artworks-xZIfpEwwi7i0-0-t500x500.jpg')">
+		<!-- vol prop does ∅ - maybe in future -->
+		<audio controls="" volume="0.5" preload="none">
+			<source src="ZTODO"	type="audio/mp3" />
+			your browser does not support embedded audio
+		</audio>
 	</div>
-	<div class="window-menu" aria-hidden="true" role="presentation">
-		<ul>
-			<li><u>D</u>isc</li>
-			<li><u>V</u>iew</li>
-			<li><u>O</u>ptions</li>
-			<li><u>H</u>elp</li>
-		</ul>
-	</div>
-	<div class="window-content">
-		<div id="current-song" class="indent-9x"
-			style="--bg: url('https://i1.sndcdn.com/artworks-xZIfpEwwi7i0-0-t500x500.jpg')">
-			<!-- vol prop does ∅ - maybe in future -->
-			<audio controls="" volume="0.5" preload="none">
-				<source src="https://cdn.discordapp.com/attachments/1112380871803146314/1169653064282669148/Ego_Likeness_-_Burn_Witch_Burn_128_kbps.mp3"	type="audio/mp3" />
-				your browser does not support embedded audio
-			</audio>
-		</div>
-		<table>
-			<tr>
-				<td class="current-label">
-					<u>A</u>rtist:
-				</td>
-				<td class="indent-9x">
-					<a href="https://www.egolikenessband.com/">
-						Ego Likeness
-					</a>
-				</td>
-			</tr>
-			<tr>
-				<td class="current-label">
-					Trac<u>k</u>:
-				</td>
-				<td class="indent-9x">
-					<a href="https://www.youtube.com/watch?v=fWz67B1gO8A">
-						Burn Witch Burn
-					</a>
-				</td>
-			</tr>
-			<tr>
-				<td class="current-label">
-					<u>R</u>ecent:
-				</td>
-				<td class="indent-9x">
-					<a href="https://www.youtube.com/watch?v=dDiohxb-Eyc">
-						Pumping Iron Power - Grailknights
-					</a><br />
-					<a href="https://open.spotify.com/track/4AiJdDQPCdAdZiecHbuFc2">
-						Synthesizer - Electric  Six
-					</a><br />
-					<a href="https://open.spotify.com/track/3zodQoSA9p2jwSlFrYkzHF">
-						Tanz Mit Mir - Faun, Santiano
-					</a><br />
-					<a href="https://open.spotify.com/track/2ArOs9tz8SC5cP6SIMD3P5/">
-						Powerwolf - Amen & Attack
-					</a><br />
-					<a href="https://open.spotify.com/track/2ArOs9tz8SC5cP6SIMD3P5/">
-						Abney Park - Airship Pirate
-					</a>
-					<a class="btn-dropdown" href="#recently-played" style="float: right; display: none;">V</a>
-				</td>
-			</tr>
-		</table>
-		<ul class="button-grid">
-			<!-- https://yesterweb.org/radio -->
-			<li><a href="/stadt/thoughts#pirated-music">
-				<img class="btn-88x31"
-					src="/stadt/assets/images/buttons/music/licence.png"
-					alt="not licensed to supply recorded music" />
-			</a></li>
-			<li><a href="https://open.spotify.com/playlist/5q8crqSxKiqtpIKnAgkYRU">
-				<img class="btn-88x31 anim"
-					src="/stadt/assets/images/buttons/music/sovietwave.png"
-					alt="fan of sovietwave" />
-			</a></li>
-		</ul>
-	</div>
+	<table>
+		<tr>
+			<td>
+				Artist:
+			</td>
+			<td>
+				<a href="https://www.willeandthebandits.com/">
+					Wille and the Bandits
+				</a>
+			</td>
+		</tr>
+		<tr>
+			<td class="current-label">
+				Track:
+			</td>
+			<td>
+				<a href="https://www.youtube.com/watch?v=Kb4N7LMWH4A">
+					1970
+				</a>
+			</td>
+		</tr>
+		<tr>
+			<td class="current-label">
+				Recent:
+			</td>
+			<td>
+				<a href="https://www.youtube.com/watch?v=fWz67B1gO8A">
+					Burn Witch Burn - Ego Likeness
+				</a><br />
+				<a href="https://www.youtube.com/watch?v=dDiohxb-Eyc">
+					Pumping Iron Power - Grailknights
+				</a><br />
+				<a href="https://open.spotify.com/track/4AiJdDQPCdAdZiecHbuFc2">
+					Synthesizer - Electric  Six
+				</a><br />
+				<a href="https://open.spotify.com/track/3zodQoSA9p2jwSlFrYkzHF">
+					Tanz Mit Mir - Faun, Santiano
+				</a><br />
+				<a href="https://open.spotify.com/track/2ArOs9tz8SC5cP6SIMD3P5/">
+					Powerwolf - Amen & Attack
+				</a><br />
+				<a href="https://open.spotify.com/track/2ArOs9tz8SC5cP6SIMD3P5/">
+					Abney Park - Airship Pirate
+				</a>
+			</td>
+		</tr>
+	</table>
+	<ul class="button-grid">
+		<li><a href="/stadt/thoughts#pirated-music">
+			<img class="btn-88x31"
+				src="/stadt/assets/images/buttons/music/licence.png"
+				alt="not licensed to supply recorded music" />
+		</a></li>
+		<li><a href="https://open.spotify.com/playlist/5q8crqSxKiqtpIKnAgkYRU">
+			<img class="btn-88x31 anim"
+				src="/stadt/assets/images/buttons/music/sovietwave.png"
+				alt="fan of sovietwave" />
+		</a></li>
+	</ul>
 </article>
 
-<article id="neighbours" class="x-window">
-	<div class="window-titlebar">
-		<!-- <img class="window-icon pixel-art"
-			src="/stadt/assets/images/window-icons/quotes.png" alt="" /> -->
-		<span class="window-title">
-			Neighbours
-		</span>
-		<ul class="window-decs" aria-hidden="true" role="presentation">
-			<li class="window-min"></li>
-			<li class="window-max"></li>
-			<li class="window-cls"></li>
-		</ul>
-	</div>
-	<div class="window-menu" aria-hidden="true" role="presentation">
-		<ul>
-			<li><u>F</u>ile</li>
-			<li><u>E</u>dit</li>
-			<li><u>O</u>ptions</li>
-			<li><u>H</u>elp</li>
-		</ul>
-	</div>
-	<div class="window-content">
-		<ul class="img-grid img-capts link-list">
-			{% for item in site.data.links %}
-			<!-- i have NO idea why this has to be "!=" rather than "=="‽ maybe a bug‽ -->
-			{% if item.image and item.cat == "n" and item.res == nil or item.res != inf %}
-			<li id="{{ item.image | slugify: "ascii" }}">
-				<a{% if item.lnk-url != nil %}
-						href="{{ item.lnk-url }}"{% endif %}
-					{% if item.astyle != nil %}
-						style="{{ item.astyle }}"{% endif %}>
-				<img
-					{% if item.ext-url != nil %}
-					src="{{ item.ext-url }}"
-					{% else %}
-					src="/stadt/assets/images/buttons/bookmarks/{{ item.image }}.{{ item.ext | default: 'png' }}"
-					{% endif %}
-					{% if item.title != nil %}
-					title="{{ item.title }}"
-					{% endif %}
-					class="btn-88x31 {% if item.smooth == 'y' %}smooth-zoom{% endif %}
-						{% if item.anim == 'y' %}anim{% endif %}"
-					alt="{{ item.alt }}" />
-					</a>
-			</li>
-			{% endif %}
-			{% endfor %}
-		</ul>
-	</div>
+<article id="neighbours">
+	<ul class="img-grid img-capts link-list">
+		{% for item in site.data.links %}
+		<!-- i have NO idea why this has to be "!=" rather than "=="‽ maybe a bug‽ -->
+		{% if item.image and item.cat == "n" and item.res == nil or item.res != inf %}
+		<li>
+			<a{% if item.lnk-url != nil %}
+					href="{{ item.lnk-url }}"{% endif %}
+				{% if item.astyle != nil %}
+					style="{{ item.astyle }}"{% endif %}>
+			<img
+				{% if item.ext-url != nil %}
+				src="{{ item.ext-url }}"
+				{% else %}
+				src="/stadt/assets/images/buttons/bookmarks/{{ item.image }}.{{ item.ext | default: 'png' }}"
+				{% endif %}
+				{% if item.title != nil %}
+				title="{{ item.title }}"
+				{% endif %}
+				class="btn-88x31 {% if item.smooth == 'y' %}smooth-zoom{% endif %}
+					{% if item.anim == 'y' %}anim{% endif %}"
+				alt="{{ item.alt }}" />
+				</a>
+		</li>
+		{% endif %}
+		{% endfor %}
+	</ul>
 </article>
 
-<article id="quote" class="x-window">
-	<div class="window-titlebar">
-		<img class="window-icon pixel-art"
-			src="/stadt/assets/images/window-icons/quotes.png" alt="" />
-		<span class="window-title">
-			Quote of the Day
-		</span>
-		<ul class="window-decs" aria-hidden="true" role="presentation">
-			<li class="window-min"></li>
-			<li class="window-max"></li>
-			<li class="window-cls"></li>
-		</ul>
-	</div>
-	<div class="window-menu" aria-hidden="true" role="presentation">
-		<ul>
-			<li><u>F</u>ile</li>
-			<li><u>E</u>dit</li>
-			<li><u>O</u>ptions</li>
-			<li><u>H</u>elp</li>
-		</ul>
-	</div>
-	<div class="window-content">
-		<blockquote
-			cite="https://github.com/xoreaxeaxeax/movfuscator/tree/master/validation/doom">
-			The mov-only [version of] DOOM renders approximately one frame every 7
-			hours, so playing this version requires somewhat increased patience.
-		</blockquote>
-		<footer class="indent-9x">
-			<a href="https://github.com/xoreaxeaxeax/movfuscator/tree/master/validation/doom/"
-				>xoreaxeaxeax</a>
-			<time>2018</time>
-		</footer>
-	</div>
+<article id="quote">
+	<blockquote
+		cite="https://github.com/xoreaxeaxeax/movfuscator/tree/master/validation/doom">
+		The mov-only [version of] DOOM renders approximately one frame every 7
+		hours, so playing this version requires somewhat increased patience.
+	</blockquote>
+	<footer>
+		<a href="https://github.com/xoreaxeaxeax/movfuscator/tree/master/validation/doom/"
+			>xoreaxeaxeax</a>
+		<time>2018</time>
+	</footer>
 </article>
 
-<article id="daily-img" class="x-window">
-	<div class="window-titlebar">
-		<img class="window-icon pixel-art"
-			src="/stadt/assets/images/window-icons/art.png" alt="" />
-		<span class="window-title">
-			Image of the Day
-		</span>
-		<ul class="window-decs" aria-hidden="true" role="presentation">
-			<li class="window-min"></li>
-			<li class="window-max"></li>
-			<li class="window-cls"></li>
-		</ul>
-	</div>
-	<div class="window-menu" aria-hidden="true" role="presentation">
-		<ul>
-			<li><u>F</u>ile</li>
-			<li><u>E</u>dit</li>
-			<li><u>O</u>ptions</li>
-			<li><u>H</u>elp</li>
-		</ul>
-	</div>
-	<div class="window-content">
-		<figure>
-			<img src="/stadt/assets/images/gallery/draygon.png"
-						alt="samus aran and draygon animation" />
-		</figure>
-		<footer class="indent-9x">
-			<a href="https://cara.app/post/5b00fc96-1d20-4cd4-8370-78cbb658796e"
-				>Moonshen</a>
-			<time>2025</time>
-		</footer>
-	</div>
+<article id="daily-img">
+	<figure>
+		<img src="/stadt/assets/images/gallery/draygon.png"
+					alt="samus aran and draygon animation" />
+	</figure>
+	<footer>
+		<a href="https://cara.app/post/5b00fc96-1d20-4cd4-8370-78cbb658796e"
+			>Moonshen</a>
+		<time>2025</time>
+	</footer>
 </article>
 
-<article id="brands" class="x-window">
-	<div class="window-titlebar">
-		<img class="window-icon"
-			src="/stadt/assets/images/window-icons/buttons.png" alt="" />
-		<span class="window-title">
-			Useful Software
-		</span>
-		<ul class="window-decs" aria-hidden="true" role="presentation">
-			<li class="window-min"></li>
-			<li class="window-max"></li>
-			<li class="window-cls"></li>
-		</ul>
-	</div>
-	<div class="window-content">
-		<ul class="img-grid">
-			<li><a href="https://github.com/ZeusOfTheCrows/zeusofthecrows.github.io/">
-				<img class="btn-88x31 anim smooth-zoom" src="/stadt/assets/images/buttons/brands/gh-pages.png"
-					alt="powered by github pages" />
-			</a></li>
-			<li><a href="https://neocities.org/site/zeusofthecrows/">
-				<img class="btn-88x31 anim smooth-zoom" src="/stadt/assets/images/buttons/brands/neocities.png"
-					data-img-insp="https://web.archive.org/web/19961020015116/http://www3.netscape.com/"
-					alt="hosted on neocities" />
-			</a></li>
-			<li><a href="https://neocities.org/site/zeusofthecrows/">
-				<img class="btn-88x31" src="/stadt/assets/images/buttons/brands/sublime.png"
-					alt="made with sublime text editor" />
-			</a></li>
-			<li><a href="https://inkscape.org/">
-				<img class="btn-88x31" src="/stadt/assets/images/buttons/brands/inkscape.svg"
-					alt="inkscape 'draw freely.' logo" />
-			</a></li>
-			<li><a href="https://www.aseprite.org/">
-				<img class="btn-88x31 anim" src="/stadt/assets/images/buttons/brands/aseprite.png"
-					alt="aseprite logo animated" />
-			</a></li>
-			<li><a href="http://apngasm.sourceforge.net/">
-				<img class="btn-88x31" src="/stadt/assets/images/buttons/brands/apngasm.png"
-					alt="apng assembler" />
-			</a></li>
-			<li><a href="http://littlesvr.ca/apng/">
-				<img class="btn-88x31 anim" src="/stadt/assets/images/buttons/brands/apng.png"
-					data-img-source="~zeus"
-					alt="[animated] png now" />
-			</a></li>
-			<li><a href="https://contrachrome.com/">
-				<img class="btn-88x31 anim" src="/stadt/assets/images/buttons/brands/chromium.png"
-					alt="ie/chrome/brave logos 'same shit, different arsehole'" />
-			</a></li>
-			<li><a href="https://twitter.com/zetafleet/status/1075592527888220160">
-				<img class="btn-88x31 anim smooth-zoom" src="/stadt/assets/images/buttons/brands/firefox.png"
-					alt="mozilla now" />
-			</a></li>
-		</ul>
-		<hr />
-		<ul class="img-grid">
-			<li><a href="https://projects.linuxmint.com/cinnamon/">
-				<img class="btn-88x31" src="/stadt/assets/images/buttons/brands/cinnamon.png"
-					alt="linux mint cinnamon button" />
-			</a></li>
-			<li><a href="https://kde.org/">
-				<img class="btn-88x31 smooth-zoom" src="/stadt/assets/images/buttons/brands/konqi.png"
-					alt="konqi (kde mascot) button" />
-			</a></li>
-			<li><a href="https://linuxmint.com/">
-				<img class="btn-88x31 smooth-zoom" src="/stadt/assets/images/buttons/brands/mint.png"
-					alt="linux mint button" />
-			</a></li>
-			<li><a href="https://web.archive.org/web/20080528034856/http://www.kde.org/">
-				<img class="btn-88x31 anim smooth-zoom" src="/stadt/assets/images/buttons/brands/kool-de.png"
-					alt="kool desktop environment button" />
-			</a></li>
-			<li><a href="https://fedoraproject.org/kde/">
-				<img class="btn-88x31 smooth-zoom" src="/stadt/assets/images/buttons/brands/fedora.png"
-					alt="powered by fedora button" />
-			</a></li>
-			<li><a href="https://xenia-linux-site.glitch.me/">
-				<img class="btn-88x31" src="/stadt/assets/images/buttons/brands/xenia.png"
-					data-img-src="https://voltbun.neocities.org/"
-					alt="xenia the fox linux button" />
-			</a></li>
-		</ul>
-		<hr />
-		<ul class="img-grid">
-			<li><a href="https://metroid2remake.blogspot.com/">
-				<img class="btn-88x31 smooth-zoom"
-					src="/stadt/assets/images/buttons/games/am2r.png"
-					data-img-source="https://drakul78.neocities.org/links"
-					alt="sven coop" />
-			</a></li>
-			<li><a href="http://svencoop.com/">
-				<img class="btn-88x31 anim smooth-zoom"
-					src="/stadt/assets/images/buttons/games/sven-coop.png"
-					data-img-source="http://svencoop.com/"
-					alt="sven coop" />
-			</a></li>
-		</ul>
-	</div>
+	<article id="brands">
+	<ul class="img-grid">
+		<li><a href="https://github.com/ZeusOfTheCrows/zeusofthecrows.github.io/">
+			<img class="btn-88x31 anim smooth-zoom" src="/stadt/assets/images/buttons/brands/gh-pages.png"
+				alt="powered by github pages" />
+		</a></li>
+		<li><a href="https://neocities.org/site/zeusofthecrows/">
+			<img class="btn-88x31 anim smooth-zoom" src="/stadt/assets/images/buttons/brands/neocities.png"
+				data-img-insp="https://web.archive.org/web/19961020015116/http://www3.netscape.com/"
+				alt="hosted on neocities" />
+		</a></li>
+		<li><a href="https://neocities.org/site/zeusofthecrows/">
+			<img class="btn-88x31" src="/stadt/assets/images/buttons/brands/sublime.png"
+				alt="made with sublime text editor" />
+		</a></li>
+		<li><a href="https://inkscape.org/">
+			<img class="btn-88x31" src="/stadt/assets/images/buttons/brands/inkscape.svg"
+				alt="inkscape 'draw freely.' logo" />
+		</a></li>
+		<li><a href="https://www.aseprite.org/">
+			<img class="btn-88x31 anim" src="/stadt/assets/images/buttons/brands/aseprite.png"
+				alt="aseprite logo animated" />
+		</a></li>
+		<li><a href="http://apngasm.sourceforge.net/">
+			<img class="btn-88x31" src="/stadt/assets/images/buttons/brands/apngasm.png"
+				alt="apng assembler" />
+		</a></li>
+		<li><a href="http://littlesvr.ca/apng/">
+			<img class="btn-88x31 anim" src="/stadt/assets/images/buttons/brands/apng.png"
+				data-img-source="~zeus"
+				alt="[animated] png now" />
+		</a></li>
+		<li><a href="https://contrachrome.com/">
+			<img class="btn-88x31 anim" src="/stadt/assets/images/buttons/brands/chromium.png"
+				alt="ie/chrome/brave logos 'same shit, different arsehole'" />
+		</a></li>
+		<li><a href="https://twitter.com/zetafleet/status/1075592527888220160">
+			<img class="btn-88x31 anim smooth-zoom" src="/stadt/assets/images/buttons/brands/firefox.png"
+				alt="mozilla now" />
+		</a></li>
+	</ul>
+	<hr />
+	<ul class="img-grid">
+		<li><a href="https://projects.linuxmint.com/cinnamon/">
+			<img class="btn-88x31" src="/stadt/assets/images/buttons/brands/cinnamon.png"
+				alt="linux mint cinnamon button" />
+		</a></li>
+		<li><a href="https://kde.org/">
+			<img class="btn-88x31 smooth-zoom" src="/stadt/assets/images/buttons/brands/konqi.png"
+				alt="konqi (kde mascot) button" />
+		</a></li>
+		<li><a href="https://linuxmint.com/">
+			<img class="btn-88x31 smooth-zoom" src="/stadt/assets/images/buttons/brands/mint.png"
+				alt="linux mint button" />
+		</a></li>
+		<li><a href="https://web.archive.org/web/20080528034856/http://www.kde.org/">
+			<img class="btn-88x31 anim smooth-zoom" src="/stadt/assets/images/buttons/brands/kool-de.png"
+				alt="kool desktop environment button" />
+		</a></li>
+		<li><a href="https://fedoraproject.org/kde/">
+			<img class="btn-88x31 smooth-zoom" src="/stadt/assets/images/buttons/brands/fedora.png"
+				alt="powered by fedora button" />
+		</a></li>
+		<li><a href="https://xenia-linux-site.glitch.me/">
+			<img class="btn-88x31" src="/stadt/assets/images/buttons/brands/xenia.png"
+				data-img-src="https://voltbun.neocities.org/"
+				alt="xenia the fox linux button" />
+		</a></li>
+	</ul>
 </article>
 
-<article id="webrings" class="x-window">
-	<div id="webrings-titlebar" class="window-titlebar">
-		<img class="window-icon pixel-art"
-			src="/stadt/assets/images/window-icons/webring.png" alt="" />
-		<span class="window-title">
-			Webring Navigator
-		</span>
-		<ul class="window-decs" aria-hidden="true" role="presentation">
-			<li class="window-min"></li>
-			<li class="window-cls"></li>
+<article id="webrings">
+	<section id="wr-intro">
+		<p>this site is a proud member of the following webrings!</p>
+		<p>
+			read more about webrings
+			<a href="https://sadgrl.online/cyberspace/surf-the-web.html">here</a>
+		</p>
+	</section>
+	<section id="wr-nojs" class="webring">
+		<a id="nojs-site">zeus' stadt</a>
+		<a id="nojs-prev" href="https://nojs.sugarfi.dev/prev.php?url=https://zeusofthecrows.github.io">prev</a>
+		<a id="nojs-next" href="https://nojs.sugarfi.dev/next.php?url=https://zeusofthecrows.github.io">next</a>
+		<a id="nojs-rand" href="https://nojs.sugarfi.dev/rand.php">rand</a></li>
+		<a id="nojs-link" href="https://nojs.sugarfi.dev/">no js webring</a>
 		</ul>
-	</div>
-	<div class="window-menu" aria-hidden="true" role="presentation">
-		<ul>
-			<li><u>F</u>ile</li>
-			<li><u>E</u>dit</li>
-			<li><u>V</u>iew</li>
-			<li>G<u>o</u></li>
-			<li><u>H</u>elp</li>
-		</ul>
-	</div>
-	<div class="window-content">
-		<section id="wr-intro">
-			<p>this site is a proud member of the following webrings!</p>
-			<p>
-				read more about webrings
-				<a href="https://sadgrl.online/cyberspace/surf-the-web.html">here</a>
-			</p>
-		</section>
-		<section id="wr-nojs" class="webring">
-			<a id="nojs-site">zeus' stadt</a>
-			<a id="nojs-prev" href="https://nojs.sugarfi.dev/prev.php?url=https://zeusofthecrows.github.io">prev</a>
-			<a id="nojs-next" href="https://nojs.sugarfi.dev/next.php?url=https://zeusofthecrows.github.io">next</a>
-			<a id="nojs-rand" href="https://nojs.sugarfi.dev/rand.php">rand</a></li>
-			<a id="nojs-link" href="https://nojs.sugarfi.dev/">no js webring</a>
-			</ul>
-		</section>
-		<!-- /!\ div *must* have these classes /!\ -->
-		<section id="wr-yester" class="webring">
-			<!-- all this content is a placeholder for users with js disabled -->
-			<h3 class="yw-title yw-title-nojs">Yesterweb Ring</h3>
-			<p>
-				This site, <strong><a href="https://zeusofthecrows.github.io/stadt">
-				ZeusOfTheCrows</a></strong>, is keeping the old web alive. Thanks,
-				<strong>~Zeus</strong>!
-			</p>
-			<p>
-				<a href="https://webring.yesterweb.org/noJS/index.php?d=next&url=https://zeusofthecrows.github.io/">
-					[Next]</a>
-				<a href="https://webring.yesterweb.org/noJS/index.php?d=prev&url=https://zeusofthecrows.github.io/">
-					[Prev]</a>
-				<a href="https://webring.yesterweb.org/noJS/index.php?d=rand&url=https://zeusofthecrows.github.io/">
-					[Rand]</a>
-				<br />
-				<a href="https://yesterweb.org/webring/members.html">
-					[members]</a>
-			</p>
-		</section>
+	</section>
+	<!-- /!\ div *must* have these classes /!\ -->
+	<section id="wr-yester" class="webring">
+		<!-- all this content is a placeholder for users with js disabled -->
+		<h3 class="yw-title yw-title-nojs">Yesterweb Ring</h3>
+		<p>
+			This site, <strong><a href="https://zeusofthecrows.github.io/stadt">
+			Zeus' Stadt</a></strong>, is keeping the old web alive. Thanks,
+			<strong>~Zeus</strong>!
+		</p>
+		<p>
+			<a href="https://webring.yesterweb.org/noJS/index.php?d=next&url=https://zeusofthecrows.github.io/">
+				[Next]</a>
+			<a href="https://webring.yesterweb.org/noJS/index.php?d=prev&url=https://zeusofthecrows.github.io/">
+				[Prev]</a>
+			<a href="https://webring.yesterweb.org/noJS/index.php?d=rand&url=https://zeusofthecrows.github.io/">
+				[Rand]</a>
+			<br />
+			<a href="https://yesterweb.org/webring/members.html">
+				[members]</a>
+		</p>
+	</section>
 
-		<section id="wr-geekring" class="indent-9x">
-			<p>
-				Check out the other awesome websites in <span>The
-				<a href="https://geekring.net">Geek Ring!</a></span>
-			</p>
-			<a href="http://geekring.net/site/139/previous"
-				class="btn-9x">&lt;- Previous</a>
-			<a href="http://geekring.net/site/139/random"
-				class="btn-9x">Random</a>
-			<a href="http://geekring.net/site/139/next"
-				class="btn-9x">Next -&gt;</a>
-		</section>
+	<section id="wr-geekring">
+		<p>
+			Check out the other awesome websites in <span>The
+			<a href="https://geekring.net">Geek Ring!</a></span>
+		</p>
+		<a href="http://geekring.net/site/139/previous"
+			class="btn-9x">&lt;- Previous</a>
+		<a href="http://geekring.net/site/139/random"
+			class="btn-9x">Random</a>
+		<a href="http://geekring.net/site/139/next"
+			class="btn-9x">Next -&gt;</a>
+	</section>
 
-		<section id="wr-hotline">
-			<p lang="und-Zsym">
-				<!-- this is a perversion of the lang attribute, but it's the only
-					way to get chrome android to display emojis as monochrome -->
-				<a href="https://hotlinewebring.club/zeus/previous">&lt;&lt;&lt;&lt;</a>
-				<a href="https://hotlinewebring.club/"
-				>&#9742;&nbsp;Hotline&nbsp;&#9742;</a>
-				<a href="https://hotlinewebring.club/zeus/next"    >&gt;&gt;&gt;&gt;</a>
-			</p>
-		</section>
-	</div>
+	<section id="wr-hotline">
+		<p lang="und-Zsym">
+			<!-- this is a perversion of the lang attribute, but it's the only
+				way to get chrome android to display emojis as monochrome -->
+			<a href="https://hotlinewebring.club/zeus/previous">&lt;&lt;&lt;&lt;</a>
+			<a href="https://hotlinewebring.club/"
+			>&#9742;&nbsp;Hotline&nbsp;&#9742;</a>
+			<a href="https://hotlinewebring.club/zeus/next"    >&gt;&gt;&gt;&gt;</a>
+		</p>
+	</section>
 </article>
