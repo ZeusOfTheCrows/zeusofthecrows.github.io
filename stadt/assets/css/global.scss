@@ -1,14 +1,8 @@
 ---
 ---
 
-// https://www.deviantart.com/niivu/art/Macindows-870073866
-// https://gist.github.com/bluh/2b95102fd6d3732dc9825be749498fa9
-// https://88x31.tumblr.com/
-// ztodo consolidate fonts
-// maybe use grid? probably not
-// https://win98icons.alexmeub.com/
-// ztodo lots of things have mar 0 pad 0 - maybe consolidate?
 // https://www.youtube.com/watch?v=8MaCTDkoVd8&t=954s
+// https://codersblock.com/blog/the-surprising-things-that-css-can-animate/#text-selection-trick
 
 /* =============================== variables =============================== */
 
@@ -18,34 +12,6 @@
 :root {
 	scroll-behavior: smooth;
 	scroll-padding-top: 10vh;
-
-	--fnt-serif:"EaduiMedium", "Garamond", "Times New Roman", serif;
-	--fnt-bltr: "chomskyRegular", "KJV1611Regular", serif;
-	--fnt-sans:	Ubuntu, sans-serif;
-	// --fnt-sans:	"FiraSansRegular", "Fira Sans", Helvetica, Arial, sans-serif;
-	--fnt-mono:	"FiraMonoRegular", "Fira Mono", monospace;
-	--fnt-code:	"FiraCodeRegular", "Fira Code", "FiraMonoRegular", "Fira Mono", monospace;
-	--fnt-ipa: 	"FiraSansRegular", "Fira Sans", Arial, Sans-Serif;  // don't fallback to helvetica
-	--fnt-zswa:	"Arial", sans-serif;  // font for "Ɀ" - unused
-
-	--tb-hite:  28px;  // taskbar height
-	--dt-padd: 72px;  //?\ desktop padding
-
-	--inset-text-top: #000000C0;  // inset text
-	--inset-text-btm: #FFFFFF40;  // colours
-
-	--inset-text-colour: #DCD8D0;
-	--inset-text-shadow:
-		0px -1px 0px var(--inset-text-top),
-		0px  1px 0px var(--inset-text-btm);  // ztodo .inset-text, window > text, header > text
-		--ubuntu-grad:
-		linear-gradient(
-			#616254 5%,
-			#5b594D 10%,
-			#4D4C47 48%,
-			#4D4C47 52%,
-			#3F403B 100%
-		);
 
 	--d-red: #DF382C;
 	--d-grn: #4E9A06;
@@ -74,10 +40,6 @@
 	--txt-2: #DFDBD2;
 	--txt-1: #EBEBEB;
 	--txt-0: #FFFFFF;
-
-	--brdr-dark: #2D2D2A;
-	--btn-hilite: var(--bgd-5);
-	--btn-lolite: var(--bgd-0);
 }
 
 /* light mode colours */
@@ -113,11 +75,38 @@
 		--txt-1: #3C3836;
 		--txt-0: #282828;
 
-		--btn-hilite: var(--bgd-0);
-		--btn-lolite: var(--bgd-4);
 	}
 }
 
+body:has(option[value="gb"]:checked) {
+	--d-red: #DF382C;
+	--d-grn: #4E9A06;
+	--d-ylw: #C4A000;
+	--d-blu: #3465A4;
+	--d-ppl: #75507B;
+	--d-aqa: #06989A;
+	--d-org: #E95420;
+
+	--s-red: #EF2929;
+	--s-grn: #8AE234;
+	--s-ylw: #FCE94F;
+	--s-blu: #729FCF;
+	--s-ppl: #AD7FA8;
+	--s-aqa: #34E2E2;
+	--s-org: #F07746;
+
+	--bgd-0: #474640;
+	--bgd-1: #4E4C46;
+	--bgd-2: #5A5850;
+	--bgd-3: #4F4D47;
+	--bgd-4: #595854;
+	--bgd-5: #616254;
+	--txt-4: #969693;
+	--txt-3: #BAB8B2;
+	--txt-2: #DFDBD2;
+	--txt-1: #EBEBEB;
+	--txt-0: #FFFFFF;
+}
 /* ========================== accessibility styles ========================== */
 
 @media (prefers-reduced-motion) {
@@ -137,8 +126,6 @@ body {
 	-webkit-text-size-adjust: none;
 	-moz-text-size-adjust: none;
 	text-size-adjust: none;
-	width:  100%;
-	height: 100%;
 
 	accent-color: var(--s-org);
 }
@@ -146,7 +133,6 @@ body {
 html {
 	& ::selection {
 		border-radius: 0.1em; // this doesn't work but it would be nice if it did
-		background: var(--d-org);
 		color: var(--txt-0);
 		// doesn't work in ff? even with !important
 		text-decoration-color: var(--bgd-0);
@@ -169,10 +155,6 @@ html {
 	}
 }
 
-.window-content {  // for inheritance "bug"
-	color: var(--txt-1);
-}
-
 body {
 	color: var(--txt-1);
 	font-family: var(--fnt-sans);
@@ -180,99 +162,17 @@ body {
 	margin:0;
 	padding:0;
 	border:0;
-
-	// ztodo this is a weird fix for a weird scrolling bug
-	position: absolute;
-	inset: 0;
-
-	// overflow-anchor: none;  // why was this here??
-
-
-	background-blend-mode: lighten;
-	// background-color: var(--dsk-bg-col, #22091E);
-	background-attachment: fixed;
-	background-image:
-		var(--dsk-bg-img, url(/stadt/assets/images/backgrounds/texture.png)),
-		radial-gradient(circle at center, #EDBA8DA0 5%, transparent 75%),
-		// linear-gradient(to right, #26021E10, #B6322680),
-		linear-gradient(#26021E, #B63226);
-	// winter colours:
-	// background-color: var(--dsk-bg-col, var(--d-blu));
-
-	/*https://web.archive.org/web/20091027151405/http://www.geocities.com/coondogk9/animsnow.gif*/
-	// background-image: url("/stadt/assets/images/backgrounds/snow-small.png");
-
-	/*https://web.archive.org/web/20040414012444fw_/http://www.geocities.com/joannewww/jwbgs/snow.htm*/
-	// background-image: url("/stadt/assets/images/backgrounds/snow-large.png");
-	// animation: none !important;
-
+	text-align: justify;
 }
 
+/*
 h1 { font-size: 2.2em; }
 h2 { font-size:   2em; }
 h3, .h-summ { font-size: 1.8em; }
 h4 { font-size: 1.6em; }
 h5 { font-size: 1.4em; }
-h6 { font-size: 1.2em; }
+h6 { font-size: 1.2em; }*/
 
-h1,
-h2 {
-	// doesn't work with in-header spans
-	// https://csspoo.com/line-through-headings
-	// display: flex;
-	// width: 100%;
-	// align-items: center;
-	// // grid-template-columns: minmax(1rem, 1fr) auto minmax(1rem, 1fr);
-	// // grid-auto-flow: column;
-	// gap: 1em;
-
-	// &::before,
-	// &::after {
-	//	content: "";
-	//	height: 0.1em;
-	//	border-radius: 99vmax;
-	// }
-
-	// &::before {
-	//	background-image:
-	//		linear-gradient(
-	//			to left,
-	//			var(--s-org),
-	//			var(--d-org),
-	//			transparent);
-	// }
-
-	// &::after {
-	//	background-image:
-	//		linear-gradient(
-	//			to right,
-	//			var(--s-org),
-	//			var(--d-org),
-	//			transparent);
-	// }
-
-	margin-block: 0.5em;
-	border-bottom: 0.1em solid var(--d-org);
-	border-image-source:
-		radial-gradient(
-			circle at bottom,
-			var(--s-org),
-			var(--d-org),
-			transparent
-		);
-	border-image-slice: 1;
-	// border-inline: 0.1em solid transparent;  // for mitred corners
-	& mark {
-		border-bottom-left-radius:  0;
-		border-bottom-right-radius: 0;
-	}
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
 .h-summ {
 	margin-inline: 0.5em;
 	font-family: var(--fnt-serif);
@@ -283,32 +183,13 @@ h6,
 	}
 }
 
+/*
 hr {
 	border: 1px solid transparent;
 	border-top-color: var(--bgd-0);
 	border-bottom-color: var(--bgd-5);
 	margin-inline: 1em;
-}
-
-strong {
-	color: var(--s-ylw);
-}
-b { // bold (for ctrl+f)
-	color: var(--d-ylw);
-}
-
-small {
-	color: var(--txt-4);
-}
-
-em {
-	color: var(--s-org);
-}
-i,
-q { // italic & quote (for ctrl+f)
-	color: var(--d-org);
-	font-style: italic;
-}
+}*/
 
 blockquote {
 	// margin-left: 1ch;
@@ -358,15 +239,15 @@ ins {
 	text-decoration-color: var(--s-grn);
 }
 
-kbd {  // keyboard (ctrl+f)
-	background-color: var(--bgd-3);
-	padding-inline: 0.3em;
-	padding-top: 0.3em;
-	border-radius: 0.2em;
-	font-size: 1em;
-	box-shadow:
-			-2px -2px 0 var(--btn-hilite),
-			 2px  2px 0 var(--btn-lolite);
+// kbd {  // keyboard (ctrl+f)
+// 	background-color: var(--bgd-3);
+// 	padding-inline: 0.3em;
+// 	padding-top: 0.3em;
+// 	border-radius: 0.2em;
+// 	font-size: 1em;
+// 	box-shadow:
+// 			-2px -2px 0 var(--btn-hilite),
+// 			 2px  2px 0 var(--btn-lolite);
 
 	// for after (widthless border)
 	// position: relative;
@@ -382,9 +263,11 @@ kbd {  // keyboard (ctrl+f)
 		// bottom: 0;
 		// border-radius: 0.3em;
 	// }
-}
+// }
 
-a {
+a:any-link {
+	font-weight: bold;
+
 	&[href^="mailto"] {
 		cursor: progress;
 	}
@@ -399,8 +282,6 @@ a {
 	}
 	&:active, &:focus {
 		color: var(--s-red);
-	}
-	&:any-link:hover {
 		outline: 1px dotted;
 		&:has(*) {
 			outline: none;
@@ -409,11 +290,11 @@ a {
 }
 
 /* ========================= class generic styles ========================== */
-
+/*
 .faux-inf::after {  // fake infinity symbol as eadui doesn't have one
 	content: "00\00a0\00a0";
 	letter-spacing: -4px;
-}
+}*/
 
 pre,
 samp,
@@ -446,38 +327,13 @@ code {  // code formating below
 	}
 }
 
-// .spoiler:not(img) {
-// 	background-color: var(--s-aqa);
-// 	color: var(--s-aqa);
-
-// 	&:hover,
-// 	&:active {
-// 		background-color: revert-layer;
-// 		color: revert-layer;
-// 	}
-// }
-// img.spoiler {
-// 	// from https://codepen.io/sosuke/pen/Pjoqqp:
-// 	filter:
-// 		brightness(0)
-// 		invert(85%)
-// 		sepia(20%)
-// 		saturate(1479%)
-// 		hue-rotate(124deg)
-// 		brightness(92%)
-// 		contrast(93%);
-
-// 	&:hover,
-// 	&:active {
-// 		filter: revert;
-// 	}
-// }
-
 .captioned,
 abbr {
 	cursor: help;
 	color: var(--s-aqa);
 	position: relative;
+
+	// mobile tap titles
 
 	&:active::after,
 	&:focus::after {
@@ -498,11 +354,13 @@ abbr {
 		color: var(--bgd-0);
 	}
 }
+
 // @media (hover: none)
 
 .ipa {
 	font-family: var(--fnt-ipa);
 }
+// this is for the fonts in logfile
 .glyph-showcase[lang="sr"] {
 	font-family: "Overpass", "OverpassRegular";
 }
@@ -536,17 +394,40 @@ code {
 	}
 }
 
-.btn-88x31,
-.btn-176x31,
-.btn-80x15,
-.btn-150x20,
-.stamp-99x56,
-.stamp-100x50,
+.btn-88x31 {
+	width:  88px;
+	height: 31px;
+}
+.btn-88x31[src$=".svg"] {
+	// this shouldn't make a difference, but seems to reduce shimmering on scale
+	image-rendering: auto;
+}
+.btn-176x31 {
+	width:  176px;
+	height: 31px;
+}
+.btn-80x15 {
+	width:  80px;
+	height: 15px;
+}
+.btn-150x20 {
+	width: 150px;
+	height: 20px;
+}
+.stamp-99x56 {
+	width:  99px;
+	height: 56px;
+}
+.stamp-100x50 {
+	width: 100px;
+	height: 50px;
+}
+
+[classs^="btn"],
+[classs^="stamp"],
 .tower,
 .pixel-art,
-.desktop-icon img,
-.window-icon,
-.window-title:before {
+.desktop-icon img, {
 	/* render pixel art pixelly when zoomed in */
 	image-rendering: pixelated;   /* fallback, pixellated */
 	image-rendering: crisp-edges; /* unsure, filter e.g. hq2x */
@@ -570,7 +451,7 @@ img.smooth-zoom {
 	& li {
 		display: inline-block;
 		// ~~i don't know why, but inline-block aligns to bottom~~ fixed:
-		vertical-align: top;
+		vertical-align: bottom;
 		& a {
 			text-decoration: none;
 		}
@@ -610,35 +491,6 @@ img.smooth-zoom {
 	}
 }
 
-.btn-88x31 {
-	width:  88px;
-	height: 31px;
-}
-.btn-88x31[src$=".svg"] {
-	// this shouldn't make a difference, but seems to reduce shimmering on scale
-	image-rendering: auto;
-}
-.btn-176x31 {
-	width:  176px;
-	height: 31px;
-}
-.btn-80x15 {
-	width:  80px;
-	height: 15px;
-}
-.btn-150x20 {
-	width: 150px;
-	height: 20px;
-}
-.stamp-99x56 {
-	width:  99px;
-	height: 56px;
-}
-.stamp-100x50 {
-	width: 100px;
-	height: 50px;
-}
-
 .img-aside {
 	width: min-content;
 	transform: rotate(var(--rot));
@@ -656,123 +508,7 @@ img.smooth-zoom {
 	// placeholder in case i need to format the special glyph
 // }
 
-.x-window {
-	position: absolute;
-	box-shadow: 4px 4px 8px -4px black;
-	--window-radius: 8px;  // use for titlebar too
-	border-top-left-radius:  var(--window-radius);
-	border-top-right-radius: var(--window-radius);
-	border-bottom-left-radius:  2px;
-	border-bottom-right-radius: 2px;
-	background-color: var(--bgd-1);
-	&.window-fixed {
-		position: fixed;
-	}
-
-	&:target {
-		z-index: 90 !important;  // makes page scroll sometimes - is this acceptable?
-	}
-}
-
-.window-titlebar {
-	background: var(--ubuntu-grad);
-	border-top-left-radius: 8px;
-	border-top-right-radius: 8px;
-	color: var(--title-col, var(--inset-text-colour));
-	text-align: center;
-	text-shadow: var(--inset-text-shadow);
-
-	position: relative;
-	margin: 0px 0px 2px 0px;
-	padding: 4px 8px;
-	height: 20px;
-
-	user-select: none;
-
-	& .window-title {
-		/* remove link styling for titles */
-		color: inherit;
-		font-style: italic;
-		font-weight: bold;
-		text-decoration: none;
-		cursor: default;
-		padding: 4px;
-	}
-	& .window-icon {
-		display: none;  // removing for now as svg's are large, may replace later
-		vertical-align: middle;
-		float: left;
-	}
-
-	/* ======================================================================	*\
-	||         all window decoration svgs from material design icons:        	||
-	||                    https://materialdesignicons.com/                   	||
-	||             ztodo https://www.compart.com/en/unicode/U+1F5D7          	||
-	\* ======================================================================	*/
-	& .window-decs {
-		margin: 0;
-		max-height: 100%;
-		position: absolute;
-		top: 4px;
-		right: 4px;
-		bottom: 4px;
-		margin-block: auto;
-
-		& li {
-			visibility: hidden;  // hide to replace with before pseudo
-			font-family: "Material Design Icons";
-			display: inline-block;
-			// margin: auto;
-			user-select: none;
-
-			visibility: visible;
-			// display: inline-block;
-			position: relative;
-			margin: 0;
-
-			height: 16px;
-			aspect-ratio: 1;
-
-			font-size: 11px;
-			// line-height: 1.2em;  // for vert cenre in chrome ?depped
-			background-image: linear-gradient(#969590, #5C5B57);
-			color: #423630;
-			// border: 1px solid #423630;
-			box-shadow: 0 0 0 1px #423630;
-			box-sizing: border-box;
-			text-shadow: 0 1px 0 var(--inset-text-btm);
-			border-radius: 99vw;
-		}
-
-		& .window-min:before {
-			content: "🗕";
-			content: url(/stadt/assets/images/window-icons/window-minimise.svg);
-		}
-		& .window-max:before {
-			content: "🗖";
-			content: url(/stadt/assets/images/window-icons/window-maximise.svg);
-		}
-		& .window-rst:before {
-			content: "🗗";
-			content: url(/stadt/assets/images/window-icons/window-restore.svg);
-		}
-		& .window-cls:before {
-			content: "🗙";
-			content: url(/stadt/assets/images/window-icons/window-close.svg);
-		}
-
-
-		& .window-hlp {
-			display: none;
-		}
-		& .window-cls {
-			color: #32312e;
-			background-image: linear-gradient(#F19478, #DA4D1C);
-		}
-	}
-}
-
-.indent-9x,
+.indent,
 .copy-all,
 textarea {
 	margin: 0;
@@ -796,91 +532,94 @@ textarea {
 	to { user-select: text; }
 }
 
-.outdent-9x,
-// .x-window/* :not(.window-maximised), */,
-.btn-9x,
-.btn-dropdown:before, {
-	background-color: var(--bgd-2);
-	// padding: 4px;
+// ZTODO: MOVE TO HOMEPAGE OR LINKS (WHEREVER WEBRINGS ARE)
+.btn-9x {
+	background-color: grey;
 	padding: 2px;
 	border-width: 2px;
 	border-style: solid;
-	border-top-color:    var(--btn-hilite);
-	border-left-color:   var(--btn-hilite);
-	border-bottom-color: var(--btn-lolite);
-	border-right-color:  var(--btn-lolite);
+	border-top-color:    white;
+	border-left-color:   white;
+	border-bottom-color: black;
+	border-right-color:  black;
 	outline-offset: -5px;
-}
-.window-maximised {
-	// background-color: var(--bgd-2);
-	width: 100%;
-	height: 100%;
-}
-.btn-9x,
-.btn-dropdown {
 	display: inline-block;
 	text-align: center;
-	margin: 1px;
-	margin: auto;
-	color: var(--txt-1) !important; //!important overrides link styling
+	// margin: 1px;
+	// margin: auto;
+	color: black !important; //!important overrides link styling
+	font-weight: 100 !important;
 	text-decoration: none;
-	background: var(--bgd-2);
 	user-select: none;
 
 	&:active,
 	&:active::before {
-		border-top-color:    var(--btn-lolite);
-		border-left-color:   var(--btn-lolite);
-		border-bottom-color: var(--btn-hilite);
-		border-right-color:  var(--btn-hilite);
+		border-top-color:    black;
+		border-left-color:   black;
+		border-bottom-color: white;
+		border-right-color:  white;
 	}
-}
-.btn-dropdown {
-	margin: 0;
-	font-size: 1.2em;
-	margin-right: 2px;
-	padding: 0px;
-	color: red;
-
-	& :before {
-		content: "";
-		background-size: 1em;  // overwrite inherent svg size
-		background-repeat: no-repeat;
-		background-position: center;
-		//!\ remember to add 'fill="currentColor"' to downloaded svgs
-	}
-}
-
-.window-menu ul {
-	display: none;
-	margin: 0;
-	padding: 0;
-	cursor: default;
-	user-select: none;
-
-	& li {
-		display: inline-block;
-		padding: 0px 4px;
-
-		&:hover {
-			background-color: var(--bgd-3);
-		}
-		&:active u {
-			color: var(--s-ylw);
-		}
-	}
-}
-.window-content {
-	line-height: 1.3;
-	margin: 2px;
 }
 
 /* ============================ specific styles ============================ */
 /* -------------------------------- desktop -------------------------------- */
-#window-area {
-	// width: 100%; height: 100%; box-sizing: border-box;
-	margin-top: var(--tb-hite); margin-left: var(--dt-padd);
+
+
+body {
+  display: grid;
+  grid-template-columns: 1.2fr max-content 1fr;
+
+
+	&>header {
+		grid-column: 1 / 4;
+		text-align: center;
+	}
+
+	&>nav {
+		grid-column: 2 / 2;
+		position: sticky;
+		top: 0;
+
+		// ZTODO: OPTIMISE FOR MOBILE
+		text-align: center;
+		width: max-content;
+		width: 100%;
+		overflow-x: auto;
+		margin: auto;
+		background-color: brown;
+		z-index: 99;
+
+		& a {
+			display: inline-block;
+			margin: auto;
+		}
+
+		& img {
+			width: 48px;
+			aspect-ratio: 1;
+		}
+		& span {
+			display: none;
+		}
+	}
+
+	&>section {
+		  grid-column: 2 / 2;
+	}
+
+	&>footer {
+		grid-column: 1 / 4;
+		font-size: smaller;
+		padding-block: 1em;
+		backdrop-filter: blur(25px);
+		text-align: center;
+		border-top-left-radius:  8px;
+		border-top-right-radius: 8px;
+		box-shadow: 4px 4px 8px #00000080, 4px 4px 16px #00000080;
+	}
 }
+
+/*
 #desktop-area {
 	position: fixed;
 	width:  100%;
@@ -952,232 +691,9 @@ textarea {
 			}
 		}
 	}
-}
+}*/
 
 /* -------------------------------- taskbar -------------------------------- */
-
-#ubuntu-sidebar {
-	width: min-content;
-	position: fixed;
-	top: var(--tb-hite);
-	padding: 8px;
-	// border-radius: 4px;
-	background: #00000040;  // ztodo var
-	backdrop-filter: blur(2px);
-	// border: var(--icn-bg-bdr, none);
-
-	// box-shadow: rgb(0, 0, 0) 0px 10px 10px -5px inset;
-	box-shadow: inset -4px 0px 8px -4px #000;
-	border-right: 1px solid #ffffff30;
-
-	height: 100%;
-	overflow-x: visible;
-	// this can't be here,
-	// https://stackoverflow.com/questions/6421966/css-overflow-x-visible-and-overflow-y-hidden-causing-scrollbar-issue
-	// overflow-y: auto;
-	scrollbar-width: thin;
-
-	& .desktop-icon {
-		text-align: center;
-		color: var(--bgd-0);
-		display: block;
-
-		--icon-size: 48px;
-
-		position: relative;
-		box-sizing: border-box;
-		aspect-ratio: 1/1;
-		padding: 2px;
-		border-radius: 8px;
-		border: 1px solid #ffffff40;
-
-		// background-color: #ffffff20;
-		background-image: linear-gradient(#ffffff10 25%, #ffffff60);
-
-		&.update {
-			background-color: var(--d-blu);  // ubuntu terminal palette
-		}
-		&.current {
-			background-color: var(--d-org);  // ubuntu brand colour
-		}
-		&:hover,
-		&:focus-visible {
-			background-color: var(--d-ppl);  // ubuntu terminal palette
-		}
-
-		&::after {
-			content: "";
-			position: absolute;
-			inset: 0;
-			border-radius: 8px;
-			background-image:
-				radial-gradient(
-					circle at top,
-					#ffffffc0,
-					transparent 50%);
-		}
-
-		& span {
-			display: none;
-		}
-		&:hover span,
-		&:focus span {
-			display: inline-block;
-			position: absolute;
-			top: 0; bottom: 0;
-			left: calc(var(--icon-size) + 8px);
-			height: min-content; width: max-content;
-			margin-block: auto;
-
-			background-color: #121212;
-			background-image:
-				radial-gradient(
-					ellipse at top,
-					#ffffff60,
-					transparent
-					);
-			color: white;
-
-			padding-block: 8px;
-			padding-inline: 16px;
-			border-top-right-radius:    8px;
-			border-bottom-right-radius: 8px;
-			border-top-left-radius:    99vw;
-			border-bottom-left-radius: 99vw;
-			border: 1px solid #FFFFFF80;
-		}
-
-		& + .desktop-icon {
-			margin-top: 8px;
-		}
-
-		& img {
-			width: var(--icon-size);
-			display: block;
-			margin-inline: auto;
-		}
-	}
-}
-
-#ubuntu-header {
-	position: fixed;
-	top: 0;
-	width: 100%;
-	height: var(--tb-hite);
-	box-sizing: border-box;
-	background-image: var(--ubuntu-grad);
-	padding-inline: 4px;
-	box-shadow: 0px 0px 8px 4px black;
-
-	color: var(--inset-text-colour);
-	font-size: 16px;
-	font-weight: bold;
-	text-shadow: var(--inset-text-shadow);
-	display: flex;
-	gap: 1ch;
-	justify-content: space-between;
-	align-items: center;
-
-	& section {  // ztodo tidyup
-		display: inline-block;
-		height: min-content;
-		white-space: nowrap;
-
-		& .page-title {
-			margin-inline: 4px;
-		}
-
-		& .img-grid {
-			width: max-content;
-			display: inline-block;
-		}
-		& img {
-			border: 1px solid;
-			border-radius: 3px;
-			border-top-color:    var(--inset-text-top);
-			border-left-color:   var(--inset-text-top);
-			border-bottom-color: var(--inset-text-btm);
-			border-right-color:  var(--inset-text-btm);
-			vertical-align: middle;
-		}
-		& a {
-			display: inline-block;  // to hide stray underlines
-		}
-	}
-}
-
-#start-orb {
-	height: 1em;
-	vertical-align: bottom;
-	text-shadow: var(--ubuntu-inset-text);
-	width: calc(var(--dt-padd) - 8px);
-	padding-right: 2px;
-	border-right: 1px solid #ffffff30;
-}
-
-#logo-container {
-	margin-right: auto;
-}
-
-@media (max-width: 800px) {
-	#logo-container#logo-container {
-		display: none;
-	}
-	#antipixes {
-		flex-shrink: 1;
-		min-width: 0px;
-		overflow: auto;
-		-ms-overflow-style: none;
-		scrollbar-width: none;
-
-		-webkit-mask-image:
-			linear-gradient(to left, transparent 0px 4px, black 32px 64px);
-		mask-image:
-			linear-gradient(to left, transparent 0px 4px, black 32px 64px);
-	}
-}
-
-#edit-date {
-	all: unset;
-	padding-inline: 2px;
-	border-top-left-radius: 3px;
-	border-top-right-radius: 3px;
-	border: 1px solid transparent;
-
-	&:hover {
-		border-color: var(--brdr-dark);
-		border-bottom: none;
-	}
-}
-#edit-date:focus + div { display: block; }
-#edit-date-popup:focus-within { display: block; }
-#edit-date-popup { display: none; }
-#edit-date-popup {
-	position: absolute;
-	right: 0;
-	padding: 0;
-	& p {
-		margin: 0;
-		padding-block: 4px;
-		padding-inline: 16px;
-		border: 1px solid transparent;
-
-		&:hover {
-			background-image: linear-gradient(var(--s-org), var(--d-org));
-			border-color: var(--d-org);
-		}
-	}
-	background-color: #41403B;
-	color: var(--inset-text-colour);
-	outline: 1px solid #2F2F2C;
-	border: 1px solid #474640;
-	border-top: none;
-	box-shadow: 4px 4px 8px -4px black;
-
-	font-weight: normal;
-	width: 24ch;
-	text-shadow: none;
-}
 
 /* ============================== animations =============================== */
 
@@ -1245,24 +761,10 @@ textarea {
 	width: max-content;
 	/* don't optimise - hotline used this, but i think above works better? */
 	will-change: scroll-position;
-	// display: flex;
-	// gap: 1ch;
-	// // position: absolute;
-	// left: 0;
 
 	&:hover {
 		animation-play-state: paused;
-	}/*
-	& ul {
-		width: max-content;
-		display: inline-block;
 	}
-
-	& li {
-		display: inline-block;
-		will-change: transform;
-		list-style-type: none;
-	}*/
 }
 
 .marquee-track {

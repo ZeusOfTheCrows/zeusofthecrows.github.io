@@ -2,75 +2,162 @@
 layout: gc-base
 ---
 
-<section id="desktop-area">
+<header>
+	<h1 id="site-header"> ZeusOfTheCrows</h1>
+</header>
+<nav id="site-nav" aria-label="site pages">
+	{% assign current = page.url | downcase | split: '.' %}
+	{% for item in site.data.stadt-nav %}
+	<a
+	{% if current[0] contains item.link %}class="desktop-icon current"
+	{% elsif item.updt %}class="desktop-icon update"{% else %}
+	class="desktop-icon"{% endif %}
+		href="{{ item.link }}">
+		<img src="{{ item.bicn }}">
+		<span>{{ item.name }}</span>
+	</a>
+	{% endfor %}
+	{% if page.title %}
+	<a class="desktop-icon update" href="/stadt/">
+		<img src="/stadt/assets/images/desktop-icons/home.svg">
+		<span>Return Home</span>
+	</a>
+	{% else %}
+	<a class="desktop-icon" href="../#logoff" title=":(">
+		<img src="/stadt/assets/images/desktop-icons/exit-stadt.svg">
+		<span>Exit Stadt</span>
+	</a>
+	{% endif %}
+	<!--<a class="desktop-icon desktop-shortcut" href="/stadt/about#contact-me"
+		title="see about page for more contact methods">
+		<img src="/stadt/assets/images/desktop-icons/message-me.svg">
+		<span>Message Me</span>
+	</a>-->
+</nav>
 
-	<div id="wall-imgs">
-		<a id="alucard" class="wall-img">
-			<img src="/stadt/assets/images/wall-imgs/alucard.png"
-				data-img-src="ɀeus" alt="" />
-			"dark metamorphosis"
-		</a>
-
-		<a id="bluescreen" class="wall-img">
-			<img src="/stadt/assets/images/wall-imgs/bluscrn.png"
-				data-img-src="https://anlucas.neocities.org/GifFiles.html" alt="" />
-		</a>
-
-		<a id="comp-spin" class="wall-img">
-			<img src="/stadt/assets/images/wall-imgs/computer.png"
-				data-img-src="https://webpage1990colourised.neocities.org/" alt="" />
-		</a>
-
-		<a id="curiosity" class="wall-img">
-			<img src="/stadt/assets/images/wall-imgs/curiosity-core.png"
-				data-img-src="ɀeus" alt="" />
-			"ew, what's wrong with your legs"
-		</a>
-
-		<a id="eye" class="wall-img">
-			<img src="/stadt/assets/images/wall-imgs/eye.png" alt=""
-				data-img-src="https://www.tumblr.com/webshitt/658240726601285632" />
-		</a>
-
-		<a id="lava" class="wall-img">
-			<img src="/stadt/assets/images/wall-imgs/lavalamp.png"
-				data-img-src="https://anlucas.neocities.org/GifFiles.html" alt="" />
-		</a>
-
-		<a id="skellington" class="wall-img">
-			<img src="/stadt/assets/images/wall-imgs/skellington.png"
-				data-img-src="unknown" alt="" />
-		</a>
-
-		<a id="sprockets" class="wall-img">
-			<img src="/stadt/assets/images/wall-imgs/sprockets.png" alt=""
-				data-img-src="ɀeus"
-				data-img-insp="https://geocitiesghost.tumblr.com/post/186616337281" />
-				site under constant construction
-		</a>
-
-		<a id="polarbear" class="wall-img">
-			<img src="/stadt/assets/images/wall-imgs/polarbear.png"
-				data-img-src="unknown" alt="" />
-		</a>
-
-		<a id="waddle" class="wall-img">
-			<img src="/stadt/assets/images/wall-imgs/waddle.png"
-				data-img-src="unknown" alt="" />
-		</a>
-
-		<a id="www" class="wall-img">
-			<img src="/stadt/assets/images/wall-imgs/www.png"
-				data-img-src="https://anlucas.neocities.org/GifFiles.html" alt="" />
-		</a>
-	</div>
-
-</section>
-
-<section id="window-area" aria-label="Content">
-	{{ content }}
-</section>
-
+<section id="content">
 {% comment %}
-{% if page.url != "/stadt/webgarden/" %} {% include gc-sidebar.html %} {% endif %}
+	<!--
+	<section id="desktop-area">
+
+		<div id="wall-imgs">
+			<a id="alucard" class="wall-img">
+				<img src="/stadt/assets/images/wall-imgs/alucard.png"
+					data-img-src="ɀeus" alt="" />
+				"dark metamorphosis"
+			</a>
+
+			<a id="bluescreen" class="wall-img">
+				<img src="/stadt/assets/images/wall-imgs/bluscrn.png"
+					data-img-src="https://anlucas.neocities.org/GifFiles.html" alt="" />
+			</a>
+
+			<a id="comp-spin" class="wall-img">
+				<img src="/stadt/assets/images/wall-imgs/computer.png"
+					data-img-src="https://webpage1990colourised.neocities.org/" alt="" />
+			</a>
+
+			<a id="curiosity" class="wall-img">
+				<img src="/stadt/assets/images/wall-imgs/curiosity-core.png"
+					data-img-src="ɀeus" alt="" />
+				"ew, what's wrong with your legs"
+			</a>
+
+			<a id="eye" class="wall-img">
+				<img src="/stadt/assets/images/wall-imgs/eye.png" alt=""
+					data-img-src="https://www.tumblr.com/webshitt/658240726601285632" />
+			</a>
+
+			<a id="lava" class="wall-img">
+				<img src="/stadt/assets/images/wall-imgs/lavalamp.png"
+					data-img-src="https://anlucas.neocities.org/GifFiles.html" alt="" />
+			</a>
+
+			<a id="skellington" class="wall-img">
+				<img src="/stadt/assets/images/wall-imgs/skellington.png"
+					data-img-src="unknown" alt="" />
+			</a>
+
+			<a id="sprockets" class="wall-img">
+				<img src="/stadt/assets/images/wall-imgs/sprockets.png" alt=""
+					data-img-src="ɀeus"
+					data-img-insp="https://geocitiesghost.tumblr.com/post/186616337281" />
+					site under constant construction
+			</a>
+
+			<a id="polarbear" class="wall-img">
+				<img src="/stadt/assets/images/wall-imgs/polarbear.png"
+					data-img-src="unknown" alt="" />
+			</a>
+
+			<a id="waddle" class="wall-img">
+				<img src="/stadt/assets/images/wall-imgs/waddle.png"
+					data-img-src="unknown" alt="" />
+			</a>
+
+			<a id="www" class="wall-img">
+				<img src="/stadt/assets/images/wall-imgs/www.png"
+					data-img-src="https://anlucas.neocities.org/GifFiles.html" alt="" />
+			</a>
+		</div>
+	</section>-->
+
+	<!-- <section id="window-area" aria-label="Content"> -->
 {% endcomment %}
+
+		{{ content }}
+</section>
+
+<footer>
+	<p><a href="#">^ Back to top ^</a></p>
+	<p><small>
+		(ɔ) <time datetime="{{ page.edit-date | date: '%Y-%m-%d' }}">
+		{{ page.edit-date | date: "%Y" }}</time> ZeusOfTheCrows. All Wrongs
+		Reserved. <a href="https://copyheart.org/">♡ Copying is an act of love.	</a>
+	<small></p>
+	<ul class="img-grid">
+		<li><a href="https://github.com/ZeusOfTheCrows/zeusofthecrows.github.io/">
+			<img class="btn-88x31 anim smooth-zoom" src="/stadt/assets/images/buttons/brands/gh-pages.png"
+				alt="powered by github pages" />
+		</a></li>
+		<li><a href="https://neocities.org/site/zeusofthecrows/">
+			<!--ZTODO THIS SHOULD BE KATE-->
+			<img class="btn-88x31" src="/stadt/assets/images/buttons/brands/sublime.png"
+				alt="made with sublime text editor" />
+		</a></li>
+		<li><a href="https://inkscape.org/">
+			<img class="btn-88x31" src="/stadt/assets/images/buttons/brands/inkscape.svg"
+				alt="inkscape 'draw freely.' logo" />
+		</a></li>
+		<li><a href="https://colemak.org/">
+			<img class="btn-88x31 anim" src="/stadt/assets/images/buttons/taskbar/colemak.png"
+				data-img-source="~zeus"
+				alt="i use colemak (wide)" />
+		</a></li>
+		<li><a href="https://www.aseprite.org/">
+			<img class="btn-88x31 anim" src="/stadt/assets/images/buttons/brands/aseprite.png"
+				alt="aseprite logo animated" />
+		</a></li>
+		<li><a href="http://littlesvr.ca/apng/">
+			<img class="btn-88x31 anim" src="/stadt/assets/images/buttons/brands/apng.png"
+				data-img-source="~zeus"
+				alt="[animated] png now" />
+		</a></li>
+		<li><a href="https://web.archive.org/web/20080528034856/http://www.kde.org/">
+			<img class="btn-88x31 anim smooth-zoom" src="/stadt/assets/images/buttons/brands/kool-de.png"
+				alt="kool desktop environment button" />
+		</a></li>
+		<li><a href="http://web3.14159.annwfn.net/">
+			<img class="btn-88x31" src="/stadt/assets/images/buttons/taskbar/web-pi.png"
+				data-img-source="http://web3.14159.annwfn.net/"
+				alt="web π compliant" />
+		</a></li>
+		<li><a href="/stadt/thoughts#svg">
+			<img class="btn-88x31" src="/stadt/assets/images/buttons/taskbar/svg.svg"
+				alt="animated svg button" />
+			</a></li>
+		<li>
+			<iframe src="//incr.easrng.net/badge?key=zeus" style="background: url(//incr.easrng.net/bg.gif)" title="click me" width="88" height="31" frameborder="0"></iframe>
+		</li>
+	</ul>
+</footer>

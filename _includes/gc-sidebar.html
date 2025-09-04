@@ -1,4 +1,4 @@
-<nav id="ubuntu-sidebar" aria-label="site pages">
+<nav aria-label="site pages">
 	{% assign current = page.url | downcase | split: '.' %}
 	{% for item in site.data.stadt-nav %}
 	<a
@@ -21,9 +21,9 @@
 		<span>Exit Stadt</span>
 	</a>
 	{% endif %}
-	<a class="desktop-icon desktop-shortcut" href="/stadt/about#contact-me"
+	<!--<a class="desktop-icon desktop-shortcut" href="/stadt/about#contact-me"
 		title="see about page for more contact methods">
 		<img src="/stadt/assets/images/desktop-icons/message-me.svg">
 		<span>Message Me</span>
-	</a>
+	</a>-->
 </nav>

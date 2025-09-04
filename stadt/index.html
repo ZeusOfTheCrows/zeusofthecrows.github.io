@@ -6,48 +6,52 @@ title:
 ---
 
 <!-- https://zeusofthecrows.ishoutbox.com/ -->
-
-<article id="whats-new">
-	<h1 style="animation: colour-cycle 5s linear infinite;">What's New</h1>
-	<ul>
-		{% for item in site.data.whats-new %}
-		<li>
-			{% if item.subcontent %}
-				<details>
-					<summary>
-						{{ item.content }}
-					</summary>
-					{% if item.subtype == "images" %}
-						<ul class="img-grid">
-						{% for image in item.subcontent %}
-							<li>
-								<img src="/stadt/assets/images/{{ image.source }}"
-									class="{{ image.type }}{% if image.smooth %} smooth-zoom{% endif %}{% if image.spoiler %} spoiler{% endif %}"
-									alt="{{ image.alt }}" />
-							</li>
-						{% endfor %}
-					</ul>
-					{% else %}
-						<ul>
-						{% for item in item.subcontent %}
-							<li>{{ item.content }}</li>
-						{% endfor %}
+<!--
+<aside id="aside-left" style="background-color: brown;">
+	<article id="whats-new">
+		<h1 style="animation: colour-cycle 5s linear infinite;">What's New</h1>
+		<ul>
+			{% for item in site.data.whats-new %}
+			<li>
+				{% if item.subcontent %}
+					<details>
+						<summary>
+							{{ item.content }}
+						</summary>
+						{% if item.subtype == "images" %}
+							<ul class="img-grid">
+							{% for image in item.subcontent %}
+								<li>
+									<img src="/stadt/assets/images/{{ image.source }}"
+										class="{{ image.type }}{% if image.smooth %} smooth-zoom{% endif %}{% if image.spoiler %} spoiler{% endif %}"
+										alt="{{ image.alt }}" />
+								</li>
+							{% endfor %}
 						</ul>
-					{% endif %}
-				</details>
-			{% else %}
-			{{ item.content }}
-			{% endif %}
-		</li>
-		{% endfor %}
-	</ul>
-</article>
+						{% else %}
+							<ul>
+							{% for item in item.subcontent %}
+								<li>{{ item.content }}</li>
+							{% endfor %}
+							</ul>
+						{% endif %}
+					</details>
+				{% else %}
+				{{ item.content }}
+				{% endif %}
+			</li>
+			{% endfor %}
+		</ul>
+	</article>
 
-<article id="intro-text">
+</aside>-->
+
+<main>
+	<article id="intro-text">
 		<h1 id="welcome-title">
-			<span id="welcome-serif">Welcome to</span>
-			<span id="welcome-sans">The Stadt</span>
+			<span>Welcome to</span> <span>Zeus' Stadt</span>
 		</h1>
+		<h2>Tabula Rasa Edition</h2>
 		<p>
 			<em>good</em> morning, <small>good afternoon, and good
 			evening</small> ladies, gentlemen, and variations thereupon
@@ -82,22 +86,17 @@ title:
 				<img class="btn-88x31" src="/stadt/assets/images/buttons/taskbar/rating.png"
 					alt="site rating: 18" />
 			</a></li>
+			<!--<li>
+				<select name=colourscheme class="btn-9x btn-88x31"
+					title="not yet implemented">
+					<option value="au">auto</option>
+					<option value="lt">light</option>
+					<option value="dk">dark</option>
+					<option value="gb">gruvbox</option>
+				</select>
+			</li>-->
 		</ul>
-		<p>
-			this site is for my own benefit - i'll make stuff that i think looks
-			nice, and now i have somewhere to put it. nevertheless, i do hope you
-			enjoy what you find here
-		</p>
-		<img src="/stadt/assets/images/other/tea-pour.png"
-			style="--shape-outside: polygon(0 5%, 35% 5%, 100% 50%, 100% 95%, 0 95%);"
-			class="img-aside left" />
-		<p>
-			i don't really like writing, but it seems like a good idea to get
-			some thoughts out of my head. and here seems like a nice place to do
-			so – safe from the algorithms of social media. nevertheless, this
-			will mostly be a image/graphic repository.
-		</p>
-		<hr />
+
 		<p>
 			before you click a link, observe your cursor! <code>cursor:
 			pointer;</code> implies an internal link, whereas <code>cursor:
@@ -110,396 +109,255 @@ title:
 			blurred & cyan (hover over them to reveal)(on mobile? try tapping the
 			highlighted text)
 		</p>
-		<p>
-			performance issues? (e.g. on kde, i've found):
-			<a href="https://www.reddit.com/r/firefox/comments/zihb0i/firefox_laggy_when_video_playing_on_linux/izrl7ch/">try following this advice</a><sup>[<a
-				href="https://bugzilla.mozilla.org/show_bug.cgi?id=1720634">1</a>]</sup>
-		</p>
+	</article>
 
-		<hr />
+	<ul class="img-grid">
+		<li>
+			<img src="/stadt/assets/images/stamps/bliss.png"
+				class="stamp-99x56 anim smooth-zoom"
+				alt="xp bliss stamp w/ vhs effect and text 'rew'"
+				data-img-src="~zeus" />
+		</li>
+		<li>
+			<img src="/stadt/assets/images/stamps/dapperblook.png"
+				class="stamp-99x56 anim"
+				alt="napstablook quote 'really not feelin up to it right now. sorry.'"/>
+		</li>
+		<li>
+			<img src="/stadt/assets/images/stamps/dos.png"
+				class="stamp-99x56 anim smooth-zoom"
+				alt="dos c: prompt"/>
+		</li>
+		<li>
+			<img src="/stadt/assets/images/stamps/dvd.png"
+				class="stamp-99x56 anim smooth-zoom"
+				alt="moving dvd logo" data-img-src="~zeus" />
+		</li>
+		<li>
+			<img src="/stadt/assets/images/stamps/snake.png"
+				class="stamp-99x56 anim"
+				alt="nokia snake xenzia stamp" data-img-src="~zeus" />
+		</li>
+		<li>
+			<img src="/stadt/assets/images/stamps/fire.png"
+				class="stamp-99x56 anim"
+				alt="celeste dream fire stamp" />
+		</li>
+		<li>
+				<img src="/stadt/assets/images/stamps/link-b.png"
+					title="available in frame-blended (crap lcd) ver, or normal"
+					class="stamp-99x56 anim smooth-zoom"
+					alt="link's awakening - sword get" />
+		</li>
+		<li>
+			<img src="/stadt/assets/images/stamps/prie-dieu.png"
+				class="stamp-99x56 anim"
+				alt="lighting a prie-dieu stamp (blasphemous)" />
+		</li>
+		<li>
+			<img src="/stadt/assets/images/stamps/metroidvania.png"
+				class="stamp-99x56"
+				alt="metroidvania enthusiast stamp" />
+		</li>
+		<li>
+			<img src="/stadt/assets/images/stamps/kirbs.png"
+				class="stamp-99x56"
+				alt="opening of kirby's adventure stamp" />
+		</li>
+	</ul>
 
-		<ul class="img-grid">
-			<li><a href="https://yesterweb.org/no-to-web3/">
-				<img class="btn-88x31 anim" src="/stadt/assets/images/buttons/taskbar/web3.png"
-					data-img-source="https://yesterweb.org/no-to-web3/"
-					alt="say no to web3" />
+	<article id="quote">
+		<blockquote
+			cite="https://www.tumblr.com/allsortsoflicorice/793574500026531840/i-dont-even-want-to-count-my-fucking-steps-the">
+				i don't want to track my greebles with splorp i don't want to pay a teehee subscription to get round cacophany's file limits i don't need 17 ways to skrimple my scronk 7 of which secretly activate scrungly plus ultimate i don't need to link it to my flowolf account i don't want to manage it with the flowby mowby i don't care if poob does or does not has it for me. i don['t care
+		</blockquote>
+		<footer>
+			<a href="https://www.tumblr.com/allsortsoflicorice/793574500026531840/i-dont-even-want-to-count-my-fucking-steps-the"
+				>daemonhxckergrrl</a>
+			<time>2025</time>
+		</footer>
+	</article>
+
+	<article id="image">
+		<figure>
+			<img src="/stadt/assets/images/gallery/draygon.png"
+						alt="samus aran and draygon animation" />
+		</figure>
+		<footer>
+			<a href="https://cara.app/post/5b00fc96-1d20-4cd4-8370-78cbb658796e"
+				>Moonshen</a>
+			<time>2025</time>
+		</footer>
+	</article>
+
+	<ul class="img-grid">
+		<li><a href="https://contrachrome.com/">
+			<img class="btn-88x31 anim" src="/stadt/assets/images/buttons/brands/chromium.png"
+				alt="ie/chrome/brave logos 'same shit, different arsehole'" />
+		</a></li>
+		<li><a href="/stadt/about#site-licence">
+			<img class="btn-88x31" src="/stadt/assets/images/buttons/taskbar/cc-by-sa.png"
+				data-img-source="https://creativecommons.org/licenses/"
+				alt="cc-by-sa licence" />
+		</a></li>
+		<li><a href="https://twitter.com/zetafleet/status/1075592527888220160">
+			<img class="btn-88x31 anim smooth-zoom" src="/stadt/assets/images/buttons/brands/firefox.png"
+				alt="mozilla now" />
+		</a></li>
+		<li><a href="" target="_blank">
+			<img class="btn-88x31 anim" src="/stadt/assets/images/buttons/taskbar/target-blank.png"
+				data-img-source="~zeus"
+				title="if i wanted a new tab, i'd middle-click!
+				(to escape an iframe, use target=&quot;_top&quot;)"
+				alt="anti 'target=&quot;_blank&quot;' button" />
+		</a></li>
+			<li><a>
+				<img class="btn-88x31 anim" src="/stadt/assets/images/buttons/taskbar/seed.png"
+					data-img-source="https://melodicake.neocities.org/main.html"
+					alt="seed your torrents button" />
 			</a></li>
-			<li><a href="http://web3.14159.annwfn.net/">
-				<img class="btn-88x31" src="/stadt/assets/images/buttons/taskbar/web-pi.png"
-					data-img-source="http://web3.14159.annwfn.net/"
-					alt="web π compliant" />
-			</a></li>
-			<li><a href="/stadt/thoughts#svg">
-				<img class="btn-88x31" src="/stadt/assets/images/buttons/taskbar/svg.svg"
-					alt="animated svg button" />
-				</a></li>
-			<li><a href="https://zeusofthecrows.github.io/mobile/kustom#wood-panelling">
-				<img class="btn-88x31 anim" src="/stadt/assets/images/buttons/taskbar/skeuo.png"
-					alt="skeuomorphism now button" />
-				</a></li>
+		<li><a href="https://yesterweb.org/no-to-web3/">
+			<img class="btn-88x31 anim" src="/stadt/assets/images/buttons/taskbar/web3.png"
+				data-img-source="https://yesterweb.org/no-to-web3/"
+				alt="say no to web3" />
+		</a></li>
+		<li><a href="https://en.wikipedia.org/wiki/Year_2038_problem">
+			<img class="btn-88x31 anim" src="/stadt/assets/images/buttons/taskbar/2038.png"
+				data-img-source="unknown"
+				alt="are you ready? year 2038" title="the epochalypse is coming" />
+		</a></li>
+		<li><a href="/stadt/gallery#buttons">
+			<img class="btn-88x31 anim" src="/stadt/assets/images/buttons/taskbar/button.png"
+				alt="say no to missing img links, get a button Today!" />
+		</a></li>
 			<li><a>
 				<img class="btn-88x31" src="/stadt/easter/"
 					style="content: url(/stadt/assets/images/buttons/taskbar/new-tab.png);"
 					title="it is happy here with its friends
 					please don't force it into a cold, empty tab" />
 			</a></li>
-			<li><a href="/stadt/about#site-licence">
-				<img class="btn-88x31" src="/stadt/assets/images/buttons/taskbar/cc-by-sa.png"
-					data-img-source="https://creativecommons.org/licenses/"
-					alt="cc-by-sa licence" />
+		<li><a href="/stadt/thoughts#css-puzzle">
+			<img class="btn-88x31"
+				src="/stadt/assets/images/buttons/taskbar/css.png"
+				alt="css is difficult" />
+		</a></li>
+		<li><a href="https://ikewise.neocities.org/2018-05-19_-_return.htm">
+			<img class="btn-88x31" src="/stadt/assets/images/buttons/taskbar/code-run.png"
+				data-img-source="https://anlucas.neocities.org/"
+				alt="PRO code and run" title="just try to stop me" />
+		</a></li>
+			<li><a href="https://xenia-linux-site.glitch.me/">
+				<img class="btn-88x31" src="/stadt/assets/images/buttons/brands/xenia.png"
+					data-img-src="https://voltbun.neocities.org/"
+					alt="xenia the fox linux button" />
 			</a></li>
-			<li><a href="" target="_blank">
-				<img class="btn-88x31 anim" src="/stadt/assets/images/buttons/taskbar/target-blank.png"
-					data-img-source="~zeus"
-					title="if i wanted a new tab, i'd middle-click!
-					(to escape an iframe, use target=&quot;_top&quot;)"
-					alt="anti 'target=&quot;_blank&quot;' button" />
-			</a></li>
-			<li><a href="https://colemak.org/">
-				<img class="btn-88x31 anim" src="/stadt/assets/images/buttons/taskbar/colemak.png"
-					data-img-source="~zeus"
-					alt="i use colemak (wide)" />
-			</a></li>
-			<li><a>
-				<img class="btn-88x31 anim" src="/stadt/assets/images/buttons/taskbar/seed.png"
-					data-img-source="https://melodicake.neocities.org/main.html"
-					alt="seed your torrents button" />
-			</a></li>
-			<li><a href="https://en.wikipedia.org/wiki/Year_2038_problem">
-				<img class="btn-88x31 anim" src="/stadt/assets/images/buttons/taskbar/2038.png"
-					data-img-source="unknown"
-					alt="are you ready? year 2038" title="the epochalypse is coming" />
-			</a></li>
-			<li><a href="/stadt/gallery#buttons">
-				<img class="btn-88x31 anim" src="/stadt/assets/images/buttons/taskbar/button.png"
-					alt="say no to missing img links, get a button Today!" />
-			</a></li>
-			<li><a href="/stadt/thoughts#css-puzzle">
-				<img class="btn-88x31"
-					src="/stadt/assets/images/buttons/taskbar/css.png"
-					alt="css is difficult" />
-			</a></li>
-			<li><a href="https://ikewise.neocities.org/2018-05-19_-_return.htm">
-				<img class="btn-88x31" src="/stadt/assets/images/buttons/taskbar/code-run.png"
-					data-img-source="https://anlucas.neocities.org/"
-					alt="PRO code and run" title="just try to stop me" />
-			</a></li>
-			<iframe src="//incr.easrng.net/badge?key=zeus" style="background: url(//incr.easrng.net/bg.gif)" title="click me" width="88" height="31" frameborder="0"></iframe>
-		</ul>
+			<li><a href="https://zeusofthecrows.github.io/mobile/kustom#wood-panelling">
+				<img class="btn-88x31 anim" src="/stadt/assets/images/buttons/taskbar/skeuo.png"
+					alt="skeuomorphism now button" />
+				</a></li>
+	</ul>
 
-		<hr />
+			<hr />
 
-		<ul class="img-grid">
-			<li>
-				<img src="/stadt/assets/images/stamps/bliss.png"
-					class="stamp-99x56 anim smooth-zoom"
-					alt="xp bliss stamp w/ vhs effect and text 'rew'"
-					data-img-src="~zeus" />
-			</li>
-			<li>
-				<img src="/stadt/assets/images/stamps/dapperblook.png"
-					class="stamp-99x56 anim"
-					alt="napstablook quote 'really not feelin up to it right now. sorry.'"/>
-			</li>
-			<li>
-				<img src="/stadt/assets/images/stamps/dos.png"
-					class="stamp-99x56 anim smooth-zoom"
-					alt="dos c: prompt"/>
-			</li>
-			<li>
-				<img src="/stadt/assets/images/stamps/dvd.png"
-					class="stamp-99x56 anim smooth-zoom"
-					alt="moving dvd logo" data-img-src="~zeus" />
-			</li>
-			<li>
-				<img src="/stadt/assets/images/stamps/snake.png"
-					class="stamp-99x56 anim"
-					alt="nokia snake xenzia stamp" data-img-src="~zeus" />
-			</li>
-			<li>
-				<img src="/stadt/assets/images/stamps/fire.png"
-					class="stamp-99x56 anim"
-					alt="celeste dream fire stamp" />
-			</li>
-			<li>
-					<img src="/stadt/assets/images/stamps/link-b.png"
-						title="available in frame-blended (crap lcd) ver, or normal"
-						class="stamp-99x56 anim smooth-zoom"
-						alt="link's awakening - sword get" />
-			</li>
-			<li>
-				<img src="/stadt/assets/images/stamps/prie-dieu.png"
-					class="stamp-99x56 anim"
-					alt="lighting a prie-dieu stamp (blasphemous)" />
-			</li>
-			<li>
-				<img src="/stadt/assets/images/stamps/metroidvania.png"
-					class="stamp-99x56"
-					alt="metroidvania enthusiast stamp" />
-			</li>
-			<li>
-				<img src="/stadt/assets/images/stamps/kirbs.png"
-					class="stamp-99x56"
-					alt="opening of kirby's adventure stamp" />
-			</li>
-		</ul>
-	</div>
-</article>
+			<p>
+				this site is for my own benefit - i'll make stuff that i think looks
+				nice, and now i have somewhere to put it. nevertheless, i do hope you
+				enjoy what you find here
+			</p>
+			<img src="/stadt/assets/images/other/tea-pour.png"
+				style="--shape-outside: polygon(0 5%, 35% 5%, 100% 50%, 100% 95%, 0 95%);"
+				class="img-aside left" />
+			<p>
+				i don't really like writing, but it seems like a good idea to get
+				some thoughts out of my head. and here seems like a nice place to do
+				so – safe from the algorithms of social media. nevertheless, this
+				will mostly be a image/graphic repository.
+			</p>
+</main>
 
-<article id="music-player">
-	<div id="current-song"
-		style="--bg: url('https://i1.sndcdn.com/artworks-xZIfpEwwi7i0-0-t500x500.jpg')">
-		<!-- vol prop does ∅ - maybe in future -->
-		<audio controls="" volume="0.5" preload="none">
-			<source src="ZTODO"	type="audio/mp3" />
-			your browser does not support embedded audio
-		</audio>
-	</div>
-	<table>
-		<tr>
-			<td>
-				Artist:
-			</td>
-			<td>
-				<a href="https://www.willeandthebandits.com/">
-					Wille and the Bandits
-				</a>
-			</td>
-		</tr>
-		<tr>
-			<td class="current-label">
-				Track:
-			</td>
-			<td>
+<aside>
+	<article id="music">
+	<figure>
+		<div> <!--workaround for firefox bug - aspect-ratio doesn't work for audio-->
+				<!-- vol prop does ∅ - maybe in future -->
+			<audio controls="" volume="0.5" preload="none"
+				style="--cover: url('/stadt/assets/music/cover.jpg')">
+				<source src="/stadt/assets/music/track.mp3"	type="audio/mp3" />
+				your browser does not support embedded audio
+			</audio>
+		</div>
+		<figcaption>
 				<a href="https://www.youtube.com/watch?v=Kb4N7LMWH4A">
 					1970
 				</a>
-			</td>
-		</tr>
-		<tr>
-			<td class="current-label">
-				Recent:
-			</td>
-			<td>
-				<a href="https://www.youtube.com/watch?v=fWz67B1gO8A">
-					Burn Witch Burn - Ego Likeness
-				</a><br />
-				<a href="https://www.youtube.com/watch?v=dDiohxb-Eyc">
-					Pumping Iron Power - Grailknights
-				</a><br />
-				<a href="https://open.spotify.com/track/4AiJdDQPCdAdZiecHbuFc2">
-					Synthesizer - Electric  Six
-				</a><br />
-				<a href="https://open.spotify.com/track/3zodQoSA9p2jwSlFrYkzHF">
-					Tanz Mit Mir - Faun, Santiano
-				</a><br />
-				<a href="https://open.spotify.com/track/2ArOs9tz8SC5cP6SIMD3P5/">
-					Powerwolf - Amen & Attack
-				</a><br />
-				<a href="https://open.spotify.com/track/2ArOs9tz8SC5cP6SIMD3P5/">
-					Abney Park - Airship Pirate
+				<span>
+				By
+				</span>
+				<a href="https://www.willeandthebandits.com/">
+					Wille and the Bandits
 				</a>
-			</td>
-		</tr>
-	</table>
-	<ul class="button-grid">
-		<li><a href="/stadt/thoughts#pirated-music">
-			<img class="btn-88x31"
-				src="/stadt/assets/images/buttons/music/licence.png"
-				alt="not licensed to supply recorded music" />
-		</a></li>
-		<li><a href="https://open.spotify.com/playlist/5q8crqSxKiqtpIKnAgkYRU">
-			<img class="btn-88x31 anim"
-				src="/stadt/assets/images/buttons/music/sovietwave.png"
-				alt="fan of sovietwave" />
-		</a></li>
-	</ul>
-</article>
-
-<article id="neighbours">
-	<ul class="img-grid img-capts link-list">
-		{% for item in site.data.links %}
-		<!-- i have NO idea why this has to be "!=" rather than "=="‽ maybe a bug‽ -->
-		{% if item.image and item.cat == "n" and item.res == nil or item.res != inf %}
-		<li>
-			<a{% if item.lnk-url != nil %}
-					href="{{ item.lnk-url }}"{% endif %}
-				{% if item.astyle != nil %}
-					style="{{ item.astyle }}"{% endif %}>
-			<img
-				{% if item.ext-url != nil %}
-				src="{{ item.ext-url }}"
-				{% else %}
-				src="/stadt/assets/images/buttons/bookmarks/{{ item.image }}.{{ item.ext | default: 'png' }}"
+			</figcaption>
+		</figure>
+	</article>
+	<section>
+		<article id="neighbours">
+			<ul class="img-grid img-capts link-list">
+				{% for item in site.data.links %}
+				<!-- i have NO idea why this has to be "!=" rather than "=="‽ maybe a bug‽ -->
+				{% if item.image and item.cat == "n" and item.res == nil or item.res != inf %}
+				<li>
+					<a{% if item.lnk-url != nil %}
+							href="{{ item.lnk-url }}"{% endif %}
+						{% if item.astyle != nil %}
+							style="{{ item.astyle }}"{% endif %}>
+					<img
+						{% if item.ext-url != nil %}
+						src="{{ item.ext-url }}"
+						{% else %}
+						src="/stadt/assets/images/buttons/bookmarks/{{ item.image }}.{{ item.ext | default: 'png' }}"
+						{% endif %}
+						{% if item.title != nil %}
+						title="{{ item.title }}"
+						{% endif %}
+						class="btn-88x31 {% if item.smooth == 'y' %}smooth-zoom{% endif %}
+							{% if item.anim == 'y' %}anim{% endif %}"
+						alt="{{ item.alt }}" />
+						</a>
+				</li>
 				{% endif %}
-				{% if item.title != nil %}
-				title="{{ item.title }}"
-				{% endif %}
-				class="btn-88x31 {% if item.smooth == 'y' %}smooth-zoom{% endif %}
-					{% if item.anim == 'y' %}anim{% endif %}"
-				alt="{{ item.alt }}" />
-				</a>
-		</li>
-		{% endif %}
-		{% endfor %}
-	</ul>
-</article>
+				{% endfor %}
+			</ul>
+		</article>
 
-<article id="quote">
-	<blockquote
-		cite="https://github.com/xoreaxeaxeax/movfuscator/tree/master/validation/doom">
-		The mov-only [version of] DOOM renders approximately one frame every 7
-		hours, so playing this version requires somewhat increased patience.
-	</blockquote>
-	<footer>
-		<a href="https://github.com/xoreaxeaxeax/movfuscator/tree/master/validation/doom/"
-			>xoreaxeaxeax</a>
-		<time>2018</time>
-	</footer>
-</article>
+		<article id="webrings">
+			<section id="wr-intro">
+				<h6>this site is a proud member of the following webrings!</h6>
+			</section>
+			<!-- 	https://web.archive.org/web/20230119181126/https://nojs.sugarfi.dev/ -->
+			<!-- 	maybe i'll make my own -->
+			<section id="wr-geekring">
+				<p>
+					Check out the other awesome websites in <span>The
+					<a href="https://geekring.net">Geek Ring!</a></span>
+				</p>
+				<a href="http://geekring.net/site/139/previous"
+					class="btn-9x">&lt;- Previous</a>
+				<a href="http://geekring.net/site/139/random"
+					class="btn-9x">Random</a>
+				<a href="http://geekring.net/site/139/next"
+					class="btn-9x">Next -&gt;</a>
+			</section>
 
-<article id="daily-img">
-	<figure>
-		<img src="/stadt/assets/images/gallery/draygon.png"
-					alt="samus aran and draygon animation" />
-	</figure>
-	<footer>
-		<a href="https://cara.app/post/5b00fc96-1d20-4cd4-8370-78cbb658796e"
-			>Moonshen</a>
-		<time>2025</time>
-	</footer>
-</article>
-
-	<article id="brands">
-	<ul class="img-grid">
-		<li><a href="https://github.com/ZeusOfTheCrows/zeusofthecrows.github.io/">
-			<img class="btn-88x31 anim smooth-zoom" src="/stadt/assets/images/buttons/brands/gh-pages.png"
-				alt="powered by github pages" />
-		</a></li>
-		<li><a href="https://neocities.org/site/zeusofthecrows/">
-			<img class="btn-88x31 anim smooth-zoom" src="/stadt/assets/images/buttons/brands/neocities.png"
-				data-img-insp="https://web.archive.org/web/19961020015116/http://www3.netscape.com/"
-				alt="hosted on neocities" />
-		</a></li>
-		<li><a href="https://neocities.org/site/zeusofthecrows/">
-			<img class="btn-88x31" src="/stadt/assets/images/buttons/brands/sublime.png"
-				alt="made with sublime text editor" />
-		</a></li>
-		<li><a href="https://inkscape.org/">
-			<img class="btn-88x31" src="/stadt/assets/images/buttons/brands/inkscape.svg"
-				alt="inkscape 'draw freely.' logo" />
-		</a></li>
-		<li><a href="https://www.aseprite.org/">
-			<img class="btn-88x31 anim" src="/stadt/assets/images/buttons/brands/aseprite.png"
-				alt="aseprite logo animated" />
-		</a></li>
-		<li><a href="http://apngasm.sourceforge.net/">
-			<img class="btn-88x31" src="/stadt/assets/images/buttons/brands/apngasm.png"
-				alt="apng assembler" />
-		</a></li>
-		<li><a href="http://littlesvr.ca/apng/">
-			<img class="btn-88x31 anim" src="/stadt/assets/images/buttons/brands/apng.png"
-				data-img-source="~zeus"
-				alt="[animated] png now" />
-		</a></li>
-		<li><a href="https://contrachrome.com/">
-			<img class="btn-88x31 anim" src="/stadt/assets/images/buttons/brands/chromium.png"
-				alt="ie/chrome/brave logos 'same shit, different arsehole'" />
-		</a></li>
-		<li><a href="https://twitter.com/zetafleet/status/1075592527888220160">
-			<img class="btn-88x31 anim smooth-zoom" src="/stadt/assets/images/buttons/brands/firefox.png"
-				alt="mozilla now" />
-		</a></li>
-	</ul>
-	<hr />
-	<ul class="img-grid">
-		<li><a href="https://projects.linuxmint.com/cinnamon/">
-			<img class="btn-88x31" src="/stadt/assets/images/buttons/brands/cinnamon.png"
-				alt="linux mint cinnamon button" />
-		</a></li>
-		<li><a href="https://kde.org/">
-			<img class="btn-88x31 smooth-zoom" src="/stadt/assets/images/buttons/brands/konqi.png"
-				alt="konqi (kde mascot) button" />
-		</a></li>
-		<li><a href="https://linuxmint.com/">
-			<img class="btn-88x31 smooth-zoom" src="/stadt/assets/images/buttons/brands/mint.png"
-				alt="linux mint button" />
-		</a></li>
-		<li><a href="https://web.archive.org/web/20080528034856/http://www.kde.org/">
-			<img class="btn-88x31 anim smooth-zoom" src="/stadt/assets/images/buttons/brands/kool-de.png"
-				alt="kool desktop environment button" />
-		</a></li>
-		<li><a href="https://fedoraproject.org/kde/">
-			<img class="btn-88x31 smooth-zoom" src="/stadt/assets/images/buttons/brands/fedora.png"
-				alt="powered by fedora button" />
-		</a></li>
-		<li><a href="https://xenia-linux-site.glitch.me/">
-			<img class="btn-88x31" src="/stadt/assets/images/buttons/brands/xenia.png"
-				data-img-src="https://voltbun.neocities.org/"
-				alt="xenia the fox linux button" />
-		</a></li>
-	</ul>
-</article>
-
-<article id="webrings">
-	<section id="wr-intro">
-		<p>this site is a proud member of the following webrings!</p>
-		<p>
-			read more about webrings
-			<a href="https://sadgrl.online/cyberspace/surf-the-web.html">here</a>
-		</p>
+			<section id="wr-hotline">
+				<p lang="und-Zsym">
+					<!-- this is a perversion of the lang attribute, but it's the only
+						way to get chrome android to display emojis as monochrome -->
+					<a href="https://hotlinewebring.club/zeus/previous">&lt;&lt;&lt;&lt;</a>
+					<a href="https://hotlinewebring.club/"
+					>&#9742;&nbsp;Hotline&nbsp;&#9742;</a>
+					<a href="https://hotlinewebring.club/zeus/next"    >&gt;&gt;&gt;&gt;</a>
+				</p>
+			</section>
+		</article>
 	</section>
-	<section id="wr-nojs" class="webring">
-		<a id="nojs-site">zeus' stadt</a>
-		<a id="nojs-prev" href="https://nojs.sugarfi.dev/prev.php?url=https://zeusofthecrows.github.io">prev</a>
-		<a id="nojs-next" href="https://nojs.sugarfi.dev/next.php?url=https://zeusofthecrows.github.io">next</a>
-		<a id="nojs-rand" href="https://nojs.sugarfi.dev/rand.php">rand</a></li>
-		<a id="nojs-link" href="https://nojs.sugarfi.dev/">no js webring</a>
-		</ul>
-	</section>
-	<!-- /!\ div *must* have these classes /!\ -->
-	<section id="wr-yester" class="webring">
-		<!-- all this content is a placeholder for users with js disabled -->
-		<h3 class="yw-title yw-title-nojs">Yesterweb Ring</h3>
-		<p>
-			This site, <strong><a href="https://zeusofthecrows.github.io/stadt">
-			Zeus' Stadt</a></strong>, is keeping the old web alive. Thanks,
-			<strong>~Zeus</strong>!
-		</p>
-		<p>
-			<a href="https://webring.yesterweb.org/noJS/index.php?d=next&url=https://zeusofthecrows.github.io/">
-				[Next]</a>
-			<a href="https://webring.yesterweb.org/noJS/index.php?d=prev&url=https://zeusofthecrows.github.io/">
-				[Prev]</a>
-			<a href="https://webring.yesterweb.org/noJS/index.php?d=rand&url=https://zeusofthecrows.github.io/">
-				[Rand]</a>
-			<br />
-			<a href="https://yesterweb.org/webring/members.html">
-				[members]</a>
-		</p>
-	</section>
-
-	<section id="wr-geekring">
-		<p>
-			Check out the other awesome websites in <span>The
-			<a href="https://geekring.net">Geek Ring!</a></span>
-		</p>
-		<a href="http://geekring.net/site/139/previous"
-			class="btn-9x">&lt;- Previous</a>
-		<a href="http://geekring.net/site/139/random"
-			class="btn-9x">Random</a>
-		<a href="http://geekring.net/site/139/next"
-			class="btn-9x">Next -&gt;</a>
-	</section>
-
-	<section id="wr-hotline">
-		<p lang="und-Zsym">
-			<!-- this is a perversion of the lang attribute, but it's the only
-				way to get chrome android to display emojis as monochrome -->
-			<a href="https://hotlinewebring.club/zeus/previous">&lt;&lt;&lt;&lt;</a>
-			<a href="https://hotlinewebring.club/"
-			>&#9742;&nbsp;Hotline&nbsp;&#9742;</a>
-			<a href="https://hotlinewebring.club/zeus/next"    >&gt;&gt;&gt;&gt;</a>
-		</p>
-	</section>
-</article>
+</aside>

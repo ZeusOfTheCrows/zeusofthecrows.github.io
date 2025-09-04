@@ -42,7 +42,7 @@
 		{% endif %}
 
 		<!-- turns out cross-domain canonicals are acceptable -->
-		<link rel="canonical" href="https://zeusofthecrows.github.io{{ page.url | replace:'index.html','' | relative_url }}" />
+		<link rel="canonical" href="https://zeusofthecrows.github.io/{{ page.url | replace:'index.html','' | relative_url }}" />
 
 		<!-- lets use font library instead of gfonts? -->
 		<!-- fontlibrary just serves broken fira, unfortunately -->
@@ -78,13 +78,9 @@
 
 	<body>
 		<!-- ztodo -->
-		<a class="skip-nav-link" href="#window-area" style="display: none;">Skip to Content</a>
+		<a class="skip-nav-link" href="#main-content" style="display: none;">Skip to Content</a>
 
 		{{ content }}
-
-		{% if page.url != "/stadt/webgarden/" %} {% include gc-header.html %} {% endif %}
-
-		{% if page.url != "/stadt/webgarden/" %} {% include gc-sidebar.html %} {% endif %}
 
 	</body>
 

@@ -990,7 +990,7 @@
   alt: "meteors netscape button, saying neocities.org with paws"
   smooth: y
   anim: y
-  lnk-url: "https://neocities.org/"
+  lnk-url: "https://neocities.org/site/zeusofthecrows/"
   ins-url: "https://web.archive.org/web/19961020015116/http://www3.netscape.com/"
   src: s
   cat: b
@@ -999,15 +999,15 @@
   alt: "netscape button saying neocities.org with cat logo and paws"
   smooth: y
   anim: y
-  lnk-url: "https://neocities.org/"
+  lnk-url: "https://neocities.org/site/zeusofthecrows/"
   ins-url: "https://web.archive.org/web/19961020015116/http://www3.netscape.com/"
   src-url: "/stadt/assets/images/buttons/neocities.ase"
   src: z
   cat: b
 
 - image: "neocities-spin"
-  lnk-url: "https://neocities.org/"
   anim: y
+  lnk-url: "https://neocities.org/site/zeusofthecrows/"
   alt: "various colours of neocities buttons, rotating"
   ins-url: "https://purplehello98.neocities.org/buttons/"
   src: s

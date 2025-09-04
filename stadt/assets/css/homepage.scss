@@ -1,224 +1,132 @@
 ---
 ---
-/* for nojs */
-@font-face {
-	font-family: "04b03";
-	src: url("/stadt/assets/fonts/04b03.woff")  format("woff");
-	src: url("/stadt/assets/fonts/04b03.woff2") format("woff2");
+
+body {
+	background-size: 256px 256px;
+	background-attachment: fixed;
+	background-repeat: repeat;
+	--wall-clr-1: #531151;
+	--wall-clr-2: #321565;
+	--wall-clr-3: #503586;
+	--wall-clr-4: #8A3288;
+	/*--wall-clr-1: #D1B591;
+	--wall-clr-2: #644424;
+	--wall-clr-3: #CC630E;
+	--wall-clr-4: #CF7D34;*/
+	background-color: var(--wall-clr-1);
+	background-image:
+		radial-gradient(circle at 34.6% 34.6%, var(--wall-clr-1), var(--wall-clr-1) 8%,  #0000 calc(8% + 1px)),
+		radial-gradient(circle at 31.7% 31.7%, var(--wall-clr-2), var(--wall-clr-2) 12%, #0000 calc(12% + 1px)),
+		radial-gradient(circle at 28.5% 28.5%, var(--wall-clr-3), var(--wall-clr-3) 16%, #0000 calc(16% + 1px)),
+		radial-gradient(circle at 25.0% 25.0%, var(--wall-clr-4), var(--wall-clr-4) 20%, #0000 calc(20% + 1px)),
+		radial-gradient(circle at 65.4% 34.6%, var(--wall-clr-1), var(--wall-clr-1) 8%,  #0000 calc(8% + 1px)),
+		radial-gradient(circle at 68.3% 31.7%, var(--wall-clr-2), var(--wall-clr-2) 12%, #0000 calc(12% + 1px)),
+		radial-gradient(circle at 71.5% 28.5%, var(--wall-clr-3), var(--wall-clr-3) 16%, #0000 calc(16% + 1px)),
+		radial-gradient(circle at 75.0% 25.0%, var(--wall-clr-4), var(--wall-clr-4) 20%, #0000 calc(20% + 1px)),
+		radial-gradient(circle at 34.6% 65.4%, var(--wall-clr-1), var(--wall-clr-1) 8%,  #0000 calc(8% + 1px)),
+		radial-gradient(circle at 31.7% 68.3%, var(--wall-clr-2), var(--wall-clr-2) 12%, #0000 calc(12% + 1px)),
+		radial-gradient(circle at 28.5% 71.5%, var(--wall-clr-3), var(--wall-clr-3) 16%, #0000 calc(16% + 1px)),
+		radial-gradient(circle at 25.0% 75.0%, var(--wall-clr-4), var(--wall-clr-4) 20%, #0000 calc(20% + 1px)),
+		radial-gradient(circle at 65.4% 65.4%, var(--wall-clr-1), var(--wall-clr-1) 8%,  #0000 calc(8% + 1px)),
+		radial-gradient(circle at 68.3% 68.3%, var(--wall-clr-2), var(--wall-clr-2) 12%, #0000 calc(12% + 1px)),
+		radial-gradient(circle at 71.5% 71.5%, var(--wall-clr-3), var(--wall-clr-3) 16%, #0000 calc(16% + 1px)),
+		radial-gradient(circle at 75.0% 75.0%, var(--wall-clr-4), var(--wall-clr-4) 20%, #0000 calc(20% + 1px))
+		;
 }
 
-@font-face {
-	font-family: "Yesterweb Nova Square";
-	src: url("https://cloudflare-ipfs.com/ipfs/QmaKT1nHC9JM5xmz7cRuRcB8jrkRjxdPsLaLnyzEta3e8R/NovaSquare.woff") format("woff");
+@media (prefers-color-scheme: light) {
+  body {
+    --wall-clr-1: #853C2B;
+    --wall-clr-2: #D23B11;
+    --wall-clr-3: #E57711;
+    --wall-clr-4: #EAD328;
+	}
+}
+
+
+body:has(option[value="gb"]:checked) {
+	--wall-clr-1: #282828;
+	--wall-clr-2: #CA2825;
+	--wall-clr-3: #D45E21;
+	--wall-clr-4: #D69834;
 }
 
 /* -------------------------------- layout --------------------------------- */
-.x-window {
-	position: relative;
-	inset: 0;
-	margin: auto;
+
+body {
 }
 
-#window-area {
+#content {
 	box-sizing: border-box;
-	padding: 1em;
+	max-width: max-content;
+	margin-inline: auto;
 	gap: 1em;
-	display: grid;
-	grid-template-columns: 1fr 2fr 1fr;
-	grid-template-areas:
-		"wnew main musc"
-		"wnew main nbrs"
-		"qote main nbrs"
-		"qote main ring"
-		"dimg main ring"
-		"btns btns btns";
+	// display: grid;
+	// grid-auto-flow: column;
+	display: flex;
+	align-items: start;
 }
 
-@media (max-width: 1200px) {
-
-	#window-area {
-		align-items: center;
-		grid-template-columns: 1fr;
-		grid-template-areas:
-		"main"
-		"wnew"
-		"musc"
-		"qote"
-		"dimg"
-		"nbrs"
-		"ring"
-		"btns";
-		// dots must be there as grid always has 3 columns for some reason?
-
-		padding-inline: 0.1em;
-	}
-
-	.x-window {
-		margin: auto !important;
-	}
+aside {
+	contain: layout;
+	max-width: 40ch;
+	display: flex;
+	flex-direction: column;
+	gap: 4em;
+	// background-color: #73442B;
 }
-
-/* -------------------------------- windows -------------------------------- */
-#whats-new {
-	grid-area: wnew;
-	margin-top: 10%;
-	// left: calc(50vw - 256px);
-	max-width: 512px;
-
-	& .window-content {
-		padding: 4px 8px;
-		// padding: 8px;
-		height: 512px;
-		overflow-y: auto;
-		grid-template-areas:
-			"title title"
-			"body btns"
-			"footer footer";
-	}
-}
-
-#intro-text {
-	grid-area: main;
+main {
 	max-width: 80ch;
+}
 
-	& .window-content {
-		padding: 8px;
-		text-align: justify;
+main,
+aside {
+	box-sizing: border-box;
+	background-color: var(--wall-clr-1);
+	background-image: url("/stadt/assets/images/backgrounds/texture.png");
+	background-blend-mode: hard-light;
+	border-right:  4px solid #00000018;
+	border-bottom: 4px solid #00000018;
+	box-sizing: border-box;
+	padding: 2em 2ch;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+	margin-bottom: 2em;
+	box-shadow: 4px 4px 8px #00000080, 4px 4px 16px #00000080;
+}
 
-		& #welcome-title {
-			font-size: 2rem;
-			font-weight: 700;
-			width: max-content;
-			margin-inline: auto;
-
-			& #welcome-serif {
-				font-family: var(--fnt-serif);
-				font-size: 1.15em;  // just a mite bigger
-				color: var(--txt-2);
-			}
-			& #welcome-sans {
-				font-family: var(--fnt-sans);
-				color: var(--s-org);
-			}
-		}
-	}
+#quote {
+	min-width: 40ch;
+	display: inline-block;
+	margin-inline: auto;
 }
 
 #webrings {
-	grid-area: ring;
-
-	& .window-content {
-		max-width: 440px;
-		padding: 4px;
 		display: grid;
 		gap: 8px;
 		grid-template-areas:
-			"intro intro"
-			"geek  geek "
-			"hotln hotln"
-			"nojs yester";
-
-		@media (max-width: 530px) {
-			grid-template-areas:
-				"intro"
-				"geek"
-				"hotln"
-				"nojs"
-				"yester"
-		}
+			"intro"
+			"geek"
+			"hotln ";
 
 		& #wr-intro {
 			grid-area: intro;
 			text-align: center;
 		}
 
-		& #wr-nojs {
-			grid-area: nojs;
-
-			font-family: "04b03", system, chicago, sans-serif;
-			background-color: var(--bgd-3);
-			color: var(--txt-1);
-			& a {
-				text-shadow: 0 0 2px;
-
-				&:link {
-					color: var(--s-ppl);
-				}
-				&:visited {
-					color: var(--d-ppl);
-				}
-			}
-			border: 2px solid var(--bgd-0);
-			gap: 4px;
-			align-items: center;
-			justify-content: center;
-			text-align: center;
-
-			display: grid;
-			grid-template-areas:
-				"prev prev next next"
-				"spc2 rand rand spc3"
-				"spc2 link link spc3";
-
-			& #nojs-site {
-				display: none;
-			}
-			& #nojs-prev {
-				grid-area: prev;
-			}
-			& #nojs-next {
-				grid-area: next;
-			}
-			& #nojs-rand {
-				grid-area: rand;
-			}
-			& #nojs-link {
-				grid-area: link;
-			}
-		}
-
-		& #wr-yester {
-			grid-area: yester;
-
-			// background-image: url("https://cloudflare-ipfs.com/ipfs/QmaKT1nHC9JM5xmz7cRuRcB8jrkRjxdPsLaLnyzEta3e8R/gridnew.gif");
-			background: var(--bgd-0);
-
-			text-align: center;
-
-			padding-left: 4px;
-			padding-right: 4px;
-
-			border-width: 2px;
-			border-style: solid;
-			border-top-color:    var(--s-grn);
-			border-left-color:   var(--s-grn);
-			border-bottom-color: var(--d-grn);
-			border-right-color:  var(--d-grn);
-
-			& .yw-title {
-				font-family: "Yesterweb Nova Square", Impact;
-				color: var(--s-grn);
-				font-weight: normal;
-			}
-			& a {
-				color: var(--s-grn);
-			}
-		}
-
 		& #wr-geekring {
+			font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
 			grid-area: geek;
 			padding: 8px;
-			// width: 400px;
 
-			background: linear-gradient(var(--d-aqa), var(--d-blu));
+			background: linear-gradient(#66CC99, #9999CC);
+			border: 1px solid black;
+			box-shadow: inset 2px 2px 2px #00000080, inset -2px -2px 2px #FFFFFF80;
 
 			display: grid;
-			// grid-template-areas:
-				// "label label label"
-				// "btn-1 btn-2 btn-3";
 			grid-auto-flow: column;
 			grid-template-columns: repeat(3, 1fr);
-			gap: 2px;
+			gap: 1em 4px;
 
 			& p {
 				// grid-area: label;
@@ -228,11 +136,13 @@
 				font-family: "Arial", sans-serif;
 				font-size: 1.3em;
 				font-weight: bold;
-				-webkit-text-stroke: 1px var(--txt-2);
-				-webkit-text-fill-color: var(--bgd-0);
+				-webkit-text-stroke: 1px black;
+				-webkit-text-fill-color: white;
+				margin-block: 0;
 
 				& span {
 					font-style: oblique;
+
 
 					& a {
 						text-decoration: underline dotted;
@@ -241,44 +151,41 @@
 			}
 
 			& .btn-9x {
-				width: 88px;
+				// width: 88px;
+				width: 100%;
+				box-sizing: border-box;
 				grid-row: 2 / 3;
 			}
 		}
 
 		& #wr-hotline {
+			font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 			grid-area: hotln;
+
+			& p {
+				margin-block: 2em;
+			}
 
 			text-align: center;
 			font-family: var(--fnt-sans);
-			// font-size: 2em;
-			font-size: min(2em, 175%);
-			font-weight: 900;
-			font-style: oblique;
-			text-transform: uppercase;
 
-			text-shadow: 0.05em 0.05em var(--d-ppl);
-
-			& a {
+			& a:any-link {
+				font-weight: 800 !important;
+				font-size: 150%;
+				font-style: oblique;
+				text-transform: uppercase;
+				text-shadow: 0.05em 0.05em #A12462;
 
 				&[lang="und-Zsym"]{
 					//[nyi]: https://drafts.csswg.org/css-fonts-4/#font-variant-emoji-prop
 					font-variant-emoji: text;
 				}
-				color: var(--s-blu);
 
-				&:visited {
-					color: var(--s-grn);
-				}
-				&:hover {
-					color: var(--s-ppl);
-				}
-				&:active {
-					color: var(--s-aqa);
-				}
+				color: #E62764;
+
 			}
 			z-index: 0;
-			position: relative;  // for background (ztodo towers)
+			position: relative;  // for background
 			&:before {
 				content: "";
 				position: absolute;
@@ -288,6 +195,8 @@
 				left: 0px;
 
 				z-index: -1;
+				background-color: #031030;
+				background-blend-mode: exclusion;
 				background-image: url(/stadt/assets/images/backgrounds/hotline.png);
 				background-size: cover;
 				background-position: center;
@@ -296,117 +205,100 @@
 				// opacity: 0.5;
 			}
 		}
-	}
 }
 
-#music-player {
-	grid-area: musc;
-	margin-top: 16%;
-	margin-left: 8%;
+#music {
 	height: min-content;
-	max-width: min-content;
 
-	& .window-content {
-		// padding: 1px;
-		// width: 100%;
-		padding: 8px;
-		display: grid;
-		gap: 4px 8px;
-		grid-template-rows:    min-content;
-		grid-template-columns: max-content;
-
-		& #current-song {
-			width: 274px;  // narrowest it can be and still have a volume scrubber
-			aspect-ratio: 1;
-			height: calc(100% - 9px);  // list elements have bottom padding of 9?
-			// height: 60px;
-			// background-color: var(--d-org);
-			// maybe album art? if taller
-			// background: url("/stadt/assets/images/backgrounds/chainlink.jpg");
-			// ztodo this image is not permanent
-			background-image:
-				var(--bg);
-			background-size: cover;
-			grid-area: 1 / 1 / 2 / 3;
-			// display: inline-flex;
-			// justify-content: center;
-
-			& audio {
-				width:  100%;
-				height: 100%;
-				border-radius: 0;
-				opacity: 0.8;
-
-				/* ooh chrome aren't we special */
-				&::-webkit-media-controls-enclosure {
-					border-radius: 0;
-				}
-				// i think this is probably an unanounced feature–let it sleep for now
-				// --media-background: var(--bgd-0);
-				// --duration-color: var(--d-ylw);
-			}
-		}
-		& table {
-			grid-column: 1 / 4;
-		}
-		& .button-grid {  // ztodo make generic
-			// why does everything have padding-left: 40px;?? ztodo
-			list-style-type:none;
-			display: inline-block;
-			padding: 0;
-			margin: 0;
-			grid-area: 1 / 3 / 2 / 4;
-
-			@media (max-width: 530px) {
-				grid-area: 3 / 1 / 4 / 4;
-				text-align: center;
-
-				& li {
-					display: inline-block;
-				}
-			}
-		}
-		& .current-artist {
-			grid-row: 2 / 3;
-		}
-		& .current-title {
-			grid-row: 3 / 4;
-		}
-		& .current-label {
-			text-align: right;
-			vertical-align: top;
-			// width: 64px;
-			margin: 0;
-			padding: 2px 2px;  // for border size
-			grid-column: 1 / 2;
-		}
-		& .current-info {
-			margin: 0;
-			padding: 0px 2px;
-			// background-color: var(--bgd-3);
-			// width: auto;
-			grid-column: 2 / 4;
-		}
-
-		// & #current-song-info > p:nth-child(2n) {
-			// text-align: right;
-			// grid-area: 2 / 1 / 3 / 2;
-		// }
-		// & #current-song-info > p:nth-child(2n+1) {
-			// text-align: right; grid-column-start: 2; grid-column-end: 3;
-			// grid-area: 2 / 2 / 3 / 3;
-		// }
+	& figure {
+		margin: 0;
+		position: relative;
+		text-align: center;
 	}
 
-	// & iframe {
-	// 	width:  512px;
-	// 	height: 256px;
-	// }
-}
+	& figcaption {
+		&:after {
+			content: "";
+			background-image: url("/stadt/assets/music/clip.png");
+			width: 60px;
+			height: 120px;
+			/*! background-color: red; */
+			display: block;
+			position: absolute;
+			right: -19px;
+			background-size: contain;
+			background-repeat: no-repeat;
+			transform: rotate(90deg);
+			top: -50px;
+			pointer-events: none;
+		}
+		background-image: url("/stadt/assets/music/paper.png");
+		background-size: 100% 100%;
+		height: 3em;
+		background-position: center;
+		background-repeat: no-repeat;
+		position: relative;
+		top: -1em;
+		isolation: isolate;
+		transform: rotate(-2deg);
 
-#neighbours {
-	grid-area: nbrs;
-	max-width: 64ch;
+		font-family:
+			"Latin Modern Roman Unslanted",
+			"Bradley Hand ITC",
+			"MV Boli",
+			"Lucida Handwriting",
+			"Z003",
+			"Tempus Sans",
+			"PilGi",
+			"Freestyle Script",
+			cursive;
+
+		& a,
+		& span {
+			color: black;
+
+			top: 0.8em;
+			position: relative;
+		}
+		& a:link {
+			color: blue;
+		}
+		& a:visited {
+			color: purple;
+		}
+		& a:active {
+			color: red;
+		}
+	}
+
+	// & summary a,
+	// & summary span {
+	// 	display: block;
+	// }
+
+	// workaround for firefox bug - aspect-ratio doesn't work for audio
+	& div, {
+		width:  100%;
+		height: max-content;
+		aspect-ratio: 1;
+		transform: rotate(2deg);
+
+		& audio {
+			width:  100%;
+			height: 100%;
+			border-radius: 8px;
+			background-image: var(--cover);
+			background-size: cover;
+
+			/* ooh chrome aren't we special */
+			&::-webkit-media-controls-enclosure {
+				border-radius: 0;
+			}
+			// i think this is probably an unanounced feature–let it sleep for now
+			// --media-background: var(--bgd-0);
+			// --duration-color: var(--d-ylw);
+		}
+	}
 }
 
 #quote {
@@ -418,8 +310,9 @@
 
 	& blockquote {
 		font-family: var(--fnt-serif);
-		font-size: 1.3em;
+		font-size: 1.1em;
 		padding: 1em;
+		background-colour: rebecca-purple;
 
 		&::first-letter {
 			float: left;
@@ -428,8 +321,33 @@
 			padding-right: 0.04em;
 		}
 	}
+}
+
+#image {
+	max-width: max-content;
+
+	& img {
+		max-width: 100%;
+
+		&:hover,
+		&:focus,
+		&:active {
+			content: var(---hover-src);
+		}
+	}
+}
+
+#quote,
+#image {
+
+	display: block;
+	margin-inline: auto;
+
+	& figure {
+		margin: 0;
+	}
+
 	& footer {
-		// display: flex;
 		padding: 2px 1ch;
 		text-align: right;
 		color: var(--txt-3);
@@ -449,55 +367,5 @@
 				content: ",";
 			}
 		}
-
-		// & a,
-		// & time {
-			// width: 100%;
-			// padding: 2px 1ch;
-		// }
-		// & time {
-			// text-align: right;
-		// }
-	}
-}
-
-#daily-img {
-	grid-area: dimg;
-	max-width: 512px;
-	min-width: 256px;
-
-	& img {
-		max-width: 100%;
-
-		&:hover,
-		&:focus,
-		&:active {
-			content: var(---hover-src);
-		}
-	}
-
-	& footer {
-		padding: 2px 1ch;
-		text-align: right;
-		color: var(--txt-3);
-	}
-}
-
-#brands {
-	grid-area: btns;
-}
-
-/* ============================== animations =============================== */
-
-#welcome-sans {
-	// rainbow text
-	animation: colour-cycle 2s linear infinite;
-	--shad-size-s: 2px;
-	--shad-size-l: 24px;
-}
-
-@media (prefers-reduced-motion) {
-	#welcome-sans {
-		animation: none;
 	}
 }
