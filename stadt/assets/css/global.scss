@@ -567,10 +567,10 @@ textarea {
 
 body {
   display: grid;
-  grid-template-columns: 1fr auto var(--body-hor-offset, 0.8fr);
+  grid-template-columns: 1fr auto var(--body-hor-offset, 1fr);
 
 	&>header {
-		grid-column: 1 / 4;
+		grid-column: 2 / 2;
 		text-align: center;
 	}
 
@@ -606,6 +606,10 @@ body {
 	&>main {
 		grid-column: 2 / 2;
 		max-width: 120ch;
+
+		&>article {
+			// padding-inline: 2ch;
+		}
 	}
 
 	&>footer {

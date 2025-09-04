@@ -54,6 +54,7 @@ body:has(option[value="gb"]:checked) {
 /* -------------------------------- layout --------------------------------- */
 
 body {
+	--body-hor-offset: 0.8fr;
 }
 
 body>main {
@@ -112,8 +113,8 @@ main>aside {
 		display: inline-block;
 	}
 
-	& a:hover::before,
-	& a:hover::after {
+	& a::before,
+	& a::after {
 		content: "";
 		background: url("/stadt/assets/images/shrines/mv/mv-hilite.png");
 		position: absolute;
@@ -121,10 +122,17 @@ main>aside {
 		left: 0;
 		bottom: 0;
 		right: 0;
+		opacity: 0;
+		transition: opacity 0.2s, filter 0.4s;
+	}
+
+	& a:hover::before,
+	& a:hover::after {
+		opacity: 1;
 	}
 
 	& a:hover::before {
-		filter: blur(8px) brightness(2);;
+		filter: blur(8px) brightness(2) hue-rotate(360deg);
 	}
 }
 

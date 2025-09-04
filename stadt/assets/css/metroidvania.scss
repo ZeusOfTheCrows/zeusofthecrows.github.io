@@ -2,41 +2,68 @@
 ---
 
 body {
+	background-image: url("/stadt/assets/images/backgrounds/mv/crocomire.png");
+	background-attachment: fixed;
 }
 
-article#metroid {/*
+main>article {
+	background: black;
+}
+
+/* ZTODO: MAKE THIS A GLOBAL - SOMETHING LIKE LEGIBILITY-TINT-COLOUR */
+@media (prefers-color-scheme: light) {
+	main>article {
+		background: white;
+	}
+}
+
+#m-om>h2 {
+	// ZTODO THESE ARE NOT VARIABLES DUE TO [UNDOCUMENTED?] SCSS BUG
+	// (CANNOT ASSIGN URL() TO VARIABLE)
+	background-image: url("/stadt/assets/images/shrines/mv/logos/m-om.png");
+	// this is here so i don't accidentally add it to a section that doesn't have a logo
+	font-size: 0;
+	height: var(--height);
+}
+
+main>article>section {
+	&>h2 {
+		text-align: center;
+		font-size: 3em;
+		--height: 100px;
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
 
 	position: relative;
-
-	&:before {
+	padding: 1em 4ch;
+	isolation: isolate;
+	&::before,
+	&::after {
 		content: "";
 		position: absolute;
-		background-attachment: fixed;
-		background-image: url("https://metroidconstruction.com/images/site/background.png");
-		background-image: url(https://metroidconstruction.com/images/site/bg-bricks-left.png), url(https://metroidconstruction.com/images/site/bg-bricks-right.png), url(https://metroidconstruction.com/images/site/background.png);
-		background-repeat: repeat-y, repeat-y, repeat;
-		top: 0;
-		left: -100vw;
-		bottom: 0;
-		// right: 0;
+		inset: 0;
 		z-index: -1;
-		width: 200vw;
-		overflow-x: clip;
-	}*/
-}
+	}
 
-/* -------------------------------- layout --------------------------------- */
-
-body {
-}
-
-#content {
-	box-sizing: border-box;
-	max-width: max-content;
-	margin-inline: auto;
-	gap: 1em;
-	// display: grid;
-	// grid-auto-flow: column;
-	display: flex;
-	align-items: start;
+	&::before {
+		background-attachment: fixed;
+		// ZTODO THESE ARE ALL IN HTML DUE TO [UNDOCUMENTED?] SCSS BUG
+		// (CANNOT ASSIGN URL() TO VARIABLE)
+		background-image: var(--bg-img);
+		background-size: cover;
+		opacity: 0.4;
+		// filter: blur(2px);
+		// filter: url('data:image/svg+xml,\
+		// 	<svg xmlns="http://www.w3.org/2000/svg">\
+		// 		<filter id="blur" x="0" y="0" width="100%" height=100%"\
+		// 			xmlns="http://www.w3.org/2000/svg">\
+		// 			<feGaussianBlur in="SourceGraphic" stdDeviation="3" />
+		// 		</filter>\
+		// 	</svg>#blur');
+	}
+	&::after {
+		backdrop-filter: blur(3px);
+	}
 }
