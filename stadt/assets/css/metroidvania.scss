@@ -1,0 +1,42 @@
+---
+---
+
+body {
+}
+
+article#metroid {/*
+
+	position: relative;
+
+	&:before {
+		content: "";
+		position: absolute;
+		background-attachment: fixed;
+		background-image: url("https://metroidconstruction.com/images/site/background.png");
+		background-image: url(https://metroidconstruction.com/images/site/bg-bricks-left.png), url(https://metroidconstruction.com/images/site/bg-bricks-right.png), url(https://metroidconstruction.com/images/site/background.png);
+		background-repeat: repeat-y, repeat-y, repeat;
+		top: 0;
+		left: -100vw;
+		bottom: 0;
+		// right: 0;
+		z-index: -1;
+		width: 200vw;
+		overflow-x: clip;
+	}*/
+}
+
+/* -------------------------------- layout --------------------------------- */
+
+body {
+}
+
+#content {
+	box-sizing: border-box;
+	max-width: max-content;
+	margin-inline: auto;
+	gap: 1em;
+	// display: grid;
+	// grid-auto-flow: column;
+	display: flex;
+	align-items: start;
+}

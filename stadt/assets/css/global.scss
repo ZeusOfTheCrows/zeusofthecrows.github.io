@@ -451,7 +451,7 @@ img.smooth-zoom {
 	& li {
 		display: inline-block;
 		// ~~i don't know why, but inline-block aligns to bottom~~ fixed:
-		vertical-align: bottom;
+		vertical-align: top;
 		& a {
 			text-decoration: none;
 		}
@@ -567,8 +567,7 @@ textarea {
 
 body {
   display: grid;
-  grid-template-columns: 1.2fr max-content 1fr;
-
+  grid-template-columns: 1fr auto var(--body-hor-offset, 0.8fr);
 
 	&>header {
 		grid-column: 1 / 4;
@@ -582,8 +581,9 @@ body {
 
 		// ZTODO: OPTIMISE FOR MOBILE
 		text-align: center;
-		width: max-content;
+		// width: max-content;
 		width: 100%;
+		white-space: nowrap;
 		overflow-x: auto;
 		margin: auto;
 		background-color: brown;
@@ -603,14 +603,16 @@ body {
 		}
 	}
 
-	&>section {
-		  grid-column: 2 / 2;
+	&>main {
+		grid-column: 2 / 2;
+		max-width: 120ch;
 	}
 
 	&>footer {
 		grid-column: 1 / 4;
 		font-size: smaller;
 		padding-block: 1em;
+		margin-top: 2em;
 		backdrop-filter: blur(25px);
 		text-align: center;
 		border-top-left-radius:  8px;
@@ -618,6 +620,7 @@ body {
 		box-shadow: 4px 4px 8px #00000080, 4px 4px 16px #00000080;
 	}
 }
+
 
 /*
 #desktop-area {

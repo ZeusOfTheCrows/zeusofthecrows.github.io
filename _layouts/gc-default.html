@@ -3,9 +3,9 @@ layout: gc-base
 ---
 
 <header>
-	<h1 id="site-header"> ZeusOfTheCrows</h1>
+	<h1> ZeusOfTheCrows</h1>
 </header>
-<nav id="site-nav" aria-label="site pages">
+<nav aria-label="site pages">
 	{% assign current = page.url | downcase | split: '.' %}
 	{% for item in site.data.stadt-nav %}
 	<a
@@ -35,7 +35,7 @@ layout: gc-base
 	</a>-->
 </nav>
 
-<section id="content">
+<main>
 {% comment %}
 	<!--
 	<section id="desktop-area">
@@ -106,7 +106,7 @@ layout: gc-base
 {% endcomment %}
 
 		{{ content }}
-</section>
+</main>
 
 <footer>
 	<p><a href="#">^ Back to top ^</a></p>

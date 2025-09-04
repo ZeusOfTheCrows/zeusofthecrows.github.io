@@ -56,43 +56,76 @@ body:has(option[value="gb"]:checked) {
 body {
 }
 
-#content {
+body>main {
 	box-sizing: border-box;
-	max-width: max-content;
 	margin-inline: auto;
 	gap: 1em;
 	// display: grid;
 	// grid-auto-flow: column;
 	display: flex;
+	flex-wrap: wrap;
 	align-items: start;
+	justify-content: center;
 }
 
-aside {
+main>section {
+	flex: 2;
+	// max-width: 80ch;
+}
+main>aside {
 	contain: layout;
-	max-width: 40ch;
-	display: flex;
-	flex-direction: column;
-	gap: 4em;
+	flex: 0 1 42ch;
+	// max-width: 40ch;
 	// background-color: #73442B;
 }
-main {
-	max-width: 80ch;
-}
 
-main,
-aside {
+main>section,
+main>aside {
 	box-sizing: border-box;
 	background-color: var(--wall-clr-1);
 	background-image: url("/stadt/assets/images/backgrounds/texture.png");
 	background-blend-mode: hard-light;
 	border-right:  4px solid #00000018;
 	border-bottom: 4px solid #00000018;
-	box-sizing: border-box;
 	padding: 2em 2ch;
 	border-bottom-left-radius: 3px;
 	border-bottom-right-radius: 3px;
-	margin-bottom: 2em;
 	box-shadow: 4px 4px 8px #00000080, 4px 4px 16px #00000080;
+}
+
+
+#page-mosaic {
+
+	padding: 0;
+	text-align: center;
+
+	list-style-type: none;
+	padding: none;
+	display: grid;
+
+	& li {
+		width: min-content;
+	}
+
+	& a {
+		position: relative;
+		display: inline-block;
+	}
+
+	& a:hover::before,
+	& a:hover::after {
+		content: "";
+		background: url("/stadt/assets/images/shrines/mv/mv-hilite.png");
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+	}
+
+	& a:hover::before {
+		filter: blur(8px) brightness(2);;
+	}
 }
 
 #quote {
@@ -217,7 +250,7 @@ aside {
 	}
 
 	& figcaption {
-		&:after {
+		&::after {
 			content: "";
 			background-image: url("/stadt/assets/music/clip.png");
 			width: 60px;
