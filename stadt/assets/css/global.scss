@@ -156,8 +156,9 @@ html {
 }
 
 body {
-	color: var(--txt-1);
-	font-family: var(--fnt-sans);
+	// color: var(--txt-1);
+	font-family: sans-serif;
+	line-height: 1.5;
 	tab-size: 2;
 	margin:0;
 	padding:0;
@@ -299,7 +300,7 @@ a:any-link {
 pre,
 samp,
 .ascii-art {
-	font-family: var(--fnt-mono);
+	font-family: var(--fnt-mono, monospace);
 }
 .ascii-art {
 	white-space: pre;
@@ -495,7 +496,8 @@ img.smooth-zoom {
 	width: min-content;
 	transform: rotate(var(--rot));
 	shape-outside: var(--shape-outside);
-
+}
+.float {
 	&.left {
 		float: left;
 	}
@@ -511,7 +513,6 @@ img.smooth-zoom {
 .indent,
 .copy-all,
 textarea {
-	margin: 0;
 	background: var(--bgd-0);
 	border: 1px solid var(--brdr-dark);
 	border-radius: 5px;
