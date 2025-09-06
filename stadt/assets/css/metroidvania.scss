@@ -89,10 +89,34 @@ main>article>section {
 	color: lightblue;
 	background-attachment: fixed;
 
-	&>:not(h2) {
+	&>*:not(h2) {
 		padding-inline: 2ch;
 		max-width: 80ch;
 		margin-inline: auto;
+	}
+
+	&>figure.full-bleed {
+		background: #0008;
+		border-image:
+			url("/stadt/assets/images/shrines/mv/m-border-image-2.png")
+			repeat 6 6 6 6 fill / 6px 6px 6px 6px;
+		// image-rendering: pixelated;
+		padding-block: 1em;
+
+		text-align: center;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 1ch;
+		max-width: 100%;
+		margin-inline: 1ch;
+		&>img {
+			max-width: 100%;
+		}
+		&>figcaption {
+			grid-column: 1 / -1;
+			font-style: italic;
+			font-family: var(--ftn-subdisplay, serif);
+		}
 	}
 
 	&>h1,
