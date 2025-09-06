@@ -1,0 +1,29 @@
+<nav aria-label="site pages">
+	{% assign current = page.url | downcase | split: '.' %}
+	{% for item in site.data.stadt-nav %}
+	<a
+	{% if current[0] contains item.link %}class="desktop-icon current"
+	{% elsif item.updt %}class="desktop-icon update"{% else %}
+	class="desktop-icon"{% endif %}
+		href="{{ item.link }}">
+		<img src="{{ item.bicn }}">
+		<span>{{ item.name }}</span>
+	</a>
+	{% endfor %}
+	{% if page.title %}
+	<a class="desktop-icon update" href="/">
+		<img src="/assets/images/desktop-icons/home.svg">
+		<span>Return Home</span>
+	</a>
+	{% else %}
+	<a class="desktop-icon" href="../#logoff" title=":(">
+		<img src="/assets/images/desktop-icons/exit-stadt.svg">
+		<span>Exit Stadt</span>
+	</a>
+	{% endif %}
+	<!--<a class="desktop-icon desktop-shortcut" href="/about#contact-me"
+		title="see about page for more contact methods">
+		<img src="/assets/images/desktop-icons/message-me.svg">
+		<span>Message Me</span>
+	</a>-->
+</nav>

@@ -1,6 +1,6 @@
 ---
 
-layout: post
+layout: term-post
 title: SDH Button Prompts
 date: 2022-10-31
 

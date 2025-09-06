@@ -1,0 +1,98 @@
+<!-- this isn't dynamic, because it means i can customise it myself -->
+
+<!-- add hr to separate horizontal nav from page, hide by default -->
+<hr class="pre-hori-nav" style="display: none;" />
+
+<ul class="nav-menu">
+	<li class="nav-menu-folder">Desktops
+		<!-- this is not closed so that css can recursively indent -->
+		<!-- i don't know why it works but it does so i'm not touching it -->
+		<ul>
+			<li class="nav-menu-item"><a href="{{ site.url-pfx }}/desktops/rainmeter">Rainmeter</a></li>
+			<li class="nav-menu-item"><a href="{{ site.url-pfx }}/desktops/wallpapers/">Wallpapers</a></li>
+			<li class="nav-menu-item"><a href="{{ site.url-pfx }}/desktops/wpengine/">WP Engine</a></li>
+		</ul>
+	</li>
+	<li class="nav-menu-folder">Mobile
+		<ul>
+			<li class="nav-menu-item"><a href="{{ site.url-pfx }}/mobile/kustom/">Kustom</a></li>
+		</ul>
+	</li>
+	<li class="nav-menu-folder">Games
+		<ul>
+			<li class="nav-menu-item"><a href="{{ site.url-pfx }}/games/reshade/">Reshade</a></li>
+			<li class="nav-menu-subfolder">Mods
+				<ul>
+					<li class="nav-menu-item"><a href="{{ site.url-pfx }}/games/mods/nsx-buttons/">NSX Prompts</a></li>
+					<li class="nav-menu-item"><a href="{{ site.url-pfx }}/games/mods/fromsoft/">FromSoft</a></li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+	<li class="nav-menu-folder">Utilities
+		<ul>
+			<li class="nav-menu-item"><a href="{{ site.url-pfx }}/utilities/gruvbox">Gruvbox</a></li>
+			<li class="nav-menu-item"><a href="{{ site.url-pfx }}/utilities/steam-deck">Steam Deck</a></li>
+			<li class="nav-menu-item"><a href="{{ site.url-pfx }}/utilities/ps-vita">Vita</a></li>
+		</ul>
+	</li>
+	<li class="nav-menu-folder">Internet
+		<ul>
+			<li class="nav-menu-item"><a href="{{ site.url-pfx }}/web/useful-sites/">Useful Sites</a></li>
+			<li class="nav-menu-item"><a href="https://reddit.com/r/gruvbox/">/r/Gruvbox</a></li>
+		</ul>
+	</li>
+	<li class="nav-menu-folder">Other
+		<ul>
+			<li class="nav-menu-item"><a href="{{ site.url-pfx }}/other/fonts/">Fonts</a></li>
+			<li class="nav-menu-item"><a href="{{ site.url-pfx }}/other/anbernic/">RG35XX</a></li>
+		</ul>
+	</li>
+	<li class="nav-menu-folder"><a href="{{ site.url-pfx }}/about/" rel="me">About</a>
+		<ul>
+			<li class="nav-menu-item"><a href="/" rel="me" title="flashing image warning">Personal Site</a></li>
+			<li class="nav-menu-item"><a href="https://steamcommunity.com/id/zeusofthecrows/" rel="me">Steam</a></li>
+			<!-- for relmeauth indieweb ring (doesn't work) -->
+			<li class="nav-menu-item" style="display: none;"><a href="mailto:zeusofthecrows+relme@gmail.com" rel="me">Relmemail</a></li>
+			<li class="nav-menu-item" style="display: none;"><a href="https://github.com/zeusofthecrows/" rel="me">Github</a></li>
+			<li class="nav-menu-item" style="display: none;"><a href="https://mas.to/@ZeusOfTheCrows/" rel="me">Mastodon</a></li>
+			<!--<li class="nav-menu-item"><a href="{{ site.url-pfx }}/feed.xml">⚛ Feed</a></li>-->
+			<li class="nav-menu-item"><a href="{{ site.url-pfx }}/feed.xml">Atom Feed</a></li>
+			<li class="nav-menu-item"><a href="https://zeusofthecrows.tumblr.com/" rel="me">Tumblr</a></li>
+			<!-- <li class="nav-menu-item"><a href="https://www.reddit.com/user/ZeusOfTheCrows/">Reddit</a></li> -->
+		</ul>
+	</li>
+</ul>
+
+{% comment %} <!--use if nav menu gets too large (folding)
+<ul class="nav-menu">
+	<details>
+		<summary class="nav-menu-folder">Desktops</summary>
+		<li><a href="{{ site.url-pfx }}/desktops/rainmeter">Rainmeter</a></li>
+		<li><a href="{{ site.url-pfx }}/desktops/wallpapers/">Wallpapers</a></li>
+		<li><a href="{{ site.url-pfx }}/desktops/wpe/">WP Engine</a></li>
+	</details>
+	<br />
+	<details>
+		<summary class="nav-menu-folder">Mobile</summary>
+		<li><a href="{{ site.url-pfx }}/phone/kustom/">Kustom</a></li>
+	</details>
+	<br />
+	<details>
+		<summary class="nav-menu-folder">Internet</summary>
+		<li><a href="{{ site.url-pfx }}/web/bookmarks/">Static Sites</a></li>
+		<li><a href="{{ site.url-pfx }}/web/bookmarks/">Useful Sites</a></li>
+	</details>
+	<br />
+	<details>
+		<summary class="nav-menu-folder">Fonts</summary>
+		<li><a href="https://github.com/ZeusOfTheCrows/DSegstended/">DSegstended</a></li>
+		<li><a href="https://www.fontstruct.com/fontstructors/1438889/jupitorr?order=by-balanced-rating">Fontstruct</a></li>
+		<li><a href="https://github.com/ZeusOfTheCrows/Fonts/">Other Fonts</a></li>
+	</details>
+	<br />
+	<details>
+		<summary class="nav-menu-folder">Other</summary>
+	</details>
+</ul>
+--> {% endcomment %}

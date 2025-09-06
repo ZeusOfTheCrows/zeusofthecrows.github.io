@@ -1,7 +1,9 @@
 ---
-layout: post
+
+layout: term-post
 title: Nintendo Prompts
 date: 2022-09-02
+
 ---
 
 i now have enough of these mods to group them together,  and i've decided to do

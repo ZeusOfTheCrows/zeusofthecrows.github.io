@@ -1,0 +1,50 @@
+---
+title: Wallpapers
+collection: leaf
+layout: term-default
+permalink: /:path/wallpapers/
+edit-date: 2021-10-19
+typora-root-url: ../
+notes: ^ is only so typora correctly renders images
+---
+# Wallpapers
+
+<div class="contents-intro-container" markdown="1">
+
+{: .table-of-contents}
+
+* Will be replaced with the ToC
+{:toc}
+
+{: .page-intro}
+
+Here are some simple images I've designed/made to use as wallpapers - I'll put the svg files up for the ones that are svgs eventually.
+
+</div>
+
+## Gruvbox
+
+### [Firefox: browse different.](about:mozilla)
+
+As the last remaining major non-chromium browser, Firefox is one of the few pieces of software of which I am a proper fanboy. I may not like how Mozilla handle some things, but I'll keep using FF until it dies.
+
+![firefox wallpaper]({{ site.url-pfx }}/assets/images/desktops/wallpapers/firefox.png){: .showcase .sc-full .sc-mid}
+
+---
+
+### Pacman ghosts
+
+Inspired by the pacman wallpaper that's standard for gruvbox, I made one with the full board and the names of the ghosts. There's also one with just the board. (They're both 533x300px if you want to import them as pixel art)
+
+![pacman ghosts wallpaper]({{ site.url-pfx }}/assets/images/desktops/wallpapers/gruvbox-pacman-ghosts.png){: .showcase .sc-full .sc-mid}
+
+![pacman full wallpaper]({{ site.url-pfx }}/assets/images/desktops/wallpapers/gruvbox-pacman-full.png){: .showcase .sc-full .sc-mid}
+
+---
+
+### Hazardous Materials
+
+I like the style of the NFPA HazMat Diamond, so I made a wallpaper of it in the gruvbox colours; I plan to add some words to the right of it if I can think of some at some point.
+
+
+![hazmat wallpaper]({{ site.url-pfx }}/assets/images/desktops/wallpapers/haz-mat.png){: .showcase .sc-full .sc-mid}
