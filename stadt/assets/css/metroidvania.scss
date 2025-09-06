@@ -1,6 +1,16 @@
 ---
 ---
 
+@font-face {
+  font-family: "Logbook Prime";
+  src:
+    local("logbook-prime-v2_0.ttf"),
+    url("/stadt/assets/fonts/logbook-prime-v2_0.ttf") format("truetype"),
+    url("trickster-outline.woff") format("woff");
+}
+
+// https://web.archive.org/web/20221207044254/http://chozo.wolfeur.eu/
+
 body {
 	background-image: url("/stadt/assets/images/shrines/mv/backgrounds/crocomire.png");
 	background-attachment: fixed;
@@ -50,6 +60,13 @@ main>article {
 }
 
 #m-om {
+	--ftn-subdisplay: "Logbook Prime", serif;
+	& figcaption {
+		font-style: normal;
+		font-size: 26px;
+		line-height: 1;
+		text-wrap: balance;
+	}
 	&>h2 {
 	// ZTODO THESE ARE NOT VARIABLES DUE TO [UNDOCUMENTED?] SCSS BUG
 	// (CANNOT ASSIGN URL() TO VARIABLE)
@@ -96,21 +113,25 @@ main>article>section {
 	}
 
 	&>figure.full-bleed {
-		background: #0008;
+		background: url(/stadt/assets/images/shrines/mv/backgrounds/m-background-dots.png);
 		border-image:
-			url("/stadt/assets/images/shrines/mv/m-border-image-2.png")
-			repeat 6 6 6 6 fill / 6px 6px 6px 6px;
+			url("/stadt/assets/images/shrines/mv/m-border-image.png")
+			6 6 6 6 / 6px 6px 6px 6px;
 		// image-rendering: pixelated;
 		padding-block: 1em;
 
 		text-align: center;
 		display: grid;
-		grid-template-columns: 1fr 1fr;
+		grid-template-columns: repeat(var(--cols, 1), 1fr);
 		gap: 1ch;
 		max-width: 100%;
 		margin-inline: 1ch;
 		&>img {
-			max-width: 100%;
+			width: 100%;
+			&.v-crop {
+				max-height: var(--height);
+				object-fit: cover;
+			}
 		}
 		&>figcaption {
 			grid-column: 1 / -1;
