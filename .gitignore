@@ -18,29 +18,29 @@ references/
 *.zbk
 
 # local yesterweb mirror
-/stadt/assets/js/yw-ring-local.js
+/assets/js/yw-ring-local.js
 
 # you should be using apngs
 *.gif
 
 # window icon resources
-/stadt/assets/images/window-icons/
-/stadt/assets/images/All [Without duplicates]/
+/assets/images/window-icons/
+/assets/images/All [Without duplicates]/
 
 # moot favicon sizes
 /favicons
 
 # unused backgrounds
-/stadt/assets/images/backgrounds
-/stadt/assets/images/buttons/page-info/js-warning.png
-/stadt/assets/js
-/stadt/notes.txt
-/stadt/assets/images/towers/vacant.gif
-/stadt/assets/images/towers/zeus-room.gif
-/stadt/assets/images/backgrounds/hotline-uncompressed.jpg
-/stadt/assets/images/backgrounds/hotline-uncompressed.png
-/stadt/assets/images/svg-icons
-/stadt/assets/fonts/generator_config.txt
-/stadt/assets/fonts/materialdesignicons-webfont.woff2
-/stadt/assets/fonts/materialdesignicons-webfont.ttf
-/stadt/assets/images/buttons/brands/e-now.png
+/assets/images/backgrounds
+/assets/images/buttons/page-info/js-warning.png
+/assets/js
+/notes.txt
+/assets/images/towers/vacant.gif
+/assets/images/towers/zeus-room.gif
+/assets/images/backgrounds/hotline-uncompressed.jpg
+/assets/images/backgrounds/hotline-uncompressed.png
+/assets/images/svg-icons
+/assets/fonts/generator_config.txt
+/assets/fonts/materialdesignicons-webfont.woff2
+/assets/fonts/materialdesignicons-webfont.ttf
+/assets/images/buttons/brands/e-now.png

@@ -11,7 +11,7 @@
 	<body>
 		<h1>301 document moved</h1>
 			{% if page.redirect-classic %}
-				<p><a href="{{ site.url-pfx }}{{ page.url replace: '.html', '' }}/">Redirect</a></p>
+				<p><a href="{{ site.url-pfx }}{{ page.url | replace: '.html', '' }}/">Redirect</a></p>
 			{% else %}
 				<p><a href="{{ page.url | replace: '/stadt/', '/' }}/">Redirect</a></p>
 			{% endif %} />

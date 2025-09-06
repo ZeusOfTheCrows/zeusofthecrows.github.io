@@ -29,7 +29,7 @@ body,
 	align-items: center;
 }
 #logoff:target {
-	background-image: url(/stadt/assets/images/backgrounds/stars.png);
+	background-image: url(/assets/images/backgrounds/stars.png);
 }
 
 #logon .window-content {

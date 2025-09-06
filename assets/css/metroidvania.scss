@@ -5,7 +5,7 @@
   font-family: "Logbook Prime";
   src:
     local("logbook-prime.woff2"),
-    url("/assets/fonts/logbook-prime.woff2") format("woff2");
+    url("/assets/fonts/mv/logbook-prime.woff2") format("woff2");
 }
 
 // https://web.archive.org/web/20221207044254/http://chozo.wolfeur.eu/
@@ -62,7 +62,6 @@ main>article {
 	--ftn-subdisplay: "Logbook Prime", serif;
 	& figcaption {
 		font-style: normal;
-		font-size: 26px;
 		line-height: 1;
 		text-wrap: balance;
 	}

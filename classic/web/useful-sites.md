@@ -9,7 +9,7 @@ permalink: /:path/useful-sites/
 
 ## Useful Sites
 
-**this page has been deprecated, and will soon be moved to the [stadt](/stadt/)**
+**this page has been deprecated, and will soon be moved to the [stadt](/)**
 
 Some useful websites I've stumbled upon during my rovings of the internet. some of these rather push the definition of useful, but i didn't know how else to categorise them.
 

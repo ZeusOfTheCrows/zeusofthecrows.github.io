@@ -41,7 +41,7 @@
   smooth: y
   alt: "agent of chaos (just cause 1/2) stamp"
   src: z
-  src-url: "/stadt/assets/images/stamps/agency.xcf"
+  src-url: "/assets/images/stamps/agency.xcf"
 
 - image: ambiance
   smooth: y
@@ -95,7 +95,7 @@
 - image: boot
   alt: "nokia 3310 boot logo stamp"
   src: z
-  src-url: "/stadt/assets/images/stamps/nokia.ase"
+  src-url: "/assets/images/stamps/nokia.ase"
 
 - image: cadle
   alt: "james cadle's flag of earth"
@@ -302,7 +302,7 @@
   title: "available in frame-blended (crap lcd) ver, or normal"
   lnk-url: "https://rabidrodent.neocities.org/zelda/"
   src: z
-  src-url: /stadt/assets/images/stamps/link.ase
+  src-url: /assets/images/stamps/link.ase
 
 - image: link-d
   anim: y
@@ -310,7 +310,7 @@
   title: "the best zelda game. fight me."
   lnk-url: "https://rabidrodent.neocities.org/zelda/"
   src: z
-  src-url: /stadt/assets/images/stamps/link.ase
+  src-url: /assets/images/stamps/link.ase
 
 - image: linux
   smooth: y
@@ -354,7 +354,7 @@
 - image: menu
   alt: "nokia 3310 home menu stamp"
   src: z
-  src-url: "/stadt/assets/images/stamps/nokia.ase"
+  src-url: "/assets/images/stamps/nokia.ase"
 
 - image: metroidvania
   smooth: y
@@ -510,7 +510,7 @@
   anim: y
   alt: "nokia 3310 snake xenzia game stamp"
   src: z
-  src-url: "/stadt/assets/images/stamps/nokia.ase"
+  src-url: "/assets/images/stamps/nokia.ase"
 
 - image: stuart-ashen
   smooth: y

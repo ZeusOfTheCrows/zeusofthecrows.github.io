@@ -116,16 +116,13 @@ exclude:
   - vendor/gems/
   - vendor/ruby/
   - Readme.md
-  - /stadt/notes.txt
-  - /stadt/stadt.sublime-project
-  - /stadt/stadt.sublime-workspace
-  - /stadt/stadt.sublime-workspace
-  - /stadt/assets/images/backgrounds/*.gif
-  - /stadt/assets/images/buttons/*.gif
-  - /stadt/assets/images/towers/*.gif
-  - /stadt/assets/images/towers/structure/*.gif
+  - /notes.txt
+  - /assets/images/backgrounds/*.gif
+  - /assets/images/buttons/*.gif
+  - /assets/images/towers/*.gif
+  - /assets/images/towers/structure/*.gif
   # - /*.ase
-  - /stadt/assets/images/gifs/
-  - /stadt/assets/images/*/*.url
-  - /stadt/assets/js/*.*
-  - /stadt/assets/images/window-icons/png/*
+  - /assets/images/gifs/
+  - /assets/images/*/*.url
+  - /assets/js/*.*
+  - /assets/images/window-icons/png/*

@@ -20,7 +20,7 @@
   anim: y
   alt: "scalable vector graphics now button"
   title: "alternative svg button based on viatrix' one"
-  lnk-url: "/stadt/thoughts#svg"
+  lnk-url: "/thoughts#svg"
   src: z
   ins-url: "https://mincerafter42.github.io/"
   ext: svg
@@ -30,7 +30,7 @@
   smooth: y
   anim: y
   alt: "svg now button"
-  lnk-url: "/stadt/thoughts#svg"
+  lnk-url: "/thoughts#svg"
   src: z
   ins-url: "https://mincerafter42.github.io/"
   ext: svg
@@ -39,7 +39,7 @@
 - image: "other/svg-viatrix"
   smooth: y
   alt: "viatrix' svg button"
-  lnk-url: "/stadt/thoughts#svg"
+  lnk-url: "/thoughts#svg"
   src: v
   src-url: "https://viatrix.is-hella.gay/"
   res: inf
@@ -49,7 +49,7 @@
   smooth: y
   anim: y
   alt: "animated svg zeus retro button"
-  lnk-url: "/stadt/links#my-links"
+  lnk-url: "/links#my-links"
   src: z
   ins-url: "https://medialoot.com/blog/make-a-70s-text-effect-in-illustrator/"
   res: inf
@@ -59,7 +59,7 @@
   smooth: y
   anim: y
   alt: "animated svg zeus zeus125 button"
-  lnk-url: "/stadt/links#my-links"
+  lnk-url: "/links#my-links"
   src: z
   res: inf
   ext: svg
@@ -67,7 +67,7 @@
 - image: "my-links/zeus-t17"
   smooth: y
   alt: "animated svg zeus button"
-  lnk-url: "/stadt/links#my-links"
+  lnk-url: "/links#my-links"
   src: z
   res: inf
   ext: svg
@@ -75,7 +75,7 @@
 - image: "my-links/zeus-t17-old"
   smooth: y
   alt: "animated svg zeus button"
-  lnk-url: "/stadt/links#my-links"
+  lnk-url: "/links#my-links"
   src: z
   res: inf
   ext: svg
@@ -155,7 +155,7 @@
 - image: "taskbar/button-old"
   anim: y
   alt: "say no to broken img links"
-  src-url: "/stadt/assets/images/buttons/taskbar/button.ase"
+  src-url: "/assets/images/buttons/taskbar/button.ase"
   src: z
   cat: a
 
@@ -445,7 +445,7 @@
   smooth: y
   anim: y
   alt: "non-animated svg button"
-  lnk-url: "/stadt/thoughts#svg"
+  lnk-url: "/thoughts#svg"
   src: z
   cat: a
   ext: svg
@@ -485,7 +485,7 @@
 - image: "page-info/truecolour"
   alt: "best: 24-bit truecolour"
   anim: y
-  src-url: "/stadt/assets/images/buttons/page-info/truecolour.ase"
+  src-url: "/assets/images/buttons/page-info/truecolour.ase"
   ins-url: "https://kangworlds.neocities.org/img/hicolor.gif"
   src: s
   cat: a
@@ -493,7 +493,7 @@
 - image: "page-info/truecolour-solaris"
   alt: "best: 24-bit truecolour (solaris colourscheme)"
   anim: y
-  src-url: "/stadt/assets/images/buttons/page-info/truecolour.ase"
+  src-url: "/assets/images/buttons/page-info/truecolour.ase"
   ins-url: "https://kangworlds.neocities.org/img/hicolor.gif"
   src: z
   cat: a
@@ -607,7 +607,7 @@
   alt: "ppl/prs licensed to play recorded music button, but red"
   smooth: y
   anim: y
-  src-url: "/stadt/assets/images/buttons/music/licence.ase"
+  src-url: "/assets/images/buttons/music/licence.ase"
   src: z
   cat: m
 
@@ -626,7 +626,7 @@
 - image: "other/piracy"
   alt: "piracy now button"
   smooth: y
-  lnk-url: "/stadt/thoughts#piracy"
+  lnk-url: "/thoughts#piracy"
   src: s
   cat: m
 
@@ -745,8 +745,8 @@
 - image: "../brands/steam"
   alt: "play with steam button"
   lnk-url: "https://store.steampowered.com/uiupdate/"
-  src-url: "stadt/assets/images/buttons/taskbar/zeus-steam.ase"
-  ins-url: "stadt/assets/images/buttons/taskbar/steam-old"
+  src-url: "/assets/images/buttons/taskbar/zeus-steam.ase"
+  ins-url: "/assets/images/buttons/taskbar/steam-old"
   src: z
   cat: g
 
@@ -754,7 +754,7 @@
   alt: "steam input button"
   smooth: y
   lnk-url: "https://partner.steamgames.com/doc/features/steam_controller"
-  src-url: "/stadt/assets/images/buttons/brands/steam-input.xcf"
+  src-url: "/assets/images/buttons/brands/steam-input.xcf"
   src: z
   cat: g
 
@@ -1001,7 +1001,7 @@
   anim: y
   lnk-url: "https://neocities.org/site/zeusofthecrows/"
   ins-url: "https://web.archive.org/web/19961020015116/http://www3.netscape.com/"
-  src-url: "/stadt/assets/images/buttons/neocities.ase"
+  src-url: "/assets/images/buttons/neocities.ase"
   src: z
   cat: b
 
@@ -1054,7 +1054,7 @@
   alt: "pixelorama free & open source sprite editor button"
   anim: y
   lnk-url: "https://orama-interactive.itch.io/pixelorama"
-  src-url: "/stadt/assets/images/buttons/pixelorama.ase"
+  src-url: "/assets/images/buttons/pixelorama.ase"
   src: z
   cat: b
 
@@ -1105,7 +1105,7 @@
   alt: "telegram button"
   smooth: y
   lnk-url: "https://web.archive.org/web/20250820160553/https://old.reddit.com/r/Telegram/comments/wuw996/pavel_durov_updates_on_telegram_imagine_how/ilc0lwh/"
-  src-url: "/stadt/assets/images/buttons/taskbar/telegram.ase"
+  src-url: "/assets/images/buttons/taskbar/telegram.ase"
   src: z
   cat: b
 
@@ -1113,7 +1113,7 @@
   alt: "old telegram button with slogan"
   smooth: y
   lnk-url: "https://web.archive.org/web/20250820160553/https://old.reddit.com/r/Telegram/comments/wuw996/pavel_durov_updates_on_telegram_imagine_how/ilc0lwh/"
-  src-url: "/stadt/assets/images/buttons/taskbar/telegram.ase"
+  src-url: "/assets/images/buttons/taskbar/telegram.ase"
   src: z
   cat: b
 
@@ -1174,7 +1174,7 @@
 - image: "../brands/lemmy-old"
   alt: "lemmy button (join-lemmy.org)"
   smooth: y
-  src-url: "/stadt/assets/images/buttons/lemmy.ase"
+  src-url: "/assets/images/buttons/lemmy.ase"
   src: z
   cat: l
 

@@ -52,7 +52,7 @@ new here? check the stuff i think is least crap:
             text-decoration-style: dotted;
         }
     </style>
-    <a href="/stadt/">
+    <a href="/home/">
         <span>Come Visit</span>
         <pre><code> _______,             ___               _,
 '  || '|| _   ___    (( `' ,|_  ___   __|| ,|_
