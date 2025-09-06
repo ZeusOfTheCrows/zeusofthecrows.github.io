@@ -1,0 +1,19 @@
+<html>
+	<head>
+		<meta http-equiv="refresh"
+			{% if page.redirect-classic %}
+				content="0; url={{ site.url-pfx }}{{ page.url | replace: '.html', '' }}/"
+			{% else %}
+				content="0; url={{ page.url | replace: '/stadt/', '/' }}/"
+			{% endif %} />
+	</head>
+
+	<body>
+		<h1>301 document moved</h1>
+			{% if page.redirect-classic %}
+				<p><a href="{{ site.url-pfx }}{{ page.url replace: '.html', '' }}/">Redirect</a></p>
+			{% else %}
+				<p><a href="{{ page.url | replace: '/stadt/', '/' }}/">Redirect</a></p>
+			{% endif %} />
+	</body>
+</html>

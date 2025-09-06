@@ -14,7 +14,7 @@ notes: ^ is only so typora correctly renders images
 
 this site is a repository of random shit i've made, that i thought others might enjoy so i've uploaded it to the internet
 
-if you were looking for an "about me" page, i thing you'll enjoy [this page](/stadt/about/) a lot more
+if you were looking for an "about me" page, i thing you'll enjoy [this page](/about/) a lot more
 
 ---
 
