@@ -1,7 +1,7 @@
 ---
 title: Mobile
 collection: dir
-layout: directory
+layout: term-directory
 ---
 
 this is a directory

@@ -31,6 +31,12 @@ layout: term-default
 		is the same as the current page's final fragment (current dir) -->
 		{% if entry_url_fragments[-2] == page_url_fragments[-1] %}
 
+		<!--this is pretty hacky, but it's deprecated and a borderline
+		easter egg so i don't care.-->
+		<!-- it prevents the redirect pages from showing up in the directory list -->
+		{% if entry_url_fragments[-1] contains ".html" %}
+		{% else %}
+
 			<!-- i know this is duplicated, but it has to be inside the if
 			statements, so it only runs as many times as it needs to -->
 			{% assign url_list = url_list | append: entry.url | append: "," %}
@@ -39,6 +45,8 @@ layout: term-default
 			this is so i can split into an array by this char later -->
 			{% assign display_list = display_list | append: "&lt;DIR&gt; "
 					| append: entry_url_fragments.last | append: "," %}
+
+		{% endif %}
 
 		<!-- else if it's in the same directory but doesn't have identical url
 		this prevents showing the current directory as an entry -->
