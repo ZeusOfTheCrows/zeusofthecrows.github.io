@@ -3,7 +3,7 @@ layout: base
 ---
 
 <header>
-	<h1> ZeusOfTheCrows</h1>
+	<h1><span>Zeus</span> <span>Nest</span></h1>
 </header>
 <nav aria-label="site pages">
 	{% assign current = page.url | downcase | split: '.' %}
@@ -18,15 +18,11 @@ layout: base
 	</a>
 	{% endfor %}
 	{% if page.title %}
-	<a class="desktop-icon update" href="/">
+	<a class="desktop-icon" href="/">
 		<img src="/assets/images/desktop-icons/home.svg">
 		<span>Return Home</span>
 	</a>
 	{% else %}
-	<a class="desktop-icon" href="../#logoff" title=":(">
-		<img src="/assets/images/desktop-icons/exit-stadt.svg">
-		<span>Exit Stadt</span>
-	</a>
 	{% endif %}
 	<!--<a class="desktop-icon desktop-shortcut" href="/about#contact-me"
 		title="see about page for more contact methods">
@@ -109,21 +105,60 @@ layout: base
 </main>
 
 <footer>
-	<p><a href="#">^ Back to top ^</a></p>
+	<p><a id="back-to-top-link" href="#">^ Back to top ^</a></p>
 	<p><small>
-		(ɔ) <time datetime="{{ page.edit-date | date: '%Y-%m-%d' }}">
-		{{ page.edit-date | date: "%Y" }}</time> ZeusOfTheCrows. All Wrongs
+		(ɔ) <time datetime="
+		{%- if page.edit-date -%}
+			{{- page.edit-date | date: '%Y-%m-%d' -}}
+		{%- else -%}
+			{{- site.edit-date | date: '%Y-%m-%d' -}}
+		{%- endif -%}">
+		{%- if page.edit-date -%}
+			{{ page.edit-date | date: "%Y" -}}
+		{%- else -%}
+			{{ site.edit-date | date: "%Y" -}}
+		{%- endif -%}</time> ZeusOfTheCrows. All Wrongs
 		Reserved. <a href="https://copyheart.org/">♡ Copying is an act of love.	</a>
-	<small></p>
+	</small></p>
+	<ul class="img-grid">
+		<li><a>
+			<img class="btn-80x15 " src="/assets/images/antipix/lgbt.png"
+				alt="lgbt+ friendly" />
+		</a></li>
+		<li><a href="/418">
+			<img class="btn-80x15 " src="/assets/images/antipix/tea.png"
+				alt="tea powered" />
+		</a></li>
+		<li><a>
+			<img class="btn-80x15 " src="/assets/images/antipix/terra.png"
+				alt="citizen of terra" />
+		</a></li>
+		<li><a>
+			<img class="btn-80x15 " src="/assets/images/antipix/trans.png"
+				alt="trans inclusionary" />
+		</a></li>
+		<li><a href="404">
+			<img class="btn-80x15 " src="/assets/images/antipix/not-found.png"
+				alt="404 not found" />
+		</a></li>
+		<li><a href="https://web.archive.org/web/20230607005614/https://ermel.org/handcoded/">
+			<img class="btn-80x15 " src="/assets/images/antipix/hand-coded.png"
+				alt="hand coded with kde advanced text editor" />
+		</a></li>
+		<li><a>
+			<img class="btn-80x15 " src="/assets/images/antipix/keter.png"
+				alt="object class: keter" />
+		</a></li>
+	</ul>
+	<hr>
 	<ul class="img-grid">
 		<li><a href="https://github.com/ZeusOfTheCrows/zeusofthecrows.github.io/">
 			<img class="btn-88x31 anim smooth-zoom" src="/assets/images/buttons/brands/gh-pages.png"
 				alt="powered by github pages" />
 		</a></li>
-		<li><a href="https://neocities.org/site/zeusofthecrows/">
-			<!--ZTODO THIS SHOULD BE KATE-->
-			<img class="btn-88x31" src="/assets/images/buttons/brands/sublime.png"
-				alt="made with sublime text editor" />
+		<li><a href="https://kate-editor.org/en-gb/">
+			<img class="btn-88x31" src="/assets/images/buttons/brands/kate-smooth.png"
+				alt="written in kate! text editor" />
 		</a></li>
 		<li><a href="https://inkscape.org/">
 			<img class="btn-88x31" src="/assets/images/buttons/brands/inkscape.svg"
@@ -143,7 +178,7 @@ layout: base
 				data-img-source="~zeus"
 				alt="[animated] png now" />
 		</a></li>
-		<li><a href="https://web.archive.org/web/20080528034856/http://www.kde.org/">
+		<li><a href="https://kde.org/announcements/announcement/">
 			<img class="btn-88x31 anim smooth-zoom" src="/assets/images/buttons/brands/kool-de.png"
 				alt="kool desktop environment button" />
 		</a></li>

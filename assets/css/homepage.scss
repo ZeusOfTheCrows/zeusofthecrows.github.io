@@ -5,14 +5,37 @@ body {
 	background-size: 256px 256px;
 	background-attachment: fixed;
 	background-repeat: repeat;
+	--content-background: var(--wall-clr-1);
+	--strong-accent: #1190A1;
+	--wall-clr-1: #5C2012;
+	--wall-clr-2: #D23B11;
+	--wall-clr-3: #E57711;
+	--wall-clr-4: #EAD328;
+	/* peach light
+	--wall-clr-1: #2A2640;
+	--wall-clr-2: #734656;
+	--wall-clr-3: #A64E46;
+	--wall-clr-4: #F29544; */
+	/* peach
+	--wall-clr-1: #1B1626;
+	--wall-clr-2: #2A2640;
+	--wall-clr-3: #734656;
+	--wall-clr-4: #A64E46; */
+	/* purple:
 	--wall-clr-1: #531151;
 	--wall-clr-2: #321565;
 	--wall-clr-3: #503586;
-	--wall-clr-4: #8A3288;
+	--wall-clr-4: #8A3288; */
 	/*--wall-clr-1: #D1B591;
 	--wall-clr-2: #644424;
 	--wall-clr-3: #CC630E;
 	--wall-clr-4: #CF7D34;*/
+	/* cream
+	--wall-clr-4: #1B1310;
+	--wall-clr-3: #36271F;
+	--wall-clr-2: #D0C89E;
+	--wall-clr-1: #E2E1C7; */
+
 	background-color: var(--wall-clr-1);
 	background-image:
 		radial-gradient(circle at 34.6% 34.6%, var(--wall-clr-1), var(--wall-clr-1) 8%,  #0000 calc(8% + 1px)),
@@ -36,26 +59,33 @@ body {
 
 @media (prefers-color-scheme: light) {
   body {
-    --wall-clr-1: #853C2B;
-    --wall-clr-2: #D23B11;
-    --wall-clr-3: #E57711;
-    --wall-clr-4: #EAD328;
+		--wall-clr-4: #AB4013;
+		--wall-clr-3: #D47240;
+		--wall-clr-2: #E88C50;
+		--wall-clr-1: #F9D2B3;
+		/* paler
+		--wall-clr-4: #BD5F2A;
+		--wall-clr-3: #DC9063;
+		--wall-clr-2: #F0A778;
+		--wall-clr-1: #FADEC9;*/
 	}
 }
 
-
+/*
 body:has(option[value="gb"]:checked) {
 	--wall-clr-1: #282828;
 	--wall-clr-2: #CA2825;
 	--wall-clr-3: #D45E21;
 	--wall-clr-4: #D69834;
-}
+}*/
 
 /* -------------------------------- layout --------------------------------- */
 
 body {
 	--body-hor-offset: 0.8fr;
+	--content-background-radius: 32px;
 }
+
 
 body>main {
 	box-sizing: border-box;
@@ -83,15 +113,15 @@ main>aside {
 main>section,
 main>aside {
 	box-sizing: border-box;
-	background-color: var(--wall-clr-1);
-	background-image: url("/assets/images/backgrounds/texture.png");
-	background-blend-mode: hard-light;
-	border-right:  4px solid #00000018;
-	border-bottom: 4px solid #00000018;
+	background-color: var(--content-background);
+	// background-image: url("/assets/images/backgrounds/texture.png");
+	// background-blend-mode: hard-light;
+	// border-right:  4px solid #00000018;
+	// border-bottom: 4px solid #00000018;
 	padding: 2em 2ch;
-	border-bottom-left-radius: 3px;
-	border-bottom-right-radius: 3px;
-	box-shadow: 4px 4px 8px #00000080, 4px 4px 16px #00000080;
+	border-bottom-left-radius:  var(--content-background-radius);
+	border-bottom-right-radius: var(--content-background-radius);
+	// box-shadow: 4px 4px 8px #00000080, 4px 4px 16px #00000080;
 }
 
 
@@ -133,6 +163,46 @@ main>aside {
 
 	& a:hover::before {
 		filter: blur(8px) brightness(2) hue-rotate(360deg);
+	}
+}
+
+#whats-new {
+	height: 360px;
+	// border: 4px solid;
+	--background-colour: var(--strong-accent);
+	--ripple-size: 8px;
+	--ripple-clr-1: var(--wall-clr-4);
+	--ripple-clr-2: var(--wall-clr-3);
+	--ripple-clr-3: var(--wall-clr-2);
+	// border-left-color: black;
+	// border-top-color: black;
+	overflow: auto;
+	overscroll-behavior: contain;
+	background-color: var(--background-colour);
+	border-radius: calc(var(--content-background-radius) / 2);
+	margin-bottom: 2em;
+	margin-inline: 2ch;
+	position: relative;
+	box-shadow:
+		     var(--ripple-size)           var(--ripple-size)      0px 0px var(--ripple-clr-1),
+		calc(var(--ripple-size) * 2) calc(var(--ripple-size) * 2) 0px 0px var(--ripple-clr-2),
+		calc(var(--ripple-size) * 3) calc(var(--ripple-size) * 3) 0px 0px var(--ripple-clr-3);
+	animation-timing-function: linear;
+	animation-duration: 0.25s;
+
+	&:hover {
+		animation-name: colour-ripple;
+	}
+	&>h2 {
+		// background-color: color-mix(in lch longer hue, var(--strong-accent), var(--content-background));
+		background-color: var(--background-colour);
+		text-shadow: 0px 0px 4px black;
+		text-align: center;
+		text-decoration: 5px underline;
+		position: sticky;
+		top: 0;
+		margin-block: 0;
+		padding-block: 0.4em;
 	}
 }
 
@@ -266,7 +336,7 @@ main>aside {
 			/*! background-color: red; */
 			display: block;
 			position: absolute;
-			right: -19px;
+			right: -15px;
 			background-size: contain;
 			background-repeat: no-repeat;
 			transform: rotate(90deg);

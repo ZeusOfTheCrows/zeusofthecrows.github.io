@@ -1,10 +1,12 @@
-- content: tabula rasa edition (sort of)
+- content: <strong>The Stadt is now Zeus' Nest</strong>
+
+- content: <strong>this is a tabula rasa release</strong>
 
 - content: added two new neighbours
 
 - content: added lakes the guy's webgarden
 
-- content: new images have been added to <a href="/gallery/">the gallery</a>
+- content: new stamps have been added to the gallery
   subtype: images
   subcontent:
     - image:
@@ -161,6 +163,29 @@
       type: stamp
       alt: "williams defender stamp"
 
+- content: new buttons have been added to the gallery
+  subtype: images
+  subcontent:
+    - image:
+      source: buttons/taskbar/url.png
+      type: btn-88x31
+      alt: "a url is for life....not just for christmas button"
+
+    - image:
+      source: buttons/brands/kate-smooth.png
+      type: btn-88x31
+      alt: "written in kate text editor button"
+
+    - image:
+      source: buttons/brands/kate.png
+      type: btn-88x31
+      alt: "written in kate text editor (pixelly icon) button"
+
+    - image:
+      source: buttons/brands/kate-alt.png
+      type: btn-88x31
+      alt: "alternative kate text editor button"
+
     - image:
       source: buttons/other/vhs.png
       type: btn-88x31
@@ -240,6 +265,30 @@
       source: buttons/taskbar/best-viewed-with.png
       type: btn-88x31
       alt: "page best viewed with button"
+
+- content: new antipixel icons have been added to the gallery & footer
+  subtype: images
+  subcontent:
+    - image:
+      source: antipix/hand-coded.png
+      type: btn-150x15
+      alt: "new hand-coded antipix icon"
+
+    - image:
+      source: antipix/keter.png
+      type: btn-150x15
+      alt: "object class: keter antipix icon"
+
+    - image:
+      source: antipix/aus.png
+      type: btn-150x15
+      alt: "australian antipix icon"
+
+
+- content: new blinkies have been added to the gallery
+  subtype: images
+  subcontent:
+
 
 - content: new fanlisting codes have been added
   subtype: images

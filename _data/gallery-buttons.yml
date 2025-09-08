@@ -112,6 +112,14 @@
   src: v
   cat: a
 
+- image: "bookmarks/atomic-age"
+  smooth: y
+  alt: "atomic age network webring"
+  lnk-url: "https://web.archive.org/web/20240516134558/https://atomic-age-network.netlify.app/"
+  src-url: "https://capstasher.neocities.org/"
+  src: v
+  cat: a
+
 - image: "brands/apng"
   anim: y
   alt: "[animated] png now button"
@@ -291,6 +299,25 @@
   alt: "warning: page contains javascript button"
   src: z
   cat: a
+
+- image: "kate-smooth.png"
+  alt: "written in kate text editor button"
+  lnk-url: "https://kate-editor.org/en-gb/"
+  src: z
+  cat: b
+
+- image: "kate-alt.png"
+  alt: "alternative kate text editor button"
+  lnk-url: "https://kate-editor.org/en-gb/"
+  src-lnk: "https://drakul78.neocities.org/links"
+  src: z
+  cat: b
+
+- image: "kate.png"
+  alt: "written in kate text editor (pixelly icon) button"
+  lnk-url: "https://kate-editor.org/en-gb/"
+  src: z
+  cat: b
 
 - image: "music/licence"
   alt: "ppl/prs licensed to play recorded music button"
@@ -954,7 +981,7 @@
 - image: "konqi"
   alt: "konqi (kde mascot) button"
   smooth: y
-  lnk-url: "https://kde.org/"
+  lnk-url: "https://kde.org/announcements/announcement/"
   src: s
   cat: b
 
@@ -962,7 +989,7 @@
   alt: "kool desktop environment button"
   smooth: y
   anim: y
-  lnk-url: "https://kde.org/"
+  lnk-url: "https://web.archive.org/web/20080528034856/http://www.kde.org/"
   src: s
   cat: b
 
@@ -1040,7 +1067,7 @@
   smooth: y
   lnk-url: "https://www.palemoon.org/"
   src:
-  src-url: "https://lakestheguy.neocities.org/aboutme"
+  src-url: "https://drakul78.neocities.org/links"
   cat: b
 
 - image: "pixelorama"

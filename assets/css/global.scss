@@ -12,34 +12,36 @@
 :root {
 	scroll-behavior: smooth;
 	scroll-padding-top: 10vh;
+	--header-colour: black;
+	--accent-colour: var(--s-org);
 
-	--d-red: #DF382C;
-	--d-grn: #4E9A06;
-	--d-ylw: #C4A000;
-	--d-blu: #3465A4;
-	--d-ppl: #75507B;
-	--d-aqa: #06989A;
-	--d-org: #E95420;
+	--d-red: #CC241D;
+	--d-grn: #98971A;
+	--d-ylw: #D79921;
+	--d-blu: #458588;
+	--d-ppl: #B16286;
+	--d-aqa: #689D6A;
+	--d-org: #D65D0E;
 
-	--s-red: #EF2929;
-	--s-grn: #8AE234;
-	--s-ylw: #FCE94F;
-	--s-blu: #729FCF;
-	--s-ppl: #AD7FA8;
-	--s-aqa: #34E2E2;
-	--s-org: #F07746;
+	--dark-0: #282828;
+	--dark-1: #3C3836;
+	--dark-2: #504945;
+	--dark-3: #665C54;
+	--dark-4: #7C6F64;
+	--dark-5: #928374;
+	--lite-4: #A89984;
+	--lite-3: #BDAE93;
+	--lite-2: #D5C4A1;
+	--lite-1: #EBDBB2;
+	--lite-0: #FBF1C7;
 
-	--bgd-0: #474640;
-	--bgd-1: #4E4C46;
-	--bgd-2: #5A5850;
-	--bgd-3: #4F4D47;
-	--bgd-4: #595854;
-	--bgd-5: #616254;
-	--txt-4: #969693;
-	--txt-3: #BAB8B2;
-	--txt-2: #DFDBD2;
-	--txt-1: #EBEBEB;
-	--txt-0: #FFFFFF;
+	--s-red: #FB4943;
+	--s-grn: #B8BB26;
+	--s-ylw: #FABD2F;
+	--s-blu: #83A598;
+	--s-ppl: #D3869B;
+	--s-aqa: #8EC07C;
+	--s-org: #FE8019;
 }
 
 /* light mode colours */
@@ -47,33 +49,26 @@
 	:root {
 		// --is-light-mode: true;  // placeholder idea
 
-		--s-red: #EF2929;
-		--s-grn: #8AE234;
-		--s-ylw: #FCE94F;
-		--s-blu: #729FCF;
-		--s-ppl: #AD7FA8;
-		--s-aqa: #34E2E2;
-		--s-org: #F07746;
-
-		--d-red: #df382c;
-		--d-grn: #4E9A06;
-		--d-ylw: #C4A000;
-		--d-blu: #3465A4;
-		--d-ppl: #75507B;
-		--d-aqa: #06989A;
-		--d-org: #E95420;
-
 		--bgd-0: #FBF1C7;
 		--bgd-1: #EBDBB2;
 		--bgd-2: #D5C4A1;
 		--bgd-3: #BDAE93;
 		--bgd-4: #A89984;
+
 		--bgd-5: #928374;
 		--txt-4: #7C6F64;
 		--txt-3: #665C54;
 		--txt-2: #504945;
 		--txt-1: #3C3836;
 		--txt-0: #282828;
+
+		--s-red: #9D0006;
+		--s-grn: #79740E;
+		--s-ylw: #B57614;
+		--s-blu: #076678;
+		--s-ppl: #8F3F71;
+		--s-aqa: #427B58;
+		--s-org: #AF3A03;
 
 	}
 }
@@ -119,7 +114,160 @@ body:has(option[value="gb"]:checked) {
 	}
 }
 
+/* ======================== header? ========================= */
+
+
+	@font-face {
+		font-family: 'Gaston Opti';
+		src:
+			url('/assets/fonts/retro/gaston-opti.woff2') format('woff2'),
+			url('/assets/fonts/retro/gaston-opti.woff') format('woff');
+		font-weight: normal;
+		font-style: normal;
+	}
+	@font-face {
+		font-family: 'Motter Ombra';
+		src:
+			url('/assets/fonts/retro/motter-ombra.woff2') format('woff2'),
+			url('/assets/fonts/retro/motter-ombra.woff') format('woff');
+		font-weight: normal;
+		font-style: normal;
+	}
+
+body>header {
+		background-color: black;
+		grid-column: 1 / -1;
+
+		&>h1 {
+
+			&::before,
+			&::after {
+				content: "";
+				width: 100%;
+				height: 100%;
+				--offset: 0.11em;
+				--height: 0.4em;
+				background-image:
+					linear-gradient(
+						var(--header-colour, black) 0% calc(50% - var(--height) - var(--offset)),
+						transparent calc(50% - var(--height) - var(--offset)) calc(50% + var(--height) - var(--offset)),
+						var(--header-colour, black)       calc(50% + var(--height) - var(--offset))),
+					repeating-linear-gradient(
+						var(--header-colour, black) calc(var(--blind-height) / 2),
+						white calc(var(--blind-height) / 1.2) var(--blind-height));
+				mix-blend-mode: multiply;
+			}
+
+			margin: 0;
+			padding: 0;
+			display: grid;
+			width: 100%;
+			font-size: min(12vw, 96px);
+
+			place-items: center;
+			grid-auto-flow: column;
+			grid-auto-columns: 1fr auto 1fr;
+			grid-template-areas: "left centre right";
+
+			--padding: clamp(2px, 0.1em, 48px);
+			--blind-height: min(0.24em, 48px);
+			--glow-size: 0.2em;
+
+			border: var(--padding) solid black;
+			box-sizing: border-box;
+
+			background-image:
+				linear-gradient(to top left,
+					transparent,
+					#ED5C1D,
+					transparent,
+					#ED5C1D,
+					transparent),
+				linear-gradient(to top right,
+					#FF9421,
+					#F83D14,
+					#F21D23,
+					#F83D14,
+					#FF9421,
+					#F83D14,
+					#E39D43,
+					#F83D14,
+					#FF9421);
+
+			background-size: 200% 200%;
+			animation: gradient 20s linear infinite;
+
+
+
+			&>span:first-child {
+				grid-area: centre;
+				position: relative;
+
+				&::selection {
+					color: black;
+					background: white;
+				}
+
+				&::after {
+					content: "'";
+					position: absolute;
+					font-size: 0.6em;
+					top: 0.65em;
+					right: 0.3em;
+					text-shadow:
+						0px 0px var(--glow-size) var(--header-colour, black),
+						0px 0px var(--glow-size) white,
+						0px 0px 0px var(--header-colour, black);
+					color: transparent;
+				}
+
+
+					/*"background-clip: text" causes massive cpu usage
+						in firefox and doesn't work in chrome?*/
+			/* 		content: "ZEUS´"; */
+					// position: relative;
+					white-space: nowrap;  /* ztodo fixme clamp text */
+					text-transform: uppercase;
+					background: var(--header-colour, black);
+					color: white;
+					mix-blend-mode: multiply;
+					font-size: inherit;
+					font-weight: 500;  /*chrome defaults to 700?*/
+					font-family: "Motter Ombra";
+					text-shadow: 0 0 var(--glow-size) white;
+					/*i have no idea why this has to be halved*/
+					/* `gap` leaves non-black spaces, so this is instead of gap */
+					padding-left: calc(var(--padding) / 2);  /* text weight is off-centre */
+					padding-right: calc(var(--padding) / 2 + 8px);
+					padding-block: var(--blind-height);
+			}
+
+			&>span:last-child {
+				grid-area: centre;
+
+				&::selection {
+					background: #d0d6;
+				}
+
+				position: relative;
+				font-family: "Gaston Opti";
+				font-size: 1em;  /* this is moot for now */
+				left: 1.05em;
+				top:  0.25em;
+				transform: rotate(336deg);
+				padding-right: 1ch;
+				background-image: linear-gradient(red, blue);  /* ztodo better colours */
+				background-clip: text;
+				color: transparent;
+				text-shadow: 0px 0px 20px #d0d6;
+			}
+
+		}
+}
+
+
 /* ======================== element generic styles ========================= */
+
 html,
 body {
 	/* prevents zooming on mobile *//* no it doesn't */
@@ -275,6 +423,19 @@ a:any-link {
 	&[href^="http"] {
 		cursor: alias;
 	}
+
+	&.lr-hover {
+		background-image: linear-gradient(90deg, black 50%, transparent 50%);
+		background-position-x: 100%;
+		transition: background-position-x, 0.3s;
+		background-size: 200% 200%;
+		padding: 0.1ch 0.1em;
+		margin: -0.1ch -0.1em;
+		&:hover {
+			background-position-x: 0%;
+		}
+	}
+
 	&:link {
 		color: var(--s-blu);
 	}
@@ -570,11 +731,6 @@ body {
   display: grid;
   grid-template-columns: 1fr auto var(--body-hor-offset, 1fr);
 
-	&>header {
-		grid-column: 2 / 2;
-		text-align: center;
-	}
-
 	&>nav {
 		grid-column: 2 / 2;
 		position: sticky;
@@ -587,7 +743,7 @@ body {
 		white-space: nowrap;
 		overflow-x: auto;
 		margin: auto;
-		background-color: brown;
+		background-color: var(--header-colour, black);
 		z-index: 99;
 
 		& a {
@@ -616,13 +772,20 @@ body {
 	&>footer {
 		grid-column: 1 / 4;
 		font-size: smaller;
-		padding-block: 1em;
-		margin-top: 2em;
-		backdrop-filter: blur(25px);
 		text-align: center;
-		border-top-left-radius:  8px;
-		border-top-right-radius: 8px;
-		box-shadow: 4px 4px 8px #00000080, 4px 4px 16px #00000080;
+		text-wrap: balance;
+		padding-block: 1em;
+		padding-inline: 2ch;
+		margin-top: 2em;
+		margin-inline: 2%;
+		border-top-left-radius:  var(--content-background-radius, 0);
+		border-top-right-radius: var(--content-background-radius, 0);
+
+		background-color: var(--content-background, var(--bg-1, black));
+		// backdrop-filter: blur(25px);
+		// border-top-left-radius:  8px;
+		// border-top-right-radius: 8px;
+		// box-shadow: 4px 4px 8px #00000080, 4px 4px 16px #00000080;
 	}
 }
 
@@ -701,11 +864,36 @@ body {
 	}
 }*/
 
-/* -------------------------------- taskbar -------------------------------- */
-
 /* ============================== animations =============================== */
 
 @keyframes colour-cycle {
+	0% {
+		color: var(--s-org);
+	}
+	14% {
+		color: var(--s-ylw);
+	}
+	29% {
+		color: var(--s-grn);
+	}
+	43% {
+		color: var(--s-aqa);
+	}
+	57% {
+		color: var(--s-blu);
+	}
+	71% {
+		color: var(--s-ppl);
+	}
+	86% {
+		color: var(--s-red);
+	}
+	100% {
+		color: var(--s-org);
+	}
+}
+
+@keyframes colour-cycle-glow {
 	0% {
 		color: var(--s-org);
 		text-shadow:
@@ -753,6 +941,49 @@ body {
 		text-shadow:
 			0 0 var(--shad-size-s, 0) var(--s-org),
 			0 0 var(--shad-size-l, 0) var(--d-org);
+	}
+}
+
+@keyframes colour-ripple-subtle {
+	25% {
+		box-shadow:
+			calc(var(--ripple-size) * 1.5) calc(var(--ripple-size) * 1.5) 0px 0px var(--ripple-clr-1),
+			calc(var(--ripple-size) * 2  ) calc(var(--ripple-size) * 2  ) 0px 0px var(--ripple-clr-2),
+			calc(var(--ripple-size) * 3  ) calc(var(--ripple-size) * 3  ) 0px 0px var(--ripple-clr-3);
+	}
+	50% {
+		box-shadow:
+			calc(var(--ripple-size) * 1  ) calc(var(--ripple-size) * 1  ) 0px 0px var(--ripple-clr-1),
+			calc(var(--ripple-size) * 2.5) calc(var(--ripple-size) * 2.5) 0px 0px var(--ripple-clr-2),
+			calc(var(--ripple-size) * 3  ) calc(var(--ripple-size) * 3  ) 0px 0px var(--ripple-clr-3);
+	}
+	75% {
+		box-shadow:
+			calc(var(--ripple-size) * 1  ) calc(var(--ripple-size) * 1  ) 0px 0px var(--ripple-clr-1),
+			calc(var(--ripple-size) * 2  ) calc(var(--ripple-size) * 2  ) 0px 0px var(--ripple-clr-2),
+			calc(var(--ripple-size) * 3.5) calc(var(--ripple-size) * 3.5) 0px 0px var(--ripple-clr-3);
+	}
+}
+
+
+@keyframes colour-ripple {
+	25% {
+		box-shadow:
+			calc(var(--ripple-size) * 2) calc(var(--ripple-size) * 2) 0px 0px var(--ripple-clr-1),
+			calc(var(--ripple-size) * 2) calc(var(--ripple-size) * 2) 0px 0px var(--ripple-clr-2),
+			calc(var(--ripple-size) * 3) calc(var(--ripple-size) * 3) 0px 0px var(--ripple-clr-3);
+	}
+	50% {
+		box-shadow:
+			calc(var(--ripple-size) * 1) calc(var(--ripple-size) * 1) 0px 0px var(--ripple-clr-1),
+			calc(var(--ripple-size) * 3) calc(var(--ripple-size) * 3) 0px 0px var(--ripple-clr-2),
+			calc(var(--ripple-size) * 3) calc(var(--ripple-size) * 3) 0px 0px var(--ripple-clr-3);
+	}
+	75% {
+		box-shadow:
+			calc(var(--ripple-size) * 1) calc(var(--ripple-size) * 1) 0px 0px var(--ripple-clr-1),
+			calc(var(--ripple-size) * 2) calc(var(--ripple-size) * 2) 0px 0px var(--ripple-clr-2),
+			calc(var(--ripple-size) * 4) calc(var(--ripple-size) * 4) 0px 0px var(--ripple-clr-3);
 	}
 }
 

@@ -1,1490 +1,1367 @@
 ---
 layout: default
 css-file: gallery
-css-layout: tiled
 title: Image Gallery
-edit-date: 2023-05-08
-programme:
-window-icon: gallery.png
-sep: " | "
-znotes: maybe abstract all these out to layout + grid-windows.css?
+edit-date: 2025-09-07
 ---
+<article>
+	<h1>Image Collection</h1>
+	<p>
+		a collection of images i have made, or scoured from the internet: ones i
+		agree with, like the æsthetic of, or any other reason
+	</p>
+	<p>
+		want a button or stamp of your own? i'll definitely take requests, but bear
+		in mind i'll probably procrastinate for an
+		age (it doesn't have to be a cause i agree with, but there is
+		some shit i won't do {case by case basis})
+	</p>
+		<h2>Contents</h2>
+		<ol id="contents" style="margin-inline: auto;">
+			<li><a href="#buttons">buttons [88x31]</a></li>
+			<li><a href="#stamps" >stamps [99x65]</a></li>
+			<li><a href="#codes" >codes [100x50]</a></li>
+			<li><a href="#blinkies">blinkies [150x20]</a></li>
+			<li><a href="#antipix">antipixels [80x15]</a></li>
+			<li><a href="#other">other sizes</a></li>
+		</ol>
+	<hr />
+	<p>
+		feel free to steal any images you like (and message me with what you
+		do with them!)
+	</p>
+	<p>
+		hover over each image for more source: green means original creator,
+		yellow means where i found the image.
+		orange means made by me (underlined are links to aseprite <samp>.ase</samp>
+		files), red means unknown source. "insp" means the inspiration for the
+		design (direct or indirect).
+	</p>
+	<p>
+		i hope if i can start this as a trend then it'll be easier to find the
+		original creator; if you take any of these i heartily recommend you do
+		this (even just as an html comment) - i wish i'd done so from the start
+	</p>
+	<p>
+		any images not credited on this page, will hopefully have the source in
+		the html:
+	</p><code class="codeblock indent-9x">&lt;img data-img-source=[example.com] /&gt;</code>
+	<hr />
+	<p>
+		useful tool: a javascript bookmarklet for toggling pixelated and bilinear
+		("smooth") image rendering when viewing a single image in a new tab:
+	</p>
+	<strong id="bookmarklet"
+		style="display: block; text-align: center; font-size: 2em;">
+		<a href="javascript:(function(){img=document.getElementsByTagName('img')[0];img.style.setProperty('transform','scale(2)','important');if(getComputedStyle(img).getPropertyValue('image-rendering')=='pixelated'){img.style.setProperty('image-rendering','auto');}else{img.style.setProperty('image-rendering','pixelated');};})();">Pix</a>
+	</strong>
+	<p>
+		just drag it into your bookmarks bar, name it whatever you'd like,
+		and then click it when you want to trigger it
+	</p>
+</article>
 
-<div id="page-intro" class="x-window">
-	<div class="window-titlebar">
-		<a class="window-title ms-bold">
-			<img class="window-icon"
-				src="/assets/images/window-icons/notepad.png" alt="" />
-			Intro.txt - Notepad
-		</a>
-		<ul class="window-decs">
-			<li class="window-min"></li>
-			<li class="window-max"></li>
-			<li class="window-cls"></li>
-		</ul>
-	</div>
-	<div class="window-menu">
-		<ul>
-			<li><u>F</u>ile</li>
-			<li><u>E</u>dit</li>
-			<li><u>S</u>earch</li>
-			<li><u>H</u>elp</li>
-		</ul>
-	</div>
-	<div class="window-content">
-		<h2>Image Collection</h2>
-
-		<p>
-			a collection of images i have made, or scoured from the internet: ones i
-			agree with, like the æsthetic of, or any other reason
-		</p>
-		<p>
-			want a button of your own? i'll definitely take requests, but only if i
-			think it sounds interesting - also, i'll probably procrastinate for an
-			age as well (it doesn't have to be a cause i agree with, but obviously no
-			pro nazi shit etc.)
-		</p>
-		<p>
-			this will serve as both a gallery, and a credits page:
-		</p>
-		<details class="indent-9x" open="">
-			<summary class="h-summ">Contents</summary>
-			<ol id="contents" style="margin-inline: auto;">
-				<li style="--img: url('/assets/images/window-icons/buttons.png');">
-					<a href="#buttons">buttons [88x31]</a>
-				</li>
-				<li style="--img: url('/assets/images/window-icons/stamps.png');">
-					<a href="#stamps" >stamps [99x65] </a>
-				</li>
-				<li style="--img: url('/assets/images/window-icons/blinkies.png');">
-					<a href="#blinkies">blinkies [150x20]</a>
-				</li>
-				<li style="--img: url('/assets/images/window-icons/cassette.png');">
-					<a href="#antipix">antipixels [80x15]</a>
-				</li>
-				<li style="--img: url('/assets/images/window-icons/art.png');">
-					<a href="#other" class="captioned" title="i may move these to another page">
-						other art
-					</a>
-				</li>
-			</ol>
-		</details>
-		<hr />
-		<details class="indent-9x"  style="padding-inline: 2ch;">
-			<summary class="h-summ">More Info</summary>
-			<p>
-				feel free to steal any images you like – and message me with what you
-				do with them!
-			</p>
-			<p>
-				hover over each image for more source: green means original creator,
-				yellow means where i found the image.
-				orange means made by me (underlined are links to aseprite <samp>.ase</samp>
-				files), red means unknown source. "insp" means the inspiration for the
-				design (direct or indirect).
-			</p>
-			<p>
-				i hope if i can start this as a trend then it'll be easier to find the
-				original creator; if you take any of these i heartily recommend you do
-				this (even just as an html comment) - i wish i'd done so from the start
-			</p>
-			<p>
-				any images not credited on this page, will hopefully have the source in
-				the html:
-			</p>
-			<pre class=""><code class="codeblock indent-9x"
->&lt;img data-img-source=[example.com] /&gt;</code></pre>
-			<hr />
-			<p>
-				all window/desktop icons that i didn't make <del>(you can tell which
-				ones are mine by the quality drop)</del> come from
-				<a href="https://win98icons.alexmeub.com/">alexmeub.com</a>, although
-				there are more custom designed ones that i haven't used at
-				<a href="https://www.raebear.net/computers/windows-98-icons/">raebear.net</a>.
-			</p>
-		</details>
-		<p>
-			useful tool: a javascript bookmarklet for toggling pixelated and bilinear
-			("smooth") image rendering when viewing a single image in a browser:
-		</p>
-		<strong id="bookmarklet"
-			style="display: block; text-align: center; font-size: 2em;">
-			<a href="javascript:(function(){img=document.getElementsByTagName('img')[0];img.style.setProperty('transform','scale(2)','important');if(getComputedStyle(img).getPropertyValue('image-rendering')=='pixelated'){img.style.setProperty('image-rendering','auto');}else{img.style.setProperty('image-rendering','pixelated');};})();">Pix</a>
-		</strong>
-		<p>
-			just drag it into your bookmarks bar, and then click it when you want to
-			trigger it
-		</p>
-		<hr />
-		<p>
-			none of these are lazy loading, so if you're on a data/metered plan you
-			should probably click away now
-		</p>
-	</div>
-</div>
-
-<div id="buttons" class="x-window">
-	<div class="window-titlebar">
-		<a class="window-title ms-bold">
-			<img class="window-icon"
-				src="/assets/images/window-icons/buttons.png" alt="" />
-			Buttons
-		</a>
-		<ul class="window-decs">
-			<li class="window-min"></li>
-			<li class="window-max"></li>
-			<li class="window-cls"></li>
-		</ul>
-	</div>
-	<div class="window-menu">
-		<ul>
-			<li><u>F</u>ile</li>
-			<li><u>E</u>dit</li>
-			<li><u>S</u>earch</li>
-			<li><u>H</u>elp</li>
-		</ul>
-	</div>
-	<div class="window-content">
-		<p>
-			i've tried to go for quality over quantity here, but for those who want
-			as many buttons as possible, here are some sites for that:
-		</p>
+<article id="buttons">
+	<header>
+		<h1>Buttons</h1>
+	</header>
+	<p>
+		i've tried to go for quality over quantity here, but for those who want
+		as many buttons as possible, here are some sites for that:
+	</p>
+	<ul class="img-grid hover-zoom img-capts">
+		<li><figure>
+			<a href="https://capstasher.neocities.org/88x31collection-page1.html">
+				<img src="/assets/images/buttons/bookmarks/buttons/cap-stasher.png"
+					alt="cap stasher's corner" class="btn-88x31 smooth-zoom"
+					title="6000 buttons and counting" />
+			</a>
+				<figcaption class="img-caption">cap stasher</figcaption>
+		</figure></li>
+		<li><figure>
+			<a href="https://hellnet.work/8831//">
+				<img src="/assets/images/buttons/bookmarks/buttons/hellnet.png"
+					alt="search" class="btn-88x31 smooth-zoom"
+					title="massive (31'119) archive from geocities" />
+			</a>
+			<figcaption class="img-caption">hellnet.work</figcaption>
+		</figure></li>
+	</ul>
+	<details>
+		<summary class="h-summ">
+			Others:
+		</summary>
 		<ul class="img-grid hover-zoom img-capts">
 			<li><figure>
-				<a href="https://capstasher.neocities.org/88x31collection-page1.html">
-					<img src="/assets/images/buttons/bookmarks/buttons/cap-stasher.png"
-						alt="cap stasher's corner" class="btn-88x31 smooth-zoom"
-						title="6000 buttons and counting" />
+				<a href="https://88by31.neocities.org/">
+					<img src="/assets/images/buttons/bookmarks/buttons/88by31.png"
+						alt="88by31" class="btn-88x31"
+						title="separated by category (i like the games section)" />
 				</a>
-					<figcaption class="img-caption">cap stasher</figcaption>
+				<figcaption class="img-caption">88by31</figcaption>
 			</figure></li>
 			<li><figure>
-				<a href="https://hellnet.work/8831//">
-					<img src="/assets/images/buttons/bookmarks/buttons/hellnet.png"
-						alt="search" class="btn-88x31 smooth-zoom"
-						title="massive (31'119) archive from geocities" />
+				<a href="https://anlucas.neocities.org/88x31Buttons.html">
+					<img src="/assets/images/buttons/bookmarks/buttons/anlucas.png"
+					alt="anlucas" class="btn-88x31 anim"
+					title="and the second biggest collection" />
 				</a>
-				<figcaption class="img-caption">hellnet.work</figcaption>
+				<figcaption class="img-caption">a.n. lucas</figcaption>
 			</figure></li>
-		</ul>
-		<details>
-			<summary class="h-summ">
-				Others:
-			</summary>
-			<ul class="img-grid hover-zoom img-capts">
-				<li><figure>
-					<a href="https://88by31.neocities.org/">
-						<img src="/assets/images/buttons/bookmarks/buttons/88by31.png"
-							alt="88by31" class="btn-88x31"
-							title="separated by category (i like the games section)" />
-					</a>
-					<figcaption class="img-caption">88by31</figcaption>
-				</figure></li>
-				<li><figure>
-					<a href="https://anlucas.neocities.org/88x31Buttons.html">
-						<img src="/assets/images/buttons/bookmarks/buttons/anlucas.png"
-						alt="anlucas" class="btn-88x31 anim"
-						title="and the second biggest collection" />
-					</a>
-					<figcaption class="img-caption">a.n. lucas</figcaption>
-				</figure></li>
-				<li><figure>
-					<a href="https://web.archive.org/web/20010223235826/http://www.elnet.com/~drealbob/rw/antibutton/">
-						<img src="/assets/images/buttons/bookmarks/buttons/nobut.png"
-							alt="the anti-button campaign" class="btn-88x31 smooth-zoom"
-							title="oddly named, but sizeable collection" />
-					</a>
-					<figcaption class="img-caption">anti-button</figcaption>
-				</figure></li>
-				<li><figure>
-					<a href="https://bytemoth.neocities.org/88s/">
-						<img src="/assets/images/buttons/bookmarks/bytemoth.png"
-							alt="the anti-button campaign" class="btn-88x31 smooth-zoom"
-							title="also see the overhomepage" />
-					</a>
-					<figcaption class="img-caption">bytemoth</figcaption>
-				</figure></li>
-				<li><figure>
-					<a href="https://exo.pet#buttonzone">
-						<img src="/assets/images/buttons/bookmarks/buttons/exo.png"
-							alt="exo.pet" class="btn-88x31 anim"
-							title="quite large compiled collection of nice buttons" />
-					</a>
-					<figcaption class="img-caption">exo.pet</figcaption>
-				</figure></li>
-				<li><figure>
-					<a href="https://loa2k.neocities.org/">
-						<img src="/assets/images/buttons/bookmarks/buttons/loa2k.png"
-							alt="loa2k" class="btn-88x31"
-							title="some /really/ nice synthwave/electronica buttons" />
-					</a>
-					<figcaption class="img-caption">88by31</figcaption>
-				</figure></li>
-				<li><figure>
-					<a href="https://web.archive.org/web/19990129040545/http://www.geocities.com/NapaValley/2022/88x31.html">
-						<img src="/assets/images/buttons/bookmarks/buttons/chaz8831.png"
-							alt="chaz 'hazel'" class="btn-88x31 smooth-zoom"
-							title="categorised collection from 1997" />
-					</a>
-					<figcaption class="img-caption">chaz "hazel"</figcaption>
-				</figure></li>
-				<li><figure>
-					<a href="https://cyber.dabamos.de/88x31/">
-						<img src="/assets/images/buttons/bookmarks/buttons/dabamos.png"
-							alt="the cyber vanguard" class="btn-88x31"
-							title="more than 3'500 classic buttons" />
-					</a>
-					<figcaption class="img-caption">cyber</figcaption>
-				</figure></li>
-				<li><figure>
-					<a href="https://web.archive.org/web/20010607032300/http://www.dds.nl/~dimitri/buttons/index2.htm">
-						<img src="/assets/images/buttons/bookmarks/buttons/dmitri.png"
-							alt="buttons now" class="btn-88x31" />
-					</a>
-					<figcaption class="img-caption">dmitri</figcaption>
-				</figure></li>
-				<li><figure>
-					<a href="http://www.hoary.org/now/index.html">
-						<img src="/assets/images/buttons/bookmarks/buttons/hoaryape.png"
-							alt="hoary ape" class="btn-88x31 smooth-zoom"
-							title="mainly netscape and parodies, 4th page is other brands" />
-					</a>
-					<figcaption class="img-caption">hoary ape</figcaption>
-				</figure></li>
-				<li><figure>
-					<a href="https://88x31.kate.pet/">
-						<img src="/assets/images/buttons/bookmarks/buttons/kate.png"
-							alt="kate.pet" class="btn-88x31"
-							title="small selection, but some i've seen nowhere else" />
-					</a>
-					<figcaption class="img-caption">kate.pet</figcaption>
-				</figure></li>
-				<li><figure>
-					<a href="https://neonaut.neocities.org/cyber/88x31.html">
-						<img src="/assets/images/buttons/bookmarks/buttons/neonaut.png"
-							alt="neonaut" class="btn-88x31"
-							title="personal sites" />
-					</a>
-					<figcaption class="img-caption">neonaut</figcaption>
-				</figure></li>
-			</ul>
-			<h4 title=":-(">Extinct</h4>
-			<ul class="img-grid hover-zoom img-capts">
 			<li><figure>
-				<a href="https://31search.7m.pl/">
-					<img src="/assets/images/buttons/bookmarks/buttons/31search.png"
-						alt="search" class="btn-88x31 smooth-zoom"
-						title="search engine for buttons" />
+				<a href="https://web.archive.org/web/20010223235826/http://www.elnet.com/~drealbob/rw/antibutton/">
+					<img src="/assets/images/buttons/bookmarks/buttons/nobut.png"
+						alt="the anti-button campaign" class="btn-88x31 smooth-zoom"
+						title="oddly named, but sizeable collection" />
 				</a>
-				<figcaption class="img-caption">31search</figcaption>
+				<figcaption class="img-caption">anti-button</figcaption>
 			</figure></li>
-				<li><figure>
-					<a href="https://buttonwall.neocities.org/">
-						<img src="/assets/images/buttons/bookmarks/buttons/buttonwall.png"
-							alt="broken img icon (the image on the page doesn't work"
-							class="btn-88x31"
-							title="4000 buttons in alphabetical order"/>
-					</a>
-					<figcaption class="img-caption">mace486</figcaption>
-				</figure></li>
-				<li><figure>
-					<a href="https://roly.neocities.org/v8/88x31s/index.html">
-						<img src="/assets/images/buttons/bookmarks/buttons/roly.png"
-							alt="roly" class="btn-88x31 anim"
-							title="dead (not archived?), but kitecreature has fewer buttons" />
-					</a>
-					<figcaption class="img-caption">roly (dead)</figcaption>
-				</figure></li>
-				<li><figure>
-					<a href="https://kitecreature.net/buttons/">
-						<img src="/assets/images/buttons/bookmarks/buttons/kitecreature.png"
-							alt="kitecreature.net" class="btn-88x31"
-							title="assorted, in a tiny box" />
-					</a>
-					<figcaption class="img-caption">kitecreature</figcaption>
-				</figure></li>
-				<li><figure>
-					<a href="https://realsast.ga/buttons/">
-						<img src="/assets/images/buttons/bookmarks/buttons/realgast.png"
-							alt="simon's buttons" class="btn-88x31 smooth-zoom"
-							title="original 90s style buttons"/>
-					</a>
-					<figcaption class="img-caption">realgast</figcaption>
-				</figure></li>
-			</ul>
-		</details>
-		<p>
-			most of the following are my own as i'm neurotic about using other
-			people's work, and also i'm the sort of narcissistic cunt who sees
-			something and thinks "ah, i can do better"; but i've tried to
-			link to the original inspiration
-		</p>
-		<!-- faux infinity icon as font does not contain one -->
-		<h2><span class="faux-inf"></span>x<span class="faux-inf"></span></h2>
-		<!-- <h2 style="letter-spacing: -4px">00&nbsp;&nbsp;x&nbsp;&nbsp;00</h2> -->
-		<ul class="img-grid hover-zoom img-capts">
-			{% for item in site.data.gallery-buttons %}
-			{% if item.image and item.res == "inf" and item.cat == nil %}
 			<li><figure>
-				{% if item.lnk-url != nil%}
-				<a href="{{ item.lnk-url }}">
-				{% else %}
-				<a>
-				{% endif %}
-				<img src="/assets/images/buttons/{{ item.image }}.svg"
-					{% if item.title != nil %}
-					title="{{ item.title }}"
-					{% endif %}
-					class="button-88x31 btn-svg
-						{% if item.anim %}anim{% endif %}"
-					alt="{{ item.alt }}" />
-				<figcaption class="img-caption">
-					{% if item.src-url != nil %}
-					<a class="src {{ item.src }}"
-						href="{{ item.src-url }}"></a>
-					{% elsif item.src == "s" %}
-					<a class="src z"
-						href="/assets/images/buttons/{{ item.image }}.ase"></a>
-					{% else %}
-					<a class="src {{ item.src }}"></a>
-					{% endif %}
-					{% if item.ins-url != nil %}
-					{{ page.sep }}
-					<a class="i"
-					{% if item.ins-ttl != nil %}
-						title="{{ item.ins-ttl }}"
-					{% endif %}
-						href="{{ item.ins-url }}"></a>
-					{% endif %}
-				</figcaption>
-			</figure></li>
-			{% endif %}
-			{% endfor %}
-		</ul>
-		<h2>88x31</h2>
-		<section id="aesthetic">
-		<h3>Æsthetic</h3>
-		<ul class="img-grid hover-zoom img-capts">
-			{% for item in site.data.gallery-buttons %}
-			<!-- i have NO idea why this has to be "!=" rather than "=="‽ maybe a bug‽ -->
-			{% if item.image and item.cat == "a" or item.cat == "u"  %}
-			<li><figure>
-				<a{% if item.lnk-url != nil %}
-						href="{{ item.lnk-url }}"{% endif %}
-					{% if item.astyle != nil %}
-						style="{{ item.astyle }}"{% endif %}>
-				<img
-						src="/assets/images/buttons/{% if item.cat == "u"  %}music/{% endif %}{{ item.image }}.{{ item.ext | default: 'png' }}"
-					{% if item.title != nil %}
-					title="{{ item.title }}"
-					{% endif %}
-					class="btn-88x31 {% if item.smooth == 'y' %}smooth-zoom{% endif %}
-						{% if item.anim == 'y' %}anim{% endif %}"
-					alt="{{ item.alt }}" />
-				<figcaption class="img-caption">
-					{% if item.src == "s" %}
-					<a class="src z"
-						href="/assets/images/buttons/{{ item.image }}.ase"></a>
-					{% elsif item.src-url != nil %}
-					<a class="src {{ item.src }}"
-						href="{{ item.src-url }}"></a>
-					{% else %}
-					<a class="src {{ item.src }}"></a>
-					{% endif %}
-					{% if item.ins-url != nil %}
-					{{ page.sep }}
-					<a class="i"
-					{% if item.ins-ttl != nil %}
-						title="{{ item.ins-ttl }}"
-					{% endif %}
-						href="{{ item.ins-url }}"></a>
-					{% endif %}
-				</figcaption>
-			</figure></li>
-			{% endif %}
-			{% endfor %}
-
-			<!--<li><figure> <!-- ZTODO: FIXME
-				<iframe alt="conway's game of life button" class="btn-88x31 anim"
-					src="https://lavender-but-bread.neocities.org/buttons/conways-button.html"
-					style="border:none;margin-bottom:-5px;"></iframe>
-				<figcaption class="img-caption">
-					<a class="src z"></a>
-					{{ page.sep }}
-					<a class="i"
-						href="https://win98icons.alexmeub.com/icons/png/keyboard-4.png"></a>
-				</figcaption>
-			</figure></li>-->
-			<!--<li><figure> <!-- ZTODO: FIXME
-				<iframe alt="conway's game of life button" class="btn-88x31 anim"
-					src="https://lavender-but-bread.neocities.org/buttons/piano-button"
-					style="border:none;margin-bottom:-5px;"></iframe>
-				<figcaption class="img-caption">
-					<a class="src z"></a>
-					{{ page.sep }}
-					<a class="i"
-						href="https://win98icons.alexmeub.com/icons/png/keyboard-4.png"></a>
-				</figcaption>
-			</figure></li>-->
-		</ul>
-		</section>
-		<section id="message">
-		<h3>Message</h3>
-		<ul class="img-grid hover-zoom img-capts">
-			{% for item in site.data.gallery-buttons %}
-			{% if item.image and item.cat == "m" and item.res == nil %}
-			<li id="{{ item.image | slugify: "ascii" }}"><figure>
-				<a{% if item.lnk-url != nil %}
-						href="{{ item.lnk-url }}"{% endif %}
-					{% if item.astyle != nil %}
-						style="{{ item.astyle }}"{% endif %}>
-				<img src="/assets/images/buttons/{{ item.image }}.{{ item.ext | default: 'png' }}"
-					{% if item.title != nil %}
-					title="{{ item.title }}"
-					{% endif %}
-					class="btn-88x31 {% if item.smooth == 'y' %}smooth-zoom{% endif %}
-						{% if item.anim == 'y' %}anim{% endif %}"
-					alt="{{ item.alt }}" />
-				<figcaption class="img-caption">
-					{% if item.src == "s" %}
-					<a class="src z"
-						href="/assets/images/buttons/{{ item.image }}.ase"></a>
-					{% elsif item.src-url != nil %}
-					<a class="src {{ item.src }}"
-						href="{{ item.src-url }}"></a>
-					{% else %}
-					<a class="src {{ item.src }}"></a>
-					{% endif %}
-					{% if item.ins-url != nil %}
-					{{ page.sep }}
-					<a class="i"
-					{% if item.ins-ttl != nil %}
-						title="{{ item.ins-ttl }}"
-					{% endif %}
-						href="{{ item.ins-url }}"></a>
-					{% endif %}
-				</figcaption>
-			</figure></li>
-			{% endif %}
-			{% endfor %}
-		</ul>
-		</section>
-		<section id="games">
-		<h3>Games</h3>
-		<ul class="img-grid hover-zoom img-capts">
-			{% for item in site.data.gallery-buttons %}
-			{% if item.image and item.cat == "g" and item.res == nil %}
-			<li id="{{ item.image | slugify: "ascii" }}"><figure>
-				<a{% if item.lnk-url != nil %}
-						href="{{ item.lnk-url }}"{% endif %}
-					{% if item.astyle != nil %}
-						style="{{ item.astyle }}"{% endif %}>
-				<img src="/assets/images/buttons/games/{{ item.image }}.{{ item.ext | default: 'png' }}"
-					{% if item.title != nil %}
-					title="{{ item.title }}"
-					{% endif %}
-					class="btn-88x31 {% if item.smooth == 'y' %}smooth-zoom{% endif %}
-						{% if item.anim == 'y' %}anim{% endif %}"
-					alt="{{ item.alt }}" />
-				<figcaption class="img-caption">
-					{% if item.src == "s" %}
-					<a class="src z"
-						href="/assets/images/buttons/games{{ item.image }}.ase"></a>
-					{% elsif item.src-url != nil %}
-					<a class="src {{ item.src }}"
-						href="{{ item.src-url }}"></a>
-					{% else %}
-					<a class="src {{ item.src }}"></a>
-					{% endif %}
-					{% if item.ins-url != nil %}
-					{{ page.sep }}
-					<a class="i"
-					{% if item.ins-ttl != nil %}
-						title="{{ item.ins-ttl }}"
-					{% endif %}
-						href="{{ item.ins-url }}"></a>
-					{% endif %}
-				</figcaption>
-			</figure></li>
-			{% endif %}
-			{% endfor %}
-		</ul>
-		</section>
-		<section id="brands">
-		<h3>Brands</h3>
-		<ul class="img-grid hover-zoom img-capts">
-			{% for item in site.data.gallery-buttons %}
-			<!-- i have NO idea why this has to be "!=" rather than "=="‽ maybe a bug‽ -->
-			{% if item.image and item.cat == "b" and item.res == nil or item.res != inf %}
-			<li id="{{ item.image | slugify: "ascii" }}"><figure>
-				<a{% if item.lnk-url != nil %}
-						href="{{ item.lnk-url }}"{% endif %}
-					{% if item.astyle != nil %}
-						style="{{ item.astyle }}"{% endif %}>
-				<img src="/assets/images/buttons/brands/{{ item.image }}.{{ item.ext | default: 'png' }}"
-					{% if item.title != nil %}
-					title="{{ item.title }}"
-					{% endif %}
-					class="btn-88x31 {% if item.smooth == 'y' %}smooth-zoom{% endif %}
-						{% if item.anim == 'y' %}anim{% endif %}"
-					alt="{{ item.alt }}" />
-				<figcaption class="img-caption">
-					{% if item.src == "s" %}
-					<a class="src z"
-						href="/assets/images/buttons/brands{{ item.image }}.ase"></a>
-					{% elsif item.src-url != nil %}
-					<a class="src {{ item.src }}"
-						href="{{ item.src-url }}"></a>
-					{% else %}
-					<a class="src {{ item.src }}"></a>
-					{% endif %}
-					{% if item.ins-url != nil %}
-					{{ page.sep }}
-					<a class="i"
-					{% if item.ins-ttl != nil %}
-						title="{{ item.ins-ttl }}"
-					{% endif %}
-						href="{{ item.ins-url }}"></a>
-					{% endif %}
-				</figcaption>
-			</figure></li>
-			{% endif %}
-			{% endfor %}
-		</ul>
-		</section>
-		<section id="lemmy">
-		<h3>
-			<abbr title="i made these when after the reddit APIcalypse.
-			i now realise lemmy a pile of shit, but unfortunately i'm really pleased with these buttons so i'm keeping them">Lemmy</abbr>
-		</h3>
-		<ul class="img-grid hover-zoom img-capts">
-			{% for item in site.data.gallery-buttons %}
-			{% if item.image and item.cat == "l"  %}
-			<li id="{{ item.image | slugify: "ascii" }}"><figure>
-				<a{% if item.lnk-url != nil %}
-						href="{{ item.lnk-url }}"{% endif %}
-					{% if item.astyle != nil %}
-						style="{{ item.astyle }}"{% endif %}>
-				<img src="/assets/images/buttons/external/{{ item.image }}.{{ item.ext | default: 'png' }}"
-					{% if item.title != nil %}
-					title="{{ item.title }}"
-					{% endif %}
-					class="btn-88x31 {% if item.smooth == 'y' %}smooth-zoom{% endif %}
-						{% if item.anim == 'y' %}anim{% endif %}"
-					alt="{{ item.alt }}" />
-				<figcaption class="img-caption">
-					{% if item.src == "s" %}
-					<a class="src z"
-						href="/assets/images/buttons/external/{{ item.image }}.ase"></a>
-					{% elsif item.src-url != nil %}
-					<a class="src {{ item.src }}"
-						href="{{ item.src-url }}"></a>
-					{% else %}
-					<a class="src {{ item.src }}"></a>
-					{% endif %}
-					{% if item.ins-url != nil %}
-					{{ page.sep }}
-					<a class="i"
-					{% if item.ins-ttl != nil %}
-						title="{{ item.ins-ttl }}"
-					{% endif %}
-						href="{{ item.ins-url }}"></a>
-					{% endif %}
-				</figcaption>
-			</figure></li>
-			{% endif %}
-			{% endfor %}
-		</ul>
-		</section>
-		<section id="external">
-		<h3>
-			<abbr title="'requests' i've received">External</abbr>
-		</h3>
-		<ul class="img-grid hover-zoom img-capts">
-			<li><figure>
-				<a href="https://discord.gg/3qnyT3Y27Z">
-					<img src="/assets/images/buttons/external/32b-neon.png"
-						class="btn-88x31 smooth-zoom anim"
-						alt="neon 32bit cafe button" />
+				<a href="https://bytemoth.neocities.org/88s/">
+					<img src="/assets/images/buttons/bookmarks/bytemoth.png"
+						alt="the anti-button campaign" class="btn-88x31 smooth-zoom"
+						title="also see the overhomepage" />
 				</a>
-				<figcaption class="img-caption">
-					<a class="src z"
-						href="//zeusofthecrows.github.io/assets/images/buttons/external/32b-neon.ase"></a>
-				</figcaption>
+				<figcaption class="img-caption">bytemoth</figcaption>
 			</figure></li>
 			<li><figure>
-				<a href="https://discord.gg/3qnyT3Y27Z">
-					<img src="/assets/images/buttons/external/32b-neon.svg"
-						class="btn-88x31 smooth-zoom anim"
-						alt="neon 32bit cafe button" />
+				<a href="https://exo.pet#buttonzone">
+					<img src="/assets/images/buttons/bookmarks/buttons/exo.png"
+						alt="exo.pet" class="btn-88x31 anim"
+						title="quite large compiled collection of nice buttons" />
 				</a>
-				<figcaption class="img-caption">
-					<a class="src z"></a>
-				</figcaption>
+				<figcaption class="img-caption">exo.pet</figcaption>
 			</figure></li>
 			<li><figure>
-				<a href="https://discord.gg/3qnyT3Y27Z">
-					<img src="/assets/images/buttons/external/32b-pcb.png"
+				<a href="https://loa2k.neocities.org/">
+					<img src="/assets/images/buttons/bookmarks/buttons/loa2k.png"
+						alt="loa2k" class="btn-88x31"
+						title="some /really/ nice synthwave/electronica buttons" />
+				</a>
+				<figcaption class="img-caption">88by31</figcaption>
+			</figure></li>
+			<li><figure>
+				<a href="https://web.archive.org/web/19990129040545/http://www.geocities.com/NapaValley/2022/88x31.html">
+					<img src="/assets/images/buttons/bookmarks/buttons/chaz8831.png"
+						alt="chaz 'hazel'" class="btn-88x31 smooth-zoom"
+						title="categorised collection from 1997" />
+				</a>
+				<figcaption class="img-caption">chaz "hazel"</figcaption>
+			</figure></li>
+			<li><figure>
+				<a href="https://cyber.dabamos.de/88x31/">
+					<img src="/assets/images/buttons/bookmarks/buttons/dabamos.png"
+						alt="the cyber vanguard" class="btn-88x31"
+						title="more than 3'500 classic buttons" />
+				</a>
+				<figcaption class="img-caption">cyber</figcaption>
+			</figure></li>
+			<li><figure>
+				<a href="https://web.archive.org/web/20010607032300/http://www.dds.nl/~dimitri/buttons/index2.htm">
+					<img src="/assets/images/buttons/bookmarks/buttons/dmitri.png"
+						alt="buttons now" class="btn-88x31" />
+				</a>
+				<figcaption class="img-caption">dmitri</figcaption>
+			</figure></li>
+			<li><figure>
+				<a href="http://www.hoary.org/now/index.html">
+					<img src="/assets/images/buttons/bookmarks/buttons/hoaryape.png"
+						alt="hoary ape" class="btn-88x31 smooth-zoom"
+						title="mainly netscape and parodies, 4th page is other brands" />
+				</a>
+				<figcaption class="img-caption">hoary ape</figcaption>
+			</figure></li>
+			<li><figure>
+				<a href="https://88x31.kate.pet/">
+					<img src="/assets/images/buttons/bookmarks/buttons/kate.png"
+						alt="kate.pet" class="btn-88x31"
+						title="small selection, but some i've seen nowhere else" />
+				</a>
+				<figcaption class="img-caption">kate.pet</figcaption>
+			</figure></li>
+			<li><figure>
+				<a href="https://neonaut.neocities.org/cyber/88x31.html">
+					<img src="/assets/images/buttons/bookmarks/buttons/neonaut.png"
+						alt="neonaut" class="btn-88x31"
+						title="personal sites" />
+				</a>
+				<figcaption class="img-caption">neonaut</figcaption>
+			</figure></li>
+		</ul>
+		<h4 title=":-(">Extinct</h4>
+		<ul class="img-grid hover-zoom img-capts">
+		<li><figure>
+			<a href="https://31search.7m.pl/">
+				<img src="/assets/images/buttons/bookmarks/buttons/31search.png"
+					alt="search" class="btn-88x31 smooth-zoom"
+					title="search engine for buttons" />
+			</a>
+			<figcaption class="img-caption">31search</figcaption>
+		</figure></li>
+			<li><figure>
+				<a href="https://buttonwall.neocities.org/">
+					<img src="/assets/images/buttons/bookmarks/buttons/buttonwall.png"
+						alt="broken img icon (the image on the page doesn't work"
 						class="btn-88x31"
-						alt="printed circuitboard 32bit cafe button" />
+						title="4000 buttons in alphabetical order"/>
 				</a>
-				<figcaption class="img-caption">
-					<a class="src z"
-						href="//zeusofthecrows.github.io/assets/images/buttons/external/32b-pcb.ase"></a>
-				</figcaption>
+				<figcaption class="img-caption">mace486</figcaption>
 			</figure></li>
 			<li><figure>
-				<a href="https://discord.gg/3qnyT3Y27Z">
-					<img src="/assets/images/buttons/external/32b-trad.png"
-						class="btn-88x31 smooth-zoom"
-						alt="traditional style 32bit cafe button" />
+				<a href="https://roly.neocities.org/v8/88x31s/index.html">
+					<img src="/assets/images/buttons/bookmarks/buttons/roly.png"
+						alt="roly" class="btn-88x31 anim"
+						title="dead (not archived?), but kitecreature has fewer buttons" />
 				</a>
-				<figcaption class="img-caption">
-					<a class="src z"
-						href="//zeusofthecrows.github.io/assets/images/buttons/external/32b-trad.xcf"></a>
-				</figcaption>
+				<figcaption class="img-caption">roly (dead)</figcaption>
 			</figure></li>
 			<li><figure>
-				<a href="https://discord.gg/3qnyT3Y27Z">
-					<img src="/assets/images/buttons/external/32b-trad.svg"
-						class="btn-88x31 smooth-zoom"
-						alt="traditional 32bit cafe button" />
+				<a href="https://kitecreature.net/buttons/">
+					<img src="/assets/images/buttons/bookmarks/buttons/kitecreature.png"
+						alt="kitecreature.net" class="btn-88x31"
+						title="assorted, in a tiny box" />
 				</a>
-				<figcaption class="img-caption">
-					<a class="src z"></a>
-				</figcaption>
+				<figcaption class="img-caption">kitecreature</figcaption>
 			</figure></li>
 			<li><figure>
-				<a href="https://discord.gg/3qnyT3Y27Z">
-					<img src="/assets/images/buttons/external/32b-win9x.svg"
-						class="btn-88x31 smooth-zoom"
-						alt="windows 9x palette & icon 32bit cafe button" />
+				<a href="https://realsast.ga/buttons/">
+					<img src="/assets/images/buttons/bookmarks/buttons/realgast.png"
+						alt="simon's buttons" class="btn-88x31 smooth-zoom"
+						title="original 90s style buttons"/>
 				</a>
-				<figcaption class="img-caption">
-					<a class="src z"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://discord.gg/3qnyT3Y27Z">
-					<img src="/assets/images/buttons/external/32b-win9x.png"
-						class="btn-88x31 smooth-zoom"
-						alt="windows 9x palette & icon 32bit cafe button" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"
-						href="//zeusofthecrows.github.io/assets/images/buttons/external/32b-win9x.ase"></a>
-				</figcaption>
+				<figcaption class="img-caption">realgast</figcaption>
 			</figure></li>
 		</ul>
-		</section>
-		<section id="ideas">
-		<h3>
-			<abbr title="unfinished ideas i've had, but haven't done anything with yet">Ideas</abbr>
-		</h3>
-		<ul class="img-grid hover-zoom img-capts">
-			<li><figure>
-				<a href="https://frutiger-aero.neocities.org/tutorials">
-					<img src="/assets/images/buttons/other/aero.png"
-						class="btn-88x31 smooth-zoom"
-						alt="frutiger aero styled button" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a>
-					<img src="/assets/images/buttons/other/camo.png"
-						class="btn-88x31 smooth-zoom"
-						alt="transparent (camouflaged) button" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a>
-					<img src="/assets/images/buttons/other/folder.png"
-						class="btn-88x31 smooth-zoom"
-						alt="windows98 folder icon styled button" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a>
-					<img src="/assets/images/buttons/other/warning.png"
-						class="btn-88x31 smooth-zoom"
-						alt="windows98 warning icon button" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a>
-					<img src="/assets/images/buttons/my-links/zeus-retro-pride.svg"
-						class="btn-88x31 smooth-zoom"
-						title="feel free to use this instead of my normal button -
-						for pride month i think i'll make it my primary button"
-						alt="zeus retro pride version svg button" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a>
-					<img src="/assets/images/buttons/my-links/zeus-href.svg"
-						class="btn-88x31 btn-svg"
-						alt="classic link text button" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a>
-					<img src="/assets/images/buttons/my-links/zeus-href.png"
-						class="btn-88x31 smooth-zoom"
-						alt="classic link text button (png ver.)" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a>
-					<img src="/assets/images/buttons/my-links/zeus-t17-old.png"
-						class="btn-88x31 smooth-zoom"
-						alt="zeus button (deprecated)" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a>
-					<img src="/assets/images/buttons/my-links/zeus-scan.png"
-						class="btn-88x31 smooth-zoom anim" title="web safe!"
-						alt="radar style scanning button" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"></a>
-				</figcaption>
-			</figure></li>
-		</ul>
-		</section>
-		<h2>Other</h2>
-		<ul class="img-grid hover-zoom img-capts">
-			<li><figure>
-				<a href="https://wiki.mozilla.org/APNG_Specification">
-					<img src="/assets/images/buttons/brands/apng-wide.png"
-						class="anim"
-						alt="[animated] png now button - 99px wide" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"
-						href="//zeusofthecrows.github.io/assets/images/buttons/brands/apng-wide.ase"></a>
-					{{ page.sep }}
-					<a class="i" href="http://www.libpng.org/pub/png/"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://expectationemesis.net/links.html">
-					<img src="/assets/images/buttons/other/disappoint.png"
-						class="anim"
-						alt="disappoint everyone who loves you - now!" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src v"
-						href="https://expectationemesis.net/links.html"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://mincerafter42.github.io/2021/04/12/png/">
-					<img src="/assets/images/buttons/brands/png.png"
-						alt="png now button - 99px wide" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src v"
-						href="http://www.libpng.org/pub/png/"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a>
-					<img src="/assets/images/buttons/other/start.png"
-						class="anim"
-						alt="windows 98 start button, waving like a flag" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src z"
-						href="//zeusofthecrows.github.io/assets/images/buttons/other/start.ase"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="http://info.cern.ch/hypertext/WWW/TheProject.html">
-					<img src="/assets/images/buttons/brands/www.png" class="pixel-art"
-						data-img-src="https://anlucas.neocities.org/GifFiles.html"
-						alt="w3 - connecting people since 1991 button" />
-				</a>
-				<figcaption class="img-caption">
-					<a class="src v"
-						href="https://anlucas.neocities.org/GifFiles.html"></a>
-				</figcaption>
-			</figure></li>
-		</ul>
-	</div>
-</div>
-
-<div id="stamps" class="x-window">
-	<div class="window-titlebar">
-		<a class="window-title ms-bold">
-			<img class="window-icon"
-				src="/assets/images/window-icons/stamps.png" alt="" />
-			Stamps
-		</a>
-		<ul class="window-decs">
-			<li class="window-min"></li>
-			<li class="window-max"></li>
-			<li class="window-cls"></li>
-		</ul>
-	</div>
-	<div class="window-menu">
-		<ul>
-			<li><u>F</u>ile</li>
-			<li><u>E</u>dit</li>
-			<li><u>S</u>earch</li>
-			<li><u>H</u>elp</li>
-		</ul>
-	</div>
-	<div class="window-content">
-		<p>
-			<details>
-				<summary>
-					for those wanting a stamp template, this is free to use - the colours
-					are to make it easier to see, change the colours in your own image
-				</summary>
-				<img src="/assets/images/stamps/frame-template.png"
-				style="display: block; margin-inline: auto;" alt="template" />
-
-				the corners are slightly unorthodox, but they look a little better than
-				standard, i think
-			</details>
-		</p>
-		<h2>99x56</h2>
-		<ul class="img-grid hover-zoom img-capts">
-			{% for item in site.data.gallery-stamps %}
-			{% if item.image and item.res == nil %}
-			<li><figure>
-				{% if item.lnk-url != nil %}
-				<a href="{{ item.lnk-url }}">
-				{% endif %}
-				<img src="/assets/images/stamps/{{ item.image }}.png"
-					{% if item.title != nil %}
-					title="{{ item.title }}"
-					{% endif %}
-					class="stamp-99x56 {% if item.smooth %}smooth-zoom{% endif %}
-						{% if item.anim %}anim{% endif %}"
-					alt="{{ item.alt }}" />
-				{% if item.lnk-url != nil %}
-				</a>
-				{% endif %}
-				<figcaption class="img-caption">
-					{% if item.src-url != nil %}
-					<a class="src {{ item.src }}"
-						href="{{ item.src-url }}"></a>
-					{% elsif item.src == "s" %}
-					<a class="src z"
-						href="/assets/images/stamps/{{ item.image }}.ase"></a>
-					{% else %}
-					<a class="src {{ item.src }}"></a>
-					{% endif %}
-					{% if item.ins-url != nil %}
-					{{ page.sep }}
-					<a class="i"
-					{% if item.ins-ttl != nil %}
-						title="{{ item.ins-ttl }}"
-					{% endif %}
-						href="{{ item.ins-url }}"></a>
-					{% endif %}
-				</figcaption>
-			</figure></li>
+	</details>
+	<p>
+		most of the following are my own as i'm neurotic about using other
+		people's work, and also i'm the sort of narcissistic cunt who sees
+		something and thinks "ah, i can do better"; but i've tried to
+		link to the original inspiration
+	</p>
+	<!--https://css-tricks.com/modifying-specific-letters-with-css-and-javascript/#aa-font-face-->
+	<h2>&infin;x&infin;</h2>
+	<!-- <h2 style="letter-spacing: -4px">00&nbsp;&nbsp;x&nbsp;&nbsp;00</h2> -->
+	<ul class="img-grid hover-zoom img-capts">
+		{% for item in site.data.gallery-buttons %}
+		{% if item.image and item.res == "inf" and item.cat == nil %}
+		<li><figure>
+			{% if item.lnk-url != nil%}
+			<a href="{{ item.lnk-url }}">
+			{% else %}
+			<a>
 			{% endif %}
-			{% endfor %}
-		</ul>
+			<img src="/assets/images/buttons/{{ item.image }}.svg"
+				{% if item.title != nil %}
+				title="{{ item.title }}"
+				{% endif %}
+				class="button-88x31 btn-svg
+					{% if item.anim %}anim{% endif %}"
+				alt="{{ item.alt }}" />
+			<figcaption class="img-caption">
+				{% if item.src-url != nil %}
+				<a class="src {{ item.src }}"
+					href="{{ item.src-url }}"></a>
+				{% elsif item.src == "s" %}
+				<a class="src z"
+					href="/assets/images/buttons/{{ item.image }}.ase"></a>
+				{% else %}
+				<a class="src {{ item.src }}"></a>
+				{% endif %}
+				{% if item.ins-url != nil %}
+				{{ page.sep }}
+				<a class="i"
+				{% if item.ins-ttl != nil %}
+					title="{{ item.ins-ttl }}"
+				{% endif %}
+					href="{{ item.ins-url }}"></a>
+				{% endif %}
+			</figcaption>
+		</figure></li>
+		{% endif %}
+		{% endfor %}
+	</ul>
+	<h2>88x31</h2>
+	<section id="aesthetic">
+	<h3>Æsthetic</h3>
+	<ul class="img-grid hover-zoom img-capts">
+		{% for item in site.data.gallery-buttons %}
+		{% if item.image and item.cat == "a" or item.cat == "u"  %}
+		<li><figure>
+			<a{% if item.lnk-url != nil %}
+					href="{{ item.lnk-url }}"{% endif %}
+				{% if item.astyle != nil %}
+					style="{{ item.astyle }}"{% endif %}>
+			<img
+					src="/assets/images/buttons/{% if item.cat == "u"  %}music/{% endif %}{{ item.image }}.{{ item.ext | default: 'png' }}"
+				{% if item.title != nil %}
+				title="{{ item.title }}"
+				{% endif %}
+				class="btn-88x31 {% if item.smooth == 'y' %}smooth-zoom{% endif %}
+					{% if item.anim == 'y' %}anim{% endif %}"
+				alt="{{ item.alt }}" />
+			<figcaption class="img-caption">
+				{% if item.src == "s" %}
+				<a class="src z"
+					href="/assets/images/buttons/{{ item.image }}.ase"></a>
+				{% elsif item.src-url != nil %}
+				<a class="src {{ item.src }}"
+					href="{{ item.src-url }}"></a>
+				{% else %}
+				<a class="src {{ item.src }}"></a>
+				{% endif %}
+				{% if item.ins-url != nil %}
+				{{ page.sep }}
+				<a class="i"
+				{% if item.ins-ttl != nil %}
+					title="{{ item.ins-ttl }}"
+				{% endif %}
+					href="{{ item.ins-url }}"></a>
+				{% endif %}
+			</figcaption>
+		</figure></li>
+		{% endif %}
+		{% endfor %}
 
-		<h2><abbr title="fanlisting 'codes'">100x50</abbr></h2>
-		<ul class="img-grid hover-zoom img-capts">
-			{% for item in site.data.gallery-stamps %}
-			{% if item.image != nil and item.res == "100x50" %}
-			<li><figure>
-				{% if item.lnk-url != nil %}
-				<a href="{{ item.lnk-url }}">
+		<!--<li><figure> <!-- ZTODO: FIXME
+			<iframe alt="conway's game of life button" class="btn-88x31 anim"
+				src="https://lavender-but-bread.neocities.org/buttons/conways-button.html"
+				style="border:none;margin-bottom:-5px;"></iframe>
+			<figcaption class="img-caption">
+				<a class="src z"></a>
+				{{ page.sep }}
+				<a class="i"
+					href="https://win98icons.alexmeub.com/icons/png/keyboard-4.png"></a>
+			</figcaption>
+		</figure></li>-->
+		<!--<li><figure> <!-- ZTODO: FIXME
+			<iframe alt="conway's game of life button" class="btn-88x31 anim"
+				src="https://lavender-but-bread.neocities.org/buttons/piano-button"
+				style="border:none;margin-bottom:-5px;"></iframe>
+			<figcaption class="img-caption">
+				<a class="src z"></a>
+				{{ page.sep }}
+				<a class="i"
+					href="https://win98icons.alexmeub.com/icons/png/keyboard-4.png"></a>
+			</figcaption>
+		</figure></li>-->
+	</ul>
+	</section>
+	<section id="message">
+	<h3>Message</h3>
+	<ul class="img-grid hover-zoom img-capts">
+		{% for item in site.data.gallery-buttons %}
+		{% if item.image and item.cat == "m" and item.res == nil %}
+		<li id="{{ item.image | slugify: "ascii" }}"><figure>
+			<a{% if item.lnk-url != nil %}
+					href="{{ item.lnk-url }}"{% endif %}
+				{% if item.astyle != nil %}
+					style="{{ item.astyle }}"{% endif %}>
+			<img src="/assets/images/buttons/{{ item.image }}.{{ item.ext | default: 'png' }}"
+				{% if item.title != nil %}
+				title="{{ item.title }}"
 				{% endif %}
-				<img src="/assets/images/stamps/fanlistings/{{ item.image }}.png"
-					{% if item.title != nil %}
-					title="{{ item.title }}"
-					{% endif %}
-					{% if item.smooth %}
-					class="stamp-100x50 smooth-zoom"
-					{% else %}
-					class="stamp-100x50"
-					{% endif %}
-					alt="{{ item.alt }} fanlisting code" />
-				{% if item.lnk-url != nil %}
-				</a>
+				class="btn-88x31 {% if item.smooth == 'y' %}smooth-zoom{% endif %}
+					{% if item.anim == 'y' %}anim{% endif %}"
+				alt="{{ item.alt }}" />
+			<figcaption class="img-caption">
+				{% if item.src == "s" %}
+				<a class="src z"
+					href="/assets/images/buttons/{{ item.image }}.ase"></a>
+				{% elsif item.src-url != nil %}
+				<a class="src {{ item.src }}"
+					href="{{ item.src-url }}"></a>
+				{% else %}
+				<a class="src {{ item.src }}"></a>
 				{% endif %}
-				<figcaption class="img-caption">
-					{% if item.src-url != nil %}
-					<a class="src {{ item.src }}"
-						href="{{ item.src-url }}"></a>
-					{% else %}
-					<a class="src {{ item.src }}"></a>
-					{% endif %}
-				</figcaption>
-			</figure></li>
+				{% if item.ins-url != nil %}
+				{{ page.sep }}
+				<a class="i"
+				{% if item.ins-ttl != nil %}
+					title="{{ item.ins-ttl }}"
+				{% endif %}
+					href="{{ item.ins-url }}"></a>
+				{% endif %}
+			</figcaption>
+		</figure></li>
+		{% endif %}
+		{% endfor %}
+	</ul>
+	</section>
+	<section id="games">
+	<h3>Games</h3>
+	<ul class="img-grid hover-zoom img-capts">
+		{% for item in site.data.gallery-buttons %}
+		{% if item.image and item.cat == "g" and item.res == nil %}
+		<li id="{{ item.image | slugify: "ascii" }}"><figure>
+			<a{% if item.lnk-url != nil %}
+					href="{{ item.lnk-url }}"{% endif %}
+				{% if item.astyle != nil %}
+					style="{{ item.astyle }}"{% endif %}>
+			<img src="/assets/images/buttons/games/{{ item.image }}.{{ item.ext | default: 'png' }}"
+				{% if item.title != nil %}
+				title="{{ item.title }}"
+				{% endif %}
+				class="btn-88x31 {% if item.smooth == 'y' %}smooth-zoom{% endif %}
+					{% if item.anim == 'y' %}anim{% endif %}"
+				alt="{{ item.alt }}" />
+			<figcaption class="img-caption">
+				{% if item.src == "s" %}
+				<a class="src z"
+					href="/assets/images/buttons/games{{ item.image }}.ase"></a>
+				{% elsif item.src-url != nil %}
+				<a class="src {{ item.src }}"
+					href="{{ item.src-url }}"></a>
+				{% else %}
+				<a class="src {{ item.src }}"></a>
+				{% endif %}
+				{% if item.ins-url != nil %}
+				{{ page.sep }}
+				<a class="i"
+				{% if item.ins-ttl != nil %}
+					title="{{ item.ins-ttl }}"
+				{% endif %}
+					href="{{ item.ins-url }}"></a>
+				{% endif %}
+			</figcaption>
+		</figure></li>
+		{% endif %}
+		{% endfor %}
+	</ul>
+	</section>
+	<section id="brands">
+	<h3>Brands</h3>
+	<ul class="img-grid hover-zoom img-capts">
+		{% for item in site.data.gallery-buttons %}
+		{% if item.image and item.cat == "b" and item.res == nil or item.res != inf %}
+		<li id="{{ item.image | slugify: "ascii" }}"><figure>
+			<a{% if item.lnk-url != nil %}
+					href="{{ item.lnk-url }}"{% endif %}
+				{% if item.astyle != nil %}
+					style="{{ item.astyle }}"{% endif %}>
+			<img src="/assets/images/buttons/brands/{{ item.image }}.{{ item.ext | default: 'png' }}"
+				{% if item.title != nil %}
+				title="{{ item.title }}"
+				{% endif %}
+				class="btn-88x31 {% if item.smooth == 'y' %}smooth-zoom{% endif %}
+					{% if item.anim == 'y' %}anim{% endif %}"
+				alt="{{ item.alt }}" />
+			<figcaption class="img-caption">
+				{% if item.src == "s" %}
+				<a class="src z"
+					href="/assets/images/buttons/brands{{ item.image }}.ase"></a>
+				{% elsif item.src-url != nil %}
+				<a class="src {{ item.src }}"
+					href="{{ item.src-url }}"></a>
+				{% else %}
+				<a class="src {{ item.src }}"></a>
+				{% endif %}
+				{% if item.ins-url != nil %}
+				{{ page.sep }}
+				<a class="i"
+				{% if item.ins-ttl != nil %}
+					title="{{ item.ins-ttl }}"
+				{% endif %}
+					href="{{ item.ins-url }}"></a>
+				{% endif %}
+			</figcaption>
+		</figure></li>
+		{% endif %}
+		{% endfor %}
+	</ul>
+	</section>
+	<section id="lemmy">
+	<h3>
+		<abbr title="i made these when after the reddit APIcalypse.
+		i now realise lemmy is a pile of shit, but unfortunately i'm really pleased with these buttons so i'm keeping them">Lemmy</abbr>
+	</h3>
+	<ul class="img-grid hover-zoom img-capts">
+		{% for item in site.data.gallery-buttons %}
+		{% if item.image and item.cat == "l"  %}
+		<li id="{{ item.image | slugify: "ascii" }}"><figure>
+			<a{% if item.lnk-url != nil %}
+					href="{{ item.lnk-url }}"{% endif %}
+				{% if item.astyle != nil %}
+					style="{{ item.astyle }}"{% endif %}>
+			<img src="/assets/images/buttons/external/{{ item.image }}.{{ item.ext | default: 'png' }}"
+				{% if item.title != nil %}
+				title="{{ item.title }}"
+				{% endif %}
+				class="btn-88x31 {% if item.smooth == 'y' %}smooth-zoom{% endif %}
+					{% if item.anim == 'y' %}anim{% endif %}"
+				alt="{{ item.alt }}" />
+			<figcaption class="img-caption">
+				{% if item.src == "s" %}
+				<a class="src z"
+					href="/assets/images/buttons/external/{{ item.image }}.ase"></a>
+				{% elsif item.src-url != nil %}
+				<a class="src {{ item.src }}"
+					href="{{ item.src-url }}"></a>
+				{% else %}
+				<a class="src {{ item.src }}"></a>
+				{% endif %}
+				{% if item.ins-url != nil %}
+				{{ page.sep }}
+				<a class="i"
+				{% if item.ins-ttl != nil %}
+					title="{{ item.ins-ttl }}"
+				{% endif %}
+					href="{{ item.ins-url }}"></a>
+				{% endif %}
+			</figcaption>
+		</figure></li>
+		{% endif %}
+		{% endfor %}
+	</ul>
+	</section>
+	<section id="external">
+	<h3>
+		<abbr title="buttons for external parties">External</abbr>
+	</h3>
+	<ul class="img-grid hover-zoom img-capts">
+		<li><figure>
+			<a href="https://discord.gg/3qnyT3Y27Z">
+				<img src="/assets/images/buttons/external/32b-neon.png"
+					class="btn-88x31 smooth-zoom anim"
+					alt="neon 32bit cafe button" />
+			</a>
+			<figcaption class="img-caption">
+				<a class="src z"
+					href="//zeusofthecrows.github.io/assets/images/buttons/external/32b-neon.ase"></a>
+			</figcaption>
+		</figure></li>
+		<li><figure>
+			<a href="https://discord.gg/3qnyT3Y27Z">
+				<img src="/assets/images/buttons/external/32b-neon.svg"
+					class="btn-88x31 smooth-zoom anim"
+					alt="neon 32bit cafe button" />
+			</a>
+			<figcaption class="img-caption">
+				<a class="src z"></a>
+			</figcaption>
+		</figure></li>
+		<li><figure>
+			<a href="https://discord.gg/3qnyT3Y27Z">
+				<img src="/assets/images/buttons/external/32b-pcb.png"
+					class="btn-88x31"
+					alt="printed circuitboard 32bit cafe button" />
+			</a>
+			<figcaption class="img-caption">
+				<a class="src z"
+					href="//zeusofthecrows.github.io/assets/images/buttons/external/32b-pcb.ase"></a>
+			</figcaption>
+		</figure></li>
+		<li><figure>
+			<a href="https://discord.gg/3qnyT3Y27Z">
+				<img src="/assets/images/buttons/external/32b-trad.png"
+					class="btn-88x31 smooth-zoom"
+					alt="traditional style 32bit cafe button" />
+			</a>
+			<figcaption class="img-caption">
+				<a class="src z"
+					href="//zeusofthecrows.github.io/assets/images/buttons/external/32b-trad.xcf"></a>
+			</figcaption>
+		</figure></li>
+		<li><figure>
+			<a href="https://discord.gg/3qnyT3Y27Z">
+				<img src="/assets/images/buttons/external/32b-trad.svg"
+					class="btn-88x31 smooth-zoom"
+					alt="traditional 32bit cafe button" />
+			</a>
+			<figcaption class="img-caption">
+				<a class="src z"></a>
+			</figcaption>
+		</figure></li>
+		<li><figure>
+			<a href="https://discord.gg/3qnyT3Y27Z">
+				<img src="/assets/images/buttons/external/32b-win9x.svg"
+					class="btn-88x31 smooth-zoom"
+					alt="windows 9x palette & icon 32bit cafe button" />
+			</a>
+			<figcaption class="img-caption">
+				<a class="src z"></a>
+			</figcaption>
+		</figure></li>
+		<li><figure>
+			<a href="https://discord.gg/3qnyT3Y27Z">
+				<img src="/assets/images/buttons/external/32b-win9x.png"
+					class="btn-88x31 smooth-zoom"
+					alt="windows 9x palette & icon 32bit cafe button" />
+			</a>
+			<figcaption class="img-caption">
+				<a class="src z"
+					href="//zeusofthecrows.github.io/assets/images/buttons/external/32b-win9x.ase"></a>
+			</figcaption>
+		</figure></li>
+	</ul>
+	</section>
+	<section id="ideas">
+	<h3>
+		<abbr title="unfinished ideas i've had, but haven't done anything with yet">Ideas</abbr>
+	</h3>
+	<ul class="img-grid hover-zoom img-capts">
+		<li><figure>
+			<a href="https://frutiger-aero.neocities.org/tutorials">
+				<img src="/assets/images/buttons/other/aero.png"
+					class="btn-88x31 smooth-zoom"
+					alt="frutiger aero styled button" />
+			</a>
+			<figcaption class="img-caption">
+				<a class="src z"></a>
+			</figcaption>
+		</figure></li>
+		<li><figure>
+			<a>
+				<img src="/assets/images/buttons/other/camo.png"
+					class="btn-88x31 smooth-zoom"
+					alt="transparent (camouflaged) button" />
+			</a>
+			<figcaption class="img-caption">
+				<a class="src z"></a>
+			</figcaption>
+		</figure></li>
+		<li><figure>
+			<a>
+				<img src="/assets/images/buttons/other/folder.png"
+					class="btn-88x31 smooth-zoom"
+					alt="windows98 folder icon styled button" />
+			</a>
+			<figcaption class="img-caption">
+				<a class="src z"></a>
+			</figcaption>
+		</figure></li>
+		<li><figure>
+			<a>
+				<img src="/assets/images/buttons/other/warning.png"
+					class="btn-88x31 smooth-zoom"
+					alt="windows98 warning icon button" />
+			</a>
+			<figcaption class="img-caption">
+				<a class="src z"></a>
+			</figcaption>
+		</figure></li>
+		<li><figure>
+			<a>
+				<img src="/assets/images/buttons/my-links/zeus-retro-pride.svg"
+					class="btn-88x31 smooth-zoom"
+					title="feel free to use this instead of my normal button -
+					for pride month i think i'll make it my primary button"
+					alt="zeus retro pride version svg button" />
+			</a>
+			<figcaption class="img-caption">
+				<a class="src z"></a>
+			</figcaption>
+		</figure></li>
+		<li><figure>
+			<a>
+				<img src="/assets/images/buttons/my-links/zeus-href.svg"
+					class="btn-88x31 btn-svg"
+					alt="classic link text button" />
+			</a>
+			<figcaption class="img-caption">
+				<a class="src z"></a>
+			</figcaption>
+		</figure></li>
+		<li><figure>
+			<a>
+				<img src="/assets/images/buttons/my-links/zeus-href.png"
+					class="btn-88x31 smooth-zoom"
+					alt="classic link text button (png ver.)" />
+			</a>
+			<figcaption class="img-caption">
+				<a class="src z"></a>
+			</figcaption>
+		</figure></li>
+		<li><figure>
+			<a>
+				<img src="/assets/images/buttons/my-links/zeus-t17-old.png"
+					class="btn-88x31 smooth-zoom"
+					alt="zeus button (deprecated)" />
+			</a>
+			<figcaption class="img-caption">
+				<a class="src z"></a>
+			</figcaption>
+		</figure></li>
+		<li><figure>
+			<a>
+				<img src="/assets/images/buttons/my-links/zeus-scan.png"
+					class="btn-88x31 smooth-zoom anim" title="web safe!"
+					alt="radar style scanning button" />
+			</a>
+			<figcaption class="img-caption">
+				<a class="src z"></a>
+			</figcaption>
+		</figure></li>
+	</ul>
+	</section>
+	<h2>Other</h2>
+	<ul class="img-grid hover-zoom img-capts">
+		<li><figure>
+			<a href="https://wiki.mozilla.org/APNG_Specification">
+				<img src="/assets/images/buttons/brands/apng-wide.png"
+					class="anim"
+					alt="[animated] png now button - 99px wide" />
+			</a>
+			<figcaption class="img-caption">
+				<a class="src z"
+					href="//zeusofthecrows.github.io/assets/images/buttons/brands/apng-wide.ase"></a>
+				{{ page.sep }}
+				<a class="i" href="http://www.libpng.org/pub/png/"></a>
+			</figcaption>
+		</figure></li>
+		<li><figure>
+			<a href="https://expectationemesis.net/links.html">
+				<img src="/assets/images/buttons/other/disappoint.png"
+					class="anim"
+					alt="disappoint everyone who loves you - now!" />
+			</a>
+			<figcaption class="img-caption">
+				<a class="src v"
+					href="https://expectationemesis.net/links.html"></a>
+			</figcaption>
+		</figure></li>
+		<li><figure>
+			<a href="https://mincerafter42.github.io/2021/04/12/png/">
+				<img src="/assets/images/buttons/brands/png.png"
+					alt="png now button - 99px wide" />
+			</a>
+			<figcaption class="img-caption">
+				<a class="src v"
+					href="http://www.libpng.org/pub/png/"></a>
+			</figcaption>
+		</figure></li>
+		<li><figure>
+			<a>
+				<img src="/assets/images/buttons/other/start.png"
+					class="anim"
+					alt="windows 98 start button, waving like a flag" />
+			</a>
+			<figcaption class="img-caption">
+				<a class="src z"
+					href="//zeusofthecrows.github.io/assets/images/buttons/other/start.ase"></a>
+			</figcaption>
+		</figure></li>
+		<li><figure>
+			<a href="http://info.cern.ch/hypertext/WWW/TheProject.html">
+				<img src="/assets/images/buttons/brands/www.png" class="pixel-art"
+					data-img-src="https://anlucas.neocities.org/GifFiles.html"
+					alt="w3 - connecting people since 1991 button" />
+			</a>
+			<figcaption class="img-caption">
+				<a class="src v"
+					href="https://anlucas.neocities.org/GifFiles.html"></a>
+			</figcaption>
+		</figure></li>
+	</ul>
+</article>
+
+<article id="stamps">
+	<header>
+		<h1>Stamps</h1>
+	</header>
+	<p>
+		<details>
+			<summary>
+				for those wanting a stamp template, this is free to use - the colours
+				are to make it easier to see, change the colours in your own image
+			</summary>
+			<img src="/assets/images/stamps/frame-template.png"
+			style="display: block; margin-inline: auto;" alt="template" />
+
+			the corners are slightly unorthodox, but they look a little better than
+			standard, i think
+		</details>
+	</p>
+	<h2>99x56</h2>
+	<ul class="img-grid hover-zoom img-capts">
+		{% for item in site.data.gallery-stamps %}
+		{% if item.image and item.res == nil %}
+		<li><figure>
+			{% if item.lnk-url != nil %}
+			<a href="{{ item.lnk-url }}">
 			{% endif %}
-			{% endfor %}
-		</ul>
-
-		<h2>Other</h2>
-		<ul class="img-grid hover-zoom img-capts">
-			{% for item in site.data.gallery-stamps %}
-			{% if item.image and item.res == "other" %}
-			<li><figure>
-				{% if item.lnk-url != nil %}
-				<a href="{{ item.lnk-url }}">
+			<img src="/assets/images/stamps/{{ item.image }}.png"
+				{% if item.title != nil %}
+				title="{{ item.title }}"
 				{% endif %}
-				<img src="/assets/images/stamps/{{ item.image }}.png"
-					{% if item.title != nil %}
-					title="{{ item.title }}"
-					{% endif %}
-					class="{% if item.smooth %}smooth-zoom{% else %}pixel-art{% endif %}
-						{% if item.anim %}anim{% endif %}"
-					alt="{{ item.alt }}" />
-				{% if item.lnk-url != nil %}
-				</a>
-				{% endif %}
-				<figcaption class="img-caption">
-					{% if item.src-url != nil %}
-					<a class="src {{ item.src }}"
-						href="{{ item.src-url }}"></a>
-					{% elsif item.src == "s" %}
-					<a class="src z"
-						href="/assets/images/stamps/{{ item.image }}.ase"></a>
-					{% else %}
-					<a class="src {{ item.src }}"></a>
-					{% endif %}
-					{% if item.ins-url != nil %}
-					{{ page.sep }}
-					<a class="i"
-					{% if item.ins-ttl != nil %}
-						title="{{ item.ins-ttl }}"
-					{% endif %}
-						href="{{ item.ins-url }}"></a>
-					{% endif %}
-				</figcaption>
-			</figure></li>
+				class="stamp-99x56 {% if item.smooth %}smooth-zoom{% endif %}
+					{% if item.anim %}anim{% endif %}"
+				alt="{{ item.alt }}" />
+			{% if item.lnk-url != nil %}
+			</a>
 			{% endif %}
-			{% endfor %}
-		</ul>
-	</div>
-</div>
+			<figcaption class="img-caption">
+				{% if item.src-url != nil %}
+				<a class="src {{ item.src }}"
+					href="{{ item.src-url }}"></a>
+				{% elsif item.src == "s" %}
+				<a class="src z"
+					href="/assets/images/stamps/{{ item.image }}.ase"></a>
+				{% else %}
+				<a class="src {{ item.src }}"></a>
+				{% endif %}
+				{% if item.ins-url != nil %}
+				{{ page.sep }}
+				<a class="i"
+				{% if item.ins-ttl != nil %}
+					title="{{ item.ins-ttl }}"
+				{% endif %}
+					href="{{ item.ins-url }}"></a>
+				{% endif %}
+			</figcaption>
+		</figure></li>
+		{% endif %}
+		{% endfor %}
+	</ul>
 
-<div id="blinkies" class="x-window">
-	<div class="window-titlebar">
-		<a class="window-title ms-bold">
-			<img class="window-icon"
-				src="/assets/images/window-icons/blinkies.png" alt="" />
-			Blinkies
-		</a>
-		<ul class="window-decs">
-			<li class="window-min"></li>
-			<li class="window-max"></li>
-			<li class="window-cls"></li>
-		</ul>
-	</div>
-	<div class="window-menu">
-		<ul>
-			<li><u>F</u>ile</li>
-			<li><u>E</u>dit</li>
-			<li><u>S</u>earch</li>
-			<li><u>H</u>elp</li>
-		</ul>
-	</div>
-	<div class="window-content">
-		<p>
-			i'm not actually the biggest fan of blinkies, as they tend to make my
-			eyes hurt; but i seem to have gathered a few anyways. i guess they're
-			good for text too long for a button
-		</p>
-		<h2>150x20</h2>
-		<ul class="img-grid hover-zoom img-capts">
-			<li><figure>
-				<img src="/assets/images/blinkies/blink.png"
-					class="btn-150x20 smooth-zoom anim"
-					alt="i blink therefore i am blinkie"/>
-				<figcaption class="img-caption">
-					<a class="src"
-						href="https://muchomago.tumblr.com/post/696313761793982464/"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/assets/images/blinkies/bttf.png"
-					class="btn-150x20 smooth-zoom anim"
-					alt="back to the future blinkie"/>
-				<figcaption class="img-caption">
-					<a class="src"
-						href="https://twitch.cymru/graphics/"></a>
-				</figcaption>
-			</figure></li>
-			<!-- <li><figure>
-				<img src="/assets/images/blinkies/chamber.png"
-					class="btn-150x20 smooth-zoom"
-					alt="gothic chamber blinkie"/>
-				<figcaption class="img-caption">
-					<a class="src"
-						href="https://bloodcoveredwebcam.neocities.org/about.html"></a>
-				</figcaption>
-			</figure></li> -->
-			<li><figure>
-				<img src="/assets/images/blinkies/caution.png"
-					class="btn-150x20 anim"
-					alt="caution blinkie" />
-				<figcaption class="img-caption">
-					<a class="src"
-						href="https://twitch.cymru/graphics/"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/assets/images/blinkies/coffee.png"
-					class="btn-150x20 smooth-zoom anim"
-					alt="coffee is not my cup of tea blinkie"
-					data-img-src="http://blinkieobsession.freeservers.com/2/1.htm" />
-				<figcaption class="img-caption">
-					<a class="src"
-						href="http://blinkieobsession.freeservers.com/menu.html"></a>
-				</figcaption>
-			</figure></li>
-			<!-- <li><figure>
-				<img src="/assets/images/blinkies/colours.png"
-					class="btn-150x20" title="ugly proof of concept, needs work"
-					alt="colours blinkie" />
-				<figcaption class="img-caption">
-					<a class="src z"></a>
-				</figcaption>
-			</figure></li> -->
-			<li><figure>
-				<img src="/assets/images/blinkies/control.png"
-					class="btn-150x20 smooth-zoom anim"
-					alt="losing control blinkie" />
-				<figcaption class="img-caption">
-					<a class="src z"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/assets/images/blinkies/eyes.png"
-					class="btn-150x20 smooth-zoom anim"
-					alt=" "
-					data-img-src="https://newlambda.neocities.org/stuff/graphics/blinkie.html" />
-				<figcaption class="img-caption">
-					<a class="src"
-						href="https://newlambda.neocities.org/stuff/graphics/blinkie.html"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/assets/images/blinkies/gamer.png"
-					class="btn-150x20 smooth-zoom anim"
-					alt="gamer (self-diagnosed) blinkie"/>
-				<figcaption class="img-caption">
-					<a class="src"
-						href="https://bloodcoveredwebcam.neocities.org/about.html"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/assets/images/blinkies/glitch.png"
-					class="btn-150x20 anim"
-					alt="glitching blinkie"/>
-				<figcaption class="img-caption">
-					<a class="src"
-						href="https://webpage1990colourised.neocities.org#graphics"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/assets/images/blinkies/green-fire.png"
-					class="btn-150x20 anim"
-					alt="celeste 'breathe. you can do this.' blinkie (green fire)"/>
-				<figcaption class="img-caption">
-					<a class="src z"
-						href="//zeusofthecrows.github.io//assets/images/blinkies/fire.ase"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/assets/images/blinkies/italic.png"
-					class="btn-150x20 anim"
-					alt="fortune favours the bold, but i favour the italic"
-					data-img-src="~zeus" />
-				<figcaption class="img-caption">
-					<a class="src z"
-						href="//zeusofthecrows.github.io/assets/images/blinkies/italic.ase"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/assets/images/blinkies/marquee.png"
-					class="btn-150x20 smooth-zoom anim"
-					alt="windows xp style loading marquee blinkie"/>
-				<figcaption class="img-caption">
-					<a class="src z"></a>
-					{{ page.sep }}
-					<a class="i"
-						href="https://www.tumblr.com/404de4th/699124348116779008/"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/assets/images/blinkies/metal.png"
-					class="btn-150x20 smooth-zoom anim"
-					alt="i love heavy metal blinkie"/>
-				<figcaption class="img-caption">
-					<a class="src"
-						href="https://bloodcoveredwebcam.neocities.org/about.html"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/assets/images/blinkies/necromancy.png"
-					class="btn-150x20 smooth-zoom anim"
-					alt="necromancy blinkie"/>
-				<figcaption class="img-caption">
-					<a class="src"
-						href="https://twitch.cymru/graphics/"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/assets/images/blinkies/orb.png"
-					class="btn-150x20 smooth-zoom anim"
-					alt="let me look into my orb blinkie"/>
-				<figcaption class="img-caption">
-					<a class="src"
-						href="https://muchomago.tumblr.com/post/698477788928311296/"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/assets/images/blinkies/reality.png"
-					class="btn-150x20 anim"
-					alt="reality is the leading cause of stress blinkie"/>
-				<figcaption class="img-caption">
-					<a class="src"
-						href="https://expectationemesis.net/"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/assets/images/blinkies/red-fire.png"
-					class="btn-150x20 anim"
-					alt="celeste 'breathe. you can do this.' blinkie (red fire)"/>
-				<figcaption class="img-caption">
-					<a class="src z"
-						href="//zeusofthecrows.github.io//assets/images/blinkies/fire.ase"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/assets/images/blinkies/sword.png"
-					class="btn-150x20 smooth-zoom anim"
-					alt="live by the sword blinkie"/>
-				<figcaption class="img-caption">
-					<a class="src"
-						href="https://muchomago.tumblr.com/post/696313761793982464/"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/assets/images/blinkies/todo.png"
-					class="btn-150x20 smooth-zoom anim"
-					alt="//TODO: Create Procrastination Blinkie"
-					data-img-src="~zeus" />
-				<figcaption class="img-caption">
-					<a class="src z"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/assets/images/blinkies/vapor.png"
-					class="btn-150x20 smooth-zoom anim"
-					alt="vaporwave blinkie"/>
-				<figcaption class="img-caption">
-					<a class="src" href="https://corvidae.digital/graphics"></a>
-				</figcaption>
-			</figure></li>
-		</ul>
-		<h2>Other</h2>
-		<ul class="img-grid hover-zoom img-capts">
-			<li><figure>
-				<img src="/assets/images/blinkies/mindful.png"
-					class="pixel-art smooth-zoom anim"
-					alt="be ye ever mindful"
-					data-img-src="https://newlambda.neocities.org/stuff/graphics/blinkie.html" />
-				<figcaption class="img-caption">
-					<a class="src"
-						href="https://newlambda.neocities.org/stuff/graphics/blinkie.html"></a>
-				</figcaption>
-			</figure></li>
-		</ul>
-	</div>
-</div>
+	<h2>Other</h2>
+	<ul class="img-grid hover-zoom img-capts">
+		{% for item in site.data.gallery-stamps %}
+		{% if item.image and item.res == "other" %}
+		<li><figure>
+			{% if item.lnk-url != nil %}
+			<a href="{{ item.lnk-url }}">
+			{% endif %}
+			<img src="/assets/images/stamps/{{ item.image }}.png"
+				{% if item.title != nil %}
+				title="{{ item.title }}"
+				{% endif %}
+				class="{% if item.smooth %}smooth-zoom{% else %}pixel-art{% endif %}
+					{% if item.anim %}anim{% endif %}"
+				alt="{{ item.alt }}" />
+			{% if item.lnk-url != nil %}
+			</a>
+			{% endif %}
+			<figcaption class="img-caption">
+				{% if item.src-url != nil %}
+				<a class="src {{ item.src }}"
+					href="{{ item.src-url }}"></a>
+				{% elsif item.src == "s" %}
+				<a class="src z"
+					href="/assets/images/stamps/{{ item.image }}.ase"></a>
+				{% else %}
+				<a class="src {{ item.src }}"></a>
+				{% endif %}
+				{% if item.ins-url != nil %}
+				{{ page.sep }}
+				<a class="i"
+				{% if item.ins-ttl != nil %}
+					title="{{ item.ins-ttl }}"
+				{% endif %}
+					href="{{ item.ins-url }}"></a>
+				{% endif %}
+			</figcaption>
+		</figure></li>
+		{% endif %}
+		{% endfor %}
+	</ul>
+</article>
 
-<div id="antipix" class="x-window">
-	<div class="window-titlebar">
-		<a class="window-title ms-bold">
-			<img class="window-icon"
-				src="/assets/images/window-icons/cassette.png" alt="" />
-			Antipixels
-		</a>
-		<ul class="window-decs">
-			<li class="window-min"></li>
-			<li class="window-max"></li>
-			<li class="window-cls"></li>
-		</ul>
-	</div>
-	<div class="window-menu">
-		<ul>
-			<li><u>F</u>ile</li>
-			<li><u>E</u>dit</li>
-			<li><u>S</u>earch</li>
-			<li><u>H</u>elp</li>
-		</ul>
-	</div>
-	<div class="window-content">
-		<h2>80x15</h2>
-		<ul class="img-grid hover-zoom img-capts">
-			<li><figure>
-				<img src="/assets/images/antipix/cc-by-sa.png"
-					class="btn-80x15"
-					title="nominally"
-					alt="cc-by-sa antipixel icon"/>
-				<figcaption class="img-caption">
-					<a href="https://creativecommons.org/mission/downloads/"
-					class="src v"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/assets/images/antipix/gb.png"
-					class="btn-80x15"
-					alt="made in gb antipixel icon"
-					data-img-src="~zeus" />
-				<figcaption class="img-caption">
-					<a class="src z"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/assets/images/antipix/hand-coded.png"
-					class="btn-80x15"
-					alt="hand coded (sublime text) antipixel icon"
-					data-img-src="~zeus" />
-				<figcaption class="img-caption">
-					<a class="src z"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/assets/images/antipix/lgbt.png"
-					class="btn-80x15"
-					alt="lgbt+ friendly antipixel icon"
-					data-img-src="~zeus" />
-				<figcaption class="img-caption">
-					<a class="src z"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/assets/images/antipix/live.png"
-					class="btn-80x15 anim"
-					alt="'live' ticker antipixel icon" />
-				<figcaption class="img-caption">
-					<a class="src"
-						href="http://news.bbc.co.uk/1/hi/technology/7163547.stm"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/assets/images/antipix/not-found.png"
-					class="btn-80x15"
-					alt="404 not found antipixel icon"
-					data-img-src="https://web.badges.world/" />
-				<figcaption class="img-caption">
-					<a class="src" href="https://web.badges.world/"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/assets/images/antipix/open.png"
-					class="btn-80x15 smooth-zoom"
-					alt="open 24 hours antipixel icon"
-					data-img-src="~zeus" />
-				<figcaption class="img-caption">
-					<a class="src z"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/assets/images/antipix/pc-compat.png"
-					class="btn-80x15 smooth-zoom"
-					alt="ibm-pc compatible antipixel icon"
-					data-img-src="~zeus" />
-				<figcaption class="img-caption">
-					<a class="src z"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/assets/images/antipix/popups.png"
-					class="btn-80x15"
-					alt="no popups antipixel icon"
-					data-img-src="https://web.badges.world/" />
-				<figcaption class="img-caption">
-					<a class="src" href="https://web.badges.world/"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/assets/images/antipix/save.png"
-					class="btn-80x15"
-					alt="save as antipixel icon"
-					data-img-src="https://newlambda.neocities.org/stuff/graphics/button.html" />
-				<figcaption class="img-caption">
-					<a class="src" href="https://newlambda.neocities.org/stuff/graphics/button.html"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/assets/images/antipix/slava-ukraini.png"
-					class="btn-80x15"
-					alt="слава україні antipixel icon"
-					data-img-src="~zeus" />
-				<figcaption class="img-caption">
-					<a class="src z"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/assets/images/antipix/tea.png"
-					class="btn-80x15"
-					alt="tea powered antipixel icon"
-					data-img-src="https://keysklubhouse.neocities.org/home.htm" />
-				<figcaption class="img-caption">
-					<a class="src"
-						href="https://keysklubhouse.neocities.org/home.htm"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/assets/images/antipix/terra.png"
-					class="btn-80x15"
-					alt="terran (cadle's flag of earth) antipixel icon"
-					data-img-src="~zeus" />
-				<figcaption class="img-caption">
-					<a class="src z"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/assets/images/antipix/terra-aqua.png"
-					class="btn-80x15"
-					alt="terran (cadle's flag of earth) antipixel icon"
-					data-img-src="~zeus" />
-				<figcaption class="img-caption">
-					<a class="src z"></a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<img src="/assets/images/antipix/trans.png"
-					class="btn-80x15"
-					alt="trans rights antipixel icon"
-					data-img-src="~zeus" />
-				<figcaption class="img-caption">
-					<a class="src z"></a>
-				</figcaption>
-			</figure></li>
-		</ul>
-	</div>
-</div>
+<article id="codes">
+	<header>
+		<h1>Codes</h1>
+		<span>fanlisting codes</span>
+	</header>
+	<ul class="img-grid hover-zoom img-capts">
+		{% for item in site.data.gallery-stamps %}
+		{% if item.image != nil and item.res == "100x50" %}
+		<li><figure>
+			{% if item.lnk-url != nil %}
+			<a href="{{ item.lnk-url }}">
+			{% endif %}
+			<img src="/assets/images/stamps/fanlistings/{{ item.image }}.png"
+				{% if item.title != nil %}
+				title="{{ item.title }}"
+				{% endif %}
+				{% if item.smooth %}
+				class="stamp-100x50 smooth-zoom"
+				{% else %}
+				class="stamp-100x50"
+				{% endif %}
+				alt="{{ item.alt }} fanlisting code" />
+			{% if item.lnk-url != nil %}
+			</a>
+			{% endif %}
+			<figcaption class="img-caption">
+				{% if item.src-url != nil %}
+				<a class="src {{ item.src }}"
+					href="{{ item.src-url }}"></a>
+				{% else %}
+				<a class="src {{ item.src }}"></a>
+				{% endif %}
+			</figcaption>
+		</figure></li>
+		{% endif %}
+		{% endfor %}
+	</ul>
+</article>
 
-<div id="other-art" class="x-window">
-	<div class="window-titlebar">
-		<a class="window-title ms-bold">
-			<img class="window-icon"
-				src="/assets/images/window-icons/art.png" alt="" />
-			Other Art
-		</a>
-		<ul class="window-decs">
-			<li class="window-min"></li>
-			<li class="window-max"></li>
-			<li class="window-cls"></li>
-		</ul>
-	</div>
-	<div class="window-menu">
-		<ul>
-			<li><u>F</u>ile</li>
-			<li><u>E</u>dit</li>
-			<li><u>S</u>earch</li>
-			<li><u>H</u>elp</li>
-		</ul>
-	</div>
-	<div class="window-content">
-		<ul class="img-grid img-capts">
-			<li><figure>
-				<a>
-					<img src="/assets/images/gallery/atari-firefox.jpg"
-						alt="firefox: a laservideo programme"
-						data-img-src="~zeus" />
+<article id="blinkies">
+	<header>
+		<h1>Blinkies</h1>
+	</header>
+	<p>
+		i'm not actually the biggest fan of blinkies, as they tend to make my
+		eyes hurt; but i seem to have gathered a few anyways. i guess they're
+		good for text too long for a button
+	</p>
+	<h2>150x20</h2>
+	<ul class="img-grid hover-zoom img-capts">
+		<li><figure>
+			<img src="/assets/images/blinkies/blink.png"
+				class="btn-150x20 smooth-zoom anim"
+				alt="i blink therefore i am blinkie"/>
+			<figcaption class="img-caption">
+				<a class="src"
+					href="https://muchomago.tumblr.com/post/696313761793982464/"></a>
+			</figcaption>
+		</figure></li>
+		<li><figure>
+			<img src="/assets/images/blinkies/bttf.png"
+				class="btn-150x20 smooth-zoom anim"
+				alt="back to the future blinkie"/>
+			<figcaption class="img-caption">
+				<a class="src"
+					href="https://twitch.cymru/graphics/"></a>
+			</figcaption>
+		</figure></li>
+		<!-- <li><figure>
+			<img src="/assets/images/blinkies/chamber.png"
+				class="btn-150x20 smooth-zoom"
+				alt="gothic chamber blinkie"/>
+			<figcaption class="img-caption">
+				<a class="src"
+					href="https://bloodcoveredwebcam.neocities.org/about.html"></a>
+			</figcaption>
+		</figure></li> -->
+		<li><figure>
+			<img src="/assets/images/blinkies/caution.png"
+				class="btn-150x20 anim"
+				alt="caution blinkie" />
+			<figcaption class="img-caption">
+				<a class="src"
+					href="https://twitch.cymru/graphics/"></a>
+			</figcaption>
+		</figure></li>
+		<li><figure>
+			<img src="/assets/images/blinkies/coffee.png"
+				class="btn-150x20 smooth-zoom anim"
+				alt="coffee is not my cup of tea blinkie"
+				data-img-src="http://blinkieobsession.freeservers.com/2/1.htm" />
+			<figcaption class="img-caption">
+				<a class="src"
+					href="http://blinkieobsession.freeservers.com/menu.html"></a>
+			</figcaption>
+		</figure></li>
+		<!-- <li><figure>
+			<img src="/assets/images/blinkies/colours.png"
+				class="btn-150x20" title="ugly proof of concept, needs work"
+				alt="colours blinkie" />
+			<figcaption class="img-caption">
+				<a class="src z"></a>
+			</figcaption>
+		</figure></li> -->
+		<li><figure>
+			<img src="/assets/images/blinkies/control.png"
+				class="btn-150x20 smooth-zoom anim"
+				alt="losing control blinkie" />
+			<figcaption class="img-caption">
+				<a class="src z"></a>
+			</figcaption>
+		</figure></li>
+		<li><figure>
+			<img src="/assets/images/blinkies/eyes.png"
+				class="btn-150x20 smooth-zoom anim"
+				alt=" "
+				data-img-src="https://newlambda.neocities.org/stuff/graphics/blinkie.html" />
+			<figcaption class="img-caption">
+				<a class="src"
+					href="https://newlambda.neocities.org/stuff/graphics/blinkie.html"></a>
+			</figcaption>
+		</figure></li>
+		<li><figure>
+			<img src="/assets/images/blinkies/gamer.png"
+				class="btn-150x20 smooth-zoom anim"
+				alt="gamer (self-diagnosed) blinkie"/>
+			<figcaption class="img-caption">
+				<a class="src"
+					href="https://bloodcoveredwebcam.neocities.org/about.html"></a>
+			</figcaption>
+		</figure></li>
+		<li><figure>
+			<img src="/assets/images/blinkies/glitch.png"
+				class="btn-150x20 anim"
+				alt="glitching blinkie"/>
+			<figcaption class="img-caption">
+				<a class="src"
+					href="https://webpage1990colourised.neocities.org#graphics"></a>
+			</figcaption>
+		</figure></li>
+		<li><figure>
+			<img src="/assets/images/blinkies/green-fire.png"
+				class="btn-150x20 anim"
+				alt="celeste 'breathe. you can do this.' blinkie (green fire)"/>
+			<figcaption class="img-caption">
+				<a class="src z"
+					href="//zeusofthecrows.github.io//assets/images/blinkies/fire.ase"></a>
+			</figcaption>
+		</figure></li>
+		<li><figure>
+			<img src="/assets/images/blinkies/italic.png"
+				class="btn-150x20 anim"
+				alt="fortune favours the bold, but i favour the italic"
+				data-img-src="~zeus" />
+			<figcaption class="img-caption">
+				<a class="src z"
+					href="//zeusofthecrows.github.io/assets/images/blinkies/italic.ase"></a>
+			</figcaption>
+		</figure></li>
+		<li><figure>
+			<img src="/assets/images/blinkies/marquee.png"
+				class="btn-150x20 smooth-zoom anim"
+				alt="windows xp style loading marquee blinkie"/>
+			<figcaption class="img-caption">
+				<a class="src z"></a>
+				{{ page.sep }}
+				<a class="i"
+					href="https://www.tumblr.com/404de4th/699124348116779008/"></a>
+			</figcaption>
+		</figure></li>
+		<li><figure>
+			<img src="/assets/images/blinkies/metal.png"
+				class="btn-150x20 smooth-zoom anim"
+				alt="i love heavy metal blinkie"/>
+			<figcaption class="img-caption">
+				<a class="src"
+					href="https://bloodcoveredwebcam.neocities.org/about.html"></a>
+			</figcaption>
+		</figure></li>
+		<li><figure>
+			<img src="/assets/images/blinkies/necromancy.png"
+				class="btn-150x20 smooth-zoom anim"
+				alt="necromancy blinkie"/>
+			<figcaption class="img-caption">
+				<a class="src"
+					href="https://twitch.cymru/graphics/"></a>
+			</figcaption>
+		</figure></li>
+		<li><figure>
+			<img src="/assets/images/blinkies/orb.png"
+				class="btn-150x20 smooth-zoom anim"
+				alt="let me look into my orb blinkie"/>
+			<figcaption class="img-caption">
+				<a class="src"
+					href="https://muchomago.tumblr.com/post/698477788928311296/"></a>
+			</figcaption>
+		</figure></li>
+		<li><figure>
+			<img src="/assets/images/blinkies/reality.png"
+				class="btn-150x20 anim"
+				alt="reality is the leading cause of stress blinkie"/>
+			<figcaption class="img-caption">
+				<a class="src"
+					href="https://expectationemesis.net/"></a>
+			</figcaption>
+		</figure></li>
+		<li><figure>
+			<img src="/assets/images/blinkies/red-fire.png"
+				class="btn-150x20 anim"
+				alt="celeste 'breathe. you can do this.' blinkie (red fire)"/>
+			<figcaption class="img-caption">
+				<a class="src z"
+					href="//zeusofthecrows.github.io//assets/images/blinkies/fire.ase"></a>
+			</figcaption>
+		</figure></li>
+		<li><figure>
+			<img src="/assets/images/blinkies/sword.png"
+				class="btn-150x20 smooth-zoom anim"
+				alt="live by the sword blinkie"/>
+			<figcaption class="img-caption">
+				<a class="src"
+					href="https://muchomago.tumblr.com/post/696313761793982464/"></a>
+			</figcaption>
+		</figure></li>
+		<li><figure>
+			<img src="/assets/images/blinkies/todo.png"
+				class="btn-150x20 smooth-zoom anim"
+				alt="//TODO: Create Procrastination Blinkie"
+				data-img-src="~zeus" />
+			<figcaption class="img-caption">
+				<a class="src z"></a>
+			</figcaption>
+		</figure></li>
+		<li><figure>
+			<img src="/assets/images/blinkies/vapor.png"
+				class="btn-150x20 smooth-zoom anim"
+				alt="vaporwave blinkie"/>
+			<figcaption class="img-caption">
+				<a class="src" href="https://corvidae.digital/graphics"></a>
+			</figcaption>
+		</figure></li>
+	</ul>
+	<h2>Other</h2>
+	<ul class="img-grid hover-zoom img-capts">
+		<li><figure>
+			<img src="/assets/images/blinkies/mindful.png"
+				class="pixel-art smooth-zoom anim"
+				alt="be ye ever mindful"
+				data-img-src="https://newlambda.neocities.org/stuff/graphics/blinkie.html" />
+			<figcaption class="img-caption">
+				<a class="src"
+					href="https://newlambda.neocities.org/stuff/graphics/blinkie.html"></a>
+			</figcaption>
+		</figure></li>
+	</ul>
+</article>
+
+<article id="antipix">
+	<header>
+		<h1>Antipixel Buttons</h1>
+		<p>sometimes known as "brilliant buttons"</p>
+	</header>
+	<h2>80x15</h2>
+	<ul class="img-grid hover-zoom img-capts">
+		<li><figure>
+			<img src="/assets/images/antipix/aus.png"
+				class="btn-80x15"
+				alt="australian antipixel icon"/>
+			<figcaption class="img-caption">
+				<a href="https://creativecommons.org/mission/downloads/"
+				class="src v"></a>
+			</figcaption>
+		</figure></li>
+		<li><figure>
+			<img src="/assets/images/antipix/cc-by-sa.png"
+				class="btn-80x15"
+				title="nominally"
+				alt="cc-by-sa antipixel icon"/>
+			<figcaption class="img-caption">
+				<a href="https://creativecommons.org/mission/downloads/"
+				class="src v"></a>
+			</figcaption>
+		</figure></li>
+		<li><figure>
+			<img src="/assets/images/antipix/gb.png"
+				class="btn-80x15"
+				alt="made in gb antipixel icon"
+				data-img-src="~zeus" />
+			<figcaption class="img-caption">
+				<a class="src z"></a>
+			</figcaption>
+		</figure></li>
+		<li><figure>
+			<img src="/assets/images/antipix/hand-coded.png"
+				class="btn-80x15"
+				alt="hand coded antipixel icon"
+				data-img-src="~zeus" />
+			<figcaption class="img-caption">
+				<a class="src z"></a>
+			</figcaption>
+		</figure></li>
+		<li><figure>
+			<img src="/assets/images/antipix/hand-coded-sublime.png"
+				class="btn-80x15"
+				alt="hand coded (sublime text) antipixel icon"
+				data-img-src="~zeus" />
+			<figcaption class="img-caption">
+				<a class="src z"></a>
+			</figcaption>
+		</figure></li>
+		<li><figure>
+			<img src="/assets/images/antipix/keter.png"
+				class="btn-80x15"
+				alt="scp object class: keter antipixel icon"
+				data-img-src="~zeus" />
+			<figcaption class="img-caption">
+				<a class="src z"></a>
+				{{ page.sep }}
+				<a class="i"
+					href="https://docs.google.com/spreadsheets/d/16d4J96iM-Fo38UR4IOe58AywEJMuw-y59lXdv5EXcaI/edit?gid=1168850417#gid=1168850417&range=B471"></a>
+			</figcaption>
+		</figure></li>
+		<li><figure>
+			<img src="/assets/images/antipix/lgbt.png"
+				class="btn-80x15"
+				alt="lgbt+ friendly antipixel icon"
+				data-img-src="~zeus" />
+			<figcaption class="img-caption">
+				<a class="src z"></a>
+			</figcaption>
+		</figure></li>
+		<li><figure>
+			<img src="/assets/images/antipix/live.png"
+				class="btn-80x15 anim"
+				alt="'live' ticker antipixel icon" />
+			<figcaption class="img-caption">
+				<a class="src"
+					href="http://news.bbc.co.uk/1/hi/technology/7163547.stm"></a>
+			</figcaption>
+		</figure></li>
+		<li><figure>
+			<img src="/assets/images/antipix/not-found.png"
+				class="btn-80x15"
+				alt="404 not found antipixel icon"
+				data-img-src="https://web.badges.world/" />
+			<figcaption class="img-caption">
+				<a class="src" href="https://web.badges.world/"></a>
+			</figcaption>
+		</figure></li>
+		<li><figure>
+			<img src="/assets/images/antipix/open.png"
+				class="btn-80x15 smooth-zoom"
+				alt="open 24 hours antipixel icon"
+				data-img-src="~zeus" />
+			<figcaption class="img-caption">
+				<a class="src z"></a>
+			</figcaption>
+		</figure></li>
+		<li><figure>
+			<img src="/assets/images/antipix/pc-compat.png"
+				class="btn-80x15 smooth-zoom"
+				alt="ibm-pc compatible antipixel icon"
+				data-img-src="~zeus" />
+			<figcaption class="img-caption">
+				<a class="src z"></a>
+			</figcaption>
+		</figure></li>
+		<li><figure>
+			<img src="/assets/images/antipix/popups.png"
+				class="btn-80x15"
+				alt="no popups antipixel icon"
+				data-img-src="https://web.badges.world/" />
+			<figcaption class="img-caption">
+				<a class="src" href="https://web.badges.world/"></a>
+			</figcaption>
+		</figure></li>
+		<li><figure>
+			<img src="/assets/images/antipix/save.png"
+				class="btn-80x15"
+				alt="save as antipixel icon"
+				data-img-src="https://newlambda.neocities.org/stuff/graphics/button.html" />
+			<figcaption class="img-caption">
+				<a class="src" href="https://newlambda.neocities.org/stuff/graphics/button.html"></a>
+			</figcaption>
+		</figure></li>
+		<li><figure>
+			<img src="/assets/images/antipix/slava-ukraini.png"
+				class="btn-80x15"
+				alt="слава україні antipixel icon"
+				data-img-src="~zeus" />
+			<figcaption class="img-caption">
+				<a class="src z"></a>
+			</figcaption>
+		</figure></li>
+		<li><figure>
+			<img src="/assets/images/antipix/tea.png"
+				class="btn-80x15"
+				alt="tea powered antipixel icon"
+				data-img-src="https://keysklubhouse.neocities.org/home.htm" />
+			<figcaption class="img-caption">
+				<a class="src"
+					href="https://keysklubhouse.neocities.org/home.htm"></a>
+			</figcaption>
+		</figure></li>
+		<li><figure>
+			<img src="/assets/images/antipix/terra.png"
+				class="btn-80x15"
+				alt="terran (cadle's flag of earth) antipixel icon"
+				data-img-src="~zeus" />
+			<figcaption class="img-caption">
+				<a class="src z"></a>
+			</figcaption>
+		</figure></li>
+		<li><figure>
+			<img src="/assets/images/antipix/terra-aqua.png"
+				class="btn-80x15"
+				alt="terran (cadle's flag of earth) antipixel icon"
+				data-img-src="~zeus" />
+			<figcaption class="img-caption">
+				<a class="src z"></a>
+			</figcaption>
+		</figure></li>
+		<li><figure>
+			<img src="/assets/images/antipix/trans.png"
+				class="btn-80x15"
+				alt="trans rights antipixel icon"
+				data-img-src="~zeus" />
+			<figcaption class="img-caption">
+				<a class="src z"></a>
+			</figcaption>
+		</figure></li>
+	</ul>
+</article>
+
+<article id="other">
+	<header>
+		<h1>Other Art</h1>
+		<span>various images i've found around the web that fit no other page</span>
+	</header>
+	<ul class="img-grid img-capts">
+		<li><figure>
+			<a>
+				<img src="/assets/images/gallery/atari-firefox.jpg"
+					alt="firefox: a laservideo programme"
+					data-img-src="~zeus" />
+			</a>
+			<figcaption class="img-caption">
+				made by me, from an atari firefox poster. feel free to use it
+				<br />
+				<a href="/assets/images/gallery/atari-firefox.png">png ver.</a>
+				{{ page.sep }}
+				<a href="https://www.arcade-museum.com/Videogame/firefox/">info</a>
+			</figcaption>
+		</figure></li>
+		<li><figure>
+			<a>
+				<img src="/assets/images/gallery/draygon.png"
+					alt="samus aran and draygon animation" />
+			</a>
+			<figcaption class="img-caption">
+				<a href="https://www.deviantart.com/moonshen/art/Abyssal-matriarch-791714139">
+					"Abyssal
 				</a>
-				<figcaption class="img-caption">
-					made by me, from an atari firefox poster. feel free to use it (to
-					promote firefox, i guess)
-					<br />
-					<a href="/assets/images/gallery/atari-firefox.png">png ver.</a>
-					{{ page.sep }}
-					<a href="https://www.arcade-museum.com/Videogame/firefox/">info</a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a>
-					<img src="/assets/images/gallery/draygon.png"
-						alt="samus aran and draygon animation" />
+				<a href="https://cara.app/post/5b00fc96-1d20-4cd4-8370-78cbb658796e">
+					Matriarch"
 				</a>
-				<figcaption class="img-caption">
-					<a href="https://www.deviantart.com/moonshen/art/Abyssal-matriarch-791714139">
-						"Abyssal
-					</a>
-					<a href="https://cara.app/post/5b00fc96-1d20-4cd4-8370-78cbb658796e">
-						Matriarch"
-					</a>
-					<a href="https://www.tumblr.com/moonshen89/787362982161268736/i-still-remember-the-chills-when-i-met-this-boss">
-						by Moonshen
-					</a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a>
-					<img src="/assets/images/gallery/hydrabay.png"
-						alt="piratebay 'hydra network' icon" />
+				<a href="https://www.tumblr.com/moonshen89/787362982161268736/i-still-remember-the-chills-when-i-met-this-boss">
+					by Moonshen
 				</a>
-				<figcaption class="img-caption">
-					<a href="https://10kb.neocities.org/gallery/0019.html">
-						art under 10kb
-					</a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="/assets/images/other/free-internet-hover.png">
-					<img id="free-internet" src="/assets/images/other/free-internet.png"
-						alt="you can watch anything! anywhere! anytime! a free internet!! poster,
-							but on hover it shows various warnings about corporations deleting content"
-						style="---hover-src: url('/assets/images/other/free-internet-hover.png');">
+			</figcaption>
+		</figure></li>
+		<li><figure>
+			<a>
+				<img src="/assets/images/gallery/hydrabay.png"
+					alt="piratebay 'hydra network' icon" />
+			</a>
+			<figcaption class="img-caption">
+				<a href="https://10kb.neocities.org/gallery/0019.html">
+					art under 10kb
 				</a>
-				<figcaption class="img-caption">
-					<a href="https://ierospit.tumblr.com/post/717572511827722240/in-light-of-the-news-from-google-about-youtube-i">
-						ierospit on tumblr
-					</a>
-				</figcaption>
-			</figure></li>
-			<li><figure>
-				<a>
-					<img src="/assets/images/gallery/snowmobiles.png"
-						alt="various images of snowmobiles" />
+			</figcaption>
+		</figure></li>
+		<li><figure>
+			<a href="/assets/images/other/free-internet-hover.png">
+				<img id="free-internet" src="/assets/images/other/free-internet.png"
+					alt="you can watch anything! anywhere! anytime! a free internet!! poster,
+						but on hover it shows various warnings about corporations deleting content"
+					style="---hover-src: url('/assets/images/other/free-internet-hover.png');">
+			</a>
+			<figcaption class="img-caption">
+				<a href="https://ierospit.tumblr.com/post/717572511827722240/in-light-of-the-news-from-google-about-youtube-i">
+					ierospit on tumblr
 				</a>
-				<figcaption class="img-caption">
-					<a href="https://web.archive.org/web/20091027042201/http://geocities.com/thinksnowmancelona/">
-						geocities source
-					</a>
-				</figcaption>
-			</figure></li>
-		</ul>
-	</div>
-</div>
+			</figcaption>
+		</figure></li>
+		<li><figure>
+			<a>
+				<img src="/assets/images/gallery/snowmobiles.png"
+					alt="various images of snowmobiles" />
+			</a>
+			<figcaption class="img-caption">
+				<a href="https://web.archive.org/web/20091027042201/http://geocities.com/thinksnowmancelona/">
+					geocities source
+				</a>
+			</figcaption>
+		</figure></li>
+	</ul>
+</article>
