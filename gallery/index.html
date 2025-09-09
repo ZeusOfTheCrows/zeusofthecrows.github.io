@@ -774,39 +774,39 @@ edit-date: 2025-09-07
 	</p>
 	<h2>99x56</h2>
 	<ul class="img-grid hover-zoom img-capts">
-		{% for item in site.data.gallery-stamps %}
-		{% if item.image and item.res == nil %}
+		{% for image in site.data.gallery-stamps %}
+		{% if image.url and image.res == nil %}
 		<li><figure>
-			{% if item.lnk-url != nil %}
-			<a href="{{ item.lnk-url }}">
+			{% if image.lnk-url != nil %}
+			<a href="{{ image.lnk-url }}">
 			{% endif %}
-			<img src="/assets/images/stamps/{{ item.image }}.png"
-				{% if item.title != nil %}
-				title="{{ item.title }}"
+			<img src="/assets/images/stamps/{{ image.url }}.png"
+				{% if image.title != nil %}
+				title="{{ image.title }}"
 				{% endif %}
-				class="stamp-99x56 {% if item.smooth %}smooth-zoom{% endif %}
-					{% if item.anim %}anim{% endif %}"
-				alt="{{ item.alt }}" />
-			{% if item.lnk-url != nil %}
+				class="stamp-99x56 {% if image.smooth %}smooth-zoom{% endif %}
+					{% if image.anim %}anim{% endif %}"
+				alt="{{ image.alt }}" />
+			{% if image.lnk-url != nil %}
 			</a>
 			{% endif %}
 			<figcaption class="img-caption">
-				{% if item.src-url != nil %}
-				<a class="src {{ item.src }}"
-					href="{{ item.src-url }}"></a>
-				{% elsif item.src == "s" %}
+				{% if image.src-url != nil %}
+				<a class="src {{ image.src }}"
+					href="{{ image.src-url }}"></a>
+				{% elsif image.src == "s" %}
 				<a class="src z"
-					href="/assets/images/stamps/{{ item.image }}.ase"></a>
+					href="/assets/images/stamps/{{ image.url }}.ase"></a>
 				{% else %}
-				<a class="src {{ item.src }}"></a>
+				<a class="src {{ image.src }}"></a>
 				{% endif %}
-				{% if item.ins-url != nil %}
+				{% if image.ins-url != nil %}
 				{{ page.sep }}
 				<a class="i"
-				{% if item.ins-ttl != nil %}
-					title="{{ item.ins-ttl }}"
+				{% if image.ins-ttl != nil %}
+					title="{{ image.ins-ttl }}"
 				{% endif %}
-					href="{{ item.ins-url }}"></a>
+					href="{{ image.ins-url }}"></a>
 				{% endif %}
 			</figcaption>
 		</figure></li>
@@ -816,39 +816,80 @@ edit-date: 2025-09-07
 
 	<h2>Other</h2>
 	<ul class="img-grid hover-zoom img-capts">
-		{% for item in site.data.gallery-stamps %}
-		{% if item.image and item.res == "other" %}
+		{% for image in site.data.gallery-stamps %}
+		{% if image.url and image.res == "other" %}
 		<li><figure>
-			{% if item.lnk-url != nil %}
-			<a href="{{ item.lnk-url }}">
+			{% if image.lnk-url != nil %}
+			<a href="{{ image.lnk-url }}">
 			{% endif %}
-			<img src="/assets/images/stamps/{{ item.image }}.png"
-				{% if item.title != nil %}
-				title="{{ item.title }}"
+			<img src="/assets/images/stamps/{{ image.url }}.png"
+				{% if image.title != nil %}
+				title="{{ image.title }}"
 				{% endif %}
-				class="{% if item.smooth %}smooth-zoom{% else %}pixel-art{% endif %}
-					{% if item.anim %}anim{% endif %}"
-				alt="{{ item.alt }}" />
-			{% if item.lnk-url != nil %}
+				class="{% if image.smooth %}smooth-zoom{% else %}pixel-art{% endif %}
+					{% if image.anim %}anim{% endif %}"
+				alt="{{ image.alt }}" />
+			{% if image.lnk-url != nil %}
 			</a>
 			{% endif %}
 			<figcaption class="img-caption">
-				{% if item.src-url != nil %}
-				<a class="src {{ item.src }}"
-					href="{{ item.src-url }}"></a>
-				{% elsif item.src == "s" %}
+				{% if image.src-url != nil %}
+				<a class="src {{ image.src }}"
+					href="{{ image.src-url }}"></a>
+				{% elsif image.src == "s" %}
 				<a class="src z"
-					href="/assets/images/stamps/{{ item.image }}.ase"></a>
+					href="/assets/images/stamps/{{ image.url }}.ase"></a>
 				{% else %}
-				<a class="src {{ item.src }}"></a>
+				<a class="src {{ image.src }}"></a>
 				{% endif %}
-				{% if item.ins-url != nil %}
+				{% if image.ins-url != nil %}
 				{{ page.sep }}
 				<a class="i"
-				{% if item.ins-ttl != nil %}
-					title="{{ item.ins-ttl }}"
+				{% if image.ins-ttl != nil %}
+					title="{{ image.ins-ttl }}"
 				{% endif %}
-					href="{{ item.ins-url }}"></a>
+					href="{{ image.ins-url }}"></a>
+				{% endif %}
+			</figcaption>
+		</figure></li>
+		{% endif %}
+		{% endfor %}
+	</ul>
+
+	<ul class="img-grid hover-zoom img-capts">
+		{% for images in site.data.gallery-stamps %}
+		{% if image.url and image.res == "other" %}
+		<li><figure>
+			{% if image.lnk-url != nil %}
+			<a href="{{ image.lnk-url }}">
+			{% endif %}
+			<img src="/assets/images/stamps/{{ image.url }}.png"
+				{% if image.title != nil %}
+				title="{{ image.title }}"
+				{% endif %}
+				class="{% if image.smooth %}smooth-zoom{% else %}pixel-art{% endif %}
+					{% if image.anim %}anim{% endif %}"
+				alt="{{ image.alt }}" />
+			{% if image.lnk-url != nil %}
+			</a>
+			{% endif %}
+			<figcaption class="img-caption">
+				{% if image.src-url != nil %}
+				<a class="src {{ image.src }}"
+					href="{{ image.src-url }}"></a>
+				{% elsif image.src == "s" %}
+				<a class="src z"
+					href="/assets/images/stamps/{{ image.url }}.ase"></a>
+				{% else %}
+				<a class="src {{ image.src }}"></a>
+				{% endif %}
+				{% if image.ins-url != nil %}
+				{{ page.sep }}
+				<a class="i"
+				{% if image.ins-ttl != nil %}
+					title="{{ image.ins-ttl }}"
+				{% endif %}
+					href="{{ image.ins-url }}"></a>
 				{% endif %}
 			</figcaption>
 		</figure></li>
@@ -863,31 +904,39 @@ edit-date: 2025-09-07
 		<span>fanlisting codes</span>
 	</header>
 	<ul class="img-grid hover-zoom img-capts">
-		{% for item in site.data.gallery-stamps %}
-		{% if item.image != nil and item.res == "100x50" %}
+		{% for image in site.data.gallery-stamps %}
+		{% if image.url and image.res == "100x50" %}
 		<li><figure>
-			{% if item.lnk-url != nil %}
-			<a href="{{ item.lnk-url }}">
+			{% if image.lnk-url != nil %}
+			<a href="{{ image.lnk-url }}">
 			{% endif %}
-			<img src="/assets/images/stamps/fanlistings/{{ item.image }}.png"
-				{% if item.title != nil %}
-				title="{{ item.title }}"
+			<img src="/assets/images/stamps/fanlistings/{{ image.url }}.png"
+				{% if image.title != nil %}
+				title="{{ image.title }}"
 				{% endif %}
-				{% if item.smooth %}
-				class="stamp-100x50 smooth-zoom"
-				{% else %}
-				class="stamp-100x50"
-				{% endif %}
-				alt="{{ item.alt }} fanlisting code" />
-			{% if item.lnk-url != nil %}
+				class="stamp-100x50 {% if image.smooth %}smooth-zoom{% endif %}
+					{% if image.anim %}anim{% endif %}"
+				alt="{{ image.alt }}" />
+			{% if image.lnk-url != nil %}
 			</a>
 			{% endif %}
 			<figcaption class="img-caption">
-				{% if item.src-url != nil %}
-				<a class="src {{ item.src }}"
-					href="{{ item.src-url }}"></a>
+				{% if image.src-url != nil %}
+				<a class="src {{ image.src }}"
+					href="{{ image.src-url }}"></a>
+				{% elsif image.src == "s" %}
+				<a class="src z"
+					href="/assets/images/stamps/{{ image.url }}.ase"></a>
 				{% else %}
-				<a class="src {{ item.src }}"></a>
+				<a class="src {{ image.src }}"></a>
+				{% endif %}
+				{% if image.ins-url != nil %}
+				{{ page.sep }}
+				<a class="i"
+				{% if image.ins-ttl != nil %}
+					title="{{ image.ins-ttl }}"
+				{% endif %}
+					href="{{ image.ins-url }}"></a>
 				{% endif %}
 			</figcaption>
 		</figure></li>

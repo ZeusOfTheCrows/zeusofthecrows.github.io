@@ -281,10 +281,11 @@ body {
 
 html {
 	& ::selection {
-		border-radius: 0.1em; // this doesn't work but it would be nice if it did
-		color: var(--fg-0);
+		// border-radius: 0.1em; // this doesn't work but it would be nice if it did
+		color: var(--bg-0);
 		// doesn't work in ff? even with !important
 		text-decoration-color: var(--bg-0);
+		background-color: var(--strong-accent);
 	}
 
 	/* colour scrollbars with css */

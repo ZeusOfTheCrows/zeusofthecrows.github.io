@@ -149,6 +149,7 @@ main>section>article {
 	& a {
 		position: relative;
 		display: inline-block;
+		font-size: 0;
 
 		&>img {
 			vertical-align: middle;

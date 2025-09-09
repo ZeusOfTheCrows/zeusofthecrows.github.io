@@ -89,11 +89,13 @@ title:
 	<ul id="page-mosaic">
 		<li><a href="/shrines/metroidvanias"
 				style="--hover-img: url('/assets/images/mosaic/mv-hilite.png')">
+			metroidvanias shrine
 			<img src="/assets/images/mosaic/mv.png"
 				alt="MetroidVanias">
 		</a></li>
 		<li><a href="/gallery"
 				style="--hover-img: url('/assets/images/mosaic/gallery-hilite.png')">
+			web pixels gallery
 			<img src="/assets/images/mosaic/gallery.png"
 				alt="MetroidVanias">
 		</a></li>
@@ -114,7 +116,7 @@ title:
 							<ul class="img-grid">
 							{% for image in item.subcontent %}
 								<li>
-									<img src="/assets/images/{{ image.source }}"
+									<img src="/assets/images/{{ image.url }}.png"
 										class="{{ image.type }}{% if image.smooth %} smooth-zoom{% endif %}{% if image.spoiler %} spoiler{% endif %}"
 										alt="{{ image.alt }}" />
 								</li>
@@ -149,9 +151,9 @@ title:
 				alt="napstablook quote 'really not feelin up to it right now. sorry.'"/>
 		</li>
 		<li>
-			<img src="/assets/images/stamps/dos.png"
-				class="stamp-99x56 anim smooth-zoom"
-				alt="dos c: prompt"/>
+			<img src="/assets/images/stamps/test-card-f.png"
+				class="stamp-99x56 smooth-zoom"
+				alt="bbc colour test card f stamp"/>
 		</li>
 		<li>
 			<img src="/assets/images/stamps/dvd.png"

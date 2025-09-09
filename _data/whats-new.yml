@@ -10,156 +10,228 @@
   subtype: images
   subcontent:
     - image:
-      source: stamps/water.png
+      url: stamps/test-card-f
+      type: stamp-99x56
+      smooth: y
+      alt: "bbc colour test card f stamp"
+
+    - image:
+      url: stamps/ukiyonightrain
+      type: stamp-99x56
+      smooth: y
+      alt: "hut with lit windows in the rain stamp"
+
+    - image:
+      url: stamps/touch-digital
+      type: stamp-99x56
+      smooth: y
+      alt: "human hand touching a green wireframe hand stamp"
+
+    - image:
+      url: stamps/seal
+      type: stamp-99x56
+      smooth: y
+      alt: "&quot;seal of approval&quot; stamp"
+
+    - image:
+      url: stamps/comma
+      type: stamp-99x56
+      smooth: y
+      alt: "i support the oxford comma stamp"
+
+    - image:
+      url: stamps/cactus
+      type: stamp-99x56
+      smooth: y
+      alt: "mexican desert cactus stamp"
+
+    - image:
+      url: stamps/canyon
+      type: stamp-99x56
+      smooth: y
+      alt: "mexican desert canyon stamp"
+
+    - image:
+      url: stamps/forest
+      type: stamp-99x56
+      smooth: y
+      alt: "forest stamp"
+
+    - image:
+      url: stamps/glade
+      type: stamp-99x56
+      smooth: y
+      alt: "shaft of light in a glade stamp"
+
+    - image:
+      url: stamps/keyboard
+      type: stamp-99x56
+      smooth: y
+      alt: "plants growing through the gaps of a keyboard stamp"
+
+    - image:
+      url: stamps/town
+      type: stamp-99x56
+      smooth: y
+      alt: "old west style town at night stamp"
+
+    - image:
+      url: stamps/trees
+      type: stamp-99x56
+      smooth: y
+      alt: "misty green trees stamp"
+
+    - image:
+      url: stamps/water
       type: stamp-99x56
       smooth: y
       anim: y
       alt: "water stamp"
 
     - image:
-      source: stamps/3ds.png
+      url: stamps/3ds
       type: stamp-99x56
       smooth: y
       anim: y
       alt: "3ds game launch splash screen stamp"
 
     - image:
-      source: stamps/kirbs.png
+      url: stamps/kirbs
       type: stamp-99x56
       anim: y
       alt: "redrawn kirby's adventure stamp"
 
     - image:
-      source: stamps/water2.png
+      url: stamps/water2
       type: stamp-99x56
       smooth: y
       alt: "water stamp"
 
     - image:
-      source: stamps/machine.png
+      url: stamps/machine
       type: stamp-99x56
       smooth: y
       alt: "machine stamp"
 
     - image:
-      source: stamps/cat.png
+      url: stamps/cat
       type: stamp-99x56
       smooth: y
       alt: "nyan cat stamp"
 
     - image:
-      source: stamps/nya.gif.png
+      url: stamps/nya.gif
       type: stamp-99x56
       smooth: y
       alt: "nyan cat ms paint stamp"
 
     - image:
-      source: stamps/amnesia.png
+      url: stamps/amnesia
       type: stamp-99x56
       alt: "amnesia stamp"
 
     - image:
-      source: stamps/purple-trees.png
+      url: stamps/purple-trees
       type: stamp-99x56
       alt: "amnesia stamp"
 
     - image:
-      source: stamps/purple-sun.png
+      url: stamps/purple-sun
       type: stamp-99x56
       alt: "amnesia stamp"
 
     - image:
-      source: stamps/hilo.png
+      url: stamps/hilo
       type: stamp-99x56
       alt: "amnesia stamp"
 
     - image:
-      source: stamps/dont-touch-me.png
+      url: stamps/dont-touch-me
       type: stamp-99x56
       alt: "amnesia stamp"
 
     - image:
-      source: stamps/kirbs.png
+      url: stamps/kirbs
       type: stamp-99x56
       alt: "kirby's adventure intro &quot;first you draw a circle&quot; stamp"
 
     - image:
-      source: stamps/boot.png
+      url: stamps/boot
       type: stamp-99x56
       alt: "nokia 3310 boot logo stamp"
 
     - image:
-      source: stamps/menu.png
+      url: stamps/menu
       type: stamp-99x56
       alt: "nokia 3310 home menu stamp"
 
     - image:
-      source: stamps/snake.png
+      url: stamps/snake
       type: stamp-99x56
       alt: "nokia 3310 snake xenzia game stamp"
 
     - image:
-      source: stamps/invaders.png
+      url: stamps/invaders
       type: stamp-99x56
       alt: "space invaders stamp"
 
     - image:
-      source: stamps/waste.png
+      url: stamps/waste
       type: stamp-99x56
       alt: "&quot;This stamp is a waste of 587 bytes&quot; stamp"
 
     - image:
-      source: stamps/sun.png
+      url: stamps/sun
       type: stamp-99x56
       alt: "&quot;the sun is a deadly laser&quot; stamp"
 
     - image:
-      source: stamps/682.png
+      url: stamps/682
       type: stamp-99x56
       alt: "scp-682 stamp"
 
     - image:
-      source: stamps/deer.png
+      url: stamps/deer
       type: stamp-99x56
       alt: "deer with glowing eyes stamp"
 
     - image:
-      source: stamps/laptop-scp.png
+      url: stamps/laptop-scp
       type: stamp-99x56
       alt: "laptop with scp logo stamp"
 
     - image:
-      source: stamps/ice-kirbs.png
+      url: stamps/ice-kirbs
       type: stamp-99x56
       alt: "ice kirby skating stamp"
 
     - image:
-      source: stamps/lttp.png
+      url: stamps/lttp
       type: stamp-99x56
       alt: "lttp link running stamp"
 
     - image:
-      source: stamps/multi-kirbs.png
+      url: stamps/multi-kirbs
       type: stamp-99x56
       alt: "multiple kirbys stamp"
 
     - image:
-      source: stamps/pentacle.png
+      url: stamps/pentacle
       type: stamp-99x56
       alt: "satanic pentacle stamp"
 
     - image:
-      source: stamps/sword-kirbs.png
+      url: stamps/sword-kirbs
       type: stamp-99x56
       alt: "sword kirby slashing stamp"
 
     - image:
-      source: stamps/thomas.png
+      url: stamps/thomas
       type: stamp-99x56
       alt: "thomas was alone stamp"
 
     - image:
-      source: stamps/defender.png
+      url: stamps/defender
       type: stamp
       alt: "williams defender stamp"
 
@@ -167,102 +239,102 @@
   subtype: images
   subcontent:
     - image:
-      source: buttons/taskbar/url.png
+      url: buttons/taskbar/url
       type: btn-88x31
       alt: "a url is for life....not just for christmas button"
 
     - image:
-      source: buttons/brands/kate-smooth.png
+      url: buttons/brands/kate-smooth
       type: btn-88x31
       alt: "written in kate text editor button"
 
     - image:
-      source: buttons/brands/kate.png
+      url: buttons/brands/kate
       type: btn-88x31
       alt: "written in kate text editor (pixelly icon) button"
 
     - image:
-      source: buttons/brands/kate-alt.png
+      url: buttons/brands/kate-alt
       type: btn-88x31
       alt: "alternative kate text editor button"
 
     - image:
-      source: buttons/other/vhs.png
+      url: buttons/other/vhs
       type: btn-88x31
       alt: "vhs button"
 
     - image:
-      source: buttons/brands/gog2.png
+      url: buttons/brands/gog2
       type: btn-88x31
       alt: "gog button"
 
     - image:
-      source: buttons/brands/palemoon.png
+      url: buttons/brands/palemoon
       type: btn-88x31
       alt: "pale moon button"
 
     - image:
-      source: buttons/brands/scp.png
+      url: buttons/brands/scp
       type: btn-88x31
       alt: "scp button"
 
     - image:
-      source: buttons/brands/sun.png
+      url: buttons/brands/sun
       type: btn-88x31
       alt: "sun microsystems button"
 
     - image:
-      source: buttons/brands/winamp.png
+      url: buttons/brands/winamp
       type: btn-88x31
       alt: "winamp button"
 
     - image:
-      source: buttons/games/castleofdracula.png
+      url: buttons/games/castleofdracula
       type: btn-88x31
       alt: "castle of dracula button"
 
     - image:
-      source: buttons/games/romhack-plaza.png
+      url: buttons/games/romhack-plaza
       type: btn-88x31
       alt: "romhack plaza button"
 
     - image:
-      source: buttons/music/18-carat-affair.png
+      url: buttons/music/18-carat-affair
       type: btn-88x31
       alt: "18 carat affair button"
 
     - image:
-      source: buttons/music/darksleep.png
+      url: buttons/music/darksleep
       type: btn-88x31
       alt: "darksleep button"
 
     - image:
-      source: buttons/music/equip.png
+      url: buttons/music/equip
       type: btn-88x31
       alt: "equip button"
 
     - image:
-      source: buttons/music/lost-angles.png
+      url: buttons/music/lost-angles
       type: btn-88x31
       alt: "lost angles button"
 
     - image:
-      source: buttons/music/my-pet-flamingo.png
+      url: buttons/music/my-pet-flamingo
       type: btn-88x31
       alt: "my pet flamingo button"
 
     - image:
-      source: buttons/brands/dr-who.png
+      url: buttons/brands/dr-who
       type: btn-88x31
       alt: "doctor who button"
 
     - image:
-      source: buttons/other/bad-apple.png
+      url: buttons/other/bad-apple
       type: btn-88x31
       alt: "bad apple button"
 
     - image:
-      source: buttons/taskbar/best-viewed-with.png
+      url: buttons/taskbar/best-viewed-with
       type: btn-88x31
       alt: "page best viewed with button"
 
@@ -270,17 +342,17 @@
   subtype: images
   subcontent:
     - image:
-      source: antipix/hand-coded.png
+      url: antipix/hand-coded
       type: btn-150x15
       alt: "new hand-coded antipix icon"
 
     - image:
-      source: antipix/keter.png
+      url: antipix/keter
       type: btn-150x15
       alt: "object class: keter antipix icon"
 
     - image:
-      source: antipix/aus.png
+      url: antipix/aus
       type: btn-150x15
       alt: "australian antipix icon"
 
@@ -289,37 +361,37 @@
   subtype: images
   subcontent:
     - image:
-      source: blinkies/end-is-never.png
+      url: blinkies/end-is-never
       type: btn-150x20
       alt: "the end is never blinkie"
 
     - image:
-      source: blinkies/broken.png
+      url: blinkies/broken
       type: btn-150x20
       alt: "broken blinkie"
 
     - image:
-      source: blinkies/doing-my-best.png
+      url: blinkies/doing-my-best
       type: btn-150x20
       alt: "doing my best blinkie"
 
     - image:
-      source: blinkies/betelgeuse.png
+      url: blinkies/betelgeuse
       type: btn-150x20
       alt: "beetlejuice blinkie"
 
     - image:
-      source: blinkies/born-to-be-mild.png
+      url: blinkies/born-to-be-mild
       type: btn-150x20
       alt: "born to be mild blinkie"
 
     - image:
-      source: blinkies/margaritaville.png
+      url: blinkies/margaritaville
       type: btn-150x20
       alt: "wasting away again in margaritaville blinkie"
 
     - image:
-      source: blinkies/escape.png
+      url: blinkies/escape
       type: btn-150x20
       alt: "i used to contain myself but i escaped blinkie"
 
@@ -327,17 +399,17 @@
   subtype: images
   subcontent:
     - image:
-      source: stamps/fanlistings/3ds.png
+      url: stamps/fanlistings/3ds
       type: stamp-100x50
       alt: "nintendo 3ds fanlisting code"
 
     - image:
-      source: stamps/fanlistings/snow.png
+      url: stamps/fanlistings/snow
       type: stamp-100x50
       alt: "snow fanlisting code"
 
     - image:
-      source: stamps/fanlistings/mint.png
+      url: stamps/fanlistings/mint
       type: stamp-100x50
       alt: "linux mint fanlisting code"
 

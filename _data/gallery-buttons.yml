@@ -112,14 +112,6 @@
   src: v
   cat: a
 
-- image: "bookmarks/atomic-age"
-  smooth: y
-  alt: "atomic age network webring"
-  lnk-url: "https://web.archive.org/web/20240516134558/https://atomic-age-network.netlify.app/"
-  src-url: "https://capstasher.neocities.org/"
-  src: v
-  cat: a
-
 - image: "brands/apng"
   anim: y
   alt: "[animated] png now button"
@@ -299,25 +291,6 @@
   alt: "warning: page contains javascript button"
   src: z
   cat: a
-
-- image: "kate-smooth.png"
-  alt: "written in kate text editor button"
-  lnk-url: "https://kate-editor.org/en-gb/"
-  src: z
-  cat: b
-
-- image: "kate-alt.png"
-  alt: "alternative kate text editor button"
-  lnk-url: "https://kate-editor.org/en-gb/"
-  src-lnk: "https://drakul78.neocities.org/links"
-  src: z
-  cat: b
-
-- image: "kate.png"
-  alt: "written in kate text editor (pixelly icon) button"
-  lnk-url: "https://kate-editor.org/en-gb/"
-  src: z
-  cat: b
 
 - image: "music/licence"
   alt: "ppl/prs licensed to play recorded music button"
@@ -950,6 +923,25 @@
   anim: y
   lnk-url: "https://www.abc.net.au/triplej/"
   src: u
+  cat: b
+
+- image: "kate-smooth"
+  alt: "written in kate text editor button"
+  lnk-url: "https://kate-editor.org/en-gb/"
+  src: z
+  cat: b
+
+- image: "kate-alt"
+  alt: "alternative kate text editor button"
+  lnk-url: "https://kate-editor.org/en-gb/"
+  src-lnk: "https://drakul78.neocities.org/links"
+  src: z
+  cat: b
+
+- image: "kate"
+  alt: "written in kate text editor (pixelly icon) button"
+  lnk-url: "https://kate-editor.org/en-gb/"
+  src: z
   cat: b
 
 - image: "kde-now"
