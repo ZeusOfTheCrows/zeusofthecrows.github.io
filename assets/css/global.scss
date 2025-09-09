@@ -23,17 +23,18 @@
 	--d-aqa: #689D6A;
 	--d-org: #D65D0E;
 
-	--dark-0: #282828;
-	--dark-1: #3C3836;
-	--dark-2: #504945;
-	--dark-3: #665C54;
-	--dark-4: #7C6F64;
-	--dark-5: #928374;
-	--lite-4: #A89984;
-	--lite-3: #BDAE93;
-	--lite-2: #D5C4A1;
-	--lite-1: #EBDBB2;
-	--lite-0: #FBF1C7;
+	--bg-0: #282828;
+	--bg-1: #3C3836;
+	--bg-2: #504945;
+	--bg-3: #665C54;
+	--bg-4: #7C6F64;
+	--bg-5: #928374;
+
+	--fg-4: #A89984;
+	--fg-3: #BDAE93;
+	--fg-2: #D5C4A1;
+	--fg-1: #EBDBB2;
+	--fg-0: #FBF1C7;
 
 	--s-red: #FB4943;
 	--s-grn: #B8BB26;
@@ -49,18 +50,18 @@
 	:root {
 		// --is-light-mode: true;  // placeholder idea
 
-		--bgd-0: #FBF1C7;
-		--bgd-1: #EBDBB2;
-		--bgd-2: #D5C4A1;
-		--bgd-3: #BDAE93;
-		--bgd-4: #A89984;
+		--bg-0: #FBF1C7;
+		--bg-1: #EBDBB2;
+		--bg-2: #D5C4A1;
+		--bg-3: #BDAE93;
+		--bg-4: #A89984;
+		--bg-5: #928374;
 
-		--bgd-5: #928374;
-		--txt-4: #7C6F64;
-		--txt-3: #665C54;
-		--txt-2: #504945;
-		--txt-1: #3C3836;
-		--txt-0: #282828;
+		--fg-4: #7C6F64;
+		--fg-3: #665C54;
+		--fg-2: #504945;
+		--fg-1: #3C3836;
+		--fg-0: #282828;
 
 		--s-red: #9D0006;
 		--s-grn: #79740E;
@@ -90,17 +91,17 @@ body:has(option[value="gb"]:checked) {
 	--s-aqa: #34E2E2;
 	--s-org: #F07746;
 
-	--bgd-0: #474640;
-	--bgd-1: #4E4C46;
-	--bgd-2: #5A5850;
-	--bgd-3: #4F4D47;
-	--bgd-4: #595854;
-	--bgd-5: #616254;
-	--txt-4: #969693;
-	--txt-3: #BAB8B2;
-	--txt-2: #DFDBD2;
-	--txt-1: #EBEBEB;
-	--txt-0: #FFFFFF;
+	--bg-0: #474640;
+	--bg-1: #4E4C46;
+	--bg-2: #5A5850;
+	--bg-3: #4F4D47;
+	--bg-4: #595854;
+	--bg-5: #616254;
+	--fg-4: #969693;
+	--fg-3: #BAB8B2;
+	--fg-2: #DFDBD2;
+	--fg-1: #EBEBEB;
+	--fg-0: #FFFFFF;
 }
 /* ========================== accessibility styles ========================== */
 
@@ -281,9 +282,9 @@ body {
 html {
 	& ::selection {
 		border-radius: 0.1em; // this doesn't work but it would be nice if it did
-		color: var(--txt-0);
+		color: var(--fg-0);
 		// doesn't work in ff? even with !important
-		text-decoration-color: var(--bgd-0);
+		text-decoration-color: var(--bg-0);
 	}
 
 	/* colour scrollbars with css */
@@ -304,7 +305,7 @@ html {
 }
 
 body {
-	// color: var(--txt-1);
+	// color: var(--fg-1);
 	font-family: sans-serif;
 	line-height: 1.5;
 	tab-size: 2;
@@ -335,8 +336,8 @@ h6 { font-size: 1.2em; }*/
 /*
 hr {
 	border: 1px solid transparent;
-	border-top-color: var(--bgd-0);
-	border-bottom-color: var(--bgd-5);
+	border-top-color: var(--bg-0);
+	border-bottom-color: var(--bg-5);
 	margin-inline: 1em;
 }*/
 
@@ -359,7 +360,7 @@ blockquote {
 		display: block;
 		z-index: -1;  // hide behind text
 
-		color: var(--bgd-3);
+		color: var(--bg-3);
 		top: -0.2em;  // or top: 0.3em;, needs further testing
 		left: 0em;
 		font-size: 8em;
@@ -379,7 +380,7 @@ mark {
 	padding-right: 0.5ch;
 	border-radius: 0.1em;
 	background-color: var(--s-ylw);
-	color: var(--bgd-0);
+	color: var(--bg-0);
 }
 del {
 	text-decoration-color: var(--s-red);
@@ -389,7 +390,7 @@ ins {
 }
 
 // kbd {  // keyboard (ctrl+f)
-// 	background-color: var(--bgd-3);
+// 	background-color: var(--bg-3);
 // 	padding-inline: 0.3em;
 // 	padding-top: 0.3em;
 // 	border-radius: 0.2em;
@@ -472,7 +473,7 @@ samp,
 	tab-size: 0;
 }
 code {  // code formating below
-	font-family: var(--fnt-code);
+	font-family: var(--fnt-code, monospace);
 }
 
 .spoiler {
@@ -513,7 +514,7 @@ abbr {
 		padding: 2px;
 		border-radius: 2px;
 		background-color: var(--s-blu);
-		color: var(--bgd-0);
+		color: var(--bg-0);
 	}
 }
 
@@ -536,7 +537,7 @@ code {
 		white-space: pre;
 		margin: 0.5em;
 		padding: 0.5em;
-		background: var(--bgd-0);
+		background: var(--bg-0);
 	}
 	& .obj {  // object
 		color: var(--s-red);
@@ -674,13 +675,13 @@ img.smooth-zoom {
 .indent,
 .copy-all,
 textarea {
-	background: var(--bgd-0);
+	background: var(--bg-0);
 	border: 1px solid var(--brdr-dark);
 	border-radius: 5px;
 	box-shadow: inset 0px 0px 4px -2px #000;
 }
 textarea {
-	color: var(--txt-3);
+	color: var(--fg-3);
 	padding: 1em 1ch;
 }
 /* https://codersblock.com/blog/the-surprising-things-that-css-can-animate/#text-selection-trick */
@@ -851,7 +852,7 @@ body {
 			font-size: 0.5em;
 			width: min-content;
 
-			color: var(--bgd-0);
+			color: var(--bg-0);
 			opacity: 0;
 			transition: opacity 250ms;
 
@@ -897,50 +898,50 @@ body {
 	0% {
 		color: var(--s-org);
 		text-shadow:
-			0 0 var(--shad-size-s, 0) var(--s-org),
-			0 0 var(--shad-size-l, 0) var(--d-org);
+			0 0 var(--shad-size-s, 2px, 0) var(--s-org),
+			0 0 var(--shad-size-l, 24px, 0) var(--d-org);
 	}
 	14% {
 		color: var(--s-ylw);
 		text-shadow:
-			0 0 var(--shad-size-s, 0) var(--s-ylw),
-			0 0 var(--shad-size-l, 0) var(--d-ylw);
+			0 0 var(--shad-size-s, 2px, 0) var(--s-ylw),
+			0 0 var(--shad-size-l, 24px, 0) var(--d-ylw);
 	}
 	29% {
 		color: var(--s-grn);
 		text-shadow:
-			0 0 var(--shad-size-s, 0) var(--s-grn),
-			0 0 var(--shad-size-l, 0) var(--d-grn);
+			0 0 var(--shad-size-s, 2px, 0) var(--s-grn),
+			0 0 var(--shad-size-l, 24px, 0) var(--d-grn);
 	}
 	43% {
 		color: var(--s-aqa);
 		text-shadow:
-			0 0 var(--shad-size-s, 0) var(--s-aqa),
-			0 0 var(--shad-size-l, 0) var(--d-aqa);
+			0 0 var(--shad-size-s, 2px, 0) var(--s-aqa),
+			0 0 var(--shad-size-l, 24px, 0) var(--d-aqa);
 	}
 	57% {
 		color: var(--s-blu);
 		text-shadow:
-			0 0 var(--shad-size-s, 0) var(--s-blu),
-			0 0 var(--shad-size-l, 0) var(--d-blu);
+			0 0 var(--shad-size-s, 2px, 0) var(--s-blu),
+			0 0 var(--shad-size-l, 24px, 0) var(--d-blu);
 	}
 	71% {
 		color: var(--s-ppl);
 		text-shadow:
-			0 0 var(--shad-size-s, 0) var(--s-ppl),
-			0 0 var(--shad-size-l, 0) var(--d-ppl);
+			0 0 var(--shad-size-s, 2px, 0) var(--s-ppl),
+			0 0 var(--shad-size-l, 24px, 0) var(--d-ppl);
 	}
 	86% {
 		color: var(--s-red);
 		text-shadow:
-			0 0 var(--shad-size-s, 0) var(--s-red),
-			0 0 var(--shad-size-l, 0) var(--d-red);
+			0 0 var(--shad-size-s, 2px, 0) var(--s-red),
+			0 0 var(--shad-size-l, 24px, 0) var(--d-red);
 	}
 	100% {
 		color: var(--s-org);
 		text-shadow:
-			0 0 var(--shad-size-s, 0) var(--s-org),
-			0 0 var(--shad-size-l, 0) var(--d-org);
+			0 0 var(--shad-size-s, 2px, 0) var(--s-org),
+			0 0 var(--shad-size-l, 24px, 0) var(--d-org);
 	}
 }
 

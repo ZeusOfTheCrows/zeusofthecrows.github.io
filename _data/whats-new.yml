@@ -288,7 +288,40 @@
 - content: new blinkies have been added to the gallery
   subtype: images
   subcontent:
+    - image:
+      source: blinkies/end-is-never.png
+      type: btn-150x20
+      alt: "the end is never blinkie"
 
+    - image:
+      source: blinkies/broken.png
+      type: btn-150x20
+      alt: "broken blinkie"
+
+    - image:
+      source: blinkies/doing-my-best.png
+      type: btn-150x20
+      alt: "doing my best blinkie"
+
+    - image:
+      source: blinkies/betelgeuse.png
+      type: btn-150x20
+      alt: "beetlejuice blinkie"
+
+    - image:
+      source: blinkies/born-to-be-mild.png
+      type: btn-150x20
+      alt: "born to be mild blinkie"
+
+    - image:
+      source: blinkies/margaritaville.png
+      type: btn-150x20
+      alt: "wasting away again in margaritaville blinkie"
+
+    - image:
+      source: blinkies/escape.png
+      type: btn-150x20
+      alt: "i used to contain myself but i escaped blinkie"
 
 - content: new fanlisting codes have been added
   subtype: images

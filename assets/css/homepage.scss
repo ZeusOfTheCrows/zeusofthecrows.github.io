@@ -84,6 +84,7 @@ body:has(option[value="gb"]:checked) {
 body {
 	--body-hor-offset: 0.8fr;
 	--content-background-radius: 32px;
+	color: var(--fg-0);
 }
 
 
@@ -124,15 +125,22 @@ main>aside {
 	// box-shadow: 4px 4px 8px #00000080, 4px 4px 16px #00000080;
 }
 
+main>section>article {
+	margin-block: 1em;
+}
 
 #page-mosaic {
-
 	padding: 0;
 	text-align: center;
 
 	list-style-type: none;
-	padding: none;
 	display: grid;
+	grid-auto-flow: column;
+	width: max-content;
+	margin-inline: auto;
+	gap: 1ch;
+  border-radius: calc(var(--content-background-radius) / 2);
+  overflow: clip;
 
 	& li {
 		width: min-content;
@@ -141,12 +149,16 @@ main>aside {
 	& a {
 		position: relative;
 		display: inline-block;
+
+		&>img {
+			vertical-align: middle;
+		}
 	}
 
 	& a::before,
 	& a::after {
 		content: "";
-		background: url("/assets/images/shrines/mv/mv-hilite.png");
+		background: var(--hover-img);
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -180,6 +192,8 @@ main>aside {
 	overscroll-behavior: contain;
 	background-color: var(--background-colour);
 	border-radius: calc(var(--content-background-radius) / 2);
+	border: calc(var(--ripple-size) / 2) solid var(--strong-accent);
+	box-sizing: border-box;
 	margin-bottom: 2em;
 	margin-inline: 2ch;
 	position: relative;
@@ -195,8 +209,11 @@ main>aside {
 	}
 	&>h2 {
 		// background-color: color-mix(in lch longer hue, var(--strong-accent), var(--content-background));
-		background-color: var(--background-colour);
-		text-shadow: 0px 0px 4px black;
+		--shad-size-s: 2px;
+		--shad-size-l: 24px;
+		background-color: var(--content-background);
+		border-bottom-left-radius: calc(var(--content-background-radius) / 4);
+		border-bottom-right-radius: calc(var(--content-background-radius) / 4);
 		text-align: center;
 		text-decoration: 5px underline;
 		position: sticky;
@@ -461,12 +478,12 @@ main>aside {
 	& footer {
 		padding: 2px 1ch;
 		text-align: right;
-		color: var(--txt-3);
+		color: var(--fg-3);
 
 		& a {
 			&::before,
 			&::after {
-				color: var(--txt-3);
+				color: var(--fg-3);
 				text-decoration: none;
 				display: inline-block;
 			}

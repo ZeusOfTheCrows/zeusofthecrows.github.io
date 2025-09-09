@@ -18,6 +18,7 @@ title:
 				<span>Welcome to</span> <span>Zeus' Stadt</span>
 			</h1>
 			<p>Tabula Rasa Edition</p>
+			<p>Why look to the future when you can live in the past</p>
 		</header>
 		<p>
 			<em>good</em> morning, <small>good afternoon, and good
@@ -86,16 +87,21 @@ title:
 	</article>
 
 	<ul id="page-mosaic">
-		<li><a href="/shrines/metroidvanias">
-			<img src="/assets/images/shrines/mv/mv.png"
-				data-img-hover="/assets/images/shrines/mv/mv-hilite.png"
+		<li><a href="/shrines/metroidvanias"
+				style="--hover-img: url('/assets/images/mosaic/mv-hilite.png')">
+			<img src="/assets/images/mosaic/mv.png"
+				alt="MetroidVanias">
+		</a></li>
+		<li><a href="/gallery"
+				style="--hover-img: url('/assets/images/mosaic/gallery-hilite.png')">
+			<img src="/assets/images/mosaic/gallery.png"
 				alt="MetroidVanias">
 		</a></li>
 	</ul>
 
 
 	<article id="whats-new">
-		<h2 style="animation: colour-cycle 5s linear infinite;">What's New</h2>
+		<h2 style="animation: colour-cycle-glow 5s linear infinite;">What's New</h2>
 		<ul>
 			{% for item in site.data.whats-new %}
 			<li>
