@@ -15,7 +15,8 @@
 
 # /!\ ztodo: the dimensions aren't applying on svg buttons - maybe raster too?
 
-- image: "taskbar/svg"
+- image:
+  url: "taskbar/svg"
   smooth: y
   anim: y
   alt: "scalable vector graphics now button"
@@ -26,7 +27,8 @@
   ext: svg
   res: inf
 
-- image: "taskbar/svg-ns"
+- image:
+  url: "taskbar/svg-ns"
   smooth: y
   anim: y
   alt: "svg now button"
@@ -36,7 +38,8 @@
   ext: svg
   res: inf
 
-- image: "other/svg-viatrix"
+- image:
+  url: "other/svg-viatrix"
   smooth: y
   alt: "viatrix' svg button"
   lnk-url: "/thoughts#svg"
@@ -45,7 +48,8 @@
   res: inf
   ext: svg
 
-- image: "my-links/zeus-retro"
+- image:
+  url: "my-links/zeus-retro"
   smooth: y
   anim: y
   alt: "animated svg zeus retro button"
@@ -55,7 +59,8 @@
   res: inf
   ext: svg
 
-- image: "my-links/zeus-train"
+- image:
+  url: "my-links/zeus-train"
   smooth: y
   anim: y
   alt: "animated svg zeus zeus125 button"
@@ -64,7 +69,8 @@
   res: inf
   ext: svg
 
-- image: "my-links/zeus-t17"
+- image:
+  url: "my-links/zeus-t17"
   smooth: y
   alt: "animated svg zeus button"
   lnk-url: "/links#my-links"
@@ -72,7 +78,8 @@
   res: inf
   ext: svg
 
-- image: "my-links/zeus-t17-old"
+- image:
+  url: "my-links/zeus-t17-old"
   smooth: y
   alt: "animated svg zeus button"
   lnk-url: "/links#my-links"
@@ -82,19 +89,22 @@
 
 # ============================== AESTHETIC =====================================
 
-- image: "page-info/1080"
+- image:
+  url: "page-info/1080"
   alt: "best viewed 1920×1080 fullHD button"
   src: s
   cat: a
 
-- image: "18-carat-affair"
+- image:
+  url: "18-carat-affair"
   alt: "18 carat affair"
   lnk-url: "https://18carataffair.bandcamp.com/"
   src-url: "https://loa2k.neocities.org/"
   src:
   cat: u
 
-- image: "taskbar/2038"
+- image:
+  url: "taskbar/2038"
   smooth: y
   anim: y
   alt: "are you ready? year 2038 button"
@@ -103,7 +113,8 @@
   src-url: "https://viatrix.is-hella.gay/"
   cat: a
 
-- image: "other/action-fx"
+- image:
+  url: "other/action-fx"
   smooth: y
   anim: y
   alt: "action fx for photoshop button"
@@ -112,7 +123,8 @@
   src: v
   cat: a
 
-- image: "brands/apng"
+- image:
+  url: "brands/apng"
   anim: y
   alt: "[animated] png now button"
   lnk-url: "http://www.libpng.org/pub/png/"
@@ -120,7 +132,8 @@
   src: s
   cat: a
 
-- image: "other/bad-apple"
+- image:
+  url: "other/bad-apple"
   smooth: y
   anim: y
   alt: "bad apple button"
@@ -129,7 +142,8 @@
   src:
   cat: a
 
-- image: "other/bellringer"
+- image:
+  url: "other/bellringer"
   smooth: y
   anim: y
   alt: "bellringer.neocities.org button"
@@ -138,7 +152,8 @@
   src: v
   cat: a
 
-- image: "taskbar/best-viewed-with"
+- image:
+  url: "taskbar/best-viewed-with"
   smooth: y
   anim: y
   alt: "page best viewed with a computer and monitor and a cup of tea button"
@@ -146,26 +161,30 @@
   src: s
   cat: a
 
-- image: "taskbar/button"
+- image:
+  url: "taskbar/button"
   anim: y
   alt: "say no to missing img links, get a button Today!"
   src: s
   cat: a
 
-- image: "taskbar/button-old"
+- image:
+  url: "taskbar/button-old"
   anim: y
   alt: "say no to broken img links"
   src-url: "/assets/images/buttons/taskbar/button.ase"
   src: z
   cat: a
 
-- image: "music/cassette"
+- image:
+  url: "music/cassette"
   anim: y
   alt: "sounds better on cassette[r] button"
   src: z
   cat: a
 
-- image: "other/chapel"
+- image:
+  url: "other/chapel"
   anim: y
   alt: "chapel of the beast"
   lnk-url: "https://chapelofthebeast.neocities.org/"
@@ -173,21 +192,24 @@
   src: v
   cat: a
 
-- image: "other/cnstr-14seg"
+- image:
+  url: "other/cnstr-14seg"
   smooth: y
   anim: y
   alt: "under construction button - 14 segment font"
   src: z
   cat: a
 
-- image: "other/cnstr-dotmatrix"
+- image:
+  url: "other/cnstr-dotmatrix"
   smooth: y
   anim: y
   alt: "under construction button - dot matrix font"
   src: z
   cat: a
 
-- image: "taskbar/code-run"
+- image:
+  url: "taskbar/code-run"
   alt: "pro- code & run"
   title: "just try to stop me"
   lnk-url: "https://ikewise.neocities.org/2018-05-19_-_return.htm"
@@ -195,7 +217,8 @@
   src: v
   cat: a
 
-- image: "taskbar/colemak"
+- image:
+  url: "taskbar/colemak"
   anim: y
   alt: "i use colemak (wide) button"
   title: ""
@@ -204,12 +227,14 @@
   src: z
   cat: a
 
-- image: "page-info/cookies"
+- image:
+  url: "page-info/cookies"
   alt: "absolutely no cookies button (and very few biscuits)"
   src: s
   cat: a
 
-- image: "taskbar/css"
+- image:
+  url: "taskbar/css"
   smooth: y
   anim: y
   alt: "css is difficult button"
@@ -218,13 +243,15 @@
   src: s
   cat: a
 
-- image: "darksleep"
+- image:
+  url: "darksleep"
   alt: "darksleep"
   src-url: "https://loa2k.neocities.org/"
   src:
   cat: u
 
-- image: "other/deskmod"
+- image:
+  url: "other/deskmod"
   smooth: y
   alt: "deskmod button"
   lnk-url: "https://web.archive.org/web/20000815063745/http://old.deskmod.com/"
@@ -232,7 +259,8 @@
   src: u
   cat: a
 
-- image: "other/deskmod"
+- image:
+  url: "other/deskmod"
   smooth: y
   alt: "deskmod button"
   lnk-url: "https://web.archive.org/web/20000815063745/http://old.deskmod.com/"
@@ -241,7 +269,8 @@
   ext: jpg
   cat: a
 
-- image: "other/feeling-machine"
+- image:
+  url: "other/feeling-machine"
   smooth: y
   anim: y
   alt: "feelingmachine.moe button"
@@ -250,28 +279,32 @@
   src: v
   cat: a
 
-- image: "brands/email"
+- image:
+  url: "brands/email"
   smooth: y
   anim: y
   alt: "animated email button"
   src: s
   cat: a
 
-- image: "brands/email-bm"
+- image:
+  url: "brands/email-bm"
   smooth: y
   alt: "email button"
   src-url: "https://bytemoth.neocities.org/88s/"
   src:
   cat: a
 
-- image: "equip"
+- image:
+  url: "equip"
   alt: "equip"
   lnk-url: "https://equip100p.bandcamp.com/"
   src-url: "https://loa2k.neocities.org/"
   src:
   cat: u
 
-- image: "other/guestbook"
+- image:
+  url: "other/guestbook"
   smooth: y
   anim: y
   alt: "windows xp style guestbook button"
@@ -280,48 +313,56 @@
   src:
   cat: a
 
-- image: "page-info/javascript"
+- image:
+  url: "page-info/javascript"
   alt: "proudly no javascript button"
   lnk-url: ""
   src-url: ""
   src: s
   cat: a
 
-- image: "page-info/js-warning"
+- image:
+  url: "page-info/js-warning"
   alt: "warning: page contains javascript button"
   src: z
   cat: a
 
-- image: "music/licence"
+- image:
+  url: "music/licence"
   alt: "ppl/prs licensed to play recorded music button"
   src: s
   cat: a
 
-- image: "lost-angles"
+- image:
+  url: "lost-angles"
   alt: "lost angles"
   lnk-url: "https://lostangles.bandcamp.com/"
   src-url: "https://loa2k.neocities.org/"
   src:
   cat: u
 
-- image: "other/mars"
+- image:
+  url: "other/mars"
   alt: "mars art deco button"
   src: z
   cat: a
 
-- image: "bookmarks/missingno"
+- image:
+  url: "bookmarks/missingno"
   alt: "this site has no button"
   anim: y
   src: s
   cat: a
 
-- image: "other/mspaint"
+- image:
+  url: "other/mspaint"
   alt: "Long Live MSPaint button"
   ins-url: "https://feelingmachine.moe/"
   src: z
   cat: a
 
-- image: "my-pet-flamingo"
+- image:
+  url: "my-pet-flamingo"
   alt: "my pet flamingo"
   smooth: y
   lnk-url: "https://mypetflamingo.bandcamp.com/album/flamingo-funk-vol-3"
@@ -329,7 +370,8 @@
   src:
   cat: u
 
-- image: "bookmarks/new-lambda"
+- image:
+  url: "bookmarks/new-lambda"
   alt: "new lambda research facility"
   smooth: y
   anim: y
@@ -338,20 +380,23 @@
   src: v
   cat: a
 
-- image: "taskbar/new-tab"
+- image:
+  url: "taskbar/new-tab"
   alt: "please do not force this button to be lonely"
   smooth: y
   src: z
   cat: a
 
-- image: "other/nokia64"
+- image:
+  url: "other/nokia64"
   alt: "nokia64"
   lnk-url: "https://nokia64.neocities.org/"
   src-url: "https://nokia64.neocities.org/"
   src: v
   cat: a
 
-- image: "other/pedit"
+- image:
+  url: "other/pedit"
   alt: "pedit: program editor button"
   smooth: y
   anim: y
@@ -359,7 +404,8 @@
   src: u
   cat: a
 
-- image: "other/rainy"
+- image:
+  url: "other/rainy"
   alt: "- cinnabar rain -"
   smooth: y
   title: ""
@@ -368,13 +414,15 @@
   src: v
   cat: a
 
-- image: "taskbar/rating"
+- image:
+  url: "taskbar/rating"
   alt: "suitable only for persons over 18 years"
   ins-url: "https://www.deviantart.com/levelinfinitum/art/BBFC-18-Certification-card-163679609"
   src: z
   cat: a
 
-- image: "other/planet-b"
+- image:
+  url: "other/planet-b"
   alt: "there is no planet b button"
   smooth: y
   anim: y
@@ -382,13 +430,15 @@
   src: s
   cat: a
 
-- image: "other/protest"
+- image:
+  url: "other/protest"
   alt: "от бизнеса с любов button"
   title: "this was going on when i was in bulgaria, and i found the sign design cool"
   src: z
   cat: a
 
-- image: "other/rewind"
+- image:
+  url: "other/rewind"
   alt: "windows xp vhs rewind button"
   smooth: y
   anim: y
@@ -396,44 +446,50 @@
   src: z
   cat: a
 
-- image: "other/scheisskopf"
+- image:
+  url: "other/scheisskopf"
   alt: "red button with blackletter pixel font saying 'Scheißkopf'"
   title: "not affiliated, i just liked the font"
   lnk-url: "https://www.fontstruct.com/fontstructions/show/1779988/zhowfrakt-eye-fs"
   src: z
   cat: a
 
-- image: "other/sdf"
+- image:
+  url: "other/sdf"
   alt: "sdf pubnix button"
   smooth: y
   src-url: "http://jgarza.sdf.org/"
   src:
   cat: a
 
-- image: "other/like-this-page"
+- image:
+  url: "other/like-this-page"
   alt: "like this page? share it! button"
   smooth: y
   anim: y
-  lnk-url: "mailto:zeusofthecrows+stadt(a)gmail.com?body=look%20at%20this%20cool%20site%20i%20found%3A%0D%0A%0D%0Ahttps%3A%2F%2Fzeusofthecrows.github.io%2Fstadt%2F"
+  lnk-url: "mailto:zeusofthecrows+site(a)gmail.com?body=look%20at%20this%20cool%20site%20i%20found%3A%0D%0A%0D%0Ahttps%3A%2F%2Fzeusofthecrows.github.io%2F"
   src-url: "https://cristianerasmus.neocities.org/"
   src: v
   cat: a
 
-- image: "taskbar/skeuo"
+- image:
+  url: "taskbar/skeuo"
   alt: "skeuomorphism now button"
   smooth: y
   anim: y
   src: s
   cat: a
 
-- image: "other/soggy"
+- image:
+  url: "other/soggy"
   alt: "soggy button"
   smooth: y
   src-url: "https://circa-1997.neocities.org/#buttonstuff"
   src: v
   cat: a
 
-- image: "other/sprunk"
+- image:
+  url: "other/sprunk"
   alt: "sprunk button"
   smooth: y
   anim: y
@@ -441,7 +497,8 @@
   src:
   cat: a
 
-- image: "taskbar/svg-ns-static"
+- image:
+  url: "taskbar/svg-ns-static"
   smooth: y
   anim: y
   alt: "non-animated svg button"
@@ -451,7 +508,8 @@
   ext: svg
   res: inf
 
-- image: "other/terra"
+- image:
+  url: "other/terra"
   alt: "citizen of terra (james cadle earth flag) button"
   anim: y
   lnk-url: "http://flagofearth.org/original.html"
@@ -459,14 +517,16 @@
   src: z
   cat: a
 
-- image: "bookmarks/tanuki"
+- image:
+  url: "bookmarks/tanuki"
   alt: "tanuki computing - cde button"
   lnk-url: "https://tanukicomputing.neocities.org/"
   src-url: "https://tanukicomputing.neocities.org/"
   src: v
   cat: a
 
-- image: "other/teeth"
+- image:
+  url: "other/teeth"
   alt: "teeth in vitro button"
   smooth: y
   anim: y
@@ -476,13 +536,15 @@
   src: v
   cat: a
 
-- image: "other/train"
+- image:
+  url: "other/train"
   alt: "london underground carriage button"
   anim: y
   src: u
   cat: a
 
-- image: "page-info/truecolour"
+- image:
+  url: "page-info/truecolour"
   alt: "best: 24-bit truecolour"
   anim: y
   src-url: "/assets/images/buttons/page-info/truecolour.ase"
@@ -490,7 +552,8 @@
   src: s
   cat: a
 
-- image: "page-info/truecolour-solaris"
+- image:
+  url: "page-info/truecolour-solaris"
   alt: "best: 24-bit truecolour (solaris colourscheme)"
   anim: y
   src-url: "/assets/images/buttons/page-info/truecolour.ase"
@@ -498,14 +561,16 @@
   src: z
   cat: a
 
-- image: "other/teapot"
+- image:
+  url: "other/teapot"
   alt: "utah teapot now button"
   smooth: y
   src-url: "https://warpzone.site/extras.htm"
   src: v
   cat: a
 
-- image: "other/vertpush"
+- image:
+  url: "other/vertpush"
   alt: "obby.dog/vertpush button"
   anim: y
   lnk-url: "https://obby.dog/"
@@ -513,7 +578,8 @@
   src: v
   cat: a
 
-- image: "other/vhs"
+- image:
+  url: "other/vhs"
   alt: "vhs button"
   smooth: y
   anim: y
@@ -521,7 +587,8 @@
   src:
   cat: a
 
-- image: "other/vita"
+- image:
+  url: "other/vita"
   alt: "axiom verge on ps vita button"
   smooth: y
   anim: y
@@ -530,7 +597,8 @@
   src: z
   cat: a
 
-- image: "other/voskhodscroll"
+- image:
+  url: "other/voskhodscroll"
   alt: "восход button"
   smooth: y
   anim: y
@@ -539,7 +607,8 @@
   src: v
   cat: a
 
-- image: "other/voskhodskelly"
+- image:
+  url: "other/voskhodskelly"
   alt: "восход button"
   smooth: y
   anim: y
@@ -548,7 +617,8 @@
   src: v
   cat: a
 
-- image: "other/website"
+- image:
+  url: "other/website"
   alt: "Website"
   smooth: y
   lnk-url: "http://info.cern.ch/hypertext/WWW/TheProject.html"
@@ -556,7 +626,8 @@
   src:
   cat: a
 
-- image: "other/xp"
+- image:
+  url: "other/xp"
   alt: "xp window decorations button"
   smooth: y
   anim: y
@@ -565,7 +636,8 @@
   src: z
   cat: a
 
-- image: "brands/yandex"
+- image:
+  url: "brands/yandex"
   alt: "Yandex / Яндекс / Яndex button"
   smooth: y
   title: "actually genuinely really good reverse images search - much better than google, often better than tineye"
@@ -576,7 +648,8 @@
 
 #===============================================================================
 
-- image: "brands/archive"
+- image:
+  url: "brands/archive"
   alt: "archive.org - preserve history button"
   anim: y
   title: ""
@@ -585,25 +658,29 @@
   src: s
   cat: m
 
-- image: "taskbar/emulation"
+- image:
+  url: "taskbar/emulation"
   alt: "emulation now! button"
   smooth: y
   src: s
   cat: m
 
-- image: "other/jack"
+- image:
+  url: "other/jack"
   alt: "best heard through a 3.5mm jack button"
   smooth: y
   anim: y
   src: u
   cat: mf
 
-- image: "other/rainbow"
+- image:
+  url: "other/rainbow"
   alt: "lgbt rainbow button"
   src: z
   cat: m
 
-- image: "music/licence-red"
+- image:
+  url: "music/licence-red"
   alt: "ppl/prs licensed to play recorded music button, but red"
   smooth: y
   anim: y
@@ -611,26 +688,30 @@
   src: z
   cat: m
 
-- image: "other/mobiles"
+- image:
+  url: "other/mobiles"
   alt: "not mobile friendly button"
   src: u
   cat: m
 
-- image: "brands/nowebp"
+- image:
+  url: "brands/nowebp"
   alt: "no webp, just use png button"
   anim: y
   lnk-url: "https://neon-tactical-waffle.tumblr.com/post/694565411253010432/"
   src: u
   cat: m
 
-- image: "other/piracy"
+- image:
+  url: "other/piracy"
   alt: "piracy now button"
   smooth: y
   lnk-url: "/thoughts#piracy"
   src: s
   cat: m
 
-- image: "taskbar/seed"
+- image:
+  url: "taskbar/seed"
   alt: "sharing is caring; seed your torrents button"
   anim: y
   title: ""
@@ -639,7 +720,8 @@
   src: s
   cat: m
 
-- image: "taskbar/target-blank"
+- image:
+  url: "taskbar/target-blank"
   alt: "anti 'target=&quot;_blank&quot;' button"
   anim: y
   title: "if i wanted a new tab, i'd middle-click!
@@ -647,12 +729,14 @@
   src: z
   cat: m
 
-- image: "taskbar/url"
+- image:
+  url: "taskbar/url"
   alt: "a url is for life....not just for christmas button"
   src: z
   cat: m
 
-- image: "taskbar/web3"
+- image:
+  url: "taskbar/web3"
   alt: "say no to web3 button"
   anim: y
   lnk-url: "https://yesterweb.org/no-to-web3/"
@@ -660,7 +744,8 @@
   src: s
   cat: m
 
-- image: "taskbar/web-pi"
+- image:
+  url: "taskbar/web-pi"
   alt: "web π certified"
   smooth: y
   lnk-url: "http://web3.14159.annwfn.net/"
@@ -670,7 +755,8 @@
 
 #=============================== GAMES =========================================
 
-- image: "am2r"
+- image:
+  url: "am2r"
   alt: "another metroid 2 remake button"
   smooth:
   anim: y
@@ -679,14 +765,16 @@
   src:
   cat: g
 
-- image: "b-side"
+- image:
+  url: "b-side"
   alt: "time to play B-SIDES (celeste) button"
   anim: y
   lnk-url: "https://www.celestegame.com/"
   src: s
   cat: g
 
-- image: "castleofdracula"
+- image:
+  url: "castleofdracula"
   alt: "castleofdracula button"
   anim: y
   lnk-url: "http://castleofdracula.com.ru/"
@@ -694,7 +782,8 @@
   src: v
   cat: g
 
-- image: "../brands/gog"
+- image:
+  url: "../brands/gog"
   alt: "gog.com (good old games) button"
   smooth: y
   lnk-url: "https://www.gog.com/"
@@ -702,14 +791,16 @@
   src:
   cat: g
 
-- image: "../brands/gog2"
+- image:
+  url: "../brands/gog2"
   alt: "drm-free pc games gog.com button"
   lnk-url: "https://www.gog.com/"
   src-url: "https://bytemoth.neocities.org/88s/"
   src:
   cat: g
 
-- image: "half-life"
+- image:
+  url: "half-life"
   alt: "half-life button"
   smooth: y
   lnk-url: "https://www.half-life.com/en/halflife/"
@@ -717,7 +808,8 @@
   src:
   cat: g
 
-- image: "hominid"
+- image:
+  url: "hominid"
   alt: "alien hominid button"
   smooth: y
   anim: y
@@ -726,28 +818,32 @@
   src:
   cat: g
 
-- image: "met-const"
+- image:
+  url: "met-const"
   alt: "metroid construction button"
   lnk-url: "https://metroidconstruction.com/"
   src-url: "https://drakul78.neocities.org/links"
   src:
   cat: g
 
-- image: "newgrounds"
+- image:
+  url: "newgrounds"
   alt: "newgrounds.com button"
   lnk-url: "https://www.newgrounds.com/"
   src-url: "https://drakul78.neocities.org/links"
   src:
   cat: g
 
-- image: "romhack-plaza"
+- image:
+  url: "romhack-plaza"
   alt: "romhack plaza button"
   lnk-url: "https://romhackplaza.org/"
   src-url: "https://www.smbarena.com/"
   src:
   cat: g
 
-- image: "../brands/steam"
+- image:
+  url: "../brands/steam"
   alt: "play with steam button"
   lnk-url: "https://store.steampowered.com/uiupdate/"
   src-url: "/assets/images/buttons/taskbar/zeus-steam.ase"
@@ -755,7 +851,8 @@
   src: z
   cat: g
 
-- image: "../brands/steam-input"
+- image:
+  url: "../brands/steam-input"
   alt: "steam input button"
   smooth: y
   lnk-url: "https://partner.steamgames.com/doc/features/steam_controller"
@@ -763,14 +860,16 @@
   src: z
   cat: g
 
-- image: "../other/still-you"
+- image:
+  url: "../other/still-you"
   alt: "despite everything, it's still you (undertale) button"
   anim: y
   lnk-url: "https://undertale.com/"
   src: s
   cat: g
 
-- image: "sven-coop"
+- image:
+  url: "sven-coop"
   alt: "sven coop button"
   smooth: y
   anim: y
@@ -781,7 +880,8 @@
 
 #=============================== BRANDS ========================================
 
-- image: "7z"
+- image:
+  url: "7z"
   alt: "get free 7-Zip button"
   smooth: y
   anim: y
@@ -790,33 +890,38 @@
   src: v
   cat: b
 
-- image: "apngasm"
+- image:
+  url: "apngasm"
   alt: "optimised with apng assembler button"
   lnk-url: "http://apngasm.sourceforge.net/"
   src: s
   cat: b
 
-- image: "aseprite"
+- image:
+  url: "aseprite"
   alt: "aseprite film logo button"
   anim: y
   lnk-url: "https://www.aseprite.org/"
   src: z
   cat: b
 
-- image: "ase-old-logo"
+- image:
+  url: "ase-old-logo"
   alt: "aseprite old logo button"
   anim: y
   lnk-url: "https://www.aseprite.org/"
   src: z
   cat: b
 
-- image: "cinnamon"
+- image:
+  url: "cinnamon"
   alt: "linux mint cinnamon button"
   lnk-url: "https://projects.linuxmint.com/cinnamon/"
   src: s
   cat: b
 
-- image: "chromium"
+- image:
+  url: "chromium"
   alt: "ie/chrome/brave logos captioned 'same shit, different arsehole'"
   smooth: y
   lnk-url: "https://www.mozilla.org/en-GB/firefox/"
@@ -824,14 +929,16 @@
   src: s
   cat: b
 
-- image: "ddg"
+- image:
+  url: "ddg"
   alt: "duckduckgo: always use protection"
   anim: y
   lnk-url: "https://ddg.gg"
   src: z
   cat: b
 
-- image: "debian"
+- image:
+  url: "debian"
   alt: "debian gnu/linux button"
   smooth: y
   lnk-url: "https://www.debian.org/"
@@ -839,20 +946,23 @@
   src: v
   cat: b
 
-- image: "discord"
+- image:
+  url: "discord"
   alt: "discord button"
   smooth: y
   lnk-url: "https://discord.com/"
   src: z
   cat: b
 
-- image: "dr-who"
+- image:
+  url: "dr-who"
   alt: "doctor who button"
   smooth: y
   src-url: "https://twitch.cymru/graphics"
   cat: b
 
-- image: "firefox"
+- image:
+  url: "firefox"
   alt: "mozilla now button"
   smooth: y
   anim: y
@@ -861,7 +971,8 @@
   src:
   cat: b
 
-- image: "fedora"
+- image:
+  url: "fedora"
   alt: "powered by fedora button"
   smooth: y
   lnk-url: "https://fedoraproject.org"
@@ -872,11 +983,13 @@
   lnk-url: "https://github.com/"
   alt: "github button"
   smooth: y
-- image: "github"
+- image:
+  url: "github"
   src: z
   cat: b
 
-- image: "gh-pages"
+- image:
+  url: "gh-pages"
   alt: "microsoft frontpage style button, saying 'GithubPages'"
   smooth: y
   anim: y
@@ -885,20 +998,23 @@
   src: s
   cat: b
 
-- image: "gh-pages-bo"
+- image:
+  url: "gh-pages-bo"
   alt: "microsoft backoffice style button, saying 'GithubPages'"
   smooth: y
   lnk-url: "https://pages.github.com/"
   src: z
   cat: b
 
-- image: "gh-pages-old"
+- image:
+  url: "gh-pages-old"
   alt: "old and kind of crappy github pages button"
   lnk-url: "https://pages.github.com/"
   src: z
   cat: b
 
-- image: "gimp"
+- image:
+  url: "gimp"
   alt: "gimp - free! button"
   smooth: y
   lnk-url: "https://www.gimp.org/"
@@ -906,7 +1022,8 @@
   src: v
   cat: b
 
-- image: "inkscape"
+- image:
+  url: "inkscape"
   alt: "inkscape 'Draw Freely.' button"
   smooth: y
   lnk-url: "https://inkscape.org/"
@@ -916,40 +1033,46 @@
   res: inf
   cat: b
 
-- image: "irfanview"
+- image:
+  url: "irfanview"
   alt: "irfanview image viewer button"
   smooth: y
   lnk-url: "https://www.irfanview.com/"
   src: u
   cat: b
 
-- image: "jjj-now"
+- image:
+  url: "jjj-now"
   alt: "triple j now button"
   anim: y
   lnk-url: "https://www.abc.net.au/triplej/"
   src: u
   cat: b
 
-- image: "kate-smooth"
+- image:
+  url: "kate-smooth"
   alt: "written in kate text editor button"
   lnk-url: "https://kate-editor.org/en-gb/"
   src: z
   cat: b
 
-- image: "kate-alt"
+- image:
+  url: "kate-alt"
   alt: "alternative kate text editor button"
   lnk-url: "https://kate-editor.org/en-gb/"
   src-lnk: "https://drakul78.neocities.org/links"
   src: z
   cat: b
 
-- image: "kate"
+- image:
+  url: "kate"
   alt: "written in kate text editor (pixelly icon) button"
   lnk-url: "https://kate-editor.org/en-gb/"
   src: z
   cat: b
 
-- image: "kde-now"
+- image:
+  url: "kde-now"
   alt: "kde now button"
   smooth: y
   anim: y
@@ -958,7 +1081,8 @@
   src: z
   cat: b
 
-- image: "kde"
+- image:
+  url: "kde"
   alt: "kde: be free! button"
   anim: y
   lnk-url: "https://kde.org/"
@@ -966,7 +1090,8 @@
   src: v
   cat: b
 
-- image: "krita"
+- image:
+  url: "krita"
   alt: "krita button"
   smooth: y
   anim: y
@@ -975,14 +1100,16 @@
   src: v
   cat: b
 
-- image: "konqi"
+- image:
+  url: "konqi"
   alt: "konqi (kde mascot) button"
   smooth: y
   lnk-url: "https://kde.org/announcements/announcement/"
   src: s
   cat: b
 
-- image: "kool-de"
+- image:
+  url: "kool-de"
   alt: "kool desktop environment button"
   smooth: y
   anim: y
@@ -990,27 +1117,31 @@
   src: s
   cat: b
 
-- image: "libresprite"
+- image:
+  url: "libresprite"
   alt: "libresprite: it's aseprite, but free button"
   anim: y
   lnk-url: "https://libresprite.github.io/"
   src: z
   cat: b
 
-- image: "matrix"
+- image:
+  url: "matrix"
   anim: y
   alt: "matrix messenger button"
   lnk-url: "https://matrix.org/"
   src: z
   cat: b
 
-- image: "mint"
+- image:
+  url: "mint"
   alt: "linux mint button"
   lnk-url: "https://www.linuxmint.com/"
   src: s
   cat: b
 
-- image: "neocities"
+- image:
+  url: "neocities"
   alt: "meteors netscape button, saying neocities.org with paws"
   smooth: y
   anim: y
@@ -1019,7 +1150,8 @@
   src: s
   cat: b
 
-- image: "neocities-cat"
+- image:
+  url: "neocities-cat"
   alt: "netscape button saying neocities.org with cat logo and paws"
   smooth: y
   anim: y
@@ -1029,7 +1161,8 @@
   src: z
   cat: b
 
-- image: "neocities-spin"
+- image:
+  url: "neocities-spin"
   anim: y
   lnk-url: "https://neocities.org/site/zeusofthecrows/"
   alt: "various colours of neocities buttons, rotating"
@@ -1037,21 +1170,24 @@
   src: s
   cat: b
 
-- image: "nexus-mods"
+- image:
+  url: "nexus-mods"
   alt: "nexus mods button"
   smooth: y
   lnk-url: "https://nexusmods.com/"
   src: z
   cat: b
 
-- image: "notepadpp"
+- image:
+  url: "notepadpp"
   lnk-url: "https://notepad-plus-plus.org/"
   alt: "notepad++ button"
   src-url: "https://drakul78.neocities.org/links"
   src:
   cat: b
 
-- image: "paint"
+- image:
+  url: "paint"
   alt: "paint.net button"
   smooth: y
   lnk-url: "https://getpaint.net/"
@@ -1059,7 +1195,8 @@
   src-url: "https://drakul78.neocities.org/links"
   cat: b
 
-- image: "palemoon"
+- image:
+  url: "palemoon"
   alt: "pale moon browser button"
   smooth: y
   lnk-url: "https://www.palemoon.org/"
@@ -1067,14 +1204,16 @@
   src-url: "https://drakul78.neocities.org/links"
   cat: b
 
-- image: "pixelorama"
+- image:
+  url: "pixelorama"
   alt: "drawn with pixelorama button"
   anim: y
   lnk-url: "https://orama-interactive.itch.io/pixelorama"
   src: s
   cat: b
 
-- image: "pixelorama-old"
+- image:
+  url: "pixelorama-old"
   alt: "pixelorama free & open source sprite editor button"
   anim: y
   lnk-url: "https://orama-interactive.itch.io/pixelorama"
@@ -1082,13 +1221,15 @@
   src: z
   cat: b
 
-- image: "reddit"
+- image:
+  url: "reddit"
   lnk-url: "https://reddit.com"
   alt: "reddit button"
   src: z
   cat: b
 
-- image: "scp"
+- image:
+  url: "scp"
   alt: "secure. contain. protect. button"
   smooth: y
   lnk-url: "https://scp-wiki.wikidot.com/"
@@ -1096,21 +1237,24 @@
   src:
   cat: b
 
-- image: "siduction"
+- image:
+  url: "siduction"
   alt: "siduction (debian) gnu/linux button"
   smooth: y
   lnk-url: "https://www.siduction.org/"
   src: z
   cat: b
 
-- image: "sublime"
+- image:
+  url: "sublime"
   alt: "sublime text editor button"
   lnk-url: "https://www.sublimetext.com/"
   ins-url: "http://www.notepad.org/logo.htm"
   src: z
   cat: b
 
-- image: "sun"
+- image:
+  url: "sun"
   alt: "sun microsystems button"
   smooth: y
   lnk-url: "http://toastytech.com/guis/sol.html"
@@ -1118,14 +1262,16 @@
   src:
   cat: b
 
-- image: "telegram"
+- image:
+  url: "telegram"
   alt: "telegram button"
   smooth: y
   lnk-url: "https://web.archive.org/web/20250820160553/https://old.reddit.com/r/Telegram/comments/wuw996/pavel_durov_updates_on_telegram_imagine_how/ilc0lwh/"
   src: s
   cat: b
 
-- image: "telegram-alt"
+- image:
+  url: "telegram-alt"
   alt: "telegram button"
   smooth: y
   lnk-url: "https://web.archive.org/web/20250820160553/https://old.reddit.com/r/Telegram/comments/wuw996/pavel_durov_updates_on_telegram_imagine_how/ilc0lwh/"
@@ -1133,7 +1279,8 @@
   src: z
   cat: b
 
-- image: "telegram-old"
+- image:
+  url: "telegram-old"
   alt: "old telegram button with slogan"
   smooth: y
   lnk-url: "https://web.archive.org/web/20250820160553/https://old.reddit.com/r/Telegram/comments/wuw996/pavel_durov_updates_on_telegram_imagine_how/ilc0lwh/"
@@ -1141,14 +1288,16 @@
   src: z
   cat: b
 
-- image: "tumblr"
+- image:
+  url: "tumblr"
   alt: "tumblr button"
   lnk-url: "https://zeusofthecrows.tumblr.com"
   ins-url: "https://www.tumblr.com/blog/view/azuremist/685627448990351360/"
   src: z
   cat: b
 
-- image: "ublock"
+- image:
+  url: "ublock"
   alt: "µblock origin button"
   smooth: y
   lnk-url: "https://github.com/gorhill/uBlock"
@@ -1156,14 +1305,16 @@
   src:
   cat: b
 
-- image: "wikipedia"
+- image:
+  url: "wikipedia"
   alt: "википедия button"
   smooth: y
   lnk-url: "https://nostalgia.wikipedia.org/"
   src: u
   cat: b
 
-- image: "winamp"
+- image:
+  url: "winamp"
   smooth: y
   alt: "winamp button"
   lnk-url: "https://winamp.com/"
@@ -1171,21 +1322,24 @@
   src:
   cat: b
 
-- image: "win98"
+- image:
+  url: "win98"
   alt: "made with windows 98 button"
   smooth: y
   lnk-url: "https://dosbox-x.com/wiki/Guide%3AInstalling-Windows-98"
   src: u
   cat: b
 
-- image: "xenia"
+- image:
+  url: "xenia"
   alt: "xenia the fox linux button"
   lnk-url: "https://xenia-linux-site.glitch.me/"
   src-url: "https://voltbun.neocities.org/"
   src: v
   cat: b
 
-- image: "xkcd"
+- image:
+  url: "xkcd"
   alt: "xkcd button"
   smooth: y
   lnk-url: "https://xkcd.com/"
@@ -1195,14 +1349,16 @@
 
   #============================= LEMMY =========================================
 
-- image: "../brands/lemmy-old"
+- image:
+  url: "../brands/lemmy-old"
   alt: "lemmy button (join-lemmy.org)"
   smooth: y
   src-url: "/assets/images/buttons/lemmy.ase"
   src: z
   cat: l
 
-- image: "../brands/lemmy"
+- image:
+  url: "../brands/lemmy"
   alt: "lemmy button (join-lemmy.org)"
   smooth: y
   title: "i couldn't really decide which style i prefered of these two"
@@ -1210,52 +1366,61 @@
   src: s
   cat: l
 
-- image: "cathedrals"
+- image:
+  url: "cathedrals"
   alt: "lemm.ee imaginary cathedrals community button"
   lnk-url: "https://lemm.ee/c/imaginarycathedrals/"
   cat: l
 
-- image: "degradation"
+- image:
+  url: "degradation"
   alt: "lemm.ee imaginary degradation community button"
   lnk-url: "https://lemm.ee/c/imaginarydegradation/"
   cat: l
 
-- image: "dieselpunk"
+- image:
+  url: "dieselpunk"
   alt: "lemm.ee imaginary dieselpunk community button"
   lnk-url: "https://lemm.ee/c/imaginarydieselpunk/"
   cat: l
 
-- image: "portals"
+- image:
+  url: "portals"
   alt: "lemm.ee imaginary portals community button"
   smooth: y
   lnk-url: "https://lemm.ee/c/imaginaryportals/"
   cat: l
 
-- image: "steampunk"
+- image:
+  url: "steampunk"
   alt: "lemm.ee imaginary steampunk community button"
   smooth: y
   lnk-url: "https://lemm.ee/c/imaginarysteampunk/"
   cat: l
 
-- image: "trains"
+- image:
+  url: "trains"
   alt: "lemm.ee imaginary trains community button"
   smooth: y
   lnk-url: "https://lemm.ee/c/imaginarytrains/"
   cat: l
 
-- image: "warhammer"
+- image:
+  url: "warhammer"
   alt: "lemm.ee imaginary warhammer community button"
   smooth: y
   lnk-url: "https://lemm.ee/c/imaginarywarhammer@lemmy.world/"
   cat: l
 
-- image: "wastelands"
+- image:
+  url: "wastelands"
   alt: "lemm.ee imaginary wastelands community button"
   smooth: y
   lnk-url: "https://lemm.ee/c/imaginarywastelands/"
   cat: l
 
-- image: "other/macintosh"
+- image:
+  url: "other/macintosh"
   alt: "macintosh >128k is extravagant button"
   smooth: y
   anim: y

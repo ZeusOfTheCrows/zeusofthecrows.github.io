@@ -5,14 +5,121 @@
 :root {
 	--content-background-colour: black;
 	--content-background-radius: 8px;
+
+	--d-red: brown;
+	--d-grn: darkgreen;
+	--d-ylw: darkgoldenrod;
+	--d-blu: midnightblue;
+	--d-ppl: darkslateblue;
+	--d-aqa: darkcyan;
+	--d-org: darkorange;
+
+	--bg-0: black;
+	--bg-1: darkslategrey;
+	--bg-2: darkslategrey;
+	--bg-3: dimgrey;
+	--bg-4: slategrey;
+	--bg-5: lightslategrey;
+
+	--fg-4: lightsteelblue;
+	--fg-3: silver;
+	--fg-2: lightgrey;
+	--fg-1: ghostwhite;
+	--fg-0: white;
+
+	--s-red: tomato;
+	--s-grn: yellowgreen;
+	--s-ylw: gold;
+	--s-blu: powderblue;
+	--s-ppl: plum;
+	--s-aqa: palegreen;
+	--s-org: orange;
+
+	--fg-1: white;
+	--fg-0: white;
+	/* wallpaper somewhat inspired by daft punk's "around the world" */
+	/* https://www.youtube.com/watch?v=K0HSD_i2DvA */
+	/* web named colours were placeholder colours, but they look good enough to keep */
+	--wall-colr-1: red;
+	--wall-colr-2: orange;
+	--wall-colr-3: goldenrod;
+	--wall-colr-4: orange;
+
+}
+
+/* light mode colours */
+@media (prefers-color-scheme: light) {
+	:root {
+
+	--d-red: brown;
+	--d-grn: darkgreen;
+	--d-ylw: darkgoldenrod;
+	--d-blu: midnightblue;
+	--d-ppl: darkslateblue;
+	--d-aqa: darkcyan;
+	--d-org: darkorange;
+
+	--bg-0: black;
+	--bg-1: darkslategrey;
+	--bg-2: darkslategrey;
+	--bg-3: dimgrey;
+	--bg-4: slategrey;
+	--bg-5: lightslategrey;
+
+	--fg-4: lightsteelblue;
+	--fg-3: silver;
+	--fg-2: lightgrey;
+	--fg-1: ghostwhite;
+	--fg-0: white;
+
+	--s-red: tomato;
+	--s-grn: yellowgreen;
+	--s-ylw: gold;
+	--s-blu: powderblue;
+	--s-ppl: plum;
+	--s-aqa: palegreen;
+	--s-org: orange;
+
+		/* blue-ish */
+		--wall-colr-1: #2d4bf0;
+		--wall-colr-2: #308bdd;
+		--wall-colr-3: #2df0c2;
+		--wall-colr-4: #308bdd;
+		/* v light pink
+		--wall-colr-1: lightblue;
+		--wall-colr-2: pink;
+		--wall-colr-3: papayawhip;
+		--wall-colr-4: pink; */
+	}
 }
 
 body {
-	/* web named colours were placeholder colours, but they look good enough to keep */
 	background-image:
-		radial-gradient(circle at 50% 50%, #fff3 35%, #e903 45%, #4084 calc(45% + 1px), #110008cc 60%, #000 70%),
-		linear-gradient(to top left, transparent, red, transparent, red, transparent),
-		linear-gradient(to top right, red, orange, goldenrod, orange, red, orange, goldenrod, orange, red);
+		radial-gradient(
+			circle at 50% 50%,
+			#fff3 35%,
+			#e903 45%,
+			#4084 calc(45% + 1px),
+			#110008cc 60%,
+			#000 70%),
+		linear-gradient(
+			to top left,
+			transparent,
+			var(--wall-colr-1),
+			transparent,
+			var(--wall-colr-1),
+			transparent),
+		linear-gradient(
+			to top right,
+			var(--wall-colr-1),
+			var(--wall-colr-2),
+			var(--wall-colr-3),
+			var(--wall-colr-4),
+			var(--wall-colr-1),
+			var(--wall-colr-2),
+			var(--wall-colr-3),
+			var(--wall-colr-4),
+			var(--wall-colr-1));
 	background-size: 192px 192px, 200% 200%, 200% 200%;
 	animation: gradient 20s linear infinite;
 	background-attachment: fixed;
@@ -32,14 +139,13 @@ main {
 	box-shadow: inset 0px 0px 16px black, inset 0px 0px 8px black;
 	border: 1px solid #ffffff30;
 	border-top: none;
-	--fg-1: white;
-	--fg-0: white;
 }
 
 main>article>.text-width,
 main>article>p {
-	max-width: var(--text-max-width);
+	// max-width: var(--text-max-width);
 	margin-inline: auto;
+	padding-inline: 4ch;
 }
 header,h1,h2,h3,h4,h5,h6,details {
 	text-align: center;
@@ -70,6 +176,7 @@ header,h1,h2,h3,h4,h5,h6,details {
 	}
 	img {
 		display: block;  // force caption to display on next line
+		max-width: 100%;
 	}
 	.img-caption {  // hide caption by default
 		transition: opacity 0.1s ease-in-out;

@@ -2,7 +2,7 @@
 layout: default
 css-file: gallery
 title: Image Gallery
-edit-date: 2025-09-07
+edit-date: 2025-09-11
 ---
 <article>
 	<header>
@@ -14,28 +14,13 @@ edit-date: 2025-09-07
 		orange means made by me, (and may link to the source file if i feel it's
 		complex enough to need it – usually aseprite <samp>.ase</samp>
 		files, sometimes gimp <samp>.xcf</samp>), red means unknown source. "insp"
-		means the inspiration for the design (direct or indirect).
-	</p>
-	<p>
-		i hope if i can start this as a trend then it'll be easier to find the
-		original creator; if you take any of these i heartily recommend you do
-		this (even just as an html comment) - i wish i'd done so from the start, i
-		often wish to revisit the site to find more of the original style
-	</p>
-	<p>
-		feel free to steal any images you like (and message me with what you
+		means the inspiration for the design (direct or indirect). feel free to
+		steal any images you like (and message me with what you
 		do with them!)
-	</p>
-	<h2>Sections</h2>
-	<ol id="contents" class="text-width">
-		<li><a href="#buttons">buttons [88x31]</a></li>
-		<li><a href="#stamps" >stamps [99x65]</a></li>
-		<li><a href="#codes" >codes [100x50]</a></li>
-		<li><a href="#blinkies">blinkies [150x20]</a></li>
-		<li><a href="#antipix">antipixels [80x15]</a></li>
-		<li><a href="#other">other art</a></li>
-	</ol>
-	<p>
+		<small>i hope if i can start this as a trend then it'll be easier to find
+		the original creator; if you take any of these i heartily recommend you do
+		this (even just as an html comment) - i wish i'd done so from the start, i
+		often wish to revisit the site to find more of the original style.</small>
 		any images not credited on this page, will hopefully have the source in
 		the html:
 		<code style="text-wrap: nowrap;">&lt;img data-img-source=[example.com] /&gt;</code>
@@ -43,239 +28,205 @@ edit-date: 2025-09-07
 	<hr />
 	<p>
 		useful tool: a javascript bookmarklet for toggling pixelated and bilinear
-		("smooth") image rendering when viewing a single image in a new tab:
-	</p>
-	<strong id="bookmarklet"
-		style="display: block; text-align: center; font-size: 2em;">
-		<a href="javascript:(function(){img=document.getElementsByTagName('img')[0];img.style.setProperty('transform','scale(2)','important');if(getComputedStyle(img).getPropertyValue('image-rendering')=='pixelated'){img.style.setProperty('image-rendering','auto');}else{img.style.setProperty('image-rendering','pixelated');};})();">Pix</a>
-	</strong>
-	<p>
+		("smooth") image rendering when viewing a single image in a new tab.
 		just drag it into your bookmarks bar, name it whatever you'd like,
-		and then click it when you want to trigger it
+		and then click it when you want to trigger it:
+		<strong id="bookmarklet"
+			style="display: block; text-align: center; font-size: 2em;">
+			<a href="javascript:(function(){img=document.getElementsByTagName('img')[0];img.style.setProperty('transform','scale(2)','important');if(getComputedStyle(img).getPropertyValue('image-rendering')=='pixelated'){img.style.setProperty('image-rendering','auto');}else{img.style.setProperty('image-rendering','pixelated');};})();">Pix</a>
+		</strong>
 	</p>
-	<hr>
-	<p>
-		want a button or stamp of your own? i'll definitely take requests, but bear
-		in mind i'll probably procrastinate for an
-		age (it doesn't have to be a cause i agree with, but there is
-		some shit i won't do {case by case basis})
-	</p>
+	<ol id="contents" class="text-width">
+		<li><a href="#stamps" >stamps [99x65]</a></li>
+		<li><a href="#buttons">buttons [88x31]</a></li>
+		<li><a href="#codes" >codes [100x50]</a></li>
+		<li><a href="#blinkies">blinkies [150x20]</a></li>
+		<li><a href="#antipix">antipixels [80x15]</a></li>
+		<li><a href="#other">other art</a></li>
+	</ol>
+</article>
+
+<article id="stamps">
+	<header>
+		<h1>Stamps</h1>
+	</header>
+	<details class="text-width">
+		<summary>
+			for those wanting a stamp template, this is free to use (<small>the colours
+			are to make it easier to see, change the colours in your own image</small>)
+		</summary>
+		<img src="/assets/images/stamps/frame-template.png"
+		style="display: block; margin-inline: auto;" alt="template" />
+
+		the corners are slightly unorthodox, but they look a little better than
+		standard, i think
+	</details>
+	<h2>99x56</h2>
+	<ul class="img-grid hover-zoom img-capts">
+		{% for image in site.data.gallery-stamps %}
+		{% if image.url and image.res == nil %}
+		<li><figure>
+			{% if image.lnk-url != nil %}
+			<a href="{{ image.lnk-url }}">
+			{% endif %}
+			<img src="/assets/images/stamps/{{ image.url }}.png"
+				{% if image.title != nil %}
+				title="{{ image.title }}"
+				{% endif %}
+				class="stamp-99x56 {% if image.smooth %}smooth-zoom{% endif %}
+					{% if image.anim %}anim{% endif %}"
+				alt="{{ image.alt }}" />
+			{% if image.lnk-url != nil %}
+			</a>
+			{% endif %}
+			<figcaption class="img-caption">
+				{% if image.src-url != nil %}
+				<a class="src {{ image.src }}"
+					href="{{ image.src-url }}"></a>
+				{% elsif image.src == "s" %}
+				<a class="src z"
+					href="/assets/images/stamps/{{ image.url }}.ase"></a>
+				{% else %}
+				<a class="src {{ image.src }}"></a>
+				{% endif %}
+				{% if image.ins-url != nil %}
+				<span class="sep"></span>
+				<a class="i"
+				{% if image.ins-ttl != nil %}
+					title="{{ image.ins-ttl }}"
+				{% endif %}
+					href="{{ image.ins-url }}"></a>
+				{% endif %}
+			</figcaption>
+		</figure></li>
+		{% endif %}
+		{% endfor %}
+	</ul>
+
+	<h2>Other</h2>
+	<ul class="img-grid hover-zoom img-capts">
+		{% for image in site.data.gallery-stamps %}
+		{% if image.url and image.res == "other" %}
+		<li><figure>
+			{% if image.lnk-url != nil %}
+			<a href="{{ image.lnk-url }}">
+			{% endif %}
+			<img src="/assets/images/stamps/{{ image.url }}.png"
+				{% if image.title != nil %}
+				title="{{ image.title }}"
+				{% endif %}
+				class="{% if image.smooth %}smooth-zoom{% else %}pixel-art{% endif %}
+					{% if image.anim %}anim{% endif %}"
+				alt="{{ image.alt }}" />
+			{% if image.lnk-url != nil %}
+			</a>
+			{% endif %}
+			<figcaption class="img-caption">
+				{% if image.src-url != nil %}
+				<a class="src {{ image.src }}"
+					href="{{ image.src-url }}"></a>
+				{% elsif image.src == "s" %}
+				<a class="src z"
+					href="/assets/images/stamps/{{ image.url }}.ase"></a>
+				{% else %}
+				<a class="src {{ image.src }}"></a>
+				{% endif %}
+				{% if image.ins-url != nil %}
+				<span class="sep"></span>
+				<a class="i"
+				{% if image.ins-ttl != nil %}
+					title="{{ image.ins-ttl }}"
+				{% endif %}
+					href="{{ image.ins-url }}"></a>
+				{% endif %}
+			</figcaption>
+		</figure></li>
+		{% endif %}
+		{% endfor %}
+	</ul>
+
+	<ul class="img-grid hover-zoom img-capts">
+		{% for images in site.data.gallery-stamps %}
+		{% if image.url and image.res == "other" %}
+		<li><figure>
+			{% if image.lnk-url != nil %}
+			<a href="{{ image.lnk-url }}">
+			{% endif %}
+			<img src="/assets/images/stamps/{{ image.url }}.png"
+				{% if image.title != nil %}
+				title="{{ image.title }}"
+				{% endif %}
+				class="{% if image.smooth %}smooth-zoom{% else %}pixel-art{% endif %}
+					{% if image.anim %}anim{% endif %}"
+				alt="{{ image.alt }}" />
+			{% if image.lnk-url != nil %}
+			</a>
+			{% endif %}
+			<figcaption class="img-caption">
+				{% if image.src-url != nil %}
+				<a class="src {{ image.src }}"
+					href="{{ image.src-url }}"></a>
+				{% elsif image.src == "s" %}
+				<a class="src z"
+					href="/assets/images/stamps/{{ image.url }}.ase"></a>
+				{% else %}
+				<a class="src {{ image.src }}"></a>
+				{% endif %}
+				{% if image.ins-url != nil %}
+				<span class="sep"></span>
+				<a class="i"
+				{% if image.ins-ttl != nil %}
+					title="{{ image.ins-ttl }}"
+				{% endif %}
+					href="{{ image.ins-url }}"></a>
+				{% endif %}
+			</figcaption>
+		</figure></li>
+		{% endif %}
+		{% endfor %}
+	</ul>
 </article>
 
 <article id="buttons">
 	<header>
 		<h1>Buttons</h1>
 	</header>
-	<p>
-		i've tried to go for quality over quantity here, but for those who want
-		as many buttons as possible, here are some sites for that:
-	</p>
-	<ul class="img-grid hover-zoom img-capts">
-		<li><figure>
-			<a href="https://capstasher.neocities.org/88x31collection-page1.html">
-				<img src="/assets/images/buttons/bookmarks/buttons/cap-stasher.png"
-					alt="cap stasher's corner" class="btn-88x31 smooth-zoom"
-					title="6000 buttons and counting" />
-			</a>
-				<figcaption class="img-caption">cap stasher</figcaption>
-		</figure></li>
-		<li><figure>
-			<a href="https://hellnet.work/8831//">
-				<img src="/assets/images/buttons/bookmarks/buttons/hellnet.png"
-					alt="search" class="btn-88x31 smooth-zoom"
-					title="massive (31'119) archive from geocities" />
-			</a>
-			<figcaption class="img-caption">hellnet.work</figcaption>
-		</figure></li>
-	</ul>
-	<details class="text-width">
-		<summary class="h-summ">
-			Others:
-		</summary>
-		<ul class="img-grid hover-zoom img-capts">
-			<li><figure>
-				<a href="https://88by31.neocities.org/">
-					<img src="/assets/images/buttons/bookmarks/buttons/88by31.png"
-						alt="88by31" class="btn-88x31"
-						title="separated by category (i like the games section)" />
-				</a>
-				<figcaption class="img-caption">88by31</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://anlucas.neocities.org/88x31Buttons.html">
-					<img src="/assets/images/buttons/bookmarks/buttons/anlucas.png"
-					alt="anlucas" class="btn-88x31 anim"
-					title="and the second biggest collection" />
-				</a>
-				<figcaption class="img-caption">a.n. lucas</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://web.archive.org/web/20010223235826/http://www.elnet.com/~drealbob/rw/antibutton/">
-					<img src="/assets/images/buttons/bookmarks/buttons/nobut.png"
-						alt="the anti-button campaign" class="btn-88x31 smooth-zoom"
-						title="oddly named, but sizeable collection" />
-				</a>
-				<figcaption class="img-caption">anti-button</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://bytemoth.neocities.org/88s/">
-					<img src="/assets/images/buttons/bookmarks/bytemoth.png"
-						alt="the anti-button campaign" class="btn-88x31 smooth-zoom"
-						title="also see the overhomepage" />
-				</a>
-				<figcaption class="img-caption">bytemoth</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://exo.pet#buttonzone">
-					<img src="/assets/images/buttons/bookmarks/buttons/exo.png"
-						alt="exo.pet" class="btn-88x31 anim"
-						title="quite large compiled collection of nice buttons" />
-				</a>
-				<figcaption class="img-caption">exo.pet</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://loa2k.neocities.org/">
-					<img src="/assets/images/buttons/bookmarks/buttons/loa2k.png"
-						alt="loa2k" class="btn-88x31"
-						title="some /really/ nice synthwave/electronica buttons" />
-				</a>
-				<figcaption class="img-caption">88by31</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://web.archive.org/web/19990129040545/http://www.geocities.com/NapaValley/2022/88x31.html">
-					<img src="/assets/images/buttons/bookmarks/buttons/chaz8831.png"
-						alt="chaz 'hazel'" class="btn-88x31 smooth-zoom"
-						title="categorised collection from 1997" />
-				</a>
-				<figcaption class="img-caption">chaz "hazel"</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://cyber.dabamos.de/88x31/">
-					<img src="/assets/images/buttons/bookmarks/buttons/dabamos.png"
-						alt="the cyber vanguard" class="btn-88x31"
-						title="more than 3'500 classic buttons" />
-				</a>
-				<figcaption class="img-caption">cyber</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://web.archive.org/web/20010607032300/http://www.dds.nl/~dimitri/buttons/index2.htm">
-					<img src="/assets/images/buttons/bookmarks/buttons/dmitri.png"
-						alt="buttons now" class="btn-88x31" />
-				</a>
-				<figcaption class="img-caption">dmitri</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="http://www.hoary.org/now/index.html">
-					<img src="/assets/images/buttons/bookmarks/buttons/hoaryape.png"
-						alt="hoary ape" class="btn-88x31 smooth-zoom"
-						title="mainly netscape and parodies, 4th page is other brands" />
-				</a>
-				<figcaption class="img-caption">hoary ape</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://88x31.kate.pet/">
-					<img src="/assets/images/buttons/bookmarks/buttons/kate.png"
-						alt="kate.pet" class="btn-88x31"
-						title="small selection, but some i've seen nowhere else" />
-				</a>
-				<figcaption class="img-caption">kate.pet</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://neonaut.neocities.org/cyber/88x31.html">
-					<img src="/assets/images/buttons/bookmarks/buttons/neonaut.png"
-						alt="neonaut" class="btn-88x31"
-						title="personal sites" />
-				</a>
-				<figcaption class="img-caption">neonaut</figcaption>
-			</figure></li>
-		</ul>
-		<h4 title=":-(">Extinct</h4>
-		<ul class="img-grid hover-zoom img-capts">
-		<li><figure>
-			<a href="https://31search.7m.pl/">
-				<img src="/assets/images/buttons/bookmarks/buttons/31search.png"
-					alt="search" class="btn-88x31 smooth-zoom"
-					title="search engine for buttons" />
-			</a>
-			<figcaption class="img-caption">31search</figcaption>
-		</figure></li>
-			<li><figure>
-				<a href="https://buttonwall.neocities.org/">
-					<img src="/assets/images/buttons/bookmarks/buttons/buttonwall.png"
-						alt="broken img icon (the image on the page doesn't work"
-						class="btn-88x31"
-						title="4000 buttons in alphabetical order"/>
-				</a>
-				<figcaption class="img-caption">mace486</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://roly.neocities.org/v8/88x31s/index.html">
-					<img src="/assets/images/buttons/bookmarks/buttons/roly.png"
-						alt="roly" class="btn-88x31 anim"
-						title="dead (not archived?), but kitecreature has fewer buttons" />
-				</a>
-				<figcaption class="img-caption">roly (dead)</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://kitecreature.net/buttons/">
-					<img src="/assets/images/buttons/bookmarks/buttons/kitecreature.png"
-						alt="kitecreature.net" class="btn-88x31"
-						title="assorted, in a tiny box" />
-				</a>
-				<figcaption class="img-caption">kitecreature</figcaption>
-			</figure></li>
-			<li><figure>
-				<a href="https://realsast.ga/buttons/">
-					<img src="/assets/images/buttons/bookmarks/buttons/realgast.png"
-						alt="simon's buttons" class="btn-88x31 smooth-zoom"
-						title="original 90s style buttons"/>
-				</a>
-				<figcaption class="img-caption">realgast</figcaption>
-			</figure></li>
-		</ul>
-	</details>
-	<p>
-		most of the following are my own as i'm neurotic about using other
-		people's work, and also i'm the sort of narcissistic cunt who sees
-		something and thinks "ah, i can do better"; but i've tried to
-		link to the original inspiration
-	</p>
 	<!--https://css-tricks.com/modifying-specific-letters-with-css-and-javascript/#aa-font-face-->
 	<h2>&infin;x&infin;</h2>
 	<!-- <h2 style="letter-spacing: -4px">00&nbsp;&nbsp;x&nbsp;&nbsp;00</h2> -->
 	<ul class="img-grid hover-zoom img-capts">
-		{% for item in site.data.gallery-buttons %}
-		{% if item.image and item.res == "inf" and item.cat == nil %}
+		{% for image in site.data.gallery-buttons %}
+		{% if image.url and image.res == "inf" and image.cat == nil %}
 		<li><figure>
-			{% if item.lnk-url != nil%}
-			<a href="{{ item.lnk-url }}">
+			{% if image.lnk-url != nil%}
+			<a href="{{ image.lnk-url }}">
 			{% else %}
 			<a>
 			{% endif %}
-			<img src="/assets/images/buttons/{{ item.image }}.svg"
-				{% if item.title != nil %}
-				title="{{ item.title }}"
+			<img src="/assets/images/buttons/{{ image.url }}.svg"
+				{% if image.title != nil %}
+				title="{{ image.title }}"
 				{% endif %}
 				class="button-88x31 btn-svg
-					{% if item.anim %}anim{% endif %}"
-				alt="{{ item.alt }}" />
+					{% if image.anim %}anim{% endif %}"
+				alt="{{ image.alt }}" />
 			<figcaption class="img-caption">
-				{% if item.src-url != nil %}
-				<a class="src {{ item.src }}"
-					href="{{ item.src-url }}"></a>
-				{% elsif item.src == "s" %}
+				{% if image.src-url != nil %}
+				<a class="src {{ image.src }}"
+					href="{{ image.src-url }}"></a>
+				{% elsif image.src == "s" %}
 				<a class="src z"
-					href="/assets/images/buttons/{{ item.image }}.ase"></a>
+					href="/assets/images/buttons/{{ image.url }}.ase"></a>
 				{% else %}
-				<a class="src {{ item.src }}"></a>
+				<a class="src {{ image.src }}"></a>
 				{% endif %}
-				{% if item.ins-url != nil %}
+				{% if image.ins-url != nil %}
 				<span class="sep"></span>
 				<a class="i"
-				{% if item.ins-ttl != nil %}
-					title="{{ item.ins-ttl }}"
+				{% if image.ins-ttl != nil %}
+					title="{{ image.ins-ttl }}"
 				{% endif %}
-					href="{{ item.ins-url }}"></a>
+					href="{{ image.ins-url }}"></a>
 				{% endif %}
 			</figcaption>
 		</figure></li>
@@ -286,38 +237,38 @@ edit-date: 2025-09-07
 	<section id="aesthetic">
 	<h3>Æsthetic</h3>
 	<ul class="img-grid hover-zoom img-capts">
-		{% for item in site.data.gallery-buttons %}
-		{% if item.image and item.cat == "a" or item.cat == "u"  %}
+		{% for image in site.data.gallery-buttons %}
+		{% if image.url and image.cat == "a" or image.cat == "u"  %}
 		<li><figure>
-			<a{% if item.lnk-url != nil %}
-					href="{{ item.lnk-url }}"{% endif %}
-				{% if item.astyle != nil %}
-					style="{{ item.astyle }}"{% endif %}>
+			<a{% if image.lnk-url != nil %}
+					href="{{ image.lnk-url }}"{% endif %}
+				{% if image.astyle != nil %}
+					style="{{ image.astyle }}"{% endif %}>
 			<img
-					src="/assets/images/buttons/{% if item.cat == "u"  %}music/{% endif %}{{ item.image }}.{{ item.ext | default: 'png' }}"
-				{% if item.title != nil %}
-				title="{{ item.title }}"
+					src="/assets/images/buttons/{% if image.cat == "u"  %}music/{% endif %}{{ image.url }}.{{ image.ext | default: 'png' }}"
+				{% if image.title != nil %}
+				title="{{ image.title }}"
 				{% endif %}
-				class="btn-88x31 {% if item.smooth == 'y' %}smooth-zoom{% endif %}
-					{% if item.anim == 'y' %}anim{% endif %}"
-				alt="{{ item.alt }}" />
+				class="btn-88x31 {% if image.smooth == 'y' %}smooth-zoom{% endif %}
+					{% if image.anim == 'y' %}anim{% endif %}"
+				alt="{{ image.alt }}" />
 			<figcaption class="img-caption">
-				{% if item.src == "s" %}
+				{% if image.src == "s" %}
 				<a class="src z"
-					href="/assets/images/buttons/{{ item.image }}.ase"></a>
-				{% elsif item.src-url != nil %}
-				<a class="src {{ item.src }}"
-					href="{{ item.src-url }}"></a>
+					href="/assets/images/buttons/{{ image.url }}.ase"></a>
+				{% elsif image.src-url != nil %}
+				<a class="src {{ image.src }}"
+					href="{{ image.src-url }}"></a>
 				{% else %}
-				<a class="src {{ item.src }}"></a>
+				<a class="src {{ image.src }}"></a>
 				{% endif %}
-				{% if item.ins-url != nil %}
+				{% if image.ins-url != nil %}
 				<span class="sep"></span>
 				<a class="i"
-				{% if item.ins-ttl != nil %}
-					title="{{ item.ins-ttl }}"
+				{% if image.ins-ttl != nil %}
+					title="{{ image.ins-ttl }}"
 				{% endif %}
-					href="{{ item.ins-url }}"></a>
+					href="{{ image.ins-url }}"></a>
 				{% endif %}
 			</figcaption>
 		</figure></li>
@@ -351,37 +302,37 @@ edit-date: 2025-09-07
 	<section id="message">
 	<h3>Message</h3>
 	<ul class="img-grid hover-zoom img-capts">
-		{% for item in site.data.gallery-buttons %}
-		{% if item.image and item.cat == "m" and item.res == nil %}
-		<li id="{{ item.image | slugify: "ascii" }}"><figure>
-			<a{% if item.lnk-url != nil %}
-					href="{{ item.lnk-url }}"{% endif %}
-				{% if item.astyle != nil %}
-					style="{{ item.astyle }}"{% endif %}>
-			<img src="/assets/images/buttons/{{ item.image }}.{{ item.ext | default: 'png' }}"
-				{% if item.title != nil %}
-				title="{{ item.title }}"
+		{% for image in site.data.gallery-buttons %}
+		{% if image.url and image.cat == "m" and image.res == nil %}
+		<li id="{{ image.url | slugify: "ascii" }}"><figure>
+			<a{% if image.lnk-url != nil %}
+					href="{{ image.lnk-url }}"{% endif %}
+				{% if image.astyle != nil %}
+					style="{{ image.astyle }}"{% endif %}>
+			<img src="/assets/images/buttons/{{ image.url }}.{{ image.ext | default: 'png' }}"
+				{% if image.title != nil %}
+				title="{{ image.title }}"
 				{% endif %}
-				class="btn-88x31 {% if item.smooth == 'y' %}smooth-zoom{% endif %}
-					{% if item.anim == 'y' %}anim{% endif %}"
-				alt="{{ item.alt }}" />
+				class="btn-88x31 {% if image.smooth == 'y' %}smooth-zoom{% endif %}
+					{% if image.anim == 'y' %}anim{% endif %}"
+				alt="{{ image.alt }}" />
 			<figcaption class="img-caption">
-				{% if item.src == "s" %}
+				{% if image.src == "s" %}
 				<a class="src z"
-					href="/assets/images/buttons/{{ item.image }}.ase"></a>
-				{% elsif item.src-url != nil %}
-				<a class="src {{ item.src }}"
-					href="{{ item.src-url }}"></a>
+					href="/assets/images/buttons/{{ image.url }}.ase"></a>
+				{% elsif image.src-url != nil %}
+				<a class="src {{ image.src }}"
+					href="{{ image.src-url }}"></a>
 				{% else %}
-				<a class="src {{ item.src }}"></a>
+				<a class="src {{ image.src }}"></a>
 				{% endif %}
-				{% if item.ins-url != nil %}
+				{% if image.ins-url != nil %}
 				<span class="sep"></span>
 				<a class="i"
-				{% if item.ins-ttl != nil %}
-					title="{{ item.ins-ttl }}"
+				{% if image.ins-ttl != nil %}
+					title="{{ image.ins-ttl }}"
 				{% endif %}
-					href="{{ item.ins-url }}"></a>
+					href="{{ image.ins-url }}"></a>
 				{% endif %}
 			</figcaption>
 		</figure></li>
@@ -392,37 +343,37 @@ edit-date: 2025-09-07
 	<section id="games">
 	<h3>Games</h3>
 	<ul class="img-grid hover-zoom img-capts">
-		{% for item in site.data.gallery-buttons %}
-		{% if item.image and item.cat == "g" and item.res == nil %}
-		<li id="{{ item.image | slugify: "ascii" }}"><figure>
-			<a{% if item.lnk-url != nil %}
-					href="{{ item.lnk-url }}"{% endif %}
-				{% if item.astyle != nil %}
-					style="{{ item.astyle }}"{% endif %}>
-			<img src="/assets/images/buttons/games/{{ item.image }}.{{ item.ext | default: 'png' }}"
-				{% if item.title != nil %}
-				title="{{ item.title }}"
+		{% for image in site.data.gallery-buttons %}
+		{% if image.url and image.cat == "g" and image.res == nil %}
+		<li id="{{ image.url | slugify: "ascii" }}"><figure>
+			<a{% if image.lnk-url != nil %}
+					href="{{ image.lnk-url }}"{% endif %}
+				{% if image.astyle != nil %}
+					style="{{ image.astyle }}"{% endif %}>
+			<img src="/assets/images/buttons/games/{{ image.url }}.{{ image.ext | default: 'png' }}"
+				{% if image.title != nil %}
+				title="{{ image.title }}"
 				{% endif %}
-				class="btn-88x31 {% if item.smooth == 'y' %}smooth-zoom{% endif %}
-					{% if item.anim == 'y' %}anim{% endif %}"
-				alt="{{ item.alt }}" />
+				class="btn-88x31 {% if image.smooth == 'y' %}smooth-zoom{% endif %}
+					{% if image.anim == 'y' %}anim{% endif %}"
+				alt="{{ image.alt }}" />
 			<figcaption class="img-caption">
-				{% if item.src == "s" %}
+				{% if image.src == "s" %}
 				<a class="src z"
-					href="/assets/images/buttons/games{{ item.image }}.ase"></a>
-				{% elsif item.src-url != nil %}
-				<a class="src {{ item.src }}"
-					href="{{ item.src-url }}"></a>
+					href="/assets/images/buttons/games{{ image.url }}.ase"></a>
+				{% elsif image.src-url != nil %}
+				<a class="src {{ image.src }}"
+					href="{{ image.src-url }}"></a>
 				{% else %}
-				<a class="src {{ item.src }}"></a>
+				<a class="src {{ image.src }}"></a>
 				{% endif %}
-				{% if item.ins-url != nil %}
+				{% if image.ins-url != nil %}
 				<span class="sep"></span>
 				<a class="i"
-				{% if item.ins-ttl != nil %}
-					title="{{ item.ins-ttl }}"
+				{% if image.ins-ttl != nil %}
+					title="{{ image.ins-ttl }}"
 				{% endif %}
-					href="{{ item.ins-url }}"></a>
+					href="{{ image.ins-url }}"></a>
 				{% endif %}
 			</figcaption>
 		</figure></li>
@@ -433,37 +384,37 @@ edit-date: 2025-09-07
 	<section id="brands">
 	<h3>Brands</h3>
 	<ul class="img-grid hover-zoom img-capts">
-		{% for item in site.data.gallery-buttons %}
-		{% if item.image and item.cat == "b" and item.res == nil or item.res != inf %}
-		<li id="{{ item.image | slugify: "ascii" }}"><figure>
-			<a{% if item.lnk-url != nil %}
-					href="{{ item.lnk-url }}"{% endif %}
-				{% if item.astyle != nil %}
-					style="{{ item.astyle }}"{% endif %}>
-			<img src="/assets/images/buttons/brands/{{ item.image }}.{{ item.ext | default: 'png' }}"
-				{% if item.title != nil %}
-				title="{{ item.title }}"
+		{% for image in site.data.gallery-buttons %}
+		{% if image.url and image.cat == "b" and image.res == nil or image.res != inf %}
+		<li id="{{ image.url | slugify: "ascii" }}"><figure>
+			<a{% if image.lnk-url != nil %}
+					href="{{ image.lnk-url }}"{% endif %}
+				{% if image.astyle != nil %}
+					style="{{ image.astyle }}"{% endif %}>
+			<img src="/assets/images/buttons/brands/{{ image.url }}.{{ image.ext | default: 'png' }}"
+				{% if image.title != nil %}
+				title="{{ image.title }}"
 				{% endif %}
-				class="btn-88x31 {% if item.smooth == 'y' %}smooth-zoom{% endif %}
-					{% if item.anim == 'y' %}anim{% endif %}"
-				alt="{{ item.alt }}" />
+				class="btn-88x31 {% if image.smooth == 'y' %}smooth-zoom{% endif %}
+					{% if image.anim == 'y' %}anim{% endif %}"
+				alt="{{ image.alt }}" />
 			<figcaption class="img-caption">
-				{% if item.src == "s" %}
+				{% if image.src == "s" %}
 				<a class="src z"
-					href="/assets/images/buttons/brands{{ item.image }}.ase"></a>
-				{% elsif item.src-url != nil %}
-				<a class="src {{ item.src }}"
-					href="{{ item.src-url }}"></a>
+					href="/assets/images/buttons/brands{{ image.url }}.ase"></a>
+				{% elsif image.src-url != nil %}
+				<a class="src {{ image.src }}"
+					href="{{ image.src-url }}"></a>
 				{% else %}
-				<a class="src {{ item.src }}"></a>
+				<a class="src {{ image.src }}"></a>
 				{% endif %}
-				{% if item.ins-url != nil %}
+				{% if image.ins-url != nil %}
 				<span class="sep"></span>
 				<a class="i"
-				{% if item.ins-ttl != nil %}
-					title="{{ item.ins-ttl }}"
+				{% if image.ins-ttl != nil %}
+					title="{{ image.ins-ttl }}"
 				{% endif %}
-					href="{{ item.ins-url }}"></a>
+					href="{{ image.ins-url }}"></a>
 				{% endif %}
 			</figcaption>
 		</figure></li>
@@ -477,37 +428,37 @@ edit-date: 2025-09-07
 		i now realise lemmy is a pile of shit, but unfortunately i'm really pleased with these buttons so i'm keeping them">Lemmy</abbr>
 	</h3>
 	<ul class="img-grid hover-zoom img-capts">
-		{% for item in site.data.gallery-buttons %}
-		{% if item.image and item.cat == "l"  %}
-		<li id="{{ item.image | slugify: "ascii" }}"><figure>
-			<a{% if item.lnk-url != nil %}
-					href="{{ item.lnk-url }}"{% endif %}
-				{% if item.astyle != nil %}
-					style="{{ item.astyle }}"{% endif %}>
-			<img src="/assets/images/buttons/external/{{ item.image }}.{{ item.ext | default: 'png' }}"
-				{% if item.title != nil %}
-				title="{{ item.title }}"
+		{% for image in site.data.gallery-buttons %}
+		{% if image.url and image.cat == "l"  %}
+		<li id="{{ image.url | slugify: "ascii" }}"><figure>
+			<a{% if image.lnk-url != nil %}
+					href="{{ image.lnk-url }}"{% endif %}
+				{% if image.astyle != nil %}
+					style="{{ image.astyle }}"{% endif %}>
+			<img src="/assets/images/buttons/external/{{ image.url }}.{{ image.ext | default: 'png' }}"
+				{% if image.title != nil %}
+				title="{{ image.title }}"
 				{% endif %}
-				class="btn-88x31 {% if item.smooth == 'y' %}smooth-zoom{% endif %}
-					{% if item.anim == 'y' %}anim{% endif %}"
-				alt="{{ item.alt }}" />
+				class="btn-88x31 {% if image.smooth == 'y' %}smooth-zoom{% endif %}
+					{% if image.anim == 'y' %}anim{% endif %}"
+				alt="{{ image.alt }}" />
 			<figcaption class="img-caption">
-				{% if item.src == "s" %}
+				{% if image.src == "s" %}
 				<a class="src z"
-					href="/assets/images/buttons/external/{{ item.image }}.ase"></a>
-				{% elsif item.src-url != nil %}
-				<a class="src {{ item.src }}"
-					href="{{ item.src-url }}"></a>
+					href="/assets/images/buttons/external/{{ image.url }}.ase"></a>
+				{% elsif image.src-url != nil %}
+				<a class="src {{ image.src }}"
+					href="{{ image.src-url }}"></a>
 				{% else %}
-				<a class="src {{ item.src }}"></a>
+				<a class="src {{ image.src }}"></a>
 				{% endif %}
-				{% if item.ins-url != nil %}
+				{% if image.ins-url != nil %}
 				<span class="sep"></span>
 				<a class="i"
-				{% if item.ins-ttl != nil %}
-					title="{{ item.ins-ttl }}"
+				{% if image.ins-ttl != nil %}
+					title="{{ image.ins-ttl }}"
 				{% endif %}
-					href="{{ item.ins-url }}"></a>
+					href="{{ image.ins-url }}"></a>
 				{% endif %}
 			</figcaption>
 		</figure></li>
@@ -754,147 +705,175 @@ edit-date: 2025-09-07
 			</figcaption>
 		</figure></li>
 	</ul>
-</article>
-
-<article id="stamps">
-	<header>
-		<h1>Stamps</h1>
-	</header>
+	<hr>
+	<p>
+		i've tried to go for quality over quantity here, but for those who want
+		as many buttons as possible, here are some sites for that:
+	</p>
+	<ul class="img-grid hover-zoom img-capts">
+		<li><figure>
+			<a href="https://capstasher.neocities.org/88x31collection-page1.html">
+				<img src="/assets/images/buttons/bookmarks/buttons/cap-stasher.png"
+					alt="cap stasher's corner" class="btn-88x31 smooth-zoom"
+					title="6000 buttons and counting" />
+			</a>
+				<figcaption class="img-caption">cap stasher</figcaption>
+		</figure></li>
+		<li><figure>
+			<a href="https://hellnet.work/8831//">
+				<img src="/assets/images/buttons/bookmarks/buttons/hellnet.png"
+					alt="search" class="btn-88x31 smooth-zoom"
+					title="massive (31'119) archive from geocities" />
+			</a>
+			<figcaption class="img-caption">hellnet.work</figcaption>
+		</figure></li>
+	</ul>
 	<details class="text-width">
-		<summary>
-			for those wanting a stamp template, this is free to use - the colours
-			are to make it easier to see, change the colours in your own image
+		<summary class="h-summ">
+			Others:
 		</summary>
-		<img src="/assets/images/stamps/frame-template.png"
-		style="display: block; margin-inline: auto;" alt="template" />
-
-		the corners are slightly unorthodox, but they look a little better than
-		standard, i think
+		<ul class="img-grid hover-zoom img-capts">
+			<li><figure>
+				<a href="https://88by31.neocities.org/">
+					<img src="/assets/images/buttons/bookmarks/buttons/88by31.png"
+						alt="88by31" class="btn-88x31"
+						title="separated by category (i like the games section)" />
+				</a>
+				<figcaption class="img-caption">88by31</figcaption>
+			</figure></li>
+			<li><figure>
+				<a href="https://anlucas.neocities.org/88x31Buttons.html">
+					<img src="/assets/images/buttons/bookmarks/buttons/anlucas.png"
+					alt="anlucas" class="btn-88x31 anim"
+					title="and the second biggest collection" />
+				</a>
+				<figcaption class="img-caption">a.n. lucas</figcaption>
+			</figure></li>
+			<li><figure>
+				<a href="https://web.archive.org/web/20010223235826/http://www.elnet.com/~drealbob/rw/antibutton/">
+					<img src="/assets/images/buttons/bookmarks/buttons/nobut.png"
+						alt="the anti-button campaign" class="btn-88x31 smooth-zoom"
+						title="oddly named, but sizeable collection" />
+				</a>
+				<figcaption class="img-caption">anti-button</figcaption>
+			</figure></li>
+			<li><figure>
+				<a href="https://bytemoth.neocities.org/88s/">
+					<img src="/assets/images/buttons/bookmarks/bytemoth.png"
+						alt="the anti-button campaign" class="btn-88x31 smooth-zoom"
+						title="also see the overhomepage" />
+				</a>
+				<figcaption class="img-caption">bytemoth</figcaption>
+			</figure></li>
+			<li><figure>
+				<a href="https://exo.pet#buttonzone">
+					<img src="/assets/images/buttons/bookmarks/buttons/exo.png"
+						alt="exo.pet" class="btn-88x31 anim"
+						title="quite large compiled collection of nice buttons" />
+				</a>
+				<figcaption class="img-caption">exo.pet</figcaption>
+			</figure></li>
+			<li><figure>
+				<a href="https://loa2k.neocities.org/">
+					<img src="/assets/images/buttons/bookmarks/buttons/loa2k.png"
+						alt="loa2k" class="btn-88x31"
+						title="some /really/ nice synthwave/electronica buttons" />
+				</a>
+				<figcaption class="img-caption">88by31</figcaption>
+			</figure></li>
+			<li><figure>
+				<a href="https://web.archive.org/web/19990129040545/http://www.geocities.com/NapaValley/2022/88x31.html">
+					<img src="/assets/images/buttons/bookmarks/buttons/chaz8831.png"
+						alt="chaz 'hazel'" class="btn-88x31 smooth-zoom"
+						title="categorised collection from 1997" />
+				</a>
+				<figcaption class="img-caption">chaz "hazel"</figcaption>
+			</figure></li>
+			<li><figure>
+				<a href="https://cyber.dabamos.de/88x31/">
+					<img src="/assets/images/buttons/bookmarks/buttons/dabamos.png"
+						alt="the cyber vanguard" class="btn-88x31"
+						title="more than 3'500 classic buttons" />
+				</a>
+				<figcaption class="img-caption">cyber</figcaption>
+			</figure></li>
+			<li><figure>
+				<a href="https://web.archive.org/web/20010607032300/http://www.dds.nl/~dimitri/buttons/index2.htm">
+					<img src="/assets/images/buttons/bookmarks/buttons/dmitri.png"
+						alt="buttons now" class="btn-88x31" />
+				</a>
+				<figcaption class="img-caption">dmitri</figcaption>
+			</figure></li>
+			<li><figure>
+				<a href="http://www.hoary.org/now/index.html">
+					<img src="/assets/images/buttons/bookmarks/buttons/hoaryape.png"
+						alt="hoary ape" class="btn-88x31 smooth-zoom"
+						title="mainly netscape and parodies, 4th page is other brands" />
+				</a>
+				<figcaption class="img-caption">hoary ape</figcaption>
+			</figure></li>
+			<li><figure>
+				<a href="https://88x31.kate.pet/">
+					<img src="/assets/images/buttons/bookmarks/buttons/kate.png"
+						alt="kate.pet" class="btn-88x31"
+						title="small selection, but some i've seen nowhere else" />
+				</a>
+				<figcaption class="img-caption">kate.pet</figcaption>
+			</figure></li>
+			<li><figure>
+				<a href="https://neonaut.neocities.org/cyber/88x31.html">
+					<img src="/assets/images/buttons/bookmarks/buttons/neonaut.png"
+						alt="neonaut" class="btn-88x31"
+						title="personal sites" />
+				</a>
+				<figcaption class="img-caption">neonaut</figcaption>
+			</figure></li>
+		</ul>
+		<h4 title=":-(">Extinct</h4>
+		<ul class="img-grid hover-zoom img-capts">
+		<li><figure>
+			<a href="https://31search.7m.pl/">
+				<img src="/assets/images/buttons/bookmarks/buttons/31search.png"
+					alt="search" class="btn-88x31 smooth-zoom"
+					title="search engine for buttons" />
+			</a>
+			<figcaption class="img-caption">31search</figcaption>
+		</figure></li>
+			<li><figure>
+				<a href="https://buttonwall.neocities.org/">
+					<img src="/assets/images/buttons/bookmarks/buttons/buttonwall.png"
+						alt="broken img icon (the image on the page doesn't work"
+						class="btn-88x31"
+						title="4000 buttons in alphabetical order"/>
+				</a>
+				<figcaption class="img-caption">mace486</figcaption>
+			</figure></li>
+			<li><figure>
+				<a href="https://roly.neocities.org/v8/88x31s/index.html">
+					<img src="/assets/images/buttons/bookmarks/buttons/roly.png"
+						alt="roly" class="btn-88x31 anim"
+						title="dead (not archived?), but kitecreature has fewer buttons" />
+				</a>
+				<figcaption class="img-caption">roly (dead)</figcaption>
+			</figure></li>
+			<li><figure>
+				<a href="https://kitecreature.net/buttons/">
+					<img src="/assets/images/buttons/bookmarks/buttons/kitecreature.png"
+						alt="kitecreature.net" class="btn-88x31"
+						title="assorted, in a tiny box" />
+				</a>
+				<figcaption class="img-caption">kitecreature</figcaption>
+			</figure></li>
+			<li><figure>
+				<a href="https://realsast.ga/buttons/">
+					<img src="/assets/images/buttons/bookmarks/buttons/realgast.png"
+						alt="simon's buttons" class="btn-88x31 smooth-zoom"
+						title="original 90s style buttons"/>
+				</a>
+				<figcaption class="img-caption">realgast</figcaption>
+			</figure></li>
+		</ul>
 	</details>
-	<h2>99x56</h2>
-	<ul class="img-grid hover-zoom img-capts">
-		{% for image in site.data.gallery-stamps %}
-		{% if image.url and image.res == nil %}
-		<li><figure>
-			{% if image.lnk-url != nil %}
-			<a href="{{ image.lnk-url }}">
-			{% endif %}
-			<img src="/assets/images/stamps/{{ image.url }}.png"
-				{% if image.title != nil %}
-				title="{{ image.title }}"
-				{% endif %}
-				class="stamp-99x56 {% if image.smooth %}smooth-zoom{% endif %}
-					{% if image.anim %}anim{% endif %}"
-				alt="{{ image.alt }}" />
-			{% if image.lnk-url != nil %}
-			</a>
-			{% endif %}
-			<figcaption class="img-caption">
-				{% if image.src-url != nil %}
-				<a class="src {{ image.src }}"
-					href="{{ image.src-url }}"></a>
-				{% elsif image.src == "s" %}
-				<a class="src z"
-					href="/assets/images/stamps/{{ image.url }}.ase"></a>
-				{% else %}
-				<a class="src {{ image.src }}"></a>
-				{% endif %}
-				{% if image.ins-url != nil %}
-				<span class="sep"></span>
-				<a class="i"
-				{% if image.ins-ttl != nil %}
-					title="{{ image.ins-ttl }}"
-				{% endif %}
-					href="{{ image.ins-url }}"></a>
-				{% endif %}
-			</figcaption>
-		</figure></li>
-		{% endif %}
-		{% endfor %}
-	</ul>
-
-	<h2>Other</h2>
-	<ul class="img-grid hover-zoom img-capts">
-		{% for image in site.data.gallery-stamps %}
-		{% if image.url and image.res == "other" %}
-		<li><figure>
-			{% if image.lnk-url != nil %}
-			<a href="{{ image.lnk-url }}">
-			{% endif %}
-			<img src="/assets/images/stamps/{{ image.url }}.png"
-				{% if image.title != nil %}
-				title="{{ image.title }}"
-				{% endif %}
-				class="{% if image.smooth %}smooth-zoom{% else %}pixel-art{% endif %}
-					{% if image.anim %}anim{% endif %}"
-				alt="{{ image.alt }}" />
-			{% if image.lnk-url != nil %}
-			</a>
-			{% endif %}
-			<figcaption class="img-caption">
-				{% if image.src-url != nil %}
-				<a class="src {{ image.src }}"
-					href="{{ image.src-url }}"></a>
-				{% elsif image.src == "s" %}
-				<a class="src z"
-					href="/assets/images/stamps/{{ image.url }}.ase"></a>
-				{% else %}
-				<a class="src {{ image.src }}"></a>
-				{% endif %}
-				{% if image.ins-url != nil %}
-				<span class="sep"></span>
-				<a class="i"
-				{% if image.ins-ttl != nil %}
-					title="{{ image.ins-ttl }}"
-				{% endif %}
-					href="{{ image.ins-url }}"></a>
-				{% endif %}
-			</figcaption>
-		</figure></li>
-		{% endif %}
-		{% endfor %}
-	</ul>
-
-	<ul class="img-grid hover-zoom img-capts">
-		{% for images in site.data.gallery-stamps %}
-		{% if image.url and image.res == "other" %}
-		<li><figure>
-			{% if image.lnk-url != nil %}
-			<a href="{{ image.lnk-url }}">
-			{% endif %}
-			<img src="/assets/images/stamps/{{ image.url }}.png"
-				{% if image.title != nil %}
-				title="{{ image.title }}"
-				{% endif %}
-				class="{% if image.smooth %}smooth-zoom{% else %}pixel-art{% endif %}
-					{% if image.anim %}anim{% endif %}"
-				alt="{{ image.alt }}" />
-			{% if image.lnk-url != nil %}
-			</a>
-			{% endif %}
-			<figcaption class="img-caption">
-				{% if image.src-url != nil %}
-				<a class="src {{ image.src }}"
-					href="{{ image.src-url }}"></a>
-				{% elsif image.src == "s" %}
-				<a class="src z"
-					href="/assets/images/stamps/{{ image.url }}.ase"></a>
-				{% else %}
-				<a class="src {{ image.src }}"></a>
-				{% endif %}
-				{% if image.ins-url != nil %}
-				<span class="sep"></span>
-				<a class="i"
-				{% if image.ins-ttl != nil %}
-					title="{{ image.ins-ttl }}"
-				{% endif %}
-					href="{{ image.ins-url }}"></a>
-				{% endif %}
-			</figcaption>
-		</figure></li>
-		{% endif %}
-		{% endfor %}
-	</ul>
 </article>
 
 <article id="codes">

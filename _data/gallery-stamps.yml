@@ -535,13 +535,6 @@
   src: z
 
 - image:
-  url: portal-left
-  smooth: y
-  alt: "left half of portal logo, protruding through a portal"
-  src: v
-  src-url: "https://www.deviantart.com/sparklum/art/Portal-Stamp-Blue-209870753"
-
-- image:
   url: planet-b
   smooth: y
   alt: "there is no planet b stamp"
@@ -556,6 +549,13 @@
   src: s
 
 - image:
+  url: portal-left
+  smooth: y
+  alt: "left half of portal logo, protruding through a portal"
+  src: v
+  src-url: "https://www.deviantart.com/sparklum/art/Portal-Stamp-Blue-209870753"
+
+- image:
   url: prie-dieu
   anim: y
   alt: "lighting a prie-dieu stamp (blasphemous)"
@@ -568,13 +568,6 @@
   alt: "psp startup animation stamp"
   src: v
   src-url: "https://www.deviantart.com/byte-byte/art/Stamp-PSP-460345147"
-
-- image:
-  url: portal-right
-  smooth: y
-  alt: "right half of portal logo, protruding through a portal"
-  src: v
-  src-url: "https://www.deviantart.com/sparklum/art/Portal-Stamp-Orange-209870758"
 
 - image:
   url: purple-sun
@@ -620,6 +613,13 @@
   smooth: y
   alt: "'RUN CMD' (RUN DMC parody) stamp"
   src: z
+
+- image:
+  url: portal-right
+  smooth: y
+  alt: "right half of portal logo, protruding through a portal"
+  src: v
+  src-url: "https://www.deviantart.com/sparklum/art/Portal-Stamp-Orange-209870758"
 
 - image:
   url: seal
