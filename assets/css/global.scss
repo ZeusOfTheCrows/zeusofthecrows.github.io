@@ -14,6 +14,9 @@
 	scroll-padding-top: 10vh;
 	--header-colour: black;
 	--accent-colour: var(--s-org);
+	--content-background-radius: 32px;
+	--content-background-width: 120ch;
+	--text-max-width: 80ch;
 
 	--d-red: #CC241D;
 	--d-grn: #98971A;
@@ -73,7 +76,7 @@
 
 	}
 }
-
+/*
 body:has(option[value="gb"]:checked) {
 	--d-red: #DF382C;
 	--d-grn: #4E9A06;
@@ -102,7 +105,7 @@ body:has(option[value="gb"]:checked) {
 	--fg-2: #DFDBD2;
 	--fg-1: #EBEBEB;
 	--fg-0: #FFFFFF;
-}
+}*/
 /* ========================== accessibility styles ========================== */
 
 @media (prefers-reduced-motion) {
@@ -118,22 +121,22 @@ body:has(option[value="gb"]:checked) {
 /* ======================== header? ========================= */
 
 
-	@font-face {
-		font-family: 'Gaston Opti';
-		src:
-			url('/assets/fonts/retro/gaston-opti.woff2') format('woff2'),
-			url('/assets/fonts/retro/gaston-opti.woff') format('woff');
-		font-weight: normal;
-		font-style: normal;
-	}
-	@font-face {
-		font-family: 'Motter Ombra';
-		src:
-			url('/assets/fonts/retro/motter-ombra.woff2') format('woff2'),
-			url('/assets/fonts/retro/motter-ombra.woff') format('woff');
-		font-weight: normal;
-		font-style: normal;
-	}
+@font-face {
+	font-family: 'Gaston Opti';
+	src:
+		url('/assets/fonts/retro/gaston-opti.woff2') format('woff2'),
+		url('/assets/fonts/retro/gaston-opti.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Motter Ombra';
+	src:
+		url('/assets/fonts/retro/motter-ombra.woff2') format('woff2'),
+		url('/assets/fonts/retro/motter-ombra.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
 
 body>header {
 		background-color: black;
@@ -266,7 +269,6 @@ body>header {
 		}
 }
 
-
 /* ======================== element generic styles ========================= */
 
 html,
@@ -285,7 +287,7 @@ html {
 		color: var(--bg-0);
 		// doesn't work in ff? even with !important
 		text-decoration-color: var(--bg-0);
-		background-color: var(--strong-accent);
+		background-color: var(--strong-accent, var(--s-blu, blue));
 	}
 
 	/* colour scrollbars with css */
@@ -314,6 +316,7 @@ body {
 	padding:0;
 	border:0;
 	text-align: justify;
+	background-attachment: fixed;
 }
 
 /*
@@ -323,7 +326,7 @@ h3, .h-summ { font-size: 1.8em; }
 h4 { font-size: 1.6em; }
 h5 { font-size: 1.4em; }
 h6 { font-size: 1.2em; }*/
-
+/*
 .h-summ {
 	margin-inline: 0.5em;
 	font-family: var(--fnt-serif);
@@ -332,7 +335,7 @@ h6 { font-size: 1.2em; }*/
 	&:target {
 		color: var(--s-grn);
 	}
-}
+}*/
 
 /*
 hr {
@@ -485,6 +488,8 @@ code {  // code formating below
 		filter 0.25s ease;
 
 	&:hover,
+	&:focus,
+	&:focus-within,
 	&:active {
 		color: revert-layer;
 		filter: none;
@@ -587,8 +592,8 @@ code {
 	height: 50px;
 }
 
-[classs^="btn"],
-[classs^="stamp"],
+[class^="btn"],
+[class^="stamp"],
 .tower,
 .pixel-art,
 .desktop-icon img, {
@@ -614,7 +619,6 @@ img.smooth-zoom {
 
 	& li {
 		display: inline-block;
-		// ~~i don't know why, but inline-block aligns to bottom~~ fixed:
 		vertical-align: top;
 		& a {
 			text-decoration: none;
@@ -732,6 +736,7 @@ textarea {
 body {
   display: grid;
   grid-template-columns: 1fr auto var(--body-hor-offset, 1fr);
+	// background-color: var(--content-background-colour, var(--bg-1, black));
 
 	&>nav {
 		grid-column: 2 / 2;
@@ -764,11 +769,9 @@ body {
 
 	&>main {
 		grid-column: 2 / 2;
-		max-width: 120ch;
-
-		&>article {
-			// padding-inline: 2ch;
-		}
+		max-width: var(--content-background-width);
+		border-bottom-left-radius:  var(--content-background-radius, 0);
+		border-bottom-right-radius: var(--content-background-radius, 0);
 	}
 
 	&>footer {
@@ -783,7 +786,7 @@ body {
 		border-top-left-radius:  var(--content-background-radius, 0);
 		border-top-right-radius: var(--content-background-radius, 0);
 
-		background-color: var(--content-background, var(--bg-1, black));
+		background-color: var(--content-background-colour, var(--bg-1, black));
 		// backdrop-filter: blur(25px);
 		// border-top-left-radius:  8px;
 		// border-top-right-radius: 8px;

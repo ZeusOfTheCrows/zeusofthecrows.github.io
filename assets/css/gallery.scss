@@ -3,98 +3,139 @@
 /* ---------------------------- windows ----------------------------- */
 
 :root {
-	--titlebar-col: linear-gradient(90deg, var(--s-ppl), var(--d-ppl));
-
-	--dsk-bg-img:
-		linear-gradient(
-			to bottom right,
-			var(--d-red),
-			var(--d-org),
-			var(--d-ylw),
-			var(--d-grn),
-			var(--d-blu),
-			var(--d-ppl),
-			var(--d-ppl));
+	--content-background-colour: black;
+	--content-background-radius: 8px;
 }
 
+body {
+	/* web named colours were placeholder colours, but they look good enough to keep */
+	background-image:
+		radial-gradient(circle at 50% 50%, #fff3 35%, #e903 45%, #4084 calc(45% + 1px), #110008cc 60%, #000 70%),
+		linear-gradient(to top left, transparent, red, transparent, red, transparent),
+		linear-gradient(to top right, red, orange, goldenrod, orange, red, orange, goldenrod, orange, red);
+	background-size: 192px 192px, 200% 200%, 200% 200%;
+	animation: gradient 20s linear infinite;
+	background-attachment: fixed;
+	background-repeat: round;
+}
 
-.window-content {
-		& .img-grid.hover-zoom {
-			padding-inline: 16px;
-			box-sizing: border-box;
+@keyframes gradient {
+	0%   { background-position: 0 0, 0% -100%, 0% -100%; }
+	100% { background-position: 0 0, 0%  100%, 0%  100%; }
+}
+
+main {
+	backdrop-filter: blur(20px);
+	background-color: #000a;
+	background-image: url(/assets/images/backgrounds/texture.png);
+	background-blend-mode: multiply;
+	box-shadow: inset 0px 0px 16px black, inset 0px 0px 8px black;
+	border: 1px solid #ffffff30;
+	border-top: none;
+	--fg-1: white;
+	--fg-0: white;
+}
+
+main>article>.text-width,
+main>article>p {
+	max-width: var(--text-max-width);
+	margin-inline: auto;
+}
+header,h1,h2,h3,h4,h5,h6,details {
+	text-align: center;
+	text-wrap: balance;
+}
+#contents {
+	max-width: max-content;
+	margin-inline: auto;
+	text-align: left;
+}
+
+.img-grid {
+	max-width: 100%;
+}
+
+.img-grid.hover-zoom {
+	padding-inline: 16px;
+	box-sizing: border-box;
+}
+
+.img-grid.img-capts {
+	// caption is centred due to img-grid being centred
+	li {
+		padding-inline: 2px;
+	}
+	figure {
+		margin: 0;
+	}
+	img {
+		display: block;  // force caption to display on next line
+	}
+	.img-caption {  // hide caption by default
+		transition: opacity 0.1s ease-in-out;
+		opacity: 0;
+	}
+	& li:hover .img-caption,
+	li:focus-within .img-caption {  // but show it on hover/focus
+		opacity: 1;
+	}
+
+	a:any-link {
+		text-decoration: underline dotted currentColor 2px;
+		font-weight: normal;
+	}
+	a.src {  // unverified source
+		color: var(--s-ylw);
+		&::after {
+			content: "src [~]";
 		}
-
-		& .img-grid.img-capts {
-			// caption is centred due to img-grid being centred
-			& li {
-				padding-inline: 2px;
-			}
-			& figure {
-				margin: 0;
-			}
-			& img {
-				display: block;  // force caption to display on next line
-			}
-			& .img-caption {  // hide caption by default
-				transition: opacity 0.1s ease-in-out;
-				opacity: 0;
-			}
-			& li:hover .img-caption,
-			& li:focus-within .img-caption {  // but show it on hover/focus
-				opacity: 1;
-			}
-
-			& a:any-link {
-				text-decoration: underline dotted currentColor 2px;
-			}
-			& a.src {  // unverified source
-				color: var(--s-ylw);
-				&::after {
-					content: "src [~]";
-				}
-			}
-			& a.v:any-link {  // verified original source
-				color: var(--s-grn);
-				&::after {
-					content: "src [🗸]";
-				}
-			}
-			& a.i {  // design inspiration
-				color: var(--s-aqa);
-				&::after {
-					content: "insp";
-				}
-			}
-			& a.u {  // unknown source (legacy)
-				color: var(--s-red);
-				&::after {
-					content: "src [?]";
-				}
-			}
-			& a.z {  // ~zeus (made by me)
-				color: var(--s-org);
-				&::after {
-					content: "src [ɀ]";
-				}
-			}
+	}
+	a.v:any-link {  // verified original source
+		color: var(--s-grn);
+		&::after {
+			content: "src [🗸]";
 		}
-
-		& p {
-			font-size: 0.9em;
+	}
+	a.i {  // design inspiration
+		color: var(--s-aqa);
+		&::after {
+			content: "insp";
 		}
+	}
+	a.u {  // unknown source (legacy)
+		color: var(--s-red);
+		&::after {
+			content: "src [?]";
+		}
+	}
+	a.z {  // ~zeus (made by me)
+		color: var(--s-org);
+		&::after {
+			content: "src [ɀ]";
+		}
+	}
 
-		& ol {
-			list-style: lower-alpha;
+	&>span.sep::before {
+			content: "–";
+			color: var(--fg-2);
+		}
+}
 
-			& ::marker {
-				color: var(--s-blu);
-			}
+p {
+	font-size: 0.9em;
+}
+
+ol {
+	list-style: lower-greek;
+
+	::marker {
+		// color: var(--s-blu);
 	}
 }
 
 /* ------------------------ specific tweaks ------------------------- */
 
-#other-art .window-content {
+#other-art {
 	& figure {
 		width: min-content;
 	}

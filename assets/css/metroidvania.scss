@@ -1,6 +1,17 @@
 ---
 ---
 
+:root {
+	--content-background-radius: 4px;
+	--content-background-colour: black;
+}
+
+/* light mode colours */
+@media (prefers-color-scheme: light) {
+	:root {
+		--content-background-colour: white;
+	}
+}
 // https://lospec.com/palette-list/nintendo-entertainment-system
 
 @font-face {
@@ -14,91 +25,10 @@
 
 body {
 	background-image: url("/assets/images/shrines/mv/backgrounds/crocomire.png");
-	background-attachment: fixed;
 }
 
 main {
-	max-width: unset;
-	width: min(100vw, 120ch);
-}
-
-main>article {
-	background: black;
-}
-
-/* ZTODO: MAKE THIS A GLOBAL - SOMETHING LIKE LEGIBILITY-TINT-COLOUR */
-@media (prefers-color-scheme: light) {
-	main>article {
-		background: white;
-	}
-}
-
-#m-sm {
-	&>h2 {
-	background-image: url("/assets/images/shrines/mv/backgrounds/m-sm.jpg");
-	}
-	&::before {
-		background-image: url("/assets/images/shrines/mv/backgrounds/m-sm.jpg");
-	}
-}
-
-#m-md {
-	&>h2 {
-	background-image: url("/assets/images/shrines/mv/backgrounds/m-md.jpg");
-	}
-	&::before {
-		background-image: url("/assets/images/shrines/mv/backgrounds/m-md.jpg");
-	}
-}
-
-#m-sr {
-	&>h2 {
-	background-image: url("/assets/images/shrines/mv/backgrounds/m-sr.jpg");
-	}
-	&::before {
-		background-image: url("/assets/images/shrines/mv/backgrounds/m-sr.jpg");
-	}
-}
-
-#m-om {
-	--ftn-subdisplay: "Logbook Prime", serif;
-	& figcaption {
-		font-style: normal;
-		line-height: 1;
-		text-wrap: balance;
-	}
-	&>h2 {
-	// ZTODO THESE ARE NOT VARIABLES DUE TO [UNDOCUMENTED?] SCSS BUG
-	// (CANNOT ASSIGN URL() TO VARIABLE)
-	background-image: url("/assets/images/shrines/mv/backgrounds/m-om.jpg");
-	// this is here so i don't accidentally add it to a section that doesn't have a logo
-	font-size: 0;
-	height: var(--height);
-	}
-	&::before {
-		background-image: url("/assets/images/shrines/mv/backgrounds/m-om.jpg");
-	}
-	&>h2::after {
-		background-image: url("/assets/images/shrines/mv/logos/m-om.png");
-	}
-}
-
-#m-zm {
-	&>h2 {
-	background-image: url("/assets/images/shrines/mv/backgrounds/m-zm.jpg");
-	}
-	&::before {
-		background-image: url("/assets/images/shrines/mv/backgrounds/m-zm.jpg");
-	}
-}
-
-#m-fu {
-	&>h2 {
-	background-image: url("/assets/images/shrines/mv/backgrounds/m-fu.jpg");
-	}
-	&::before {
-		background-image: url("/assets/images/shrines/mv/backgrounds/m-fu.jpg");
-	}
+	background-color: var(--content-background-colour);
 }
 
 main>article>section {
@@ -108,7 +38,7 @@ main>article>section {
 
 	&>*:not(h2) {
 		padding-inline: 2ch;
-		max-width: 80ch;
+		max-width: var(--text-max-width);
 		margin-inline: auto;
 	}
 
@@ -136,7 +66,7 @@ main>article>section {
 		&>figcaption {
 			grid-column: 1 / -1;
 			font-style: italic;
-			font-family: var(--ftn-subdisplay, serif);
+			font-family: var(--fnt-subdisplay, serif);
 		}
 	}
 
@@ -152,7 +82,7 @@ main>article>section {
 		position: relative;
 	}
 	&>h2{
-		mask-image: linear-gradient(black calc(var(--height) - 40px), transparent);
+		mask-image: linear-gradient(black calc(100% - 60px), transparent);
 		&::after {
 			height: 100%;
 			width: 100%;
@@ -207,5 +137,75 @@ main>article>section {
 	}
 	&::after {
 		backdrop-filter: blur(3px);
+	}
+}
+
+/* ============================ specific styles ============================ */
+
+#m-sm {
+	&>h2 {
+	background-image: url("/assets/images/shrines/mv/backgrounds/m-sm.jpg");
+	}
+	&::before {
+		background-image: url("/assets/images/shrines/mv/backgrounds/m-sm.jpg");
+	}
+}
+
+#m-md {
+	&>h2 {
+	background-image: url("/assets/images/shrines/mv/backgrounds/m-md.jpg");
+	}
+	&::before {
+		background-image: url("/assets/images/shrines/mv/backgrounds/m-md.jpg");
+	}
+}
+
+#m-sr {
+	&>h2 {
+	background-image: url("/assets/images/shrines/mv/backgrounds/m-sr.jpg");
+	}
+	&::before {
+		background-image: url("/assets/images/shrines/mv/backgrounds/m-sr.jpg");
+	}
+}
+
+#m-om {
+	--fnt-subdisplay: "Logbook Prime", serif;
+	& figcaption {
+		font-style: normal;
+		line-height: 1;
+		text-wrap: balance;
+	}
+	&>h2 {
+	// ZTODO THESE ARE NOT VARIABLES DUE TO [UNDOCUMENTED?] SCSS BUG
+	// (CANNOT ASSIGN URL() TO VARIABLE)
+	background-image: url("/assets/images/shrines/mv/backgrounds/m-om.jpg");
+	// this is here so i don't accidentally add it to a section that doesn't have a logo
+	font-size: 0;
+	height: var(--height);
+	}
+	&::before {
+		background-image: url("/assets/images/shrines/mv/backgrounds/m-om.jpg");
+	}
+	&>h2::after {
+		background-image: url("/assets/images/shrines/mv/logos/m-om.png");
+	}
+}
+
+#m-zm {
+	&>h2 {
+	background-image: url("/assets/images/shrines/mv/backgrounds/m-zm.jpg");
+	}
+	&::before {
+		background-image: url("/assets/images/shrines/mv/backgrounds/m-zm.jpg");
+	}
+}
+
+#m-fu {
+	&>h2 {
+	background-image: url("/assets/images/shrines/mv/backgrounds/m-fu.jpg");
+	}
+	&::before {
+		background-image: url("/assets/images/shrines/mv/backgrounds/m-fu.jpg");
 	}
 }

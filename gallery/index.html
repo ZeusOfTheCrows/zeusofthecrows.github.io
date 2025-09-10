@@ -5,47 +5,41 @@ title: Image Gallery
 edit-date: 2025-09-07
 ---
 <article>
-	<h1>Image Collection</h1>
-	<p>
-		a collection of images i have made, or scoured from the internet: ones i
-		agree with, like the æsthetic of, or any other reason
-	</p>
-	<p>
-		want a button or stamp of your own? i'll definitely take requests, but bear
-		in mind i'll probably procrastinate for an
-		age (it doesn't have to be a cause i agree with, but there is
-		some shit i won't do {case by case basis})
-	</p>
-		<h2>Contents</h2>
-		<ol id="contents" style="margin-inline: auto;">
-			<li><a href="#buttons">buttons [88x31]</a></li>
-			<li><a href="#stamps" >stamps [99x65]</a></li>
-			<li><a href="#codes" >codes [100x50]</a></li>
-			<li><a href="#blinkies">blinkies [150x20]</a></li>
-			<li><a href="#antipix">antipixels [80x15]</a></li>
-			<li><a href="#other">other sizes</a></li>
-		</ol>
-	<hr />
-	<p>
-		feel free to steal any images you like (and message me with what you
-		do with them!)
-	</p>
+	<header>
+		<h1>Image Collection</h1>
+	</header>
 	<p>
 		hover over each image for more source: green means original creator,
 		yellow means where i found the image.
-		orange means made by me (underlined are links to aseprite <samp>.ase</samp>
-		files), red means unknown source. "insp" means the inspiration for the
-		design (direct or indirect).
+		orange means made by me, (and may link to the source file if i feel it's
+		complex enough to need it – usually aseprite <samp>.ase</samp>
+		files, sometimes gimp <samp>.xcf</samp>), red means unknown source. "insp"
+		means the inspiration for the design (direct or indirect).
 	</p>
 	<p>
 		i hope if i can start this as a trend then it'll be easier to find the
 		original creator; if you take any of these i heartily recommend you do
-		this (even just as an html comment) - i wish i'd done so from the start
+		this (even just as an html comment) - i wish i'd done so from the start, i
+		often wish to revisit the site to find more of the original style
 	</p>
+	<p>
+		feel free to steal any images you like (and message me with what you
+		do with them!)
+	</p>
+	<h2>Sections</h2>
+	<ol id="contents" class="text-width">
+		<li><a href="#buttons">buttons [88x31]</a></li>
+		<li><a href="#stamps" >stamps [99x65]</a></li>
+		<li><a href="#codes" >codes [100x50]</a></li>
+		<li><a href="#blinkies">blinkies [150x20]</a></li>
+		<li><a href="#antipix">antipixels [80x15]</a></li>
+		<li><a href="#other">other art</a></li>
+	</ol>
 	<p>
 		any images not credited on this page, will hopefully have the source in
 		the html:
-	</p><code class="codeblock indent-9x">&lt;img data-img-source=[example.com] /&gt;</code>
+		<code style="text-wrap: nowrap;">&lt;img data-img-source=[example.com] /&gt;</code>
+	</p>
 	<hr />
 	<p>
 		useful tool: a javascript bookmarklet for toggling pixelated and bilinear
@@ -58,6 +52,13 @@ edit-date: 2025-09-07
 	<p>
 		just drag it into your bookmarks bar, name it whatever you'd like,
 		and then click it when you want to trigger it
+	</p>
+	<hr>
+	<p>
+		want a button or stamp of your own? i'll definitely take requests, but bear
+		in mind i'll probably procrastinate for an
+		age (it doesn't have to be a cause i agree with, but there is
+		some shit i won't do {case by case basis})
 	</p>
 </article>
 
@@ -87,7 +88,7 @@ edit-date: 2025-09-07
 			<figcaption class="img-caption">hellnet.work</figcaption>
 		</figure></li>
 	</ul>
-	<details>
+	<details class="text-width">
 		<summary class="h-summ">
 			Others:
 		</summary>
@@ -269,7 +270,7 @@ edit-date: 2025-09-07
 				<a class="src {{ item.src }}"></a>
 				{% endif %}
 				{% if item.ins-url != nil %}
-				{{ page.sep }}
+				<span class="sep"></span>
 				<a class="i"
 				{% if item.ins-ttl != nil %}
 					title="{{ item.ins-ttl }}"
@@ -311,7 +312,7 @@ edit-date: 2025-09-07
 				<a class="src {{ item.src }}"></a>
 				{% endif %}
 				{% if item.ins-url != nil %}
-				{{ page.sep }}
+				<span class="sep"></span>
 				<a class="i"
 				{% if item.ins-ttl != nil %}
 					title="{{ item.ins-ttl }}"
@@ -329,7 +330,7 @@ edit-date: 2025-09-07
 				style="border:none;margin-bottom:-5px;"></iframe>
 			<figcaption class="img-caption">
 				<a class="src z"></a>
-				{{ page.sep }}
+				<span class="sep"></span>
 				<a class="i"
 					href="https://win98icons.alexmeub.com/icons/png/keyboard-4.png"></a>
 			</figcaption>
@@ -340,7 +341,7 @@ edit-date: 2025-09-07
 				style="border:none;margin-bottom:-5px;"></iframe>
 			<figcaption class="img-caption">
 				<a class="src z"></a>
-				{{ page.sep }}
+				<span class="sep"></span>
 				<a class="i"
 					href="https://win98icons.alexmeub.com/icons/png/keyboard-4.png"></a>
 			</figcaption>
@@ -375,7 +376,7 @@ edit-date: 2025-09-07
 				<a class="src {{ item.src }}"></a>
 				{% endif %}
 				{% if item.ins-url != nil %}
-				{{ page.sep }}
+				<span class="sep"></span>
 				<a class="i"
 				{% if item.ins-ttl != nil %}
 					title="{{ item.ins-ttl }}"
@@ -416,7 +417,7 @@ edit-date: 2025-09-07
 				<a class="src {{ item.src }}"></a>
 				{% endif %}
 				{% if item.ins-url != nil %}
-				{{ page.sep }}
+				<span class="sep"></span>
 				<a class="i"
 				{% if item.ins-ttl != nil %}
 					title="{{ item.ins-ttl }}"
@@ -457,7 +458,7 @@ edit-date: 2025-09-07
 				<a class="src {{ item.src }}"></a>
 				{% endif %}
 				{% if item.ins-url != nil %}
-				{{ page.sep }}
+				<span class="sep"></span>
 				<a class="i"
 				{% if item.ins-ttl != nil %}
 					title="{{ item.ins-ttl }}"
@@ -501,7 +502,7 @@ edit-date: 2025-09-07
 				<a class="src {{ item.src }}"></a>
 				{% endif %}
 				{% if item.ins-url != nil %}
-				{{ page.sep }}
+				<span class="sep"></span>
 				<a class="i"
 				{% if item.ins-ttl != nil %}
 					title="{{ item.ins-ttl }}"
@@ -705,7 +706,7 @@ edit-date: 2025-09-07
 			<figcaption class="img-caption">
 				<a class="src z"
 					href="//zeusofthecrows.github.io/assets/images/buttons/brands/apng-wide.ase"></a>
-				{{ page.sep }}
+				<span class="sep"></span>
 				<a class="i" href="http://www.libpng.org/pub/png/"></a>
 			</figcaption>
 		</figure></li>
@@ -759,19 +760,17 @@ edit-date: 2025-09-07
 	<header>
 		<h1>Stamps</h1>
 	</header>
-	<p>
-		<details>
-			<summary>
-				for those wanting a stamp template, this is free to use - the colours
-				are to make it easier to see, change the colours in your own image
-			</summary>
-			<img src="/assets/images/stamps/frame-template.png"
-			style="display: block; margin-inline: auto;" alt="template" />
+	<details class="text-width">
+		<summary>
+			for those wanting a stamp template, this is free to use - the colours
+			are to make it easier to see, change the colours in your own image
+		</summary>
+		<img src="/assets/images/stamps/frame-template.png"
+		style="display: block; margin-inline: auto;" alt="template" />
 
-			the corners are slightly unorthodox, but they look a little better than
-			standard, i think
-		</details>
-	</p>
+		the corners are slightly unorthodox, but they look a little better than
+		standard, i think
+	</details>
 	<h2>99x56</h2>
 	<ul class="img-grid hover-zoom img-capts">
 		{% for image in site.data.gallery-stamps %}
@@ -801,7 +800,7 @@ edit-date: 2025-09-07
 				<a class="src {{ image.src }}"></a>
 				{% endif %}
 				{% if image.ins-url != nil %}
-				{{ page.sep }}
+				<span class="sep"></span>
 				<a class="i"
 				{% if image.ins-ttl != nil %}
 					title="{{ image.ins-ttl }}"
@@ -843,7 +842,7 @@ edit-date: 2025-09-07
 				<a class="src {{ image.src }}"></a>
 				{% endif %}
 				{% if image.ins-url != nil %}
-				{{ page.sep }}
+				<span class="sep"></span>
 				<a class="i"
 				{% if image.ins-ttl != nil %}
 					title="{{ image.ins-ttl }}"
@@ -884,7 +883,7 @@ edit-date: 2025-09-07
 				<a class="src {{ image.src }}"></a>
 				{% endif %}
 				{% if image.ins-url != nil %}
-				{{ page.sep }}
+				<span class="sep"></span>
 				<a class="i"
 				{% if image.ins-ttl != nil %}
 					title="{{ image.ins-ttl }}"
@@ -931,7 +930,7 @@ edit-date: 2025-09-07
 				<a class="src {{ image.src }}"></a>
 				{% endif %}
 				{% if image.ins-url != nil %}
-				{{ page.sep }}
+				<span class="sep"></span>
 				<a class="i"
 				{% if image.ins-ttl != nil %}
 					title="{{ image.ins-ttl }}"
@@ -1133,7 +1132,7 @@ edit-date: 2025-09-07
 				alt="windows xp style loading marquee blinkie"/>
 			<figcaption class="img-caption">
 				<a class="src z"></a>
-				{{ page.sep }}
+				<span class="sep"></span>
 				<a class="i"
 					href="https://www.tumblr.com/404de4th/699124348116779008/"></a>
 			</figcaption>
@@ -1279,15 +1278,14 @@ edit-date: 2025-09-07
 			</figcaption>
 		</figure></li>
 		<li><figure>
+			<a href="https://docs.google.com/spreadsheets/d/16d4J96iM-Fo38UR4IOe58AywEJMuw-y59lXdv5EXcaI/edit?gid=1168850417#gid=1168850417&range=B471">
 			<img src="/assets/images/antipix/keter.png"
 				class="btn-80x15"
 				alt="scp object class: keter antipixel icon"
 				data-img-src="~zeus" />
+			</a>
 			<figcaption class="img-caption">
 				<a class="src z"></a>
-				{{ page.sep }}
-				<a class="i"
-					href="https://docs.google.com/spreadsheets/d/16d4J96iM-Fo38UR4IOe58AywEJMuw-y59lXdv5EXcaI/edit?gid=1168850417#gid=1168850417&range=B471"></a>
 			</figcaption>
 		</figure></li>
 		<li><figure>
@@ -1362,6 +1360,16 @@ edit-date: 2025-09-07
 				<a class="src z"></a>
 			</figcaption>
 		</figure></li>
+		<li><figure><a href="http://spampoison.com">
+			<img src="/assets/images/antipix/spam-poison.png"
+				class="btn-80x15"
+				alt="spam poison antipixel icon" />
+			</a>
+			<figcaption class="img-caption">
+				<a class="src"
+					href="https://keysklubhouse.neocities.org/home.htm"></a>
+			</figcaption>
+		</figure></li>
 		<li><figure>
 			<img src="/assets/images/antipix/tea.png"
 				class="btn-80x15"
@@ -1418,7 +1426,7 @@ edit-date: 2025-09-07
 				made by me, from an atari firefox poster. feel free to use it
 				<br />
 				<a href="/assets/images/gallery/atari-firefox.png">png ver.</a>
-				{{ page.sep }}
+				<span class="sep"></span>
 				<a href="https://www.arcade-museum.com/Videogame/firefox/">info</a>
 			</figcaption>
 		</figure></li>
@@ -1442,6 +1450,7 @@ edit-date: 2025-09-07
 		<li><figure>
 			<a>
 				<img src="/assets/images/gallery/hydrabay.png"
+					style="filter: invert(1);"
 					alt="piratebay 'hydra network' icon" />
 			</a>
 			<figcaption class="img-caption">

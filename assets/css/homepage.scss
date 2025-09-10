@@ -5,8 +5,8 @@ body {
 	background-size: 256px 256px;
 	background-attachment: fixed;
 	background-repeat: repeat;
-	--content-background: var(--wall-clr-1);
-	--strong-accent: #1190A1;
+	--content-background-colour: var(--wall-clr-1);
+	--strong-accent-colour: #1190A1;
 	--wall-clr-1: #5C2012;
 	--wall-clr-2: #D23B11;
 	--wall-clr-3: #E57711;
@@ -114,7 +114,7 @@ main>aside {
 main>section,
 main>aside {
 	box-sizing: border-box;
-	background-color: var(--content-background);
+	background-color: var(--content-background-colour);
 	// background-image: url("/assets/images/backgrounds/texture.png");
 	// background-blend-mode: hard-light;
 	// border-right:  4px solid #00000018;
@@ -182,7 +182,7 @@ main>section>article {
 #whats-new {
 	height: 360px;
 	// border: 4px solid;
-	--background-colour: var(--strong-accent);
+	--background-colour: var(--strong-accent-colour);
 	--ripple-size: 8px;
 	--ripple-clr-1: var(--wall-clr-4);
 	--ripple-clr-2: var(--wall-clr-3);
@@ -193,7 +193,7 @@ main>section>article {
 	overscroll-behavior: contain;
 	background-color: var(--background-colour);
 	border-radius: calc(var(--content-background-radius) / 2);
-	border: calc(var(--ripple-size) / 2) solid var(--strong-accent);
+	border: calc(var(--ripple-size) / 2) solid var(--strong-accent-colour);
 	box-sizing: border-box;
 	margin-bottom: 2em;
 	margin-inline: 2ch;
@@ -209,10 +209,10 @@ main>section>article {
 		animation-name: colour-ripple;
 	}
 	&>h2 {
-		// background-color: color-mix(in lch longer hue, var(--strong-accent), var(--content-background));
+		// background-color: color-mix(in lch longer hue, var(--strong-accent-colour), var(--content-background-colour));
 		--shad-size-s: 2px;
 		--shad-size-l: 24px;
-		background-color: var(--content-background);
+		background-color: var(--content-background-colour);
 		border-bottom-left-radius: calc(var(--content-background-radius) / 4);
 		border-bottom-right-radius: calc(var(--content-background-radius) / 4);
 		text-align: center;
