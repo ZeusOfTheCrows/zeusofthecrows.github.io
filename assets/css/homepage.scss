@@ -37,6 +37,7 @@ body {
 	--wall-clr-1: #E2E1C7; */
 
 	background-color: var(--wall-clr-1);
+	background-position: center;
 	background-image:
 		radial-gradient(circle at 34.6% 34.6%, var(--wall-clr-1), var(--wall-clr-1) 8%,  #0000 calc(8% + 1px)),
 		radial-gradient(circle at 31.7% 31.7%, var(--wall-clr-2), var(--wall-clr-2) 12%, #0000 calc(12% + 1px)),

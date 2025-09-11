@@ -50,17 +50,6 @@ edit-date: 2025-09-11
 	<header>
 		<h1>Stamps</h1>
 	</header>
-	<details class="text-width">
-		<summary>
-			for those wanting a stamp template, this is free to use (<small>the colours
-			are to make it easier to see, change the colours in your own image</small>)
-		</summary>
-		<img src="/assets/images/stamps/frame-template.png"
-		style="display: block; margin-inline: auto;" alt="template" />
-
-		the corners are slightly unorthodox, but they look a little better than
-		standard, i think
-	</details>
 	<h2>99x56</h2>
 	<ul class="img-grid hover-zoom img-capts">
 		{% for image in site.data.gallery-stamps %}
@@ -144,47 +133,14 @@ edit-date: 2025-09-11
 		{% endif %}
 		{% endfor %}
 	</ul>
-
-	<ul class="img-grid hover-zoom img-capts">
-		{% for images in site.data.gallery-stamps %}
-		{% if image.url and image.res == "other" %}
-		<li><figure>
-			{% if image.lnk-url != nil %}
-			<a href="{{ image.lnk-url }}">
-			{% endif %}
-			<img src="/assets/images/stamps/{{ image.url }}.png"
-				{% if image.title != nil %}
-				title="{{ image.title }}"
-				{% endif %}
-				class="{% if image.smooth %}smooth-zoom{% else %}pixel-art{% endif %}
-					{% if image.anim %}anim{% endif %}"
-				alt="{{ image.alt }}" />
-			{% if image.lnk-url != nil %}
-			</a>
-			{% endif %}
-			<figcaption class="img-caption">
-				{% if image.src-url != nil %}
-				<a class="src {{ image.src }}"
-					href="{{ image.src-url }}"></a>
-				{% elsif image.src == "s" %}
-				<a class="src z"
-					href="/assets/images/stamps/{{ image.url }}.ase"></a>
-				{% else %}
-				<a class="src {{ image.src }}"></a>
-				{% endif %}
-				{% if image.ins-url != nil %}
-				<span class="sep"></span>
-				<a class="i"
-				{% if image.ins-ttl != nil %}
-					title="{{ image.ins-ttl }}"
-				{% endif %}
-					href="{{ image.ins-url }}"></a>
-				{% endif %}
-			</figcaption>
-		</figure></li>
-		{% endif %}
-		{% endfor %}
-	</ul>
+	<p>
+		for those wanting a stamp template, here's one (<small>the colours
+		are to make it easier to see, change the colours in your own image</small>)
+		<img src="/assets/images/stamps/frame-template.png"
+		style="display: block; margin-inline: auto;" alt="template" />
+		the corners are slightly unorthodox, but they look a little better than
+		standard, i think
+	</p>
 </article>
 
 <article id="buttons">
