@@ -37,7 +37,8 @@ body {
 	--wall-clr-1: #E2E1C7; */
 
 	background-color: var(--wall-clr-1);
-	background-position: center;
+	// in theory this is better, but it happens to look worse at 1080p & 1440p:
+	// background-position: center;
 	background-image:
 		radial-gradient(circle at 34.6% 34.6%, var(--wall-clr-1), var(--wall-clr-1) 8%,  #0000 calc(8% + 1px)),
 		radial-gradient(circle at 31.7% 31.7%, var(--wall-clr-2), var(--wall-clr-2) 12%, #0000 calc(12% + 1px)),
@@ -113,7 +114,7 @@ main>aside {
 }
 
 main>section,
-main>aside {
+main>aside, {
 	box-sizing: border-box;
 	background-color: var(--content-background-colour);
 	// background-image: url("/assets/images/backgrounds/texture.png");
@@ -124,6 +125,22 @@ main>aside {
 	border-bottom-left-radius:  var(--content-background-radius);
 	border-bottom-right-radius: var(--content-background-radius);
 	// box-shadow: 4px 4px 8px #00000080, 4px 4px 16px #00000080;
+}
+
+main>section,
+main>aside,
+body>footer,
+hr {
+	border: 3px solid var(--strong-accent-colour);
+}
+
+main>section,
+main>aside,
+hr {
+	border-top: none;
+}
+body>footer {
+	border-bottom: none;
 }
 
 main>section>article {
@@ -444,8 +461,14 @@ main>section>article {
 		padding: 1em;
 		background-colour: rebecca-purple;
 
+		&::first-line {
+			font-family: var(--fnt-subdisplay);
+		}
+
 		&::first-letter {
 			float: left;
+			font-family: var(--fnt-subdisplay);
+			// text-transform: uppercase;
 			font-size: 4em;
 			color: var(--s-ylw);
 			padding-right: 0.04em;

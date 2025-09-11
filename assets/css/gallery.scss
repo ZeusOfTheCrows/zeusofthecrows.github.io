@@ -131,14 +131,20 @@ body {
 	100% { background-position: 0 0, 0%  100%, 0%  100%; }
 }
 
-main {
+body>main,
+body>footer {
 	backdrop-filter: blur(20px);
 	background-color: #000a;
 	background-image: url(/assets/images/backgrounds/texture.png);
 	background-blend-mode: multiply;
 	box-shadow: inset 0px 0px 16px black, inset 0px 0px 8px black;
 	border: 1px solid #ffffff30;
+}
+body>main {
 	border-top: none;
+}
+body>footer {
+	border-bottom: none;
 }
 
 main>article>.text-width,
@@ -258,7 +264,7 @@ ol {
 #free-internet:hover,
 #free-internet:focus,
 #free-internet:active {
-	content: var(---hover-src);
+	content: var(--hover-src);
 }
 
 /* -------------------------- decorations --------------------------- */

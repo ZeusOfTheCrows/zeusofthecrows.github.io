@@ -6,10 +6,30 @@
 
 /* =============================== variables =============================== */
 
-// https://fontlibrary.org/en/catalogue?order=&page=18
+
+@font-face {
+    font-family: "Geomancy Extra Bold";
+    src: url("/assets/fonts/geomancy-extrabold.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Geomancy Hairline";
+    src: url("/assets/fonts/geomancy-hairline.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
 
 /* variables */
 :root {
+	--fnt-sans: sans-serif;
+	--fnt-serif: serif;
+	--fnt-mono: monospace;
+	--fnt-display: serif;
+	--fnt-subdisplay: "Geomancy Extra Bold", sans-serif;
+	--fnt-body: var(--fnt-sans);
+
 	scroll-behavior: smooth;
 	scroll-padding-top: 10vh;
 	--header-colour: black;
@@ -122,18 +142,18 @@ body:has(option[value="gb"]:checked) {
 
 
 @font-face {
-	font-family: 'Gaston Opti';
+	font-family: "Gaston Opti";
 	src:
-		url('/assets/fonts/retro/gaston-opti.woff2') format('woff2'),
-		url('/assets/fonts/retro/gaston-opti.woff') format('woff');
+		url("/assets/fonts/retro/gaston-opti.woff2") format("woff2"),
+		url("/assets/fonts/retro/gaston-opti.woff") format("woff");
 	font-weight: normal;
 	font-style: normal;
 }
 @font-face {
-	font-family: 'Motter Ombra';
+	font-family: "Motter Ombra";
 	src:
-		url('/assets/fonts/retro/motter-ombra.woff2') format('woff2'),
-		url('/assets/fonts/retro/motter-ombra.woff') format('woff');
+		url("/assets/fonts/retro/motter-ombra.woff2") format("woff2"),
+		url("/assets/fonts/retro/motter-ombra.woff") format("woff");
 	font-weight: normal;
 	font-style: normal;
 }
