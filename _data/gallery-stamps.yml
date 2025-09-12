@@ -63,6 +63,7 @@
 - image:
   url: amnesia
   smooth: y
+  anim: y
   alt: "3. Amnesia was her name"
   src-url: "https://lonelycoconut.net/My%20graphics"
   src: v
@@ -139,6 +140,7 @@
 - image:
   url: cat
   smooth: y
+  anim: y
   alt: "nyan cat stamp"
   ins-url: "https://www.deviantart.com/zephyris/art/Nyan-Cat-Pixel-Perfect-215622890"
   src: s
@@ -222,6 +224,7 @@
 - image:
   url: dont-touch-me
   smooth: y
+  anim: y
   alt: "DON'T TOUCH ME stamp"
   src-url: "https://www.deviantart.com/virus-xenon/art/Don-t-Touch-Me-790983954/"
   src: v
@@ -273,6 +276,7 @@
 - image:
   url: ghost-in-the-shell
   smooth: y
+  anim: y
   alt: "ghost in the shell stamp"
   src: z
   ins-url: "https://aestheticsmut.tumblr.com/post/186778973059/"
@@ -293,6 +297,7 @@
 - image:
   url: going
   smooth: y
+  anim: y
   alt: "wireframe lamborghini countach synthwave stamp"
   src: v
   src-url: "https://www.deviantart.com/babykttn/art/who-knows-where-we-re-going-672436401"
@@ -346,6 +351,7 @@
 - image:
   url: ice-kirbs
   smooth: n
+  anim: y
   alt: "ice kirby skating stamp"
   src-url: "https://www.deviantart.com/blueeyedrat/art/Stamp-Ice-Kirby-145008655"
 
@@ -408,7 +414,7 @@
 
 - image:
   url: lttp
-  smooth: n
+  anim: y
   alt: "running link from zelda:alttp stamp"
   src-url: "https://www.deviantart.com/gurinn/art/Zelda-Link-to-the-past-Stamp-75782250"
 
@@ -422,6 +428,7 @@
 - image:
   url: machine
   smooth: y
+  anim: y
   alt: "27. The Machine"
   src-url: "https://lonelycoconut.net/My%20graphics"
   src: v
@@ -484,6 +491,7 @@
 - image:
   url: nya.gif
   smooth: y
+  anim: y
   alt: "windows 98 paint themed nyan cat stamp"
   ins-url: "https://www.tumblr.com/resource-fm/781980836802281472"
   src: s
@@ -537,6 +545,7 @@
 - image:
   url: planet-b
   smooth: y
+  anim: y
   alt: "there is no planet b stamp"
   src: z
 
@@ -684,6 +693,7 @@
 - image:
   url: source
   smooth: y
+  anim: y
   alt: "source filmmaker"
   src: v
   src-url: "https://www.deviantart.com/byte-byte/art/Stamp-Source-Filmmaker-460416657"

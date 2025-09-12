@@ -97,6 +97,13 @@ body:has(option[value="gb"]:checked) {
 }*/
 
 /* ================================ header? ================================= */
+
+
+@media (prefers-reduced-motion: no-preference) {
+	body>header>h1 {
+			animation: flow 1s linear infinite;
+	}
+}
 body>header>h1 {
 	font-family: "Averia Serif Libre", "Cooper", fantasy;
 	font-weight: 900;
@@ -104,7 +111,6 @@ body>header>h1 {
 	margin-block: 0.2em;
 
 	paint-order: stroke fill;
-	animation: flow 1s linear infinite;
 
 	--stroke-size: 0.1em;
 	--spread: calc(var(--stroke-size) / 3);

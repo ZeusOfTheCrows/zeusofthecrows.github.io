@@ -135,7 +135,7 @@ body>header {
 
 /* ========================== accessibility styles ========================== */
 
-@media (prefers-reduced-motion) {
+@media (prefers-reduced-motion: reduce) {
 	img.anim {
 		transition: filter 500ms, background-color 500ms;
 		&:not(:hover) {

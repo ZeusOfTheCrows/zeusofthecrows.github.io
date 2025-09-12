@@ -105,29 +105,34 @@
       url: stamps/water2
       type: stamp-99x56
       smooth: y
+      anim: y
       alt: "water stamp"
 
     - image:
       url: stamps/machine
       type: stamp-99x56
       smooth: y
+      anim: y
       alt: "machine stamp"
 
     - image:
       url: stamps/cat
       type: stamp-99x56
       smooth: y
+      anim: y
       alt: "nyan cat stamp"
 
     - image:
       url: stamps/nya.gif
       type: stamp-99x56
       smooth: y
+      anim: y
       alt: "nyan cat ms paint stamp"
 
     - image:
       url: stamps/amnesia
       type: stamp-99x56
+      anim: y
       alt: "amnesia stamp"
 
     - image:
@@ -148,12 +153,8 @@
     - image:
       url: stamps/dont-touch-me
       type: stamp-99x56
+      anim: y
       alt: "amnesia stamp"
-
-    - image:
-      url: stamps/kirbs
-      type: stamp-99x56
-      alt: "kirby's adventure intro &quot;first you draw a circle&quot; stamp"
 
     - image:
       url: stamps/boot
@@ -183,6 +184,7 @@
     - image:
       url: stamps/sun
       type: stamp-99x56
+      anim: y
       alt: "&quot;the sun is a deadly laser&quot; stamp"
 
     - image:
@@ -203,11 +205,13 @@
     - image:
       url: stamps/ice-kirbs
       type: stamp-99x56
+      anim: y
       alt: "ice kirby skating stamp"
 
     - image:
       url: stamps/lttp
       type: stamp-99x56
+      anim: y
       alt: "lttp link running stamp"
 
     - image:
@@ -223,6 +227,7 @@
     - image:
       url: stamps/sword-kirbs
       type: stamp-99x56
+      anim: y
       alt: "sword kirby slashing stamp"
 
     - image:
@@ -286,16 +291,19 @@
     - image:
       url: buttons/brands/winamp
       type: btn-88x31
+      anim: y
       alt: "winamp button"
 
     - image:
       url: buttons/games/castleofdracula
       type: btn-88x31
+      anim: y
       alt: "castle of dracula button"
 
     - image:
       url: buttons/games/romhack-plaza
       type: btn-88x31
+      anim: y
       alt: "romhack plaza button"
 
     - image:
@@ -316,6 +324,7 @@
     - image:
       url: buttons/music/lost-angles
       type: btn-88x31
+      anim: y
       alt: "lost angles button"
 
     - image:
@@ -326,16 +335,19 @@
     - image:
       url: buttons/brands/dr-who
       type: btn-88x31
+      anim: y
       alt: "doctor who button"
 
     - image:
       url: buttons/other/bad-apple
       type: btn-88x31
+      anim: y
       alt: "bad apple button"
 
     - image:
       url: buttons/taskbar/best-viewed-with
       type: btn-88x31
+      anim: y
       alt: "page best viewed with button"
 
 - content: new antipixel icons have been added to the gallery & footer
@@ -363,6 +375,7 @@
     - image:
       url: blinkies/end-is-never
       type: btn-150x20
+      anim: y
       alt: "the end is never blinkie"
 
     - image:
@@ -373,26 +386,31 @@
     - image:
       url: blinkies/doing-my-best
       type: btn-150x20
+      anim: y
       alt: "doing my best blinkie"
 
     - image:
       url: blinkies/betelgeuse
       type: btn-150x20
+      anim: y
       alt: "beetlejuice blinkie"
 
     - image:
       url: blinkies/born-to-be-mild
       type: btn-150x20
+      anim: y
       alt: "born to be mild blinkie"
 
     - image:
       url: blinkies/margaritaville
       type: btn-150x20
+      anim: y
       alt: "wasting away again in margaritaville blinkie"
 
     - image:
       url: blinkies/escape
       type: btn-150x20
+      anim: y
       alt: "i used to contain myself but i escaped blinkie"
 
 - content: new fanlisting codes have been added

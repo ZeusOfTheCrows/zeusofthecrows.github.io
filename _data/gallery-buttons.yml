@@ -336,6 +336,7 @@
 - image:
   url: "lost-angles"
   alt: "lost angles"
+  anim: y
   lnk-url: "https://lostangles.bandcamp.com/"
   src-url: "https://loa2k.neocities.org/"
   src:
@@ -829,6 +830,7 @@
 - image:
   url: "newgrounds"
   alt: "newgrounds.com button"
+  anim: y
   lnk-url: "https://www.newgrounds.com/"
   src-url: "https://drakul78.neocities.org/links"
   src:
@@ -837,6 +839,7 @@
 - image:
   url: "romhack-plaza"
   alt: "romhack plaza button"
+  anim: y
   lnk-url: "https://romhackplaza.org/"
   src-url: "https://www.smbarena.com/"
   src:
@@ -924,6 +927,7 @@
   url: "chromium"
   alt: "ie/chrome/brave logos captioned 'same shit, different arsehole'"
   smooth: y
+  anim: y
   lnk-url: "https://www.mozilla.org/en-GB/firefox/"
   ins-url: "https://capstasher.neocities.org/88x31Buttons/chrome%20(copy%201).gif"
   src: s
@@ -958,6 +962,7 @@
   url: "dr-who"
   alt: "doctor who button"
   smooth: y
+  anim: y
   src-url: "https://twitch.cymru/graphics"
   cat: b
 
@@ -1316,6 +1321,7 @@
 - image:
   url: "winamp"
   smooth: y
+  anim: y
   alt: "winamp button"
   lnk-url: "https://winamp.com/"
   src-url: "https://loa2k.neocities.org/"

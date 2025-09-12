@@ -84,6 +84,9 @@ title:
 			blurred (hover over them to reveal)(on mobile? try tapping the
 			highlighted text)
 		</p>
+		<p>
+			if you have enabled "reduced motion" in your o.s. settings, most animated
+			images will be hidden until hovered over
 	</article>
 
 	<!--ZTODO: REMEMBER TO FIX WRAPPING BUG ON SMALL SCREENS-->
@@ -117,7 +120,10 @@ title:
 							{% for image in item.subcontent %}
 								<li>
 									<img src="/assets/images/{{ image.url }}.png"
-										class="{{ image.type }}{% if image.smooth %} smooth-zoom{% endif %}{% if image.spoiler %} spoiler{% endif %}"
+										class="{{ image.type }}
+										{%- if image.smooth %} smooth-zoom {%- endif -%}
+										{%- if image.anim %} anim {%- endif -%}
+										{%- if image.spoiler %} spoiler {%- endif -%}"
 										alt="{{ image.alt }}" />
 								</li>
 							{% endfor %}
@@ -188,7 +194,7 @@ title:
 		</li>
 		<li>
 			<img src="/assets/images/stamps/kirbs.png"
-				class="stamp-99x56"
+				class="stamp-99x56 anim"
 				alt="opening of kirby's adventure stamp" />
 		</li>
 	</ul>
