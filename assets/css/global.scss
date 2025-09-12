@@ -6,7 +6,6 @@
 
 /* =============================== variables =============================== */
 
-
 @font-face {
     font-family: "Geomancy Extra Bold";
     src: url("/assets/fonts/geomancy-extrabold.woff2") format("woff2");
@@ -185,13 +184,13 @@ html {
 
 body {
 	color: var(--fg-0);
-	font-family: var(--fnt-sans), sans-serif;
+	font-family: var(--fnt-body), sans-serif;
+	font-variant-numeric: slashed-zero;
 	line-height: 1.5;
 	tab-size: 2;
 	margin:0;
 	padding:0;
 	border:0;
-	text-align: justify;
 	background-attachment: fixed;
 }
 

@@ -127,12 +127,12 @@ main>article>section {
 		background-size: cover;
 		opacity: 0.2;
 		filter: blur(4px);
-		filter: url('data:image/svg+xml,\
-			<svg xmlns="http://www.w3.org/2000/svg">\
-				<filter id="blur" x="0" y="0" width="100%" height=100%"\
-					xmlns="http://www.w3.org/2000/svg">\
+		filter: url('data:image/svg+xml,
+			<svg xmlns="http://www.w3.org/2000/svg">
+				<filter id="blur" x="0" y="0" width="100%" height=100%"
+					xmlns="http://www.w3.org/2000/svg">
 					<feGaussianBlur in="SourceGraphic" stdDeviation="3" />
-				</filter>\
+				</filter>
 			</svg>#blur');
 	}
 	&::after {

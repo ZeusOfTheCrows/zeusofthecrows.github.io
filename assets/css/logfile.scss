@@ -1,6 +1,7 @@
 ---
 ---
 
+
 @font-face {
   font-family: "Space Grotesk";
   src: url("/assets/fonts/space-grotesk.woff2") format("woff2 supports variations"),
@@ -8,9 +9,17 @@
   font-weight: 100 1000;
 }
 
+@font-face {
+	font-family: 'Righteous';
+	src: url('/assets/fonts/righteous.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+}
 :root {
 	--fnt-sans: "Space Grotesk";
+	--fnt-display: "Righteous", "Geomancy Extra Bold", fantasy;
 	--content-background-radius: 10px;
+	--header-colour: var(--wall-clr-7);
 
 	/*any antialiasing breaks firefox !?*/
 	--aa: 0px;
@@ -20,53 +29,85 @@
 	--wall-clr-3: #2C1201;
 	--wall-clr-4: #622302;
 	--wall-clr-5: #EA4A04;
-	--wall-clr-6: #FED338;
-	--wall-clr-7: #F9C383;
-	--wall-clr-8: #B84D21;
+	--wall-clr-6: #FE7700;
+	--wall-clr-7: #FFD13B;
+	--wall-clr-8: #F9C383;
 
 	--wall-clr-9: #052011;
 	--wall-clr-a: #033E22;
 	--wall-clr-b: #115934;
 	--wall-clr-c: #019237;
 	--wall-clr-d: #83FF2B;
-	--wall-clr-e: #B84D21;
 
 	--content-background-colour: var(--wall-clr-3);
-	--item-bg-clr-0: var(--wall-clr-7);
+	--item-bg-clr-0: var(--wall-clr-8);
 	--item-bg-clr-1: var(--wall-clr-4);
-	--item-bg-clr-2: var(--wall-clr-8);
+	--item-bg-clr-2: var(--wall-clr-6);
 
 }
 /* light mode colours */
 @media (prefers-color-scheme: light) {
 	:root {
-		--bgd-0: #dedee7;
-		--bgd-1: #deadc6;
-		--bgd-2: #adb5c6;
-		--bgd-3: #b54a7b;
-		--bgd-4: #5a636b;
-		--bgd-5: #522139;
-		--txt-4: #b5b5d6;
-		--txt-3: #9494a5;
-		--txt-2: #5a636b;
-		--txt-1: #29294a;
-		--txt-0: #000000;
-		--s-red: #ff1042;
-		--s-grn: #39ff31;
-		--s-ylw: #ffff00;
-		--s-blu: #9898ee;
-		--s-ppl: #ff00ff;
-		--s-aqa: #00ffff;
-		--s-org: #ff8721;
-		--btn-hilite: var(--bgd-0);
-		--btn-lolite: var(--bgd-4);
-		--indent-col: var(--bgd-0);
+		--content-background-colour: var(--wall-clr-6);
+		--item-bg-clr-0: var(--wall-clr-3);
+		--item-bg-clr-1: var(--wall-clr-8);
+		--item-bg-clr-2: var(--wall-clr-4);
+	}
+}
+
+body > header {
+}
+
+body>header>h1 {
+	font-size: 72px;
+	font-family: var(--fnt-display);
+	line-height: 0.7;
+	text-transform: uppercase;
+	color: var(--wall-clr-3);
+	background-color: var(--wall-clr-8);
+	text-shadow:
+		0.08em  0em var(--wall-clr-4),
+		0.16em 0em var(--wall-clr-5),
+		0.24em 0em var(--wall-clr-7);
+
+	---stroke-width: 0.25em;
+
+	border-style: solid;
+	border-top-width:    var(---stroke-width);
+	border-bottom-width: var(---stroke-width);
+
+	margin-top: var(---stroke-width);
+	margin-bottom: calc(var(---stroke-width) * 4);
+	box-shadow:
+		0 calc(var(---stroke-width) * -1) var(--wall-clr-6),
+		0 calc(var(---stroke-width) * 1) var(--wall-clr-4),
+		0 calc(var(---stroke-width) * 2) var(--wall-clr-5),
+		0 calc(var(---stroke-width) * 3) var(--wall-clr-6),
+		0 calc(var(---stroke-width) * 4) var(--wall-clr-7);
+
+	/*this is because the text shadow goes over the border otherwise*/
+	position: relative;
+	&::before, &::after {
+    content: "";
+    width: 100%;
+    height: var(---stroke-width);
+    background: var(--wall-clr-3);
+    position: absolute;
+    left: 0;
+	}
+	&::before {
+    top: calc(var(---stroke-width)* -1.02);
+	}
+	&::after {
+    bottom: calc(var(---stroke-width)* -0.9);
 	}
 }
 
 body{
-	// background-blend-mode: exclusion/difference is fascinating;
+	// background-blend-mode: exclusion/difference is fascinating?
 
+	/*background inspired by neoproxima:
+	https://store.steampowered.com/app/2778760/Neoproxima/*/
 	background-size:
 		100% 100%, 100% 100%, 100% 100%, 100% 100%,
 		512px 512px, 512px 512px, 512px 512px, 512px 512px,
@@ -76,11 +117,12 @@ body{
 		/*big brown*/
 		radial-gradient(
 			60vw 60vw at -5vw -29vw,
-			var(--wall-clr-3) 0% 86%,
-			var(--wall-clr-4) calc(86% + var(--aa)) 90%,
-			var(--wall-clr-5) calc(90% + var(--aa)) 94%,
-			var(--wall-clr-6) calc(94% + var(--aa)) 98%,
-			var(--wall-clr-7) calc(98% + var(--aa)) 99%,
+			var(--wall-clr-3) 0% 82%,
+			var(--wall-clr-4) calc(82% + var(--aa)) 86%,
+			var(--wall-clr-5) calc(86% + var(--aa)) 90%,
+			var(--wall-clr-6) calc(90% + var(--aa)) 94%,
+			var(--wall-clr-7) calc(94% + var(--aa)) 98%,
+			var(--wall-clr-8) calc(98% + var(--aa)) 99%,
 			transparent       calc(99% + var(--aa)) 100%),
 		/*big green*/
 		radial-gradient(
@@ -94,8 +136,8 @@ body{
 		/*small brown*/
 		radial-gradient(
 			6vw 6vw at 10% 60%,
-			var(--wall-clr-7) 0% 80%,
-			var(--wall-clr-8) calc(80% + var(--aa)) 85%,
+			var(--wall-clr-8) 0% 78%,
+			var(--wall-clr-6) calc(78% + var(--aa)) 85%,
 			var(--wall-clr-4) calc(85% + var(--aa)) 95%,
 			transparent calc(95% + var(--aa)) 100%),
 		/*ringed brown*/
@@ -104,24 +146,24 @@ body{
 			var(--wall-clr-4) 0% 55%,
 			var(--wall-clr-3) calc(55% + var(--aa)) 65%,
 			transparent calc(65% + var(--aa)) 95%,
-			var(--wall-clr-7) calc(95% + var(--aa)) 97%,
+			var(--wall-clr-8) calc(95% + var(--aa)) 97%,
 			transparent calc(97% + var(--aa)) 100%),
 		/*stars*/
 		radial-gradient(
 			0.1vw 0.1vw at 60% 50%,
-			var(--wall-clr-7) 0% 99%,
+			var(--wall-clr-8) 0% 99%,
 			transparent calc(99% + var(--aa)) 100%),
 		radial-gradient(
 			0.08vw 0.08vw at 40% 20%,
-			var(--wall-clr-7) 0% 99%,
+			var(--wall-clr-8) 0% 99%,
 			transparent calc(99% + var(--aa)) 100%),
 		radial-gradient(
 			0.05vw 0.05vw at 20% 70%,
-			var(--wall-clr-7) 0% 99%,
+			var(--wall-clr-8) 0% 99%,
 			transparent calc(99% + var(--aa)) 100%),
 		radial-gradient(
 			0.02vw 0.02vw at 90% 10%,
-			var(--wall-clr-7) 0% 99%,
+			var(--wall-clr-8) 0% 99%,
 			transparent calc(99% + var(--aa)) 100%),
 		/*sky*/
 		linear-gradient(
@@ -130,9 +172,12 @@ body{
 			var(--wall-clr-2) 100%);
 }
 
-main {
+body>main {
 	background-color: var(--content-background-colour);
 	border-left: 8ch solid var(--item-bg-clr-0);
+	box-sizing: border-box;
+	max-width: var(--text-max-width) !important;
+
 	&>article {
 
 		&>time {
@@ -156,7 +201,7 @@ main {
 		radial-gradient(
 			circle at 100% 0%,
 			transparent calc(var(--content-background-radius) * 2),
-			var(--item-bg-clr-0) calc(var(--content-background-radius) * 2));
+			var(--item-bg-clr-0) calc(var(--content-background-radius) * 2 + 1px));
 			}
 			&::before {
 				top: calc(var(--content-background-radius) * -2);
@@ -168,24 +213,34 @@ main {
 		}
 
 		&>* {
-			max-width: var(--text-max-width);
-			width: max-content;
-			margin: calc(var(--content-background-radius) * 2);
+			max-width: max-content;
+			margin-inline: calc(var(--content-background-radius) * 2);
+			margin-block: var(--content-background-radius);
 			background-color: var(--item-bg-clr-1);
 			border-radius: var(--content-background-radius);
 			padding: 1rem;
+
+			&:nth-child(2) {
+				margin-top: calc(var(--content-background-radius) * 2);
+			}
+
+			&:last-child {
+				margin-bottom: calc(var(--content-background-radius) * 2);
+			}
 		}
 	}
 }
 
 .attachment {
-	width: min-content;
+	// width: min-content;
 	height: min-content;
-	display: inline-block;
+	display: block;
 	background-color: var(--item-bg-clr-2);
 
 	&>img {
 		border-radius: var(--content-background-radius);
+		max-width: 100%;
+		vertical-align: bottom;
 	}
 }
 
