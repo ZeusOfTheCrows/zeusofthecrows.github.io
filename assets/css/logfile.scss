@@ -207,7 +207,9 @@ body>main {
 			color: var(--bg-0);
 			font-size: 2em;
 			font-weight: 800;
-			position: relative;
+			position: sticky;
+			top: calc(var(--nav-height) + var(--content-background-radius) * 2);
+			margin-block: calc(var(--content-background-radius) * 2);
 
 			&::before,&::after {
 				content: "";
@@ -256,6 +258,10 @@ body>main {
 	border-top-right-radius: 0;
 	background-color: var(--item-bg-clr-2);
 	max-width: initial;
+}
+
+.site-update>*:not(time) {
+	border-left: 2ch solid var(--wall-clr-6);
 }
 
 .attachment {

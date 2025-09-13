@@ -6,6 +6,7 @@
 
 /* =============================== variables =============================== */
 
+/*http://arkandis.tuxfamily.org/adffonts.html*/
 @font-face {
 	font-family: "Baskervald";
 	src: local("BaskervaldADFStd"),
@@ -35,13 +36,13 @@
 	font-style: italic;
 }
 
+/*http://natashaisneat.com/*/
 @font-face {
 	font-family: "Geomancy Extra Bold";
 	src: url("/assets/fonts/geomancy-extrabold.woff2") format("woff2");
 	font-weight: normal;
 	font-style: normal;
 }
-
 @font-face {
 	font-family: "Geomancy Hairline";
 	src: url("/assets/fonts/geomancy-hairline.woff2") format("woff2");
@@ -57,6 +58,8 @@
 	--fnt-display: serif;
 	--fnt-subdisplay: "Geomancy Extra Bold", sans-serif;
 	--fnt-body: var(--fnt-sans);
+
+	--nav-height: 60px;  // i don't know what i'm doing with this yet
 
 	scroll-behavior: smooth;
 	scroll-padding-top: 10vh;
@@ -156,9 +159,11 @@
 
 /* ================================ header? ================================= */
 body>header {
-	background: var(--header-colour) var(--header-image);
+	background-color: var(--header-colour);
+	background-image: var(--header-image);
 	grid-column: 1 / -1;
 	text-align: center;
+	contain: content;  // performance improvements i believe? slightly beyond me
 }
 
 /* ========================== accessibility styles ========================== */
@@ -672,6 +677,7 @@ body {
 		grid-column: 2 / 2;
 		position: sticky;
 		top: 0;
+		height: var(--nav-height);
 
 		// ZTODO: OPTIMISE FOR MOBILE
 		text-align: center;
