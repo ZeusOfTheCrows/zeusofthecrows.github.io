@@ -8,6 +8,22 @@
        url("/assets/fonts/space-grotesk.woff2") format("woff2-variations");
   font-weight: 100 1000;
 }
+@font-face {
+	font-family: "Crimson";
+	src: local("CrimsonPro-VariableFont_wght"),
+		url("/assets/fonts/crimson-pro.woff2") format("woff2 supports variations"),
+		url("/assets/fonts/crimson-pro.woff2") format("woff2-variations");
+  font-weight: 100 1000;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Crimson";
+	src: local("CrimsonPro-Italic-VariableFont_wght"),
+		url("/assets/fonts/crimson-pro-italic.woff2") format("woff2 supports variations"),
+		url("/assets/fonts/crimson-pro-italic.woff2") format("woff2-variations");
+  font-weight: 100 1000;
+	font-style: italic;
+}
 
 @font-face {
 	font-family: 'Righteous';
@@ -16,10 +32,13 @@
 	font-style: normal;
 }
 :root {
-	--fnt-sans: "Space Grotesk";
+	--fnt-sans: "Space Grotesk", sans-serif;
+	--fnt-serif: "Crimson", serif;
 	--fnt-display: "Righteous", "Geomancy Extra Bold", fantasy;
 	--content-background-radius: 10px;
-	--header-colour: var(--wall-clr-7);
+	--header-colour: var(--wall-clr-8);
+	--bg-0: var(--wall-clr-3);
+	--fg-0: var(--wall-clr-8);
 
 	/*any antialiasing breaks firefox !?*/
 	--aa: 0px;
@@ -42,7 +61,7 @@
 	--content-background-colour: var(--wall-clr-3);
 	--item-bg-clr-0: var(--wall-clr-8);
 	--item-bg-clr-1: var(--wall-clr-4);
-	--item-bg-clr-2: var(--wall-clr-6);
+	--item-bg-clr-2: var(--wall-clr-2);
 
 }
 /* light mode colours */
@@ -51,15 +70,15 @@
 		--content-background-colour: var(--wall-clr-6);
 		--item-bg-clr-0: var(--wall-clr-3);
 		--item-bg-clr-1: var(--wall-clr-8);
-		--item-bg-clr-2: var(--wall-clr-4);
+		--item-bg-clr-2: var(--wall-clr-5);
+
+		--bg-0: var(--wall-clr-6);
+		--fg-0: var(--wall-clr-3);
 	}
 }
 
-body > header {
-}
-
 body>header>h1 {
-	font-size: 72px;
+	font-size: min(72px, 10vw); /*is this a magic number!? i have no idea*/
 	font-family: var(--fnt-display);
 	line-height: 0.7;
 	text-transform: uppercase;
@@ -176,10 +195,9 @@ body>main {
 	background-color: var(--content-background-colour);
 	border-left: 8ch solid var(--item-bg-clr-0);
 	box-sizing: border-box;
-	max-width: var(--text-max-width) !important;
 
 	&>article {
-
+		max-width: var(--text-max-width);
 		&>time {
 			display: block;
 			margin-left: 0px;
@@ -231,6 +249,15 @@ body>main {
 	}
 }
 
+#intro>* {
+	margin-top: var(--content-background-radius);
+	margin-top: 0;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+	background-color: var(--item-bg-clr-2);
+	max-width: initial;
+}
+
 .attachment {
 	// width: min-content;
 	height: min-content;
@@ -243,104 +270,3 @@ body>main {
 		vertical-align: bottom;
 	}
 }
-
-/*
-#main-content {
-	padding: 24px;
-	overflow-y: scroll;
-
-	& p {
-		max-width: 720px;
-	}
-
-	.log-file {
-		border-bottom: 2px solid var(--d-org);
-		border-image-source:
-			radial-gradient(
-				circle at bottom,
-				var(--s-ppl),
-				var(--d-ppl),
-				transparent);
-		border-image-slice: 1;
-		margin-bottom: 2em;
-		&.site-update {
-			color: var(--s-red);
-			&::before {
-				content: "<site update />";
-				display: block;
-				margin-bottom: 1em;
-			}
-		}
-	}
-
-	& img {
-		border-radius: 8px;
-		border-style: ridge;
-		margin: 0.1em 4ch;
-	}
-
-	& ::before,
-	& ::after {
-		color: var(--d-aqa);
-	}
-
-	& a.attachment {
-		text-decoration: none !important;  //overrides link styling
-		&:hover {
-			outline: none;  //overrides link styling
-		}
-
-		&::before,
-		&::after {
-			display: block;
-		}
-		&::before {
-			content: "<img src=\""attr(href)"\">";
-		}
-		&::after {
-			content: "</img>";
-		}
-		& img {
-			// padding-left: 4ch;  // for tags, superceded by global padding
-			// max-width:  min(400px, 100% - 4ch);  // margin size - variable?
-			width: calc(100% - 4ch);
-			height: auto;
-			max-width: 400px;
-			max-height: 200px;
-			object-fit: cover;
-
-			&[src$=svg] {
-				object-fit: contain;
-			}
-		}
-	}
-
-	& p {
-		&::before,
-		&::after {
-			display: block;
-		}
-		padding-left: 3ch;
-		&::before {
-			white-space: pre;
-			margin-left: -3ch;
-			content: "<p>";
-		}
-		&::after {
-			white-space: pre;
-			margin-left: -3ch;
-			// transform: translateX(-3ch);
-			content: "</p>";
-		}
-	}
-
-	& time.log-date {
-		color: var(--d-ppl);
-		&::before {
-			content: "<time>";
-		}
-		&::after {
-			content: "</time>";
-		}
-	}
-}*/

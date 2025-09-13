@@ -291,6 +291,12 @@ body>footer {
 	border-bottom: none;
 }
 
+main>article {
+	padding-bottom: 1.5em;
+	margin-bottom: 1.5em;
+	border-bottom: 1px solid currentColor;
+}
+
 main>article>.text-width,
 main>article>p {
 	// max-width: var(--text-max-width);
@@ -298,7 +304,7 @@ main>article>p {
 	padding-inline: 4ch;
 }
 header,h1,h2,h3,h4,h5,h6,details {
-	text-align: center;
+	text-align: center !important; // override pseudoclass
 	text-wrap: balance;
 }
 #contents {

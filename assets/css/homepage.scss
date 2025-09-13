@@ -21,11 +21,25 @@ body {
 	background-repeat: repeat;
 	--content-background-colour: var(--wall-clr-1);
 	--strong-accent-colour: #1190A1;
-	--header-colour: var(--wall-clr-1);
+	// --strong-accent-colour: var(--wall-clr-5);
+	/*header only*/
+	--wall-clr-5: #45448A;
+	--wall-clr-6: #B9384D;
+	--wall-clr-7: #FAE816;
+	--header-colour: var(--wall-clr-5);
+	--header-image:
+		radial-gradient(
+			ellipse farthest-side at top,
+			#FAE815,
+			#B9384D,
+			#45448A);
+
+	/*wall*/
 	--wall-clr-1: #5C2012;
 	--wall-clr-2: #D23B11;
 	--wall-clr-3: #E57711;
 	--wall-clr-4: #EAD328;
+
 	/* peach light
 	--wall-clr-1: #2A2640;
 	--wall-clr-2: #734656;
@@ -107,7 +121,8 @@ body:has(option[value="gb"]:checked) {
 body>header>h1 {
 	font-family: "Averia Serif Libre", "Cooper", fantasy;
 	font-weight: 900;
-	font-size: 96px;
+	font-size: min(96px, 10vw); /*is this a magic number!? i have no idea*/
+
 	margin-block: 0.2em;
 
 	paint-order: stroke fill;
@@ -127,14 +142,6 @@ body>header>h1 {
 		drop-shadow(calc(var(--outline-width) *  1) calc(var(--outline-width) * -1)  0px var(--outline-colour))
 		drop-shadow(calc(var(--outline-width) * -1) calc(var(--outline-width) * -1)  0px var(--outline-colour));
 
-	// -webkit-text-fill-color: var(--s-ppl);
-	text-shadow:
-		calc(var(--stroke-size) * 0.5) calc(var(--stroke-size) * 0.5) var(--hdr-clr-1),
-		calc(var(--stroke-size) * 1.0) calc(var(--stroke-size) * 1.0) var(--hdr-clr-2),
-		calc(var(--stroke-size) * 1.5) calc(var(--stroke-size) * 1.5) var(--hdr-clr-2),
-		calc(var(--stroke-size) * 2.0) calc(var(--stroke-size) * 2.0) var(--hdr-clr-3),
-		calc(var(--stroke-size) * 2.5) calc(var(--stroke-size) * 2.5) var(--hdr-clr-3),
-		calc(var(--stroke-size) * 3.0) calc(var(--stroke-size) * 3.0) var(--wall-clr-1);
 		/* i hate this fucking monstrosity */
 	text-shadow:
 		calc(var(--stroke-size) * 0.5 + var(--spread)) calc(var(--stroke-size) * 0.5 + var(--spread)) var(--hdr-clr-1),
