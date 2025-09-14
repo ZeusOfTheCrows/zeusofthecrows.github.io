@@ -7,6 +7,12 @@
       they are such elegant fonts'
 
 - article:
+  date: 2025-08-31
+  content:
+    - p: '<strong><em>i''m back, baybeee!</em></strong>'
+    - p: '<small>i don''t know how long for though…</small>'
+
+- article:
   date: 2022-11-27
   content:
     - p: 'i just got this from reddit, and i can''t make head nor tail of it:'
@@ -107,7 +113,7 @@
       src: '../buttons/taskbar/svg.svg'
       alt: 'animated svg button'
       class: 'btn-88x31'
-      style: 'width:400px;'
+      style: 'width:400px;vertical-align:bottom;'
 
 - article:
   date: 2022-09-30

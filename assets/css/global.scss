@@ -6,6 +6,24 @@
 
 /* =============================== variables =============================== */
 
+
+@font-face {
+	font-family: "Overpass";
+	src: local("Overpass-Italic-VariableFont_wght"),
+		url("/assets/fonts/overpass.woff2") format("woff2 supports variations"),
+		url("/assets/fonts/overpass.woff2") format("woff2-variations");
+  font-weight: 100 900;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Overpass";
+	src: local("Overpass-VariableFont_wght"),
+		url("/assets/fonts/overpass-italic.woff2") format("woff2 supports variations"),
+		url("/assets/fonts/overpass-italic.woff2") format("woff2-variations");
+  font-weight: 100 900;
+	font-style: italic;
+}
+
 /*http://arkandis.tuxfamily.org/adffonts.html*/
 @font-face {
 	font-family: "Baskervald";
@@ -36,6 +54,14 @@
 	font-style: italic;
 }
 
+/*https://www.dafontfree.co/marvin-visions-font/*/
+@font-face {
+	font-family: "Marvin Visions";
+	src: url("/assets/fonts/marvin-visions.woff2") format("woff2");
+	font-weight: normal;
+	font-style: normal;
+}
+
 /*http://natashaisneat.com/*/
 @font-face {
 	font-family: "Geomancy Extra Bold";
@@ -50,13 +76,23 @@
 	font-style: normal;
 }
 
+/* literally just for the infinity symbol... : ( */
+@font-face {
+	font-family: "Dela Gothic";
+	src: local("BaskervaldADFStd"),
+		url("/assets/fonts/delagothicone-infinity.woff2") format("woff2");
+	font-weight: normal;
+	font-style: normal;
+	unicode-range: U+221E;
+}
+
 /* variables */
 :root {
-	--fnt-sans: sans-serif;
-	--fnt-serif: "Baskervald", serif;
-	--fnt-mono: monospace;
-	--fnt-display: serif;
-	--fnt-subdisplay: "Geomancy Extra Bold", sans-serif;
+	--fnt-sans: "Overpass", "Fira Sans", ui-sans-serif, system-ui, sans-serif;
+	--fnt-serif: "Baskervald", ui-serif, serif;
+	--fnt-mono: ui-monospace, monospace;
+	--fnt-display: "Dela Gothic", "Marvin Visions", "Geomancy Extra Bold", ui-rounded, fantasy;
+	--fnt-subdisplay: "Geomancy Extra Bold", "Marvin Visions", ui-rounded, fantasy;
 	--fnt-body: var(--fnt-sans);
 
 	--nav-height: 60px;  // i don't know what i'm doing with this yet
@@ -228,13 +264,15 @@ body {
 	background-attachment: fixed;
 }
 
-/*
-h1 { font-size: 2.2em; }
-h2 { font-size:   2em; }
-h3, .h-summ { font-size: 1.8em; }
+
+h1 { font-size: 2.8em; }
+h2 { font-size: 2.4em; }
+h3 { font-size: 2.0em; }
 h4 { font-size: 1.6em; }
 h5 { font-size: 1.4em; }
-h6 { font-size: 1.2em; }*/
+h6 { font-size: 1.2em; }
+
+
 /*
 .h-summ {
 	margin-inline: 0.5em;
@@ -256,6 +294,7 @@ hr {
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: var(--fnt-display);
+	letter-spacing: 1px;
 }
 article>header {
 	text-align: right;

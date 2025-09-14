@@ -32,7 +32,7 @@ znotes: fix the fucking smart quotes
 	{% for content in article.content %}
 		{% if content.p %}
 			<p>
-				{{ content.p | replace '“', '&quot;' }}
+				{{ content.p | smartify }}
 			</p>
 		{% comment %}
 		don't like this, would prefer elsif content.a, but it returns false as it
