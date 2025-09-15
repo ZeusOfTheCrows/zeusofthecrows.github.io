@@ -1,6 +1,12 @@
-- content: <strong>The Stadt is now Zeus' Nest</strong>
+- content: '<strong>Zeus'' Stadt, as a subtitle, is now gone</strong> (i''m not
+  sure there is a subtitle anymore)'
 
-- content: <strong>this is a tabula rasa release</strong>
+- content: '<strong>this is a tabula rasa release: </strong> almost all page
+  urls have changed – there are redirects for now, but i recommend you update
+  any links'
+
+- content: 'the old landing page is now being used as a landing page/redirect
+  for /stadt/'
 
 - content: added two new neighbours
 
@@ -367,6 +373,11 @@
       url: antipix/aus
       type: btn-150x15
       alt: "australian antipix icon"
+
+    - image:
+      url: antipix/os2
+      type: btn-150x15
+      alt: "os/2 warp antipixel icon"
 
 
 - content: new blinkies have been added to the gallery

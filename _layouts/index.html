@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+{{ content }}
+
+<!-- i think change this to a normal list, maybe a nav (read semantics); but
+this will do for now -->
+
+<dl>
+{% assign folder = page.url | split: '/' | last | append: '/' | prepend: '/' %}
+
+{% assign thoughts = site.pages | where_exp: "page", "page.url contains folder" | sort: 'date' | reverse | compact %}
+{% for thought in thoughts %}
+	{% comment %}
+		bit of a hack, could be improved if there was a "startswith"
+	{% endcomment %}
+	{% unless thought.layout == 'index' or thought.layout == 'redirect' %}
+	<dt><a href="{{ thought.url | remove: '.html' }}">{{ thought.title }}</a></dt>
+	<dd>                               <!-- replace headers with colons -->
+		{{ thought.content | truncatewords: 10 | replace: '</h2>', ':' | strip_html | escape }}
+	</dd>
+	{% endunless %}
+{% endfor %}
+</dl>

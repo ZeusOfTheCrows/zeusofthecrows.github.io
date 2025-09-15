@@ -102,8 +102,13 @@
 	--header-colour: black;
 	--accent-colour: var(--s-org);
 	--content-background-radius: 32px;
-	--content-background-width: 120ch;
-	--text-max-width: 80ch;
+	/*these can't be in ch until rch is unavailable, or they get wider with titles*/
+	/*https://github.com/w3c/csswg-drafts/issues/6034*/
+	/*unfortunately this means the width is dependant on font height*/
+	// --content-background-width: 120ch;
+	// --text-max-width: 80ch;
+	--content-background-width: 80rem;
+	--text-max-width: 60rem;
 
 	--d-red: #CC241D;
 	--d-grn: #98971A;
@@ -272,26 +277,6 @@ h4 { font-size: 1.6em; }
 h5 { font-size: 1.4em; }
 h6 { font-size: 1.2em; }
 
-
-/*
-.h-summ {
-	margin-inline: 0.5em;
-	font-family: var(--fnt-serif);
-	text-align: center;
-	color: var(--s-org);
-	&:target {
-		color: var(--s-grn);
-	}
-}*/
-
-/*
-hr {
-	border: 1px solid transparent;
-	border-top-color: var(--bg-0);
-	border-bottom-color: var(--bg-5);
-	margin-inline: 1em;
-}*/
-
 h1, h2, h3, h4, h5, h6 {
 	font-family: var(--fnt-display);
 	letter-spacing: 1px;
@@ -341,8 +326,6 @@ blockquote {
 	}
 	&::after {
 		content: no-close-quote;  // reset quote back to double
-		// visibility: hidden;    // (nested quotes become single)
-		// position: absolute;    // (don't mess with positioning)
 	}
 }
 
@@ -708,8 +691,10 @@ textarea {
 
 
 body {
+  min-height: 100vh;
   display: grid;
   grid-template-columns: 1fr auto var(--body-hor-offset, 1fr);
+  grid-template-rows: auto auto 1fr auto;
 	// background-color: var(--content-background-colour, var(--bg-1, black));
 
 	&>nav {
@@ -744,6 +729,9 @@ body {
 
 	&>main {
 		grid-column: 2 / 2;
+		height: min-content;
+		/*doesn't do anything, but gracefully degrades when grid is unavailable:*/
+		margin-inline: auto;
 		max-width: var(--content-background-width);
 		border-bottom-left-radius:  var(--content-background-radius, 0);
 		border-bottom-right-radius: var(--content-background-radius, 0);
@@ -751,6 +739,7 @@ body {
 
 	&>footer {
 		grid-column: 1 / 4;
+		align-self: end;
 		font-size: smaller;
 		text-align: center;
 		text-wrap: balance;

@@ -1,0 +1,65 @@
+---
+title: "In Appreciation of CSS"
+subtitle: "CSS is Like a Zachtronics Game, Really"
+layout: opinion
+css-file: article
+date: 2022-06-27
+edit:  2022-06-27
+---
+
+<p>
+	right. unlike a zt game, it's bollocks. it's inconsistent,
+	confusing, and seemingly random.	it's clearly been designed by
+	multiple people over decades, each with adifferent goal in mind.
+	there are at least 6 different ways of centring items, depending
+	upon its direction and parent.
+	<br />
+	off the top of my head:
+	<ul>
+		<li><code>
+			<span class="code opr">align-items</span>:
+			<span class="code val">center</span>;
+		</code></li>
+		<li><code>
+			<span class="code opr">margin-inline</span>:
+			<span class="code val">auto</span>;
+		</code></li>
+		<li><code>
+			<span class="code opr">text-align</span>:
+			<span class="code val">center</span>;
+		</code></li>
+		<li><code>
+			<span class="code opr">justify-content</span>:
+			<span class="code val">center</span>;
+		</code></li>
+		<li><code>
+			<span class="code opr">vertical-align</span>:
+			<span class="code val">middle</span>;</code>
+			<small class="code cmt">/* why is this one not center? */</small>
+		</li>
+		<li><code>
+			<span class="code opr">transform</span>:
+			<span class="code val">translate(0, -50%)</span>;
+		</code></li>
+	</ul>
+</p>
+<p>
+	and, just like opus magnum, there is no "right" solution. i
+	personally loathe flexbox, but think grid is so intuitive and
+	lovely. just as mentioned in
+	<a href="https://www.youtube.com/watch?v=toD5D6PDofU&t=308s">
+		this video,</a>
+	one can either meet the targets of clarity, concision, or ease /
+	time to finish; but not all three simultaneously. all code is
+	hard to read when it's written by someone else, but css i find
+	particularly hard compared to its ease of understanding at the time
+	of writing, especially as it requires holding 2+ files in ones head
+	(as the structure of the related html file is important, as well
+	as possible js files).
+</p>
+<p>
+	and to be honest, that's fun. trying to figure out the "best" way
+	to solve this puzzle, for æsthetics & maintainability, is just as
+	good as TIS-100, and it's free! <em>and</em> you get something out
+	of it at the end (more than just a steam achievement, at least)
+</p>
