@@ -25,7 +25,9 @@ a[id^="fn"] {
 	font-size: 0.9em;
 	text-decoration: none !important;
 	font-family: var(--fnt-serif);
+	visibility: hidden;
 	&::before{
+		visibility: visible;
 		content: "†";
 	}
 	&:target {
@@ -129,8 +131,11 @@ dl {
 
 table,
 td {
-	border-radius: 8px;
-	border: ridge var(--d-ppl);
+	border: 2px solid var(--content-background-colour);
+	border-collapse: collapse;
+	background-color: var(--strong-accent);
+	table-layout: fixed;
+	width: 100%;
 	padding: 0.4em;
 }
 

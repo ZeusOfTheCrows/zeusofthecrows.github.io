@@ -32,7 +32,7 @@ sep_char: ¦ # separator character for lists (one ¦ two ¦ three)
 url-pfx: "/classic" # url prefix for all links. this seems like a good idea for
 # future-proofing, but it's a little clunky and i'm not sure i want any prefix?
 # /!\ not used in /_sass/vars.scss -- broken /!\
-edit-date: now
+edit: now
 # edit-date: 2022-06-27
 # gc_edit-date: 2022-07-29
 

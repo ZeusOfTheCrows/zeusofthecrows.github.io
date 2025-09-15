@@ -91,7 +91,7 @@ Kevin Powell-->
 			frame aproach (and gif's max fps of
 			<a href="https://wunkolo.github.io/post/2020/02/buttery-smooth-10fps/"
 				title="or 100hz, but most browsers don't support that">50hz</a>
-			which does not fit with most monitor's 60hz). just look at that
+			which does not fit with most monitors' 60hz). just look at that
 			silky smooth animation
 		</td>
 		<td>
@@ -102,8 +102,9 @@ Kevin Powell-->
 	<!--ztodo: svg allows offset timescale animations-->
 	<tr>
 		<td>
-			you'll be the coolest kid on the block, with your button in a
-			unique(ish) format
+			asynchronous anymations: if you want a 5 frame loop and a 7 frame loop on
+			a raster button, you have to have a <em>35 frame</em> file! with svg,
+			every animation has its own – independent – duration value
 		</td>
 		<td>
 			depending on the number of elements, they tend to be slightly
@@ -117,6 +118,12 @@ Kevin Powell-->
 		<td>
 			there are no "proprietary" source files (.ase, .xcf), as svg's have
 			layers baked in, and are viewable in a text editor
+		</td>
+	</tr>
+	<tr>
+		<td>
+			you'll be the coolest kid on the block, with your button in a
+			unique(ish) format
 		</td>
 	</tr>
 </table>
@@ -219,7 +226,7 @@ Kevin Powell-->
 	</li>
 	<li>
 		add your <code>&lt;<span class="obj">animate[Transform]</span>&gt;</code>
-		tag as an immediate child of your chosen element<sup>†</sup>
+		tag as an immediate child of your chosen element<a id="ref1" href="#fn1">*</a>
 		<ul>
 			<li>
 				i believe it can be any child, but i tend to add it as a final
@@ -239,7 +246,8 @@ Kevin Powell-->
 	<li>
 		unlike css, units are optional: all unitless values are in pixels
 		<br />
-		you can either use <code><span class="opr">from</span>="<span class="val">x [y] [z]</span>"</code>
+		one can either use
+		<code><span class="opr">from</span>="<span class="val">x [y] [z]</span>"</code>
 		& <code><span class="opr">to</span>="<span class="val">x [y] [z]</span>"</code>
 		properties, or a
 		<code><span class="opr">values</span>="<span class="val">x [y] [z]; x [y] [z]; [x [y] [z]]</span>"</code>
@@ -276,12 +284,6 @@ Kevin Powell-->
 	<a href="https://edutechwiki.unige.ch/en/SVG-SMIL_animation_tutorial">tutorials</a>
 	i have found
 </p>
-<footer><small>
-	<sup>†</sup> if using <code>animateTransform</code>, it will override
-	any <code>transform="whatever(x)"</code> property. either apply this to
-	all children manually, or move/scale the object without using
-	<code>transform=""</code>
-</small></footer>
 
 <ul class="img-grid" style="margin-inline: auto;">
 	<li>
@@ -295,3 +297,10 @@ Kevin Powell-->
 			alt="animated svg button, but massive" />
 	</li>
 </ul>
+
+<footer>
+	<a id="fn1" href="#ref1">*</a>if using <code>animateTransform</code>, it will override
+	any <code>transform="whatever(x)"</code> property. either apply this to
+	all children manually, or move/scale the object without using
+	<code>transform=""</code>
+</small></footer>

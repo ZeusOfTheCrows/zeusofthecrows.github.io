@@ -26,13 +26,13 @@ body {
 	--wall-clr-5: #45448A;
 	--wall-clr-6: #B9384D;
 	--wall-clr-7: #FAE816;
-	--header-colour: var(--wall-clr-5);
-	--header-image:
-		radial-gradient(
-			ellipse farthest-side at top,
-			#FAE815,
-			#B9384D,
-			#45448A);
+	--header-colour: var(--strong-accent-colour);
+	// --header-image:
+	// 	radial-gradient(
+	// 		ellipse farthest-side at top,
+	// 		#FAE815,
+	// 		#B9384D,
+	// 		#45448A);
 
 	/*wall*/
 	--wall-clr-1: #5C2012;
@@ -84,8 +84,12 @@ body {
 		radial-gradient(circle at 65.4% 65.4%, var(--wall-clr-1), var(--wall-clr-1) 8%,  #0000 calc(8% + 1px)),
 		radial-gradient(circle at 68.3% 68.3%, var(--wall-clr-2), var(--wall-clr-2) 12%, #0000 calc(12% + 1px)),
 		radial-gradient(circle at 71.5% 71.5%, var(--wall-clr-3), var(--wall-clr-3) 16%, #0000 calc(16% + 1px)),
-		radial-gradient(circle at 75.0% 75.0%, var(--wall-clr-4), var(--wall-clr-4) 20%, #0000 calc(20% + 1px))
-		;
+		radial-gradient(circle at 75.0% 75.0%, var(--wall-clr-4), var(--wall-clr-4) 20%, #0000 calc(20% + 1px));
+	/*
+	background-color: #B9384D;
+	background-image:
+		linear-gradient(to top, transparent, #B9384D, #45448A),
+		radial-gradient(circle farthest-side at 10% 100%, #FAE815, #B9384D 400px, transparent 100vmin);*/
 }
 
 @media (prefers-color-scheme: light) {
@@ -496,6 +500,8 @@ main>section>article {
 
 #whats-new {
 	height: 360px;
+}
+#whats-new, #outlinks {
 	// border: 4px solid;
 	--background-colour: var(--strong-accent-colour);
 	--ripple-size: 8px;

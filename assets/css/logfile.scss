@@ -273,6 +273,7 @@ body>main {
 	&>img {
 		border-radius: var(--content-background-radius);
 		max-width: 100%;
+		max-height: 28em;
 		vertical-align: bottom;
 	}
 }

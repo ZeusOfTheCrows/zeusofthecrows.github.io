@@ -106,19 +106,32 @@ layout: base
 
 <footer>
 	<p><a id="back-to-top-link" href="#">^ Back to top ^</a></p>
+		{%- if page.edit -%}
+			{% assign edited = true %}
+			{%- assign date = page.edit | date: '%Y-%m-%d' -%}
+		{%- else -%}
+			{% assign edited = false %}
+			{%- assign date = site.edit | date: '%Y-%m-%d' -%}
+		{%- endif -%}
+
+		{%- case date | date: '%e' | modulo: 10 -%}
+			{%- when 1 -%}
+				{% assign nth = 'st' %}
+			{%- when 2 -%}
+				{% assign nth = 'nd' %}
+			{%- when 3 -%}
+				{% assign nth = 'rd' %}
+			{%- else -%}
+				{% assign nth = 'th' %}
+			{%- endcase -%}
 	<p><small>
-		(ɔ) <time datetime="
-		{%- if page.edit-date -%}
-			{{- page.edit-date | date: '%Y-%m-%d' -}}
-		{%- else -%}
-			{{- site.edit-date | date: '%Y-%m-%d' -}}
-		{%- endif -%}">
-		{%- if page.edit-date -%}
-			{{ page.edit-date | date: "%Y" -}}
-		{%- else -%}
-			{{ site.edit-date | date: "%Y" -}}
-		{%- endif -%}</time> ZeusOfTheCrows. All Wrongs
-		Reserved. <a href="https://copyheart.org/">Copying is an act of love ♡</a>
+		(ɔ) <time datetime="{{ date }}"
+		title="{%- if edited -%} page {% else -%} site {% endif -%}
+		last edited on the {{ date | date: '%d'-}}
+		{{ nth }} of {{ date | date: '%B' | downcase }}, {{ date | date: '%Y' }}"
+		>{{ date | date: '%Y' }}</time>
+		ZeusOfTheCrows. All Wrongs
+		Reversed. <a href="https://copyheart.org/">Copying is an act of love ♡</a>
 	</small></p>
 	<ul class="img-grid">
 		<li><a>
