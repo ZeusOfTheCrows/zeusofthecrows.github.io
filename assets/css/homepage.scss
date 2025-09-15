@@ -642,19 +642,13 @@ main>section>article {
 #webrings {
 		display: grid;
 		gap: 8px;
-		grid-template-areas:
-			"intro"
-			"geek"
-			"hotln ";
 
 		& #wr-intro {
-			grid-area: intro;
 			text-align: center;
 		}
 
 		& #wr-geekring {
 			font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
-			grid-area: geek;
 			padding: 8px;
 
 			background: linear-gradient(#66CC99, #9999CC);
@@ -667,7 +661,6 @@ main>section>article {
 			gap: 1em 4px;
 
 			& p {
-				// grid-area: label;
 				text-align: center;
 				grid-column: 1 / 4;
 				grid-row:    1 / 2;
@@ -698,7 +691,6 @@ main>section>article {
 
 		& #wr-hotline {
 			font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-			grid-area: hotln;
 
 			& p {
 				margin-block: 2em;
@@ -762,7 +754,6 @@ main>section>article {
 }
 
 #quote {
-	grid-area: qote;
 	max-width: 50ch;
 	min-width: 256px;
 	height: min-content;

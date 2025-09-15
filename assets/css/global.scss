@@ -6,6 +6,7 @@
 
 /* =============================== variables =============================== */
 
+@import url('https://fonts.cdnfonts.com/css/baskervald-adf-std');
 
 @font-face {
 	font-family: "Overpass";
@@ -25,6 +26,10 @@
 }
 
 /*http://arkandis.tuxfamily.org/adffonts.html*/
+/* modified with fontsquirrel: */
+/* x-height multiplier @ 119% (would rather 119.5, but fs doesn't support
+fractional values); glyph spacing @ -32 em square (equivalent to -0.03,
+~-0.4px @ 16px) */
 @font-face {
 	font-family: "Baskervald";
 	src: local("BaskervaldADFStd"),
@@ -206,7 +211,27 @@ body>header {
 	text-align: center;
 	contain: content;  // performance improvements i believe? slightly beyond me
 }
-
+/*header inner corners:*/
+body::before, body::after {
+	content: "";
+	width: 100%; /* < this is for responsiveness v */
+	max-width: min(var(--nav-height), var(--content-background-radius));
+	aspect-ratio: 1;
+	display: block;
+	grid-row: 2 / 3;
+	background-image:
+		radial-gradient(
+			farthest-side circle at bottom left,
+			transparent calc(100% - 1px),
+			var(--header-colour));
+}
+body::before {
+	margin-left: auto;
+}
+body::after {
+	grid-column: 3 / 4;
+	rotate: -90deg;
+}
 /* ========================== accessibility styles ========================== */
 
 @media (prefers-reduced-motion: reduce) {
@@ -329,8 +354,13 @@ blockquote {
 	}
 }
 
-em, i, q {
+em, q {
 	font-style: italic;
+	font-family: var(--fnt-serif);
+}
+i {
+	font-style: italic;
+	font-style: oblique;
 	font-family: var(--fnt-serif);
 }
 /* colour highlighted text */

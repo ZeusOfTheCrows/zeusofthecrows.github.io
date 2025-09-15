@@ -217,11 +217,11 @@ body>main {
 				height: calc(var(--content-background-radius) * 2);
 				aspect-ratio: 1;
 				left: 0;
-  background-image:
-		radial-gradient(
-			circle at 100% 0%,
-			transparent calc(var(--content-background-radius) * 2),
-			var(--item-bg-clr-0) calc(var(--content-background-radius) * 2 + 1px));
+				background-image:
+					radial-gradient(
+						farthest-side circle at top right,
+						transparent calc(100% - 1px),
+						var(--item-bg-clr-0));
 			}
 			&::before {
 				top: calc(var(--content-background-radius) * -2);

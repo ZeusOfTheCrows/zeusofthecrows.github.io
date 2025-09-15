@@ -243,4 +243,4 @@
 - article:
   date: 2022-06-25
   content:
-    - p: '<i>&lt;!-- initial commit --&gt;</i>'
+    - p: '<i><code>&lt;!-- initial commit --&gt;</code></i>'
