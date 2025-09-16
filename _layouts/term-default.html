@@ -6,7 +6,7 @@
 		<meta name="theme-color" content="#000000" />
 		<meta name="color-scheme" content="dark" />
 		<title>
-			{% if page.title %}{{ page.title | slugify: "raw" }} {{ site.sep_char }} {% else %}{% endif %} {{ site.title | downcase | escape }}
+			{% if page.title %}{{ page.title | slugify: "raw" }} {{ site.sep_char }} {% else %}{% endif %} {{ site.term-title | downcase | escape }}
 		</title>
 		<meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}" />
 		<link rel="stylesheet" href="{{ site.url-pfx }}/assets/css/style.css" />

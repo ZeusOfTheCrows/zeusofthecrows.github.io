@@ -400,6 +400,8 @@ body>main {
 	flex-wrap: wrap;
 	align-items: start;
 	justify-content: center;
+	/*background-colour is set on the sections*/
+	background-color: transparent;
 }
 
 main>section {
@@ -542,6 +544,17 @@ main>section>article {
 		top: 0;
 		margin-block: 0;
 		padding-block: 0.4em;
+	}
+	& h3 {
+		text-align: center;
+		margin-bottom: 0;
+		text-transform: none;
+		text-decoration: underline;
+		font-style: italic;
+		font-family: var(--fnt-serif), serif;
+		&::after {
+			content: ":";
+		}
 	}
 }
 

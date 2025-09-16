@@ -27,16 +27,11 @@ body {
 	background-image: url("/assets/images/shrines/mv/backgrounds/crocomire.png");
 }
 
-main {
-	background-color: var(--content-background-colour);
-}
-
 main>article>section {
-
-	color: lightblue;
+	color: lightblue; // ztodo remove me when paletting the palette
 	background-attachment: fixed;
 
-	&>*:not(h2) {
+	&>* {
 		padding-inline: 2ch;
 		max-width: var(--text-max-width);
 		margin-inline: auto;
@@ -48,9 +43,9 @@ main>article>section {
 			url("/assets/images/shrines/mv/m-border-image.png")
 			6 6 6 6 / 6px 6px 6px 6px;
 		// image-rendering: pixelated;
-		padding-block: 1em;
+		// padding-block: 1em;
 
-		text-align: center;
+		// text-align: center;
 		display: grid;
 		grid-template-columns: repeat(var(--cols, 1), 1fr);
 		gap: 1ch;
@@ -67,11 +62,18 @@ main>article>section {
 			grid-column: 1 / -1;
 			font-style: italic;
 			font-family: var(--fnt-subdisplay, serif);
+			&>* {
+				font-family: inherit;
+			}
 		}
 	}
 
 	&>h1,
 	&>h2 {
+		/*for header images*/
+		max-width: 100%;
+		width: 100%;
+		padding-inline: 0;
 		margin-block: 0;
 		text-align: center;
 		font-size: 2em;
@@ -174,7 +176,6 @@ main>article>section {
 	& figcaption {
 		font-style: normal;
 		line-height: 1;
-		text-wrap: balance;
 	}
 	&>h2 {
 	// ZTODO THESE ARE NOT VARIABLES DUE TO [UNDOCUMENTED?] SCSS BUG

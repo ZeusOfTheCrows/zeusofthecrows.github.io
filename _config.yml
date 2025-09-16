@@ -18,9 +18,9 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: ZeusOfTheCrows
+term-title: ZeusOfTheCrows
+title: "Why look to the future when you can live in the past?"
 # (downcased in head.html)
-gc-title: Ɀeus' Nest
 email: zeusofthecrows+site(ⓐ)gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   ...it sure is an attempt at a website

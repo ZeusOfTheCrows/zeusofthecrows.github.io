@@ -1,0 +1,110 @@
+
+:root {
+	--content-background-colour: var(--wall-clr-1);
+	--strong-accent-colour: var(--wall-clr-4);
+	--accent-colour: var(--wall-clr-3);
+}
+@media (prefers-color-scheme: light) {
+	:root {
+		--content-background-colour: var(--wall-clr-5);
+		--strong-accent-colour: var(--wall-clr-2);
+	}
+}
+
+:root {
+	--bg-box-size: 192px;
+	--bg-pattern-size: calc(var(--bg-box-size) * 0.258);
+	--aa: 1px;
+	--wall-clr-1: #001A3B;
+	--wall-clr-2: #02516F;
+	--wall-clr-3: #006973;
+	--wall-clr-4: #5A958F;
+	--wall-clr-5: #E1BB8E;
+}
+body {
+	background-size: var(--bg-box-size)  var(--bg-box-size);
+	background-color: var(--wall-clr-1);
+	background-image:
+		/*white dot top half*/
+		radial-gradient(
+			var(--bg-pattern-size) at 25% 100%,
+			var(--wall-clr-2) 10% calc(20%  - var(--aa)),
+			var(--wall-clr-3) 20% calc(40%  - var(--aa)),
+			var(--wall-clr-4) 40% calc(60%  - var(--aa)),
+			var(--wall-clr-5) 60% calc(80%  - var(--aa)),
+			var(--wall-clr-1) 80% calc(100% - var(--aa)),
+			transparent),
+		/*white dot bottom half*/
+		radial-gradient(
+			var(--bg-pattern-size) at 25% 0%,
+			var(--wall-clr-2) 10% calc(20%  - var(--aa)),
+			var(--wall-clr-3) 20% calc(40%  - var(--aa)),
+			var(--wall-clr-4) 40% calc(60%  - var(--aa)),
+			var(--wall-clr-5) 60% calc(80%  - var(--aa)),
+			var(--wall-clr-1) 80% calc(100% - var(--aa)),
+			transparent),
+		/*waves left*/
+		radial-gradient(
+			var(--bg-pattern-size) at 25% 10%,
+			var(--wall-clr-2) calc(100% - var(--aa)),
+			transparent),
+		radial-gradient(
+			var(--bg-pattern-size) at 25% 20%,
+			var(--wall-clr-3) calc(100% - var(--aa)),
+			transparent),
+		radial-gradient(
+			var(--bg-pattern-size) at 25% 30%,
+			var(--wall-clr-4) calc(100% - var(--aa)),
+			transparent),
+		radial-gradient(
+			var(--bg-pattern-size) at 25% 40%,
+			var(--wall-clr-5) calc(100% - var(--aa)),
+			transparent),
+		/*waves right bottom half*/
+		radial-gradient(
+			var(--bg-pattern-size) at 75% 150%,
+			var(--wall-clr-1) calc(100% - var(--aa)),
+			transparent),
+		radial-gradient(
+			var(--bg-pattern-size) at 75% 140%,
+			var(--wall-clr-5) calc(100% - var(--aa)),
+			transparent),
+		radial-gradient(
+			var(--bg-pattern-size) at 75% 130%,
+			var(--wall-clr-4) calc(100% - var(--aa)),
+			transparent),
+		radial-gradient(
+			var(--bg-pattern-size) at 75% 120%,
+			var(--wall-clr-3) calc(100% - var(--aa)),
+			transparent),
+		radial-gradient(
+			var(--bg-pattern-size) at 75% 110%,
+			var(--wall-clr-2) calc(100% - var(--aa)),
+			transparent),
+		/*blue dot*/
+		radial-gradient(
+			var(--bg-pattern-size) at 75% 50%,
+			var(--wall-clr-5) 10% calc(20%  - var(--aa)),
+			var(--wall-clr-4) 20% calc(40%  - var(--aa)),
+			var(--wall-clr-3) 40% calc(60%  - var(--aa)),
+			var(--wall-clr-2) 60% calc(80%  - var(--aa)),
+			var(--wall-clr-1) 80% calc(100% - var(--aa)),
+			transparent),
+		/*waves right bottom half*/
+		radial-gradient(
+			var(--bg-pattern-size) at 75% 40%,
+			var(--wall-clr-5) calc(100% - var(--aa)),
+			transparent),
+		radial-gradient(
+			var(--bg-pattern-size) at 75% 30%,
+			var(--wall-clr-4) calc(100% - var(--aa)),
+			transparent),
+		radial-gradient(
+			var(--bg-pattern-size) at 75% 20%,
+			var(--wall-clr-3) calc(100% - var(--aa)),
+			transparent),
+		radial-gradient(
+			var(--bg-pattern-size) at 75% 10%,
+			var(--wall-clr-2) calc(100% - var(--aa)),
+			transparent);
+}
