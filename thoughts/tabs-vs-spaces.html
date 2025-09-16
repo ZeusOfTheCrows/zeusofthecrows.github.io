@@ -1,146 +1,148 @@
 ---
 title: "Tabulation & Indentation"
 subtitle: "Tabs are the Obvious Choice, Really"
-layout: opinion
-css-file: article
+layout: thought
+css-file: thoughts
+css-layout: article
 date: 2022-07-16
 edit:  2022-07-23
 ---
 
-<p>
-	i will not reiterate the obvious, and far more important,
-	<a href="https://adamtuttle.codes/blog/2021/tabs-vs-spaces-its-an-accessibility-issue/">
-	accessibility arguments</a>; as others have
-	<a href="https://ww.reddit.com/r/javascript/comments/c8drjo/">done so
-	quite sufficiently</a>.<a id="ref1" href="#fn1">*</a> nor will i try to reiterate the many good points
-	<a href="https://lea.verou.me/2012/01/why-tabs-are-clearly-superior/">
-	that others have made</a>, or
-	<a href="https://nickgravgaard.com/elastic-tabstops/ ">offer alternative
-	solutions</a>, as i'm sure others have done so more astutely
-</p>
+<section>
+	<p>
+		i will not reiterate the obvious, and far more important,
+		<a href="https://adamtuttle.codes/blog/2021/tabs-vs-spaces-its-an-accessibility-issue/">
+		accessibility arguments</a>; as others have
+		<a href="https://ww.reddit.com/r/javascript/comments/c8drjo/">done so
+		quite sufficiently</a>.<a id="ref1" href="#fn1">*</a> nor will i try to reiterate the many good points
+		<a href="https://lea.verou.me/2012/01/why-tabs-are-clearly-superior/">
+		that others have made</a>, or
+		<a href="https://nickgravgaard.com/elastic-tabstops/ ">offer alternative
+		solutions</a>, as i'm sure others have done so more astutely
+	</p>
 
-<p>
-	no; instead, to get my point across, i'll request you imagine a different
-	world, a parallel universe if you will
-</p>
-<p>
-	imagine a world in which the horizontal tabulation character was never
-	invented, and all indentation is done with spaces
-</p>
-<p>
-	a world in which every time one pastes code in from another place, it has
-	to be futzed with and converted to 2, 4, 8 or whichever width one is
-	currently using
-</p>
-<p>
-	a world in which one has to hope the ide is intelligent enough to insert
-	4 characters when pressing a single key, and to delete 4 characters when
-	pressing backspace/delete once, <b>but <em>only</em> when all the
-	characters to the left of the cursor are whitespace</b> (or right,
-	presumably, in right-to-left languages)
-</p>
-<p>
-	a world in which one needs the indentation depth for a project to
-	be agreed upon by the entire team prior to starting
-</p>
-<p>
-	a world in which the space character has differing semantic meanings
-	depending upon where on the page it resides
-</p>
-<p>
-	now imagine someone invents a character that can do all that
-	automatically. a character that allows everyone to choose what width they
-	find easiest to read, and like any personal preference, that width is
-	specific to them and does not inconvenience their teammates.
-</p>
-<p>
-	imagine that somebody discovers a number between 8 and 10, and uses that
-	space to encode this character into ascii, so it will work in any text
-	field that supports ascii or utf-8 (i.e. almost all); just by pressing a
-	single key, that is already all keyboards, <kbd>Tab ↹</kbd>
-</p>
-<p>
-	surely this would be heralded as a technological revelation? surely this
-	man would be paraded from the rooftops, as a true reincarnation of the
-	deus mechanicus?
-</p>
+	<p>
+		no; instead, to get my point across, i'll request you imagine a different
+		world, a parallel universe if you will
+	</p>
+	<p>
+		imagine a world in which the horizontal tabulation character was never
+		invented, and all indentation is done with spaces
+	</p>
+	<p>
+		a world in which every time one pastes code in from another place, it has
+		to be futzed with and converted to 2, 4, 8 or whichever width one is
+		currently using
+	</p>
+	<p>
+		a world in which one has to hope the ide is intelligent enough to insert
+		4 characters when pressing a single key, and to delete 4 characters when
+		pressing backspace/delete once, <b>but <em>only</em> when all the
+		characters to the left of the cursor are whitespace</b> (or right,
+		presumably, in right-to-left languages)
+	</p>
+	<p>
+		a world in which one needs the indentation depth for a project to
+		be agreed upon by the entire team prior to starting
+	</p>
+	<p>
+		a world in which the space character has differing semantic meanings
+		depending upon where on the page it resides
+	</p>
+	<p>
+		now imagine someone invents a character that can do all that
+		automatically. a character that allows everyone to choose what width they
+		find easiest to read, and like any personal preference, that width is
+		specific to them and does not inconvenience their teammates.
+	</p>
+	<p>
+		imagine that somebody discovers a number between 8 and 10, and uses that
+		space to encode this character into ascii, so it will work in any text
+		field that supports ascii or utf-8 (i.e. almost all); just by pressing a
+		single key, that is already all keyboards, <kbd>Tab ↹</kbd>
+	</p>
+	<p>
+		surely this would be heralded as a technological revelation? surely this
+		man would be paraded from the rooftops, as a true reincarnation of the
+		deus mechanicus?
+	</p>
 
-<hr />
+	<hr />
 
-<p>
-	space indentation is one of the reasons poor programmers are stuck using
-	monospace fonts, when the rest of the computing world moved on to
-	proportional, arguably as early as
-	<a href="https://lowendmac.com/2025/fonts-before-mac-1983/">1983</a>;
-	we could have nice <a href="https://input.djr.com/">proportional fonts
-	such as this</a>
-</p>
-<p>
-	when using tabs for indentation, you're using a
-	<a href="https://patents.google.com/patent/US720520">century proven</a>
-	and semantically appropriate method. <br />
-	when using spaces, you're flouting this tradition in favour of a hacky
-	solution; using characters not as intended, but as a system no better
-	than mashing the <kbd>X</kbd> key on a typewriter in lieu of a proper
-	delete key
-</p>
-<p>
-	now consider that before programmable computers were widespread, someone
-	had the forsight to invent a character that can do all of these things
-	automatically, and think <q>this will be such a useful feature, we will
-	assign it to one of the <em>127 characters</em> we have available</q>. i
-	can't believe people just throw that away for the argument <q>it looks
-	a bit better on stack overflow</q>
-</p>
+	<p>
+		space indentation is one of the reasons poor programmers are stuck using
+		monospace fonts, when the rest of the computing world moved on to
+		proportional, arguably as early as
+		<a href="https://lowendmac.com/2025/fonts-before-mac-1983/">1983</a>;
+		we could have nice <a href="https://input.djr.com/">proportional fonts
+		such as this</a>
+	</p>
+	<p>
+		when using tabs for indentation, you're using a
+		<a href="https://patents.google.com/patent/US720520">century proven</a>
+		and semantically appropriate method. <br />
+		when using spaces, you're flouting this tradition in favour of a hacky
+		solution; using characters not as intended, but as a system no better
+		than mashing the <kbd>X</kbd> key on a typewriter in lieu of a proper
+		delete key
+	</p>
+	<p>
+		now consider that before programmable computers were widespread, someone
+		had the forsight to invent a character that can do all of these things
+		automatically, and think <q>this will be such a useful feature, we will
+		assign it to one of the <em>127 characters</em> we have available</q>. i
+		can't believe people just throw that away for the argument <q>it looks
+		a bit better on stack overflow</q>
+	</p>
 
-<hr />
+	<hr />
 
-<p>
-	and that's the thing i understand least - there seems to be absolutely
-	<strong>no</strong> cogent argument for spaces‽
-</p>
-<dl>
-	<dt>
-		<q>some software that was obsolete before i started coding doesn't
-		really like tabs much</q>
-	</dt>
-	<dd>
-		why are we beholden to insufficient software? ␉ most certainly
-		existed when they were written, so i don't quite know what the excuse
-		was. most modern software deals fine with tabs, even css:
-		<code style="white-space: nowrap;">
-			<span class="code opr">tab-size</span>:
-			<span class="code val">8</span>;
-		</code>
-	</dd>
-	<dt>
-		<q>i can't enforce how my code is presented</q>
-	</dt>
-	<dd>
-		good. code is not its fucking presentation - you can't dictate what
-		font your code is read in, nor its colour or size; why should you try
-		to dictate its indentation level?
-	</dd>
-	<dt>
-		<q>i can't line things up properly with tabs</q>
-	</dt>
-	<dd>yes you can, watch:</dd>
-				<!-- pre inside code to strip opening newline -->
-<pre><code class="codeblock indent-9x lang-lua"
-><span class="code obj">Graphics</span>.<span class="code opr">fillCircle</span>(
-	<span class="code val">124</span>,
-	<span class="code val">304</span>,
-	((<span class="code obj">math</span>.<span class="code opr">max</span
-	>(<span class="code obj">
-		stkMax</span>.<span class="code val">lx</span
-	>,
-		<span class="code obj">stkMax</span>.<span class="code val">ly</span>
-	) <span class="code opr">*</span> <span class="code val">0.3</span
-	>) <span class="code opr">+</span> <span class="code val">4</span>),
-	<span class="code obj">clr</span>.<span class="code val">dRed</span>
-)</code></pre>
-</dl>
-
+	<p>
+		and that's the thing i understand least - there seems to be absolutely
+		<strong>no</strong> cogent argument for spaces‽
+	</p>
+	<dl>
+		<dt>
+			<q>some software that was obsolete before i started coding doesn't
+			really like tabs much</q>
+		</dt>
+		<dd>
+			why are we beholden to insufficient software? ␉ most certainly
+			existed when they were written, so i don't quite know what the excuse
+			was. most modern software deals fine with tabs, even css:
+			<code style="white-space: nowrap;">
+				<span class="code opr">tab-size</span>:
+				<span class="code val">8</span>;
+			</code>
+		</dd>
+		<dt>
+			<q>i can't enforce how my code is presented</q>
+		</dt>
+		<dd>
+			good. code is not its fucking presentation - you can't dictate what
+			font your code is read in, nor its colour or size; why should you try
+			to dictate its indentation level?
+		</dd>
+		<dt>
+			<q>i can't line things up properly with tabs</q>
+		</dt>
+		<dd>yes you can, watch:</dd>
+					<!-- pre inside code to strip opening newline -->
+	<pre><code class="codeblock indent-9x lang-lua"
+	><span class="code obj">Graphics</span>.<span class="code opr">fillCircle</span>(
+		<span class="code val">124</span>,
+		<span class="code val">304</span>,
+		((<span class="code obj">math</span>.<span class="code opr">max</span
+		>(<span class="code obj">
+			stkMax</span>.<span class="code val">lx</span
+		>,
+			<span class="code obj">stkMax</span>.<span class="code val">ly</span>
+		) <span class="code opr">*</span> <span class="code val">0.3</span
+		>) <span class="code opr">+</span> <span class="code val">4</span>),
+		<span class="code obj">clr</span>.<span class="code val">dRed</span>
+	)</code></pre>
+	</dl>
+</section>
 <footer>
 	<a id="fn1" href="#ref1">*</a>i'm going to copy two passages from these links,
 	as i think they're very

@@ -1,12 +1,14 @@
 
 :root {
 	--content-background-colour: var(--wall-clr-1);
+	--content-text-colour: var(--wall-clr-5);
 	--strong-accent-colour: var(--wall-clr-4);
 	--accent-colour: var(--wall-clr-3);
 }
 @media (prefers-color-scheme: light) {
 	:root {
 		--content-background-colour: var(--wall-clr-5);
+		--content-text-colour: var(--wall-clr-1);
 		--strong-accent-colour: var(--wall-clr-2);
 	}
 }

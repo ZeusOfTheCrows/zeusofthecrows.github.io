@@ -287,7 +287,7 @@ html {
 }
 
 body {
-	color: var(--fg-0);
+	color: var(--content-text-colour, var(--fg-0));
 	font-family: var(--fnt-body), sans-serif;
 	font-variant-numeric: slashed-zero;
 	line-height: 1.5;
@@ -458,7 +458,6 @@ pre,
 samp,
 .ascii-art {
 	font-family: var(--fnt-mono, monospace);
-	max-width: 100vw !important;  // horizontally scroll if wider than viewport
 	overflow-x: auto;
 	box-sizing: border-box;
 }
@@ -476,6 +475,8 @@ pre>code {
 	display: block;
 	margin-inline: 2ch;
 	padding: 1em 2ch;
+	white-space: pre-wrap;  // ztodo this is really annoying but i cannot fix it
+	// at this time of night. it just will not limit its own width and scroll
 }
 code {  // code formating below
 	font-family: var(--fnt-code, monospace);
@@ -741,6 +742,7 @@ body {
   min-height: 100vh;
   display: grid;
   grid-template-columns: 1fr auto var(--body-hor-offset, 1fr);
+	// grid-template-columns: 1fr min(var(--content-background-width), auto) var(--body-hor-offset, 1fr);
   grid-template-rows: auto auto 1fr auto;
 	// background-color: var(--content-background-colour, var(--bg-1, black));
 

@@ -1,193 +1,61 @@
 ---
 ---
 
-// make the write date and edit date a flip-clock style
-
-/* -------------------------------- windows -------------------------------- */
-:root {
-	// can't get it to revert for the windows
-	// scrollbar-color: var(--d-blu) var(--d-ppl) !important;
-
-	--dsk-bg-img: url(/assets/images/backgrounds/stars.png);
-	--dsk-bg-col: black;
-
-	@media (prefers-color-scheme: light) {
-		--dsk-bg-img: url(/assets/images/backgrounds/sky.png);
-		--dsk-bg-col: #899bff;
+figure.img-aside {
+	width: min-content;
+	transform: rotate(var(--rot));
+	margin: 0.5em;
+	&.left {
+		float: left;
+	}
+	&.right {
+		float: right;
 	}
 
-	//!\ remember to do this with background images
-	--icn-bg-col: var(--txt-2);
-	--icn-bg-bdr: 2px dotted var(--bgd-0);
-}
-@media (prefers-color-scheme: light) {
-	#desktop-area {
-		animation: scroll-bg 8s linear infinite;
+	& figcaption {
+		font-size: 0.7em;
 	}
 }
 
-@keyframes scroll-bg {
-	0%  	{ background-position: 128px 128px; }
-	100%	{ background-position: 0px   0px;   }
-}
-
-.window-content {
-	font-family: var(--fnt-sans);
-	// initial-letter: 2;  // soon
-	//may be nice for larger screens, but not quite yet
-	// font-family: garamond, sans-serif;
-	// font-size: 1.2em;
-	display: revert;  // otherwise blockquotes are hidden - bug? ztodo fixme
-
-	padding: 16px;
-
-	& ol {
-		list-style: lower-alpha;
-
-		& ::marker {
-			color: var(--s-blu);
-		}
+.banner {
+	box-sizing: border-box;
+	width: 100%;
+	max-height: 192px;
+	object-fit: cover;
+	&.top {
+		object-position: top;
+	}
+	&.btm {
+		object-position: bottom;
 	}
 }
 
-/* ---------------------------- specific tweaks ---------------------------- */
-
-#svg {
-	--titlebar-col: linear-gradient(90deg, var(--s-ylw), var(--d-ylw));
+.fullwidth-graph {
+	width: 100%;
+	box-sizing: border-box;
 }
 
-#abxy {
-	--titlebar-col:
-		linear-gradient(
-			90deg,
-			var(--s-grn),
-			var(--s-blu),
-			var(--s-ylw),
-			var(--s-red));
-
-	& kbd {
-		border-radius: 99vmax;
-		padding-top: 0.1em;
-
-		&.s-o::after {
-			color: var(--s-red);
-			content: "Ο";
-		}
-		&.s-x::after {
-			color: var(--s-blu);
-			content: "Χ";
-		}
-		&.s-t::after {
-			color: var(--s-grn);
-			content: "Δ";
-		}
-		&.s-s::after {
-			color: var(--s-ppl);
-			content: "Π";
-		}
-		&.n-a::after {
-			color: var(--s-red);
-			content: "A";
-		}
-		&.n-b::after {
-			color: var(--s-ylw);
-			content: "B";
-		}
-		&.n-x::after {
-			color: var(--s-blu);
-			content: "X";
-		}
-		&.n-y::after {
-			color: var(--s-grn);
-			content: "Y";
-		}
-		&.x-a::after {
-			color: var(--s-grn);
-			content: "A";
-		}
-		&.x-b::after {
-			color: var(--s-red);
-			content: "B";
-		}
-		&.x-x::after {
-			color: var(--s-blu);
-			content: "X";
-		}
-		&.x-y::after {
-			color: var(--s-ylw);
-			content: "Y";
-		}
-		&.d-a::after {
-			color: var(--s-red);
-			content: "A";
-		}
-		&.d-b::after {
-			color: var(--s-blu);
-			content: "B";
-		}
-		&.d-x::after {
-			color: var(--s-ylw);
-			content: "X";
-		}
-		&.d-y::after {
-			color: var(--s-grn);
-			content: "Y";
-		}
-	}
+.x-window {
+	max-height: 1024px;  // override
 }
 
-#tabs-and-spaces {
-	--titlebar-col: linear-gradient(90deg, var(--btn-hilite), var(--btn-lolite));
-}
+/* -------------------------- decorations --------------------------- */
 
-#piracy {
-	--titlebar-col: linear-gradient(90deg, var(--s-ylw), var(--d-ylw));
-	--titlebar-col: linear-gradient(90deg, var(--btn-hilite), var(--btn-lolite));
-	& #pirated-music {
-		margin: 1em;
-		padding: 1em;
-	}
-}
-
-#dark-souls {
-	--titlebar-col: linear-gradient(90deg, var(--s-org), var(--d-org));
-}
-
-#css-puzzle {
-	--titlebar-col: linear-gradient(90deg, var(--s-aqa), var(--d-aqa));
-}
-
-/* ------------------------------ decorations ------------------------------ */
-
-dl {
-	& dd {
-		line-height: initial;  // i'm not sure this is best practice - maybe just 1
-	}
-}
-
-table,
-td {
-	border-radius: 8px;
-	border: ridge var(--d-ppl);
-	padding: 0.4em;
-}
-
-// blockquote::before {
-		// top: 0.3em;  // why is this so different?
-// }
-
+// :where(ul, ol, dl, p) + :where(h2, h3) {
+/*
 hr {
 	background: none;
 	border: 0;
 	margin: 0.5em 0;
 	padding: 0;
 
-	&::after {
-		content: "☙ ⁂ ❧";
-		// content: "🙡 ⁂ 🙣";  // alt
-		color: var(--s-grn);
+	 &::before {
+		 content: "🙡 ✠ ✠ ✠ 🙣";
+		 color: var(--s-grn);
+		font-size: 1rem;
 		display: block;
 		line-height: 1;
 		text-align: center;
 	}
 }
+*/

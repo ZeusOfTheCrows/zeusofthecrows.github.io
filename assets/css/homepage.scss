@@ -503,6 +503,23 @@ main>section>article {
 #whats-new {
 	height: 360px;
 }
+
+/* doesn't look good, too cramped
+#whats-new, #outlinks, body section, body aside {
+	--ripple-size: 8px;
+	--ripple-clr-1: var(--wall-clr-4);
+	--ripple-clr-2: var(--wall-clr-3);
+	--ripple-clr-3: var(--wall-clr-2);
+	box-shadow:
+		     var(--ripple-size)           var(--ripple-size)      0px 0px var(--ripple-clr-1),
+		calc(var(--ripple-size) * 2) calc(var(--ripple-size) * 2) 0px 0px var(--ripple-clr-2),
+		calc(var(--ripple-size) * 3) calc(var(--ripple-size) * 3) 0px 0px var(--ripple-clr-3);
+	animation-timing-function: linear;
+	animation-duration: 0.25s;
+	&:hover {
+		animation-name: colour-ripple;
+	}
+}*/
 #whats-new, #outlinks {
 	// border: 4px solid;
 	--background-colour: var(--strong-accent-colour);
