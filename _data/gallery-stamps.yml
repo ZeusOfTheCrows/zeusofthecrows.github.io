@@ -126,18 +126,6 @@
   src-url: "https://scifirenegade.neocities.org/about/graphs2.html"
 
 - image:
-  url: cactus
-  smooth: y
-  alt: "mexican desert cactus stamp"
-  src-url: "https://zitrone.neocities.org/"
-
-- image:
-  url: canyon
-  smooth: y
-  alt: "mexican desert canyon stamp"
-  src-url: "https://zitrone.neocities.org/"
-
-- image:
   url: cat
   smooth: y
   anim: y
@@ -282,12 +270,6 @@
   ins-url: "https://aestheticsmut.tumblr.com/post/186778973059/"
 
 - image:
-  url: glade
-  smooth: y
-  alt: "shaft of light in a glade stamp"
-  src-url: "https://zitrex-x.tumblr.com/post/788958352674881536/deep-nature-stamps-requested-by-my-bestie"
-
-- image:
   url: glass
   smooth: y
   alt: "i support glass effects stamp"
@@ -362,10 +344,40 @@
   src: s
 
 - image:
-  url: keyboard
+  url: jump
+  alt: "ramona's celebration from scott pilgrim vs the world game stamp"
   smooth: y
-  alt: "plants growing through the gaps of a keyboard stamp"
-  src-url: "https://www.tumblr.com/zitrex-x/788958352674881536/deep-nature-stamps-requested-by-my-bestie"
+  anim: y
+  src: v
+  src-url: "https://www.deviantart.com/hopebulletz/art/Game-Ramona-Flowers-Stamp-7-1119230484"
+
+- image:
+  url: k.o
+  alt: "scott's taunt from scott pilgrim vs the world game stamp"
+  anim: y
+  src: s
+  ins-url: "https://www.deviantart.com/hopebulletz/art/Game-Scott-Pilgrim-Stamp-3-1119203464"
+
+- image:
+  url: kim-1
+  smooth: y
+  alt: "kim pine finger guns stamp"
+  src: v
+  src-url: "https://www.deviantart.com/captainchibi/art/Kim-Pine-Stamp-1-254252832"
+
+- image:
+  url: kim-2
+  smooth: y
+  alt: "kim pine finger guns &quot;BLAM!&quot; stamp"
+  src: v
+  src-url: "https://www.deviantart.com/captainchibi/art/Kim-Pine-Stamp-2-254252861"
+
+- image:
+  url: kim-3
+  alt: "kim pine &quot;DEAD&quot; stamp"
+  smooth: y
+  src: v
+  src-url: "https://www.deviantart.com/captainchibi/art/Kim-Pine-Stamp-3-254252880"
 
 - image:
   url: kirbs
@@ -448,6 +460,14 @@
   src: s
 
 - image:
+  url: martini
+  alt: "wallace's taunt from scott pilgrim vs the world game stamp"
+  smooth: y
+  anim: y
+  src: v
+  src-url: "https://www.deviantart.com/hopebulletz/art/Game-Wallace-Wells-Stamp-2-1121771745"
+
+- image:
   url: mgs
   anim: y
   alt: "metal gear solid radio stamp"
@@ -466,6 +486,13 @@
   src: s
 
 - image:
+  url: moon-eyes
+  alt: "scott pilgrim with large round eyes stamp"
+  smooth: y
+  src: v
+  src-url: "https://www.deviantart.com/hopebulletz/art/Scott-Pilgrim-Stamp-6-1102187857"
+
+- image:
   url: multi-kirbs
   anim: y
   alt: "many kirbys stamp"
@@ -479,6 +506,20 @@
   alt: "vhs footage of copse stamp"
   src: v
   src-url: "https://www.deviantart.com/crypticgoth/art/0158-700841818"
+
+- image:
+  url: nega-k.o
+  alt: "nega-scott's taunt from scott pilgrim vs the world game stamp"
+  anim: y
+  src: s
+  ins-url: "https://www.spriters-resource.com/xbox_360/scottpilgrimvstheworldthegame/asset/70838/"
+
+- image:
+  url: neil
+  alt: "young neil &quot;this is the greatest day of his life&quot; stamp"
+  smooth: y
+  src: v
+  src-url: "https://www.deviantart.com/hopebulletz/art/Young-Neil-Nordegraf-Stamp-1097569149"
 
 - image:
   url: nightwish
@@ -502,6 +543,13 @@
   anim: y
   alt: "vaporwave sega outrun stamp"
   src-url: "https://leonidas.neocities.org/"
+
+- image:
+  url: portal-left
+  smooth: y
+  alt: "left half of portal logo, protruding through a portal"
+  src: v
+  src-url: "https://www.deviantart.com/sparklum/art/Portal-Stamp-Blue-209870753"
 
 - image:
   url: palmtrees
@@ -550,6 +598,12 @@
   src: z
 
 - image:
+  url: plumtree
+  alt: "plumtree (band) logo stamp"
+  smooth: y
+  src: z
+
+- image:
   url: pope
   smooth: y
   anim: y
@@ -557,12 +611,14 @@
   alt: "His Holiness Escribar stamp (blasphemous)"
   src: s
 
+# portal location
+
 - image:
-  url: portal-left
+  url: portal-right
   smooth: y
-  alt: "left half of portal logo, protruding through a portal"
+  alt: "right half of portal logo, protruding through a portal"
   src: v
-  src-url: "https://www.deviantart.com/sparklum/art/Portal-Stamp-Blue-209870753"
+  src-url: "https://www.deviantart.com/sparklum/art/Portal-Stamp-Orange-209870758"
 
 - image:
   url: prie-dieu
@@ -610,6 +666,13 @@
   src-url: "https://www.deviantart.com/babykttn/art/married-to-the-music-672434816"
 
 - image:
+  url: ramona
+  alt: "angry ramona flowers stamp"
+  smooth: y
+  src: v
+  src-url: "https://www.deviantart.com/hopebulletz/art/Ramona-Flowers-Stamp-10-1135114275"
+
+- image:
   url: reality-off
   smooth: y
   anim: y
@@ -624,11 +687,10 @@
   src: z
 
 - image:
-  url: portal-right
-  smooth: y
-  alt: "right half of portal logo, protruding through a portal"
+  url: scott
+  alt: "scott pilgrim stamp"
   src: v
-  src-url: "https://www.deviantart.com/sparklum/art/Portal-Stamp-Orange-209870758"
+  src-url: "https://www.deviantart.com/sonic2344/art/Scott-Pilgrim-Stamp-193957796"
 
 - image:
   url: seal
@@ -730,7 +792,7 @@
   url: test-card-f
   smooth: y
   alt: "bbc colour test card f stamp"
-  ins-url: "ztodo"
+  ins-url: "https://www.youtube.com/watch?v=Ncmg3bxtTB0"
   src: z
 
 - image:
@@ -754,18 +816,6 @@
   src-url: "https://www.deviantart.com/vyrmn/art/Stamp-970818358"
 
 - image:
-  url: town
-  smooth: y
-  alt: "old west style town at night stamp"
-  src-url: "https://zitrone.neocities.org/"
-
-- image:
-  url: trees
-  smooth: y
-  alt: "misty green trees stamp"
-  src-url: "https://zitrone.neocities.org/"
-
-- image:
   url: tvs
   smooth: y
   anim: y
@@ -777,6 +827,14 @@
   alt: "portal turret 'i don't hate you' stamp"
   src: v
   src-url: "https://www.deviantart.com/airenu-ish/art/Turret-Love-Stamp-167135190"
+
+- image:
+  url: twirl
+  alt: "ramona's power attack from scott pilgrim vs the world game stamp"
+  smooth: y
+  anim: y
+  src: v
+  src-url: "https://www.deviantart.com/hopebulletz/art/Game-Ramona-Flowers-Stamp-2-1119230456"
 
 - image:
   url: ukiyonightrain
@@ -856,6 +914,13 @@
   alt: "xbox 360 startup animation stamp"
   src: v
   src-url: "https://www.deviantart.com/byte-byte/art/Stamp-Xbox-360-460378137"
+
+- image:
+  url: young....neil
+  alt: "young neil &quot;....&quot; stamp"
+  smooth: y
+  src: v
+  src-url: "https://www.deviantart.com/hopebulletz/art/Scott-Pilgrim-Stamp-1095266217"
 
   # ============================== CODES =======================================
 

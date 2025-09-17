@@ -15,236 +15,300 @@
 - content: new stamps have been added to the gallery
   subtype: images
   subcontent:
-    - image:
-      url: stamps/test-card-f
-      type: stamp-99x56
-      smooth: y
-      alt: "bbc colour test card f stamp"
+  - image:
+    url: stamps/test-card-f
+    type: stamp-99x56
+    smooth: y
+    alt: "bbc colour test card f stamp"
+    src: z
 
-    - image:
-      url: stamps/ukiyonightrain
-      type: stamp-99x56
-      smooth: y
-      alt: "hut with lit windows in the rain stamp"
+  - image:
+    url: stamps/k.o
+    type: stamp-99x56
+    alt: "scott's taunt from scott pilgrim vs the world game stamp"
+    anim: y
+    src: s
+    ins-url: "https://www.deviantart.com/hopebulletz/art/Game-Scott-Pilgrim-Stamp-3-1119203464"
 
-    - image:
-      url: stamps/touch-digital
-      type: stamp-99x56
-      smooth: y
-      alt: "human hand touching a green wireframe hand stamp"
+  - image:
+    url: stamps/nega-k.o
+    type: stamp-99x56
+    alt: "nega-scott's taunt from scott pilgrim vs the world game stamp"
+    anim: y
+    src: s
+    ins-url: "https://www.spriters-resource.com/xbox_360/scottpilgrimvstheworldthegame/asset/70838/"
 
-    - image:
-      url: stamps/seal
-      type: stamp-99x56
-      smooth: y
-      alt: "&quot;seal of approval&quot; stamp"
+  - image:
+    url: stamps/twirl
+    type: stamp-99x56
+    alt: "ramona's power attack from scott pilgrim vs the world game stamp"
+    smooth: y
+    anim: y
+    src: v
+    src-url: "https://www.deviantart.com/hopebulletz/art/Game-Ramona-Flowers-Stamp-2-1119230456"
 
-    - image:
-      url: stamps/comma
-      type: stamp-99x56
-      smooth: y
-      alt: "i support the oxford comma stamp"
+  - image:
+    url: stamps/martini
+    type: stamp-99x56
+    alt: "wallace's taunt from scott pilgrim vs the world game stamp"
+    smooth: y
+    anim: y
+    src: v
+    src-url: "https://www.deviantart.com/hopebulletz/art/Game-Wallace-Wells-Stamp-2-1121771745"
 
-    - image:
-      url: stamps/cactus
-      type: stamp-99x56
-      smooth: y
-      alt: "mexican desert cactus stamp"
+  - image:
+    url: stamps/kim-2
+    type: stamp-99x56
+    alt: "kim pine finger guns &quot;BLAM!&quot; stamp"
+    smooth: y
+    src: v
+    src-url: "https://www.deviantart.com/captainchibi/art/Kim-Pine-Stamp-1-254252832"
+    src-url: "https://www.deviantart.com/captainchibi/art/Kim-Pine-Stamp-2-254252861"
+    src-url: "https://www.deviantart.com/captainchibi/art/Kim-Pine-Stamp-3-254252880"
 
-    - image:
-      url: stamps/canyon
-      type: stamp-99x56
-      smooth: y
-      alt: "mexican desert canyon stamp"
+  - image:
+    url: stamps/jump
+    type: stamp-99x56
+    alt: "ramona's celebration from scott pilgrim vs the world game stamp"
+    smooth: y
+    anim: y
+    src: v
+    src-url: "https://www.deviantart.com/hopebulletz/art/Game-Ramona-Flowers-Stamp-7-1119230484"
 
-    - image:
-      url: stamps/forest
-      type: stamp-99x56
-      smooth: y
-      alt: "forest stamp"
+  - image:
+    url: stamps/ramona
+    type: stamp-99x56
+    alt: "angry ramona flowers stamp"
+    smooth: y
+    src: v
+    src-url: "https://www.deviantart.com/hopebulletz/art/Ramona-Flowers-Stamp-10-1135114275"
 
-    - image:
-      url: stamps/glade
-      type: stamp-99x56
-      smooth: y
-      alt: "shaft of light in a glade stamp"
+  - image:
+    url: stamps/moon-eyes
+    type: stamp-99x56
+    alt: "scott pilgrim with large round eyes stamp"
+    smooth: y
+    src: v
+    src-url: "https://www.deviantart.com/hopebulletz/art/Scott-Pilgrim-Stamp-6-1102187857"
 
-    - image:
-      url: stamps/keyboard
-      type: stamp-99x56
-      smooth: y
-      alt: "plants growing through the gaps of a keyboard stamp"
+  - image:
+    url: stamps/young....neil
+    type: stamp-99x56
+    alt: "young neil &quot;....&quot; stamp"
+    smooth: y
+    src: v
+    src-url: "https://www.deviantart.com/hopebulletz/art/Scott-Pilgrim-Stamp-1095266217"
 
-    - image:
-      url: stamps/town
-      type: stamp-99x56
-      smooth: y
-      alt: "old west style town at night stamp"
+  - image:
+    url: stamps/scott
+    type: stamp-99x56
+    alt: "scott pilgrim stamp"
+    src: v
+    src-url: "https://www.deviantart.com/sonic2344/art/Scott-Pilgrim-Stamp-193957796"
 
-    - image:
-      url: stamps/trees
-      type: stamp-99x56
-      smooth: y
-      alt: "misty green trees stamp"
+  - image:
+    url: stamps/neil
+    type: stamp-99x56
+    alt: "young neil &quot;this is the greatest day of his life&quot; stamp"
+    smooth: y
+    src: v
+    src-url: "https://www.deviantart.com/hopebulletz/art/Young-Neil-Nordegraf-Stamp-1097569149"
 
-    - image:
-      url: stamps/water
-      type: stamp-99x56
-      smooth: y
-      anim: y
-      alt: "water stamp"
+  - image:
+    url: stamps/plumtree
+    type: stamp-99x56
+    alt: "plumtree (band) logo stamp"
+    smooth: y
+    src: z
 
-    - image:
-      url: stamps/3ds
-      type: stamp-99x56
-      smooth: y
-      anim: y
-      alt: "3ds game launch splash screen stamp"
+  - image:
+    url: stamps/ukiyonightrain
+    type: stamp-99x56
+    smooth: y
+    alt: "hut with lit windows in the rain stamp"
 
-    - image:
-      url: stamps/kirbs
-      type: stamp-99x56
-      anim: y
-      alt: "redrawn kirby's adventure stamp"
+  - image:
+    url: stamps/touch-digital
+    type: stamp-99x56
+    smooth: y
+    alt: "human hand touching a green wireframe hand stamp"
 
-    - image:
-      url: stamps/water2
-      type: stamp-99x56
-      smooth: y
-      anim: y
-      alt: "water stamp"
+  - image:
+    url: stamps/seal
+    type: stamp-99x56
+    smooth: y
+    alt: "&quot;seal of approval&quot; stamp"
 
-    - image:
-      url: stamps/machine
-      type: stamp-99x56
-      smooth: y
-      anim: y
-      alt: "machine stamp"
+  - image:
+    url: stamps/comma
+    type: stamp-99x56
+    smooth: y
+    alt: "i support the oxford comma stamp"
 
-    - image:
-      url: stamps/cat
-      type: stamp-99x56
-      smooth: y
-      anim: y
-      alt: "nyan cat stamp"
+  - image:
+    url: stamps/forest
+    type: stamp-99x56
+    smooth: y
+    alt: "forest stamp"
 
-    - image:
-      url: stamps/nya.gif
-      type: stamp-99x56
-      smooth: y
-      anim: y
-      alt: "nyan cat ms paint stamp"
+  - image:
+    url: stamps/water
+    type: stamp-99x56
+    smooth: y
+    anim: y
+    alt: "water stamp"
 
-    - image:
-      url: stamps/amnesia
-      type: stamp-99x56
-      anim: y
-      alt: "amnesia stamp"
+  - image:
+    url: stamps/3ds
+    type: stamp-99x56
+    smooth: y
+    anim: y
+    alt: "3ds game launch splash screen stamp"
 
-    - image:
-      url: stamps/purple-trees
-      type: stamp-99x56
-      alt: "amnesia stamp"
+  - image:
+    url: stamps/kirbs
+    type: stamp-99x56
+    anim: y
+    alt: "redrawn kirby's adventure stamp"
 
-    - image:
-      url: stamps/purple-sun
-      type: stamp-99x56
-      alt: "amnesia stamp"
+  - image:
+    url: stamps/water2
+    type: stamp-99x56
+    smooth: y
+    anim: y
+    alt: "water stamp"
 
-    - image:
-      url: stamps/hilo
-      type: stamp-99x56
-      alt: "amnesia stamp"
+  - image:
+    url: stamps/machine
+    type: stamp-99x56
+    smooth: y
+    anim: y
+    alt: "machine stamp"
 
-    - image:
-      url: stamps/dont-touch-me
-      type: stamp-99x56
-      anim: y
-      alt: "amnesia stamp"
+  - image:
+    url: stamps/cat
+    type: stamp-99x56
+    smooth: y
+    anim: y
+    alt: "nyan cat stamp"
 
-    - image:
-      url: stamps/boot
-      type: stamp-99x56
-      alt: "nokia 3310 boot logo stamp"
+  - image:
+    url: stamps/nya.gif
+    type: stamp-99x56
+    smooth: y
+    anim: y
+    alt: "nyan cat ms paint stamp"
 
-    - image:
-      url: stamps/menu
-      type: stamp-99x56
-      alt: "nokia 3310 home menu stamp"
+  - image:
+    url: stamps/amnesia
+    type: stamp-99x56
+    anim: y
+    alt: "amnesia stamp"
 
-    - image:
-      url: stamps/snake
-      type: stamp-99x56
-      alt: "nokia 3310 snake xenzia game stamp"
+  - image:
+    url: stamps/purple-trees
+    type: stamp-99x56
+    alt: "amnesia stamp"
 
-    - image:
-      url: stamps/invaders
-      type: stamp-99x56
-      alt: "space invaders stamp"
+  - image:
+    url: stamps/purple-sun
+    type: stamp-99x56
+    alt: "amnesia stamp"
 
-    - image:
-      url: stamps/waste
-      type: stamp-99x56
-      alt: "&quot;This stamp is a waste of 587 bytes&quot; stamp"
+  - image:
+    url: stamps/hilo
+    type: stamp-99x56
+    alt: "amnesia stamp"
 
-    - image:
-      url: stamps/sun
-      type: stamp-99x56
-      anim: y
-      alt: "&quot;the sun is a deadly laser&quot; stamp"
+  - image:
+    url: stamps/dont-touch-me
+    type: stamp-99x56
+    anim: y
+    alt: "amnesia stamp"
 
-    - image:
-      url: stamps/682
-      type: stamp-99x56
-      alt: "scp-682 stamp"
+  - image:
+    url: stamps/boot
+    type: stamp-99x56
+    alt: "nokia 3310 boot logo stamp"
 
-    - image:
-      url: stamps/deer
-      type: stamp-99x56
-      alt: "deer with glowing eyes stamp"
+  - image:
+    url: stamps/menu
+    type: stamp-99x56
+    alt: "nokia 3310 home menu stamp"
 
-    - image:
-      url: stamps/laptop-scp
-      type: stamp-99x56
-      alt: "laptop with scp logo stamp"
+  - image:
+    url: stamps/snake
+    type: stamp-99x56
+    alt: "nokia 3310 snake xenzia game stamp"
 
-    - image:
-      url: stamps/ice-kirbs
-      type: stamp-99x56
-      anim: y
-      alt: "ice kirby skating stamp"
+  - image:
+    url: stamps/invaders
+    type: stamp-99x56
+    alt: "space invaders stamp"
 
-    - image:
-      url: stamps/lttp
-      type: stamp-99x56
-      anim: y
-      alt: "lttp link running stamp"
+  - image:
+    url: stamps/waste
+    type: stamp-99x56
+    alt: "&quot;This stamp is a waste of 587 bytes&quot; stamp"
 
-    - image:
-      url: stamps/multi-kirbs
-      type: stamp-99x56
-      alt: "multiple kirbys stamp"
+  - image:
+    url: stamps/sun
+    type: stamp-99x56
+    anim: y
+    alt: "&quot;the sun is a deadly laser&quot; stamp"
 
-    - image:
-      url: stamps/pentacle
-      type: stamp-99x56
-      alt: "satanic pentacle stamp"
+  - image:
+    url: stamps/682
+    type: stamp-99x56
+    alt: "scp-682 stamp"
 
-    - image:
-      url: stamps/sword-kirbs
-      type: stamp-99x56
-      anim: y
-      alt: "sword kirby slashing stamp"
+  - image:
+    url: stamps/deer
+    type: stamp-99x56
+    alt: "deer with glowing eyes stamp"
 
-    - image:
-      url: stamps/thomas
-      type: stamp-99x56
-      alt: "thomas was alone stamp"
+  - image:
+    url: stamps/laptop-scp
+    type: stamp-99x56
+    alt: "laptop with scp logo stamp"
 
-    - image:
-      url: stamps/defender
-      type: stamp
-      alt: "williams defender stamp"
+  - image:
+    url: stamps/ice-kirbs
+    type: stamp-99x56
+    anim: y
+    alt: "ice kirby skating stamp"
+
+  - image:
+    url: stamps/lttp
+    type: stamp-99x56
+    anim: y
+    alt: "lttp link running stamp"
+
+  - image:
+    url: stamps/multi-kirbs
+    type: stamp-99x56
+    alt: "multiple kirbys stamp"
+
+  - image:
+    url: stamps/pentacle
+    type: stamp-99x56
+    alt: "satanic pentacle stamp"
+
+  - image:
+    url: stamps/sword-kirbs
+    type: stamp-99x56
+    anim: y
+    alt: "sword kirby slashing stamp"
+
+  - image:
+    url: stamps/thomas
+    type: stamp-99x56
+    alt: "thomas was alone stamp"
+
+  - image:
+    url: stamps/defender
+    type: stamp
+    alt: "williams defender stamp"
 
 - content: new buttons have been added to the gallery
   subtype: images
