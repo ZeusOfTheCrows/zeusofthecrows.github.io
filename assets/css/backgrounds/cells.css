@@ -1,0 +1,193 @@
+:root {
+	--content-background-colour: var(--wall-clr-5);
+	--content-background-colour: transparent;
+	--content-text-colour: var(--wall-clr-6);
+	--strong-accent-colour: var(--wall-clr-3);
+	--accent-colour: var(--wall-clr-2);
+
+	--bg-box-size: 256px;
+	--aa: 1px;
+	--wall-clr-0: #642917;
+	--wall-clr-1: transparent;
+	--wall-clr-2: #8A4425;
+	--wall-clr-3: #8F5A28;
+	--wall-clr-4: #743D26;
+	--wall-clr-5: #412718;
+	--wall-clr-6: #E1BB8E;  /*just for content-colours*/
+	}
+	@media (prefers-color-scheme: light) {
+		:root {
+			--content-background-colour: var(--wall-clr-6);
+			--content-text-colour: var(--wall-clr-5);
+			--strong-accent-colour: var(--wall-clr-5);
+			--accent-colour: var(--wall-clr-2);
+		}
+	}
+
+body {
+		background-size:
+			calc(var(--bg-box-size) * 1) var(--bg-box-size);
+	background-color: var(--wall-clr-0);
+	background-image:
+	linear-gradient(transparent 99%, red),
+	linear-gradient(to right, transparent 99%, red),
+	radial-gradient(
+		calc(var(--bg-box-size) / 2) at top left,
+		var(--wall-clr-1) calc(5%  + var(--aa)) calc(15%  - var(--aa)),
+		var(--wall-clr-2) calc(15% + var(--aa)) calc(25%  - var(--aa)),
+		var(--wall-clr-3) calc(25% + var(--aa)) calc(35%  - var(--aa)),
+		var(--wall-clr-4) calc(35% + var(--aa)) calc(45%  - var(--aa)),
+		var(--wall-clr-5) calc(45% + var(--aa)) calc(55%  - var(--aa)),
+		var(--wall-clr-4) calc(55% + var(--aa)) calc(65%  - var(--aa)),
+		var(--wall-clr-3) calc(65% + var(--aa)) calc(75%  - var(--aa)),
+		var(--wall-clr-2) calc(75% + var(--aa)) calc(85%  - var(--aa)),
+		var(--wall-clr-1) calc(85% + var(--aa)) calc(100% - var(--aa)),
+		#0000),
+	radial-gradient(
+		calc(var(--bg-box-size) / 2) at top right,
+		var(--wall-clr-1) calc(5%  + var(--aa)) calc(15%  - var(--aa)),
+		var(--wall-clr-2) calc(15% + var(--aa)) calc(25%  - var(--aa)),
+		var(--wall-clr-3) calc(25% + var(--aa)) calc(35%  - var(--aa)),
+		var(--wall-clr-4) calc(35% + var(--aa)) calc(45%  - var(--aa)),
+		var(--wall-clr-5) calc(45% + var(--aa)) calc(55%  - var(--aa)),
+		var(--wall-clr-4) calc(55% + var(--aa)) calc(65%  - var(--aa)),
+		var(--wall-clr-3) calc(65% + var(--aa)) calc(75%  - var(--aa)),
+		var(--wall-clr-2) calc(75% + var(--aa)) calc(85%  - var(--aa)),
+		var(--wall-clr-1) calc(85% + var(--aa)) calc(100% - var(--aa)),
+		#0000),
+	radial-gradient(
+		calc(var(--bg-box-size) / 2) at bottom left,
+		var(--wall-clr-1) calc(5%  + var(--aa)) calc(15%  - var(--aa)),
+		var(--wall-clr-2) calc(15% + var(--aa)) calc(25%  - var(--aa)),
+		var(--wall-clr-3) calc(25% + var(--aa)) calc(35%  - var(--aa)),
+		var(--wall-clr-4) calc(35% + var(--aa)) calc(45%  - var(--aa)),
+		var(--wall-clr-5) calc(45% + var(--aa)) calc(55%  - var(--aa)),
+		var(--wall-clr-4) calc(55% + var(--aa)) calc(65%  - var(--aa)),
+		var(--wall-clr-3) calc(65% + var(--aa)) calc(75%  - var(--aa)),
+		var(--wall-clr-2) calc(75% + var(--aa)) calc(85%  - var(--aa)),
+		var(--wall-clr-1) calc(85% + var(--aa)) calc(100% - var(--aa)),
+		#0000),
+	radial-gradient(
+		calc(var(--bg-box-size) / 2) at bottom right,
+		var(--wall-clr-1) calc(5%  + var(--aa)) calc(15%  - var(--aa)),
+		var(--wall-clr-2) calc(15% + var(--aa)) calc(25%  - var(--aa)),
+		var(--wall-clr-3) calc(25% + var(--aa)) calc(35%  - var(--aa)),
+		var(--wall-clr-4) calc(35% + var(--aa)) calc(45%  - var(--aa)),
+		var(--wall-clr-5) calc(45% + var(--aa)) calc(55%  - var(--aa)),
+		var(--wall-clr-4) calc(55% + var(--aa)) calc(65%  - var(--aa)),
+		var(--wall-clr-3) calc(65% + var(--aa)) calc(75%  - var(--aa)),
+		var(--wall-clr-2) calc(75% + var(--aa)) calc(85%  - var(--aa)),
+		var(--wall-clr-1) calc(85% + var(--aa)) calc(100% - var(--aa)),
+		#0000),
+	radial-gradient(
+		calc(var(--bg-box-size) / 2) at center,
+		var(--wall-clr-1) calc(5%  + var(--aa)) calc(15%  - var(--aa)),
+		var(--wall-clr-2) calc(15% + var(--aa)) calc(25%  - var(--aa)),
+		var(--wall-clr-3) calc(25% + var(--aa)) calc(35%  - var(--aa)),
+		var(--wall-clr-4) calc(35% + var(--aa)) calc(45%  - var(--aa)),
+		var(--wall-clr-5) calc(45% + var(--aa)) calc(55%  - var(--aa)),
+		var(--wall-clr-4) calc(55% + var(--aa)) calc(65%  - var(--aa)),
+		var(--wall-clr-3) calc(65% + var(--aa)) calc(75%  - var(--aa)),
+		var(--wall-clr-2) calc(75% + var(--aa)) calc(85%  - var(--aa)),
+		var(--wall-clr-1) calc(85% + var(--aa)) calc(100% - var(--aa)),
+		#0000);
+	background-image:
+	linear-gradient(transparent 99%, red),
+	linear-gradient(to right, transparent 99%, red),
+	radial-gradient(
+		calc(var(--bg-box-size) / 4) at 66% 33%,
+		var(--wall-clr-1) calc(5%  + var(--aa)) calc(15%  - var(--aa)),
+		var(--wall-clr-2) calc(15% + var(--aa)) calc(25%  - var(--aa)),
+		var(--wall-clr-3) calc(25% + var(--aa)) calc(35%  - var(--aa)),
+		var(--wall-clr-4) calc(35% + var(--aa)) calc(45%  - var(--aa)),
+		var(--wall-clr-5) calc(45% + var(--aa)) calc(55%  - var(--aa)),
+		var(--wall-clr-4) calc(55% + var(--aa)) calc(65%  - var(--aa)),
+		var(--wall-clr-3) calc(65% + var(--aa)) calc(75%  - var(--aa)),
+		red calc(75% + var(--aa)) calc(85%  - var(--aa)),
+		var(--wall-clr-1) calc(85% + var(--aa)) calc(100% - var(--aa)),
+		#0000),
+	radial-gradient(
+		calc(var(--bg-box-size) / 4) at 33% 66%,
+		var(--wall-clr-1) calc(5%  + var(--aa)) calc(15%  - var(--aa)),
+		var(--wall-clr-2) calc(15% + var(--aa)) calc(25%  - var(--aa)),
+		var(--wall-clr-3) calc(25% + var(--aa)) calc(35%  - var(--aa)),
+		var(--wall-clr-4) calc(35% + var(--aa)) calc(45%  - var(--aa)),
+		var(--wall-clr-5) calc(45% + var(--aa)) calc(55%  - var(--aa)),
+		var(--wall-clr-4) calc(55% + var(--aa)) calc(65%  - var(--aa)),
+		var(--wall-clr-3) calc(65% + var(--aa)) calc(75%  - var(--aa)),
+		yellow calc(75% + var(--aa)) calc(85%  - var(--aa)),
+		var(--wall-clr-1) calc(85% + var(--aa)) calc(100% - var(--aa)),
+		#0000),
+	radial-gradient(
+		calc(var(--bg-box-size) / 4) at 33% 50%,
+		var(--wall-clr-1) calc(5%  + var(--aa)) calc(15%  - var(--aa)),
+		var(--wall-clr-2) calc(15% + var(--aa)) calc(25%  - var(--aa)),
+		var(--wall-clr-3) calc(25% + var(--aa)) calc(35%  - var(--aa)),
+		var(--wall-clr-4) calc(35% + var(--aa)) calc(45%  - var(--aa)),
+		var(--wall-clr-5) calc(45% + var(--aa)) calc(55%  - var(--aa)),
+		var(--wall-clr-4) calc(55% + var(--aa)) calc(65%  - var(--aa)),
+		var(--wall-clr-3) calc(65% + var(--aa)) calc(75%  - var(--aa)),
+		green calc(75% + var(--aa)) calc(85%  - var(--aa)),
+		var(--wall-clr-1) calc(85% + var(--aa)) calc(100% - var(--aa)),
+		#0000),
+	radial-gradient(
+		calc(var(--bg-box-size) / 4) at 50% 33%,
+		var(--wall-clr-1) calc(5%  + var(--aa)) calc(15%  - var(--aa)),
+		var(--wall-clr-2) calc(15% + var(--aa)) calc(25%  - var(--aa)),
+		var(--wall-clr-3) calc(25% + var(--aa)) calc(35%  - var(--aa)),
+		var(--wall-clr-4) calc(35% + var(--aa)) calc(45%  - var(--aa)),
+		var(--wall-clr-5) calc(45% + var(--aa)) calc(55%  - var(--aa)),
+		var(--wall-clr-4) calc(55% + var(--aa)) calc(65%  - var(--aa)),
+		var(--wall-clr-3) calc(65% + var(--aa)) calc(75%  - var(--aa)),
+		blue calc(75% + var(--aa)) calc(85%  - var(--aa)),
+		var(--wall-clr-1) calc(85% + var(--aa)) calc(100% - var(--aa)),
+		#0000),
+	radial-gradient(
+		calc(var(--bg-box-size) / 4) at top right,
+		var(--wall-clr-1) calc(5%  + var(--aa)) calc(15%  - var(--aa)),
+		var(--wall-clr-2) calc(15% + var(--aa)) calc(25%  - var(--aa)),
+		var(--wall-clr-3) calc(25% + var(--aa)) calc(35%  - var(--aa)),
+		var(--wall-clr-4) calc(35% + var(--aa)) calc(45%  - var(--aa)),
+		var(--wall-clr-5) calc(45% + var(--aa)) calc(55%  - var(--aa)),
+		var(--wall-clr-4) calc(55% + var(--aa)) calc(65%  - var(--aa)),
+		var(--wall-clr-3) calc(65% + var(--aa)) calc(75%  - var(--aa)),
+		var(--wall-clr-2) calc(75% + var(--aa)) calc(85%  - var(--aa)),
+		var(--wall-clr-1) calc(85% + var(--aa)) calc(100% - var(--aa)),
+		#0000),
+	radial-gradient(
+		calc(var(--bg-box-size) / 4) at top left,
+		var(--wall-clr-1) calc(5%  + var(--aa)) calc(15%  - var(--aa)),
+		var(--wall-clr-2) calc(15% + var(--aa)) calc(25%  - var(--aa)),
+		var(--wall-clr-3) calc(25% + var(--aa)) calc(35%  - var(--aa)),
+		var(--wall-clr-4) calc(35% + var(--aa)) calc(45%  - var(--aa)),
+		var(--wall-clr-5) calc(45% + var(--aa)) calc(55%  - var(--aa)),
+		var(--wall-clr-4) calc(55% + var(--aa)) calc(65%  - var(--aa)),
+		var(--wall-clr-3) calc(65% + var(--aa)) calc(75%  - var(--aa)),
+		var(--wall-clr-2) calc(75% + var(--aa)) calc(85%  - var(--aa)),
+		var(--wall-clr-1) calc(85% + var(--aa)) calc(100% - var(--aa)),
+		#0000),
+	radial-gradient(
+		calc(var(--bg-box-size) / 4) at bottom right,
+		var(--wall-clr-1) calc(5%  + var(--aa)) calc(15%  - var(--aa)),
+		var(--wall-clr-2) calc(15% + var(--aa)) calc(25%  - var(--aa)),
+		var(--wall-clr-3) calc(25% + var(--aa)) calc(35%  - var(--aa)),
+		var(--wall-clr-4) calc(35% + var(--aa)) calc(45%  - var(--aa)),
+		var(--wall-clr-5) calc(45% + var(--aa)) calc(55%  - var(--aa)),
+		var(--wall-clr-4) calc(55% + var(--aa)) calc(65%  - var(--aa)),
+		var(--wall-clr-3) calc(65% + var(--aa)) calc(75%  - var(--aa)),
+		var(--wall-clr-2) calc(75% + var(--aa)) calc(85%  - var(--aa)),
+		var(--wall-clr-1) calc(85% + var(--aa)) calc(100% - var(--aa)),
+		#0000),
+	radial-gradient(
+		calc(var(--bg-box-size) / 4) at bottom left,
+		var(--wall-clr-1) calc(5%  + var(--aa)) calc(15%  - var(--aa)),
+		var(--wall-clr-2) calc(15% + var(--aa)) calc(25%  - var(--aa)),
+		var(--wall-clr-3) calc(25% + var(--aa)) calc(35%  - var(--aa)),
+		var(--wall-clr-4) calc(35% + var(--aa)) calc(45%  - var(--aa)),
+		var(--wall-clr-5) calc(45% + var(--aa)) calc(55%  - var(--aa)),
+		var(--wall-clr-4) calc(55% + var(--aa)) calc(65%  - var(--aa)),
+		var(--wall-clr-3) calc(65% + var(--aa)) calc(75%  - var(--aa)),
+		var(--wall-clr-2) calc(75% + var(--aa)) calc(85%  - var(--aa)),
+		var(--wall-clr-1) calc(85% + var(--aa)) calc(100% - var(--aa)),
+		#0000);
+}

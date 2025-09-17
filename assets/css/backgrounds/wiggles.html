@@ -1,0 +1,115 @@
+<!DOCTYPE html><html lang="en-GB"><head></head><body>
+<style>
+	html, body {
+		width: 100%;
+		height: 100%;
+		margin: 0;
+	}
+	body {
+		--size: 256px;
+		--aa: 1px;
+		--clr-1: transparent;
+		--clr-2: #8A4425;
+		--clr-3: #8F5A28;
+		--clr-4: #743D26;
+		--clr-5: #412718;
+
+		background-image:
+			radial-gradient(
+				calc(var(--size) / 2) at top left,
+				var(--clr-1) calc(5%  + var(--aa)) calc(15%  - var(--aa)),
+				var(--clr-2) calc(15% + var(--aa)) calc(25%  - var(--aa)),
+				var(--clr-3) calc(25% + var(--aa)) calc(35%  - var(--aa)),
+				var(--clr-4) calc(35% + var(--aa)) calc(45%  - var(--aa)),
+				var(--clr-5) calc(45% + var(--aa)) calc(55%  - var(--aa)),
+				var(--clr-4) calc(55% + var(--aa)) calc(65%  - var(--aa)),
+				var(--clr-3) calc(65% + var(--aa)) calc(75%  - var(--aa)),
+				var(--clr-2) calc(75% + var(--aa)) calc(85%  - var(--aa)),
+				var(--clr-1) calc(85% + var(--aa)) calc(100% - var(--aa)),
+				#0000),
+			radial-gradient(
+				calc(var(--size) / 2) at bottom left,
+				var(--clr-1) calc(5%  + var(--aa)) calc(15%  - var(--aa)),
+				var(--clr-2) calc(15% + var(--aa)) calc(25%  - var(--aa)),
+				var(--clr-3) calc(25% + var(--aa)) calc(35%  - var(--aa)),
+				var(--clr-4) calc(35% + var(--aa)) calc(45%  - var(--aa)),
+				var(--clr-5) calc(45% + var(--aa)) calc(55%  - var(--aa)),
+				var(--clr-4) calc(55% + var(--aa)) calc(65%  - var(--aa)),
+				var(--clr-3) calc(65% + var(--aa)) calc(75%  - var(--aa)),
+				var(--clr-2) calc(75% + var(--aa)) calc(85%  - var(--aa)),
+				var(--clr-1) calc(85% + var(--aa)) calc(100% - var(--aa)),
+				#0000),
+			radial-gradient(
+				calc(var(--size) / 2) at right,
+				var(--clr-1) calc(5%  + var(--aa)) calc(15%  - var(--aa)),
+				var(--clr-2) calc(15% + var(--aa)) calc(25%  - var(--aa)),
+				var(--clr-3) calc(25% + var(--aa)) calc(35%  - var(--aa)),
+				var(--clr-4) calc(35% + var(--aa)) calc(45%  - var(--aa)),
+				var(--clr-5) calc(45% + var(--aa)) calc(55%  - var(--aa)),
+				var(--clr-4) calc(55% + var(--aa)) calc(65%  - var(--aa)),
+				var(--clr-3) calc(65% + var(--aa)) calc(75%  - var(--aa)),
+				var(--clr-2) calc(75% + var(--aa)) calc(85%  - var(--aa)),
+				var(--clr-1) calc(85% + var(--aa)) calc(100% - var(--aa)),
+				#0000),
+			radial-gradient(
+				calc(var(--size) / 2) at top right,
+				var(--clr-1) calc(5%  + var(--aa)) calc(15%  - var(--aa)),
+				var(--clr-2) calc(15% + var(--aa)) calc(25%  - var(--aa)),
+				var(--clr-3) calc(25% + var(--aa)) calc(35%  - var(--aa)),
+				var(--clr-4) calc(35% + var(--aa)) calc(45%  - var(--aa)),
+				var(--clr-5) calc(45% + var(--aa)) calc(55%  - var(--aa)),
+				var(--clr-4) calc(55% + var(--aa)) calc(65%  - var(--aa)),
+				var(--clr-3) calc(65% + var(--aa)) calc(75%  - var(--aa)),
+				var(--clr-2) calc(75% + var(--aa)) calc(85%  - var(--aa)),
+				var(--clr-1) calc(85% + var(--aa)) calc(100% - var(--aa)),
+				#0000),
+			radial-gradient(
+				calc(var(--size) / 2) at bottom right,
+				var(--clr-1) calc(5%  + var(--aa)) calc(15%  - var(--aa)),
+				var(--clr-2) calc(15% + var(--aa)) calc(25%  - var(--aa)),
+				var(--clr-3) calc(25% + var(--aa)) calc(35%  - var(--aa)),
+				var(--clr-4) calc(35% + var(--aa)) calc(45%  - var(--aa)),
+				var(--clr-5) calc(45% + var(--aa)) calc(55%  - var(--aa)),
+				var(--clr-4) calc(55% + var(--aa)) calc(65%  - var(--aa)),
+				var(--clr-3) calc(65% + var(--aa)) calc(75%  - var(--aa)),
+				var(--clr-2) calc(75% + var(--aa)) calc(85%  - var(--aa)),
+				var(--clr-1) calc(85% + var(--aa)) calc(100% - var(--aa)),
+				#0000),
+			radial-gradient(
+				calc(var(--size) / 2) at left,
+				var(--clr-1) calc(5%  + var(--aa)) calc(15%  - var(--aa)),
+				var(--clr-2) calc(15% + var(--aa)) calc(25%  - var(--aa)),
+				var(--clr-3) calc(25% + var(--aa)) calc(35%  - var(--aa)),
+				var(--clr-4) calc(35% + var(--aa)) calc(45%  - var(--aa)),
+				var(--clr-5) calc(45% + var(--aa)) calc(55%  - var(--aa)),
+				var(--clr-4) calc(55% + var(--aa)) calc(65%  - var(--aa)),
+				var(--clr-3) calc(65% + var(--aa)) calc(75%  - var(--aa)),
+				var(--clr-2) calc(75% + var(--aa)) calc(85%  - var(--aa)),
+				var(--clr-1) calc(85% + var(--aa)) calc(100% - var(--aa)),
+				#0000);
+
+		background-color: #642917;
+/* 		background-position: 0 0, 0 0, calc(var(--size) / 2) 0; */
+/* 		background-size: var(--size) calc(var(--size) * 1.45); */
+		background-position:
+			0 0,
+			0 0,
+			0 0,
+			0 0,
+			var(--size) 0,
+			var(--size) 0,
+			var(--size) 0,
+			var(--size) 0;
+		background-position:
+			0 0,
+			0 0,
+			0 0,
+			var(--size) 0,
+			var(--size) 0,
+			var(--size) 0;
+		background-size:
+			calc(var(--size) * 2)  var(--size);
+		background-repeat: repeat;
+}
+	}
+</body></html>

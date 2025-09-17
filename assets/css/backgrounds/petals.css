@@ -1,0 +1,61 @@
+:root {
+	--content-background-colour: var(--wall-clr-1);
+	--content-text-colour: var(--wall-clr-5);
+	--accent-colour: var(--wall-clr-3);
+	--strong-accent-colour: var(--wall-clr-4);
+
+	--wall-clr-1: #531151;
+	--wall-clr-2: #321565;
+	--wall-clr-3: rebeccapurple;
+	--wall-clr-4: #8A3288;
+	--wall-clr-5: #C599F5; /*just for content-colours*/
+}
+
+@media (prefers-color-scheme: light) {
+	:root {
+		--content-background-colour: var(--wall-clr-5);
+		--content-text-colour: var(--wall-clr-1);
+		--accent-colour: var(--wall-clr-3);
+		--strong-accent-colour: var(--wall-clr-4);
+	}
+}
+body {
+	background-size: 256px 256px;
+	background-attachment: fixed;
+	background-repeat: repeat;
+	/*--wall-clr-1: #D1B591;
+	 *	--wall-clr-2: #644424;
+	 *	--wall-clr-3: #CC630E;
+	 *	--wall-clr-4: #CF7D34;*/
+	/* cream
+	 *	--wall-clr-4: #1B1310;
+	 *	--wall-clr-3: #36271F;
+	 *	--wall-clr-2: #D0C89E;
+	 *	--wall-clr-1: #E2E1C7; */
+
+	background-color: var(--wall-clr-1);
+	/*in theory this is better, but it happens to look worse at 1080p & 1440p:
+	background-position: center;*/
+	background-image:
+	radial-gradient(circle at 34.6% 34.6%, var(--wall-clr-1), var(--wall-clr-1) 8%,  #0000 calc(8% + 1px)),
+	radial-gradient(circle at 31.7% 31.7%, var(--wall-clr-2), var(--wall-clr-2) 12%, #0000 calc(12% + 1px)),
+	radial-gradient(circle at 28.5% 28.5%, var(--wall-clr-3), var(--wall-clr-3) 16%, #0000 calc(16% + 1px)),
+	radial-gradient(circle at 25.0% 25.0%, var(--wall-clr-4), var(--wall-clr-4) 20%, #0000 calc(20% + 1px)),
+	radial-gradient(circle at 65.4% 34.6%, var(--wall-clr-1), var(--wall-clr-1) 8%,  #0000 calc(8% + 1px)),
+	radial-gradient(circle at 68.3% 31.7%, var(--wall-clr-2), var(--wall-clr-2) 12%, #0000 calc(12% + 1px)),
+	radial-gradient(circle at 71.5% 28.5%, var(--wall-clr-3), var(--wall-clr-3) 16%, #0000 calc(16% + 1px)),
+	radial-gradient(circle at 75.0% 25.0%, var(--wall-clr-4), var(--wall-clr-4) 20%, #0000 calc(20% + 1px)),
+	radial-gradient(circle at 34.6% 65.4%, var(--wall-clr-1), var(--wall-clr-1) 8%,  #0000 calc(8% + 1px)),
+	radial-gradient(circle at 31.7% 68.3%, var(--wall-clr-2), var(--wall-clr-2) 12%, #0000 calc(12% + 1px)),
+	radial-gradient(circle at 28.5% 71.5%, var(--wall-clr-3), var(--wall-clr-3) 16%, #0000 calc(16% + 1px)),
+	radial-gradient(circle at 25.0% 75.0%, var(--wall-clr-4), var(--wall-clr-4) 20%, #0000 calc(20% + 1px)),
+	radial-gradient(circle at 65.4% 65.4%, var(--wall-clr-1), var(--wall-clr-1) 8%,  #0000 calc(8% + 1px)),
+	radial-gradient(circle at 68.3% 68.3%, var(--wall-clr-2), var(--wall-clr-2) 12%, #0000 calc(12% + 1px)),
+	radial-gradient(circle at 71.5% 71.5%, var(--wall-clr-3), var(--wall-clr-3) 16%, #0000 calc(16% + 1px)),
+	radial-gradient(circle at 75.0% 75.0%, var(--wall-clr-4), var(--wall-clr-4) 20%, #0000 calc(20% + 1px));
+	/*
+	 *	background-color: #B9384D;
+	 *	background-image:
+	 *		linear-gradient(to top, transparent, #B9384D, #45448A),
+	 *		radial-gradient(circle farthest-side at 10% 100%, #FAE815, #B9384D 400px, transparent 100vmin);*/
+}

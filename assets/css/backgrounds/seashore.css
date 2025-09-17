@@ -4,16 +4,7 @@
 	--content-text-colour: var(--wall-clr-5);
 	--strong-accent-colour: var(--wall-clr-4);
 	--accent-colour: var(--wall-clr-3);
-}
-@media (prefers-color-scheme: light) {
-	:root {
-		--content-background-colour: var(--wall-clr-5);
-		--content-text-colour: var(--wall-clr-1);
-		--strong-accent-colour: var(--wall-clr-2);
-	}
-}
 
-:root {
 	--bg-box-size: 192px;
 	--bg-pattern-size: calc(var(--bg-box-size) * 0.258);
 	--aa: 1px;
@@ -22,7 +13,23 @@
 	--wall-clr-3: #006973;
 	--wall-clr-4: #5A958F;
 	--wall-clr-5: #E1BB8E;
+/*
+	 --wall-clr-1: #321565;
+	 --wall-clr-2: #531151;
+	 --wall-clr-3: rebeccapurple;
+	 --wall-clr-4: #8A3288;
+	 --wall-clr-5: #e18eb3;*/
 }
+@media (prefers-color-scheme: light) {
+	:root {
+		--wall-clr-1: #E1BB8E;
+		--wall-clr-2: #5A958F;
+		--wall-clr-3: #006973;
+		--wall-clr-4: #02516F;
+		--wall-clr-5: #001A3B;
+	}
+}
+
 body {
 	background-size: var(--bg-box-size)  var(--bg-box-size);
 	background-color: var(--wall-clr-1);
