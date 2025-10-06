@@ -37,279 +37,6 @@
 
 /* =============================== variables =============================== */
 
-/* https://indestructibletype.com/Cooper/ */
-	@font-face {
-		font-family: "Cooper";
-		src: url("/assets/fonts/cooper/cooper-regular.woff2") format("woff2");
-		font-weight: 300;
-		font-style: normal;
-		size-adjust: 115%;
-	}
-	@font-face {
-		font-family: "Cooper";
-		src: url("/assets/fonts/cooper/cooper-medium.woff2") format("woff2");
-		font-weight: 400;
-		font-style: normal;
-		size-adjust: 115%;
-	}
-	@font-face {
-		font-family: "Cooper";
-		src: url("/assets/fonts/cooper/cooper-semibold.woff2") format("woff2");
-		font-weight: 500;
-		font-style: normal;
-		size-adjust: 115%;
-	}
-	@font-face {
-		font-family: "Cooper";
-		src: url("/assets/fonts/cooper/cooper-bold.woff2") format("woff2");
-		font-weight: 600;
-		font-style: normal;
-		size-adjust: 115%;
-	}
-	@font-face {
-		font-family: "Cooper";
-		src: url("/assets/fonts/cooper/cooper-extrabold.woff2") format("woff2");
-		font-weight: 700;
-		font-style: normal;
-		size-adjust: 115%;
-	}
-	@font-face {
-		font-family: "Cooper";
-		src: url("/assets/fonts/cooper/cooper-black.woff2") format("woff2");
-		font-weight: 800;
-		font-style: normal;
-		size-adjust: 115%;
-	}
-	@font-face {
-		font-family: "Cooper";
-		src: url("/assets/fonts/cooper/cooper-italic.woff2") format("woff2");
-		font-weight: 300;
-		font-style: italic;
-		size-adjust: 115%;
-	}
-	@font-face {
-		font-family: "Cooper";
-		src: url("/assets/fonts/cooper/cooper-mediumitalic.woff2") format("woff2");
-		font-weight: 400;
-		font-style: italic;
-		size-adjust: 115%;
-	}
-	@font-face {
-		font-family: "Cooper";
-		src: url("/assets/fonts/cooper/cooper-semibolditalic.woff2") format("woff2");
-		font-weight: 500;
-		font-style: italic;
-		size-adjust: 115%;
-	}
-	@font-face {
-		font-family: "Cooper";
-		src: url("/assets/fonts/cooper/cooper-bolditalic.woff2") format("woff2");
-		font-weight: 600;
-		font-style: italic;
-		size-adjust: 115%;
-	}
-	@font-face {
-		font-family: "Cooper";
-		src: url("/assets/fonts/cooper/cooper-extrabolditalic.woff2") format("woff2");
-		font-weight: 700;
-		font-style: italic;
-		size-adjust: 115%;
-	}
-	@font-face {
-		font-family: "Cooper";
-		src: url("/assets/fonts/cooper/cooper-blackitalic.woff2") format("woff2");
-		font-weight: 800;
-		font-style: italic;
-		size-adjust: 115%;
-	}
-
-/* https://indestructibletype.com/Drafting/ */
-	@font-face {
-		font-family: "Drafting";
-		src: local("Drafting Mono Regular"), local("Drafting Mono-Regular"),
-			url("/assets/fonts/drafting/drafting-regular.woff2") format("woff2");
-		font-weight: 400;
-		font-style: normal;
-	}
-	@font-face {
-		font-family: "Drafting";
-		src: local("Drafting Mono Medium"), local("Drafting Mono-Medium"),
-			url("/assets/fonts/drafting/drafting-medium.woff2") format("woff2");
-		font-weight: 500;
-		font-style: normal;
-	}
-	@font-face {
-		font-family: "Drafting";
-		src: local("Drafting Mono SemiBold"), local("Drafting Mono-SemiBold"),
-			url("/assets/fonts/drafting/drafting-semibold.woff2") format("woff2");
-		font-weight: 600;
-		font-style: normal;
-	}
-	@font-face {
-		font-family: "Drafting";
-		src: local("Drafting Mono Bold"), local("Drafting Mono-Bold"),
-			url("/assets/fonts/drafting/drafting-bold.woff2") format("rrwoff2");
-		font-weight: 700;
-		font-style: normal;
-	}
-	@font-face {
-		font-family: "Drafting";
-		src: local("Drafting Mono ExtraBold"), local("Drafting Mono-ExtraBold"),
-			url("/assets/fonts/drafting/drafting-extrabold.woff2") format("woff2");
-		font-weight: 800;
-		font-style: normal;
-	}
-	@font-face {
-		font-family: "Drafting";
-		src: local("Drafting Mono Black"), local("Drafting Mono-Black"),
-			url("/assets/fonts/drafting/drafting-black.woff2") format("woff2");
-		font-weight: 900;
-		font-style: normal;
-	}
-	@font-face {
-		font-family: "Drafting";
-		src: local("Drafting Mono Italic"), local("Drafting Mono-Italic"),
-			url("/assets/fonts/drafting/drafting-italic.woff2") format("woff2");
-		font-weight: 400;
-		font-style: italic;
-	}
-	@font-face {
-		font-family: "Drafting";
-		src: local("Drafting Mono Medium Italic"), local("Drafting Mono-MediumItalic"),
-			url("/assets/fonts/drafting/drafting-mediumitalic.woff2") format("woff2");
-		font-weight: 500;
-		font-style: italic;
-	}
-	@font-face {
-		font-family: "Drafting";
-		src: local("Drafting Mono SemiBold Italic"), local("Drafting Mono-SemiBoldItalic"),
-			url("/assets/fonts/drafting/drafting-semibolditalic.woff2") format("woff2");
-		font-weight: 600;
-		font-style: italic;
-	}
-	@font-face {
-		font-family: "Drafting";
-		src: local("Drafting Mono Bold Italic"), local("Drafting Mono-BoldItalic"),
-			url("/assets/fonts/drafting/drafting-bolditalic.woff2") format("woff2");
-		font-weight: 700;
-		font-style: italic;
-	}
-	@font-face {
-		font-family: "Drafting";
-		src: local("Drafting Mono ExtraBold Italic"), local("Drafting Mono-ExtraBoldItalic"),
-			url("/assets/fonts/drafting/drafting-extrabolditalic.woff2") format("woff2");
-		font-weight: 800;
-		font-style: italic;
-	}
-	@font-face {
-		font-family: "Drafting";
-		src: local("Drafting Mono Black Italic"), local("Drafting Mono-BlackItalic"),
-			url("/assets/fonts/drafting/drafting-blackitalic.woff2") format("woff2");
-		font-weight: 900;
-		font-style: italic;
-	}
-
-@font-face {
-	font-family: "Overpass";
-	src: local("Overpass-Italic-VariableFont_wght"),
-		url("/assets/fonts/variable/overpass.woff2") format("woff2 supports variations"),
-		url("/assets/fonts/variable/overpass.woff2") format("woff2-variations");
-  font-weight: 100 900;
-	font-style: normal;
-}
-@font-face {
-	font-family: "Overpass";
-	src: local("Overpass-VariableFont_wght"),
-		url("/assets/fonts/variable/overpass-italic.woff2") format("woff2 supports variations"),
-		url("/assets/fonts/variable/overpass-italic.woff2") format("woff2-variations");
-  font-weight: 100 900;
-	font-style: italic;
-}
-@font-face {
-	font-family: "Crimson";
-	src: local("CrimsonPro-VariableFont_wght"),
-	url("/assets/fonts/crimson-pro.woff2") format("woff2 supports variations"),
-	url("/assets/fonts/crimson-pro.woff2") format("woff2-variations");
-	font-weight: 100 1000;
-	font-style: normal;
-}
-@font-face {
-	font-family: "Crimson";
-	src: local("CrimsonPro-Italic-VariableFont_wght"),
-	url("/assets/fonts/crimson-pro-italic.woff2") format("woff2 supports variations"),
-	url("/assets/fonts/crimson-pro-italic.woff2") format("woff2-variations");
-	font-weight: 100 1000;
-	font-style: italic;
-}
-
-/*http://arkandis.tuxfamily.org/adffonts.html
- superceded by cooper* */
-/* modified with fontsquirrel: */
-/* x-height multiplier @ 119% (would rather 119.5, but fs doesn't support
-fractional values); glyph spacing @ -32 em square (equivalent to -0.03,
-~-0.4px @ 16px) */
-/*@font-face {
-	font-family: "Baskervald";
-	src: local("BaskervaldADFStd"),
-		url("/assets/fonts/baskervald-adf.woff2") format("woff2");
-	font-weight: normal;
-	font-style: normal;
-}
-@font-face {
-	font-family: "Baskervald";
-	src: local("BaskervaldADFStd-Italic"),
-		url("/assets/fonts/baskervald-adf-italic.woff2") format("woff2");
-	font-weight: normal;
-	font-style: italic;
-}
-@font-face {
-	font-family: "Baskervald";
-	src: local("BaskervaldADFStd-Bold"),
-		url("/assets/fonts/baskervald-adf-bold.woff2") format("woff2");
-	font-weight: bold;
-	font-style: normal;
-}
-@font-face {
-	font-family: "Baskervald";
-	src: local("BaskervaldADFStd-BoldItalic"),
-		url("/assets/fonts/baskervald-adf-bold-italic.woff2") format("woff2");
-	font-weight: bold;
-	font-style: italic;
-}*/
-
-/*https://www.dafontfree.co/marvin-visions-font/*/
-@font-face {
-	font-family: "Marvin Visions";
-	src: url("/assets/fonts/marvin-visions.woff2") format("woff2");
-	font-weight: normal;
-	font-style: normal;
-}
-
-/*http://natashaisneat.com/*/
-@font-face {
-	font-family: "Geomancy Extra Bold";
-	src: url("/assets/fonts/geomancy-extrabold.woff2") format("woff2");
-	font-weight: bold;
-	font-style: normal;
-	font-synthesis-weight: none;
-}
-@font-face {
-	font-family: "Geomancy Hairline";
-	src: url("/assets/fonts/geomancy-hairline.woff2") format("woff2");
-	font-weight: normal;
-	font-style: normal;
-	font-synthesis-weight: none;
-}
-
-/* literally just for the infinity symbol... : ( */
-@font-face {
-	font-family: "Dela Gothic";
-	src: url("/assets/fonts/delagothicone-infinity.woff2") format("woff2");
-	font-weight: normal;
-	font-style: normal;
-	unicode-range: U+221E;
-}
-
 /* variables */
 :root {
 	--fnt-sans: "Overpass", "Fira Sans", ui-sans-serif, system-ui, sans-serif;
@@ -317,7 +44,7 @@ fractional values); glyph spacing @ -32 em square (equivalent to -0.03,
 	--fnt-mono: "Drafting", ui-monospace, monospace;
 	--fnt-code: var(--fnt-mono);
 	--fnt-display: "Cooper", ui-rounded, fantasy;
-	--fnt-subdisplay: "Geomancy Extra Bold", "Marvin Visions", ui-rounded, fantasy;
+	--fnt-subdisplay: "Chintzy", "Cooper", ui-serif, serif;
 	--fnt-body: var(--fnt-serif);
 
 	--nav-height: 60px;  // i don't know what i'm doing with this yet
@@ -478,6 +205,10 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: var(--fnt-display);
 	margin-top: 0.8em;
 	// letter-spacing: 1px;
+
+	&::first-letter {
+		font-feature-settings: "swsh";
+	}
 }
 article>header {
 	text-align: right;
@@ -489,8 +220,13 @@ article>header {
 	&>p {
 		margin-block: 0.3em;
 		font-style: italic;
+		font-synthesis: none;
 		text-wrap: balance;
 		font-family: var(--fnt-serif);
+		font-family: var(--fnt-subdisplay);
+		&>* {
+			font-family: inherit;
+		}
 		&:first-of-type::before {
 			content: "— OR —";
 			font-size: 1.4em;
@@ -638,15 +374,28 @@ i {
 	// font-style: oblique;
 	font-family: var(--fnt-serif);
 }
+:is(em, i, q)>:is(em, i, q) {
+	font-style: normal;
+	&>:is(em, i, q) {
+		font-style: oblique;
+	}
+}
+strong, b {
+	font-weight: 600;
+}
 /* colour highlighted text */
 mark {
-	margin-left:  -0.5ch;
-	margin-right: -0.5ch;
-	padding-left:  0.5ch;
-	padding-right: 0.5ch;
+	margin-left:  -0.2ch;
+	margin-right: -0.2ch;
+	padding-left:  0.2ch;
+	padding-right: 0.2ch;
 	border-radius: 0.1em;
-	background-color: var(--s-ylw);
-	color: var(--bg-0);
+	// background-color: var(--s-ylw);
+	// color: var(--bg-0);
+	background-color: transparent;
+	color: inherit;
+	text-decoration-color: var(--s-ylw);
+	text-decoration-line: underline;
 }
 del {
 	text-decoration-color: var(--s-red);
@@ -659,9 +408,9 @@ ul ::marker {
 	content: "❧";
 }*/
 
-li:has(details) {
+li:has(>details) {
 	list-style-type: disclosure-closed;
-	&:has(details[open]) {
+	&:has(>details[open]) {
 		list-style-type: disclosure-open;
 	}
 	& ::marker,
@@ -750,6 +499,7 @@ samp,
 	font-family: var(--fnt-mono, monospace);
 	overflow-x: auto;
 	box-sizing: border-box;
+	user-select: none;
 }
 .ascii-art {
 	white-space: pre;
@@ -793,7 +543,8 @@ code {  // code formating below
 
 .captioned,
 abbr[title],
-acronym[title] {
+acronym[title],
+*:not(time)[title] {
 	/* fuck you html5, acronyms and abbreviations are different things */
 	cursor: help;
 	color: var(--s-aqa);

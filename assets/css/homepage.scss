@@ -115,14 +115,15 @@ body:has(option[value="gb"]:checked) {
 
 
 @media (prefers-reduced-motion: no-preference) {
-	body>header>h1 {
+	body>header>p {
 			animation: flow 1s linear infinite;
 	}
 }
-body>header>h1 {
+body>header>p {
 	font-family: "Cooper", "Averia Serif Libre", fantasy;
 	font-weight: 700; // 900 breaks cooper*, but only in ffx ??
 	font-size: min(96px, 10vw); /*is this a magic number!? i have no idea*/
+	font-feature-settings: "swsh";
 
 	margin-top: 0.1em;
 	margin-bottom: 0.3em;
@@ -791,7 +792,7 @@ main>section>article {
 		font-family: var(--fnt-serif);
 		font-size: 1.1em;
 		padding: 1em;
-		background-colour: rebecca-purple;
+		--fnt-subdisplay: "Geomancy", "Marvin Visions", ui-rounded, var(--fnt-serif);
 
 		&::first-line {
 			font-family: var(--fnt-subdisplay);

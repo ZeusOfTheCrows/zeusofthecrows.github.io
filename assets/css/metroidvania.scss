@@ -7,6 +7,10 @@
 :root {
 	--content-background-radius: 4px;
 	--content-background-colour: black;
+	--fnt-serif: "Chintzy", "Cooper", ui-serif, serif;
+	--fnt-body: var(--fnt-sans);
+	--fg-0: lightblue;
+	--fg-1: lightblue;
 }
 
 /* light mode colours */
@@ -18,10 +22,11 @@
 // https://lospec.com/palette-list/nintendo-entertainment-system
 
 @font-face {
-  font-family: "Logbook Prime";
-  src:
-    local("logbook-prime.woff2"),
-    url("/assets/fonts/mv/logbook-prime.woff2") format("woff2");
+	font-family: "Logbook Prime";
+	src:
+		local("logbook-prime.woff2"),
+		url("/assets/fonts/mv/logbook-prime.woff2") format("woff2");
+		size-adjust: none;
 }
 
 // https://web.archive.org/web/20221207044254/http://chozo.wolfeur.eu/
@@ -31,7 +36,7 @@ body {
 }
 
 main>article>section {
-	color: lightblue; // ztodo remove me when paletting the palette
+	// color: lightblue; // ztodo remove me when paletting the palette
 	background-attachment: fixed;
 
 	&>* {
@@ -177,9 +182,14 @@ main>article>section {
 
 #m-om {
 	--fnt-subdisplay: "Logbook Prime", serif;
+
 	& figcaption {
 		font-style: normal;
 		line-height: 1;
+
+		& :is(acronym:not(.keep-case), abbr:not(.keep-case), cite, u) {
+			font-size-adjust: none;
+		}
 	}
 	&>h2 {
 	// ZTODO THESE ARE NOT VARIABLES DUE TO [UNDOCUMENTED?] SCSS BUG

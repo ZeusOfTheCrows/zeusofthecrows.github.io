@@ -1,98 +1,6 @@
 ---
 ---
 
-/* https://indestructibletype.com/Cooper/ */
-@font-face {
-	font-family: "Chintzy";
-	src: url("/assets/fonts/chintzy/chintzy-thin.woff2") format("woff2");
-	font-weight: 200;
-	font-style: normal;
-}
-@font-face {
-	font-family: "Chintzy";
-	src: url("/assets/fonts/chintzy/chintzy-light.woff2") format("woff2");
-	font-weight: 300;
-	font-style: normal;
-}
-@font-face {
-	font-family: "Chintzy";
-	src: url("/assets/fonts/chintzy/chintzy-regular.woff2") format("woff2");
-	font-weight: 400;
-	font-style: normal;
-}
-@font-face {
-	font-family: "Chintzy";
-	src: url("/assets/fonts/chintzy/chintzy-medium.woff2") format("woff2");
-	font-weight: 500;
-	font-style: normal;
-}
-@font-face {
-	font-family: "Chintzy";
-	src: url("/assets/fonts/chintzy/chintzy-semibold.woff2") format("woff2");
-	font-weight: 600;
-	font-style: normal;
-}
-@font-face {
-	font-family: "Chintzy";
-	src: url("/assets/fonts/chintzy/chintzy-bold.woff2") format("woff2");
-	font-weight: 700;
-	font-style: normal;
-}
-@font-face {
-	font-family: "Chintzy";
-	src: url("/assets/fonts/chintzy/chintzy-extrabold.woff2") format("woff2");
-	font-weight: 800;
-	font-style: normal;
-}
-@font-face {
-	font-family: "Chintzy";
-	src: url("/assets/fonts/chintzy/chintzy-black.woff2") format("woff2");
-	font-weight: 900;
-	font-style: normal;
-}
-@font-face {
-	font-family: "Chintzy";
-	src: url("/assets/fonts/chintzy/chintzy-thinitalic.woff2") format("woff2");
-	font-weight: 200;
-	font-style: italic;
-}
-@font-face {
-	font-family: "Chintzy";
-	src: url("/assets/fonts/chintzy/chintzy-lightitalic.woff2") format("woff2");
-	font-weight: 300;
-	font-style: italic;
-}
-@font-face {
-	font-family: "Chintzy";
-	src: url("/assets/fonts/chintzy/chintzy-regularitalic.woff2") format("woff2");
-	font-weight: 400;
-	font-style: italic;
-}
-@font-face {
-	font-family: "Chintzy";
-	src: url("/assets/fonts/chintzy/chintzy-mediumitalic.woff2") format("woff2");
-	font-weight: 500;
-	font-style: italic;
-}
-@font-face {
-	font-family: "Chintzy";
-	src: url("/assets/fonts/chintzy/chintzy-semibolditalic.woff2") format("woff2");
-	font-weight: 600;
-	font-style: italic;
-}
-@font-face {
-	font-family: "Chintzy";
-	src: url("/assets/fonts/chintzy/chintzy-bolditalic.woff2") format("woff2");
-	font-weight: 700;
-	font-style: italic;
-}
-@font-face {
-	font-family: "Chintzy";
-	src: url("/assets/fonts/chintzy/chintzy-extrabolditalic.woff2") format("woff2");
-	font-weight: 800;
-	font-style: italic;
-}
-
 :root {
 	--fnt-display: "Chintzy", serif;
 	--fnt-subdisplay: "Chintzy", serif;
@@ -106,9 +14,9 @@ main {
 article {
 	width: var(--content-background-width);
 }
-:where(article>header,
+article>header,
 article>footer,
-article>section>*:not(.full-bleed)) {
+article>section>*:not(.full-bleed) {
 	max-width: var(--text-max-width);
 	margin-inline: auto;
 	padding-inline: 2ch;
@@ -130,6 +38,16 @@ section>p::first-letter {
 ol {
 	list-style: lower-greek;
 	//list-style: symbols(fixed "z" "x" "c"); note to self: this exists
+}
+ol:has(p) {
+	list-style: none;
+	counter-reset: list-itr;
+	padding-left: 0;
+	& p:first-child::before {
+		content: counter(list-itr, lower-greek) ".";
+		counter-increment: list-itr;
+		color: var(--s-blu);
+	}
 }
 ol, ul, dl {
 		padding-left: 4ch;
@@ -303,8 +221,8 @@ article hr {
 	padding: 0;
 
 	&::after {
-		content: "☙ ⁂ ❧";
-		// content: "🙡 ⁂ 🙣";  // alt
+		// content: "☙ ⁂ ❧";
+		content: "🙡 ⁂ 🙣";  // alt
 		color: var(--s-grn);
 		display: block;
 		line-height: 1;

@@ -5,7 +5,9 @@
 	--content-background-colour: black;
 	--content-background-radius: 8px;
 	--header-colour: black;
-	--fnt-display: "Marvin Visions", "Geomancy Extra Bold", fantasy;
+	--fnt-display:    "Marvin Visions", "Dela Gothic", "Geomancy", ui-rounded, fantasy;
+	--fnt-subdisplay: "Geomancy", "Marvin Visions", "Dela Gothic", ui-rounded, fantasy;
+	--fnt-body: var(--fnt-sans);
 
 	--d-red: brown;
 	--d-grn: darkgreen;
@@ -114,7 +116,7 @@
 }
 
 body>header {
-		&>h1 {
+		&>p {
 			&::before,
 			&::after {
 				content: "";
@@ -334,6 +336,7 @@ header,h1,h2,h3,h4,h5,h6,details {
 	img {
 		display: block;  // force caption to display on next line
 		max-width: 100%;
+		max-height: 512px;
 	}
 	.img-caption {  // hide caption by default
 		transition: opacity 0.1s ease-in-out;

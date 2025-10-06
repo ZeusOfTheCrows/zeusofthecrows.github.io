@@ -14,6 +14,7 @@
 		<title>{% if page.title %}{{ page.title }}〔Ɀ〕{% else %}{{ site.title }}{% endif %}</title>
 		<meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}" />
 
+		<link rel="stylesheet" href="/assets/css/fonts.css" />
 		<link rel="stylesheet" href="/assets/css/global.css" />
 		{% if page.css-background %}
 		<link rel="stylesheet" href="/assets/css/backgrounds/{{ page.css-background }}.css" />
