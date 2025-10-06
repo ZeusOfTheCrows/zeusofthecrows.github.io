@@ -196,26 +196,29 @@
 - article:
   date: 2022-07-06
   content:
-    - p: 'i''ve really got into <i>powerwolf</i> recently - i''d always considered
+    - p: 'i''ve really got into <u>Powerwolf</u> recently - i''d always considered
     them <q>sabaton, but for furries</q>; but actually they''re over the top
-    in the same fantastic way as warhammer'
+    in the same fantastic way as <cite>Warhammer</cite>'
 
 - article:
   date: 2022-07-05
   content:
-    - p: 'i''ve just finished <i>the swapper</i>, and i have no idea why it took
+    - p: 'i''ve just finished <cite>The Swapper</cite>, and i have no idea why
+    it took
     me so long; the art style is gorgeous, the puzzles are (mostly) well
     designed, and the ending was really interesting actually'
 
 - article:
   date: 2022-07-02
   content:
-    - p: 'considering nobody knows the origin of "O.K.", i think it''s a lot more
-    likely to come from "och aye" than "orl korrekt", considering<br>
+    - p: 'considering nobody knows the origin of
+    "<acronym>OK</acronym>",
+    i think it''s a lot more
+    likely to come from <i>och aye</i> than <i>orl korrekt</i>, considering<br>
     a) that''s pretty much how it would be approximated by most english
         people<br>
-    b) what even is orl korrekt. that''s not a phrase. it was a very
-    	brief fad, from which no other artifacts have survived'
+    b) what even is <i>orl korrekt</i>. that''s not a phrase. it was a very
+    	brief [purported] fad, from which no other artifacts have survived'
 
 - article:
   date: 2022-06-29
@@ -233,7 +236,8 @@
 - article:
   date: 2022-06-26
   content:
-    - p: '<abbr title="or you won''t, i don''t know you">you''ll notice</abbr> most
+    - p: '<span class="captioned"
+    title="or you won''t, i don''t know you">you''ll notice</span> most
     images on this site are apng, not gifs or webp.
     according to <a href="http://littlesvr.ca/apng/gif_apng_webp2.html">this
     site</a>, they''re notably better. bearing in mind webp doesn''t support

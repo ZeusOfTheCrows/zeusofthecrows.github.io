@@ -4,32 +4,251 @@
 // https://www.youtube.com/watch?v=8MaCTDkoVd8&t=954s
 // https://codersblock.com/blog/the-surprising-things-that-css-can-animate/#text-selection-trick
 // https://codepen.io/polypane/details/QWmPLrb
+// https://css-tricks.com/css-anchor-positioning-guide/ for footnotes/tooltips?
+// https://www.w3.org/Style/LieBos2e/history/#browsers or this, for now?
+// https://www.smashingmagazine.com/2015/05/why-the-svg-filter-is-awesome/
+// free fonts
+// https://freebiesbug.com/free-fonts/page/3/
+
+// gfonts woff2 downloader
+// https://herrstrietzel.github.io/google-font-finder/
+// https://codepen.io/herrstrietzel/pen/MWREwNV?editors=1010
+// https://stackoverflow.com/questions/67100585/why-is-font-variant-numeric-slashed-zero-not-working-with-my-google-font
+
+// opentype font variants
+// https://sparanoid.com/lab/opentype-features/
+// petite caps (small caps but better)
+// https://learn.microsoft.com/en-gb/typography/opentype/spec/features_pt#pcap
+// caps to petite caps <acronym>
+// https://learn.microsoft.com/en-gb/typography/opentype/spec/features_ae#c2pc
+// ordinal letters to ligatures (also No -> №, use with caution)
+// https://learn.microsoft.com/en-gb/typography/opentype/spec/features_ko#ordn
+
+// line-split display font
+// https://fonts.google.com/specimen/Train+One
+// v subtle body serif
+// https://fonts.google.com/specimen/Della+Respira
+// serif body-ish
+// https://zelowtype.gumroad.com/l/ztbrososkon90s
+// serif display-ish
+// https://zelowtype.gumroad.com/l/ztchintzy?a=184260307
+// serif display-ish
+// https://zelowtype.com/zt-otez-serif/
 
 /* =============================== variables =============================== */
+
+/* https://indestructibletype.com/Cooper/ */
+	@font-face {
+		font-family: "Cooper";
+		src: url("/assets/fonts/cooper/cooper-regular.woff2") format("woff2");
+		font-weight: 300;
+		font-style: normal;
+		size-adjust: 115%;
+	}
+	@font-face {
+		font-family: "Cooper";
+		src: url("/assets/fonts/cooper/cooper-medium.woff2") format("woff2");
+		font-weight: 400;
+		font-style: normal;
+		size-adjust: 115%;
+	}
+	@font-face {
+		font-family: "Cooper";
+		src: url("/assets/fonts/cooper/cooper-semibold.woff2") format("woff2");
+		font-weight: 500;
+		font-style: normal;
+		size-adjust: 115%;
+	}
+	@font-face {
+		font-family: "Cooper";
+		src: url("/assets/fonts/cooper/cooper-bold.woff2") format("woff2");
+		font-weight: 600;
+		font-style: normal;
+		size-adjust: 115%;
+	}
+	@font-face {
+		font-family: "Cooper";
+		src: url("/assets/fonts/cooper/cooper-extrabold.woff2") format("woff2");
+		font-weight: 700;
+		font-style: normal;
+		size-adjust: 115%;
+	}
+	@font-face {
+		font-family: "Cooper";
+		src: url("/assets/fonts/cooper/cooper-black.woff2") format("woff2");
+		font-weight: 800;
+		font-style: normal;
+		size-adjust: 115%;
+	}
+	@font-face {
+		font-family: "Cooper";
+		src: url("/assets/fonts/cooper/cooper-italic.woff2") format("woff2");
+		font-weight: 300;
+		font-style: italic;
+		size-adjust: 115%;
+	}
+	@font-face {
+		font-family: "Cooper";
+		src: url("/assets/fonts/cooper/cooper-mediumitalic.woff2") format("woff2");
+		font-weight: 400;
+		font-style: italic;
+		size-adjust: 115%;
+	}
+	@font-face {
+		font-family: "Cooper";
+		src: url("/assets/fonts/cooper/cooper-semibolditalic.woff2") format("woff2");
+		font-weight: 500;
+		font-style: italic;
+		size-adjust: 115%;
+	}
+	@font-face {
+		font-family: "Cooper";
+		src: url("/assets/fonts/cooper/cooper-bolditalic.woff2") format("woff2");
+		font-weight: 600;
+		font-style: italic;
+		size-adjust: 115%;
+	}
+	@font-face {
+		font-family: "Cooper";
+		src: url("/assets/fonts/cooper/cooper-extrabolditalic.woff2") format("woff2");
+		font-weight: 700;
+		font-style: italic;
+		size-adjust: 115%;
+	}
+	@font-face {
+		font-family: "Cooper";
+		src: url("/assets/fonts/cooper/cooper-blackitalic.woff2") format("woff2");
+		font-weight: 800;
+		font-style: italic;
+		size-adjust: 115%;
+	}
+
+/* https://indestructibletype.com/Drafting/ */
+	@font-face {
+		font-family: "Drafting";
+		src: local("Drafting Mono Regular"), local("Drafting Mono-Regular"),
+			url("/assets/fonts/drafting/drafting-regular.woff2") format("woff2");
+		font-weight: 400;
+		font-style: normal;
+	}
+	@font-face {
+		font-family: "Drafting";
+		src: local("Drafting Mono Medium"), local("Drafting Mono-Medium"),
+			url("/assets/fonts/drafting/drafting-medium.woff2") format("woff2");
+		font-weight: 500;
+		font-style: normal;
+	}
+	@font-face {
+		font-family: "Drafting";
+		src: local("Drafting Mono SemiBold"), local("Drafting Mono-SemiBold"),
+			url("/assets/fonts/drafting/drafting-semibold.woff2") format("woff2");
+		font-weight: 600;
+		font-style: normal;
+	}
+	@font-face {
+		font-family: "Drafting";
+		src: local("Drafting Mono Bold"), local("Drafting Mono-Bold"),
+			url("/assets/fonts/drafting/drafting-bold.woff2") format("rrwoff2");
+		font-weight: 700;
+		font-style: normal;
+	}
+	@font-face {
+		font-family: "Drafting";
+		src: local("Drafting Mono ExtraBold"), local("Drafting Mono-ExtraBold"),
+			url("/assets/fonts/drafting/drafting-extrabold.woff2") format("woff2");
+		font-weight: 800;
+		font-style: normal;
+	}
+	@font-face {
+		font-family: "Drafting";
+		src: local("Drafting Mono Black"), local("Drafting Mono-Black"),
+			url("/assets/fonts/drafting/drafting-black.woff2") format("woff2");
+		font-weight: 900;
+		font-style: normal;
+	}
+	@font-face {
+		font-family: "Drafting";
+		src: local("Drafting Mono Italic"), local("Drafting Mono-Italic"),
+			url("/assets/fonts/drafting/drafting-italic.woff2") format("woff2");
+		font-weight: 400;
+		font-style: italic;
+	}
+	@font-face {
+		font-family: "Drafting";
+		src: local("Drafting Mono Medium Italic"), local("Drafting Mono-MediumItalic"),
+			url("/assets/fonts/drafting/drafting-mediumitalic.woff2") format("woff2");
+		font-weight: 500;
+		font-style: italic;
+	}
+	@font-face {
+		font-family: "Drafting";
+		src: local("Drafting Mono SemiBold Italic"), local("Drafting Mono-SemiBoldItalic"),
+			url("/assets/fonts/drafting/drafting-semibolditalic.woff2") format("woff2");
+		font-weight: 600;
+		font-style: italic;
+	}
+	@font-face {
+		font-family: "Drafting";
+		src: local("Drafting Mono Bold Italic"), local("Drafting Mono-BoldItalic"),
+			url("/assets/fonts/drafting/drafting-bolditalic.woff2") format("woff2");
+		font-weight: 700;
+		font-style: italic;
+	}
+	@font-face {
+		font-family: "Drafting";
+		src: local("Drafting Mono ExtraBold Italic"), local("Drafting Mono-ExtraBoldItalic"),
+			url("/assets/fonts/drafting/drafting-extrabolditalic.woff2") format("woff2");
+		font-weight: 800;
+		font-style: italic;
+	}
+	@font-face {
+		font-family: "Drafting";
+		src: local("Drafting Mono Black Italic"), local("Drafting Mono-BlackItalic"),
+			url("/assets/fonts/drafting/drafting-blackitalic.woff2") format("woff2");
+		font-weight: 900;
+		font-style: italic;
+	}
 
 @font-face {
 	font-family: "Overpass";
 	src: local("Overpass-Italic-VariableFont_wght"),
-		url("/assets/fonts/overpass.woff2") format("woff2 supports variations"),
-		url("/assets/fonts/overpass.woff2") format("woff2-variations");
+		url("/assets/fonts/variable/overpass.woff2") format("woff2 supports variations"),
+		url("/assets/fonts/variable/overpass.woff2") format("woff2-variations");
   font-weight: 100 900;
 	font-style: normal;
 }
 @font-face {
 	font-family: "Overpass";
 	src: local("Overpass-VariableFont_wght"),
-		url("/assets/fonts/overpass-italic.woff2") format("woff2 supports variations"),
-		url("/assets/fonts/overpass-italic.woff2") format("woff2-variations");
+		url("/assets/fonts/variable/overpass-italic.woff2") format("woff2 supports variations"),
+		url("/assets/fonts/variable/overpass-italic.woff2") format("woff2-variations");
   font-weight: 100 900;
 	font-style: italic;
 }
+@font-face {
+	font-family: "Crimson";
+	src: local("CrimsonPro-VariableFont_wght"),
+	url("/assets/fonts/crimson-pro.woff2") format("woff2 supports variations"),
+	url("/assets/fonts/crimson-pro.woff2") format("woff2-variations");
+	font-weight: 100 1000;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Crimson";
+	src: local("CrimsonPro-Italic-VariableFont_wght"),
+	url("/assets/fonts/crimson-pro-italic.woff2") format("woff2 supports variations"),
+	url("/assets/fonts/crimson-pro-italic.woff2") format("woff2-variations");
+	font-weight: 100 1000;
+	font-style: italic;
+}
 
-/*http://arkandis.tuxfamily.org/adffonts.html*/
+/*http://arkandis.tuxfamily.org/adffonts.html
+ superceded by cooper* */
 /* modified with fontsquirrel: */
 /* x-height multiplier @ 119% (would rather 119.5, but fs doesn't support
 fractional values); glyph spacing @ -32 em square (equivalent to -0.03,
 ~-0.4px @ 16px) */
-@font-face {
+/*@font-face {
 	font-family: "Baskervald";
 	src: local("BaskervaldADFStd"),
 		url("/assets/fonts/baskervald-adf.woff2") format("woff2");
@@ -56,7 +275,7 @@ fractional values); glyph spacing @ -32 em square (equivalent to -0.03,
 		url("/assets/fonts/baskervald-adf-bold-italic.woff2") format("woff2");
 	font-weight: bold;
 	font-style: italic;
-}
+}*/
 
 /*https://www.dafontfree.co/marvin-visions-font/*/
 @font-face {
@@ -70,21 +289,22 @@ fractional values); glyph spacing @ -32 em square (equivalent to -0.03,
 @font-face {
 	font-family: "Geomancy Extra Bold";
 	src: url("/assets/fonts/geomancy-extrabold.woff2") format("woff2");
-	font-weight: normal;
+	font-weight: bold;
 	font-style: normal;
+	font-synthesis-weight: none;
 }
 @font-face {
 	font-family: "Geomancy Hairline";
 	src: url("/assets/fonts/geomancy-hairline.woff2") format("woff2");
 	font-weight: normal;
 	font-style: normal;
+	font-synthesis-weight: none;
 }
 
 /* literally just for the infinity symbol... : ( */
 @font-face {
 	font-family: "Dela Gothic";
-	src: local("BaskervaldADFStd"),
-		url("/assets/fonts/delagothicone-infinity.woff2") format("woff2");
+	src: url("/assets/fonts/delagothicone-infinity.woff2") format("woff2");
 	font-weight: normal;
 	font-style: normal;
 	unicode-range: U+221E;
@@ -93,17 +313,18 @@ fractional values); glyph spacing @ -32 em square (equivalent to -0.03,
 /* variables */
 :root {
 	--fnt-sans: "Overpass", "Fira Sans", ui-sans-serif, system-ui, sans-serif;
-	--fnt-serif: "Baskervald", ui-serif, serif;
-	--fnt-mono: ui-monospace, monospace;
-	--fnt-display: "Dela Gothic", "Marvin Visions", "Geomancy Extra Bold", ui-rounded, fantasy;
+	--fnt-serif: "Cooper", ui-serif, serif;
+	--fnt-mono: "Drafting", ui-monospace, monospace;
+	--fnt-code: var(--fnt-mono);
+	--fnt-display: "Cooper", ui-rounded, fantasy;
 	--fnt-subdisplay: "Geomancy Extra Bold", "Marvin Visions", ui-rounded, fantasy;
-	--fnt-body: var(--fnt-sans);
+	--fnt-body: var(--fnt-serif);
 
 	--nav-height: 60px;  // i don't know what i'm doing with this yet
 
 	scroll-behavior: smooth;
 	scroll-padding-top: 10vh;
-	--header-colour: black;
+	--header-colour: var(--strong-accent-colour);
 	--accent-colour: var(--s-org);
 	--strong-accent-colour: var(--s-blu);
 	--content-background-radius: 32px;
@@ -113,7 +334,7 @@ fractional values); glyph spacing @ -32 em square (equivalent to -0.03,
 	// --content-background-width: 120ch;
 	// --text-max-width: 80ch;
 	--content-background-width: 80rem;
-	--text-max-width: 60rem;
+	--text-max-width: 48rem;
 
 	--d-red: #CC241D;
 	--d-grn: #98971A;
@@ -205,7 +426,7 @@ fractional values); glyph spacing @ -32 em square (equivalent to -0.03,
 	--fg-0: #FFFFFF;
 }*/
 
-/* ================================ header? ================================= */
+/* ================================ header ================================== */
 body>header {
 	background-color: var(--header-colour);
 	background-image: var(--header-image);
@@ -236,6 +457,91 @@ body::after {
 	grid-column: 3;
 	rotate: -90deg;
 }
+
+/* =========================== general typography =========================== */
+body {
+	font-family: var(--fnt-body), sans;
+	/*font-size: 18px;*/ /*set in @font-face*/
+	font-variant-numeric: slashed-zero oldstyle-nums ordinal;
+	line-height: 1.5;
+	tab-size: 2;
+}
+
+h1 { font-size: 1.6em; }
+h2 { font-size: 1.5em; }
+h3 { font-size: 1.4em; }
+h4 { font-size: 1.3em; }
+h5 { font-size: 1.2em; }
+h6 { font-size: 1.1em; }
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: var(--fnt-display);
+	margin-top: 0.8em;
+	// letter-spacing: 1px;
+}
+article>header {
+	text-align: right;
+	&>h1, &>h2, &>h3, &>h4, &>h5, &>h6 {
+		text-transform: uppercase;
+		margin-block: 0.1em;
+		font-variant-caps: titling-caps;
+	}
+	&>p {
+		margin-block: 0.3em;
+		font-style: italic;
+		text-wrap: balance;
+		font-family: var(--fnt-serif);
+		&:first-of-type::before {
+			content: "— OR —";
+			font-size: 1.4em;
+			display: block;
+			font-style: normal;
+			padding-bottom: 0.2em;
+		}
+	}
+}
+acronym:not(.keep-case), abbr:not(.keep-case), cite, u {
+	/* <u> "The Unarticulated Annotation element"
+	used as it denotes proper nouns in chinese. <cite> for creative works, <u> for
+	names/people i think.
+	cite would italicise not underline in reader mode, but is
+	recommended against for people:
+	https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/u
+	https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/cite
+	https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/b (no) */
+	text-decoration: none;
+	font-variant-caps: small-caps;
+	font-variant-caps: petite-caps;
+	/*font-weight: 500;*/
+	font-style: normal;
+	font-size-adjust: 0.5;  /* } i don't really understand this, but it works */
+	line-height: 0.1;       /* } */
+	font-weight: 500;
+}
+acronym:not(.keep-case) {
+	text-transform: lowercase;
+	font-variant-caps: all-small-caps;
+	font-variant-caps: all-petite-caps;
+}
+
+/* this looks *slightly* nicer, but not enough to excuse its jankiness
+.swash-z {
+	display: inline-block;
+	position: relative;
+	&::first-letter { color: transparent; }
+	/* for cooper black, coptic zeta: Ⲍ ⲍ *//*
+	&.lower::before {
+		content: "ⲍ";
+		position: absolute;
+		left: 0;
+	}
+	&.upper::before {
+		content: "Ⲍ";
+		position: absolute;
+		left: 0;
+	}
+}*/
+
 /* ========================== accessibility styles ========================== */
 
 @media (prefers-reduced-motion: reduce) {
@@ -288,45 +594,10 @@ html {
 
 body {
 	color: var(--content-text-colour, var(--fg-0));
-	font-family: var(--fnt-body), sans-serif;
-	font-variant-numeric: slashed-zero;
-	line-height: 1.5;
-	tab-size: 2;
 	margin:0;
 	padding:0;
 	border:0;
 	background-attachment: fixed;
-}
-
-
-h1 { font-size: 2.8em; }
-h2 { font-size: 2.4em; }
-h3 { font-size: 2.0em; }
-h4 { font-size: 1.6em; }
-h5 { font-size: 1.4em; }
-h6 { font-size: 1.2em; }
-
-h1, h2, h3, h4, h5, h6 {
-	font-family: var(--fnt-display);
-	letter-spacing: 1px;
-}
-article>header {
-	text-align: right;
-	&>h1, &>h2, &>h3, &>h4, &>h5, &>h6 {
-		text-transform: uppercase;
-		margin-block: 0.1em;
-	}
-	&>p {
-		margin-block: 0.3em;
-		font-style: italic;
-		font-family: var(--fnt-serif);
-		&:first-of-type::before {
-			content: "— OR —";
-			font-size: 1.5em;
-			display: block;
-			font-style: normal;
-		}
-	}
 }
 
 blockquote {
@@ -364,7 +635,7 @@ em, q {
 }
 i {
 	font-style: italic;
-	font-style: oblique;
+	// font-style: oblique;
 	font-family: var(--fnt-serif);
 }
 /* colour highlighted text */
@@ -382,6 +653,21 @@ del {
 }
 ins {
 	text-decoration-color: var(--s-grn);
+}
+/* maybe? looks a bit busy
+ul ::marker {
+	content: "❧";
+}*/
+
+li:has(details) {
+	list-style-type: disclosure-closed;
+	&:has(details[open]) {
+		list-style-type: disclosure-open;
+	}
+	& ::marker,
+	& ::-webkit-details-marker { /*safari*/
+		content: "";
+	}
 }
 
 // kbd {  // keyboard (ctrl+f)
@@ -411,7 +697,11 @@ ins {
 // }
 
 a:any-link {
-	font-weight: bold;
+	/* acceptable - will round down. source:
+	https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight/index.html#fallback_weights
+	https://www.designcise.com/web/tutorial/how-is-missing-css-font-weight-substituted-by-the-browser */
+	font-weight: 500;
+	font-synthesis-weight: none;
 
 	&[href^="mailto"] {
 		cursor: progress;
@@ -502,10 +792,13 @@ code {  // code formating below
 }
 
 .captioned,
-abbr {
+abbr[title],
+acronym[title] {
+	/* fuck you html5, acronyms and abbreviations are different things */
 	cursor: help;
 	color: var(--s-aqa);
 	position: relative;
+	text-decoration: underline 1px dotted currentColor;
 
 	// mobile tap titles
 
@@ -555,7 +848,7 @@ code {
 		color: var(--s-red);
 	}
 	& .mod {  // modifier
-		color: var(--s-ylw);
+		color: var(--s-aqa);
 	}
 	& .opr {  // operator
 		color: var(--s-grn);
@@ -678,12 +971,7 @@ img.smooth-zoom {
 	}
 }
 
-// .swash-z::first-letter {
-	// placeholder in case i need to format the special glyph
-// }
-
 .indent,
-.copy-all,
 textarea {
 	background: var(--bg-0);
 	border: 1px solid var(--brdr-dark);
@@ -807,7 +1095,10 @@ body {
 		// box-shadow: 4px 4px 8px #00000080, 4px 4px 16px #00000080;
 	}
 }
-
+:where(#back-to-top-link)::before,
+:where(#back-to-top-link)::after {
+	content: " ^ ";
+}
 
 /*
 #desktop-area {

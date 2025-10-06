@@ -1,4 +1,4 @@
-- content: '<strong>Zeus'' Stadt, as a subtitle, is now gone</strong> (i''m not
+- content: '<strong><q>Zeus'' Stadt</q>, as a subtitle, is now gone</strong> (i''m not
   sure there is a subtitle anymore)'
 
 - content: '<strong>this is a tabula rasa release: </strong> almost all page
@@ -313,197 +313,202 @@
 - content: new buttons have been added to the gallery
   subtype: images
   subcontent:
-    - image:
-      url: buttons/taskbar/url
-      type: btn-88x31
-      alt: "a url is for life....not just for christmas button"
+  - image:
+    url: buttons/taskbar/url
+    type: btn-88x31
+    alt: "a url is for life....not just for christmas button"
 
-    - image:
-      url: buttons/brands/kate-smooth
-      type: btn-88x31
-      alt: "written in kate text editor button"
+  - image:
+    url: buttons/brands/tor
+    alt: "tor: the onion router button"
+    smooth: y
 
-    - image:
-      url: buttons/brands/kate
-      type: btn-88x31
-      alt: "written in kate text editor (pixelly icon) button"
+  - image:
+    url: buttons/brands/kate-smooth
+    type: btn-88x31
+    alt: "written in kate text editor button"
 
-    - image:
-      url: buttons/brands/kate-alt
-      type: btn-88x31
-      alt: "alternative kate text editor button"
+  - image:
+    url: buttons/brands/kate
+    type: btn-88x31
+    alt: "written in kate text editor (pixelly icon) button"
 
-    - image:
-      url: buttons/other/vhs
-      type: btn-88x31
-      alt: "vhs button"
+  - image:
+    url: buttons/brands/kate-alt
+    type: btn-88x31
+    alt: "alternative kate text editor button"
 
-    - image:
-      url: buttons/brands/gog2
-      type: btn-88x31
-      alt: "gog button"
+  - image:
+    url: buttons/other/vhs
+    type: btn-88x31
+    alt: "vhs button"
 
-    - image:
-      url: buttons/brands/palemoon
-      type: btn-88x31
-      alt: "pale moon button"
+  - image:
+    url: buttons/brands/gog2
+    type: btn-88x31
+    alt: "gog button"
 
-    - image:
-      url: buttons/brands/scp
-      type: btn-88x31
-      alt: "scp button"
+  - image:
+    url: buttons/brands/palemoon
+    type: btn-88x31
+    alt: "pale moon button"
 
-    - image:
-      url: buttons/brands/sun
-      type: btn-88x31
-      alt: "sun microsystems button"
+  - image:
+    url: buttons/brands/scp
+    type: btn-88x31
+    alt: "scp button"
 
-    - image:
-      url: buttons/brands/winamp
-      type: btn-88x31
-      anim: y
-      alt: "winamp button"
+  - image:
+    url: buttons/brands/sun
+    type: btn-88x31
+    alt: "sun microsystems button"
 
-    - image:
-      url: buttons/games/castleofdracula
-      type: btn-88x31
-      anim: y
-      alt: "castle of dracula button"
+  - image:
+    url: buttons/brands/winamp
+    type: btn-88x31
+    anim: y
+    alt: "winamp button"
 
-    - image:
-      url: buttons/games/romhack-plaza
-      type: btn-88x31
-      anim: y
-      alt: "romhack plaza button"
+  - image:
+    url: buttons/games/castleofdracula
+    type: btn-88x31
+    anim: y
+    alt: "castle of dracula button"
 
-    - image:
-      url: buttons/music/18-carat-affair
-      type: btn-88x31
-      alt: "18 carat affair button"
+  - image:
+    url: buttons/games/romhack-plaza
+    type: btn-88x31
+    anim: y
+    alt: "romhack plaza button"
 
-    - image:
-      url: buttons/music/darksleep
-      type: btn-88x31
-      alt: "darksleep button"
+  - image:
+    url: buttons/music/18-carat-affair
+    type: btn-88x31
+    alt: "18 carat affair button"
 
-    - image:
-      url: buttons/music/equip
-      type: btn-88x31
-      alt: "equip button"
+  - image:
+    url: buttons/music/darksleep
+    type: btn-88x31
+    alt: "darksleep button"
 
-    - image:
-      url: buttons/music/lost-angles
-      type: btn-88x31
-      anim: y
-      alt: "lost angles button"
+  - image:
+    url: buttons/music/equip
+    type: btn-88x31
+    alt: "equip button"
 
-    - image:
-      url: buttons/music/my-pet-flamingo
-      type: btn-88x31
-      alt: "my pet flamingo button"
+  - image:
+    url: buttons/music/lost-angles
+    type: btn-88x31
+    anim: y
+    alt: "lost angles button"
 
-    - image:
-      url: buttons/brands/dr-who
-      type: btn-88x31
-      anim: y
-      alt: "doctor who button"
+  - image:
+    url: buttons/music/my-pet-flamingo
+    type: btn-88x31
+    alt: "my pet flamingo button"
 
-    - image:
-      url: buttons/other/bad-apple
-      type: btn-88x31
-      anim: y
-      alt: "bad apple button"
+  - image:
+    url: buttons/brands/dr-who
+    type: btn-88x31
+    anim: y
+    alt: "doctor who button"
 
-    - image:
-      url: buttons/taskbar/best-viewed-with
-      type: btn-88x31
-      anim: y
-      alt: "page best viewed with button"
+  - image:
+    url: buttons/other/bad-apple
+    type: btn-88x31
+    anim: y
+    alt: "bad apple button"
+
+  - image:
+    url: buttons/taskbar/best-viewed-with
+    type: btn-88x31
+    anim: y
+    alt: "page best viewed with button"
 
 - content: new antipixel icons have been added to the gallery & footer
   subtype: images
   subcontent:
-    - image:
-      url: antipix/hand-coded
-      type: btn-150x15
-      alt: "new hand-coded antipix icon"
+  - image:
+    url: antipix/hand-coded
+    type: btn-150x15
+    alt: "new hand-coded antipix icon"
 
-    - image:
-      url: antipix/keter
-      type: btn-150x15
-      alt: "object class: keter antipix icon"
+  - image:
+    url: antipix/keter
+    type: btn-150x15
+    alt: "object class: keter antipix icon"
 
-    - image:
-      url: antipix/aus
-      type: btn-150x15
-      alt: "australian antipix icon"
+  - image:
+    url: antipix/aus
+    type: btn-150x15
+    alt: "australian antipix icon"
 
-    - image:
-      url: antipix/os2
-      type: btn-150x15
-      alt: "os/2 warp antipixel icon"
+  - image:
+    url: antipix/os2
+    type: btn-150x15
+    alt: "os/2 warp antipixel icon"
 
 
 - content: new blinkies have been added to the gallery
   subtype: images
   subcontent:
-    - image:
-      url: blinkies/end-is-never
-      type: btn-150x20
-      anim: y
-      alt: "the end is never blinkie"
+  - image:
+    url: blinkies/end-is-never
+    type: btn-150x20
+    anim: y
+    alt: "the end is never blinkie"
 
-    - image:
-      url: blinkies/broken
-      type: btn-150x20
-      alt: "broken blinkie"
+  - image:
+    url: blinkies/broken
+    type: btn-150x20
+    alt: "broken blinkie"
 
-    - image:
-      url: blinkies/doing-my-best
-      type: btn-150x20
-      anim: y
-      alt: "doing my best blinkie"
+  - image:
+    url: blinkies/doing-my-best
+    type: btn-150x20
+    anim: y
+    alt: "doing my best blinkie"
 
-    - image:
-      url: blinkies/betelgeuse
-      type: btn-150x20
-      anim: y
-      alt: "beetlejuice blinkie"
+  - image:
+    url: blinkies/betelgeuse
+    type: btn-150x20
+    anim: y
+    alt: "beetlejuice blinkie"
 
-    - image:
-      url: blinkies/born-to-be-mild
-      type: btn-150x20
-      anim: y
-      alt: "born to be mild blinkie"
+  - image:
+    url: blinkies/born-to-be-mild
+    type: btn-150x20
+    anim: y
+    alt: "born to be mild blinkie"
 
-    - image:
-      url: blinkies/margaritaville
-      type: btn-150x20
-      anim: y
-      alt: "wasting away again in margaritaville blinkie"
+  - image:
+    url: blinkies/margaritaville
+    type: btn-150x20
+    anim: y
+    alt: "wasting away again in margaritaville blinkie"
 
-    - image:
-      url: blinkies/escape
-      type: btn-150x20
-      anim: y
-      alt: "i used to contain myself but i escaped blinkie"
+  - image:
+    url: blinkies/escape
+    type: btn-150x20
+    anim: y
+    alt: "i used to contain myself but i escaped blinkie"
 
 - content: new fanlisting codes have been added
   subtype: images
   subcontent:
-    - image:
-      url: stamps/fanlistings/3ds
-      type: stamp-100x50
-      alt: "nintendo 3ds fanlisting code"
+  - image:
+    url: stamps/fanlistings/3ds
+    type: stamp-100x50
+    alt: "nintendo 3ds fanlisting code"
 
-    - image:
-      url: stamps/fanlistings/snow
-      type: stamp-100x50
-      alt: "snow fanlisting code"
+  - image:
+    url: stamps/fanlistings/snow
+    type: stamp-100x50
+    alt: "snow fanlisting code"
 
-    - image:
-      url: stamps/fanlistings/mint
-      type: stamp-100x50
-      alt: "linux mint fanlisting code"
+  - image:
+    url: stamps/fanlistings/mint
+    type: stamp-100x50
+    alt: "linux mint fanlisting code"
 
 - content: new image of the day

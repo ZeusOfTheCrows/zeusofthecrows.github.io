@@ -1,13 +1,114 @@
 ---
 ---
+
+/* https://indestructibletype.com/Cooper/ */
+@font-face {
+	font-family: "Chintzy";
+	src: url("/assets/fonts/chintzy/chintzy-thin.woff2") format("woff2");
+	font-weight: 200;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Chintzy";
+	src: url("/assets/fonts/chintzy/chintzy-light.woff2") format("woff2");
+	font-weight: 300;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Chintzy";
+	src: url("/assets/fonts/chintzy/chintzy-regular.woff2") format("woff2");
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Chintzy";
+	src: url("/assets/fonts/chintzy/chintzy-medium.woff2") format("woff2");
+	font-weight: 500;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Chintzy";
+	src: url("/assets/fonts/chintzy/chintzy-semibold.woff2") format("woff2");
+	font-weight: 600;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Chintzy";
+	src: url("/assets/fonts/chintzy/chintzy-bold.woff2") format("woff2");
+	font-weight: 700;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Chintzy";
+	src: url("/assets/fonts/chintzy/chintzy-extrabold.woff2") format("woff2");
+	font-weight: 800;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Chintzy";
+	src: url("/assets/fonts/chintzy/chintzy-black.woff2") format("woff2");
+	font-weight: 900;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Chintzy";
+	src: url("/assets/fonts/chintzy/chintzy-thinitalic.woff2") format("woff2");
+	font-weight: 200;
+	font-style: italic;
+}
+@font-face {
+	font-family: "Chintzy";
+	src: url("/assets/fonts/chintzy/chintzy-lightitalic.woff2") format("woff2");
+	font-weight: 300;
+	font-style: italic;
+}
+@font-face {
+	font-family: "Chintzy";
+	src: url("/assets/fonts/chintzy/chintzy-regularitalic.woff2") format("woff2");
+	font-weight: 400;
+	font-style: italic;
+}
+@font-face {
+	font-family: "Chintzy";
+	src: url("/assets/fonts/chintzy/chintzy-mediumitalic.woff2") format("woff2");
+	font-weight: 500;
+	font-style: italic;
+}
+@font-face {
+	font-family: "Chintzy";
+	src: url("/assets/fonts/chintzy/chintzy-semibolditalic.woff2") format("woff2");
+	font-weight: 600;
+	font-style: italic;
+}
+@font-face {
+	font-family: "Chintzy";
+	src: url("/assets/fonts/chintzy/chintzy-bolditalic.woff2") format("woff2");
+	font-weight: 700;
+	font-style: italic;
+}
+@font-face {
+	font-family: "Chintzy";
+	src: url("/assets/fonts/chintzy/chintzy-extrabolditalic.woff2") format("woff2");
+	font-weight: 800;
+	font-style: italic;
+}
+
+:root {
+	--fnt-display: "Chintzy", serif;
+	--fnt-subdisplay: "Chintzy", serif;
+}
 main {
 	background-color: var(--content-background-colour, var(--header-colour, var(--bg-0)));
-	width: 100%;
+	// width: 100%;
 	// max-width: var(--content-background-width);
 	padding: 1em 0ch 2em;
 }
-article>header,
-article>section>*:not(.full-bleed) {
+article {
+	width: var(--content-background-width);
+}
+:where(article>header,
+article>footer,
+article>section>*:not(.full-bleed)) {
 	max-width: var(--text-max-width);
 	margin-inline: auto;
 	padding-inline: 2ch;
@@ -20,10 +121,18 @@ figure.full-bleed {
 	text-align: center;
 	text-wrap: balance;
 }
+/* can't make it look nice *and* readable
+section>p::first-letter {
+	font-size: 1.5em;
+	padding-right: 0.5em;
+	float: left;
+}*/
 ol {
 	list-style: lower-greek;
 	//list-style: symbols(fixed "z" "x" "c"); note to self: this exists
-
+}
+ol, ul, dl {
+		padding-left: 4ch;
   & ::marker {
 		color: var(--s-blu);
 	}
@@ -32,20 +141,53 @@ ol {
 a[id^="ref"],
 a[id^="fn"] {
 	/*css counters!? for double-dagger and asterisk*/
-	vertical-align: super;
-	font-size: 0.9em;
+	// vertical-align: super;
 	text-decoration: none !important;
 	font-family: var(--fnt-serif);
+	font-size: 0.8em;
 	visibility: hidden;
+	position: relative;
 	&::before{
 		visibility: visible;
+		position: absolute;
+		top: -0.5em;
+		font-size: 1.3em;
 		content: "†";
 	}
 	&:target {
 		background-color: var(--d-red);
 	}
 }
-
+/*these would probably be better as a defined counter with counter-increment and
+counter-reset on the footer (an in a list?)*/
+a[id^="ref2"]:before,
+ a[id^="fn2"]:before {
+	content: "‡"
+}
+a[id^="ref3"]:before,
+ a[id^="fn3"]:before {
+	content: "⸸"
+}
+a[id^="ref4"]:before,
+ a[id^="fn4"]:before {
+	content: "⹋"
+}
+a[id^="ref5"]:before,
+ a[id^="fn5"]:before {
+	content: "*" // this is getting silly now
+}
+a[id^="ref6"]:before,
+ a[id^="fn6"]:before {
+	content: "⁑"
+}
+a[id^="ref7"]:before,
+ a[id^="fn7"]:before {
+	content: "꙳"
+}
+a[id^="ref8"]:before,
+ a[id^="fn8"]:before {
+	content: "⁂"
+}
 
 /* looks lovely on chrome, not ffx:
  * https://bugzilla.mozilla.org/show_bug.cgi?id=1313757
@@ -134,11 +276,11 @@ kbd {
 
 /* ------------------------------ decorations ------------------------------ */
 
-dl {
+/*dl {
 	& dd {
 		line-height: initial;  // i'm not sure this is best practice - maybe just 1
 	}
-}
+}*/
 
 table,
 td {
@@ -146,7 +288,7 @@ td {
 	border-collapse: collapse;
 	background-color: var(--strong-accent);
 	table-layout: fixed;
-	width: 100%;
+	max-width: 100%;
 	padding: 0.4em;
 }
 

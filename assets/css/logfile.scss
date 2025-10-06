@@ -2,39 +2,83 @@
 ---
 
 
+/* https://fonts.floriankarsten.com/space-grotesk
+ * OpenType features: Standard Ligatures, Case Sensitive Forms, Fractions,
+ * Numerators, Denominators, Scientific Inferiors, Superscript, Subscript,
+ * Oldstyle Figures, Lining Figures, Proportional Figures, Tabular Figures,
+ * Slashed Zero, Stylistic Sets (SS01–SS04) */
 @font-face {
-  font-family: "Space Grotesk";
-  src: url("/assets/fonts/space-grotesk.woff2") format("woff2 supports variations"),
-       url("/assets/fonts/space-grotesk.woff2") format("woff2-variations");
-  font-weight: 100 1000;
+	font-family: "Space Grotesk";
+	src: url("/assets/fonts/space/spacegrotesk.woff2") format("woff2 supports variations"),
+			url("/assets/fonts/space/spacegrotesk.woff2") format("woff2-variations");
+	font-weight: 100 1000;
 }
+
+/* https://fonts.google.com/specimen/Space+Mono */
 @font-face {
-	font-family: "Crimson";
-	src: local("CrimsonPro-VariableFont_wght"),
-		url("/assets/fonts/crimson-pro.woff2") format("woff2 supports variations"),
-		url("/assets/fonts/crimson-pro.woff2") format("woff2-variations");
-  font-weight: 100 1000;
+	font-family: "Space Mono";
+	src: local("SpaceMono-Regular"),
+	url("/assets/fonts/space/spacemono-regular.woff2") format("woff2");
+	font-weight: normal;
 	font-style: normal;
 }
 @font-face {
-	font-family: "Crimson";
-	src: local("CrimsonPro-Italic-VariableFont_wght"),
-		url("/assets/fonts/crimson-pro-italic.woff2") format("woff2 supports variations"),
-		url("/assets/fonts/crimson-pro-italic.woff2") format("woff2-variations");
-  font-weight: 100 1000;
+	font-family: "Space Mono";
+	src: local("SpaceMono-Bold"),
+		url("/assets/fonts/space/spacemono-bold.woff2") format("woff2");
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Space Mono";
+	src: local("SpaceMono-Italic"),
+		url("/assets/fonts/space/spacemono-italic.woff2") format("woff2");
+	font-weight: normal;
+	font-style: italic;
+}
+@font-face {
+	font-family: "Space Mono";
+	src: local("SpaceMono-BoldItalic"),
+		url("/assets/fonts/space/spacemono-bolditalic.woff2") format("woff2");
+	font-weight: bold;
 	font-style: italic;
 }
 
 @font-face {
+	font-family: "Crimson";
+	src: local("CrimsonPro-VariableFont_wght"),
+		url("/assets/fonts/variable/crimsonpro.woff2") format("woff2 supports variations"),
+		url("/assets/fonts/variable/crimsonpro.woff2") format("woff2-variations");
+	font-weight: 100 1000;
+	font-style: normal;
+	line-gap-override: 60%;
+	size-adjust: 120%
+}
+@font-face {
+	font-family: "Crimson";
+	src: local("CrimsonPro-Italic-VariableFont_wght"),
+		url("/assets/fonts/variable/crimsonpro-italic.woff2") format("woff2 supports variations"),
+		url("/assets/fonts/variable/crimsonpro-italic.woff2") format("woff2-variations");
+	font-weight: 100 1000;
+	font-style: italic;
+	line-gap-override: 60%;
+	size-adjust: 120%
+}
+
+/* https://fonts.google.com/specimen/Righteous */
+@font-face {
 	font-family: 'Righteous';
 	src: url('/assets/fonts/righteous.woff2') format('woff2');
-	font-weight: normal;
+	font-weight: 900;
 	font-style: normal;
+	font-synthesis-weight: none;
 }
 :root {
 	--fnt-sans: "Space Grotesk", sans-serif;
 	--fnt-serif: "Crimson", serif;
 	--fnt-display: "Righteous", "Geomancy Extra Bold", fantasy;
+	--fnt-body: var(--fnt-sans);
+	--fnt-mono: "Space Mono", monospace;
 	--content-background-radius: 10px;
 	--header-colour: var(--wall-clr-8);
 	--bg-0: var(--wall-clr-3);
@@ -77,10 +121,13 @@
 	}
 }
 
+/* ================================ header ================================== */
 body>header>h1 {
 	font-size: min(72px, 10vw); /*is this a magic number!? i have no idea*/
 	font-family: var(--fnt-display);
-	line-height: 0.7;
+	line-height: 0.5;         /* remove gap */
+	padding-top: 0.09em;      /* and put it back */
+	padding-bottom: 0.13em;
 	text-transform: uppercase;
 	color: var(--wall-clr-3);
 	background-color: var(--wall-clr-8);
@@ -120,6 +167,15 @@ body>header>h1 {
 	&::after {
     bottom: calc(var(---stroke-width)* -0.9);
 	}
+}
+
+/* =========================== general typography =========================== */
+body {
+	font-variant-numeric: oldstyle-nums;
+}
+time {
+	font-variant-numeric: slashed-zero;
+	font-feature-settings: "case";
 }
 
 body{

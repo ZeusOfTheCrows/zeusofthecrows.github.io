@@ -1,6 +1,7 @@
 ---
-title: "In Appreciation of CSS"
-subtitle: "subtitle tbd"
+title: "Web Markup"
+subtitle: "An Appreciation of Cascading Style Sheets"
+soundtrack: "https://www.youtube.com/watch?v=lbqOCS9bMpk"
 layout: thought
 css-file: thoughts
 css-layout: article
@@ -12,12 +13,12 @@ edit: 2025-09-16
 <section>
 	<h2>CSS is Like a Zachtronics Game</h2>
 	<p>
-		so first up – unlike a zt game, it's bollocks. it's inconsistent,
-		confusing, and seemingly random. it's clearly been designed by
-		multiple people over decades, each with a different goal in mind. why the
-		fuck is <code>currentColour</code> the <em>only</em> value that's camelCase?
-		in fact, i think it's the only required capital anywhere in css?
-		there are at least 6 different ways of centring items, depending
+		So first up – unlike a zt game, it's bollocks. It's inconsistent,
+		confusing, and seemingly random. It's clearly been designed by
+		multiple people over decades, each with a different goal in mind. why on
+		god's green earth is
+		<code>currentColour</code> the <em>only</em> value that's camelCase?
+		There are at least 6 different ways of centring items, depending
 		upon its direction and parent. i mean, just off the top of my head:
 	</p>
 	<ul>
@@ -39,8 +40,8 @@ edit: 2025-09-16
 		</code></li>
 		<li><code>
 			<span class="opr">vertical-align</span>:
-			<span class="val">middle</span>;</code>
-			<small class="cmt">/* why is this one not center? */</small>
+			<span class="val">middle</span>;
+			<small class="cmt">/* why is this one not center? */</small></code>
 		</li>
 		<li><code>
 			<span class="opr">transform</span>:
@@ -48,14 +49,14 @@ edit: 2025-09-16
 		</code></li>
 	</ul>
 	<p>
-		there's also some really weird oversights? why is there no <code>
+		There's also some really weird oversights? Why is there no <code>
 		<span class="opr">background-repeat</span>:
-		<span class="val">mirror</span>;</code>? i know it's a minor thing, but
+		<span class="val">mirror</span>;</code>? I know it's a minor thing, but
 		it feels like it would be easily implemented and, while less important now,
 		very useful in the days when background repeating was more commonly utilised
 	</p>
 	<p>
-		more egregious omissions are things like
+		More egregious omissions are things like
 	</p>
 	<dl>
 		<dt>
@@ -63,16 +64,16 @@ edit: 2025-09-16
 			class="mod">:stuck{}</span></code>
 		</dt>
 		<dd>
-			which would allow one to target sticky elements that have reached their
+			Which would allow one to target sticky elements that have reached their
 			"stick" point and stuck — for example i could use this to adjust the corner
 			radius of the floating <time> on the logfile page when it hits the top
 		</dd>
 		<dt>
 			<code><span class="obj">.grid-container</span><span
-			class="mod">:nth-column(2)</span></code>
+			class="mod">:nth-[row|column](2)</span></code>
 		</dt>
 		<dd>
-			which would allow one to for example, set a maximum height or width for a
+			Which would allow one to for example, set a maximum height or width for a
 			specific grid row or column by location, rather than having to specify it
 			on the child
 		</dd>
@@ -81,10 +82,10 @@ edit: 2025-09-16
 			class="mod">:wrapped</span></code>
 		</dt>
 		<dd>
-			target flex (or grid) children that have wrapped (although this could be
+			Target flex (or grid) children that have wrapped (although this could be
 			avoided if the above property existed, using
 			<code><span class="opr">.flex-container</span><span
-			class="mod">:not(:nth-column(1))</span></code>). i would be able to
+			class="mod">:not(:nth-row(1))</span></code>). I would be able to
 			use this on the homepage to only target the sidebar (to give it rounded top
 			corners) if it has wrapped, rather than manually specifying a breakpoint
 			(which is is inherently less maintainable)
@@ -95,29 +96,27 @@ edit: 2025-09-16
 		</code>
 		</dt>
 		<dd>
-			i mean this one is just really annoying. it's a styling element that can
+			I mean this one is just really annoying. It's a styling element that can
 			only be declared in html.
 			(<code>&lt;<span class="obj">meta</span> <span
 			class="opr">name</span>=<<span class="val">"theme&#8209;color"</span> <span
 			class="opr">content</span>=<span class="val">"#ecd96f"</span>&gt;</code>)
-			want to change it? use javascript. fuck you.<br>
-			i mean, i'd like to set it to a custom property
+			Want to change it? Use javascript. Fuck you.<br>
+			I mean, i'd like to set it to a custom property
 			(<code><span class="val">--header-colour</span></code>) but nuts
 			to that, apparently.
-			<a href="https://blog.jim-nielsen.com/2021/theme-color-in-css/">imagine
+			<a href="https://blog.jim-nielsen.com/2021/theme-color-in-css/">Imagine
 			how useful it could be in css</a>
 		</dd>
-
 	</dl>
-
+	<!-- 	filler here -->
 	<p>
-		and, just like opus magnum, there is no "right" solution. it's about working
+		And, just like opus magnum, there is no "right" solution. It's about working
 		around the (numerous) limitations to get as close as possible to the desired
-		result. just as mentioned in
-		<a href="https://www.youtube.com/watch?v=toD5D6PDofU&t=308s">
-			this video,</a>
+		result. Just as mentioned in
+		<a href="https://www.youtube.com/watch?v=toD5D6PDofU&t=308s">this video,</a>
 		one can either meet the targets of clarity, concision, or ease /
-		time to finish; but not all three simultaneously. all code is
+		time to finish; but not all three simultaneously. All code is
 		hard to read when it's written by someone else, but css i find
 		particularly hard compared to its ease of understanding at the time
 		of writing, especially as it requires holding 2+ files in ones head
@@ -125,7 +124,7 @@ edit: 2025-09-16
 		as possible js files).
 	</p>
 	<p>
-		and to be honest, that's fun. trying to figure out the "best" way
+		And to be honest, that's fun. Trying to figure out the "best" way
 		to solve this puzzle, for æsthetics & maintainability, is just as
 		good as TIS-100, and it's free! <em>and</em> you get something out
 		of it at the end (more than just a steam achievement, at least)
@@ -135,97 +134,158 @@ edit: 2025-09-16
 		lovely-->
 <section>
 	<h2>Rant Time</h2>
-	<p>
-		okay i just have to comment on how stupid the base premise of tailwind css
-		is? it seems to be built on the presumption that it's easier to write the
-		styles individually for every bloody element, like we did in the pre-css
-		html 3.0 or html 4.0 days, than just write
-		<code><span class="obj">article</span>&gt;<span class="obj">p</span
-		> {<span class="opr">font-family</span>: <span
-		class="val">verdana</span>}</code>.
-	</p>
-	<p>
-		i mean jesus christ what is the actual difference between<br>
-		<code>&lt;FONT size="4" face="COMIC SANS MS" color="BLACK"&gt;</code> and<br>
-		<code>&lt;span class="size-48, font-family-comic-sans colour-black"&gt;</code>.
-	</p>
-	<p>
-    maybe if your site is built with a cms, it's not as bad, but it's still
-    so much jankier than just using css properly. i mean, for this redesign,
-    i've tried to avoid classes at all, and just style the elements and it's
-    generally felt pretty elegant. (i'm not sure i even have <em>any</em>
-    <code>&lt;div&gt;</code>s[?])
-	</p>
-	<p>
-    i mean this is on their own homepage, trying to sell the fucking thing, and
-    it's incredibly ugly
-	</p>
-	<pre data-lang="html"><code>&lt;div class=&quot;flex flex-col items-center gap-6 p-7 md:flex-row md:gap-8 rounded-2xl&quot;&gt;
-	&lt;div&gt; &lt;!-- why is this div even fucking here --&gt;
-		&lt;img class=&quot;size-48 shadow-xl rounded-md&quot; alt=&quot;&quot; src=&quot;/img/cover.png&quot; /&gt;
-	&lt;/div&gt;
-	&lt;div class=&quot;flex items-center md:items-start&quot;&gt;
-		&lt;span class=&quot;text-2xl font-medium&quot;&gt;Class Warfare&lt;/span&gt;
-		&lt;span class=&quot;font-medium text-sky-500&quot;&gt;The Anti-Patterns&lt;/span&gt;
-		&lt;span class=&quot;flex gap-2 font-medium text-gray-600 dark:text-gray-400&quot;&gt;
-			&lt;span&gt;No. 4&lt;/span&gt;
-			&lt;span&gt;&middot;&lt;/span&gt;
-			&lt;span&gt;2025&lt;/span&gt;
-		&lt;/span&gt;
-	&lt;/div&gt;
-&lt;/div&gt;</code></pre>
-	<p>
-		it's so wide it causes a scrollbar if you're viewing this on a phone! and
-		look how many unsemantic wrapper divs there are for an <em>incredibly</em>
-		simple fucking card layout!<br>
-		genuinely the worst thing i've ever seen. all the hard work of the csswg to
-		enable the separation content and presentation,
-		and we're fighting to go back to the dark ages of fuckign &lt;CENTER&gt;
-	</p>
-	<hr>
-	<p>
-		i also hate css resets
-		(okay, i'm reading the tailwind site and it's time to go full opinionated
-		rant now, it turns out).
-		don't set something unless you know why you're doing it.
-		i have my browser styles set up the way i like, <strong>don't fucking mess with
-		them unless you have a good reason</strong>
-	</p>
-	<p>
-		please stop with this bullshit
-	</p>
-	<pre data-lang="css"><code>*,
-::after,
-::before,
-::backdrop,
-::file-selector-button {
-	margin: 0;
-	padding: 0;
-}</code></pre>
-	<p>
-		unless you <strong>know</strong> you know you are manually going to put a
-		margin on every single element you use.
-	</p>
-	<p>
-		different people want different user agent styles for different reasons –
-		don't be so bleeding arrogant
-	</p>
-	<p>
-	<blockquote cite="https://tailwindcss.com/docs/preflight#accessibility-considerations">
-		<h4>Accessibility considerations</h4>
+	<section>
+		<h3>CSS Logo</h3>
 		<p>
-			Unstyled lists are not announced as lists by VoiceOver. If your content
-			is truly a list but you would like to keep it unstyled, add a "list"
-			role to the element:
+			Okay so <acronym>CSS</acronym>
+			has a new logo now (which i somehow missed for half a year),
+			and i have three major immediate reactions
 		</p>
-		<pre data-lang="html"><code>&lt;ul role="list"&gt;
-	&lt;li&gt;One&lt;/li&gt;
-	&lt;li&gt;Two&lt;/li&gt;
-	&lt;li&gt;Three&lt;/li&gt;
-&lt;/ul&gt;</code></pre>
-	</blockquote>
-	<p>
-		tailwind <em>themselves</em> highlight an issue with doing exactly the thing
-		they're doing, but apparently don't have the introspection to, you know, not
-		bloody do it
-	</p>
+		<ol>
+			<li>it's really sweet that they've gone with
+				<code>
+				<a href="https://meyerweb.com/eric/thoughts/2014/06/19/rebeccapurple/">
+					rebeccapurple</a></code>
+				for the brand colour. I cannot stress enough how much i agree with that
+				decision
+			</li>
+			<li>
+				It's a shit logo. I mean, it's generous to even call it a logo. It's
+				some letters in a square – i would say it does not meet the
+				<a href="https://commons.wikimedia.org/wiki/Commons:Threshold_of_originality">
+				threshold of originality</a> required to be copyrighted, let alone be
+				classed as a decent logo. I realise it's meant to evoque the javascript
+				logo, but that's also dreadful. The java coffecup is much better.
+			</li>
+			<li>
+				The logo repository instantly pissed me off with its opening line:
+				<blockquote cite="https://github.com/CSS-Next/logo.css/">
+					Since its introduction, CSS has never had an official logo. Only ever
+					since CSS3 and therefore the well-known shields got introduced people
+					had a visual representation in terms of a logo when they were talking
+					about CSS.
+				</blockquote>
+				…are we forgetting that css has a fucking logo? It has always had a logo?
+				it's <a href="https://commons.wikimedia.org/wiki/File:CSS-Logo.png">on
+				wikimedia</a> as css-logo.png? It's on
+				<a href="https://www.w3.org/Style#css">w3's own website</a> where they
+				introduce the very concept of <acronym>CSS</acronym>!
+				Did they not <em>fucking google <q>css
+				logo</q></em> before making such a bold claim‽
+				<br>
+				It even adheres to all their requirements for logo suggestions?
+				<blockquote cite="https://github.com/CSS-Next/css-next/issues/105">
+					<p>the logo should:</p>
+					<ul>
+						<li>work well very small</li>
+						<li>be legible</li>
+						<li>work without color (but color def can happen)</li>
+						<li>work without a number but also work with a number</li>
+						<li>be able to exist as svg</li>
+						<li>more requirements here?</li>
+					</ul>
+				</blockquote>
+			</li>
+		</ol>
+	</section>
+	<section>
+		<h3>TailwindCSS</h3>
+		<p>
+			Okay i just have to comment on how stupid the base premise of tailwind css
+			is? It seems to be built on the presumption that it's easier to write the
+			styles individually for every bloody element, like we did in the
+			pre-<acronym>CSS</acronym>
+			<acronym>HTML3.0</acronym> or <acronym>HTML4.0</acronym> days, than just write
+			<code><span class="obj">article</span>&gt;<span class="obj">p</span
+			> {<span class="opr">font-family</span>: <span
+			class="val">verdana</span>}</code>.
+		</p>
+		<p>
+			I mean jesus christ what is the actual difference between<br>
+			<code>&lt;FONT size="4" face="COMIC SANS MS" color="BLACK"&gt;</code> and<br>
+			<code>&lt;span class="size-48, font-family-comic-sans colour-black"&gt;</code>.
+		</p>
+		<p>
+			Maybe if your site is built with a <acronym>CMS</acronym>, it's not as bad, but
+			it's still
+			so much jankier than just using <acronym>CSS</acronym> properly. I mean, for
+			this redesign,
+			i've tried to avoid classes at all, just style the elements and it's
+			generally felt pretty elegant. (I'm not sure i even have <em>any</em>
+			<code>&lt;div&gt;</code>s[?])
+		</p>
+		<p>
+			This is on their own homepage, trying to sell the fucking thing, and
+			it's incredibly ugly
+		</p>
+		<pre data-lang="html"><code>&lt;div class=&quot;flex flex-col items-center gap-6 p-7 md:flex-row md:gap-8 rounded-2xl&quot;&gt;
+		&lt;div&gt; &lt;!-- why is this div even fucking here --&gt;
+			&lt;img class=&quot;size-48 shadow-xl rounded-md&quot; alt=&quot;&quot; src=&quot;/img/cover.png&quot; /&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;flex items-center md:items-start&quot;&gt;
+			&lt;span class=&quot;text-2xl font-medium&quot;&gt;Class Warfare&lt;/span&gt;
+			&lt;span class=&quot;font-medium text-sky-500&quot;&gt;The Anti-Patterns&lt;/span&gt;
+			&lt;span class=&quot;flex gap-2 font-medium text-gray-600 dark:text-gray-400&quot;&gt;
+				&lt;span&gt;No. 4&lt;/span&gt;
+				&lt;span&gt;&middot;&lt;/span&gt;
+				&lt;span&gt;2025&lt;/span&gt;
+			&lt;/span&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;</code></pre>
+		<p>
+			It's so wide it causes a scrollbar if you're viewing this on a phone! And
+			look how many unsemantic wrapper divs there are for an <em>incredibly</em>
+			simple fucking card layout!<br>
+			Genuinely the worst thing i've ever seen. All the hard work of the csswg to
+			enable the separation content and presentation,
+			and we're fighting to go back to the dark ages of fuckign &lt;CENTER&gt;
+		</p>
+		<hr>
+		<p>
+			I also hate <acronym>CSS</acronym> resets
+			(okay, i'm reading the tailwind site and it's time to go full opinionated
+			rant now, it turns out).
+			Don't set something unless you know why you're doing it.
+			I have my browser styles set up the way i like, please don't mess with
+			them unless you have a good reason
+		</p>
+		<p>
+			Please stop with this bullshit
+		</p>
+		<pre data-lang="css"><code>*,
+	::after,
+	::before,
+	::backdrop,
+	::file-selector-button {
+		margin: 0;
+		padding: 0;
+	}</code></pre>
+		<p>
+			unless you <strong>know</strong> you know you are manually going to put a
+			margin on every single element you use.
+		</p>
+		<p>
+			Different people want different user agent styles for different reasons –
+			don't be so bleeding arrogant
+		</p>
+		<p>
+		<blockquote cite="https://tailwindcss.com/docs/preflight#accessibility-considerations">
+			<h4>Accessibility considerations</h4>
+			<p>
+				Unstyled lists are not announced as lists by VoiceOver. If your content
+				is truly a list but you would like to keep it unstyled, add a "list"
+				role to the element:
+			</p>
+			<pre data-lang="html"><code>&lt;ul role="list"&gt;
+		&lt;li&gt;One&lt;/li&gt;
+		&lt;li&gt;Two&lt;/li&gt;
+		&lt;li&gt;Three&lt;/li&gt;
+	&lt;/ul&gt;</code></pre>
+		</blockquote>
+		<p>
+			Tailwind <em>themselves</em> highlight an issue with doing exactly the thing
+			they're doing, but apparently don't have the introspection to, you know, not
+			bloody do it
+		</p>
+	</section>
+</section

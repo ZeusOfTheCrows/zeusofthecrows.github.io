@@ -1294,6 +1294,14 @@
   cat: b
 
 - image:
+  url: "tor"
+  alt: "tor: the onion router button"
+  smooth: y
+  lnk-url: "https://torproject.org"
+  src: s
+  cat: b
+
+- image:
   url: "tumblr"
   alt: "tumblr button"
   lnk-url: "https://zeusofthecrows.tumblr.com"

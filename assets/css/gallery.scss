@@ -4,6 +4,8 @@
 :root {
 	--content-background-colour: black;
 	--content-background-radius: 8px;
+	--header-colour: black;
+	--fnt-display: "Marvin Visions", "Geomancy Extra Bold", fantasy;
 
 	--d-red: brown;
 	--d-grn: darkgreen;
@@ -97,16 +99,16 @@
 @font-face {
 	font-family: "Gaston Opti";
 	src:
-		url("/assets/fonts/retro/gaston-opti.woff2") format("woff2"),
-		url("/assets/fonts/retro/gaston-opti.woff") format("woff");
+		url("/assets/fonts/header/gaston-opti.woff2") format("woff2"),
+		url("/assets/fonts/header/gaston-opti.woff") format("woff");
 	font-weight: normal;
 	font-style: normal;
 }
 @font-face {
 	font-family: "Motter Ombra";
 	src:
-		url("/assets/fonts/retro/motter-ombra.woff2") format("woff2"),
-		url("/assets/fonts/retro/motter-ombra.woff") format("woff");
+		url("/assets/fonts/header/motter-ombra.woff2") format("woff2"),
+		url("/assets/fonts/header/motter-ombra.woff") format("woff");
 	font-weight: normal;
 	font-style: normal;
 }
@@ -291,20 +293,20 @@ body>footer {
 	border-bottom: none;
 }
 
-main>article {
-	padding-bottom: 1.5em;
-	margin-bottom: 1.5em;
-	border-bottom: 1px solid currentColor;
+main>article~article {
+	padding-top: 1.5em;
+	 margin-top: 1.5em;
+	 border-top: 1px solid currentColor;
 }
 
 main>article>.text-width,
-main>article>p {
-	// max-width: var(--text-max-width);
+main>article p {
+	// max-width: var(--text-max-width);  // to bring images above the fold
 	margin-inline: auto;
 	padding-inline: 4ch;
 }
 header,h1,h2,h3,h4,h5,h6,details {
-	text-align: center !important; // override pseudoclass
+	text-align: center !important;  // to override right-aligned subheaders
 	text-wrap: balance;
 }
 #contents {
@@ -313,6 +315,9 @@ header,h1,h2,h3,h4,h5,h6,details {
 	text-align: left;
 }
 
+.img-grid {
+	text-wrap: initial; // reset from global css
+}
 .img-grid.hover-zoom {
 	padding-inline: 16px;
 	box-sizing: border-box;

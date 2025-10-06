@@ -3,6 +3,7 @@ layout: base
 ---
 
 <header>
+	<!-- 	ztodo: i think this shouldn't be a h1 - should it be any container? -->
 	<h1><span>Zeus</span><span>OfTheCrows</span></h1>
 </header>
 <nav aria-label="site pages">
@@ -105,7 +106,7 @@ layout: base
 </main>
 
 <footer>
-	<p><a id="back-to-top-link" href="#">^ Back to top ^</a></p>
+	<p><a id="back-to-top-link" href="#">Back to top</a></p>
 		{%- if page.edit -%}
 			{% assign edited = true %}
 			{%- assign date = page.edit | date: '%Y-%m-%d' -%}
@@ -125,13 +126,14 @@ layout: base
 				{% assign nth = 'th' %}
 			{%- endcase -%}
 	<p><small>
-		(ɔ) <time datetime="{{ date }}"
-		title="{%- if edited -%} page {% else -%} site {% endif -%}
+		<span style="font-family: var(--fnt-sans)">(ɔ)</span>
+		<time datetime="{{ date }}"
+		title="{%- if edited -%} Page {% else -%} Site {% endif -%}
 		last edited on the {{ date | date: '%d'-}}
-		{{ nth }} of {{ date | date: '%B' | downcase }}, {{ date | date: '%Y' }}"
+		{{ nth }} of {{ date | date: '%B' }}, {{ date | date: '%Y' }}"
 		>{{ date | date: '%Y' }}</time>
 		ZeusOfTheCrows. All Wrongs
-		Reversed. <a href="https://copyheart.org/">Copying is an act of love ♡</a>
+		Reversed. <a href="https://copyheart.org/">Copying is an act of love ❤︎</a>
 	</small></p>
 	<ul class="img-grid">
 		<li><a>
@@ -199,6 +201,10 @@ layout: base
 			<img class="btn-88x31" src="/assets/images/buttons/taskbar/web-pi.png"
 				data-img-source="http://web3.14159.annwfn.net/"
 				alt="web π compliant" />
+		</a></li>
+		<li><a href="https://torproject.org">
+			<img class="btn-88x31" src="/assets/images/buttons/brands/tor.png"
+				alt="tor: the onion router button" />
 		</a></li>
 		<li><a href="/thoughts#svg">
 			<img class="btn-88x31" src="/assets/images/buttons/taskbar/svg.svg"

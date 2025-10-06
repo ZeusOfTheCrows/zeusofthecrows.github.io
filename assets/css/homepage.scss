@@ -1,20 +1,17 @@
 ---
 ---
 
+// paralax perspective without js??
+// https://squidfunk.github.io/mkdocs-material/
+/*
 @font-face {
 	font-family: "Averia Serif Libre";
 	src: url("/assets/fonts/averiaseriflibre-bold.woff2") format("woff2");
-	/* this is a dumb hack to force an even stronger "faux bold" weight */
+	/* this is a dumb hack to force an even stronger "faux bold" weight
 	font-weight: 100;
 	font-style: normal;
-}
-@font-face {
-	font-family: "Cooper";
-	src:
-		local("Cooper"),
-		local("Cooper Regular"),
-		local("Cooper-Regular");
-}
+}*/
+
 body {
 	background-size: 256px 256px;
 	background-attachment: fixed;
@@ -114,7 +111,7 @@ body:has(option[value="gb"]:checked) {
 	--wall-clr-4: #D69834;
 }*/
 
-/* ================================ header? ================================= */
+/* ================================ header ================================== */
 
 
 @media (prefers-reduced-motion: no-preference) {
@@ -123,11 +120,12 @@ body:has(option[value="gb"]:checked) {
 	}
 }
 body>header>h1 {
-	font-family: "Averia Serif Libre", "Cooper", fantasy;
-	font-weight: 900;
+	font-family: "Cooper", "Averia Serif Libre", fantasy;
+	font-weight: 700; // 900 breaks cooper*, but only in ffx ??
 	font-size: min(96px, 10vw); /*is this a magic number!? i have no idea*/
 
-	margin-block: 0.2em;
+	margin-top: 0.1em;
+	margin-bottom: 0.3em;
 
 	paint-order: stroke fill;
 
@@ -136,8 +134,8 @@ body>header>h1 {
 	--hdr-clr-1: var(--wall-clr-4);
 	--hdr-clr-2: var(--wall-clr-3);
 	--hdr-clr-3: var(--wall-clr-2);
-	        text-stroke: var(--stroke-size) var(--hdr-clr-1);
 	-webkit-text-stroke: var(--stroke-size) var(--hdr-clr-1);
+	        text-stroke: var(--stroke-size) var(--hdr-clr-1);
 	--outline-width: 0.04em;
 	--outline-colour: color-mix(in srgb, var(--header-colour) 50%, black 50%);
 	filter:
@@ -500,8 +498,9 @@ main>section>article {
 	}
 }
 
-#whats-new {
-	height: 360px;
+#whats-new>ul {
+	height: 280px;
+	overflow: auto;
 }
 
 /* doesn't look good, too cramped
@@ -556,9 +555,9 @@ main>section>article {
 		border-bottom-left-radius: calc(var(--content-background-radius) / 4);
 		border-bottom-right-radius: calc(var(--content-background-radius) / 4);
 		text-align: center;
-		text-decoration: 5px underline;
-		position: sticky;
-		top: 0;
+		/*text-decoration: 5px underline;*/
+		// position: sticky;
+		// top: 0;
 		margin-block: 0;
 		padding-block: 0.4em;
 	}
@@ -566,7 +565,6 @@ main>section>article {
 		text-align: center;
 		margin-bottom: 0;
 		text-transform: none;
-		text-decoration: underline;
 		font-style: italic;
 		font-family: var(--fnt-serif), serif;
 		&::after {

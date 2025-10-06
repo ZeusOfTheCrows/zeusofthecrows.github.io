@@ -11,15 +11,15 @@ edit: 2025-09-16
 <section>
 	<h2>Preamble</h2>
 	<p>
-		okay so i've always been a fan of vector graphics - <small>why in this
+		Okay so i've always been a fan of vector graphics - <small>why in this
 		world of rapidly increasing resolutions are we tying our images to pixel
 		sizes? most of the time one can't see the pixels anyways, and it always
 		seems to age poorly</small> - but i've only just had the idea of
-		applying it to a "Now!" button. pixels are so small nowadays that i
+		applying it to a "Now!" button. Pixels are so small nowadays that i
 		have seen on many sites (including my own) the use of a "scale on
 		hover" effect, which necessitates deciding between nearest neighbour
-		and bilinear filtering <small>and doesn't look great either way</small>,
-		so i think it's time we have a future-proof alternative. i have seen
+		and bilinear filtering <small>(and doesn't look great either way)</small>,
+		so i think it's time we have a future-proof alternative. I have seen
 		people making larger buttons
 		(<a href="https://volk.neocities.org/home.html">exempli gratia</a>),
 		but that seems like something of a sticking-plaster fix to me
@@ -33,91 +33,102 @@ edit: 2025-09-16
 		<li><a href="https://www.w3.org/Graphics/SVG/">
 			<img src="/assets/images/buttons/taskbar/svg.svg"
 				class="btn-88x31 btn-svg"
-				alt="animated scalable vector graphics button" />
+				alt="Animated scalable vector graphics button" />
 		</a></li>
 		<li><a href="https://www.w3.org/Graphics/SVG/">
 			<img src="/assets/images/buttons/taskbar/svg-ns.svg"
 				class="btn-88x31 btn-svg"
-				alt="animated svg button" />
+				alt="Animated svg button" />
 		</a></li>
 		<li><a href="/links#my-links">
 			<img src="/assets/images/buttons/my-links/zeus-train.svg"
 				class="btn-88x31 btn-svg"
-				alt="animated svg zeus 125 button" />
+				alt="Animated svg zeus 125 button" />
 		</a></li>
 		<li><a href="/links#my-links">
 			<img src="/assets/images/buttons/my-links/zeus-retro.svg"
 				class="btn-88x31 btn-svg"
-				alt="animated svg zeus retro button" />
+				alt="Animated svg zeus retro button" />
 		</a></li>
 	</ul>
 
 	<p>
-		however, when trying to create one i found a sore lack of information on
-		animating them, so i'll write this as a sort of guide. there are three
-		ways to create an animated svg (herein ASVG), but i'll only be looking
-		at <abbr
-			title="Synchronized Multimedia Integration Language">s.m.i.l.</abbr>,
-		as i don't like javascript and css animations are …just css animations
+		However, when trying to create one i found a sore lack of information on
+		animating them, so i'll write this as a sort of guide. There are three
+		ways to create an animated <acronym>SVG</acronym> (herein
+		<acronym>ASVG</acronym>),
+		but i'll only be looking
+		at <acronym
+			title="Synchronized Multimedia Integration Language">SMIL</acronym>,
+		as i don't like javascript and <acronym>CSS</acronym> animations are …just
+		<acronym>CSS</acronym> animations
 	</p>
 	<p>
-		first thing to do is decide if asvg is right for you, so consider this
+		first thing to do is decide if <acronym>ASVG</acronym> is right for you, so
+		consider this
 		before making one:
 	</p>
 
 	<table class="full-bleed">
 		<thead>
 			<tr>
-				<th>benefits</th>
-				<th>drawbacks</th>
+				<th>Benefits</th>
+				<th>Drawbacks</th>
 			</tr>
 		</thead>
 		<tr>
 			<td>
-				the big one: infinite scalability. your button is future-proof, and
+				The big one: infinite scalability. Your button is future-proof, and
 				can be displayed at any size as sharp as the day you made it
 				(including at non-integer ratios, for those who have their screen
 				scale at 150%)
 			</td>
 			<td>
-				the support is just not great. it's not even as good as
-				webp. i think all modern browsers support asvg, but i don't think any
+				The support is just not great. It's not even as good as
+				webp. i think all modern browsers support <acronym>ASVG</acronym>, but i
+				don't think any
 				image viewers do (certainly gwenview does not).
 			</td>
 		</tr>
 		<tr>
 			<td>
-				infinite framerate. svg uses timescale animations, which scale to
+				Infinite framerate. svg uses timescale animations, which scale to
 				the refresh rate of your monitor, rather than raster's discrete
-				frame aproach (and gif's max fps of
+				frame aproach (and <acronym>GIF</acronym>'s max fps of
 				<a href="https://wunkolo.github.io/post/2020/02/buttery-smooth-10fps/"
 					title="or 100hz, but most browsers don't support that">50hz</a>
 				which does not fit with most monitors' 60hz). just look at that
 				silky smooth animation
 			</td>
 			<td>
-				i can't find any programmes that properly support asvg, so
+				I can't find any programmes that properly support
+				<acronym>ASVG</acronym>, so
 				you'll have to write the xml manually
 			</td>
 		</tr>
-		<!--ztodo: svg allows offset timescale animations-->
 		<tr>
 			<td>
-				asynchronous anymations: if you want a 5 frame loop and a 7 frame loop on
-				a raster button, you have to have a <em>35 frame</em> file! with svg,
+				Asynchronous anymations: if you want a 5 frame loop and a 7 frame loop
+				on a raster button, you have to have a <em>35 frame</em> file! with
+				<acronym>ASVG</acronym>,
 				every animation has its own – independent – duration value
 			</td>
 			<td>
-				depending on the number of elements, they tend to be slightly
+				Depending on the number of elements, they tend to be slightly
 				bigger (now button is ~56kb for animated, ~32kb for static;
-				compared to ~16kb for apng, ~22kb for gif. train button is ~112kb
+				compared to ~16kb for <acronym>APNG</acronym>, ~22kb for
+				<acronym>GIF</acronym>.
+				train button is ~112kb
 				for animated, ~104kb for static; compared to ~35kb for
-				apng, ~57kb for gif) than the tiny 88x31 size of ordinary buttons
+				<acronym>APNG</acronym>, ~57kb for <acronym>GIF</acronym>) than the tiny
+				88x31 size
+				of ordinary buttons
 			</td>
 		</tr>
 		<tr>
 			<td>
-				there are no "proprietary" source files (.ase, .xcf), as svg's have
+				there are no "proprietary" source files (<samp>.ase</samp>,
+				<samp>.xcf</samp>), as <acronym>SVG</acronym>s have
 				layers baked in, and are viewable in a text editor
 			</td>
 		</tr>
@@ -130,10 +141,10 @@ edit: 2025-09-16
 	</table>
 
 	<p>
-		<strong>update as of <time>2022-10-23</time>:</strong> turns out i'm
+		<strong>Update as of <time>2022-10-23</time>:</strong> turns out i'm
 		not original, <a href="https://viatrix.is-hella.gay/">viatrix</a> had
 		already had the idea of svg buttons, though i maintain that animated
-		ones are original. i think hers is cooler than mine though, being
+		ones are original. I think hers is cooler than mine though, being
 		modelled after the libpng button:
 		<img src="/assets/images/buttons/other/svg-viatrix.svg" alt=""
 			style="vertical-align: middle;" class="btn-88x31 btn-svg" />;
@@ -143,23 +154,23 @@ edit: 2025-09-16
 <section>
 	<h2>Drawing</h2>
 	<p>
-		still want to make one? well here's some info:
+		Still want to make one? well here's some info:
 	</p>
 	<p>
-		the first thing to do is make your normal svg. there are
+		The first thing to do is make your normal <acronym>SVG</acronym>. there are
 		<a href="https://en.m.wikipedia.org/wiki/Comparison_of_vector_graphics_editors">
 		many programmes</a>
 		to do this: i use <a href="https://inkscape.org/">inkscape</a> usually,
 		as i started using it when boxysvg didn't support linux, but i
 		think <a href="https://boxy-svg.com/">boxysvg</a> is better.
-		there are plenty of tutorials for vector editing, so i won't bother to
+		There are plenty of tutorials for vector editing, so i won't bother to
 		say much about that here
 	</p>
 	<p>
-		a couple things of note though:
+		A couple things of note though:
 	</p>
 	<p>
-		i made mine in 88x31 and used pixels as the user unit,
+		I made mine in 88x31 and used pixels as the user unit,
 		as it was an easy way to get the ratio
 		right, but
 		there's no reason not to make yours in 176x62, or 44x15½, or
@@ -180,28 +191,28 @@ edit: 2025-09-16
 <section>
 	<h2>Animating</h2>
 	<p>
-		now, you're ready to animate! surprisingly, the best visual editor,
+		Now, you're ready to animate! surprisingly, the best visual editor,
 		i've found, is a browser. <small>i used firefox, but i imagine safari
 		or vivaldi would work just as well.</small> the devtools work for svg
 		as well as html (they're just types of xml), so just open your svg,
 		press <kbd>F12</kbd>, and your changes will be reflected in real time
 	</p>
 	<p>
-		you have three basic tag options:
+		You have three basic tag options:
 	</p>
 	<dl>
 		<dt>
 			<code>&lt;<span class="obj">animate</span>&gt;</code>
 		</dt>
 		<dd>
-			animate an svg property (e.g. rx {radius x-axis}):
+			Animate an svg property (e.g. rx {radius x-axis}):
 			<a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/animate">mdn</a>
 		</dd>
 		<dt>
 			<code>&lt;<span class="obj">animateTransform</span>&gt;</code>
 		</dt>
 		<dd>
-			animate size, rotation, & position (anything that comes under css'
+			Animate size, rotation, & position (anything that comes under css'
 			<code><span class="opr">transform</span></code> property). this is
 			the one i used in the above
 			button
@@ -210,13 +221,13 @@ edit: 2025-09-16
 			<code>&lt;<span class="obj">animateMotion</span>&gt;</code>
 		</dt>
 		<dd>
-			move an object along a path. i have never used this
+			Move an object along a path. I have never used this
 		</dd>
 	</dl>
 	<ol>
 		<li>
-			decide what type of motion you want, then right click on the element
-			you wish to animate. for the example button (
+			Decide what type of motion you want, then right click on the element
+			you wish to animate. For the example button (
 			<img src="/assets/images/buttons/taskbar/svg-ns.svg"
 						class="btn-88x31" alt="animated svg button"> – kind of
 			modelled after the netscape one), i chose the
@@ -227,7 +238,8 @@ edit: 2025-09-16
 		</li>
 		<li>
 			add your <code>&lt;<span class="obj">animate[Transform]</span>&gt;</code>
-			tag as an immediate child of your chosen element<a id="ref1" href="#fn1">*</a>
+			tag as an immediate child of your chosen
+			element<a id="ref1" href="#fn1">*</a>
 			<ul>
 				<li>
 					i believe it can be any child, but i tend to add it as a final
@@ -241,7 +253,8 @@ edit: 2025-09-16
 			if using <code>&lt;<span class="obj">animateTransform</span>
 			<span class="opr">type</span>="<span class="val">scale</span>"&gt;</code>,
 			you will probably need a
-			<code><span class="opr">transform-origin</span></code> css property - i just use trial and
+			<code><span class="opr">transform-origin</span></code> css property - i
+			just use trial and
 			error to find it
 		</li>
 		<li>
@@ -303,7 +316,8 @@ edit: 2025-09-16
 </ul>
 <section>
 <footer>
-	<a id="fn1" href="#ref1">*</a>if using <code>animateTransform</code>, it will override
+	<a id="fn1" href="#ref1">*</a>if using <code>animateTransform</code>, it will
+	override
 	any <code>transform="whatever(x)"</code> property. either apply this to
 	all children manually, or move/scale the object without using
 	<code>transform=""</code>
